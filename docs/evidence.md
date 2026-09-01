@@ -157,27 +157,53 @@ Supporting the Playwright blob report specifically was the single change that
 made the largest number of live artifacts reachable, because it is what
 Playwright-based CI actually uploads.
 
-### The deepest-app-frame signal is unavailable for most failures seen so far
+### The deepest-app-frame signal is available on 12% of failures so far
 
 §6 calls the deepest `app` frame "the single most stable and most causally
 meaningful signal in a stack trace", and §8 gives "shared deepest app frame" a
-weight of 0.60. On every failure harvested so far, that frame does not exist.
+weight of 0.60. Measured over the corpus at 16 runs / 74 failures — a snapshot,
+since the corpus is still growing:
 
-Playwright E2E failures carry a stack whose only frame is the spec file itself,
-which classifies as `test`, not `app`. pytest failures carry a single
-`path:line:` location, which is likewise the test file. In both cases the
-failure happened inside the framework's own machinery on behalf of test code,
-and no repository-owned frame appears at all.
+| Framework | Failures | With an app frame | Rate (Wilson 95%) |
+|---|---|---|---|
+| playwright | 55 | 0 | 0.000 [0.000, 0.065] |
+| pytest | 9 | 5 | 0.556 [0.267, 0.811] |
+| unidentified | 5 | 0 | 0.000 [0.000, 0.434] |
+| vitest | 3 | 2 | 0.667 [0.208, 0.939] |
+| junit-jvm | 2 | 2 | 1.000 [0.342, 1.000] |
+| **total** | **74** | **9** | **0.122 [0.065, 0.215]** |
 
-This is a small sample and may not hold as the corpus grows — the same signal
-should be much more available in unit-test failures and in JVM stacks, which
-are underrepresented so far. It is recorded now because it bears directly on
-whether §8's weights are right, and because it is the kind of thing that is easy
-to discover late and expensive to have assumed.
+Every failure parsed at least one frame; the column that varies is whether any
+of them is application code.
+
+The split is the finding, not the total. Playwright E2E failures have **no** app
+frame at all — the stack's only frame is the spec file, which classifies as
+`test`, because the failure happened inside Playwright's own machinery acting on
+behalf of test code. Unit-test frameworks are the opposite: pytest, vitest and
+JVM stacks supply an app frame more often than not.
+
+So §8's 0.60 weight on a shared deepest app frame is not wrong, but it is
+**unavailable for exactly the workload that produces the most failures per run**.
+Any clustering evaluation must report per-framework F1, or an aggregate number
+will be dominated by the E2E case where the signal is missing entirely and will
+say nothing about the case where it is present.
+
+Two corrections to an earlier draft of this section, recorded because the
+mistakes are instructive:
+
+- It claimed the signal was absent from *every* failure. That was true of the
+  corpus at the time, but the cause was partly a missing parser, not the data.
+  Vitest emits frames marked with a heavy arrow rather than `at `, so crux
+  parsed zero frames from them and discarded a real app frame.
+- The framework count briefly read three by counting `junit` as a framework.
+  JUnit XML is a *format* emitted by pytest, jest, vitest, surefire and others.
+  Counting it inflated the Gate 0 framework count with a name that identifies
+  nothing. Only an adapter whose name genuinely identifies a framework — the
+  Playwright blob report, which nothing else emits — now counts as evidence,
+  and the unidentified remainder is reported alongside rather than folded in.
 
 `fingerprint()` reports `usedFrameFallback` rather than silently hashing
-whatever frames it found, so the prevalence of this case is measurable rather
-than invisible.
+whatever frames it found, so the prevalence of this case stays measurable.
 
 ### Licence handling
 

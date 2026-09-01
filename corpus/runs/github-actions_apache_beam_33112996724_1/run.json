@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/beam:33112996724:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/beam",
+    "providerRunId": "33112996724",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/beam/actions/runs/33112996724",
+    "workflowName": "PostCommit Python Dependency",
+    "event": "schedule",
+    "headSha": "73e5ecc2ea86e92fab3e193507e18d7293a33ae1",
+    "headBranch": "master",
+    "artifactIds": [
+      "9666014117"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-01T15:33:42.356Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 4078,
+    "failures": 4,
+    "passed": 2982,
+    "skipped": 1092,
+    "filesParsed": 30,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Python Test Results/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/pytest_py310-tensorflow-212.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "apache_beam.ml.inference.vertex_ai_inference_it_test",
+      "suitePath": [
+        "py310-tensorflow-212"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "ImportError while importing test module '/runner/_work/beam/beam/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/apache_beam/ml/inference/vertex_ai_inference_it_test.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/opt/hostedtoolcache/Python/3.10.21/x64/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\napache_beam/ml/inference/vertex_ai_inference_it_test.py:31: in <module>\n    pytest.importorskip(\"vertexai\", reason=\"Vertex AI dependencies not available\")\n/opt/hostedtoolcache/Python/3.10.21/x64/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/vertexai/__init__.py:20: in <module>\n    from google.cloud.aiplatform import version as aiplatform_version\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/cloud/aiplatform/__init__.py:24: in <module>\n    from google.cloud.aiplatform import initializer\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/cloud/aiplatform/initializer.py:29: in <module>\n    from google.api_core import gapic_v1\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/gapic_v1/__init__.py:50: in <module>\n    from google.api_core.gapic_v1 import (  # noqa: F401\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/gapic_v1/config.py:25: in <module>\n    from google.api_core import exceptions, retry, timeout\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/exceptions.py:27: in <module>\n    from google.rpc import error_details_pb2\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/rpc/error_details_pb2.py:25: in <module>\n    from google.protobuf import runtime_version as _runtime_version\nE   ImportError: cannot import name 'runtime_version' from 'google.protobuf' (/runner/_work/beam/beam/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/target/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/protobuf/__init__.py)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "Python Test Results/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/pytest_py310-tensorflow-212.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "apache_beam.ml.inference.vertex_ai_model_monitoring_v2_it_test",
+      "suitePath": [
+        "py310-tensorflow-212"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "ImportError while importing test module '/runner/_work/beam/beam/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/apache_beam/ml/inference/vertex_ai_model_monitoring_v2_it_test.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/opt/hostedtoolcache/Python/3.10.21/x64/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\napache_beam/ml/inference/vertex_ai_model_monitoring_v2_it_test.py:34: in <module>\n    pytest.importorskip(\"vertexai\", reason=\"Vertex AI dependencies not available\")\n/opt/hostedtoolcache/Python/3.10.21/x64/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/vertexai/__init__.py:20: in <module>\n    from google.cloud.aiplatform import version as aiplatform_version\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/cloud/aiplatform/__init__.py:24: in <module>\n    from google.cloud.aiplatform import initializer\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/cloud/aiplatform/initializer.py:29: in <module>\n    from google.api_core import gapic_v1\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/gapic_v1/__init__.py:50: in <module>\n    from google.api_core.gapic_v1 import (  # noqa: F401\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/gapic_v1/config.py:25: in <module>\n    from google.api_core import exceptions, retry, timeout\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/exceptions.py:27: in <module>\n    from google.rpc import error_details_pb2\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/rpc/error_details_pb2.py:25: in <module>\n    from google.protobuf import runtime_version as _runtime_version\nE   ImportError: cannot import name 'runtime_version' from 'google.protobuf' (/runner/_work/beam/beam/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/target/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/protobuf/__init__.py)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "Python Test Results/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/pytest_py310-tensorflow-212.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "apache_beam.ml.rag.embeddings.vertex_ai_test",
+      "suitePath": [
+        "py310-tensorflow-212"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "ImportError while importing test module '/runner/_work/beam/beam/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/apache_beam/ml/rag/embeddings/vertex_ai_test.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/opt/hostedtoolcache/Python/3.10.21/x64/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\napache_beam/ml/rag/embeddings/vertex_ai_test.py:37: in <module>\n    pytest.importorskip(\"vertexai\", reason=\"Vertex AI dependencies not available\")\n/opt/hostedtoolcache/Python/3.10.21/x64/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/vertexai/__init__.py:20: in <module>\n    from google.cloud.aiplatform import version as aiplatform_version\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/cloud/aiplatform/__init__.py:24: in <module>\n    from google.cloud.aiplatform import initializer\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/cloud/aiplatform/initializer.py:29: in <module>\n    from google.api_core import gapic_v1\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/gapic_v1/__init__.py:50: in <module>\n    from google.api_core.gapic_v1 import (  # noqa: F401\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/gapic_v1/config.py:25: in <module>\n    from google.api_core import exceptions, retry, timeout\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/exceptions.py:27: in <module>\n    from google.rpc import error_details_pb2\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/rpc/error_details_pb2.py:25: in <module>\n    from google.protobuf import runtime_version as _runtime_version\nE   ImportError: cannot import name 'runtime_version' from 'google.protobuf' (/runner/_work/beam/beam/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/target/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/protobuf/__init__.py)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "Python Test Results/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/pytest_py310-tensorflow-212.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "apache_beam.ml.transforms.embeddings.vertex_ai_it_test",
+      "suitePath": [
+        "py310-tensorflow-212"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "ImportError while importing test module '/runner/_work/beam/beam/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/apache_beam/ml/transforms/embeddings/vertex_ai_it_test.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/opt/hostedtoolcache/Python/3.10.21/x64/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\napache_beam/ml/transforms/embeddings/vertex_ai_it_test.py:30: in <module>\n    pytest.importorskip(\"vertexai\", reason=\"Vertex AI dependencies not available\")\n/opt/hostedtoolcache/Python/3.10.21/x64/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/vertexai/__init__.py:20: in <module>\n    from google.cloud.aiplatform import version as aiplatform_version\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/cloud/aiplatform/__init__.py:24: in <module>\n    from google.cloud.aiplatform import initializer\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/cloud/aiplatform/initializer.py:29: in <module>\n    from google.api_core import gapic_v1\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/gapic_v1/__init__.py:50: in <module>\n    from google.api_core.gapic_v1 import (  # noqa: F401\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/gapic_v1/config.py:25: in <module>\n    from google.api_core import exceptions, retry, timeout\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/api_core/exceptions.py:27: in <module>\n    from google.rpc import error_details_pb2\ntarget/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/rpc/error_details_pb2.py:25: in <module>\n    from google.protobuf import runtime_version as _runtime_version\nE   ImportError: cannot import name 'runtime_version' from 'google.protobuf' (/runner/_work/beam/beam/sdks/python/test-suites/tox/py310/build/srcs/sdks/python/target/.tox-py310-tensorflow-212/py310-tensorflow-212/lib/python3.10/site-packages/google/protobuf/__init__.py)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

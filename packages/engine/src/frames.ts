@@ -101,6 +101,14 @@ const GO = /^\s*(?<file>[^\s:]+\.go):(?<line>\d+)(?:\s+\+0x[0-9a-f]+)?\s*$/;
  */
 const PYTEST =
   /^\s*(?<file>[^\s:][^:\n]*\.py):(?<line>\d+):\s*(?:in\s+(?<fn>\S+)|[A-Za-z_][\w.]*(?:Error|Exception|Failure|_)?)?\s*$/;
+/**
+ * Vitest's stack format: `❯ functionName file:line:col`, or with no
+ * function name. Vitest emits JUnit XML like everything else, so without this
+ * its frames are invisible and the deepest-app-frame signal is lost for every
+ * project that uses it.
+ */
+const VITEST =
+  /^\s*\u276f\s+(?:(?<fn>\S.*?)\s+)?(?<file>[^\s:]+):(?<line>\d+):(?<col>\d+)\s*$/;
 /** `path/file.rb:42:in `method'` */
 const RUBY = /^\s*(?:from\s+)?(?<file>[^\s:]+\.rb):(?<line>\d+):in\s+[`'](?<fn>[^'`]+)['`]/;
 
@@ -110,6 +118,7 @@ const PARSERS: [RegExp, string][] = [
   [PYTEST, 'pytest'],
   [JVM, 'jvm'],
   [RUBY, 'ruby'],
+  [VITEST, 'vitest'],
   [V8, 'v8'],
   [GO, 'go'],
 ];

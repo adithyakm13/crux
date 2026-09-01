@@ -25,6 +25,8 @@ export interface GateZeroStatus {
   failures: number;
   repositories: number;
   frameworksSeen: string[];
+  /** Failures whose producing framework could not be identified from evidence. */
+  unidentifiedFrameworkFailures: number;
   runsWithAtLeast5Failures: number;
   syntheticFraction: number;
   fidelityBreakdown: Record<string, number>;
@@ -98,6 +100,7 @@ export async function gateZeroStatus(
     failures,
     repositories: repos.size,
     frameworksSeen: frameworksOf(runs),
+    unidentifiedFrameworkFailures: unidentifiedCount(runs),
     runsWithAtLeast5Failures: runsWith5,
     syntheticFraction,
     fidelityBreakdown: fidelity,
@@ -116,6 +119,17 @@ function req(id: string, description: string, observed: number, required: number
 }
 
 /**
+ * Adapters whose name identifies a framework rather than a file format.
+ *
+ * Only Playwright qualifies: the blob report is Playwright-specific, so the
+ * adapter having parsed it *is* evidence. `junit` is a format emitted by
+ * pytest, jest, vitest, surefire and a dozen others — counting it as a
+ * framework inflates the Gate 0 framework count with a name that identifies
+ * nothing.
+ */
+const FRAMEWORK_IDENTIFYING_ADAPTERS = new Set(['playwright']);
+
+/**
  * Framework is inferred from evidence in the payload, never asserted. An
  * unrecognised producer counts as `unknown` rather than being guessed into a
  * bucket that would inflate the framework count.
@@ -129,11 +143,31 @@ function frameworksOf(runs: CorpusRun[]): string[] {
       // would collapse them all into one "framework". The adapter is the
       // fallback, and it is authoritative when inference cannot tell.
       const inferred = detectFramework(f.sourceFile, f.stackText, f.errorType);
-      seen.add(inferred === 'unknown' ? (f.producerAdapter ?? 'unknown') : inferred);
+      if (inferred !== 'unknown') {
+        seen.add(inferred);
+        continue;
+      }
+      const adapter = f.producerAdapter;
+      seen.add(
+        adapter !== undefined && FRAMEWORK_IDENTIFYING_ADAPTERS.has(adapter) ? adapter : 'unknown',
+      );
     }
   }
   seen.delete('unknown');
   return [...seen].sort();
+}
+
+function unidentifiedCount(runs: CorpusRun[]): number {
+  let n = 0;
+  for (const run of runs) {
+    for (const f of run.failures) {
+      if (detectFramework(f.sourceFile, f.stackText, f.errorType) !== 'unknown') continue;
+      const adapter = f.producerAdapter;
+      if (adapter !== undefined && FRAMEWORK_IDENTIFYING_ADAPTERS.has(adapter)) continue;
+      n++;
+    }
+  }
+  return n;
 }
 
 export function detectFramework(
@@ -145,7 +179,9 @@ export function detectFramework(
   if (/playwright|@playwright\/test/i.test(hay)) return 'playwright';
   if (/site-packages\/_pytest|pytest|\.py:\d+|E\s+assert/i.test(hay)) return 'pytest';
   if (/jest|@jest\//i.test(hay)) return 'jest';
-  if (/vitest/i.test(hay)) return 'vitest';
+  // The heavy arrow is Vitest's stack-frame marker; nothing else emits it, and
+  // a Vitest run reaches crux as ordinary JUnit XML with no other tell.
+  if (/vitest/i.test(hay) || /\u276f\s+\S+:\d+:\d+/.test(hay)) return 'vitest';
   if (/cypress/i.test(hay)) return 'cypress';
   if (/mocha/i.test(hay)) return 'mocha';
   if (/surefire|junit\.framework|org\.junit|java\.lang\./i.test(hay)) return 'junit-jvm';
@@ -214,7 +250,10 @@ export function formatGateZeroStatus(s: GateZeroStatus): string {
     }`,
   );
   lines.push(
-    `frameworks: ${s.frameworksSeen.length > 0 ? s.frameworksSeen.join(', ') : 'none detected'}`,
+    `frameworks: ${s.frameworksSeen.length > 0 ? s.frameworksSeen.join(', ') : 'none detected'}` +
+      (s.unidentifiedFrameworkFailures > 0
+        ? `  (+${s.unidentifiedFrameworkFailures} failure(s) of unidentified framework)`
+        : ''),
   );
   lines.push(
     `fidelity: ${

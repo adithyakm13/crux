@@ -93,10 +93,13 @@ hashes the deepest frames whatever their kind, and the result carries
 `usedFrameFallback: true`. This keeps distinct framework failures
 distinguishable; it does not make them causally meaningful.
 
-This is not a rare edge case. On every failure harvested so far — Playwright E2E
-and pytest — the only frame present is the test file, so no `app` frame exists.
-See `docs/evidence.md` for what that implies about the 0.60 weight §8 assigns to
-the shared-deepest-app-frame signal.
+This is not a rare edge case. Measured over the corpus at 16 runs / 74
+failures, an app frame is present on 9 of 74 — 0.122 [0.065, 0.215] — and on
+**none** of the 55 Playwright E2E failures, whose only frame is the spec file.
+pytest, vitest and JVM stacks supply one more often than not. See
+`docs/evidence.md` for what that implies about the 0.60 weight §8 assigns to the
+shared-deepest-app-frame signal, and why clustering results must be reported per
+framework.
 
 ## Corpus and Gate 0
 

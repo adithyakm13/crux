@@ -4,3 +4,11 @@ dist/
 .DS_Store
 corpus/raw/
 corpus/.cache/
+
+# Harvested corpus runs from repositories whose licence GitHub cannot identify
+# (it reports NOASSERTION for a LICENSE file it cannot classify). The harvester
+# skips these by default; they are only on disk because --allow-unlicensed was
+# passed for local measurement. Excluded from version control until a human has
+# read the licence. Force-add an individual run to override.
+corpus/runs/*PostHog*
+corpus/runs/*ag-grid*
