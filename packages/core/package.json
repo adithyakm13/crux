@@ -1,0 +1,10 @@
+{
+  "name": "@cruxci/core",
+  "version": "0.0.0",
+  "description": "crux ci — framework-neutral domain model and versioning for test failure analysis",
+  "type": "module",
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "files": ["dist"],
+  "license": "Apache-2.0",
+  "scripts": { "build": "tsc --build" }
+}

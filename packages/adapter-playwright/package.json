@@ -1,0 +1,11 @@
+{
+  "name": "@cruxci/adapter-playwright",
+  "version": "0.0.0",
+  "description": "crux ci — Playwright JSON and blob-report adapter",
+  "type": "module",
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "files": ["dist"],
+  "license": "Apache-2.0",
+  "scripts": { "build": "tsc --build" },
+  "dependencies": { "@cruxci/core": "workspace:*" }
+}

@@ -1,0 +1,20 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "packages/core"
+    },
+    {
+      "path": "packages/engine"
+    },
+    {
+      "path": "packages/adapter-junit"
+    },
+    {
+      "path": "packages/corpus-tools"
+    },
+    {
+      "path": "packages/adapter-playwright"
+    }
+  ]
+}

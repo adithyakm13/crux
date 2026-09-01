@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:TryGhost/Ghost:33478390257:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "TryGhost/Ghost",
+    "providerRunId": "33478390257",
+    "runAttempt": 1,
+    "url": "https://github.com/TryGhost/Ghost/actions/runs/33478390257",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "05c5fc1977d5749a65df9cc552a9c71a34110570",
+    "headBranch": "princi-hkg-1979-migrate-sendwebmentions-to-the-durable-jobs-interface",
+    "artifactIds": [
+      "9789274185"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-01T14:31:43.267Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 22,
+    "failures": 3,
+    "passed": 19,
+    "skipped": 0,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-Main-1/report-main-01.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "a column is mapped to a custom field by hand and its value is imported",
+      "suitePath": [
+        "Ghost Admin - Members import with custom fields"
+      ],
+      "filePath": "tests/admin/members/import-custom-fields.test.ts",
+      "status": "failed",
+      "durationMs": 23153,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('member-custom-fields-field').getByText('Engineer')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('member-custom-fields-field').getByText('Engineer')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('member-custom-fields-field').getByText('Engineer')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('member-custom-fields-field').getByText('Engineer')\u001b[22m\n\n    at /home/runner/work/Ghost/Ghost/e2e/tests/admin/members/import-custom-fields.test.ts:134:76",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-Main-1/report-main-01.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 1,
+      "displayName": "a column is mapped to a custom field by hand and its value is imported",
+      "suitePath": [
+        "Ghost Admin - Members import with custom fields"
+      ],
+      "filePath": "tests/admin/members/import-custom-fields.test.ts",
+      "status": "failed",
+      "durationMs": 23546,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('member-custom-fields-field').getByText('Engineer')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('member-custom-fields-field').getByText('Engineer')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('member-custom-fields-field').getByText('Engineer')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('member-custom-fields-field').getByText('Engineer')\u001b[22m\n\n    at /home/runner/work/Ghost/Ghost/e2e/tests/admin/members/import-custom-fields.test.ts:134:76",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-Main-1/report-main-01.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 2,
+      "displayName": "a column is mapped to a custom field by hand and its value is imported",
+      "suitePath": [
+        "Ghost Admin - Members import with custom fields"
+      ],
+      "filePath": "tests/admin/members/import-custom-fields.test.ts",
+      "status": "failed",
+      "durationMs": 23279,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('member-custom-fields-field').getByText('Engineer')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('member-custom-fields-field').getByText('Engineer')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('member-custom-fields-field').getByText('Engineer')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('member-custom-fields-field').getByText('Engineer')\u001b[22m\n\n    at /home/runner/work/Ghost/Ghost/e2e/tests/admin/members/import-custom-fields.test.ts:134:76",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

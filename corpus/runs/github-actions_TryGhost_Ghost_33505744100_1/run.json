@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:TryGhost/Ghost:33505744100:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "TryGhost/Ghost",
+    "providerRunId": "33505744100",
+    "runAttempt": 1,
+    "url": "https://github.com/TryGhost/Ghost/actions/runs/33505744100",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "b84723448df4b650e7831037a525e28a409badd6",
+    "headBranch": "pnpm-12",
+    "artifactIds": [
+      "9799897077"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-01T14:05:25.016Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 21,
+    "failures": 3,
+    "passed": 18,
+    "skipped": 0,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-Main-2/report-main-02.zip!report.jsonl",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "cancelling a subscription - asks the server to cancel at period end",
+      "suitePath": [
+        "Ghost Admin - Member Detail",
+        "Subscriptions"
+      ],
+      "filePath": "tests/admin/members/member-detail.test.ts",
+      "status": "failed",
+      "durationMs": 9755,
+      "errorType": "Error",
+      "message": "Error: apiResponse.json: Response has been disposed",
+      "stackText": "Error: apiResponse.json: Response has been disposed\n    at /home/runner/work/Ghost/Ghost/e2e/tests/admin/members/member-detail.test.ts:150:35",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-Main-2/report-main-02.zip!report.jsonl",
+      "shardIndex": 3,
+      "attemptIndex": 1,
+      "displayName": "cancelling a subscription - asks the server to cancel at period end",
+      "suitePath": [
+        "Ghost Admin - Member Detail",
+        "Subscriptions"
+      ],
+      "filePath": "tests/admin/members/member-detail.test.ts",
+      "status": "failed",
+      "durationMs": 9914,
+      "errorType": "Error",
+      "message": "Error: apiResponse.json: Response has been disposed",
+      "stackText": "Error: apiResponse.json: Response has been disposed\n    at /home/runner/work/Ghost/Ghost/e2e/tests/admin/members/member-detail.test.ts:150:35",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-Main-2/report-main-02.zip!report.jsonl",
+      "shardIndex": 3,
+      "attemptIndex": 2,
+      "displayName": "cancelling a subscription - asks the server to cancel at period end",
+      "suitePath": [
+        "Ghost Admin - Member Detail",
+        "Subscriptions"
+      ],
+      "filePath": "tests/admin/members/member-detail.test.ts",
+      "status": "failed",
+      "durationMs": 9528,
+      "errorType": "Error",
+      "message": "Error: apiResponse.json: Response has been disposed",
+      "stackText": "Error: apiResponse.json: Response has been disposed\n    at /home/runner/work/Ghost/Ghost/e2e/tests/admin/members/member-detail.test.ts:150:35",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Milkdown/milkdown:33299668757:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Milkdown/milkdown",
+    "providerRunId": "33299668757",
+    "runAttempt": 1,
+    "url": "https://github.com/Milkdown/milkdown/actions/runs/33299668757",
+    "workflowName": "ci",
+    "event": "pull_request",
+    "headSha": "83b3fd3c2098da072a321eb76e6024e33f12dac6",
+    "headBranch": "renovate/all",
+    "artifactIds": [
+      "9728547733",
+      "9728546081",
+      "9728544965",
+      "9728544390",
+      "9728538526"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-01T13:59:32.365Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 545,
+    "failures": 2,
+    "passed": 542,
+    "skipped": 1,
+    "filesParsed": 5,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "should be able to use column picker to delete a column",
+      "suitePath": [],
+      "filePath": "crepe/table.spec.ts",
+      "status": "timed_out",
+      "durationMs": 30110,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.editor').locator('.milkdown-table-block').first() to be visible\u001b[22m\n\n    at TablePageObjectModel.addTable (/home/runner/work/milkdown/milkdown/e2e/tests/crepe/table.pom.ts:95:29)\n    at /home/runner/work/milkdown/milkdown/e2e/tests/crepe/table.spec.ts:19:3",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "paste inline text only html should extend mark",
+      "suitePath": [],
+      "filePath": "plugin/clipboard.spec.ts",
+      "status": "failed",
+      "durationMs": 587,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[32m- [milkdown mono\u001b[7mr\u001b[27mepo](https://milkdown.dev)\u001b[39m\n\u001b[31m+ [milkdown \u001b[7mr\u001b[27mmonoepo](https://milkdown.dev)\u001b[39m\n\u001b[2m  ↵\u001b[22m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[32m- [milkdown mono\u001b[7mr\u001b[27mepo](https://milkdown.dev)\u001b[39m\n\u001b[31m+ [milkdown \u001b[7mr\u001b[27mmonoepo](https://milkdown.dev)\u001b[39m\n\u001b[2m  ↵\u001b[22m\n    at /home/runner/work/milkdown/milkdown/e2e/tests/plugin/clipboard.spec.ts:83:35",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

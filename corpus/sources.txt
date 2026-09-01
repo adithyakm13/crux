@@ -1,0 +1,61 @@
+# Repositories harvested for the crux ci corpus.
+#
+# Selection criteria, applied in this order:
+#   1. >= 500 stars and not archived, so the CI is real and maintained
+#   2. at least one recent failed run with a NON-EXPIRED artifact
+#   3. an artifact whose contents an adapter can actually read
+#
+# Criterion 2 is the binding one: most active repositories keep GitHub Actions
+# artifacts for one to a few days, so this list is a snapshot of what was
+# reachable, not a list of every repository worth harvesting. Re-run
+# `corpus harvest` regularly — it is idempotent on run id and accumulates.
+Milkdown/milkdown
+OSGeo/grass
+PostHog/posthog
+TryGhost/Ghost
+TypeCellOS/BlockNote
+ag-grid/ag-grid
+alookai/alook
+apache/airflow
+apache/beam
+apache/iceberg
+apache/superset
+ascorbic/unpic-img
+camunda/camunda
+clidey/whodb
+cloudflare/vinext
+datahub-project/datahub
+dbt-labs/dbt-core
+dorny/test-reporter
+dyad-sh/dyad
+dynamiq-ai/dynamiq
+element-hq/element-web
+fastapi/full-stack-fastapi-template
+fedify-dev/fedify
+glpi-project/glpi
+growilabs/growi
+home-assistant/frontend
+jo-inc/camofox-browser
+jupyterlab/jupyterlab
+keycloak/keycloak
+lichtblick-suite/lichtblick
+netdata/netdata
+nextcloud/photos
+nextcloud/server
+opennextjs/opennextjs-netlify
+openobserve/openobserve
+primer/react
+pydata/pandas-datareader
+quarkusio/quarkus
+recharts/recharts
+sanity-io/sanity
+scratchfoundation/scratch-www
+solidtime-io/solidtime
+suites-dev/suites
+taiga-family/taiga-ui
+tenstorrent/tt-metal
+thunderbird/thunderbolt
+trinodb/trino
+voxel51/fiftyone
+whitphx/stlite
+wp-erp/wp-erp
