@@ -99,17 +99,61 @@ export async function labelCommand(options: LabelCommandOptions): Promise<number
         stdout.write(`\n${'-'.repeat(72)}\n`);
         stdout.write(renderFailure(failure, i, todo.length, { context: options.context }) + '\n\n');
 
+        // Groups are chosen by NUMBER, not retyped by name.
+        //
+        // The group id is the grouping ground truth. Typing it freehand once per
+        // failure means a single typo silently invents a group, which shows up
+        // later as a clustering disagreement that no reviewer can distinguish
+        // from a real one. Reuse-by-index removes that failure mode, and over
+        // sixty-odd failures it also removes most of the typing.
         const usedGroups = [...new Set(Object.values(labels.labels).map((l) => l.group))];
         if (usedGroups.length > 0) {
-          stdout.write(`groups so far: ${usedGroups.join(', ')}\n`);
+          stdout.write(
+            `groups so far:  ` +
+              usedGroups.map((g, gi) => `${gi + 1}) ${g}`).join('   ') +
+              `\n`,
+          );
         }
-        const groupAnswer = (await rl.question('group id (or s/q): ')).trim();
-        if (groupAnswer === 'q') {
-          await saveLabels(options.corpusDir, labels);
-          stdout.write(`Saved ${labelled} label(s).\n`);
-          return 0;
+
+        let groupAnswer: string | null = null;
+        while (groupAnswer === null) {
+          const raw = (
+            await rl.question('group [number reuses, n=new, name, s=skip, q=quit]: ')
+          ).trim();
+
+          if (raw === 'q') {
+            await saveLabels(options.corpusDir, labels);
+            stdout.write(`Saved ${labelled} label(s).\n`);
+            return 0;
+          }
+          if (raw === 's') break;
+          if (raw === '') {
+            // Never a silent skip. An accidental Enter in a long session used to
+            // drop the failure with no indication it had happened.
+            stdout.write('Enter a group, or "s" to skip this failure deliberately.\n');
+            continue;
+          }
+          if (raw === 'n') {
+            groupAnswer = `g${usedGroups.length + 1}`;
+            stdout.write(`  new group ${groupAnswer}\n`);
+            break;
+          }
+          if (/^\d+$/.test(raw)) {
+            const idx = Number(raw);
+            if (idx >= 1 && idx <= usedGroups.length) {
+              groupAnswer = usedGroups[idx - 1]!;
+              stdout.write(`  reusing ${groupAnswer}\n`);
+              break;
+            }
+            stdout.write(
+              `No group ${idx}. There ${usedGroups.length === 1 ? 'is' : 'are'} ` +
+                `${usedGroups.length}. Enter "n" for a new one.\n`,
+            );
+            continue;
+          }
+          groupAnswer = raw;
         }
-        if (groupAnswer === 's' || groupAnswer === '') continue;
+        if (groupAnswer === null) continue; // 's'
 
         let category = null;
         while (category === null) {

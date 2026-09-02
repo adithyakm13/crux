@@ -138,3 +138,32 @@ test('separability scores a genuine full vs payload-only pair', async () => {
   assert.ok(Math.abs(report.rate.point - 4 / 6) < 1e-9);
   assert.equal(report.rate.method, 'bootstrap-percentile');
 });
+
+test('rendering a failure never emits a terminal escape sequence', async () => {
+  // §4: strip ANSI and control characters before anything is printed to a
+  // terminal. Corpus payloads are stored raw on purpose — normalization is
+  // specified to see them — so the strip has to happen at the render boundary,
+  // and 29 of 92 failures in the real corpus carry a raw ESC.
+  const { loadRuns } = await import('../src/harvest.ts');
+  const { renderFailure, renderRunHeader } = await import('../src/label.ts');
+  const corpus = new URL('../../../corpus', import.meta.url).pathname;
+  const runs = await loadRuns(corpus);
+  if (runs.length === 0) return; // corpus not present in this checkout
+  const esc = String.fromCharCode(27);
+  const hazard = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/;
+  let checked = 0;
+  for (const run of runs) {
+    for (const context of ['full', 'payload-only'] as const) {
+      assert.ok(!renderRunHeader(run, { context }).includes(esc));
+    }
+    for (const [i, f] of run.failures.entries()) {
+      for (const context of ['full', 'payload-only'] as const) {
+        const out = renderFailure(f, i, run.failures.length, { context });
+        assert.ok(!out.includes(esc), `ESC survived rendering ${f.failureId}`);
+        assert.ok(!hazard.test(out), `control char survived rendering ${f.failureId}`);
+        checked++;
+      }
+    }
+  }
+  assert.ok(checked > 0, 'expected to render at least one failure');
+});

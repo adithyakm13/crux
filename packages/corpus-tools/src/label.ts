@@ -24,6 +24,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { SCHEMA_VERSION, CATEGORIES, type Category } from '@cruxci/core';
+import { sanitizeForTerminal } from '@cruxci/engine';
 import {
   validateRunLabels,
   type CorpusFailure,
@@ -109,10 +110,19 @@ export function renderRunHeader(run: CorpusRun, options: RenderOptions): string 
     `failures  ${run.failures.length} of ${run.counts.attempts} attempts ` +
       `(${run.counts.passed} passed, ${run.counts.skipped} skipped)`,
   );
-  return lines.join('\n');
+  return sanitizeForTerminal(lines.join('\n'));
 }
 
-/** Render one failure. Everything shown here is in the payload by definition. */
+/**
+ * Render one failure. Everything shown here is in the payload by definition.
+ *
+ * The whole rendered block is passed through `sanitizeForTerminal` at the exit
+ * point rather than field by field, so a field added later cannot be forgotten.
+ * §4 requires it: 29 of 92 failures in the current corpus carry a raw ESC,
+ * harvested from public repositories whose CI runs pull-request code, and a
+ * test name is not allowed to reposition the labeler's cursor or repaint their
+ * screen.
+ */
 export function renderFailure(
   failure: CorpusFailure,
   index: number,
@@ -150,7 +160,7 @@ export function renderFailure(
     lines.push(`  --- ${name} (last 8 lines) ---`);
     lines.push(indent(tail, '  '));
   }
-  return lines.join('\n');
+  return sanitizeForTerminal(lines.join('\n'));
 }
 
 export function renderCategoryMenu(): string {
