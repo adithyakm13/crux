@@ -28,16 +28,51 @@
 const ESC = '\u001B';
 const BEL = '\\u0007';
 
-/** CSI (`ESC [ … final`), OSC (`ESC ] … BEL|ST`), and two-character escapes. */
+/**
+ * Largest OSC body we will consume. Must stay below MAX_CARRY, so the carry
+ * path never gives up on a sequence this regex would still have matched.
+ */
+const MAX_OSC_BODY = 512;
+
+/**
+ * CSI (`ESC [ … final`), OSC (`ESC ] … BEL|ST`), and two-character escapes.
+ *
+ * Two properties matter here and both were learned the hard way.
+ *
+ * The OSC body class excludes BEL and ESC and is length-bounded. An unbounded
+ * lazy `[^]*?` must try every extension from every ESC when no terminator
+ * follows, which is quadratic — 8.4 s for 256 KiB of `ESC ]` on input a pull
+ * request writes.
+ *
+ * The final branch consumes an *unterminated* OSC rather than leaving it. If
+ * it is left, the two-character-escape branch strips only `ESC ]` and the body
+ * survives into the byte stream — and the body is attacker-chosen text that
+ * reaches the XML parser as markup. A body carrying `]]>` closes the enclosing
+ * CDATA early and writes testcases that never ran into the corpus. Consuming
+ * the body means a stray `ESC ]` eats up to 512 following characters, which is
+ * correct: `ESC ]` *is* an OSC introducer, and no runner emits one it does not
+ * mean.
+ */
 const ANSI = new RegExp(
   ESC +
     '(?:' +
     '\\[[0-9;:?]*[ -/]*[@-~]' + // CSI
-    '|\\][^]*?(?:' +
+    '|\\][^' +
+    BEL +
+    ESC +
+    ']{0,' +
+    MAX_OSC_BODY +
+    '}(?:' +
     BEL +
     '|' +
     ESC +
     '\\\\)' + // OSC, BEL- or ST-terminated
+    '|\\][^' +
+    BEL +
+    ESC +
+    ']{0,' +
+    MAX_OSC_BODY +
+    '}' + // OSC with no terminator: consumed, never leaked
     '|[@-Z\\\\-_]' + // two-character escape
     ')',
   'g',
@@ -56,11 +91,12 @@ const PARTIAL = new RegExp(
     ESC +
     '(?:' +
     '\\[[0-9;:?]*[ -/]*' + // CSI with no final byte yet
-    '|\\](?:(?!' +
+    '|\\][^' +
     BEL +
-    '|' +
     ESC +
-    '\\\\)[^])*' + // OSC with no terminator yet
+    ']{0,' +
+    MAX_OSC_BODY +
+    '}' + // OSC with no terminator yet, bounded like the matcher
     '|' + // a bare ESC
     ')$',
 );
@@ -70,10 +106,13 @@ const ILLEGAL = /[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g;
 
 /**
  * Longest carry we will hold waiting for an escape sequence to terminate.
- * An OSC sequence can legitimately be long; past this we give up and treat the
- * ESC as a stray control character rather than buffering without bound.
+ *
+ * Strictly greater than MAX_OSC_BODY. If it were smaller, a sequence longer
+ * than the carry but still matchable by ANSI would be carried in some chunkings
+ * and not others, and the result would depend on how the stream was split —
+ * which is exactly the property this module promises it does not.
  */
-const MAX_CARRY = 256;
+const MAX_CARRY = MAX_OSC_BODY + 16;
 
 export interface SanitizeState {
   carry: string;

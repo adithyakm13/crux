@@ -346,3 +346,65 @@ test('detect scores JUnit above ambiguous XML and non-XML at zero', async (t) =>
   assert.equal(await adapter.detect(join(dir, 'missing.xml')), 0);
   t.diagnostic(`temp dir ${dir}`);
 });
+
+test('an oversized unterminated OSC body cannot inject markup or fabricate testcases', async () => {
+  // Regression: the carry buffer used to give up past MAX_CARRY, and the ANSI
+  // matcher then stripped only `ESC ]`, leaking the body into the byte stream.
+  // The body is attacker-chosen text that reaches the XML parser as markup, so
+  // a `]]>` inside it closed the enclosing CDATA early and wrote a testcase
+  // that never ran into the corpus — poisoning every number computed from it.
+  const esc = String.fromCharCode(27);
+  const bel = String.fromCharCode(7);
+  const body =
+    '0;' +
+    'A'.repeat(300) +
+    ']]></failure></testcase><testcase name="FABRICATED">' +
+    '<failure message="never ran">x</failure></testcase>' +
+    '<testcase name="z"><failure><![CDATA[';
+  const xml =
+    `<testsuite name="s"><testcase name="real"><failure message="m">` +
+    `<![CDATA[${esc}]${body}${bel}]]></failure></testcase></testsuite>`;
+
+  const seen: string[][] = [];
+  for (const size of [1, 7, 64, 512, 4096, 1 << 20]) {
+    const { attempts } = await collect(xml, { skipInvalid: true }, size);
+    const names = attempts.map((a) => a.displayName);
+    assert.deepEqual(names, ['real'], `chunk size ${size} produced ${JSON.stringify(names)}`);
+    seen.push(names);
+  }
+  assert.equal(
+    new Set(seen.map((s) => s.join('|'))).size,
+    1,
+    'the parse must not depend on how the stream was chunked',
+  );
+});
+
+test('a stray unterminated OSC fails loudly rather than leaking markup', async () => {
+  // Consuming the OSC body is what blocks the injection above, and it has a
+  // cost: the body may contain the enclosing `]]>`, so the file stops being
+  // well-formed and the parse fails.
+  //
+  // That is the right side of the trade. A stream-level sanitizer cannot both
+  // preserve XML structure and neutralise attacker text after a stray ESC. A
+  // loud ParseError that --skip-invalid recovers from is strictly better than
+  // silently writing testcases that never ran into the corpus. Recorded in
+  // docs/limitations.md.
+  const esc = String.fromCharCode(27);
+  const xml =
+    `<testsuite name="s"><testcase name="t"><failure>` +
+    `<![CDATA[before${esc}]swallowed]]></failure></testcase></testsuite>`;
+
+  await assert.rejects(collect(xml, {}, 16), (e: Error) => {
+    assert.equal((e as { code?: string }).code, 'XML_ERROR');
+    return true;
+  });
+
+  // And the leaked body never becomes markup under --skip-invalid either.
+  const { attempts } = await collect(xml, { skipInvalid: true }, 16);
+  for (const a of attempts) {
+    assert.ok(
+      !(a.failure?.stackText ?? '').includes('swallowed'),
+      'OSC body must never survive into parsed output',
+    );
+  }
+});

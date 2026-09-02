@@ -128,3 +128,51 @@ Grouping and category labels come from humans. `corpus label` exists to collect
 them and deliberately never shows crux's own prediction, because a labeller who
 sees the model's answer anchors on it and the resulting F1 measures agreement
 with the model rather than with the truth.
+
+## Neither Playwright path streams
+
+`@cruxci/adapter-playwright` materialises the whole input before parsing, for
+both the JSON reporter and the blob report.
+
+The JSON reporter emits one document and crux has no incremental JSON parser.
+The blob report is line-delimited and looks streamable, but its suite tree
+arrives before the results and attachments arrive as separate events, sometimes
+after the test they belong to, so a single forward pass cannot assemble an
+attempt.
+
+**Safe fallback:** both paths are bounded by an explicit size cap and fail with
+a `SIZE_LIMIT` error naming the blob reporter and this file, rather than
+exhausting memory. The JUnit adapter does stream.
+
+**Roadmap:** an incremental JSON parser, or a two-pass blob reader that indexes
+offsets rather than holding text.
+
+## A stray unterminated ANSI OSC sequence can make a JUnit file unparseable
+
+The XML sanitizer consumes the body of an unterminated `ESC ]` sequence rather
+than leaving it in the byte stream. If that body contains the enclosing `]]>`,
+the CDATA section is no longer closed and the file fails to parse.
+
+This is deliberate. Leaving the body is worse: it is attacker-chosen text that
+reaches the XML parser as markup, and a body carrying `]]>` followed by
+`<testcase>` elements writes tests that never ran into the corpus — poisoning
+every Gate 0 number computed from it. A stream-level sanitizer cannot both
+preserve XML structure and neutralise arbitrary text after a stray ESC.
+
+**Safe fallback:** a loud `XML_ERROR` naming the file and position, recoverable
+with `--skip-invalid`, instead of silent fabrication.
+
+## Normalization runs its rule cascade to a fixed point
+
+Individually idempotent rules do not compose into an idempotent cascade: one
+rule's output can create a match for a rule that already ran. Rather than
+depending on a rule ordering that holds today and breaks when a rule is added,
+`normalize` iterates the cascade until the output stops changing, capped at
+`MAX_NORMALIZE_PASSES`.
+
+**Cost:** normalization does at least two passes over every message, since the
+second pass is what confirms convergence.
+
+**Safe fallback:** if the cap is reached without converging, the last iterate is
+returned — normalization stays total and never throws. A property test over
+generated input asserts that branch is unreachable for anything it can produce.

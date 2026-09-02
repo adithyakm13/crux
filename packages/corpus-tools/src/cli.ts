@@ -5,6 +5,7 @@
  *
  *   corpus harvest --repos <file|list>   pull real failed CI runs into corpus/
  *   corpus status                        what the corpus contains vs Gate 0
+ *   corpus frames                        app-frame availability per framework
  */
 
 import { readFile } from 'node:fs/promises';
@@ -22,6 +23,12 @@ import {
   separabilityReport,
 } from './commands.ts';
 import { formatBaselineReport, runBaseline } from './baseline.ts';
+import {
+  committedRuns,
+  formatFrameReport,
+  frameReport,
+  frameReportMarkdown,
+} from './frames.ts';
 
 function usage(): string {
   return [
@@ -30,6 +37,7 @@ function usage(): string {
     'Usage:',
     '  corpus harvest --repos <path|owner/name,...> [--runs-per-repo N]',
     '  corpus status',
+    '  corpus frames [--markdown] [--include-untracked]',
     '  corpus label --labeler <name> [--context full|payload-only] [--min-failures N]',
     '  corpus agreement --a <labeler> --b <labeler>',
     '  corpus separability --full <labeler> --payload <labeler>',
@@ -150,6 +158,31 @@ async function main(): Promise<number> {
       process.stdout.write(JSON.stringify(status, null, 2) + '\n');
     } else {
       process.stdout.write(formatGateZeroStatus(status) + '\n');
+    }
+    return 0;
+  }
+
+  if (command === 'frames') {
+    let runs = await loadRuns(corpusDir);
+    // Default to the committed corpus: a published number must be one a reader
+    // can reproduce from a clone, not one that depends on this working tree.
+    if (!flags.has('include-untracked')) {
+      const tracked = await committedRuns(process.cwd(), runs);
+      if (tracked.length !== runs.length && !json) {
+        process.stderr.write(
+          `note: ${runs.length - tracked.length} run(s) on disk are not committed ` +
+            `and are excluded. Pass --include-untracked to measure them too.\n`,
+        );
+      }
+      runs = tracked;
+    }
+    const report = frameReport(runs);
+    if (json) {
+      process.stdout.write(JSON.stringify(report, null, 2) + '\n');
+    } else if (flags.has('markdown')) {
+      process.stdout.write(frameReportMarkdown(report) + '\n');
+    } else {
+      process.stdout.write(formatFrameReport(report) + '\n');
     }
     return 0;
   }

@@ -285,3 +285,85 @@ test('loose normalization collapses assertion literals without eating the messag
   assert.notEqual(a.looseHash, c.looseHash, 'different assertions must not cluster');
   assert.match(a.normalizedRepr.loose, /assert <val> >= <val>/);
 });
+
+// ---------------------------------------------------------------------------
+// Serialization must be injective (regression, Gate 0 decision review).
+//
+// The header of fingerprint.ts states that a strict-hash collision is always a
+// normalization defect and must be investigated there. That is only true if the
+// serialization itself cannot collide — otherwise the instruction sends an
+// investigator to the wrong file. Two ways it used to collide:
+//   - `errorType` was hashed raw. It is the JUnit `<failure type="...">`
+//     attribute, copied verbatim from hostile input, so it could carry the
+//     separator and forge any serialization it liked.
+//   - frame components were joined with `:` and `#`, both of which occur freely
+//     in real paths and function names.
+// ---------------------------------------------------------------------------
+
+const SEP = String.fromCharCode(31);
+
+test('a crafted errorType cannot forge another failure’s serialization', () => {
+  const forged = fingerprint({
+    errorType: `AssertionError${SEP}tests/a.py${SEP}1`,
+    message: 'x',
+    stackText: null,
+  });
+  const real = fingerprint({
+    errorType: 'AssertionError',
+    message: 'x',
+    stackText: '  at f (tests/a.py:1:1)',
+  });
+  assert.notEqual(forged.strictHash, real.strictHash);
+});
+
+test('delimiters inside a function name do not alias onto another frame', () => {
+  const withHash = fingerprint({
+    errorType: 'E',
+    message: 'm',
+    stackText: '  at Mod#run (src/a.ts:1:1)',
+  });
+  const plain = fingerprint({ errorType: 'E', message: 'm', stackText: '  at run (src/a.ts:1:1)' });
+  const withColon = fingerprint({
+    errorType: 'E',
+    message: 'm',
+    stackText: '  at Mod:run (src/a.ts:1:1)',
+  });
+  assert.notEqual(withHash.strictHash, plain.strictHash);
+  assert.notEqual(withHash.strictHash, withColon.strictHash);
+});
+
+test('no two distinct parsed failures share a strict hash', () => {
+  // Restricted to inputs that actually parse a frame: a stack whose "file" has
+  // no extension yields zero frames and correctly reduces to (errorType,
+  // message), so including those would test nothing about frame serialization.
+  const names = ['run', 'Mod#run', 'Mod:run', 'a' + SEP + 'b', '<anonymous>'];
+  const files = ['src/a.ts', 'src/b.ts', 'src/a:b.ts', 'src/a#b.ts'];
+  const types = ['E', 'E:1', 'E#x', 'E' + SEP + 'y'];
+
+  const byHash = new Map<string, string>();
+  let checked = 0;
+  for (const t of types) {
+    for (const fn of names) {
+      for (const file of files) {
+        for (const line of [1, 2]) {
+          const input = {
+            errorType: t,
+            message: 'm',
+            stackText: `  at ${fn} (${file}:${line}:1)`,
+          };
+          const fp = fingerprint(input);
+          assert.ok(fp.frames.length > 0, `probe did not parse a frame: ${input.stackText}`);
+          checked++;
+          const key = JSON.stringify(input);
+          const prev = byHash.get(fp.strictHash);
+          assert.ok(
+            prev === undefined || prev === key,
+            `serialization collision:\n  ${prev}\n  ${key}`,
+          );
+          byHash.set(fp.strictHash, key);
+        }
+      }
+    }
+  }
+  assert.equal(byHash.size, checked);
+});

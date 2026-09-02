@@ -35,6 +35,15 @@ import {
   type AttemptStatus,
 } from '@cruxci/core';
 
+/**
+ * Separator for the duplicate-testcase key. A real NUL, which the sanitizer
+ * strips from every parsed value, so no attacker-supplied suite or test name
+ * can contain it. This was previously written as an escaped literal, so the
+ * separator was the seven characters `\u0000` — trivially reproducible in a
+ * test name, which let distinct testcases collide into fabricated retries.
+ */
+const KEY_SEP = '\u0000';
+
 /** Plain (non-namespaced) mode: JUnit uses no namespaces and xmlns adds attack surface. */
 type SaxOpts = { xmlns: false; fragment: false; position: true };
 
@@ -232,8 +241,11 @@ export class JUnitAdapter implements TestResultAdapter {
         }
         st.openCase = {
           name: clip(attrs['name'] ?? '', limits.maxNameBytes),
-          classname: attrs['classname'] ?? null,
-          file: attrs['file'] ?? suiteStack.at(-1)?.file ?? null,
+          // Every attribute is attacker-controlled and unbounded. The text-node
+          // path is capped in handleText; a cap enforced on one branch and not
+          // the other is not a cap.
+          classname: clipOrNull(attrs['classname'], limits.maxNameBytes),
+          file: clipOrNull(attrs['file'] ?? suiteStack.at(-1)?.file, limits.maxNameBytes),
           durationMs: parseTime(attrs['time']),
           outcomes: [],
           reruns: [],
@@ -338,6 +350,17 @@ export class JUnitAdapter implements TestResultAdapter {
     }
 
     function buildFailure(message: string, type: string | null, text: string): RawFailure {
+      // `message` and `type` arrive as XML attributes, which bypass the text
+      // sink and therefore its size cap entirely.
+      if (message.length > limits.maxTextBytesPerField) {
+        warn({
+          code: 'TEXT_TRUNCATED',
+          message: `failure @message exceeded ${limits.maxTextBytesPerField} bytes`,
+          at: at(),
+        });
+      }
+      message = clip(message, limits.maxTextBytesPerField);
+      type = type === null ? null : clip(type, limits.maxNameBytes);
       // The message attribute and the element text overlap in most producers;
       // keep both rather than picking, and let normalization decide (§5).
       const msg = message.trim() !== '' ? message : firstLine(text);
@@ -359,7 +382,7 @@ export class JUnitAdapter implements TestResultAdapter {
       }
       // NUL separator: it cannot occur in a suite or test name, so the composite
       // key is unambiguous where a space or dot would not be.
-      const key = `${suitePath.join('\\u0000')}\\u0000${tc.name}`;
+      const key = suitePath.join(KEY_SEP) + KEY_SEP + tc.name;
       const base = seen.get(key) ?? 0;
 
       // Surefire records reruns oldest-first, then the final outcome on the
@@ -473,6 +496,10 @@ function lowerKeys(attrs: Record<string, string>): Record<string, string> {
   const out: Record<string, string> = {};
   for (const [k, v] of Object.entries(attrs)) out[k.toLowerCase()] = v;
   return out;
+}
+
+function clipOrNull(s: string | null | undefined, max: number): string | null {
+  return s === null || s === undefined ? null : clip(s, max);
 }
 
 function clip(s: string, max: number): string {

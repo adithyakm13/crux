@@ -10,6 +10,8 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { validateRunLabels, type CorpusRun, type RunLabels } from './schema.ts';
+import { alignLabelers } from './label.ts';
+import { bootstrapProportion, pairwiseAgreement } from '@cruxci/core';
 
 export interface Requirement {
   id: string;
@@ -17,6 +19,12 @@ export interface Requirement {
   observed: number;
   required: number;
   met: boolean;
+  /**
+   * Why a requirement could not be measured. Present only when `observed` is
+   * NaN. An unmeasurable gate is reported as NOT met with a reason, never
+   * omitted — an omitted row reads as a gate that passed.
+   */
+  note?: string;
 }
 
 export interface GateZeroStatus {
@@ -54,12 +62,25 @@ export async function gateZeroStatus(
   const labelSets = await loadAllLabels(corpusDir, runs);
   const labelers = [...new Set(labelSets.map((l) => l.labeler))].sort();
   const labeledFailureKeys = new Set<string>();
-  const perCategory: Record<string, number> = {};
+  // Distinct failures per category, not label rows. Counting rows double-counts
+  // every failure that two labelers both labeled — and Gate 0 requires two
+  // labelers — so a 30-example floor would pass on 15 real failures. The header
+  // promises nothing is rounded in the corpus's favour; this is that promise.
+  const perCategoryKeys: Record<string, Set<string>> = {};
   for (const ls of labelSets) {
     for (const [failureId, label] of Object.entries(ls.labels)) {
-      labeledFailureKeys.add(`${ls.corpusRunId}#${failureId}`);
-      perCategory[label.category] = (perCategory[label.category] ?? 0) + 1;
+      const key = `${ls.corpusRunId}#${failureId}`;
+      labeledFailureKeys.add(key);
+      (perCategoryKeys[label.category] ??= new Set()).add(key);
     }
+  }
+  // A failure the two labelers put in different categories counts toward both.
+  // That is deliberate: the floor asks how many examples of a category exist to
+  // gate precision on, and a disputed example is a real example of each — the
+  // disagreement itself is reported by `corpus agreement`.
+  const perCategory: Record<string, number> = {};
+  for (const [category, keys] of Object.entries(perCategoryKeys)) {
+    perCategory[category] = keys.size;
   }
   const labeledRuns = new Set(labelSets.map((l) => l.corpusRunId)).size;
 
@@ -93,6 +114,16 @@ export async function gateZeroStatus(
       met: n >= 30,
     });
   }
+
+  // The two measurements the Phase 0 gate is actually stated in. Counting runs
+  // and labels is necessary but not sufficient: without these, `status` could
+  // print "Gate 0: MET" while the payload-only thesis had never been tested,
+  // and Phase 1 would start on a gate that was never evaluated.
+  //
+  // Both are unmeasurable until the labeling exists, and an unmeasured gate is
+  // a FAILED gate, never an omitted row. Both are evaluated on the LOWER bound.
+  const measured = await measuredGates(corpusDir, runs, labelSets);
+  requirements.push(measured.agreement, measured.separability);
 
   return {
     corpusDir,
@@ -271,7 +302,10 @@ export function formatGateZeroStatus(s: GateZeroStatus): string {
   const width = Math.max(...s.requirements.map((r) => r.description.length));
   for (const r of s.requirements) {
     lines.push(
-      `  ${r.met ? 'PASS' : 'FAIL'}  ${r.description.padEnd(width)}  ${r.observed} / ${r.required}`,
+      `  ${r.met ? 'PASS' : 'FAIL'}  ${r.description.padEnd(width)}  ` +
+        (Number.isFinite(r.observed)
+          ? `${r.observed} / ${r.required}`
+          : `not measured / ${r.required}${r.note ? ` — ${r.note}` : ''}`),
     );
   }
   lines.push('');
@@ -282,4 +316,117 @@ export function formatGateZeroStatus(s: GateZeroStatus): string {
     for (const b of s.blockedOnHumans) lines.push(`  - ${b}`);
   }
   return lines.join('\n');
+}
+
+/**
+ * The two Phase 0 gates that are measurements rather than counts: grouping
+ * agreement between two labelers, and the separability rate.
+ *
+ * Both are evaluated on the LOWER bound of a 95% interval, and both report
+ * `met: false` with a note when there is not yet enough labeling to measure
+ * them. That asymmetry is deliberate: an unevaluated stop condition is not a
+ * satisfied stop condition, and `status` is the command Phase 1 is gated on.
+ */
+async function measuredGates(
+  corpusDir: string,
+  runs: CorpusRun[],
+  labelSets: RunLabels[],
+): Promise<{ agreement: Requirement; separability: Requirement }> {
+  const unmeasured = (id: string, description: string, required: number, note: string) => ({
+    id,
+    description,
+    observed: NaN,
+    required,
+    met: false,
+    note,
+  });
+
+  const byLabeler = new Map<string, Map<string, RunLabels>>();
+  const contextOf = new Map<string, Set<string>>();
+  for (const ls of labelSets) {
+    let m = byLabeler.get(ls.labeler);
+    if (m === undefined) {
+      m = new Map();
+      byLabeler.set(ls.labeler, m);
+    }
+    m.set(ls.corpusRunId, ls);
+    (contextOf.get(ls.labeler) ?? contextOf.set(ls.labeler, new Set()).get(ls.labeler)!).add(
+      ls.context,
+    );
+  }
+  const names = [...byLabeler.keys()].sort();
+
+  // --- grouping agreement -------------------------------------------------
+  let agreement: Requirement = unmeasured(
+    'grouping-agreement',
+    'grouping agreement >=0.80 (lower bound), two labelers',
+    0.8,
+    'needs two labelers with overlapping labeled runs',
+  );
+  let best: { lower: number; pair: string; runs: number } | null = null;
+  for (let i = 0; i < names.length; i++) {
+    for (let j = i + 1; j < names.length; j++) {
+      const { aligned } = alignLabelers(runs, byLabeler.get(names[i]!)!, byLabeler.get(names[j]!)!);
+      if (aligned.length === 0) continue;
+      const r = pairwiseAgreement(aligned.map((x) => ({ a: x.aGroups, b: x.bGroups })));
+      if (!Number.isFinite(r.agreement.lower)) continue;
+      // Report the weakest pair, not the strongest: if any pair of labelers
+      // disagrees, the task is ambiguous as specified for everyone.
+      if (best === null || r.agreement.lower < best.lower) {
+        best = { lower: r.agreement.lower, pair: `${names[i]} vs ${names[j]}`, runs: r.runs };
+      }
+    }
+  }
+  if (best !== null) {
+    agreement = {
+      id: 'grouping-agreement',
+      description: `grouping agreement >=0.80 (lower bound, ${best.pair})`,
+      observed: Number(best.lower.toFixed(3)),
+      required: 0.8,
+      met: best.lower >= 0.8,
+    };
+  }
+
+  // --- separability -------------------------------------------------------
+  const fullOnly = names.filter(
+    (n) => contextOf.get(n)!.has('full') && !contextOf.get(n)!.has('payload-only'),
+  );
+  const payloadOnly = names.filter(
+    (n) => contextOf.get(n)!.has('payload-only') && !contextOf.get(n)!.has('full'),
+  );
+  let separability: Requirement = unmeasured(
+    'separability',
+    'separability >=0.60 (lower bound)',
+    0.6,
+    payloadOnly.length === 0
+      ? 'needs a labeler working in payload-only context'
+      : 'needs a full-context labeler covering the same runs',
+  );
+  let sepBest: { lower: number; pair: string } | null = null;
+  for (const f of fullOnly) {
+    for (const p of payloadOnly) {
+      const { aligned } = alignLabelers(runs, byLabeler.get(f)!, byLabeler.get(p)!);
+      const perRun = aligned.map((x) => ({
+        successes: x.aCategories.filter((v, i) => v === x.bCategories[i]).length,
+        total: x.aCategories.length,
+      }));
+      if (perRun.length === 0) continue;
+      const iv = bootstrapProportion(perRun);
+      if (!Number.isFinite(iv.lower)) continue;
+      if (sepBest === null || iv.lower < sepBest.lower) {
+        sepBest = { lower: iv.lower, pair: `${f} (full) vs ${p} (payload-only)` };
+      }
+    }
+  }
+  if (sepBest !== null) {
+    separability = {
+      id: 'separability',
+      description: `separability >=0.60 (lower bound, ${sepBest.pair})`,
+      observed: Number(sepBest.lower.toFixed(3)),
+      required: 0.6,
+      met: sepBest.lower >= 0.6,
+    };
+  }
+
+  return { agreement, separability };
 }

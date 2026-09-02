@@ -23,10 +23,31 @@ export const MIN_SKETCH_CHARS = 40;
  * Banding for the LSH index: 32 bands of 4 rows.
  *
  * The probability a pair with Jaccard s becomes a candidate is
- * `1 - (1 - s^r)^b`. With b=32, r=4 that is 0.12 at s=0.2, 0.87 at s=0.4 and
- * 0.998 at s=0.6 — aggressive enough that genuinely similar messages are not
- * missed, and the false candidates are discarded by exact scoring immediately
- * afterwards.
+ * `1 - (1 - s^r)^b`. Computed, not asserted — an earlier version of this
+ * comment claimed 0.12 / 0.87 / 0.998 at s = 0.2 / 0.4 / 0.6, none of which is
+ * what the formula gives for these constants, and the s=0.4 figure was wrong by
+ * 0.31 in the direction that flattered the design.
+ *
+ *   s      0.2    0.3    0.4    0.5    0.6    0.8
+ *   P    0.050  0.229  0.564  0.873  0.988  1.000
+ *
+ * So a pair at Jaccard 0.4 is retrieved a little over half the time. Whether
+ * that is good enough is a question about the corpus, not about the formula:
+ * it depends on the Jaccard distribution of pairs that share a labelled root
+ * cause, which is not yet known because the corpus is unlabelled.
+ *
+ * These constants are therefore **provisional**, and deliberately not tuned.
+ * Tuning a retrieval threshold against no ground truth is how a system gets
+ * fitted to its author's intuition. Alternatives at the same 128 permutations,
+ * for when there is something to measure against:
+ *
+ *   b=64 r=2  →  0.927 at s=0.2, 1.000 at s=0.4   (recall-heavy, many candidates)
+ *   b=42 r=3  →  0.286 at s=0.2, 0.938 at s=0.4
+ *   b=16 r=8  →  0.000 at s=0.2, 0.010 at s=0.4   (precision-heavy)
+ *
+ * False candidates are discarded by exact scoring immediately afterwards, so
+ * the cost of a recall-heavy banding is time, whereas the cost of a
+ * precision-heavy one is a missed cluster edge — which is unrecoverable.
  */
 export const BANDS = 32;
 export const ROWS_PER_BAND = 4;

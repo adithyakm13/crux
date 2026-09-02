@@ -15,10 +15,17 @@
  * touches the filesystem, no value reaches a shell, and control characters are
  * left intact for normalization to handle rather than being interpreted.
  *
- * Streaming: the blob format is line-delimited and is streamed. The JSON
- * reporter emits a single document, and crux does not yet have an incremental
- * JSON parser, so that path is bounded by an explicit size cap and fails with a
- * clear error above it — see docs/limitations.md.
+ * Streaming: **neither path streams.** Both materialise the whole input before
+ * parsing, and both are bounded by an explicit size cap that fails with a clear
+ * error rather than exhausting memory.
+ *
+ * The blob format is line-delimited and could in principle be streamed, but is
+ * not: its suite tree arrives before the results, and attachments arrive as
+ * their own events sometimes after the test they belong to, so a single forward
+ * pass cannot assemble an attempt. The JSON reporter emits one document and
+ * crux has no incremental JSON parser. An earlier version of this comment
+ * claimed the blob path was streamed; it never was. Recorded in
+ * docs/limitations.md, with the cap as the safe fallback.
  */
 
 import {

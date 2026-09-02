@@ -18,6 +18,14 @@
 import { mkdir, writeFile, readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { unzipSync } from 'fflate';
+
+/**
+ * How much total inflated output one artifact may produce, as a multiple of the
+ * compressed cap. A real test-results zip compresses maybe 10:1; 40x leaves
+ * generous headroom while making a 40 MiB artifact unable to inflate into
+ * gigabytes.
+ */
+const ZIP_INFLATE_BUDGET_FACTOR = 40;
 import { JUnitAdapter } from '@cruxci/adapter-junit';
 import { PlaywrightAdapter } from '@cruxci/adapter-playwright';
 import type { ParseWarning, RawAttempt, TestResultAdapter } from '@cruxci/core';
@@ -182,7 +190,22 @@ export async function harvestRepo(repo: string, opts: HarvestOptions): Promise<H
       bytesThisRun += zip.byteLength;
       let entries: Record<string, Uint8Array>;
       try {
-        entries = unzipSync(new Uint8Array(zip));
+        // Filter BEFORE inflating. `maxArtifactBytes` caps only the compressed
+        // size GitHub reports, and the per-entry check further down runs on
+        // already-decompressed bytes — a cap checked after the damage. fflate's
+        // filter sees `originalSize` from the central directory, so an entry
+        // that would inflate past the cap is never expanded at all. A budget
+        // across entries bounds the many-small-entries variant, which no
+        // per-entry cap catches.
+        let inflatedBudget = opts.maxArtifactBytes * ZIP_INFLATE_BUDGET_FACTOR;
+        entries = unzipSync(new Uint8Array(zip), {
+          filter: (f) => {
+            if (f.originalSize > opts.maxXmlBytes) return false;
+            if (f.originalSize > inflatedBudget) return false;
+            inflatedBudget -= f.originalSize;
+            return true;
+          },
+        });
       } catch (e) {
         skip(`unzip failed: ${(e as Error).message.slice(0, 60)}`);
         continue;
@@ -195,7 +218,16 @@ export async function harvestRepo(repo: string, opts: HarvestOptions): Promise<H
       for (const [name, bytes] of Object.entries(entries)) {
         if (name.toLowerCase().endsWith('.zip') && bytes.byteLength <= opts.maxArtifactBytes) {
           try {
-            for (const [inner, innerBytes] of Object.entries(unzipSync(bytes))) {
+            let innerBudget = opts.maxArtifactBytes * ZIP_INFLATE_BUDGET_FACTOR;
+            const inflated = unzipSync(bytes, {
+              filter: (f) => {
+                if (f.originalSize > opts.maxXmlBytes) return false;
+                if (f.originalSize > innerBudget) return false;
+                innerBudget -= f.originalSize;
+                return true;
+              },
+            });
+            for (const [inner, innerBytes] of Object.entries(inflated)) {
               flat[`${name}!${inner}`] = innerBytes;
             }
             continue;

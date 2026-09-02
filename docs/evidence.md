@@ -157,21 +157,21 @@ Supporting the Playwright blob report specifically was the single change that
 made the largest number of live artifacts reachable, because it is what
 Playwright-based CI actually uploads.
 
-### The deepest-app-frame signal is available on 12% of failures so far
+### The deepest-app-frame signal splits sharply by framework
 
 §6 calls the deepest `app` frame "the single most stable and most causally
 meaningful signal in a stack trace", and §8 gives "shared deepest app frame" a
-weight of 0.60. Measured over the corpus at 16 runs / 74 failures — a snapshot,
-since the corpus is still growing:
+weight of 0.60. Measured over the committed corpus:
 
 | Framework | Failures | With an app frame | Rate (Wilson 95%) |
 |---|---|---|---|
 | playwright | 55 | 0 | 0.000 [0.000, 0.065] |
-| pytest | 9 | 5 | 0.556 [0.267, 0.811] |
+| pytest | 25 | 23 | 0.920 [0.750, 0.978] |
 | unidentified | 5 | 0 | 0.000 [0.000, 0.434] |
-| vitest | 3 | 2 | 0.667 [0.208, 0.939] |
 | junit-jvm | 2 | 2 | 1.000 [0.342, 1.000] |
-| **total** | **74** | **9** | **0.122 [0.065, 0.215]** |
+| **total** | **87** | **25** | **0.287 [0.203, 0.390]** |
+
+Measured over 16 committed run(s) across 8 repositories (corpus `de6009aa16de`). Regenerate with `pnpm corpus frames --markdown`.
 
 Every failure parsed at least one frame; the column that varies is whether any
 of them is application code.
@@ -179,8 +179,8 @@ of them is application code.
 The split is the finding, not the total. Playwright E2E failures have **no** app
 frame at all — the stack's only frame is the spec file, which classifies as
 `test`, because the failure happened inside Playwright's own machinery acting on
-behalf of test code. Unit-test frameworks are the opposite: pytest, vitest and
-JVM stacks supply an app frame more often than not.
+behalf of test code. Unit-test frameworks are the opposite: pytest and JVM
+stacks supply one almost always.
 
 So §8's 0.60 weight on a shared deepest app frame is not wrong, but it is
 **unavailable for exactly the workload that produces the most failures per run**.
@@ -188,19 +188,34 @@ Any clustering evaluation must report per-framework F1, or an aggregate number
 will be dominated by the E2E case where the signal is missing entirely and will
 say nothing about the case where it is present.
 
-Two corrections to an earlier draft of this section, recorded because the
-mistakes are instructive:
+#### This table is generated, and it was wrong before it was
 
-- It claimed the signal was absent from *every* failure. That was true of the
-  corpus at the time, but the cause was partly a missing parser, not the data.
-  Vitest emits frames marked with a heavy arrow rather than `at `, so crux
-  parsed zero frames from them and discarded a real app frame.
+Earlier revisions of this section stated 9/74 = 0.122 [0.065, 0.215], written in
+by hand. That figure was wrong in two independent ways, and both are worth
+recording because the project's first rule is that no number is fabricated:
+
+- It was measured over a working tree that included runs the repository refuses
+  to ship — repositories whose licence GitHub cannot identify. A reader
+  following the instruction to run it themselves could not reproduce it, even in
+  principle.
+- The corpus grew afterwards and the hand-written figure did not. The correct
+  value moved to 0.287 [0.203, 0.390] — a **non-overlapping** interval, not the
+  drift the "snapshot" caveat claimed to cover.
+
+The fix is not a more careful edit. `corpus frames` emits this table from the
+committed corpus and stamps it with a digest of the exact run set, so a stale
+copy is detectable rather than merely wrong. Two further corrections from the
+same review:
+
+- An earlier claim that the signal was absent from *every* failure was partly a
+  missing parser, not a property of the data. Vitest marks frames with a heavy
+  arrow rather than `at `, so crux parsed zero frames from them and discarded a
+  real app frame.
 - The framework count briefly read three by counting `junit` as a framework.
   JUnit XML is a *format* emitted by pytest, jest, vitest, surefire and others.
-  Counting it inflated the Gate 0 framework count with a name that identifies
-  nothing. Only an adapter whose name genuinely identifies a framework — the
-  Playwright blob report, which nothing else emits — now counts as evidence,
-  and the unidentified remainder is reported alongside rather than folded in.
+  Only an adapter whose name genuinely identifies a framework — the Playwright
+  blob report, which nothing else emits — now counts as evidence, and the
+  unidentified remainder is reported alongside rather than folded in.
 
 `fingerprint()` reports `usedFrameFallback` rather than silently hashing
 whatever frames it found, so the prevalence of this case stays measurable.

@@ -52,15 +52,27 @@ def git(*args: str) -> str:
 
 
 COMMIT = git("log", "--oneline", "-1")
-TESTS = 114  # replaced below from the live run
 
 
 def load_test_count() -> int:
+    """Read the passing-test count from the live run.
+
+    Deliberately fatal when absent. This script's whole claim is that every
+    number in the PDF is computed, and a hard-coded fallback quietly published a
+    stale count the moment the suite grew — exactly the class of fabricated
+    number the project forbids. Better to refuse to build.
+    """
+    path = f"{SCRATCH}/testcount.txt"
     try:
-        with open(f"{SCRATCH}/testcount.txt") as fh:
+        with open(path) as fh:
             return int(fh.read().strip())
-    except Exception:
-        return TESTS
+    except (OSError, ValueError) as exc:
+        raise SystemExit(
+            f"build-docs-pdf: cannot read the test count from {path} ({exc}).\n"
+            f"Fix: run the suite first and write the passing count there, e.g.\n"
+            f"  node --test 'packages/*/test/*.test.ts' | "
+            f"grep -E 'pass [0-9]+' | grep -oE '[0-9]+' | head -1 > {path}"
+        ) from exc
 
 
 TESTS = load_test_count()
@@ -479,7 +491,11 @@ story.append(P("6.1 &nbsp; The deepest-app-frame signal is mostly unavailable", 
 story.append(P(
     "The specification calls the deepest application frame \"the single most stable "
     "and most causally meaningful signal in a stack trace\" and assigns it a "
-    "clustering weight of 0.60. Measured over the corpus:"
+    "clustering weight of 0.60. Measured over the "
+    f"<b>committed</b> corpus &mdash; {facts['framesMeta']['runs']} runs across "
+    f"{facts['framesMeta']['repositories']} repositories, digest "
+    f"<font face='Courier'>{facts['framesMeta']['digest']}</font>. Regenerate with "
+    "<font face='Courier'>pnpm corpus frames</font>:"
 ))
 fr_rows = [["Framework", "Failures", "With a frame", "With app frame", "Rate (Wilson 95%)"]]
 for f in facts["frames"]:

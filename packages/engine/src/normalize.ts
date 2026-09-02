@@ -69,9 +69,21 @@ function looseOnly(
 
 const ESC = '\\u001B';
 
-/** ANSI CSI/OSC/two-char escapes, plus stray C0 controls other than tab/LF/CR. */
+/**
+ * ANSI CSI/OSC/two-char escapes, plus stray C0 controls other than tab/LF/CR.
+ *
+ * The OSC branch excludes BEL and ESC from its body class and bounds its
+ * length. Both matter. An unbounded lazy `[^]*?` has to try every extension
+ * from every ESC position when no terminator follows, which is quadratic:
+ * measured at 35 ms for 16 KiB of `ESC ]` and 8.4 s for 256 KiB, so a 1 MiB
+ * failure message — inside the existing field cap — costs minutes of CPU on
+ * input an attacker writes. Excluding the terminators makes the match
+ * unambiguous, and the bound caps the scan; a longer OSC string is left alone
+ * rather than scanned, which loses nothing real (no runner emits a 512-byte
+ * window title into a stack trace).
+ */
 const ANSI = new RegExp(
-  `${ESC}(?:\\[[0-9;:?]*[ -/]*[@-~]|\\][^]*?(?:\\u0007|${ESC}\\\\)|[@-Z\\\\-_])`,
+  `${ESC}(?:\\[[0-9;:?]*[ -/]*[@-~]|\\][^\\u0007\\u001B]{0,512}(?:\\u0007|${ESC}\\\\)|[@-Z\\\\-_])`,
   'g',
 );
 const CONTROL = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g;
@@ -174,6 +186,17 @@ export const RULES: readonly NormalizeRule[] = [
       'rule has to reason about colour codes embedded in a path or a number.',
     apply: (text) => text.replace(ANSI, '').replace(CONTROL, ''),
   },
+  {
+    id: 'whitespace-canonical',
+    description:
+      'Normalise line endings and collapse runs of spaces/tabs to one space. ' +
+      'Early, so every pattern rule below sees canonical spacing. When this ran ' +
+      'last instead, "took 250  ms" kept its double space through the duration ' +
+      'rule and normalised to "took 250 ms" while "took 250 ms" became ' +
+      '"took <dur>" — two spellings of one timeout, two fingerprints, a split ' +
+      'cluster caused by whitespace the pipeline was supposed to have removed.',
+    apply: (text) => text.replace(/\r\n?/g, '\n').replace(WHITESPACE, ' '),
+  },
   sub('uuid', 'UUID v1-v8 to <id>.', UUID, '<id>'),
   sub('ulid', 'ULID to <id>.', ULID, '<id>'),
   sub('object-id', '24-character hex object ids to <id>.', OBJECT_ID, '<id>'),
@@ -258,16 +281,18 @@ export const RULES: readonly NormalizeRule[] = [
     },
   },
   {
-    id: 'whitespace',
-    description: 'Collapse whitespace runs and trim. Last, so earlier rules see real layout.',
+    id: 'whitespace-trim',
+    description:
+      'Trim each line, then collapse blank-line runs, then trim the whole. Last. ' +
+      'Per-line trimming must precede the blank-line collapse: a whitespace-only ' +
+      'line only becomes blank once trimmed, so collapsing first leaves runs of ' +
+      'newlines that a second pass would collapse again — non-idempotent.',
     apply: (text) =>
       text
-        .replace(/\r\n?/g, '\n')
-        .replace(WHITESPACE, ' ')
-        .replace(BLANK_LINES, '\n\n')
         .split('\n')
         .map((l) => l.trimEnd())
         .join('\n')
+        .replace(BLANK_LINES, '\n\n')
         .trim(),
   },
 ];
@@ -296,10 +321,37 @@ export function normalize(
   if (options.repoRoot !== undefined) ctx.repoRoot = options.repoRoot;
   if (options.homeDir !== undefined) ctx.homeDir = options.homeDir;
 
+  // Run the cascade to a fixed point rather than exactly once.
+  //
+  // Individually idempotent rules do not compose into an idempotent cascade,
+  // because one rule's output can create a match for a rule that already ran.
+  // A real instance: `duration` only fires on `0m` when the next character is
+  // not a word character, and `home-dir` — which runs later — rewrites
+  // `C:\Users\x` to `<home>`, so a second pass over the same text produced
+  // `<dur>` where the first produced `0m`. Two spellings of one failure, two
+  // fingerprints, a silently split cluster.
+  //
+  // Reordering fixes that pair and leaves the next one to be discovered. A
+  // fixed point makes the property hold by construction for any rule set, which
+  // is what §5 actually requires: normalizing twice equals normalizing once.
+  const active = RULES.filter((r) => !disabled.has(r.id));
   let out = text;
-  for (const rule of RULES) {
-    if (disabled.has(rule.id)) continue;
-    out = rule.apply(out, mode, ctx);
+  for (let pass = 0; pass < MAX_NORMALIZE_PASSES; pass++) {
+    let next = out;
+    for (const rule of active) next = rule.apply(next, mode, ctx);
+    if (next === out) return out;
+    out = next;
   }
+  // Not converged. Returning the last iterate keeps normalization total (§5:
+  // it never throws on corpus input), and the property test asserts that this
+  // branch is unreachable for any input it can generate.
   return out;
 }
+
+/**
+ * Cap on cascade iterations. Convergence is normally reached on the second
+ * pass — the first pass rewrites, the second confirms nothing changed. The cap
+ * exists so that a pathological rule interaction degrades to a stable answer
+ * instead of looping.
+ */
+export const MAX_NORMALIZE_PASSES = 8;

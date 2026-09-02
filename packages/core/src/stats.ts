@@ -179,10 +179,16 @@ export function prf(c: PairCounts): PrfScore {
   const rDen = c.truePositives + c.falseNegatives;
   const precision = pDen === 0 ? NaN : c.truePositives / pDen;
   const recall = rDen === 0 ? NaN : c.truePositives / rDen;
+  // F1 = 2TP / (2TP + FP + FN). When TP is zero but FP or FN is not, that is
+  // zero — a real, measured, maximally bad score — not an undefined quantity.
+  // Reporting NaN there prints "n/a", which reads as "could not be measured"
+  // and hides the one baseline outcome that must not be missed: the payload
+  // does not carry the signal. NaN is reserved for the genuinely undefined
+  // case where there are no positive pairs on either side to score.
   const f1 =
-    !Number.isFinite(precision) || !Number.isFinite(recall) || precision + recall === 0
+    pDen === 0 && rDen === 0
       ? NaN
-      : (2 * precision * recall) / (precision + recall);
+      : (2 * c.truePositives) / (2 * c.truePositives + c.falsePositives + c.falseNegatives);
   return {
     precision,
     recall,
@@ -309,19 +315,89 @@ export function cohensKappa(a: readonly string[], b: readonly string[]): KappaRe
 }
 
 /**
+ * Bootstrap a proportion whose trials are grouped into correlated clusters.
+ *
+ * Same contract as bootstrapPairF1 and for the same reason: resample the
+ * independent unit (the run), not the individual trials. Handing a pooled
+ * numerator and denominator to `wilson` asserts that every trial is an
+ * independent Bernoulli draw, which for pairs inside a run is false — they
+ * share the labelers, the build and the root causes.
+ */
+export function bootstrapProportion(
+  perRun: readonly { successes: number; total: number }[],
+  opts: { resamples?: number; level?: number; seed?: number } = {},
+): Interval {
+  const resamples = opts.resamples ?? 2000;
+  const level = opts.level ?? 0.95;
+  const rng = makeRng(opts.seed ?? 0x0c0ffee);
+  const usable = perRun.filter((r) => r.total > 0);
+  const n = usable.length;
+  const pooledSuccesses = usable.reduce((a, r) => a + r.successes, 0);
+  const pooledTotal = usable.reduce((a, r) => a + r.total, 0);
+  if (n === 0 || pooledTotal === 0) {
+    return { point: NaN, lower: NaN, upper: NaN, level, method: 'bootstrap-percentile', n: 0 };
+  }
+  const point = pooledSuccesses / pooledTotal;
+  const draws: number[] = [];
+  for (let b = 0; b < resamples; b++) {
+    let s = 0;
+    let t = 0;
+    for (let i = 0; i < n; i++) {
+      const r = usable[Math.floor(rng() * n)]!;
+      s += r.successes;
+      t += r.total;
+    }
+    if (t > 0) draws.push(s / t);
+  }
+  if (draws.length === 0) {
+    return { point, lower: NaN, upper: NaN, level, method: 'bootstrap-percentile', n };
+  }
+  draws.sort((a, b) => a - b);
+  const alpha = (1 - level) / 2;
+  return {
+    point,
+    lower: quantileSorted(draws, alpha),
+    upper: quantileSorted(draws, 1 - alpha),
+    level,
+    method: 'bootstrap-percentile',
+    n,
+  };
+}
+
+/**
  * Pairwise grouping agreement between two labelers: the fraction of failure
- * pairs on which they agree about "same root cause". Computed per run and
- * aggregated, for the same correlation reason as bootstrapPairF1.
+ * pairs on which they agree about "same root cause".
+ *
+ * `agreement` is a bootstrap over runs, because that is the unit of
+ * independence. An earlier version pooled every pair into a single Wilson
+ * interval, which is precisely the error this module's header forbids: on a
+ * corpus of ten runs where two are wholly ambiguous and eight are clean, the
+ * pooled interval was roughly four times too narrow and cleared the 0.80
+ * ambiguity gate that the correct interval fails.
+ *
+ * `pooledPointEstimate` is kept as a diagnostic only. It is never a gate
+ * input — it carries no interval, precisely so it cannot be mistaken for one.
  */
 export function pairwiseAgreement(
   perRun: readonly { a: readonly string[]; b: readonly string[] }[],
-): { agreement: Interval; pairs: number } {
+  opts: { resamples?: number; level?: number; seed?: number } = {},
+): { agreement: Interval; pairs: number; runs: number; pooledPointEstimate: number } {
+  const buckets: { successes: number; total: number }[] = [];
   let agreed = 0;
   let total = 0;
   for (const run of perRun) {
     const c = pairCounts(run.a, run.b);
-    agreed += c.truePositives + c.trueNegatives;
-    total += c.truePositives + c.falsePositives + c.falseNegatives + c.trueNegatives;
+    const runAgreed = c.truePositives + c.trueNegatives;
+    const runTotal =
+      c.truePositives + c.falsePositives + c.falseNegatives + c.trueNegatives;
+    buckets.push({ successes: runAgreed, total: runTotal });
+    agreed += runAgreed;
+    total += runTotal;
   }
-  return { agreement: wilson(agreed, total), pairs: total };
+  return {
+    agreement: bootstrapProportion(buckets, opts),
+    pairs: total,
+    runs: buckets.filter((b) => b.total > 0).length,
+    pooledPointEstimate: total === 0 ? NaN : agreed / total,
+  };
 }

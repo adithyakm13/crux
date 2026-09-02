@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   bootstrapPairF1,
+  bootstrapProportion,
   cohensKappa,
   gatePasses,
   makeRng,
@@ -218,4 +219,91 @@ test('pairwise grouping agreement aggregates across runs with an interval', () =
   assert.equal(r.pairs, 4);
   assert.ok(Math.abs(r.agreement.point - 0.75) < 1e-9);
   assert.ok(r.agreement.lower < r.agreement.point);
+});
+
+// ---------------------------------------------------------------------------
+// Regressions from the Gate 0 decision review.
+// Each of these passed before the fix, which is why they are here.
+// ---------------------------------------------------------------------------
+
+test('pairwiseAgreement resamples runs, so clustered disagreement widens the interval', () => {
+  // Eight runs where the labelers agree perfectly, two where they impose
+  // orthogonal partitions. That is the expected shape of real labeling data:
+  // some builds are genuinely ambiguous, most are trivially clean.
+  const runs: { a: string[]; b: string[] }[] = [];
+  for (let r = 0; r < 8; r++) {
+    const g = Array.from({ length: 10 }, (_, i) => `g${i % 3}`);
+    runs.push({ a: g, b: [...g] });
+  }
+  for (let r = 0; r < 2; r++) {
+    runs.push({
+      a: Array.from({ length: 10 }, (_, i) => (i < 5 ? 'x' : 'y')),
+      b: Array.from({ length: 10 }, (_, i) => (i % 2 ? 'x' : 'y')),
+    });
+  }
+  const res = pairwiseAgreement(runs);
+
+  assert.equal(res.agreement.method, 'bootstrap-percentile');
+  // n is the number of independent units — runs — not the pair count.
+  assert.equal(res.agreement.n, 10);
+  assert.equal(res.pairs, 450);
+
+  // Pooling all 450 pairs into one Wilson interval gives a lower bound near
+  // 0.861, which clears the 0.80 ambiguity gate. Resampling runs does not.
+  const pooled = wilson(
+    Math.round(res.pooledPointEstimate * res.pairs),
+    res.pairs,
+  );
+  assert.ok(pooled.lower > 0.8, 'the pooled interval is the one that wrongly passes');
+  assert.ok(
+    res.agreement.lower < 0.8,
+    `run-level bootstrap must fail the 0.80 gate on ambiguous data, got ${res.agreement.lower}`,
+  );
+  // The whole point: the pooled interval is several times too narrow.
+  const pooledWidth = pooled.upper - pooled.lower;
+  const bootWidth = res.agreement.upper - res.agreement.lower;
+  assert.ok(bootWidth > pooledWidth * 2, `expected a much wider interval, got ${bootWidth} vs ${pooledWidth}`);
+});
+
+test('pairwiseAgreement reports no interval rather than a false one when there are no pairs', () => {
+  const res = pairwiseAgreement([]);
+  assert.ok(Number.isNaN(res.agreement.lower));
+  assert.equal(res.runs, 0);
+  // wilson(0, 0).lower is 0, which would read as "total disagreement" and
+  // wrongly trip the ambiguity warning on an empty comparison.
+  assert.ok(!Number.isFinite(res.agreement.lower));
+});
+
+test('prf scores a total clustering failure as 0, not as unmeasurable', () => {
+  // Every pair wrong: F1 = 2TP/(2TP+FP+FN) = 0. Reporting NaN prints "n/a",
+  // which hides the one baseline outcome that must not be missed.
+  const allWrong = prf({
+    truePositives: 0,
+    falsePositives: 12,
+    falseNegatives: 9,
+    trueNegatives: 4,
+  });
+  assert.equal(allWrong.f1, 0);
+  assert.equal(allWrong.precision, 0);
+  assert.equal(allWrong.recall, 0);
+
+  // Genuinely undefined: no positive pairs on either side to score.
+  const nothingToScore = prf({
+    truePositives: 0,
+    falsePositives: 0,
+    falseNegatives: 0,
+    trueNegatives: 6,
+  });
+  assert.ok(Number.isNaN(nothingToScore.f1));
+});
+
+test('bootstrapProportion ignores empty runs rather than dividing by zero', () => {
+  const iv = bootstrapProportion([
+    { successes: 8, total: 10 },
+    { successes: 0, total: 0 },
+    { successes: 9, total: 10 },
+  ]);
+  assert.equal(iv.n, 2);
+  assert.ok(Number.isFinite(iv.lower) && Number.isFinite(iv.upper));
+  assert.ok(iv.point > 0.8 && iv.point < 0.9);
 });

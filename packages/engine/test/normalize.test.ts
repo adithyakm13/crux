@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { RULES, normalize } from '../src/normalize.ts';
+import { RULES, normalize, type NormalizeMode } from '../src/normalize.ts';
 
 const ESC = String.fromCharCode(27);
 
@@ -175,4 +175,85 @@ test('home directories collapse even without an explicit homeDir', () => {
 test('ANSI and control characters are removed entirely', () => {
   const input = `${ESC}[31mred${ESC}[0m\u0000\u0007text`;
   assert.equal(normalize(input, 'strict'), 'redtext');
+});
+
+// ---------------------------------------------------------------------------
+// Idempotency, as a property over generated input rather than hand-picked
+// samples. The earlier version of this suite asserted idempotency over a fixed
+// SAMPLES list that happened to avoid both real failure modes:
+//   - "took 250  ms" kept its double space past the duration rule, so one pass
+//     gave "took 250 ms" and a second gave "took <dur>";
+//   - a whitespace-only line only becomes blank after trimming, so collapsing
+//     blank-line runs first left newlines a second pass would collapse again.
+// Generated input finds both immediately.
+// ---------------------------------------------------------------------------
+
+const TOKENS = [
+  'AssertionError', 'expected', 'got', 'at', 'Error:', 'Timeout',
+  '5', '7', '250', '1500', '0', '42',
+  'ms', 's', 'm', 'took', 'after', 'waiting',
+  ' ', '  ', '   ', '\t', '\n', '\n\n', '\n\n\n', '\r\n',
+  ':8080', ':443', '127.0.0.1', 'http://host/a/1/b?q=2',
+  '/tmp/x', '/var/folders/ab/c', '/Users/someone/p', 'C:\\Users\\x\\y.ts',
+  '550e8400-e29b-41d4-a716-446655440000', 'deadbeefcafebabe0123456789abcdef',
+  'src/app.ts:12:5', 'user_42', 'a@b.com', '0x7ffd', '"quoted"',
+];
+
+function generate(rng: () => number, n: number): string {
+  let out = '';
+  for (let i = 0; i < n; i++) out += TOKENS[Math.floor(rng() * TOKENS.length)]!;
+  return out;
+}
+
+function lcg(seed: number): () => number {
+  let s = seed >>> 0;
+  return () => {
+    s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+    return s / 4294967296;
+  };
+}
+
+test('normalizing twice equals normalizing once, over generated input', () => {
+  const rng = lcg(0xc0ffee);
+  const modes: NormalizeMode[] = ['strict', 'loose'];
+  for (let i = 0; i < 3000; i++) {
+    const input = generate(rng, 1 + Math.floor(rng() * 12));
+    for (const mode of modes) {
+      const once = normalize(input, mode);
+      const twice = normalize(once, mode);
+      assert.equal(
+        twice,
+        once,
+        `not idempotent in ${mode} mode\n  input = ${JSON.stringify(input)}\n  once  = ${JSON.stringify(once)}\n  twice = ${JSON.stringify(twice)}`,
+      );
+    }
+  }
+});
+
+test('every rule is idempotent on its own, over generated input', () => {
+  const rng = lcg(0x5eed);
+  for (const rule of RULES) {
+    for (let i = 0; i < 400; i++) {
+      const input = generate(rng, 1 + Math.floor(rng() * 8));
+      for (const mode of ['strict', 'loose'] as NormalizeMode[]) {
+        const once = rule.apply(input, mode, {});
+        const twice = rule.apply(once, mode, {});
+        assert.equal(
+          twice,
+          once,
+          `rule "${rule.id}" is not idempotent in ${mode} mode\n  input = ${JSON.stringify(input)}\n  once  = ${JSON.stringify(once)}\n  twice = ${JSON.stringify(twice)}`,
+        );
+      }
+    }
+  }
+});
+
+test('whitespace spelling does not change the fingerprint input', () => {
+  // The concrete defect: two CI producers emit the same timeout, one padded to
+  // column width. They must not end up in different clusters.
+  for (const mode of ['strict', 'loose'] as NormalizeMode[]) {
+    assert.equal(normalize('took 250  ms', mode), normalize('took 250 ms', mode));
+    assert.equal(normalize('expected 5,   got 7', mode), normalize('expected 5, got 7', mode));
+    assert.equal(normalize('a\n   \n   \nb', mode), normalize('a\n\nb', mode));
+  }
 });

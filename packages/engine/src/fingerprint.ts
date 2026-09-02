@@ -72,19 +72,22 @@ export function fingerprint(
   const usedFrameFallback = app.length === 0 && frames.length > 0;
   const basis = app.length > 0 ? app : frames;
 
-  const errorType = input.errorType ?? '';
+  // errorType is the JUnit `<failure type="...">` attribute, copied verbatim
+  // from input the parser is explicitly told to treat as hostile. Unnormalized,
+  // it can carry the separator itself and forge any serialization it likes.
+  const errorType = normalize(input.errorType ?? '', 'strict', options);
   const strictMessage = normalize(input.message, 'strict', options);
   const looseMessage = normalize(input.message, 'loose', options);
 
   const strictHash = hash([
     errorType,
     strictMessage,
-    ...basis.slice(0, STRICT_FRAMES).map((f) => frameKey(f, true, options)),
+    ...basis.slice(0, STRICT_FRAMES).flatMap((f) => frameParts(f, true, options)),
   ]);
   const looseHash = hash([
     errorType,
     looseMessage,
-    ...basis.slice(0, LOOSE_FRAMES).map((f) => frameKey(f, false, options)),
+    ...basis.slice(0, LOOSE_FRAMES).flatMap((f) => frameParts(f, false, options)),
   ]);
 
   return {
@@ -101,24 +104,45 @@ export function fingerprint(
 }
 
 /**
- * Serialize one frame for hashing.
+ * Serialize one frame for hashing, as discrete parts rather than one joined
+ * string.
  *
  * Path separators are folded to `/` and the path is run through the same
  * normalization as the message. Without both, the same failure fingerprints
  * differently on Windows and on Linux, and the cross-platform determinism gate
  * fails for a reason that has nothing to do with the failure.
+ *
+ * The parts are returned separately because joining them with `:` and `#` was
+ * ambiguous: both characters occur freely in real file paths and in function
+ * names (bundler wrappers, `Module#method` in transpiled output), so distinct
+ * file/line/function triples serialized to the same bytes and collided. A
+ * strict-hash collision is documented at the top of this file as always being a
+ * normalization defect — which would have sent an investigator to the wrong
+ * file entirely.
  */
-function frameKey(frame: StackFrame, withLine: boolean, options: NormalizeOptions): string {
+function frameParts(
+  frame: StackFrame,
+  withLine: boolean,
+  options: NormalizeOptions,
+): string[] {
   const file =
     frame.file === null ? '' : normalize(frame.file.replace(/\\/g, '/'), 'strict', options);
-  const fn = frame.functionName ?? '';
-  if (!withLine) return `${file}#${fn}`;
-  return `${file}:${frame.line ?? ''}#${fn}`;
+  const fn = normalize(frame.functionName ?? '', 'strict', options);
+  return withLine ? [file, String(frame.line ?? ''), fn] : [file, fn];
 }
 
+/**
+ * Hash a list of components.
+ *
+ * Each component is length-prefixed. The separator alone is not enough: it
+ * relies on no component ever containing it, which is a property of the
+ * normalizer rather than of this function, and one that silently stops holding
+ * the moment a component skips normalization. Length prefixes make the
+ * serialization injective regardless.
+ */
 function hash(parts: readonly string[]): string {
-  const bytes = new TextEncoder().encode(parts.join(SEP));
-  return bytesToHex(blake3(bytes, { dkLen: 16 }));
+  const framed = parts.map((p) => `${p.length}${SEP}${p}`).join(SEP);
+  return bytesToHex(blake3(new TextEncoder().encode(framed), { dkLen: 16 }));
 }
 
 const HEX = '0123456789abcdef';

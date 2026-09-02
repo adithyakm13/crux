@@ -9,10 +9,10 @@
 export const SCHEMA_VERSION = 1 as const;
 
 /** Bump when any normalization rule in §5 changes observable output. */
-export const NORMALIZE_VERSION = 1 as const;
+export const NORMALIZE_VERSION = 2 as const;
 
 /** Bump when fingerprint hash inputs or frame classification change (§6). */
-export const FINGERPRINT_VERSION = 1 as const;
+export const FINGERPRINT_VERSION = 2 as const;
 
 /** Bump when clustering signals, weights, or partitioning change (§8). */
 export const CLUSTER_VERSION = 1 as const;

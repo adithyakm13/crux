@@ -14,6 +14,7 @@ import {
   wilson,
   type Interval,
   type KappaResult,
+  bootstrapProportion,
 } from '@cruxci/core';
 import { loadRuns } from './harvest.ts';
 import {
@@ -181,7 +182,13 @@ export async function agreementReport(
     failuresCompared: allA.length,
     skipped,
     categoryKappa,
-    categoryAgreement: wilson(agreedCategories, allA.length),
+    // Same correlation argument as the grouping interval above.
+    categoryAgreement: bootstrapProportion(
+      aligned.map((x) => ({
+        successes: x.aCategories.filter((v, i) => v === x.bCategories[i]).length,
+        total: x.aCategories.length,
+      })),
+    ),
     groupingPairwiseAgreement: grouping.agreement,
     pairsCompared: grouping.pairs,
     taskIsAmbiguous:
@@ -246,12 +253,27 @@ export async function separabilityReport(
   const full = await loadLabelerIndex(corpusDir, fullContextLabeler, runs);
   const payload = await loadLabelerIndex(corpusDir, payloadOnlyLabeler, runs);
 
+  // Both sides are checked. Validating only the payload-only labeler let two
+  // payload-only labelers be scored against each other and reported as a
+  // separability rate — which is not that quantity at all: it is inter-labeler
+  // agreement under the restricted condition, and it would read as evidence for
+  // the payload-only thesis while containing none.
   for (const [id, labels] of payload) {
     if (labels.context !== 'payload-only') {
       throw new Error(
         `${payloadOnlyLabeler} labelled ${id} with context "${labels.context}", not ` +
           `"payload-only". The separability rate is defined only over payload-only ` +
           `labels; scoring full-context labels as payload-only would fabricate the number.`,
+      );
+    }
+  }
+  for (const [id, labels] of full) {
+    if (labels.context !== 'full') {
+      throw new Error(
+        `${fullContextLabeler} labelled ${id} with context "${labels.context}", not ` +
+          `"full". Separability is agreement between a full-context label and a ` +
+          `payload-only one; comparing two payload-only labelers measures agreement ` +
+          `under the restricted condition, not separability.`,
       );
     }
   }
@@ -272,7 +294,15 @@ export async function separabilityReport(
       }
     }
   }
-  const rate = wilson(agreed, compared);
+  // Bootstrap over runs, not a pooled Wilson: failures inside a run share the
+  // build, the labelers and the root causes, so pooling them asserts an
+  // independence that does not hold and narrows the interval.
+  const rate = bootstrapProportion(
+    aligned.map((row) => ({
+      successes: row.aCategories.filter((v, i) => v === row.bCategories[i]).length,
+      total: row.aCategories.length,
+    })),
+  );
   return {
     fullContextLabeler,
     payloadOnlyLabeler,
