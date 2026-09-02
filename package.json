@@ -11,10 +11,15 @@
     "typecheck": "tsc --build --force",
     "test": "node --test \"packages/*/test/**/*.test.ts\"",
     "clean": "tsc --build --clean",
-    "corpus": "node packages/corpus-tools/src/cli.ts"
+    "corpus": "node packages/corpus-tools/src/cli.ts",
+    "bench": "node bench/pipeline.bench.ts",
+    "bench:quick": "node bench/pipeline.bench.ts --quick"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
-    "typescript": "^5.9.0"
+    "typescript": "^5.9.0",
+    "@cruxci/core": "workspace:*",
+    "@cruxci/engine": "workspace:*",
+    "@cruxci/adapter-junit": "workspace:*"
   }
 }

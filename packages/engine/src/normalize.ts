@@ -155,25 +155,42 @@ const WORKER_COUNTER =
 const LINE_COL = /(\.[A-Za-z0-9]{1,6}):\d+(?::\d+)?\b/g;
 
 /**
- * Assertion values, for loose mode. Covers the shapes the common runners emit.
- * Each alternative keeps the label and replaces only the value.
- */
-/**
  * Assertion values, for loose mode.
  *
- * Only *recognised* expected/actual constructs are rewritten. An earlier
- * version also matched `assert…:` and `to be …` and replaced everything to the
- * end of the line, which on a real pytest corpus reduced whole messages to
- * `AssertionError: <val>` — every unrelated assertion failure collapsing into
- * one cluster. The label is kept and only the value is replaced.
+ * Only a *value token* is replaced — a quoted string, a number, a literal, or a
+ * single bare word. Never a span running to end of line.
+ *
+ * The earlier version matched `expected <anything>, got <anything>` and
+ * replaced the whole span with `expected <val>, got <val>`. That collapsed
+ * "expected user to be logged in, got anonymous" and "expected cart to be
+ * empty, got 3 items" onto one string — unrelated failures sharing a loose
+ * fingerprint, which §8 weights at 0.80 and would cluster together. The subject
+ * of an assertion is the discriminative part; only the value is noise.
+ *
+ * The numeric alternative requires a trailing non-word boundary. Without it,
+ * `got 550e8400-...` matched only the leading `550`, leaving a tail that the
+ * bare-token alternative consumed on a second pass — a rule not idempotent on
+ * its own, which the per-rule property test catches even though the cascade's
+ * fixed point hides it.
+ *
+ * Note these shapes are largely redundant with `assertion-literals` below,
+ * which already reduces "expected 200, got 500" to "expected <val>, got <val>"
+ * via the bare-number pattern while leaving prose intact. They are kept for the
+ * unquoted non-numeric case, and the ablation table can settle whether they
+ * earn their place.
  */
+const VALUE_TOKEN =
+  String.raw`(?:'[^'\n]{0,120}'|"[^"\n]{0,120}"|` + '`' + String.raw`[^` + '`' + String.raw`\n]{0,120}` + '`' +
+  String.raw`|[-+]?\d+(?:\.\d+)?(?![\w.])|true|false|null|undefined|NaN|\S{1,60})`;
+
 const ASSERTION_SHAPES: [RegExp, string][] = [
-  [/\b(expected|Expected)\s*:\s*[^\n]{1,200}/g, '$1: <val>'],
-  [/\b(received|Received|actual|Actual)\s*:\s*[^\n]{1,200}/g, '$1: <val>'],
+  [new RegExp(String.raw`\b(expected|Expected)\s*:\s*` + VALUE_TOKEN, 'g'), '$1: <val>'],
   [
-    /\bexpected\s+[^\n,]{1,120}?\s*,?\s*\b(?:but )?(?:got|received)\s+[^\n]{1,120}/gi,
-    'expected <val>, got <val>',
+    new RegExp(String.raw`\b(received|Received|actual|Actual)\s*:\s*` + VALUE_TOKEN, 'g'),
+    '$1: <val>',
   ],
+  // Only the actual value, never the `expected …` subject that precedes it.
+  [new RegExp(String.raw`\b(got|received)\s+` + VALUE_TOKEN, 'gi'), '$1 <val>'],
 ];
 
 /**

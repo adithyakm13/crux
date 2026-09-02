@@ -146,7 +146,12 @@ export function parseStack(
   if (stackText === null || stackText === '') return [];
   const frames: StackFrame[] = [];
   let pythonFrames = 0;
-  for (const raw of stackText.split('\n')) {
+  // Split on all three line endings. CRLF happens to work when splitting on
+  // \n because the trailing \r is trimmed off by each parser's `\s*$`, but a
+  // classic-Mac CR-only stack collapses to a single line and parses zero
+  // frames — the same failure would then fingerprint differently depending on
+  // which machine produced the report, which is the exact drift §6 gates on.
+  for (const raw of stackText.split(/\r\n|\r|\n/)) {
     if (raw.trim() === '') continue;
     const parsed = parseFrameLine(raw);
     if (parsed === null) continue;

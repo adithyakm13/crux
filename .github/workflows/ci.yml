@@ -38,6 +38,31 @@ jobs:
       - run: pnpm build
       - run: pnpm test
 
+  # §22/§27: benchmarks run in CI. The two rows with a stated spec target exit
+  # non-zero when missed. Wall-clock is not otherwise gated — a threshold tuned
+  # to one runner's hardware produces a flaky build, and a flaky build gets
+  # deleted from the pipeline. --json output is kept as an artifact so a real
+  # regression baseline can be built per-runner over time.
+  bench:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm bench
+      - run: pnpm bench --json > bench-results.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bench-results
+          path: bench-results.json
+
   typecheck:
     runs-on: ubuntu-latest
     steps:

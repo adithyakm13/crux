@@ -8,6 +8,15 @@ importers:
 
   .:
     devDependencies:
+      '@cruxci/adapter-junit':
+        specifier: workspace:*
+        version: link:packages/adapter-junit
+      '@cruxci/core':
+        specifier: workspace:*
+        version: link:packages/core
+      '@cruxci/engine':
+        specifier: workspace:*
+        version: link:packages/engine
       '@types/node':
         specifier: ^24.0.0
         version: 24.13.3

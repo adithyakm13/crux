@@ -177,7 +177,13 @@ function parseBlob(text: string, options: ParseOptions, limits: ParseLimits): Ra
       warn({ code: 'JSON_ERROR', message: 'unparseable blob line', at: `line ${lineNo}` });
       continue;
     }
-    const params = event.params ?? {};
+    // A line of `null`, `3` or `"x"` is valid JSON and not an event. Reading
+    // `.params` off it throws a TypeError, which the adapter contract forbids.
+    if (typeof event !== 'object' || event === null) {
+      warn({ code: 'BLOB_LINE_NOT_EVENT', message: 'blob line is not an object', at: `line ${lineNo}` });
+      continue;
+    }
+    const params = asRecord(event.params);
     switch (event.method) {
       case 'onBlobReportMetadata': {
         const version = (params['version'] as number | undefined) ?? 0;
@@ -194,7 +200,7 @@ function parseBlob(text: string, options: ParseOptions, limits: ParseLimits): Ra
       }
       case 'onProject': {
         const project = params['project'] as { suites?: unknown[] } | undefined;
-        for (const suite of (project?.suites ?? []) as unknown[]) {
+        for (const suite of objects(project?.suites)) {
           collectBlobSuite(suite, [], meta, limits);
         }
         break;
@@ -229,8 +235,9 @@ function parseBlob(text: string, options: ParseOptions, limits: ParseLimits): Ra
     } catch {
       continue; // already reported in the first pass
     }
+    if (typeof event !== 'object' || event === null) continue;
     if (event.method !== 'onTestEnd') continue;
-    const params = event.params ?? {};
+    const params = asRecord(event.params);
     const test = params['test'] as { testId?: string } | undefined;
     const result = params['result'] as BlobResult | undefined;
     if (test?.testId === undefined || result === undefined) continue;
@@ -303,9 +310,9 @@ function collectBlobSuite(
   const nextPath = title === '' || title === file ? path : [...path, title];
 
   for (const entry of [
-    ...(suite.entries ?? []),
-    ...(suite.suites ?? []),
-    ...(suite.tests ?? []),
+    ...objects(suite.entries),
+    ...objects(suite.suites),
+    ...objects(suite.tests),
   ]) {
     if (typeof entry !== 'object' || entry === null) continue;
     const e = entry as {
@@ -361,10 +368,32 @@ function parseJsonReport(text: string, options: ParseOptions, limits: ParseLimit
     });
   }
   const out: RawAttempt[] = [];
-  for (const suite of doc.suites ?? []) {
+  for (const suite of objects((doc as Record<string, unknown> | null)?.['suites'])) {
     walkJsonSuite(suite, [], null, out, shardIndex, limits);
   }
   return out;
+}
+
+/**
+ * Coerce an untrusted value to an array of non-null objects.
+ *
+ * Every `?? []` in a walker assumed the field was either absent or an array of
+ * objects. A fuzz target found otherwise immediately: `JSON.parse("null")` is
+ * `null`, so `doc.suites` threw a TypeError, and an array containing `null`
+ * or a string did the same one level down. The adapter contract is that only
+ * ParseError escapes, so every traversal goes through here.
+ */
+function asRecord(v: unknown): Record<string, unknown> {
+  return typeof v === 'object' && v !== null && !Array.isArray(v)
+    ? (v as Record<string, unknown>)
+    : {};
+}
+
+function objects(v: unknown): Record<string, unknown>[] {
+  if (!Array.isArray(v)) return [];
+  return v.filter(
+    (x): x is Record<string, unknown> => typeof x === 'object' && x !== null,
+  );
 }
 
 /** `depth` rather than `path.length`; see collectBlobSuite for why. */
@@ -398,24 +427,26 @@ function walkJsonSuite(
   const title = suite.title ?? '';
   const nextPath = title === '' || title === file ? path : [...path, title];
 
-  for (const spec of suite.specs ?? []) {
+  for (const spec of objects(suite.specs)) {
     const s = spec as {
       title?: string;
       file?: string;
       tests?: { results?: BlobResult[]; projectName?: string }[];
     };
-    for (const test of s.tests ?? []) {
-      const results = test.results ?? [];
+    for (const rawTest of objects(s.tests)) {
+      const test = rawTest as { results?: unknown; projectName?: unknown };
+      const results = objects(test.results) as unknown as BlobResult[];
+      const projectName = typeof test.projectName === 'string' ? test.projectName : null;
       for (const [i, result] of results.entries()) {
         out.push(
           toAttempt({
             shardIndex,
             title: s.title ?? '',
-            suitePath: test.projectName ? [test.projectName, ...nextPath] : nextPath,
+            suitePath: projectName !== null ? [projectName, ...nextPath] : nextPath,
             file: s.file ?? file,
-            attemptIndex: result.retry ?? i,
+            attemptIndex: typeof result.retry === 'number' ? result.retry : i,
             result,
-            artifacts: (result.attachments ?? []).map(toArtifact),
+            artifacts: objects(result.attachments).map((a) => toArtifact(a as never)),
             limits,
           }),
         );
@@ -430,7 +461,7 @@ function walkJsonSuite(
       }
     }
   }
-  for (const child of suite.suites ?? []) {
+  for (const child of objects(suite.suites)) {
     walkJsonSuite(child, nextPath, file, out, shardIndex, limits, depth + 1);
   }
 }

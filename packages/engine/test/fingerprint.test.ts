@@ -367,3 +367,65 @@ test('no two distinct parsed failures share a strict hash', () => {
   }
   assert.equal(byHash.size, checked);
 });
+
+// ---------------------------------------------------------------------------
+// Cross-platform determinism (§6, §27).
+//
+// CI runs the suite on Linux, macOS and Windows, but nothing asserted that the
+// same failure fingerprints identically on all three — the matrix proved the
+// tests pass everywhere, not that the output agrees. Path separators and line
+// endings are the two real sources of drift, so both are exercised directly
+// rather than relying on the runner's own platform.
+// ---------------------------------------------------------------------------
+
+test('the same failure fingerprints identically regardless of path separator', () => {
+  const B = String.fromCharCode(92);
+  const posix = fingerprint({
+    errorType: 'AssertionError',
+    message: 'expected 200, got 500',
+    stackText: '    at charge (src/billing/charge.ts:42:7)',
+  });
+  const windows = fingerprint({
+    errorType: 'AssertionError',
+    message: 'expected 200, got 500',
+    stackText: `    at charge (src${B}billing${B}charge.ts:42:7)`,
+  });
+  assert.equal(windows.strictHash, posix.strictHash);
+  assert.equal(windows.looseHash, posix.looseHash);
+  assert.equal(windows.id, posix.id);
+});
+
+test('the same failure fingerprints identically regardless of line endings', () => {
+  const body = ['AssertionError: boom', '    at a (src/a.ts:1:1)', '    at b (src/b.ts:2:2)'];
+  const lf = fingerprint({ errorType: 'E', message: 'boom', stackText: body.join('\n') });
+  const crlf = fingerprint({ errorType: 'E', message: 'boom', stackText: body.join('\r\n') });
+  const cr = fingerprint({ errorType: 'E', message: 'boom', stackText: body.join('\r') });
+  assert.equal(crlf.strictHash, lf.strictHash);
+  assert.equal(cr.strictHash, lf.strictHash);
+});
+
+test('fingerprints are stable across repeated computation', () => {
+  // Guards against any accidental dependence on iteration order, Date, or a
+  // shared regex lastIndex — all of which have produced non-determinism in
+  // regex-heavy pipelines before.
+  const input = {
+    errorType: 'TimeoutError',
+    message: 'locator.click: Timeout 3000ms exceeded waiting for getByRole("button")',
+    stackText: '    at run (tests/checkout.spec.ts:88:12)\n    at Object.<anonymous> (src/pay.ts:9:1)',
+  };
+  const first = fingerprint(input);
+  for (let i = 0; i < 50; i++) {
+    const again = fingerprint(input);
+    assert.equal(again.strictHash, first.strictHash);
+    assert.equal(again.looseHash, first.looseHash);
+    assert.deepEqual(again.minhash, first.minhash);
+  }
+});
+
+test('the fingerprint id carries the algorithm version', () => {
+  // §3: a fingerprint from a different version must never be silently compared
+  // against one from this version.
+  const fp = fingerprint({ errorType: 'E', message: 'm', stackText: '    at f (src/a.ts:1:1)' });
+  assert.match(fp.id, /^fp_v\d+_[0-9a-f]{32}$/);
+  assert.equal(fp.id, `fp_v${fp.algoVersion}_${fp.strictHash}`);
+});

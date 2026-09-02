@@ -1,0 +1,114 @@
+{
+  "AssertionError: expected 200, got 500": {
+    "strict": "AssertionError: expected 200, got 500",
+    "loose": "AssertionError: expected <val>, got <val>"
+  },
+  "expected user to be logged in, got anonymous": {
+    "strict": "expected user to be logged in, got anonymous",
+    "loose": "expected user to be logged in, got <val>"
+  },
+  "expected cart to be empty, got 3 items": {
+    "strict": "expected cart to be empty, got 3 items",
+    "loose": "expected cart to be empty, got <val> items"
+  },
+  "Expected: 200\nReceived: 500": {
+    "strict": "Expected: 200\nReceived: 500",
+    "loose": "Expected: <val>\nReceived: <val>"
+  },
+  "took 250  ms": {
+    "strict": "took <dur>",
+    "loose": "took <dur>"
+  },
+  "took 250 ms": {
+    "strict": "took <dur>",
+    "loose": "took <dur>"
+  },
+  "timed out after 30s waiting for locator": {
+    "strict": "timed out after <dur> waiting for locator",
+    "loose": "timed out after <dur> waiting for locator"
+  },
+  "at fn (src/a.ts:1234)": {
+    "strict": "at fn (src/a.ts:1234)",
+    "loose": "at fn (src/a.ts)"
+  },
+  "at fn (src/a.ts:5678)": {
+    "strict": "at fn (src/a.ts:5678)",
+    "loose": "at fn (src/a.ts)"
+  },
+  "connect ECONNREFUSED 127.0.0.1:8080": {
+    "strict": "connect ECONNREFUSED <ip>:<port>",
+    "loose": "connect ECONNREFUSED <ip>:<port>"
+  },
+  "dial localhost:3000 failed": {
+    "strict": "dial localhost:<port> failed",
+    "loose": "dial localhost:<port> failed"
+  },
+  "GET http://api.example.com:8080/v1/orders/42?token=abc": {
+    "strict": "GET http://api.example.com:<port>/v1/orders/<n>",
+    "loose": "GET http://api.example.com:<port>/v1/orders/<n>"
+  },
+  "connect [::1]:5432 refused": {
+    "strict": "connect [::1]:<port> refused",
+    "loose": "connect [::<val>]:<port> refused"
+  },
+  "request 550e8400-e29b-41d4-a716-446655440000 failed": {
+    "strict": "request <id> failed",
+    "loose": "request <id> failed"
+  },
+  "commit deadbeefcafebabe0123456789abcdef0123 not found": {
+    "strict": "commit <id> not found",
+    "loose": "commit <id> not found"
+  },
+  "segfault at 0x7ffd0000": {
+    "strict": "segfault at <addr>",
+    "loose": "segfault at <addr>"
+  },
+  "created 2026-01-02T03:04:05.678Z": {
+    "strict": "created <ts>",
+    "loose": "created <ts>"
+  },
+  "epoch 1767322800000 out of range": {
+    "strict": "epoch <ts> out of range",
+    "loose": "epoch <ts> out of range"
+  },
+  "wrote /tmp/pytest-of-runner/xyz/report.xml": {
+    "strict": "wrote <tmp>",
+    "loose": "wrote <tmp>"
+  },
+  "wrote C:\\Users\\runner\\AppData\\Local\\Temp\\out.xml": {
+    "strict": "wrote <tmp>",
+    "loose": "wrote <tmp>"
+  },
+  "user_4242 not found for acct-99": {
+    "strict": "<gen> not found for <gen>",
+    "loose": "<gen> not found for <gen>"
+  },
+  "notify test1234@example.com failed": {
+    "strict": "notify <gen> failed",
+    "loose": "notify <gen> failed"
+  },
+  "worker 7 died; shard-3 retry 2 aborted": {
+    "strict": "<n> died; <n> <n> aborted",
+    "loose": "<n> died; <n> <n> aborted"
+  },
+  "  File \"tests/test_a.py\", line 5, in test_x": {
+    "strict": "File \"tests/test_a.py\", line 5, in test_x",
+    "loose": "File <val>, line <val>, in test_x"
+  },
+  "\tsrc/main.go:42 +0x1": {
+    "strict": "src/main.go:42 +0x1",
+    "loose": "src/main.go +0x1"
+  },
+  " ❯ run src/a.ts:9:3": {
+    "strict": "❯ run src/a.ts:9:3",
+    "loose": "❯ run src/a.ts"
+  },
+  "a\n   \n   \n   \nb": {
+    "strict": "a\n\nb",
+    "loose": "a\n\nb"
+  },
+  "": {
+    "strict": "",
+    "loose": ""
+  }
+}
