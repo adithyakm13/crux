@@ -110,7 +110,23 @@ const EPOCH_S = /\b1[0-9]{9}\b/g;
 
 const DURATION = /\b\d+(?:\.\d+)?\s?(?:ms|µs|us|ns|s|m|h)\b/gi;
 
-const PORT = /:\d{4,5}\b/g;
+/**
+ * Port numbers, anchored to an actual host context.
+ *
+ * A bare `:\d{4,5}` is not a port rule, it is a colon rule. It matched the line
+ * number in every stack frame past line 999, so `src/a.ts:1234` and
+ * `src/a.ts:5678` both normalized to `src/a.ts:<port>` — in STRICT mode, whose
+ * entire job is to keep those distinct. Two unrelated failures in one file then
+ * shared a strict fingerprint. Per the note at the top of fingerprint.ts that is
+ * a normalization defect, and this was it.
+ *
+ * The anchor requires a host: an already-substituted `<ip>`, `localhost`, an
+ * IPv6 bracket, or a URL authority. A bare `example.com:8080` in prose is
+ * therefore left alone, because `.com` and `.ts` are not distinguishable
+ * lexically. That is a deliberate false negative: under-normalizing splits a
+ * cluster, over-normalizing merges two different bugs, and the second is worse.
+ */
+const PORT = /(?<=<ip>|\blocalhost|\]|\/\/[A-Za-z0-9._-]{1,253}):\d{2,5}\b(?!\.\d)/g;
 
 const IPV4 = /\b(?:\d{1,3}\.){3}\d{1,3}\b/g;
 /** Pragmatic IPv6: at least two groups and one `::` or six colons. */
@@ -240,9 +256,10 @@ export const RULES: readonly NormalizeRule[] = [
   },
   sub('url-query', 'Drop URL query strings.', URL_QUERY, '$1'),
   sub('url-numeric-segment', 'Numeric URL path segments to <n>.', URL_NUMERIC_SEGMENT, '$1/<n>'),
-  sub('port', 'Port numbers to :<port>.', PORT, ':<port>'),
   sub('ipv6', 'IPv6 literals to <ip>. Before IPv4 so mapped forms match whole.', IPV6, '<ip>'),
   sub('ipv4', 'IPv4 literals to <ip>.', IPV4, '<ip>'),
+  // After the IP rules: the port anchor keys off the `<ip>` they produce.
+  sub('port', 'Port numbers to :<port>, only after a host.', PORT, ':<port>'),
   sub('generated-email', 'Seeded or counter-bearing email addresses to <gen>.', GENERATED_EMAIL, '<gen>'),
   sub('generated-name', 'Counter-bearing fixture identities to <gen>.', GENERATED_NAME, '<gen>'),
   sub('worker-counter', 'Worker, shard, attempt and retry counters to <n>.', WORKER_COUNTER, '<n>'),

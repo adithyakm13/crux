@@ -263,14 +263,24 @@ function parseBlob(text: string, options: ParseOptions, limits: ParseLimits): Ra
   return out;
 }
 
+/**
+ * `depth` is the recursion depth, tracked separately from `path.length`.
+ *
+ * They are not the same thing: `path` only grows when a suite has a non-empty
+ * title that differs from the file, so a tree of empty-titled suites recursed
+ * without ever incrementing the guarded quantity. The guard never fired and the
+ * failure mode was a raw RangeError — reproduced with 20,000 empty suites —
+ * rather than the bounded ParseError every adapter promises.
+ */
 function collectBlobSuite(
   node: unknown,
   path: string[],
   meta: Map<string, BlobTestMeta>,
   limits: ParseLimits,
+  depth = 0,
 ): void {
   if (typeof node !== 'object' || node === null) return;
-  if (path.length > limits.maxDepth) {
+  if (depth > limits.maxDepth) {
     throw new ParseError({
       code: 'DEPTH_LIMIT',
       message: `blob suite tree exceeded ${limits.maxDepth} levels`,
@@ -314,7 +324,7 @@ function collectBlobSuite(
         line: e.location?.line ?? null,
       });
     } else {
-      collectBlobSuite(entry, nextPath, meta, limits);
+      collectBlobSuite(entry, nextPath, meta, limits, depth + 1);
     }
   }
 }
@@ -357,6 +367,7 @@ function parseJsonReport(text: string, options: ParseOptions, limits: ParseLimit
   return out;
 }
 
+/** `depth` rather than `path.length`; see collectBlobSuite for why. */
 function walkJsonSuite(
   node: unknown,
   path: string[],
@@ -364,9 +375,10 @@ function walkJsonSuite(
   out: RawAttempt[],
   shardIndex: number,
   limits: ParseLimits,
+  depth = 0,
 ): void {
   if (typeof node !== 'object' || node === null) return;
-  if (path.length > limits.maxDepth) {
+  if (depth > limits.maxDepth) {
     throw new ParseError({
       code: 'DEPTH_LIMIT',
       message: `Playwright suite tree exceeded ${limits.maxDepth} levels`,
@@ -419,7 +431,7 @@ function walkJsonSuite(
     }
   }
   for (const child of suite.suites ?? []) {
-    walkJsonSuite(child, nextPath, file, out, shardIndex, limits);
+    walkJsonSuite(child, nextPath, file, out, shardIndex, limits, depth + 1);
   }
 }
 

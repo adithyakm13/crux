@@ -90,7 +90,18 @@ const PY = /^\s*File\s+"(?<file>[^"]+)",\s+line\s+(?<line>\d+)(?:,\s+in\s+(?<fn>
 const JVM =
   /^\s*at\s+(?<fn>[\w$.<>]+)\((?:(?<file>[\w$.-]+\.(?:java|kt|scala|groovy)):(?<line>\d+)|[^)]*)\)/;
 /** `\tpath/file.go:42 +0x1a` */
-const GO = /^\s*(?<file>[^\s:]+\.go):(?<line>\d+)(?:\s+\+0x[0-9a-f]+)?\s*$/;
+/**
+ * The `(?:[A-Za-z]:)?` prefix on the Go, Vitest and Ruby file groups admits a
+ * Windows drive letter.
+ *
+ * Each of these bounds the file group with a class excluding `:` and anchors at
+ * `^\s*`, so a `C:` prefix made the whole line match no parser at all and the
+ * frame was silently discarded — on Windows only. The cross-platform
+ * determinism gate in §6 would then fail for a reason unrelated to the failure
+ * being fingerprinted. The V8 and pytest parsers were already unaffected: their
+ * paths sit inside parentheses or quotes.
+ */
+const GO = /^\s*(?<file>(?:[A-Za-z]:)?[^\s:]+\.go):(?<line>\d+)(?:\s+\+0x[0-9a-f]+)?\s*$/;
 /**
  * pytest's own failure format, which is not a traceback:
  *   `tests/test_orders.py:42: in test_charge`
@@ -108,9 +119,9 @@ const PYTEST =
  * project that uses it.
  */
 const VITEST =
-  /^\s*\u276f\s+(?:(?<fn>\S.*?)\s+)?(?<file>[^\s:]+):(?<line>\d+):(?<col>\d+)\s*$/;
+  /^\s*\u276f\s+(?:(?<fn>\S.*?)\s+)?(?<file>(?:[A-Za-z]:)?[^\s:]+):(?<line>\d+):(?<col>\d+)\s*$/;
 /** `path/file.rb:42:in `method'` */
-const RUBY = /^\s*(?:from\s+)?(?<file>[^\s:]+\.rb):(?<line>\d+):in\s+[`'](?<fn>[^'`]+)['`]/;
+const RUBY = /^\s*(?:from\s+)?(?<file>(?:[A-Za-z]:)?[^\s:]+\.rb):(?<line>\d+):in\s+[`'](?<fn>[^'`]+)['`]/;
 
 const PARSERS: [RegExp, string][] = [
   [PY, 'python'],

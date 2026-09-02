@@ -257,3 +257,22 @@ test('whitespace spelling does not change the fingerprint input', () => {
     assert.equal(normalize('a\n   \n   \nb', mode), normalize('a\n\nb', mode));
   }
 });
+
+test('the port rule does not eat stack-frame line numbers in strict mode', () => {
+  // Regression: `:\d{4,5}` matched any colon followed by 4-5 digits, so every
+  // frame past line 999 normalized its line number to <port> — in strict mode,
+  // whose whole job is keeping those distinct. Two unrelated failures in one
+  // file then shared a strict fingerprint.
+  assert.equal(normalize('at fn (src/a.ts:1234)', 'strict'), 'at fn (src/a.ts:1234)');
+  assert.notEqual(
+    normalize('at fn (src/a.ts:1234)', 'strict'),
+    normalize('at fn (src/a.ts:5678)', 'strict'),
+  );
+});
+
+test('the port rule still normalizes ports that follow a host', () => {
+  assert.equal(normalize('ECONNREFUSED 127.0.0.1:8080', 'strict'), 'ECONNREFUSED <ip>:<port>');
+  assert.equal(normalize('dial localhost:3000', 'strict'), 'dial localhost:<port>');
+  assert.equal(normalize('connect [::1]:5432', 'strict'), 'connect [::1]:<port>');
+  assert.match(normalize('GET http://api.example.com:8080/v1', 'strict'), /:<port>\/v1$/);
+});
