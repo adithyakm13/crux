@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Norconex/crawler:32614214109:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Norconex/crawler",
+    "providerRunId": "32614214109",
+    "runAttempt": 1,
+    "url": "https://github.com/Norconex/crawler/actions/runs/32614214109",
+    "workflowName": "Nightly Tests",
+    "event": "schedule",
+    "headSha": "5556a377e8daecf41cf44df366e2aaeb6f3c00fd",
+    "headBranch": "main",
+    "artifactIds": [
+      "9486640812"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T08:37:50.098Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1941,
+    "failures": 1,
+    "passed": 1940,
+    "skipped": 0,
+    "filesParsed": 305,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "nightly-test-results/crawler/web/target/surefire-reports/TEST-com.norconex.crawler.web.cases.recovery.StartCleanAfterStopTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testStartCleanAfterStop(ClientAndServer, Path)",
+      "suitePath": [
+        "com.norconex.crawler.web.cases.recovery.StartCleanAfterStopTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 25548,
+      "errorType": "java.lang.AssertionError",
+      "message": "\nExpecting actual:\n  0\nto be greater than:\n  0\n",
+      "stackText": "java.lang.AssertionError: \n\nExpecting actual:\n  0\nto be greater than:\n  0\n\n\tat com.norconex.crawler.web.cases.recovery.StartCleanAfterStopTest.testStartCleanAfterStop(StartCleanAfterStopTest.java:125)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

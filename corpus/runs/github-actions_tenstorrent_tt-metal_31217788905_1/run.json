@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:tenstorrent/tt-metal:31217788905:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "tenstorrent/tt-metal",
+    "providerRunId": "31217788905",
+    "runAttempt": 1,
+    "url": "https://github.com/tenstorrent/tt-metal/actions/runs/31217788905",
+    "workflowName": "Nightly tt-metal L2 tests",
+    "event": "workflow_dispatch",
+    "headSha": "30b58b3e74a9ea8db0e4ba99841c352ca0087a77",
+    "headBranch": "gchoudhary/51082/metal2-reduction/prod",
+    "artifactIds": [
+      "9010176816",
+      "9010050405",
+      "9010711466",
+      "9010646949",
+      "9010641450",
+      "9009964788",
+      "9010116109",
+      "9010068410",
+      "9010127790",
+      "9010362125",
+      "9010554159",
+      "9010695973",
+      "9010501036",
+      "9011568884",
+      "9011301293",
+      "9011682523",
+      "9010417391",
+      "9011066753",
+      "9011026250",
+      "9011141290",
+      "9010417463",
+      "9010888627",
+      "9010737921"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T17:03:22.725Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 37187,
+    "failures": 2,
+    "passed": 28900,
+    "skipped": 8285,
+    "filesParsed": 23,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test_reports_830f6fc0-68b3-4701-8a31-672345dce86d/hang_report_c4e09193b8b81ec6.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_hung_operation[device0]",
+      "suitePath": [
+        "pytest",
+        "fake.test_hang"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "[HANG DETECTED] Card hang detected during test execution. tt-triage was invoked.",
+      "stackText": "[HANG DETECTED] Card hang detected during test execution. tt-triage was invoked.\n\nTriage summary:\ndump_configuration.py: pass\ncheck_cb_inactive.py: pass\ncheck_eth_status.py: pass\ncheck_l1_status.py: pass\ncheck_noc_locations.py: pass\ndevice_info.py: pass\ndevice_telemetry.py: pass\ndump_op_mesh.py: pass\ndump_op_window.py: pass\ndump_running_operations.py: pass\ncheck_binary_integrity.py: pass\ncheck_core_magic.py: pass\ncheck_noc_status.py: pass\ndump_callstacks.py: pass\ndump_fast_dispatch.py: pass\ndump_lightweight_asserts.py: pass\ndump_watcher_ringbuffer.py: pass\nfirmware_versions.py: pass\nsystem_info.py: pass\ncheck_arc.py: pass\ncheck_broken_components.py: pass\n      ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test_reports_798bec75-a8fd-418a-807d-67eb403ef4d2/hang_report_c4e09193b8b81ec6.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_hung_operation[device0]",
+      "suitePath": [
+        "pytest",
+        "fake.test_hang"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "[HANG DETECTED] Card hang detected during test execution. tt-triage was invoked.",
+      "stackText": "[HANG DETECTED] Card hang detected during test execution. tt-triage was invoked.\n\nTriage summary:\ndump_configuration.py: pass\ncheck_cb_inactive.py: pass\ncheck_eth_status.py: pass\ncheck_l1_status.py: pass\ncheck_noc_locations.py: pass\ndevice_info.py: pass\ndevice_telemetry.py: pass\ndump_op_mesh.py: pass\ndump_op_window.py: pass\ndump_running_operations.py: pass\ncheck_binary_integrity.py: pass\ncheck_core_magic.py: pass\ncheck_noc_status.py: pass\ndump_callstacks.py: pass\ndump_fast_dispatch.py: pass\ndump_lightweight_asserts.py: pass\ndump_watcher_ringbuffer.py: pass\nfirmware_versions.py: pass\nsystem_info.py: pass\ncheck_arc.py: pass\ncheck_broken_components.py: pass\n      ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

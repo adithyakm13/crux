@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:datahub-project/datahub:32525677773:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "datahub-project/datahub",
+    "providerRunId": "32525677773",
+    "runAttempt": 2,
+    "url": "https://github.com/datahub-project/datahub/actions/runs/32525677773",
+    "workflowName": "Metadata Ingestion",
+    "event": "pull_request",
+    "headSha": "a7e013b065c68236d7da51cf8ee05712aca827b8",
+    "headBranch": "feat/dynamodb-s3-export-lineage",
+    "artifactIds": [
+      "9462169153",
+      "9462197805",
+      "9462784488",
+      "9462551766",
+      "9462507014",
+      "9463482877",
+      "9462503146",
+      "9462525631",
+      "9462390454",
+      "9462428376",
+      "9462374802"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T14:26:33.822Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 54467,
+    "failures": 1,
+    "passed": 54321,
+    "skipped": 145,
+    "filesParsed": 12,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "metadata-ingestion-test-results-8/junit.integrationbatch4.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "test_parallel_fetching_performance",
+      "suitePath": [
+        "metadata-ingestion-pytest",
+        "tests.integration.snowplow.test_snowplow_performance"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2685,
+      "errorType": null,
+      "message": "AssertionError: Parallel fetching should be at least 3x faster (got 0.65x)\nassert 1.611966609954834 < (1.053229570388794 / 3)",
+      "stackText": "pytestconfig = <_pytest.config.Config object at 0x7f658e449550>\ntmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_parallel_fetching_perform0')\n\n    @pytest.mark.integration\n    def test_parallel_fetching_performance(pytestconfig, tmp_path):\n        \"\"\"\n        Test that parallel deployment fetching is significantly faster than sequential.\n    \n        This test compares performance with parallel fetching enabled vs disabled.\n        \"\"\"\n        # Generate dataset with 100 schemas (enough to see performance difference)\n        mock_data_structures = generate_mock_data_structures(100)\n    \n        # Simulate API delay (10ms per call to make difference measurable)\n        def mock_get_deployments(schema_hash: str) -> List[DataStructureDeployment]:\n            \"\"\"Simulate API delay.\"\"\"\n            time.sleep(0.01)  # 10ms delay\n            return [\n                DataStructureDeployment(\n                    version=\"1-0-0\",\n                    ts=\"2024-01-01T00:00:00Z\",\n                    initiator=\"Test User\",\n                    initiator_id=\"user123\",\n                )\n            ]\n    \n        # Test 1: Sequential fetching (parallel disabled)\n        config_sequential = {\n            \"bdp_connection\": {\n                \"organization_id\": \"test-org\",\n                \"api_key_id\": \"test-key\",\n                \"api_key\": \"test-secret\",\n            },\n            \"field_tagging\": {\"track_field_versions\": True},\n            \"performance\": {\n                \"enable_parallel_fetching\": False,\n                \"max_concurrent_api_calls\": 10,\n            },\n        }\n    \n        with patch(\n            \"datahub.ingestion.source.snowplow.snowplow.SnowplowBDPClient\"\n        ) as mock_client_class:\n            mock_client = mock_client_class.return_value\n            mock_client._authenticate = lambda: None\n            mock_client._jwt_token = \"mock_token\"\n    \n            from datahub.ingestion.source.snowplow.models.snowplow_models import (\n                DataStructure,\n            )\n    \n            mock_client.get_data_structures.return_value = [\n                DataStructure.model_validate(ds) for ds in mock_data_structures\n            ]\n            mock_client.get_data_structure_deployments.side_effect = mock_get_deployments\n    \n            config = SnowplowSourceConfig.model_validate(config_sequential)\n            source = SnowplowSource(config, create_mock_context())\n            source.bdp_client = mock_client\n    \n            start_time = time.time()\n            list(source.schema_processor._get_data_structures_filtered())\n            sequential_time = time.time() - start_time\n    \n        # Test 2: Parallel fetching (parallel enabled)\n        config_parallel = {\n            \"bdp_connection\": {\n                \"organization_id\": \"test-org\",\n                \"api_key_id\": \"test-key\",\n                \"api_key\": \"test-secret\",\n            },\n            \"field_tagging\": {\"track_field_versions\": True},\n            \"performance\": {\n                \"enable_parallel_fetching\": True,\n                \"max_concurrent_api_calls\": 10,\n            },\n        }\n    \n        with patch(\n            \"datahub.ingestion.source.snowplow.snowplow.SnowplowBDPClient\"\n        ) as mock_client_class:\n            mock_client = mock_client_class.return_value\n            mock_client._authenticate = lambda: None\n            mock_client._jwt_token = \"mock_token\"\n            mock_client.get_data_structures.return_value = [\n                DataStructure.model_validate(ds) for ds in mock_data_structures\n            ]\n            mock_client.get_data_structure_deployments.side_effect = mock_get_deployments\n    \n            config = SnowplowSourceConfig.model_validate(config_parallel)\n            source = SnowplowSource(config, create_mock_context())\n            source.bdp_client = mock_client\n    \n            start_time = time.time()\n            list(source.schema_processor._get_data_structures_filtered())\n            parallel_time = time.time() - start_time\n    \n        # Performance assertions\n        speedup = sequential_time / parallel_time\n        print(\"\\nPerformance Results:\")\n        print(f\"  Sequential time: {sequential_time:.2f}s\")\n        print(f\"  Parallel time: {parallel_time:.2f}s\")\n        print(f\"  Speedup: {speedup:.2f}x\")\n    \n        # Parallel should be at least 3x faster with 10 workers\n        # (100 schemas / 10 workers = ~10 sequential batches vs 100 sequential calls)\n>       assert parallel_time < sequential_time / 3, (\n            f\"Parallel fetching should be at least 3x faster (got {speedup:.2f}x)\"\n        )\nE       AssertionError: Parallel fetching should be at least 3x faster (got 0.65x)\nE       assert 1.611966609954834 < (1.053229570388794 / 3)\n\ntests/integration/snowplow/test_snowplow_performance.py:180: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Sage/carbon:33501972697:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Sage/carbon",
+    "providerRunId": "33501972697",
+    "runAttempt": 1,
+    "url": "https://github.com/Sage/carbon/actions/runs/33501972697",
+    "workflowName": "Playwright",
+    "event": "pull_request",
+    "headSha": "a5134b194dcbdf0d5abe97cb0f74daaf47b4f8a1",
+    "headBranch": "fix/7756-react-story-warnings-keys-dom-props",
+    "artifactIds": [
+      "9798258682",
+      "9798282393",
+      "9798270967",
+      "9798251536",
+      "9798286280",
+      "9798270703",
+      "9798270501",
+      "9798257800"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T08:40:26.535Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 2156,
+    "failures": 8,
+    "passed": 2125,
+    "skipped": 23,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-6/report-6.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "is set on the event when Enter key is pressed on an option using ArrowDown key to navigate",
+      "suitePath": [
+        "Selection confirmed"
+      ],
+      "filePath": "components/select/simple-select/simple-select.pw.tsx",
+      "status": "failed",
+      "durationMs": 6562,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-3\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-3\"]')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-3\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-3\"]')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/select/simple-select/simple-select.pw.tsx:436:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-6/report-6.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "is set on the event when Enter key is pressed on an option using ArrowUp key to navigate",
+      "suitePath": [
+        "Selection confirmed"
+      ],
+      "filePath": "components/select/simple-select/simple-select.pw.tsx",
+      "status": "failed",
+      "durationMs": 6511,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-7\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-7\"]')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-7\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-7\"]')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/select/simple-select/simple-select.pw.tsx:512:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-6/report-6.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "is set on the event when Enter key is pressed on an option using ArrowDown key to navigate",
+      "suitePath": [
+        "Selection confirmed"
+      ],
+      "filePath": "components/select/simple-select/simple-select.pw.tsx",
+      "status": "failed",
+      "durationMs": 5733,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-3\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-3\"]')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-3\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-3\"]')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/select/simple-select/simple-select.pw.tsx:436:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "blob-report-6/report-6.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "is set on the event when Enter key is pressed on an option using ArrowUp key to navigate",
+      "suitePath": [
+        "Selection confirmed"
+      ],
+      "filePath": "components/select/simple-select/simple-select.pw.tsx",
+      "status": "failed",
+      "durationMs": 5844,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/select/simple-select/simple-select.pw.tsx:522:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "blob-report-6/report-6.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "is set on the event when Enter key is pressed on an option using ArrowDown key to navigate",
+      "suitePath": [
+        "Selection confirmed"
+      ],
+      "filePath": "components/select/simple-select/simple-select.pw.tsx",
+      "status": "failed",
+      "durationMs": 5913,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/select/simple-select/simple-select.pw.tsx:446:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "blob-report-6/report-6.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "is set on the event when Enter key is pressed on an option using ArrowUp key to navigate",
+      "suitePath": [
+        "Selection confirmed"
+      ],
+      "filePath": "components/select/simple-select/simple-select.pw.tsx",
+      "status": "failed",
+      "durationMs": 5757,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-7\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-7\"]')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-7\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-7\"]')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/select/simple-select/simple-select.pw.tsx:512:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "blob-report-6/report-6.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "is set on the event when Enter key is pressed on an option using ArrowDown key to navigate",
+      "suitePath": [
+        "Selection confirmed"
+      ],
+      "filePath": "components/select/simple-select/simple-select.pw.tsx",
+      "status": "failed",
+      "durationMs": 5836,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/select/simple-select/simple-select.pw.tsx:446:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "blob-report-6/report-6.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "is set on the event when Enter key is pressed on an option using ArrowUp key to navigate",
+      "suitePath": [
+        "Selection confirmed"
+      ],
+      "filePath": "components/select/simple-select/simple-select.pw.tsx",
+      "status": "failed",
+      "durationMs": 5842,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/select/simple-select/simple-select.pw.tsx:522:7",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

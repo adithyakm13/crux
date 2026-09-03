@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:datahub-project/datahub:32519914612:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "datahub-project/datahub",
+    "providerRunId": "32519914612",
+    "runAttempt": 1,
+    "url": "https://github.com/datahub-project/datahub/actions/runs/32519914612",
+    "workflowName": "Metadata Ingestion",
+    "event": "pull_request",
+    "headSha": "524d9ddf9ff5c299187b378e5803917c5e3c325c",
+    "headBranch": "fix/mode-chartless-query-report-link",
+    "artifactIds": [
+      "9460377724",
+      "9460295714",
+      "9460618439",
+      "9460704154",
+      "9460612176"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T14:26:57.478Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 52531,
+    "failures": 4,
+    "passed": 52415,
+    "skipped": 112,
+    "filesParsed": 5,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "metadata-ingestion-test-results-4/junit.mode.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_threading_speedup",
+      "suitePath": [
+        "metadata-ingestion-pytest",
+        "tests.integration.mode.test_mode_threading"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1968,
+      "errorType": null,
+      "message": "AssertionError: Expected >1.5x speedup but got 1.50x (seq=0.99s, par=0.66s)\nassert 1.4995037669277569 > 1.5",
+      "stackText": "tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_threading_speedup0')\n\n    def test_threading_speedup(tmp_path):\n        \"\"\"Verify that max_threads > 1 provides wall-clock speedup with simulated latency.\n    \n        Uses 10 reports with 2 queries each. Each HTTP call sleeps 50ms.\n        With 4 threads, expect ~2-4x wall-clock speedup.\n    \n        Note: No @time_machine.travel here -- time_machine patches time.monotonic()\n        which would make our wall-clock measurements return 0.\n        \"\"\"\n        num_reports = 10\n        num_queries_per_report = 2\n        latency = 0.05  # 50ms per request\n    \n        responses = _build_perf_response_map(num_reports, num_queries_per_report)\n    \n        # Sequential run (max_threads=1)\n        with patch(\n            \"datahub.ingestion.source.mode.requests.Session\",\n            side_effect=lambda *a, **kw: ThreadSafeMockSession(responses, latency=latency),\n        ):\n            pipeline_seq = Pipeline.create(\n                {\n                    \"run_id\": \"mode-perf-sequential\",\n                    \"source\": {\n                        \"type\": \"mode\",\n                        \"config\": {\n                            \"token\": \"xxxx\",\n                            \"password\": \"xxxx\",\n                            \"connect_uri\": \"https://app.mode.com/\",\n                            \"workspace\": \"acryl\",\n                            \"max_threads\": 1,\n                        },\n                    },\n                    \"sink\": {\n                        \"type\": \"file\",\n                        \"config\": {\n                            \"filename\": f\"{tmp_path}/perf_seq.json\",\n                        },\n                    },\n                }\n            )\n            t0 = time.perf_counter()\n            pipeline_seq.run()\n            sequential_time = time.perf_counter() - t0\n    \n        # Threaded run (max_threads=4)\n        with patch(\n            \"datahub.ingestion.source.mode.requests.Session\",\n            side_effect=lambda *a, **kw: ThreadSafeMockSession(responses, latency=latency),\n        ):\n            pipeline_par = Pipeline.create(\n                {\n                    \"run_id\": \"mode-perf-parallel\",\n                    \"source\": {\n                        \"type\": \"mode\",\n                        \"config\": {\n                            \"token\": \"xxxx\",\n                            \"password\": \"xxxx\",\n                            \"connect_uri\": \"https://app.mode.com/\",\n                            \"workspace\": \"acryl\",\n                            \"max_threads\": 4,\n                        },\n                    },\n                    \"sink\": {\n                        \"type\": \"file\",\n                        \"config\": {\n                            \"filename\": f\"{tmp_path}/perf_par.json\",\n                        },\n                    },\n                }\n            )\n            t0 = time.perf_counter()\n            pipeline_par.run()\n            parallel_time = time.perf_counter() - t0\n    \n        speedup = sequential_time / parallel_time if parallel_time > 0 else float(\"inf\")\n    \n        print(\n            f\"\\nPerf results: sequential={sequential_time:.2f}s, \"\n            f\"parallel={parallel_time:.2f}s, speedup={speedup:.1f}x\"\n        )\n    \n        # With 4 threads and 50ms latency, we should see at least 1.5x speedup.\n        # Using a conservative threshold to avoid flaky CI.\n>       assert speedup > 1.5, (\n            f\"Expected >1.5x speedup but got {speedup:.2f}x \"\n            f\"(seq={sequential_time:.2f}s, par={parallel_time:.2f}s)\"\n        )\nE       AssertionError: Expected >1.5x speedup but got 1.50x (seq=0.99s, par=0.66s)\nE       assert 1.4995037669277569 > 1.5\n\ntests/integration/mode/test_mode_threading.py:511: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "metadata-ingestion-test-results-1/junit.quick.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test_fetches_charts_when_explorations_zero_but_chart_count_positive",
+      "suitePath": [
+        "metadata-ingestion-pytest",
+        "tests.unit.test_mode_source.TestChartFetchGating"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 11,
+      "errorType": null,
+      "message": "AssertionError: assert 0 == 1\n +  where 0 = <function TestChartFetchGating._drive at 0x7fceef8c4790>(ModeSource(ctx=<MagicMock id='140511897823088'>), explorations_count=0, chart_count=1)\n +    where <function TestChartFetchGating._drive at 0x7fceef8c4790> = <tests.unit.test_mode_source.TestChartFetchGating object at 0x7fceef89ad70>._drive",
+      "stackText": "self = <tests.unit.test_mode_source.TestChartFetchGating object at 0x7fceef89ad70>\n\n    def test_fetches_charts_when_explorations_zero_but_chart_count_positive(self):\n        source = _make_source()\n>       assert self._drive(source, explorations_count=0, chart_count=1) == 1\nE       AssertionError: assert 0 == 1\nE        +  where 0 = <function TestChartFetchGating._drive at 0x7fceef8c4790>(ModeSource(ctx=<MagicMock id='140511897823088'>), explorations_count=0, chart_count=1)\nE        +    where <function TestChartFetchGating._drive at 0x7fceef8c4790> = <tests.unit.test_mode_source.TestChartFetchGating object at 0x7fceef89ad70>._drive\n\ntests/unit/test_mode_source.py:795: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "metadata-ingestion-test-results-2/junit.quick.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_fetches_charts_when_explorations_zero_but_chart_count_positive",
+      "suitePath": [
+        "metadata-ingestion-pytest",
+        "tests.unit.test_mode_source.TestChartFetchGating"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 18,
+      "errorType": null,
+      "message": "AssertionError: assert 0 == 1\n +  where 0 = <function TestChartFetchGating._drive at 0x7f93f8fc0220>(ModeSource(ctx=<MagicMock id='140273665112160'>), explorations_count=0, chart_count=1)\n +    where <function TestChartFetchGating._drive at 0x7f93f8fc0220> = <tests.unit.test_mode_source.TestChartFetchGating object at 0x7f93fa8b5a30>._drive",
+      "stackText": "self = <tests.unit.test_mode_source.TestChartFetchGating object at 0x7f93fa8b5a30>\n\n    def test_fetches_charts_when_explorations_zero_but_chart_count_positive(self):\n        source = _make_source()\n>       assert self._drive(source, explorations_count=0, chart_count=1) == 1\nE       AssertionError: assert 0 == 1\nE        +  where 0 = <function TestChartFetchGating._drive at 0x7f93f8fc0220>(ModeSource(ctx=<MagicMock id='140273665112160'>), explorations_count=0, chart_count=1)\nE        +    where <function TestChartFetchGating._drive at 0x7f93f8fc0220> = <tests.unit.test_mode_source.TestChartFetchGating object at 0x7f93fa8b5a30>._drive\n\ntests/unit/test_mode_source.py:795: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "metadata-ingestion-test-results-0/junit.quick.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "test_fetches_charts_when_explorations_zero_but_chart_count_positive",
+      "suitePath": [
+        "metadata-ingestion-pytest",
+        "tests.unit.test_mode_source.TestChartFetchGating"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 9,
+      "errorType": null,
+      "message": "AssertionError: assert 0 == 1\n +  where 0 = <function TestChartFetchGating._drive at 0x7f0c27b67e20>(ModeSource(ctx=<MagicMock id='139689857710736'>), explorations_count=0, chart_count=1)\n +    where <function TestChartFetchGating._drive at 0x7f0c27b67e20> = <tests.unit.test_mode_source.TestChartFetchGating object at 0x7f0c27b19c10>._drive",
+      "stackText": "self = <tests.unit.test_mode_source.TestChartFetchGating object at 0x7f0c27b19c10>\n\n    def test_fetches_charts_when_explorations_zero_but_chart_count_positive(self):\n        source = _make_source()\n>       assert self._drive(source, explorations_count=0, chart_count=1) == 1\nE       AssertionError: assert 0 == 1\nE        +  where 0 = <function TestChartFetchGating._drive at 0x7f0c27b67e20>(ModeSource(ctx=<MagicMock id='139689857710736'>), explorations_count=0, chart_count=1)\nE        +    where <function TestChartFetchGating._drive at 0x7f0c27b67e20> = <tests.unit.test_mode_source.TestChartFetchGating object at 0x7f0c27b19c10>._drive\n\ntests/unit/test_mode_source.py:795: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

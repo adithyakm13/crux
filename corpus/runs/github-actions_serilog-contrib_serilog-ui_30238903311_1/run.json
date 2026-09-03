@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:serilog-contrib/serilog-ui:30238903311:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "serilog-contrib/serilog-ui",
+    "providerRunId": "30238903311",
+    "runAttempt": 1,
+    "url": "https://github.com/serilog-contrib/serilog-ui/actions/runs/30238903311",
+    "workflowName": "JS-build",
+    "event": "pull_request",
+    "headSha": "f487d16c57a00fcacfb9c260a1ca1d42052feb5d",
+    "headBranch": "dependabot/npm_and_yarn/src/Serilog.Ui.Web/react-router-8.3.0",
+    "artifactIds": [
+      "8642575655"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-02T16:59:02.479Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 233,
+    "failures": 18,
+    "passed": 215,
+    "skipped": 0,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 8
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates date param 'startDate': null",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 6,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:34:23\n\nCaused by: Caused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:34:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates date param 'startDate': 'Mon, 27 Jul 2026 05:09:20 GMT'",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:34:23\n\nCaused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:34:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates date param 'endDate': null",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:34:23\n\nCaused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:34:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates date param 'endDate': 'Mon, 27 Jul 2026 05:09:20 GMT'",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:34:23\n\nCaused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:34:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates level param: null",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:47:23\n\nCaused by: Caused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:47:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates level param: test",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:47:23\n\nCaused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:47:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates search param",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:58:23\n\nCaused by: Caused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:58:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates table param: null",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:69:23\n\nCaused by: Caused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:69:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates table param: test",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:69:23\n\nCaused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:69:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates 'sortOn' param: 'test'",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:85:23\n\nCaused by: Caused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:85:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates 'sortBy' param: 'test'",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:85:23\n\nCaused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:85:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates 'entriesPerPage' param: 'test'",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:85:23\n\nCaused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:85:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates 'page' param: 'test'",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:85:23\n\nCaused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:85:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamSync > updates multiple params",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:96:23\n\nCaused by: Caused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:96:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQuerySyncTable > not invokes set-params on empty table",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:109:20\n\nCaused by: Caused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:109:20\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQuerySyncTable > not invokes set-params when query-params has table",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:120:20\n\nCaused by: Caused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:120:20\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQuerySyncTable > invokes set-params when default table is provided",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:131:23\n\nCaused by: Caused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:131:23\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "test-results/src/Serilog.Ui.Web/src/reports/test-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "useQueryParamReader > happy-path, removing invalid parameter",
+      "suitePath": [
+        "__tests__/hooks/useQueryParamSync.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "TypeError",
+      "message": "Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations",
+      "stackText": "\nTypeError: Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM. See: https://vitest.dev/guide/browser/#limitations\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:160:23\n\nCaused by: Caused by: TypeError: Cannot redefine property: useSearchParams\n ❯ mockSearchParams __tests__/hooks/useQueryParamSync.spec.ts:18:6\n ❯ __tests__/hooks/useQueryParamSync.spec.ts:160:23\n            ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

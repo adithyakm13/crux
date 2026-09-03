@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33579846992:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ArcadeData/arcadedb",
+    "providerRunId": "33579846992",
+    "runAttempt": 1,
+    "url": "https://github.com/ArcadeData/arcadedb/actions/runs/33579846992",
+    "workflowName": "Java CI - test",
+    "event": "pull_request",
+    "headSha": "f6fa795c0defa6e6faa93df82149a470266efa85",
+    "headBranch": "fix/6922-meta-stats-nodecount-after-collect-unwind",
+    "artifactIds": [
+      "9828134883",
+      "9828155898",
+      "9828154799",
+      "9828132856",
+      "9829109117"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T08:30:52.865Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 455,
+    "failures": 1,
+    "passed": 446,
+    "skipped": 8,
+    "filesParsed": 80,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "slow-unit-test-reports/engine/target/surefire-reports/TEST-com.arcadedb.index.vector.Issue6657CloseTimeRebuildPendingStatTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "closeTimeRebuildPendingTurnsOnAtDeferralSurvivesReopenAndClearsOnceTheDeferredRebuildRuns",
+      "suitePath": [
+        "com.arcadedb.index.vector.Issue6657CloseTimeRebuildPendingStatTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 60405,
+      "errorType": "org.awaitility.core.ConditionTimeoutException",
+      "message": "Condition with alias 'the async rebuild kicked off by the deferred-rebuild search completes' didn't complete within 1 minutes because assertion condition defined as a Lambda expression in com.arcadedb.index.vector.Issue6657CloseTimeRebuildPendingStatTest [the search above must be what finally runs the deferred build] \nexpected: 1L\n but was: 0L.",
+      "stackText": "org.awaitility.core.ConditionTimeoutException: \nCondition with alias 'the async rebuild kicked off by the deferred-rebuild search completes' didn't complete within 1 minutes because assertion condition defined as a Lambda expression in com.arcadedb.index.vector.Issue6657CloseTimeRebuildPendingStatTest [the search above must be what finally runs the deferred build] \nexpected: 1L\n but was: 0L.\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:167)\n\tat org.awaitility.core.AssertionCondition.await(AssertionCondition.java:119)\n\tat org.awaitility.core.AssertionCondition.await(AssertionCondition.java:31)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java:1160)\n\tat org.awaitility.core.ConditionFactory.untilAsserted(ConditionFactory.java:790)\n\tat com.arcadedb.index.vector.Issue6657CloseTimeRebuildPendingStatTest.closeTimeRebuildPendingTurnsOnAtDeferralSurvivesReopenAndClearsOnceTheDeferredRebuildRuns(Issue6657CloseTimeRebuildPendingStatTest.java:185)\nCaused by: org.opentest4j.AssertionFailedError: [the search above must be what finally runs the deferred build] \nexpected: 1L\n but was: 0L\n\tat com.arcadedb.index.vector.Issue6657CloseTimeRebuildPendingStatTest.lambda$closeTimeRebuildPendingTurnsOnAtDeferralSurvivesReopenAndClearsOnceTheDeferredRebuildRuns$1(Issue6657CloseTimeRebuildPendingStatTest.java:188)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

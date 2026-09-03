@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apple/pkl-go:29857993835:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apple/pkl-go",
+    "providerRunId": "29857993835",
+    "runAttempt": 2,
+    "url": "https://github.com/apple/pkl-go/actions/runs/29857993835",
+    "workflowName": "Pull Request",
+    "event": "pull_request",
+    "headSha": "df6e977a463afd23cff24d1e73b52a8b8b65f86b",
+    "headBranch": "fix/ctx-cancellation-eof",
+    "artifactIds": [
+      "8506239941",
+      "8506239790"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T09:04:02.492Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 14,
+    "failures": 2,
+    "passed": 12,
+    "skipped": 0,
+    "filesParsed": 5,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-xml-test-pkl-0-25-3/go-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "[build failed]",
+      "suitePath": [
+        "github.com/apple/pkl-go/pkl"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "Build error",
+      "stackText": "pkl/evaluator_manager_test.go:109:7: undefined: newFakeEvalautorManager",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-xml-test-pkl-0-32-0/go-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "[build failed]",
+      "suitePath": [
+        "github.com/apple/pkl-go/pkl"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "Build error",
+      "stackText": "pkl/evaluator_manager_test.go:109:7: undefined: newFakeEvalautorManager",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

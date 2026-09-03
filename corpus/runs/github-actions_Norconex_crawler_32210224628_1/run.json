@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Norconex/crawler:32210224628:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Norconex/crawler",
+    "providerRunId": "32210224628",
+    "runAttempt": 1,
+    "url": "https://github.com/Norconex/crawler/actions/runs/32210224628",
+    "workflowName": "Nightly Tests",
+    "event": "schedule",
+    "headSha": "446bed711e1da51293416345691795d25467bb44",
+    "headBranch": "main",
+    "artifactIds": [
+      "9350871430"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T08:39:21.493Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1940,
+    "failures": 2,
+    "passed": 1938,
+    "skipped": 0,
+    "filesParsed": 305,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "nightly-test-results/crawler/web/target/surefire-reports/TEST-com.norconex.crawler.web.cases.recovery.StartCleanAfterStopTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testStartCleanAfterStop(ClientAndServer, Path)",
+      "suitePath": [
+        "com.norconex.crawler.web.cases.recovery.StartCleanAfterStopTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 12677,
+      "errorType": "java.lang.AssertionError",
+      "message": "\nExpecting actual:\n  -4\nto be greater than:\n  0\n",
+      "stackText": "java.lang.AssertionError: \n\nExpecting actual:\n  -4\nto be greater than:\n  0\n\n\tat com.norconex.crawler.web.cases.recovery.StartCleanAfterStopTest.testStartCleanAfterStop(StartCleanAfterStopTest.java:125)\n",
+      "stdout": "03:11:07.965 [test-crawler#0] ERROR com.norconex.crawler.core.fetch.MultiFetcher - Fetcher HttpClientFetcher failed to execute request.\ncom.norconex.crawler.core.fetch.FetchException: Could not fetch document: http://localhost:41597/timeout/index.html\n\tat com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcher.fetch(HttpClientFetcher.java:310) ~[classes/:?]\n\tat com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcher.fetch(HttpClientFetcher.java:191) ~[classes/:?]\n\tat com.norconex.crawler.core.fetch.MultiFetcher.doFetch(MultiFetcher.java:173) ~[nx-crawler-core-4.0.0-SNAPSHOT.jar:4.0.0-SNAPSHOT]\n\tat com.norconex.crawler.core.fetch.MultiFetcher.fetch(MultiFetcher.java:121) ~[nx-crawler-core-4.0.0-SNAPSHOT.jar:4.0.0-SNAPSHOT]\n\tat com.norconex.crawler.web.doc.pipelines.importer.stages.HttpFetchStage.executeStage(HttpFetchStage.java:79) ~[classes/:?]\n\tat com.norconex.crawler.core.doc.pipelines.importer.stages.AbstractImporterStage.test(AbstractImporterStage.java:40) ~[nx-crawler-core-4.0.0-SNAPSHOT.jar:4.0.0-SNAPSHOT]\n\tat com.norconex.crawler.core.doc.pipelines.importer.stages.AbstractImporterStage.test(AbstractImporterStage.java:24) ~[nx-crawler-core-4.0.0-SNAPSHOT.jar:4.0.0-SNAPSHOT]\n\tat com.norconex.commons.lang.function.Predicates.test(Predicates.java:100) ~[norconex-commons-lang-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]\n\tat com.norconex.crawler.core.doc.pipelines.importer.ImporterPipeline.apply(ImporterPipeline.java:52) ~[nx-crawler-core-4.0.0-SNAPSHOT.jar:4.0.0-SNAPSHOT]\n\tat com.norconex.crawler.core.cmd.crawl.pipeline.process.ProcessUpsert.importDocument(ProcessUpsert.java:54) ~[nx-crawler-core-4.0.0-SNAPSHOT.jar:4.0.0-SNAPSHOT]\n\tat com.norconex.crawler.core.cmd.crawl.pipeline.process.ProcessUpsert.execute(ProcessUpsert.java:37) ~[nx-crawler-core-4.0.0-SNAPSHOT.jar:4.0.0-SNAPSHOT]\n\tat com.norconex.crawler.core.cmd.crawl.pipeline.process.CrawlerProcessStep.processNextInQueue(CrawlerProcessStep.java:266) ~[nx-crawler-core-4.0.0-SNAPSHOT.jar:4.0.0-SNAPSHOT]\n\tat com.norconex.crawler.core.cmd.crawl.pipeline.process.CrawlerProcessStep.processQueue(CrawlerProcessStep.java:169) ~[nx-crawler-core-4.0.0-SNAPSHOT.jar:4.0.0-SNAPSHOT]\n\tat com.norconex.crawler.core.cmd.crawl.pipeline.process.CrawlerProcessStep.lambda$execute$0(CrawlerProcessStep.java:94) ~[nx-crawler-core-4.0.0-SNAPSHOT.jar:4.0.0-SNAPSHOT]\n\tat java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]\n\tat java.base/java.lang.Thread.run(Thread.java:1583) [?:?]\nCaused by: java.net.SocketTimeoutException: Read timed out\n\tat java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[?:?]\n\tat java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[?:?]\n\tat java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[?:?]\n\tat java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[?:?]\n\tat java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[?:?]\n\tat org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149) ~[httpcore5-5.4.jar:5.4]\n\tat org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280) ~[httpcore5-5.4.jar:5.4]\n\tat org.apache.hc.core5.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:250) ~[httpcore5-5.4.jar:5.4]\n\tat org.apache.hc.core5.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:56) ~[httpcore5-5.4.jar:5.4]\n\tat org.apache.hc.core5.http.impl.io.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:331) ~[httpcore5-5.4.jar:5.4]\n\tat org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:197) ~[httpcore5-5.4.jar:5.4]\n\tat org.apache.hc.client5.http.impl.classic.InternalExecRuntime.lambda$execute$0(InternalExecRuntime.java:236) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager$InternalConnectionEndpoint.execute(PoolingHttpClientConnectionManager.java:851) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.InternalExecRuntime.execute(InternalExecRuntime.java:233) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.MainClientExec.execute(MainClientExec.java:120) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:192) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:138) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:245) ~[httpclient5-5.6.jar:5.6]\n\tat org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:188) ~[httpclient5-5.6.jar:5.6]\n\tat com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcher.executeRequest(HttpClientFetcher.java:321) ~[classes/:?]\n\tat com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcher.fetch(HttpClientFetcher.java:301) ~[classes/:?]\n\t... 17 more\n03:11:08.013 [ForkJoinPool-1-worker-1] WARN  com.norconex.commons.lang.ClassFinder - Skipping JAR with too many entries: /home/runner/.m2/repository/org/apache/poi/poi-ooxml-full/5.5.1/poi-ooxml-full-5.5.1.jar (15564 entries)\n03:11:08.079 [ForkJoinPool-1-worker-1] WARN  com.norconex.commons.lang.ClassFinder - Skipping JAR with too many entries: /home/runner/.m2/repository/com/hazelcast/hazelcast/5.7.0/hazelcast-5.7.0.jar (12004 entries)\n03:11:08.128 [ForkJoinPool-1-worker-1] WARN  com.norconex.commons.lang.ClassFinder - Skipping JAR with too many entries: /home/runner/.m2/repository/com/hazelcast/hazelcast-jdbc/5.7.0/hazelcast-jdbc-5.7.0.jar (24841 entries)\n03:11:08.128 [ForkJoinPool-1-worker-1] WARN  com.norconex.commons.lang.ClassFinder - Skipping JAR with too many entries: /home/runner/.m2/repository/com/hazelcast/hazelcast-sql/5.7.0/hazelcast-sql-5.7.0.jar (14135 entries)\n03:11:08.178 [test-crawler/CRAWL] ERROR com.norconex.crawler.web.doc.operations.sitemap.impl.SitemapParser - Cannot fetch sitemap: http://localhost:34855/sitemap.xml -- Likely an invalid sitemap XML format causing a parsing error (actual error:Could not verify if there is a next element.).\n03:11:08.201 [test-crawler/CRAWL] ERROR com.norconex.crawler.web.doc.operations.sitemap.impl.SitemapParser - Cannot fetch sitemap: http://localhost:34855/sitemap_index.xml -- Likely an invalid sitemap XML format causing a parsing error (actual error:Could not verify if there is a next element.).\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "nightly-test-results/crawler/web/target/surefire-reports/TEST-com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcherTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testCreateCredentialsProviderHostNameOnlyNoPortFromXml",
+      "suitePath": [
+        "com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcherTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 28,
+      "errorType": "java.lang.AssertionError",
+      "message": "\nExpecting actual not to be null",
+      "stackText": "java.lang.AssertionError: \n\nExpecting actual not to be null\n\tat com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcherTest.testCreateCredentialsProviderHostNameOnlyNoPortFromXml(HttpClientFetcherTest.java:411)\n",
+      "stdout": "Host loaded from XML without <port>: intranet.example.com:0\n03:11:16.845 [test-crawler/CRAWL] WARN  com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcher - NTLM authentication is deprecated and may be removed in a future release. Consider using a supported method such as BASIC, DIGEST, FORM, SPNEGO, or KERBEROS.\n",
+      "stderr": null
+    }
+  ]
+}

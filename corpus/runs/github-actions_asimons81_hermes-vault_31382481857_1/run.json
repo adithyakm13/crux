@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:31382481857:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "asimons81/hermes-vault",
+    "providerRunId": "31382481857",
+    "runAttempt": 1,
+    "url": "https://github.com/asimons81/hermes-vault/actions/runs/31382481857",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "357aaacacce37a6bfb14b680b88507857da85fff",
+    "headBranch": "dependabot/pip/python-runtime-dependencies-cc6c16f905",
+    "artifactIds": [
+      "9060404912",
+      "9060402815",
+      "9060416439",
+      "9060417648"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-02T09:05:00.144Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 60,
+    "failures": 4,
+    "passed": 56,
+    "skipped": 0,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-reports-ubuntu-latest-py3.11/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "tests.test_mcp_server",
+      "suitePath": [
+        "pytest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "tests/test_mcp_server.py:16: in <module>\n    from hermes_vault.mcp_server import (\nsrc/hermes_vault/mcp_server.py:874: in <module>\n    @server.list_tools()\n     ^^^^^^^^^^^^^^^^^\nE   AttributeError: 'Server' object has no attribute 'list_tools'",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-reports-ubuntu-latest-py3.12/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "tests.test_mcp_server",
+      "suitePath": [
+        "pytest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "tests/test_mcp_server.py:16: in <module>\n    from hermes_vault.mcp_server import (\nsrc/hermes_vault/mcp_server.py:874: in <module>\n    @server.list_tools()\n     ^^^^^^^^^^^^^^^^^\nE   AttributeError: 'Server' object has no attribute 'list_tools'",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-reports-windows-latest-py3.11/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "tests.test_mcp_server",
+      "suitePath": [
+        "pytest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "tests\\test_mcp_server.py:16: in <module>\n    from hermes_vault.mcp_server import (\nsrc\\hermes_vault\\mcp_server.py:874: in <module>\n    @server.list_tools()\n     ^^^^^^^^^^^^^^^^^\nE   AttributeError: 'Server' object has no attribute 'list_tools'",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-reports-windows-latest-py3.12/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "tests.test_mcp_server",
+      "suitePath": [
+        "pytest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "tests\\test_mcp_server.py:16: in <module>\n    from hermes_vault.mcp_server import (\nsrc\\hermes_vault\\mcp_server.py:874: in <module>\n    @server.list_tools()\n     ^^^^^^^^^^^^^^^^^\nE   AttributeError: 'Server' object has no attribute 'list_tools'",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

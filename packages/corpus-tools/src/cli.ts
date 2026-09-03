@@ -38,7 +38,8 @@ function usage(): string {
     '  corpus harvest --repos <path|owner/name,...> [--runs-per-repo N]',
     '  corpus status',
     '  corpus frames [--markdown] [--include-untracked]',
-    '  corpus label --labeler <name> [--context full|payload-only] [--min-failures N]',
+    '  corpus label --labeler <name> [--context full|payload-only]',
+    '                [--min-failures N] [--max-failures N]',
     '  corpus agreement --a <labeler> --b <labeler>',
     '  corpus separability --full <labeler> --payload <labeler>',
     '  corpus baseline --labeler <name>',
@@ -49,6 +50,7 @@ function usage(): string {
     '  --allow-unlicensed  harvest repositories whose licence cannot be identified',
     '  --context C         label context: full (default) or payload-only',
     '  --min-failures N    only label runs with at least N failures (default: 1)',
+    '  --max-failures N    skip runs bigger than N failures (suite collapses)',
     '  --max-runs N        stop after this many runs in one sitting',
     '  --json              machine-readable output',
   ].join('\n');
@@ -203,6 +205,7 @@ async function main(): Promise<number> {
     }
     const opts: Parameters<typeof labelCommand>[0] = { corpusDir, labeler, context };
     if (flags.has('min-failures')) opts.minFailures = Number(flags.get('min-failures'));
+    if (flags.has('max-failures')) opts.maxFailures = Number(flags.get('max-failures'));
     if (flags.has('max-runs')) opts.maxRuns = Number(flags.get('max-runs'));
     return labelCommand(opts);
   }

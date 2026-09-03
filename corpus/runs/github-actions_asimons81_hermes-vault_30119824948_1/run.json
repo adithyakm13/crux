@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:30119824948:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "asimons81/hermes-vault",
+    "providerRunId": "30119824948",
+    "runAttempt": 1,
+    "url": "https://github.com/asimons81/hermes-vault/actions/runs/30119824948",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "24186c5cbe805108f3a1f31aa393696f3c6a3e9a",
+    "headBranch": "release/v0.22.0",
+    "artifactIds": [
+      "8606937243",
+      "8606955307",
+      "8607034349",
+      "8607054086"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-02T09:06:23.312Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 3648,
+    "failures": 4,
+    "passed": 3642,
+    "skipped": 2,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-reports-ubuntu-latest-py3.11/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_release_story_mentions_agent_control_plane",
+      "suitePath": [
+        "pytest",
+        "tests.test_release_regression"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": null,
+      "message": "assert \"What's New in 0.21.0\" in '# Hermes Vault\\n\\n![Hermes Vault promo image](assets/hermes-vault-promo-image.png)\\n\\nHermes Vault is a local-first c...docs/migration-0.6-to-0.7.md](docs/migration-0.6-to-0.7.md), and [docs/update-workflow.md](docs/update-workflow.md).\\n'",
+      "stackText": "tests/test_release_regression.py:56: in test_release_story_mentions_agent_control_plane\n    assert \"What's New in 0.21.0\" in readme\nE   assert \"What's New in 0.21.0\" in '# Hermes Vault\\n\\n![Hermes Vault promo image](assets/hermes-vault-promo-image.png)\\n\\nHermes Vault is a local-first c...docs/migration-0.6-to-0.7.md](docs/migration-0.6-to-0.7.md), and [docs/update-workflow.md](docs/update-workflow.md).\\n'",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-reports-ubuntu-latest-py3.12/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_release_story_mentions_agent_control_plane",
+      "suitePath": [
+        "pytest",
+        "tests.test_release_regression"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": null,
+      "message": "assert \"What's New in 0.21.0\" in '# Hermes Vault\\n\\n![Hermes Vault promo image](assets/hermes-vault-promo-image.png)\\n\\nHermes Vault is a local-first c...docs/migration-0.6-to-0.7.md](docs/migration-0.6-to-0.7.md), and [docs/update-workflow.md](docs/update-workflow.md).\\n'",
+      "stackText": "tests/test_release_regression.py:56: in test_release_story_mentions_agent_control_plane\n    assert \"What's New in 0.21.0\" in readme\nE   assert \"What's New in 0.21.0\" in '# Hermes Vault\\n\\n![Hermes Vault promo image](assets/hermes-vault-promo-image.png)\\n\\nHermes Vault is a local-first c...docs/migration-0.6-to-0.7.md](docs/migration-0.6-to-0.7.md), and [docs/update-workflow.md](docs/update-workflow.md).\\n'",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-reports-windows-latest-py3.12/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test_release_story_mentions_agent_control_plane",
+      "suitePath": [
+        "pytest",
+        "tests.test_release_regression"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3,
+      "errorType": null,
+      "message": "assert \"What's New in 0.21.0\" in '# Hermes Vault\\n\\n![Hermes Vault promo image](assets/hermes-vault-promo-image.png)\\n\\nHermes Vault is a local-first c...docs/migration-0.6-to-0.7.md](docs/migration-0.6-to-0.7.md), and [docs/update-workflow.md](docs/update-workflow.md).\\n'",
+      "stackText": "tests\\test_release_regression.py:56: in test_release_story_mentions_agent_control_plane\n    assert \"What's New in 0.21.0\" in readme\nE   assert \"What's New in 0.21.0\" in '# Hermes Vault\\n\\n![Hermes Vault promo image](assets/hermes-vault-promo-image.png)\\n\\nHermes Vault is a local-first c...docs/migration-0.6-to-0.7.md](docs/migration-0.6-to-0.7.md), and [docs/update-workflow.md](docs/update-workflow.md).\\n'",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-reports-windows-latest-py3.11/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_release_story_mentions_agent_control_plane",
+      "suitePath": [
+        "pytest",
+        "tests.test_release_regression"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2,
+      "errorType": null,
+      "message": "assert \"What's New in 0.21.0\" in '# Hermes Vault\\n\\n![Hermes Vault promo image](assets/hermes-vault-promo-image.png)\\n\\nHermes Vault is a local-first c...docs/migration-0.6-to-0.7.md](docs/migration-0.6-to-0.7.md), and [docs/update-workflow.md](docs/update-workflow.md).\\n'",
+      "stackText": "tests\\test_release_regression.py:56: in test_release_story_mentions_agent_control_plane\n    assert \"What's New in 0.21.0\" in readme\nE   assert \"What's New in 0.21.0\" in '# Hermes Vault\\n\\n![Hermes Vault promo image](assets/hermes-vault-promo-image.png)\\n\\nHermes Vault is a local-first c...docs/migration-0.6-to-0.7.md](docs/migration-0.6-to-0.7.md), and [docs/update-workflow.md](docs/update-workflow.md).\\n'",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

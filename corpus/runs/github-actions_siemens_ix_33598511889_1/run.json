@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:siemens/ix:33598511889:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "siemens/ix",
+    "providerRunId": "33598511889",
+    "runAttempt": 1,
+    "url": "https://github.com/siemens/ix/actions/runs/33598511889",
+    "workflowName": "Pull Request",
+    "event": "pull_request",
+    "headSha": "b225c7206cbd3346692f0f6407a4a5e22ad78fb2",
+    "headBranch": "fix/remaining-sdl-findings",
+    "artifactIds": [
+      "9834462892",
+      "9834511156",
+      "9834535051",
+      "9834457160"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-02T17:00:36.826Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 744,
+    "failures": 12,
+    "passed": 730,
+    "skipped": 2,
+    "filesParsed": 4,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "visual-testing-blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "basic",
+      "suitePath": [
+        "input"
+      ],
+      "filePath": "tests/input/input.e2e.ts",
+      "status": "failed",
+      "durationMs": 1580,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.inputs')\n  Expected an image 1280px by 64px, received 1280px by 32px. 1425 pixels (ratio 0.02 of all image pixels) are different.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('.inputs')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"inputs\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - Expected an image 1280px by 64px, received 1280px by 32px. 1425 pixels (ratio 0.02 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('.inputs')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"inputs\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1280px by 64px, received 1280px by 32px. 1425 pixels (ratio 0.02 of all image pixels) are different.\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.inputs')\n  Expected an image 1280px by 64px, received 1280px by 32px. 1425 pixels (ratio 0.02 of all image pixels) are different.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('.inputs')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"inputs\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - Expected an image 1280px by 64px, received 1280px by 32px. 1425 pixels (ratio 0.02 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('.inputs')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"inputs\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1280px by 64px, received 1280px by 32px. 1425 pixels (ratio 0.02 of all image pixels) are different.\u001b[22m\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/input/input.e2e.ts:18:43",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "visual-testing-blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "disabled",
+      "suitePath": [
+        "input"
+      ],
+      "filePath": "tests/input/input.e2e.ts",
+      "status": "failed",
+      "durationMs": 1473,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.inputs')\n  Expected an image 1280px by 64px, received 1280px by 32px. 372 pixels (ratio 0.01 of all image pixels) are different.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('.inputs')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"inputs\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - Expected an image 1280px by 64px, received 1280px by 32px. 389 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('.inputs')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"inputs\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1280px by 64px, received 1280px by 32px. 372 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.inputs')\n  Expected an image 1280px by 64px, received 1280px by 32px. 372 pixels (ratio 0.01 of all image pixels) are different.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('.inputs')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"inputs\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - Expected an image 1280px by 64px, received 1280px by 32px. 389 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('.inputs')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"inputs\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1280px by 64px, received 1280px by 32px. 372 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/input/input.e2e.ts:74:43",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "visual-testing-blob-report-1/report-1.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "dropdown open",
+      "suitePath": [
+        "datetime-input"
+      ],
+      "filePath": "tests/datetime-input/datetime-input.e2e.ts",
+      "status": "failed",
+      "durationMs": 7216,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  20108 pixels (ratio 0.03 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  20108 pixels (ratio 0.03 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/datetime-input/datetime-input.e2e.ts:32:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "visual-testing-blob-report-1/report-1.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 1,
+      "displayName": "dropdown open",
+      "suitePath": [
+        "datetime-input"
+      ],
+      "filePath": "tests/datetime-input/datetime-input.e2e.ts",
+      "status": "failed",
+      "durationMs": 12086,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  20108 pixels (ratio 0.03 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  20108 pixels (ratio 0.03 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/datetime-input/datetime-input.e2e.ts:32:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "visual-testing-blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "overflow",
+      "suitePath": [
+        "tabs"
+      ],
+      "filePath": "tests/tabs/tabs.e2e.ts",
+      "status": "failed",
+      "durationMs": 3697,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/tabs/tabs.e2e.ts:37:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "visual-testing-blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 1,
+      "displayName": "overflow",
+      "suitePath": [
+        "tabs"
+      ],
+      "filePath": "tests/tabs/tabs.e2e.ts",
+      "status": "failed",
+      "durationMs": 2695,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/tabs/tabs.e2e.ts:37:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "visual-testing-blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 2,
+      "displayName": "overflow",
+      "suitePath": [
+        "tabs"
+      ],
+      "filePath": "tests/tabs/tabs.e2e.ts",
+      "status": "failed",
+      "durationMs": 2434,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/tabs/tabs.e2e.ts:37:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "visual-testing-blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "basic",
+      "suitePath": [
+        "range-field"
+      ],
+      "filePath": "tests/range-field/range-field.e2e.ts",
+      "status": "failed",
+      "durationMs": 27343,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nTimeout: 15000ms\n  Timeout 15000ms exceeded.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 15000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - Timeout 15000ms exceeded.\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nTimeout: 15000ms\n  Timeout 15000ms exceeded.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 15000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - Timeout 15000ms exceeded.\u001b[22m\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/range-field/range-field.e2e.ts:16:24",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "visual-testing-blob-report-4/report-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "overflow",
+      "suitePath": [
+        "tabs"
+      ],
+      "filePath": "tests/tabs/tabs.e2e.ts",
+      "status": "failed",
+      "durationMs": 3758,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/tabs/tabs.e2e.ts:37:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "visual-testing-blob-report-4/report-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 1,
+      "displayName": "overflow",
+      "suitePath": [
+        "tabs"
+      ],
+      "filePath": "tests/tabs/tabs.e2e.ts",
+      "status": "failed",
+      "durationMs": 2754,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/tabs/tabs.e2e.ts:37:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "visual-testing-blob-report-4/report-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 2,
+      "displayName": "overflow",
+      "suitePath": [
+        "tabs"
+      ],
+      "filePath": "tests/tabs/tabs.e2e.ts",
+      "status": "failed",
+      "durationMs": 2299,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  43 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/tabs/tabs.e2e.ts:37:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "visual-testing-blob-report-4/report-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "basic",
+      "suitePath": [
+        "range-field"
+      ],
+      "filePath": "tests/range-field/range-field.e2e.ts",
+      "status": "failed",
+      "durationMs": 23097,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nTimeout: 15000ms\n  Timeout 15000ms exceeded.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 15000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - Timeout 15000ms exceeded.\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nTimeout: 15000ms\n  Timeout 15000ms exceeded.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 15000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - Timeout 15000ms exceeded.\u001b[22m\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/range-field/range-field.e2e.ts:16:24",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

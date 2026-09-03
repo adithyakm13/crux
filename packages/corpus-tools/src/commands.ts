@@ -45,6 +45,7 @@ export interface LabelCommandOptions {
   maxRuns?: number;
   /** Only runs with at least this many failures; these carry the pair metric. */
   minFailures?: number;
+  maxFailures?: number;
   /** Deterministic subset selection, so a second labeler can be given the same one. */
   only?: string[];
 }
@@ -56,12 +57,21 @@ export async function labelCommand(options: LabelCommandOptions): Promise<number
     return 2;
   }
   const minFailures = options.minFailures ?? 1;
+  // A run where the whole suite collapsed is a different animal: 495 failures
+  // from one broken import are not 495 root causes, and labeling them would
+  // produce hundreds of near-duplicate rows that then dominate the pair-based
+  // metric. --max-failures lets a labeler work the tractable runs first.
+  const maxFailures = options.maxFailures ?? Number.POSITIVE_INFINITY;
   const selected = runs
-    .filter((r) => r.failures.length >= minFailures)
+    .filter((r) => r.failures.length >= minFailures && r.failures.length <= maxFailures)
     .filter((r) => options.only === undefined || options.only.includes(r.corpusRunId));
 
   if (selected.length === 0) {
-    stdout.write(`No run has >= ${minFailures} failures. Nothing to label.\n`);
+    stdout.write(
+      `No run has between ${minFailures} and ` +
+        `${Number.isFinite(maxFailures) ? maxFailures : 'unlimited'} failures. ` +
+        `Nothing to label.\n`,
+    );
     return 2;
   }
 

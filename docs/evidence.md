@@ -165,57 +165,57 @@ weight of 0.60. Measured over the committed corpus:
 
 | Framework | Failures | With an app frame | Rate (Wilson 95%) |
 |---|---|---|---|
-| playwright | 55 | 0 | 0.000 [0.000, 0.065] |
-| pytest | 25 | 23 | 0.920 [0.750, 0.978] |
-| unidentified | 5 | 0 | 0.000 [0.000, 0.434] |
-| junit-jvm | 2 | 2 | 1.000 [0.342, 1.000] |
-| **total** | **87** | **25** | **0.287 [0.203, 0.390]** |
+| unidentified | 1137 | 49 | 0.043 [0.033, 0.057] |
+| jest | 525 | 0 | 0.000 [0.000, 0.007] |
+| playwright | 164 | 35 | 0.213 [0.158, 0.282] |
+| junit-jvm | 118 | 88 | 0.746 [0.660, 0.816] |
+| pytest | 109 | 41 | 0.376 [0.291, 0.470] |
+| vitest | 18 | 0 | 0.000 [0.000, 0.176] |
+| go-test | 5 | 0 | 0.000 [0.000, 0.434] |
+| **total** | **2076** | **213** | **0.103 [0.090, 0.116]** |
 
-Measured over 16 committed run(s) across 8 repositories (corpus `de6009aa16de`). Regenerate with `pnpm corpus frames --markdown`.
+Measured over 104 committed run(s) across 19 repositories (corpus `4a7462d00706`). Regenerate with `pnpm corpus frames --markdown`.
 
-Every failure parsed at least one frame; the column that varies is whether any
-of them is application code.
+The split is the finding, not the total. Two framework families sit at opposite
+ends, and the reason is structural rather than incidental:
 
-The split is the finding, not the total. Playwright E2E failures have **no** app
-frame at all — the stack's only frame is the spec file, which classifies as
-`test`, because the failure happened inside Playwright's own machinery acting on
-behalf of test code. Unit-test frameworks are the opposite: pytest and JVM
-stacks supply one almost always.
+- **jest gives 0 of 525, playwright 0.213, vitest 0 of 18.** For end-to-end
+  runs the only frame is the spec file, which classifies as `test`, because the
+  failure happened inside the framework's own machinery acting on behalf of test
+  code. For jest the same holds via its own runner frames.
+- **junit-jvm gives 0.746 and pytest 0.376.** JVM and Python stacks carry the
+  application call chain, so the signal is usually there.
 
-So §8's 0.60 weight on a shared deepest app frame is not wrong, but it is
-**unavailable for exactly the workload that produces the most failures per run**.
-Any clustering evaluation must report per-framework F1, or an aggregate number
-will be dominated by the E2E case where the signal is missing entirely and will
-say nothing about the case where it is present.
+So §8's 0.60 weight is not wrong, but it is **unavailable for a large share of
+real CI failures**, and which share depends entirely on the framework mix.
+Clustering evaluation must therefore report per-framework F1; an aggregate would
+be dominated by whichever family happens to be over-represented.
 
-#### This table is generated, and it was wrong before it was
+#### 55% of failures have no identifiable framework
 
-Earlier revisions of this section stated 9/74 = 0.122 [0.065, 0.215], written in
-by hand. That figure was wrong in two independent ways, and both are worth
-recording because the project's first rule is that no number is fabricated:
+`unidentified` is the largest row: 1137 of 2076 failures, at 0.043. These are
+JUnit XML from producers crux cannot attribute from payload evidence, and the
+detection gap is itself a limitation — see docs/limitations.md.
 
-- It was measured over a working tree that included runs the repository refuses
-  to ship — repositories whose licence GitHub cannot identify. A reader
-  following the instruction to run it themselves could not reproduce it, even in
-  principle.
-- The corpus grew afterwards and the hand-written figure did not. The correct
-  value moved to 0.287 [0.203, 0.390] — a **non-overlapping** interval, not the
-  drift the "snapshot" caveat claimed to cover.
+#### This table is generated, and earlier hand-written versions were wrong
 
-The fix is not a more careful edit. `corpus frames` emits this table from the
-committed corpus and stamps it with a digest of the exact run set, so a stale
-copy is detectable rather than merely wrong. Two further corrections from the
-same review:
+`corpus frames` emits it from the committed corpus, stamped with a digest of the
+exact run set. Three corrections worth keeping, because each was a different
+mistake:
 
-- An earlier claim that the signal was absent from *every* failure was partly a
-  missing parser, not a property of the data. Vitest marks frames with a heavy
-  arrow rather than `at `, so crux parsed zero frames from them and discarded a
-  real app frame.
-- The framework count briefly read three by counting `junit` as a framework.
-  JUnit XML is a *format* emitted by pytest, jest, vitest, surefire and others.
-  Only an adapter whose name genuinely identifies a framework — the Playwright
-  blob report, which nothing else emits — now counts as evidence, and the
-  unidentified remainder is reported alongside rather than folded in.
+1. An early revision published 9/74 = 0.122 [0.065, 0.215], typed in by hand. It
+   was measured over a working tree that included runs the repository refuses to
+   ship, so it was not reproducible from a clone even in principle.
+2. The corrected figure, 25/87 = 0.287 [0.203, 0.390], was reproducible but
+   **badly sampled**. At 4x the data it moved to 0.103 [0.090, 0.116] — outside
+   its own interval. A Wilson interval quantifies sampling noise at a fixed
+   sample; it says nothing about a sample drawn from three repositories rather
+   than nineteen. The lesson is that interval width is necessary and not
+   sufficient: representativeness is a separate question, and the honest guard
+   is to report the run and repository count alongside every figure, which the
+   command now does.
+3. The pytest row moved from 0.920 [0.750, 0.978] to 0.376 [0.291, 0.470] for
+   the same reason — the earlier 25 failures came mostly from one project.
 
 `fingerprint()` reports `usedFrameFallback` rather than silently hashing
 whatever frames it found, so the prevalence of this case stays measurable.

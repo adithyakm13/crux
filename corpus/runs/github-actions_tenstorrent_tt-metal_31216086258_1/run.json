@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:tenstorrent/tt-metal:31216086258:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "tenstorrent/tt-metal",
+    "providerRunId": "31216086258",
+    "runAttempt": 1,
+    "url": "https://github.com/tenstorrent/tt-metal/actions/runs/31216086258",
+    "workflowName": "Blackhole sanity tests",
+    "event": "workflow_dispatch",
+    "headSha": "9be490e2b05b68988feab1b631d7cfa21159d5ff",
+    "headBranch": "dgomez/for-python-layernorm",
+    "artifactIds": [
+      "9009389670",
+      "9009639123",
+      "9009408328",
+      "9009265302",
+      "9009484302",
+      "9009389036",
+      "9009169357",
+      "9009386562",
+      "9009326830",
+      "9009197856",
+      "9009488308",
+      "9009228867",
+      "9009481672",
+      "9009168759",
+      "9009416350",
+      "9009184300",
+      "9009214067",
+      "9009289437",
+      "9009641173",
+      "9009766955",
+      "9009866366",
+      "9009776369",
+      "9009696195",
+      "9009722512",
+      "9009714381",
+      "9009748467",
+      "9009601538",
+      "9009488995",
+      "9009569877",
+      "9009659387",
+      "9009761622"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T17:04:12.631Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 38221,
+    "failures": 2,
+    "passed": 32568,
+    "skipped": 5651,
+    "filesParsed": 56,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test_reports_b209ac4d-76c4-48ae-b75f-fb47567cc16a/most_recent_tests_20260807_205951.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 23,
+      "attemptIndex": 0,
+      "displayName": "test_layer_norm_sharded_non_rectangular_grid_rejects_excluded_hole_cores[legacy-row_major-2_lines_plus_3]",
+      "suitePath": [
+        "pytest",
+        "tests.ttnn.unit_tests.operations.fused.test_layer_norm_sharded"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 82,
+      "errorType": null,
+      "message": "AttributeError: module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'",
+      "stackText": "device = MeshDevice(1x1 grid, 1 devices), full_lines = 2, cores_in_last_line = 3\norigin = (0, 0), line_length = None, orientation = ShardOrientation.ROW_MAJOR\nuse_welford = False\nexpect_error = <function expect_error.<locals>.expect_error_ at 0x7f9f13ca08b0>\n\n    @pytest.mark.parametrize(\n        (\"full_lines\", \"cores_in_last_line\", \"origin\", \"line_length\"),\n        NON_RECTANGULAR_GRID_CASES,\n        ids=NON_RECTANGULAR_GRID_IDS,\n    )\n    @pytest.mark.parametrize(\n        \"orientation\",\n        [ttnn.ShardOrientation.ROW_MAJOR, ttnn.ShardOrientation.COL_MAJOR],\n        ids=[\"row_major\", \"col_major\"],\n    )\n    @pytest.mark.parametrize(\"use_welford\", [False, True], ids=[\"legacy\", \"welford\"])\n    def test_layer_norm_sharded_non_rectangular_grid_rejects_excluded_hole_cores(\n        device, full_lines, cores_in_last_line, origin, line_length, orientation, use_welford, expect_error\n    ):\n        \"\"\"The reduction multicasts over the bounding box of the shard grid, so a non-rectangular grid also\n        places kernels, CBs and semaphores on the holes inside that box. create_descriptor must therefore\n        reject a core_range_set that omits those holes instead of silently scheduling work on cores the\n        caller excluded, which could collide with another program. Covers grids that do not start at (0, 0),\n        grids whose lines do not span the whole device grid, and both shard orientations, since the holes are\n        found from the grid's own bounding box rather than the device grid or the traversal order.\"\"\"\n        torch.manual_seed(0)\n    \n        h = 32\n        shard_width = 32\n        grid, sharded_mem_config, w = non_rectangular_width_shard_config(\n            device,\n            full_lines,\n            cores_in_last_line,\n            h,\n            shard_width,\n            origin=origin,\n            line_length=line_length,\n            orientation=orientation,\n        )\n    \n        input_tensor = ttnn.from_torch(\n            generate_input_tensor(h, w, \"random\", torch.bfloat16),\n            device=device,\n            layout=ttnn.TILE_LAYOUT,\n            memory_config=sharded_mem_config,\n        )\n        weight = ttnn.from_torch(\n            generate_input_tensor(1, w, \"random\", torch.bfloat16)[0],\n            device=device,\n            layout=ttnn.TILE_LAYOUT,\n            memory_config=ttnn.DRAM_MEMORY_CONFIG,\n        )\n    \n        params = ttnn.LayerNormParams()\n        params.norm_type = ttnn.LayerNormType.LAYERNORM\n        params.distributed_norm_stage = ttnn.DistributedLayerNormStage.NOT_DISTRIBUTED\n        params.eps = 1e-12\n        params.output_mem_config = sharded_mem_config\n        params.program_config = ttnn.LayerNormShardedMultiCoreProgramConfig(\n            compute_with_storage_grid_size=device.compute_with_storage_grid_size(),\n            block_h=h // 32,\n            block_w=shard_width // 32,\n            subblock_w=1,\n            use_welford=use_welford,\n            inplace=False,\n        )\n        params.compute_kernel_config = ttnn.layernorm_default_compute_config(device.arch())\n    \n        tensor_args = ttnn.LayerNormInputs(input_tensor)\n        tensor_args.weight = weight\n        if use_welford:\n            tensor_args.recip_tensor = ttnn.create_layer_norm_reciprocals(device, grid, shard_width)\n    \n        output_tensor = ttnn.LayerNormDeviceOperation.create_output_tensors(params, tensor_args)\n    \n        # The shard grid alone excludes the holes the multicast still covers, so it must be rejected.\n        with expect_error(RuntimeError, \"hole in the non-rectangular shard grid\"):\n>           ttnn.LayerNormShardedProgramFactory.create_descriptor(params, tensor_args, output_tensor, grid)\nE           AttributeError: module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'\n\ntests/ttnn/unit_tests/operations/fused/test_layer_norm_sharded.py:714: AttributeError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test_reports_f840e7e5-82d5-4a68-b9ea-16a776e22cb0/most_recent_tests_20260807_205715.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 24,
+      "attemptIndex": 0,
+      "displayName": "test_layer_norm_sharded_non_rectangular_grid_rejects_excluded_hole_cores[legacy-row_major-1_line_plus_1]",
+      "suitePath": [
+        "pytest",
+        "tests.ttnn.unit_tests.operations.fused.test_layer_norm_sharded"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 102,
+      "errorType": null,
+      "message": "AttributeError: module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'",
+      "stackText": "device = MeshDevice(1x1 grid, 1 devices), full_lines = 1, cores_in_last_line = 1\norigin = (0, 0), line_length = None, orientation = ShardOrientation.ROW_MAJOR\nuse_welford = False\nexpect_error = <function expect_error.<locals>.expect_error_ at 0x7f4e3bd277f0>\n\n    @pytest.mark.parametrize(\n        (\"full_lines\", \"cores_in_last_line\", \"origin\", \"line_length\"),\n        NON_RECTANGULAR_GRID_CASES,\n        ids=NON_RECTANGULAR_GRID_IDS,\n    )\n    @pytest.mark.parametrize(\n        \"orientation\",\n        [ttnn.ShardOrientation.ROW_MAJOR, ttnn.ShardOrientation.COL_MAJOR],\n        ids=[\"row_major\", \"col_major\"],\n    )\n    @pytest.mark.parametrize(\"use_welford\", [False, True], ids=[\"legacy\", \"welford\"])\n    def test_layer_norm_sharded_non_rectangular_grid_rejects_excluded_hole_cores(\n        device, full_lines, cores_in_last_line, origin, line_length, orientation, use_welford, expect_error\n    ):\n        \"\"\"The reduction multicasts over the bounding box of the shard grid, so a non-rectangular grid also\n        places kernels, CBs and semaphores on the holes inside that box. create_descriptor must therefore\n        reject a core_range_set that omits those holes instead of silently scheduling work on cores the\n        caller excluded, which could collide with another program. Covers grids that do not start at (0, 0),\n        grids whose lines do not span the whole device grid, and both shard orientations, since the holes are\n        found from the grid's own bounding box rather than the device grid or the traversal order.\"\"\"\n        torch.manual_seed(0)\n    \n        h = 32\n        shard_width = 32\n        grid, sharded_mem_config, w = non_rectangular_width_shard_config(\n            device,\n            full_lines,\n            cores_in_last_line,\n            h,\n            shard_width,\n            origin=origin,\n            line_length=line_length,\n            orientation=orientation,\n        )\n    \n        input_tensor = ttnn.from_torch(\n            generate_input_tensor(h, w, \"random\", torch.bfloat16),\n            device=device,\n            layout=ttnn.TILE_LAYOUT,\n            memory_config=sharded_mem_config,\n        )\n        weight = ttnn.from_torch(\n            generate_input_tensor(1, w, \"random\", torch.bfloat16)[0],\n            device=device,\n            layout=ttnn.TILE_LAYOUT,\n            memory_config=ttnn.DRAM_MEMORY_CONFIG,\n        )\n    \n        params = ttnn.LayerNormParams()\n        params.norm_type = ttnn.LayerNormType.LAYERNORM\n        params.distributed_norm_stage = ttnn.DistributedLayerNormStage.NOT_DISTRIBUTED\n        params.eps = 1e-12\n        params.output_mem_config = sharded_mem_config\n        params.program_config = ttnn.LayerNormShardedMultiCoreProgramConfig(\n            compute_with_storage_grid_size=device.compute_with_storage_grid_size(),\n            block_h=h // 32,\n            block_w=shard_width // 32,\n            subblock_w=1,\n            use_welford=use_welford,\n            inplace=False,\n        )\n        params.compute_kernel_config = ttnn.layernorm_default_compute_config(device.arch())\n    \n        tensor_args = ttnn.LayerNormInputs(input_tensor)\n        tensor_args.weight = weight\n        if use_welford:\n            tensor_args.recip_tensor = ttnn.create_layer_norm_reciprocals(device, grid, shard_width)\n    \n        output_tensor = ttnn.LayerNormDeviceOperation.create_output_tensors(params, tensor_args)\n    \n        # The shard grid alone excludes the holes the multicast still covers, so it must be rejected.\n        with expect_error(RuntimeError, \"hole in the non-rectangular shard grid\"):\n>           ttnn.LayerNormShardedProgramFactory.create_descriptor(params, tensor_args, output_tensor, grid)\nE           AttributeError: module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'\n\ntests/ttnn/unit_tests/operations/fused/test_layer_norm_sharded.py:714: AttributeError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

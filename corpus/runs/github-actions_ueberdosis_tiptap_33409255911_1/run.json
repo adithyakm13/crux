@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ueberdosis/tiptap:33409255911:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ueberdosis/tiptap",
+    "providerRunId": "33409255911",
+    "runAttempt": 1,
+    "url": "https://github.com/ueberdosis/tiptap/actions/runs/33409255911",
+    "workflowName": "Verify",
+    "event": "push",
+    "headSha": "5302fda4748a439b395e6be81bd1e825dbfcc08e",
+    "headBranch": "maintenance/v3",
+    "artifactIds": [
+      "9764605086",
+      "9764598479",
+      "9764603757",
+      "9764620483"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-03T06:50:22.160Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 688,
+    "failures": 1,
+    "passed": 687,
+    "skipped": 0,
+    "filesParsed": 4,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "e2e-blob-report-1/report-chromium-1.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "should apply the paragraph style when the keyboard shortcut is pressed",
+      "suitePath": [
+        "/src/Examples/Default",
+        "Vue"
+      ],
+      "filePath": "src/Examples/Default/index.spec.ts",
+      "status": "failed",
+      "durationMs": 6045,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.tiptap p').first()\nExpected substring: \u001b[32m\"Example Text\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.tiptap p').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.tiptap p').first()\nExpected substring: \u001b[32m\"Example Text\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.tiptap p').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n    at /home/runner/work/tiptap/tiptap/demos/src/Examples/Default/index.spec.ts:52:57",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

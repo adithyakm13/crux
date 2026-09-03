@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:siemens/ix:33643043778:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "siemens/ix",
+    "providerRunId": "33643043778",
+    "runAttempt": 1,
+    "url": "https://github.com/siemens/ix/actions/runs/33643043778",
+    "workflowName": "Pull Request",
+    "event": "pull_request",
+    "headSha": "5cc91faeb1bc61885c4dc21a7259d950080e70d9",
+    "headBranch": "feature/1795_generic-list",
+    "artifactIds": [
+      "9851892495",
+      "9851896242",
+      "9851923604",
+      "9851913440"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-02T16:59:21.880Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 745,
+    "failures": 5,
+    "passed": 738,
+    "skipped": 2,
+    "filesParsed": 4,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "visual-testing-blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "category options",
+      "suitePath": [
+        "category-filter"
+      ],
+      "filePath": "tests/category-filter/category-filter.e2e.ts",
+      "status": "failed",
+      "durationMs": 2854,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  528 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  528 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/category-filter/category-filter.e2e.ts:40:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "visual-testing-blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "tooltip position top",
+      "suitePath": [
+        "tooltip"
+      ],
+      "filePath": "tests/tooltip/tooltip.e2e.ts",
+      "status": "failed",
+      "durationMs": 3288,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  5076 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  5076 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/tooltip/tooltip.e2e.ts:133:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "visual-testing-blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "basic",
+      "suitePath": [
+        "range-field"
+      ],
+      "filePath": "tests/range-field/range-field.e2e.ts",
+      "status": "timed_out",
+      "durationMs": 35016,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nTimeout: 15000ms\n  Timeout 15000ms exceeded.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 15000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Timeout 15000ms exceeded.\u001b[22m\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/range-field/range-field.e2e.ts:16:24",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "visual-testing-blob-report-4/report-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "tooltip position left",
+      "suitePath": [
+        "tooltip"
+      ],
+      "filePath": "tests/tooltip/tooltip.e2e.ts",
+      "status": "failed",
+      "durationMs": 3027,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  1276 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  1276 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/tooltip/tooltip.e2e.ts:190:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "visual-testing-blob-report-4/report-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "basic",
+      "suitePath": [
+        "range-field"
+      ],
+      "filePath": "tests/range-field/range-field.e2e.ts",
+      "status": "timed_out",
+      "durationMs": 35013,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nTimeout: 15000ms\n  Timeout 15000ms exceeded.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 15000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - Timeout 15000ms exceeded.\u001b[22m\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/range-field/range-field.e2e.ts:16:24",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -5,10 +5,31 @@ dist/
 corpus/raw/
 corpus/.cache/
 
-# Harvested corpus runs from repositories whose licence GitHub cannot identify
-# (it reports NOASSERTION for a LICENSE file it cannot classify). The harvester
-# skips these by default; they are only on disk because --allow-unlicensed was
-# passed for local measurement. Excluded from version control until a human has
-# read the licence. Force-add an individual run to override.
-corpus/runs/*PostHog*
-corpus/runs/*ag-grid*
+# Corpus runs held out of version control pending a licence decision.
+#
+# Two categories, both on disk and usable locally, neither committed:
+#
+#  1. Unidentified licence — GitHub reports NOASSERTION for a LICENSE file it
+#     cannot classify, which is not the same as having no licence. The harvester
+#     skips these by default; they are here only because --allow-unlicensed was
+#     passed for local measurement.
+#
+#  2. Copyleft — GPL/LGPL/AGPL. crux itself is Apache-2.0, and committing
+#     copyleft-derived content into it is a decision for a human, not a default.
+#     The stored payload is failure messages and stack traces, which is arguably
+#     factual CI output rather than licensed expression, but "arguably" is not a
+#     basis for putting it in git history.
+#
+# Force-add an individual run to override: git add -f corpus/runs/<dir>
+corpus/runs/github-actions_PostHog_posthog_30958002173_1
+corpus/runs/github-actions_ag-grid_ag-grid_32964424029_1
+corpus/runs/github-actions_ag-grid_ag-grid_33077370609_2
+corpus/runs/github-actions_canonical_lxd-ui_33537798827_1
+corpus/runs/github-actions_canonical_lxd-ui_33537995470_1
+corpus/runs/github-actions_christoph2_pyxcp_30096166774_1
+corpus/runs/github-actions_christoph2_pyxcp_30204825858_1
+corpus/runs/github-actions_christoph2_pyxcp_30204904552_1
+corpus/runs/github-actions_openobserve_openobserve_33512788428_1
+corpus/runs/github-actions_solidtime-io_solidtime_33403829384_1
+corpus/runs/github-actions_tomquist_AstraMeter_28618285926_1
+corpus/runs/github-actions_tomquist_AstraMeter_31775024322_1

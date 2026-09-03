@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ueberdosis/tiptap:33174160898:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ueberdosis/tiptap",
+    "providerRunId": "33174160898",
+    "runAttempt": 1,
+    "url": "https://github.com/ueberdosis/tiptap/actions/runs/33174160898",
+    "workflowName": "Verify",
+    "event": "pull_request",
+    "headSha": "63549fe201e0584594323417a92f73c90e53496b",
+    "headBranch": "bdbch/tt-937-investigate-react-node-view-rendering-stability-and",
+    "artifactIds": [
+      "9686972950",
+      "9686983542",
+      "9686973024",
+      "9687003704"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-03T07:10:58.493Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 689,
+    "failures": 2,
+    "passed": 687,
+    "skipped": 0,
+    "filesParsed": 4,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "e2e-blob-report-1/report-chromium-1.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "should apply the paragraph style when the keyboard shortcut is pressed",
+      "suitePath": [
+        "/src/Examples/Default",
+        "React"
+      ],
+      "filePath": "src/Examples/Default/index.spec.ts",
+      "status": "failed",
+      "durationMs": 6137,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.tiptap p').first()\nExpected substring: \u001b[32m\"Example Text\"\u001b[39m\nReceived string:    \u001b[31m\"this is a basic example of Tiptap. Sure, there are all kind of basic text styles you'd probably expect from a text editor. But wait until you see the lists:\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.tiptap p').first()\u001b[22m\n\u001b[2m    9 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\u001b[2m    3 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m      - unexpected value \"this is a basic example of Tiptap. Sure, there are all kind of basic text styles you'd probably expect from a text editor. But wait until you see the lists:\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.tiptap p').first()\nExpected substring: \u001b[32m\"Example Text\"\u001b[39m\nReceived string:    \u001b[31m\"this is a basic example of Tiptap. Sure, there are all kind of basic text styles you'd probably expect from a text editor. But wait until you see the lists:\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.tiptap p').first()\u001b[22m\n\u001b[2m    9 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\u001b[2m    3 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m      - unexpected value \"this is a basic example of Tiptap. Sure, there are all kind of basic text styles you'd probably expect from a text editor. But wait until you see the lists:\"\u001b[22m\n\n    at /home/runner/work/tiptap/tiptap/demos/src/Examples/Default/index.spec.ts:52:57",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "e2e-blob-report-1/report-chromium-1.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "should apply the paragraph style when the keyboard shortcut is pressed",
+      "suitePath": [
+        "/src/Examples/Default",
+        "Vue"
+      ],
+      "filePath": "src/Examples/Default/index.spec.ts",
+      "status": "failed",
+      "durationMs": 6058,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.tiptap p').first()\nExpected substring: \u001b[32m\"Example Text\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.tiptap p').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.tiptap p').first()\nExpected substring: \u001b[32m\"Example Text\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.tiptap p').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n    at /home/runner/work/tiptap/tiptap/demos/src/Examples/Default/index.spec.ts:52:57",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

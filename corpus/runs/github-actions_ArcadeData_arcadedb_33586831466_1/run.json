@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33586831466:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ArcadeData/arcadedb",
+    "providerRunId": "33586831466",
+    "runAttempt": 1,
+    "url": "https://github.com/ArcadeData/arcadedb/actions/runs/33586831466",
+    "workflowName": "Java CI - test",
+    "event": "pull_request",
+    "headSha": "b9301a4e5e59242ab42bcd7c1ccd6ce9e200dbd5",
+    "headBranch": "feat/4531-gql-qpp-phase-b",
+    "artifactIds": [
+      "9830510321",
+      "9830528461",
+      "9830517999",
+      "9830528811",
+      "9831692897"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T08:29:04.714Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 456,
+    "failures": 1,
+    "passed": 447,
+    "skipped": 8,
+    "filesParsed": 81,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "slow-unit-test-reports/engine/target/surefire-reports/TEST-com.arcadedb.schema.MaterializedViewRefreshAtomicityTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "refreshingAnIndexedViewRepeatedlyDoesNotGrowTheIndex",
+      "suitePath": [
+        "com.arcadedb.schema.MaterializedViewRefreshAtomicityTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 88,
+      "errorType": "java.lang.AssertionError",
+      "message": "[the index is on disk to begin with] \nExpecting actual:\n  0L\nto be greater than:\n  0L\n",
+      "stackText": "java.lang.AssertionError: \n[the index is on disk to begin with] \nExpecting actual:\n  0L\nto be greater than:\n  0L\n\n\tat com.arcadedb.schema.MaterializedViewRefreshAtomicityTest.refreshingAnIndexedViewRepeatedlyDoesNotGrowTheIndex(MaterializedViewRefreshAtomicityTest.java:271)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

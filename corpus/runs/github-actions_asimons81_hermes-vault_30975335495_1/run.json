@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:30975335495:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "asimons81/hermes-vault",
+    "providerRunId": "30975335495",
+    "runAttempt": 1,
+    "url": "https://github.com/asimons81/hermes-vault/actions/runs/30975335495",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "6126a4dd0a74bfae8b11fa020b3cde7e4a7a85cd",
+    "headBranch": "fix/detached-backup-evidence",
+    "artifactIds": [
+      "8918118769",
+      "8918088008",
+      "8918129662",
+      "8918237605"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-02T09:05:41.519Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 3732,
+    "failures": 2,
+    "passed": 3728,
+    "skipped": 2,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-reports-windows-latest-py3.12/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test_v2_valid_backup_verifies_detached",
+      "suitePath": [
+        "pytest",
+        "tests.test_detached_evidence"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 720,
+      "errorType": null,
+      "message": "PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-runneradmin\\\\pytest-0\\\\test_v2_valid_backup_verifies_0\\\\vault.db'",
+      "stackText": "tests\\test_detached_evidence.py:252: in test_v2_valid_backup_verifies_detached\n    vault.db_path.unlink()\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\pathlib.py:1342: in unlink\n    os.unlink(self)\nE   PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-runneradmin\\\\pytest-0\\\\test_v2_valid_backup_verifies_0\\\\vault.db'",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-reports-windows-latest-py3.11/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_v2_valid_backup_verifies_detached",
+      "suitePath": [
+        "pytest",
+        "tests.test_detached_evidence"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 751,
+      "errorType": null,
+      "message": "PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-runneradmin\\\\pytest-0\\\\test_v2_valid_backup_verifies_0\\\\vault.db'",
+      "stackText": "tests\\test_detached_evidence.py:252: in test_v2_valid_backup_verifies_detached\n    vault.db_path.unlink()\nC:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\Lib\\pathlib.py:1147: in unlink\n    os.unlink(self)\nE   PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-runneradmin\\\\pytest-0\\\\test_v2_valid_backup_verifies_0\\\\vault.db'",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

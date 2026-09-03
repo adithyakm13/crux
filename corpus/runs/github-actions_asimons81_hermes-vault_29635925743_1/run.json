@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:29635925743:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "asimons81/hermes-vault",
+    "providerRunId": "29635925743",
+    "runAttempt": 1,
+    "url": "https://github.com/asimons81/hermes-vault/actions/runs/29635925743",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "941317e5ca52feae19e4160dd481a1c5a465e06e",
+    "headBranch": "feat/v0.21-audit-surfaces",
+    "artifactIds": [
+      "8427094281",
+      "8427096009",
+      "8427152728",
+      "8427147744"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-02T09:07:03.630Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 3268,
+    "failures": 1,
+    "passed": 3265,
+    "skipped": 2,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-reports-windows-latest-py3.12/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_dashboard_profile_select_http_endpoint",
+      "suitePath": [
+        "pytest",
+        "tests.test_dashboard"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 5856,
+      "errorType": null,
+      "message": "TimeoutError: timed out",
+      "stackText": "tests\\test_dashboard.py:284: in test_dashboard_profile_select_http_endpoint\n    with urllib.request.urlopen(request, timeout=5) as response:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\request.py:215: in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\request.py:515: in open\n    response = self._open(req, data)\n               ^^^^^^^^^^^^^^^^^^^^^\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\request.py:532: in _open\n    result = self._call_chain(self.handle_open, protocol, protocol +\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\request.py:492: in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\request.py:1373: in http_open\n    return self.do_open(http.client.HTTPConnection, req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\request.py:1348: in do_open\n    r = h.getresponse()\n        ^^^^^^^^^^^^^^^\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\http\\client.py:1430: in getresponse\n    response.begin()\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\http\\client.py:331: in begin\n    version, status, reason = self._read_status()\n                              ^^^^^^^^^^^^^^^^^^^\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\http\\client.py:292: in _read_status\n    line = str(self.fp.readline(_MAXLINE + 1), \"iso-8859-1\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\socket.py:720: in readinto\n    return self._sock.recv_into(b)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nE   TimeoutError: timed out",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

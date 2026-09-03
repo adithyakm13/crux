@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:30975277590:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "asimons81/hermes-vault",
+    "providerRunId": "30975277590",
+    "runAttempt": 1,
+    "url": "https://github.com/asimons81/hermes-vault/actions/runs/30975277590",
+    "workflowName": "CI",
+    "event": "push",
+    "headSha": "6126a4dd0a74bfae8b11fa020b3cde7e4a7a85cd",
+    "headBranch": "fix/detached-backup-evidence",
+    "artifactIds": [
+      "8918047380",
+      "8918076713",
+      "8918174164",
+      "8918277424"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-02T09:05:49.777Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 3732,
+    "failures": 3,
+    "passed": 3727,
+    "skipped": 2,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-reports-windows-latest-py3.12/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test_v2_valid_backup_verifies_detached",
+      "suitePath": [
+        "pytest",
+        "tests.test_detached_evidence"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1012,
+      "errorType": null,
+      "message": "PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-runneradmin\\\\pytest-0\\\\test_v2_valid_backup_verifies_0\\\\vault.db'",
+      "stackText": "tests\\test_detached_evidence.py:252: in test_v2_valid_backup_verifies_detached\n    vault.db_path.unlink()\nC:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\pathlib.py:1342: in unlink\n    os.unlink(self)\nE   PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-runneradmin\\\\pytest-0\\\\test_v2_valid_backup_verifies_0\\\\vault.db'",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-reports-windows-latest-py3.11/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_legacy_migration_with_concurrent_writer_does_not_leave_gap",
+      "suitePath": [
+        "pytest",
+        "tests.test_audit_integrity_toctou"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2898,
+      "errorType": null,
+      "message": "AssertionError: Chain should be healthy after migration under contention; got status=failed reason=missing_integrity_record. Errors in writer: []\nassert <AuditIntegrityStatus.failed: 'failed'> is <AuditIntegrityStatus.healthy: 'healthy'>\n +  where <AuditIntegrityStatus.failed: 'failed'> = AuditVerificationResult(status=<AuditIntegrityStatus.failed: 'failed'>, reason_code='missing_integrity_record', chain_...erified backup if needed.', verified_at=datetime.datetime(2026, 8, 5, 4, 33, 41, 513792, tzinfo=datetime.timezone.utc)).status\n +  and   <AuditIntegrityStatus.healthy: 'healthy'> = AuditIntegrityStatus.healthy",
+      "stackText": "tests\\test_audit_integrity_toctou.py:123: in test_legacy_migration_with_concurrent_writer_does_not_leave_gap\n    assert result.status is AuditIntegrityStatus.healthy, (\nE   AssertionError: Chain should be healthy after migration under contention; got status=failed reason=missing_integrity_record. Errors in writer: []\nE   assert <AuditIntegrityStatus.failed: 'failed'> is <AuditIntegrityStatus.healthy: 'healthy'>\nE    +  where <AuditIntegrityStatus.failed: 'failed'> = AuditVerificationResult(status=<AuditIntegrityStatus.failed: 'failed'>, reason_code='missing_integrity_record', chain_...erified backup if needed.', verified_at=datetime.datetime(2026, 8, 5, 4, 33, 41, 513792, tzinfo=datetime.timezone.utc)).status\nE    +  and   <AuditIntegrityStatus.healthy: 'healthy'> = AuditIntegrityStatus.healthy",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-reports-windows-latest-py3.11/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_v2_valid_backup_verifies_detached",
+      "suitePath": [
+        "pytest",
+        "tests.test_detached_evidence"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2636,
+      "errorType": null,
+      "message": "PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-runneradmin\\\\pytest-0\\\\test_v2_valid_backup_verifies_0\\\\vault.db'",
+      "stackText": "tests\\test_detached_evidence.py:252: in test_v2_valid_backup_verifies_detached\n    vault.db_path.unlink()\nC:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\Lib\\pathlib.py:1147: in unlink\n    os.unlink(self)\nE   PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-runneradmin\\\\pytest-0\\\\test_v2_valid_backup_verifies_0\\\\vault.db'",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

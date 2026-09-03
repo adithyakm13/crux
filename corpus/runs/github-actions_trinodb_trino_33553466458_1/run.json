@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:trinodb/trino:33553466458:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "trinodb/trino",
+    "providerRunId": "33553466458",
+    "runAttempt": 1,
+    "url": "https://github.com/trinodb/trino/actions/runs/33553466458",
+    "workflowName": "ci",
+    "event": "pull_request",
+    "headSha": "d2d7e5158bb37c7d4aee9fdab27b2d7af652aaa6",
+    "headBranch": "feat/node-groups",
+    "artifactIds": [
+      "9818884460",
+      "9818630164",
+      "9818827018",
+      "9818510333",
+      "9818509111",
+      "9818505274",
+      "9819251467",
+      "9818681884",
+      "9818604828",
+      "9818741328",
+      "9818571202",
+      "9818919886",
+      "9818666721",
+      "9819365850",
+      "9818875316",
+      "9819010179",
+      "9818530506",
+      "9818838607",
+      "9818612507",
+      "9818659268",
+      "9818791442",
+      "9818778885",
+      "9819093920",
+      "9818738425",
+      "9818626284",
+      "9818824345",
+      "9819317990",
+      "9818743789",
+      "9818911621",
+      "9818877596",
+      "9818775432",
+      "9819655178",
+      "9818700209",
+      "9818958188",
+      "9818679208",
+      "9818632876",
+      "9818866392",
+      "9819226147",
+      "9818605021",
+      "9818789449",
+      "9818868683",
+      "9819648616",
+      "9820144326",
+      "9819288854",
+      "9819363025"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T17:53:39.888Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 112283,
+    "failures": 1,
+    "passed": 107748,
+    "skipped": 4534,
+    "filesParsed": 2704,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 2
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test report testing_trino-tests, ,/testing/trino-tests/target/surefire-reports/TEST-io.trino.tests.TestServerAbandonedQueries.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 41,
+      "attemptIndex": 0,
+      "displayName": "testAbandonedQueries",
+      "suitePath": [
+        "io.trino.tests.TestServerAbandonedQueries"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3834,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "\nexpected: null\n but was: QueryError{message=Query 20260901_201302_00001_uw5dt was abandoned by the client, as it may have exited or stopped checking for query results. Query results have not been accessed since 2026-09-01T20:13:02.283810072Z: currentTime 2026-09-01T20:13:03.358569048Z, sqlState=null, errorCode=2, errorName=ABANDONED_QUERY, errorType=USER_ERROR, errorLocation=null, failureInfo=FailureInfo{type=io.trino.spi.TrinoException, message=Query 20260901_201302_00001_uw5dt was abandoned by the client, as it may have exited or stopped checking for query results. Query results have not been accessed since 2026-09-01T20:13:02.283810072Z: currentTime 2026-09-01T20:13:03.358569048Z, cause=null, suppressed=[], stack=[io.trino.execution.QueryTracker.failAbandonedQueries(QueryTracker.java:276), io.trino.execution.QueryTracker.lambda$start$0(QueryTracker.java:83), com.google.common.util.concurrent.MoreExecutors$ScheduledListeningDecorator$NeverSuccessfulListenableFutureTask.run(MoreExecutors.java:641), java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545), java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:369), java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:310), java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090), java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base/java.lang.Thread.run(Thread.java:1474)], errorInfo=ABANDONED_QUERY:2, errorLocation=null}}",
+      "stackText": "org.opentest4j.AssertionFailedError: \n\nexpected: null\n but was: QueryError{message=Query 20260901_201302_00001_uw5dt was abandoned by the client, as it may have exited or stopped checking for query results. Query results have not been accessed since 2026-09-01T20:13:02.283810072Z: currentTime 2026-09-01T20:13:03.358569048Z, sqlState=null, errorCode=2, errorName=ABANDONED_QUERY, errorType=USER_ERROR, errorLocation=null, failureInfo=FailureInfo{type=io.trino.spi.TrinoException, message=Query 20260901_201302_00001_uw5dt was abandoned by the client, as it may have exited or stopped checking for query results. Query results have not been accessed since 2026-09-01T20:13:02.283810072Z: currentTime 2026-09-01T20:13:03.358569048Z, cause=null, suppressed=[], stack=[io.trino.execution.QueryTracker.failAbandonedQueries(QueryTracker.java:276), io.trino.execution.QueryTracker.lambda$start$0(QueryTracker.java:83), com.google.common.util.concurrent.MoreExecutors$ScheduledListeningDecorator$NeverSuccessfulListenableFutureTask.run(MoreExecutors.java:641), java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545), java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:369), java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:310), java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090), java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base/java.lang.Thread.run(Thread.java:1474)], errorInfo=ABANDONED_QUERY:2, errorLocation=null}}\n\tat io.trino.tests.TestServerAbandonedQueries.testAbandonedQueries(TestServerAbandonedQueries.java:98)\n",
+      "stdout": null,
+      "stderr": "&amp#27;[90m2026-09-01T14:12:53.382-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-2&amp#27;[0m\t&amp#27;[35morg.hibernate.validator.internal.util.Version&amp#27;[0m\tHV000001: Hibernate Validator 9.1.3.Final\n&amp#27;[90m2026-09-01T14:12:53.696-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-4&amp#27;[0m\t&amp#27;[35mio.trino.simd.BlockEncodingSimdSupport&amp#27;[0m\tDetected SIMD Support for architecture=amd64, vectorBitWidth=256: SimdSupport[capabilities=[]]\n&amp#27;[90m2026-09-01T14:12:57.387-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-4&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tPulling docker image: testcontainers/ryuk:0.14.0. Please be patient; this may take some time but only needs to be done once.\n&amp#27;[90m2026-09-01T14:12:57.817-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-379213951&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tStarting to pull image\n&amp#27;[90m2026-09-01T14:12:57.841-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-379213951&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tPulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)\n&amp#27;[90m2026-09-01T14:12:57.934-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-379213951&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tPulling image layers:  1 pending,  1 downloaded,  0 extracted, (242 KB/? MB)\n&amp#27;[90m2026-09-01T14:12:57.948-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-379213951&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tPulling image layers:  1 pending,  1 downloaded,  1 extracted, (242 KB/? MB)\n&amp#27;[90m2026-09-01T14:12:57.957-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-379213951&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tPulling image layers:  0 pending,  2 downloaded,  1 extracted, (2 MB/2 MB)\n&amp#27;[90m2026-09-01T14:13:00.264-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-379213951&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tPulling image layers:  0 pending,  2 downloaded,  2 extracted, (2 MB/2 MB)\n&amp#27;[90m2026-09-01T14:13:00.266-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-379213951&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tPull complete. 2 layers, pulled in 2s (downloaded 2 MB at 1 MB/s)\n&amp#27;[90m2026-09-01T14:13:00.268-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-4&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tImage testcontainers/ryuk:0.14.0 pull took PT2.878254174S\n&amp#27;[90m2026-09-01T14:13:00.325-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-4&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tCreating container for image: testcontainers/ryuk:0.14.0\n&amp#27;[90m2026-09-01T14:13:00.608-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-4&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tContainer testcontainers/ryuk:0.14.0 is starting: ef7b6cb3982b626a7882ab08d88049afa82d575317865fba72395185172f6cc4\n&amp#27;[90m2026-09-01T14:13:01.827-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-4&amp#27;[0m\t&amp#27;[35mtc.testcontainers/ryuk:0.14.0&amp#27;[0m\tContainer testcontainers/ryuk:0.14.0 started in PT1.501769377S\n&amp#27;[90m2026-09-01T14:13:01.854-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-4&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tPulling docker image: floci/floci:1.5.26. Please be patient; this may take some time but only needs to be done once.\n&amp#27;[90m2026-09-01T14:13:02.023-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mquery-management-1&amp#27;[0m\t&amp#27;[35mio.trino.execution.QueryTracker&amp#27;[0m\tFailing abandoned query 20260901_201300_00000_uw5dt\n&amp#27;[90m2026-09-01T14:13:02.129-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-2013038691&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tStarting to pull image\n&amp#27;[90m2026-09-01T14:13:02.133-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-3&amp#27;[0m\t&amp#27;[35mio.trino.testing.DistributedQueryRunner&amp#27;[0m\tCreated DistributedQueryRunner in 7.78s (unclosed instances = 1)\n&amp#27;[90m2026-09-01T14:13:02.133-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-2013038691&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tPulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)\n&amp#27;[90m2026-09-01T14:13:02.162-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-1&amp#27;[0m\t&amp#27;[35mio.trino.testing.DistributedQueryRunner&amp#27;[0m\tCreated DistributedQueryRunner in 7.80s (unclosed instances = 2)\n&amp#27;[90m2026-09-01T14:13:02.239-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-2013038691&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tPulling image layers:  7 pending,  1 downloaded,  0 extracted, (92 bytes/? MB)\n&amp#27;[90m2026-09-01T14:13:02.269-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-2013038691&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tPulling image layers:  6 pending,  2 downloaded,  0 extracted, (446 KB/? MB)\n&amp#27;[90m2026-09-01T14:13:02.270-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-2013038691&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tPulling image layers:  5 pending,  3 downloaded,  0 extracted, (446 KB/? MB)\n&amp#27;[90m2026-09-01T14:13:02.530-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-2013038691&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tPulling image layers:  4 pending,  4 downloaded,  0 extracted, (66 MB/? MB)\n&amp#27;[90m2026-09-01T14:13:02.573-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-2013038691&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tPulling image layers:  3 pending,  5 downloaded,  0 extracted, (71 MB/? MB)\n&amp#27;[90m2026-09-01T14:13:02.623-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-2013038691&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tPulling image layers:  2 pending,  6 downloaded,  0 extracted, (71 MB/? MB)\n&amp#27;[90m2026-09-01T14:13:02.715-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-2013038691&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tPulling image layers:  1 pending,  7 downloaded,  0 extracted, (111 MB/? MB)\n&amp#27;[90m2026-09-01T14:13:02.892-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-2013038691&amp#27;[0m\t&amp#27;[35mtc.floci/floci:1.5.26&amp#27;[0m\tPulling image layers:  0 pending,  8 downloaded,  0 extracted, (143 MB/157 MB)\n&amp#27;[90m2026-09-01T14:13:03.358-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdispatch-executor-0&amp#27;[0m\t&amp#27;[35mio.trino.execution.QueryTracker&amp#27;[0m\tFailing abandoned query 20260901_201302_00001_uw5dt\n"
+    }
+  ]
+}

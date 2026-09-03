@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apple/pkl-go:28979653989:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apple/pkl-go",
+    "providerRunId": "28979653989",
+    "runAttempt": 1,
+    "url": "https://github.com/apple/pkl-go/actions/runs/28979653989",
+    "workflowName": "Pull Request",
+    "event": "pull_request",
+    "headSha": "ca8a8186e3bb7d4581a2da3c1b9239baa483226d",
+    "headBranch": "http-headers",
+    "artifactIds": [
+      "8183435615",
+      "8183438186"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T09:04:35.724Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 183,
+    "failures": 2,
+    "passed": 168,
+    "skipped": 13,
+    "filesParsed": 5,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-xml-test-pkl-0-32-0/go-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestDecoder_Decode",
+      "suitePath": [
+        "github.com/apple/pkl-go/pkl"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "No test result found",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-xml-test-pkl-0-32-0/go-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestLoadProjectWithHeaders",
+      "suitePath": [
+        "github.com/apple/pkl-go/pkl"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 20,
+      "errorType": null,
+      "message": "Failed",
+      "stackText": "2026/07/08 22:18:57 warn: Cannot find field on Go struct `pkl.Project` matching Pkl property `resolvedEvaluatorSettings`. Ensure the Go structs are up to date with Pkl classes either through codegen or manually adding `pkl` tags.",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

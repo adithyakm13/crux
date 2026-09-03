@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:trinodb/trino:33595159099:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "trinodb/trino",
+    "providerRunId": "33595159099",
+    "runAttempt": 1,
+    "url": "https://github.com/trinodb/trino/actions/runs/33595159099",
+    "workflowName": "ci",
+    "event": "pull_request",
+    "headSha": "435995efba14b7b59c45dec54f8ff2b99ee3f631",
+    "headBranch": "user/electrum/floci-gcs-product-tests",
+    "artifactIds": [
+      "9833318360",
+      "9833306068",
+      "9833380262",
+      "9833538298",
+      "9833304534",
+      "9833304520",
+      "9833346768",
+      "9833472553",
+      "9833322519",
+      "9833851268",
+      "9833392417",
+      "9833331945",
+      "9833445065",
+      "9833463171",
+      "9833770457",
+      "9833505415",
+      "9833591379",
+      "9833509511",
+      "9833314826",
+      "9833360350",
+      "9833379006",
+      "9833432091",
+      "9833490300",
+      "9833349606",
+      "9833567859",
+      "9833390524",
+      "9833447592",
+      "9833671944",
+      "9833382642",
+      "9833287058",
+      "9833442714",
+      "9833439117",
+      "9833389215",
+      "9833975720",
+      "9833346234",
+      "9833548879",
+      "9833323646",
+      "9833385424",
+      "9833547626",
+      "9833406327",
+      "9833451384",
+      "9833880831",
+      "9833834559",
+      "9833668474",
+      "9833568686"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T17:37:26.937Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 35443,
+    "failures": 20,
+    "passed": 31268,
+    "skipped": 4155,
+    "filesParsed": 1299,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test report lib_trino-filesystem,lib_trino-filesystem-azure,lib_trino-filesystem-gcs,lib_trino-filesystem-manage/lib/trino-filesystem-gcs/target/surefire-reports/TEST-io.trino.filesystem.gcs.TestGcsFileSystemFloci.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "testDeleteFiles",
+      "suitePath": [
+        "io.trino.filesystem.gcs.TestGcsFileSystemFloci"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 81,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "\nExpecting value to be false but was true",
+      "stackText": "org.opentest4j.AssertionFailedError: \n\nExpecting value to be false but was true\n\tat io.trino.filesystem.AbstractTestTrinoFileSystem.testDeleteFiles(AbstractTestTrinoFileSystem.java:876)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test report lib_trino-filesystem,lib_trino-filesystem-azure,lib_trino-filesystem-gcs,lib_trino-filesystem-manage/lib/trino-filesystem-gcs/target/surefire-reports/TEST-io.trino.filesystem.gcs.TestGcsFileSystemFloci.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "testDeleteDirectory",
+      "suitePath": [
+        "io.trino.filesystem.gcs.TestGcsFileSystemFloci"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 110,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "[gs://gcloud-test-bucket-temp-d935dea8-7afc-458a-af8b-642b6c22153a/level0/level1 exists] \nexpected: false\n but was: true",
+      "stackText": "org.opentest4j.AssertionFailedError: \n[gs://gcloud-test-bucket-temp-d935dea8-7afc-458a-af8b-642b6c22153a/level0/level1 exists] \nexpected: false\n but was: true\n\tat io.trino.filesystem.AbstractTestTrinoFileSystem.testDeleteDirectory(AbstractTestTrinoFileSystem.java:918)\n\tat io.trino.filesystem.AbstractTestTrinoFileSystem.testDeleteDirectory(AbstractTestTrinoFileSystem.java:885)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test report lib_trino-filesystem,lib_trino-filesystem-azure,lib_trino-filesystem-gcs,lib_trino-filesystem-manage/lib/trino-filesystem-gcs/target/surefire-reports/TEST-io.trino.filesystem.gcs.TestGcsFileSystemFloci.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "testExistingFileWithTrailingSlash",
+      "suitePath": [
+        "io.trino.filesystem.gcs.TestGcsFileSystemFloci"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 5,
+      "errorType": "java.lang.AssertionError",
+      "message": "\nExpecting empty but was: [Blob{bucket=gcloud-test-bucket-temp-d935dea8-7afc-458a-af8b-642b6c22153a, name=[*]#?, generation=1788327887809, size=4, content-type=application/octet-stream, metadata=null, contexts=null}]",
+      "stackText": "java.lang.AssertionError: \n\nExpecting empty but was: [Blob{bucket=gcloud-test-bucket-temp-d935dea8-7afc-458a-af8b-642b6c22153a, name=[*]#?, generation=1788327887809, size=4, content-type=application/octet-stream, metadata=null, contexts=null}]\n\tat io.trino.filesystem.gcs.AbstractTestGcsFileSystem.verifyFileSystemIsEmpty(AbstractTestGcsFileSystem.java:141)\n\tat io.trino.filesystem.AbstractTestTrinoFileSystem.beforeEach(AbstractTestTrinoFileSystem.java:151)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test report lib_trino-filesystem,lib_trino-filesystem-azure,lib_trino-filesystem-gcs,lib_trino-filesystem-manage/lib/trino-filesystem-gcs/target/surefire-reports/TEST-io.trino.filesystem.gcs.TestGcsFileSystemFlociWithEncryption.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "testDeleteFiles",
+      "suitePath": [
+        "io.trino.filesystem.gcs.TestGcsFileSystemFlociWithEncryption"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 175,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "\nExpecting value to be false but was true",
+      "stackText": "org.opentest4j.AssertionFailedError: \n\nExpecting value to be false but was true\n\tat io.trino.filesystem.AbstractTestTrinoFileSystem.testDeleteFiles(AbstractTestTrinoFileSystem.java:876)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test report lib_trino-filesystem,lib_trino-filesystem-azure,lib_trino-filesystem-gcs,lib_trino-filesystem-manage/lib/trino-filesystem-gcs/target/surefire-reports/TEST-io.trino.filesystem.gcs.TestGcsFileSystemFlociWithEncryption.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "testDeleteDirectory",
+      "suitePath": [
+        "io.trino.filesystem.gcs.TestGcsFileSystemFlociWithEncryption"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 156,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "[gs://gcloud-test-bucket-temp-6bccc46a-2d41-423f-9389-fc06af96155f/level0/level1 exists] \nexpected: false\n but was: true",
+      "stackText": "org.opentest4j.AssertionFailedError: \n[gs://gcloud-test-bucket-temp-6bccc46a-2d41-423f-9389-fc06af96155f/level0/level1 exists] \nexpected: false\n but was: true\n\tat io.trino.filesystem.AbstractTestTrinoFileSystem.testDeleteDirectory(AbstractTestTrinoFileSystem.java:918)\n\tat io.trino.filesystem.AbstractTestTrinoFileSystem.testDeleteDirectory(AbstractTestTrinoFileSystem.java:885)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test report lib_trino-filesystem,lib_trino-filesystem-azure,lib_trino-filesystem-gcs,lib_trino-filesystem-manage/lib/trino-filesystem-gcs/target/surefire-reports/TEST-io.trino.filesystem.gcs.TestGcsFileSystemFlociWithEncryption.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "testExistingFileWithTrailingSlash",
+      "suitePath": [
+        "io.trino.filesystem.gcs.TestGcsFileSystemFlociWithEncryption"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 8,
+      "errorType": "java.lang.AssertionError",
+      "message": "\nExpecting empty but was: [Blob{bucket=gcloud-test-bucket-temp-6bccc46a-2d41-423f-9389-fc06af96155f, name=[*]#?, generation=1788327880192, size=4, content-type=application/octet-stream, metadata=null, contexts=null}]",
+      "stackText": "java.lang.AssertionError: \n\nExpecting empty but was: [Blob{bucket=gcloud-test-bucket-temp-6bccc46a-2d41-423f-9389-fc06af96155f, name=[*]#?, generation=1788327880192, size=4, content-type=application/octet-stream, metadata=null, contexts=null}]\n\tat io.trino.filesystem.gcs.AbstractTestGcsFileSystem.verifyFileSystemIsEmpty(AbstractTestGcsFileSystem.java:141)\n\tat io.trino.filesystem.AbstractTestTrinoFileSystem.beforeEach(AbstractTestTrinoFileSystem.java:151)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 38,
+      "attemptIndex": 0,
+      "displayName": "testVacuumWithWhiteSpace",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2982,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "\nexpected: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 11%3A00%3A00/20260902_054125_00233_i7epn_533f4a87-5582-439e-bbe2-638677dd07d6\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 12%3A00%3A00/20260902_054125_00233_i7epn_1da6fe06-476e-4462-b3af-d86ff50b1990\"]\n but was: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 11%3A00%3A00/20260902_054125_00231_i7epn_c39f1370-5048-4591-bc96-d66906f912c7\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 11%3A00%3A00/20260902_054125_00233_i7epn_533f4a87-5582-439e-bbe2-638677dd07d6\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 12%3A00%3A00/20260902_054125_00231_i7epn_a7d56ee9-06b3-42b5-a7fb-12e8299fc7f8\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 12%3A00%3A00/20260902_054125_00233_i7epn_1da6fe06-476e-4462-b3af-d86ff50b1990\"]",
+      "stackText": "org.opentest4j.AssertionFailedError: \n\nexpected: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 11%3A00%3A00/20260902_054125_00233_i7epn_533f4a87-5582-439e-bbe2-638677dd07d6\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 12%3A00%3A00/20260902_054125_00233_i7epn_1da6fe06-476e-4462-b3af-d86ff50b1990\"]\n but was: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 11%3A00%3A00/20260902_054125_00231_i7epn_c39f1370-5048-4591-bc96-d66906f912c7\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 11%3A00%3A00/20260902_054125_00233_i7epn_533f4a87-5582-439e-bbe2-638677dd07d6\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 12%3A00%3A00/20260902_054125_00231_i7epn_a7d56ee9-06b3-42b5-a7fb-12e8299fc7f8\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum_white_space_k7mab5d5v0/col_white_space=2024-12-13 12%3A00%3A00/20260902_054125_00233_i7epn_1da6fe06-476e-4462-b3af-d86ff50b1990\"]\n\tat io.trino.plugin.deltalake.BaseDeltaLakeConnectorSmokeTest.testVacuumWithWhiteSpace(BaseDeltaLakeConnectorSmokeTest.java:1976)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 38,
+      "attemptIndex": 0,
+      "displayName": "testVacuumWithTrailingSlash",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3901,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "\nexpected: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=1/20260902_054308_00493_i7epn_6ba00267-f803-4dae-9aae-0704842fc07a\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=4/20260902_054308_00493_i7epn_232621f3-eafe-460c-b89b-397ba7a46578\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=3/20260902_054308_00493_i7epn_3187066b-72bd-4786-956d-06022dd261b9\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=2/20260902_054308_00493_i7epn_95f6e907-9f81-4d64-a921-16e352e620ee\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=0/20260902_054308_00493_i7epn_039eeb83-2f2a-4897-917d-7dedd80abe4d\"]\n but was: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=0/20260902_054307_00491_i7epn_6a5eef44-0ac1-4fe9-8e05-fc92ac857f51\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=0/20260902_054308_00493_i7epn_039eeb83-2f2a-4897-917d-7dedd80abe4d\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=1/20260902_054307_00491_i7epn_b555018a-bca9-4272-99ea-f1911253c461\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=1/20260902_054308_00493_i7epn_6ba00267-f803-4dae-9aae-0704842fc07a\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=2/20260902_054307_00491_i7epn_99694f81-97cd-4d71-8e98-1d6ae67dde04\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=2/20260902_054308_00493_i7epn_95f6e907-9f81-4d64-a921-16e352e620ee\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=3/20260902_054307_00491_i7epn_9ed6ec38-c18a-49f9-a810-02985118c779\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=3/20260902_054308_00493_i7epn_3187066b-72bd-4786-956d-06022dd261b9\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=4/20260902_054307_00491_i7epn_a0122dbb-936a-4094-853b-3227fd5a06cc\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=4/20260902_054308_00493_i7epn_232621f3-eafe-460c-b89b-397ba7a46578\"]",
+      "stackText": "org.opentest4j.AssertionFailedError: \n\nexpected: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=1/20260902_054308_00493_i7epn_6ba00267-f803-4dae-9aae-0704842fc07a\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=4/20260902_054308_00493_i7epn_232621f3-eafe-460c-b89b-397ba7a46578\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=3/20260902_054308_00493_i7epn_3187066b-72bd-4786-956d-06022dd261b9\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=2/20260902_054308_00493_i7epn_95f6e907-9f81-4d64-a921-16e352e620ee\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=0/20260902_054308_00493_i7epn_039eeb83-2f2a-4897-917d-7dedd80abe4d\"]\n but was: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=0/20260902_054307_00491_i7epn_6a5eef44-0ac1-4fe9-8e05-fc92ac857f51\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=0/20260902_054308_00493_i7epn_039eeb83-2f2a-4897-917d-7dedd80abe4d\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=1/20260902_054307_00491_i7epn_b555018a-bca9-4272-99ea-f1911253c461\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=1/20260902_054308_00493_i7epn_6ba00267-f803-4dae-9aae-0704842fc07a\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=2/20260902_054307_00491_i7epn_99694f81-97cd-4d71-8e98-1d6ae67dde04\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=2/20260902_054308_00493_i7epn_95f6e907-9f81-4d64-a921-16e352e620ee\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=3/20260902_054307_00491_i7epn_9ed6ec38-c18a-49f9-a810-02985118c779\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=3/20260902_054308_00493_i7epn_3187066b-72bd-4786-956d-06022dd261b9\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=4/20260902_054307_00491_i7epn_a0122dbb-936a-4094-853b-3227fd5a06cc\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuumauo32oz7od/regionkey=4/20260902_054308_00493_i7epn_232621f3-eafe-460c-b89b-397ba7a46578\"]\n\tat io.trino.plugin.deltalake.BaseDeltaLakeConnectorSmokeTest.testVacuumWithTrailingSlash(BaseDeltaLakeConnectorSmokeTest.java:1930)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 38,
+      "attemptIndex": 0,
+      "displayName": "testCleanupForFailedCreateTableAs",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 9861,
+      "errorType": "java.lang.AssertionError",
+      "message": "\nExpecting empty but was: [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_cleanup_for_failed_create_table_as_op2q4n209s/20260902_054318_00566_i7epn_1d32e5f1-d1be-48f6-9173-f65b735fe151\"]",
+      "stackText": "java.lang.AssertionError: \n\nExpecting empty but was: [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_cleanup_for_failed_create_table_as_op2q4n209s/20260902_054318_00566_i7epn_1d32e5f1-d1be-48f6-9173-f65b735fe151\"]\n\tat io.trino.plugin.deltalake.BaseDeltaLakeConnectorSmokeTest.lambda$testCleanupForFailedCreateTableAs$0(BaseDeltaLakeConnectorSmokeTest.java:750)\n\tat io.trino.testing.assertions.Assert.assertEventually(Assert.java:43)\n\tat io.trino.testing.assertions.Assert.assertEventually(Assert.java:34)\n\tat io.trino.plugin.deltalake.BaseDeltaLakeConnectorSmokeTest.testCleanupForFailedCreateTableAs(BaseDeltaLakeConnectorSmokeTest.java:750)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 38,
+      "attemptIndex": 0,
+      "displayName": "testManagedTableFilesCleanedOnDrop",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 223,
+      "errorType": "java.lang.AssertionError",
+      "message": "\nExpecting empty but was: [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_managed_table_cleanup_eqya97ikck/test_managed_table_cleanup_62hxooj63j/20260902_054358_00754_i7epn_34740f42-b112-464e-9749-ae3bced8f1a4\",\n    \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_managed_table_cleanup_eqya97ikck/test_managed_table_cleanup_62hxooj63j/_delta_log/00000000000000000000.json\",\n    \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_managed_table_cleanup_eqya97ikck/test_managed_table_cleanup_62hxooj63j/_delta_log/_trino_meta/extended_stats.json\"]",
+      "stackText": "java.lang.AssertionError: \n\nExpecting empty but was: [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_managed_table_cleanup_eqya97ikck/test_managed_table_cleanup_62hxooj63j/20260902_054358_00754_i7epn_34740f42-b112-464e-9749-ae3bced8f1a4\",\n    \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_managed_table_cleanup_eqya97ikck/test_managed_table_cleanup_62hxooj63j/_delta_log/00000000000000000000.json\",\n    \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_managed_table_cleanup_eqya97ikck/test_managed_table_cleanup_62hxooj63j/_delta_log/_trino_meta/extended_stats.json\"]\n\tat io.trino.plugin.deltalake.BaseDeltaLakeConnectorSmokeTest.testManagedTableFilesCleanedOnDrop(BaseDeltaLakeConnectorSmokeTest.java:969)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 38,
+      "attemptIndex": 0,
+      "displayName": "testVacuum",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2766,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "\nexpected: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=4/20260902_054421_01137_i7epn_e64b68e0-5a30-4d71-85f7-128b32e06f48\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=0/20260902_054421_01137_i7epn_a358079b-323a-4a66-ad12-043b12368f04\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=1/20260902_054421_01137_i7epn_4346dace-1bc8-4638-84c6-eff13cd800bf\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=3/20260902_054421_01137_i7epn_a7fbcae1-0f44-4f80-a207-2d40dcaa63c2\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=2/20260902_054421_01137_i7epn_898fe703-7d92-4c5b-a669-cd633efd8620\"]\n but was: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=0/20260902_054421_01135_i7epn_728cfe24-23ba-4a24-899a-2e1ad7fa4e5a\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=0/20260902_054421_01137_i7epn_a358079b-323a-4a66-ad12-043b12368f04\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=1/20260902_054421_01135_i7epn_7b228242-2bae-41d7-81d0-16122536f4bc\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=1/20260902_054421_01137_i7epn_4346dace-1bc8-4638-84c6-eff13cd800bf\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=2/20260902_054421_01135_i7epn_80175ce8-0b37-4d6f-bc8e-208351b6d6dc\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=2/20260902_054421_01137_i7epn_898fe703-7d92-4c5b-a669-cd633efd8620\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=3/20260902_054421_01135_i7epn_2814dadb-4ca7-4e66-a692-d0c45a0befae\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=3/20260902_054421_01137_i7epn_a7fbcae1-0f44-4f80-a207-2d40dcaa63c2\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=4/20260902_054421_01135_i7epn_344fcc5f-de41-4918-8189-2c7bd0168823\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=4/20260902_054421_01137_i7epn_e64b68e0-5a30-4d71-85f7-128b32e06f48\"]",
+      "stackText": "org.opentest4j.AssertionFailedError: \n\nexpected: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=4/20260902_054421_01137_i7epn_e64b68e0-5a30-4d71-85f7-128b32e06f48\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=0/20260902_054421_01137_i7epn_a358079b-323a-4a66-ad12-043b12368f04\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=1/20260902_054421_01137_i7epn_4346dace-1bc8-4638-84c6-eff13cd800bf\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=3/20260902_054421_01137_i7epn_a7fbcae1-0f44-4f80-a207-2d40dcaa63c2\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=2/20260902_054421_01137_i7epn_898fe703-7d92-4c5b-a669-cd633efd8620\"]\n but was: \n  [\"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=0/20260902_054421_01135_i7epn_728cfe24-23ba-4a24-899a-2e1ad7fa4e5a\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=0/20260902_054421_01137_i7epn_a358079b-323a-4a66-ad12-043b12368f04\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=1/20260902_054421_01135_i7epn_7b228242-2bae-41d7-81d0-16122536f4bc\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=1/20260902_054421_01137_i7epn_4346dace-1bc8-4638-84c6-eff13cd800bf\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=2/20260902_054421_01135_i7epn_80175ce8-0b37-4d6f-bc8e-208351b6d6dc\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=2/20260902_054421_01137_i7epn_898fe703-7d92-4c5b-a669-cd633efd8620\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=3/20260902_054421_01135_i7epn_2814dadb-4ca7-4e66-a692-d0c45a0befae\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=3/20260902_054421_01137_i7epn_a7fbcae1-0f44-4f80-a207-2d40dcaa63c2\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=4/20260902_054421_01135_i7epn_344fcc5f-de41-4918-8189-2c7bd0168823\",\n      \"gs://test-delta-lake-integration-smoke-test-5m4azwc5lm/test_vacuum4crg8l6pl1/regionkey=4/20260902_054421_01137_i7epn_e64b68e0-5a30-4d71-85f7-128b32e06f48\"]\n\tat io.trino.plugin.deltalake.BaseDeltaLakeConnectorSmokeTest.testVacuum(BaseDeltaLakeConnectorSmokeTest.java:1884)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "test report testing_trino-tests, ,/testing/trino-tests/target/surefire-reports/TEST-io.trino.tests.TestServerAbandonedQueries.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 41,
+      "attemptIndex": 0,
+      "displayName": "testAbandonedQueries",
+      "suitePath": [
+        "io.trino.tests.TestServerAbandonedQueries"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3237,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "\nexpected: null\n but was: QueryError{message=Query 20260902_060057_00001_e666k was abandoned by the client, as it may have exited or stopped checking for query results. Query results have not been accessed since 2026-09-02T06:00:57.253003090Z: currentTime 2026-09-02T06:00:58.928305741Z, sqlState=null, errorCode=2, errorName=ABANDONED_QUERY, errorType=USER_ERROR, errorLocation=null, failureInfo=FailureInfo{type=io.trino.spi.TrinoException, message=Query 20260902_060057_00001_e666k was abandoned by the client, as it may have exited or stopped checking for query results. Query results have not been accessed since 2026-09-02T06:00:57.253003090Z: currentTime 2026-09-02T06:00:58.928305741Z, cause=null, suppressed=[], stack=[io.trino.execution.QueryTracker.failAbandonedQueries(QueryTracker.java:276), io.trino.execution.QueryTracker.lambda$start$0(QueryTracker.java:83), java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545), java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:369), java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:310), java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090), java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base/java.lang.Thread.run(Thread.java:1474)], errorInfo=ABANDONED_QUERY:2, errorLocation=null}}",
+      "stackText": "org.opentest4j.AssertionFailedError: \n\nexpected: null\n but was: QueryError{message=Query 20260902_060057_00001_e666k was abandoned by the client, as it may have exited or stopped checking for query results. Query results have not been accessed since 2026-09-02T06:00:57.253003090Z: currentTime 2026-09-02T06:00:58.928305741Z, sqlState=null, errorCode=2, errorName=ABANDONED_QUERY, errorType=USER_ERROR, errorLocation=null, failureInfo=FailureInfo{type=io.trino.spi.TrinoException, message=Query 20260902_060057_00001_e666k was abandoned by the client, as it may have exited or stopped checking for query results. Query results have not been accessed since 2026-09-02T06:00:57.253003090Z: currentTime 2026-09-02T06:00:58.928305741Z, cause=null, suppressed=[], stack=[io.trino.execution.QueryTracker.failAbandonedQueries(QueryTracker.java:276), io.trino.execution.QueryTracker.lambda$start$0(QueryTracker.java:83), java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545), java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:369), java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:310), java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090), java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614), java.base/java.lang.Thread.run(Thread.java:1474)], errorInfo=ABANDONED_QUERY:2, errorLocation=null}}\n\tat io.trino.tests.TestServerAbandonedQueries.testAbandonedQueries(TestServerAbandonedQueries.java:98)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "test report plugin_trino-iceberg, ,/plugin/trino-iceberg/target/surefire-reports/TEST-io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testDropTableWithNonExistentTableLocation",
+      "suitePath": [
+        "io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3075,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "[Table location should not exist] \nExpecting value to be false but was true",
+      "stackText": "org.opentest4j.AssertionFailedError: \n[Table location should not exist] \nExpecting value to be false but was true\n\tat io.trino.plugin.iceberg.BaseIcebergConnectorSmokeTest.testDropTableWithNonExistentTableLocation(BaseIcebergConnectorSmokeTest.java:658)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(ForkJoinPool.java:1490)\n\tat java.base/java.util.concurrent.ForkJoinPool.helpJoin(ForkJoinPool.java:2248)\n\tat java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:499)\n\tat java.base/java.util.concurrent.ForkJoinTask.join(ForkJoinTask.java:669)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "test report plugin_trino-iceberg, ,/plugin/trino-iceberg/target/surefire-reports/TEST-io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testDropTableWithMissingDataFile",
+      "suitePath": [
+        "io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 777,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "[Table location should not exist] \nExpecting value to be false but was true",
+      "stackText": "org.opentest4j.AssertionFailedError: \n[Table location should not exist] \nExpecting value to be false but was true\n\tat io.trino.plugin.iceberg.BaseIcebergConnectorSmokeTest.testDropTableWithMissingDataFile(BaseIcebergConnectorSmokeTest.java:641)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(ForkJoinPool.java:1490)\n\tat java.base/java.util.concurrent.ForkJoinPool.helpJoin(ForkJoinPool.java:2248)\n\tat java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:499)\n\tat java.base/java.util.concurrent.ForkJoinTask.join(ForkJoinTask.java:669)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "test report plugin_trino-iceberg, ,/plugin/trino-iceberg/target/surefire-reports/TEST-io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testDropTableWithMissingSnapshotFile",
+      "suitePath": [
+        "io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 564,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "[Table location should not exist] \nExpecting value to be false but was true",
+      "stackText": "org.opentest4j.AssertionFailedError: \n[Table location should not exist] \nExpecting value to be false but was true\n\tat io.trino.plugin.iceberg.BaseIcebergConnectorSmokeTest.testDropTableWithMissingSnapshotFile(BaseIcebergConnectorSmokeTest.java:586)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(ForkJoinPool.java:1490)\n\tat java.base/java.util.concurrent.ForkJoinPool.helpJoin(ForkJoinPool.java:2248)\n\tat java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:499)\n\tat java.base/java.util.concurrent.ForkJoinTask.join(ForkJoinTask.java:669)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": "&amp#27;[90m2026-09-01T23:57:54.748-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mQuery-20260902_055754_00115_pyas3-317328&amp#27;[0m\t&amp#27;[35mio.trino.plugin.iceberg.catalog.hms.TrinoHiveCatalog&amp#27;[0m\tFailed to delete table data referenced by metadata\n&amp#27;[31morg.apache.iceberg.exceptions.NotFoundException: Failed to open input stream for file: gs://test-iceberg-gcs-vbahghust2/test_iceberg_gcs_connector_smoke_test_7ohoyv0nr9/test_drop_table_with_missing_snapshot_file_5vhbg60s64-7a6996e6c96a4d37881ba2a583a35e0d/metadata/snap-5397425106473796857-1-ba673929-7356-4853-8b01-7307b42fffc8.avro&amp#27;[0m\n&amp#27;[31m\tat io.trino.plugin.iceberg.fileio.ForwardingInputFile.newStream(ForwardingInputFile.java:55)&amp#27;[0m\n&amp#27;[31m\tat org.apache.iceberg.avro.AvroIterable.newFileReader(AvroIterable.java:103)&amp#27;[0m\n&amp#27;[31m\tat org.apache.iceberg.avro.AvroIterable.iterator(AvroIterable.java:78)&amp#27;[0m\n&amp#27;[31m\tat org.apache.iceberg.avro.AvroIterable.iterator(AvroIterable.java:38)&amp#27;[0m\n&amp#27;[31m\tat org.apache.iceberg.relocated.com.google.common.collect.Iterables.addAll(Iterables.java:333)&amp#27;[0m\n&amp#27;[31m\tat org.apache.iceberg.relocated.com.google.common.collect.Lists.newLinkedList(Lists.java:251)&amp#27;[0m\n&amp#27;[31m\tat org.apache.iceberg.ManifestLists.read(ManifestLists.java:43)&amp#27;[0m\n&amp#27;[31m\tat org.apache.iceberg.BaseSnapshot.cacheManifests(BaseSnapshot.java:186)&amp#27;[0m\n&amp#27;[31m\tat org.apache.iceberg.BaseSnapshot.allManifests(BaseSnapshot.java:205)&amp#27;[0m\n&amp#27;[31m\tat org.apache.iceberg.CatalogUtil.dropTableData(CatalogUtil.java:109)&amp#27;[0m\n&amp#27;[31m\tat io.trino.plugin.iceberg.catalog.hms.TrinoHiveCatalog.dropTable(TrinoHiveCatalog.java:444)&amp#27;[0m\n&amp#27;[31m\tat io.trino.plugin.iceberg.IcebergMetadata.dropTable(IcebergMetadata.java:2507)&amp#27;[0m\n&amp#27;[31m\tat io.trino.plugin.base.classloader.ClassLoaderSafeConnectorMetadata.dropTable(ClassLoaderSafeConnectorMetadata.java:494)&amp#27;[0m\n&amp#27;[31m\tat io.trino.tracing.TracingConnectorMetadata.dropTable(TracingConnectorMetadata.java:416)&amp#27;[0m\n&amp#27;[31m\tat io.trino.metadata.MetadataManager.dropTable(MetadataManager.java:1129)&amp#27;[0m\n&amp#27;[31m\tat io.trino.tracing.TracingMetadata.dropTable(TracingMetadata.java:623)&amp#27;[0m\n&amp#27;[31m\tat io.trino.execution.DropTableTask.execute(DropTableTask.java:92)&amp#27;[0m\n&amp#27;[31m\tat io.trino.execution.DropTableTask.execute(DropTableTask.java:36)&amp#27;[0m\n&amp#27;[31m\tat io.trino.execution.DataDefinitionExecution.start(DataDefinitionExecution.java:153)&amp#27;[0m\n&amp#27;[31m\tat io.trino.execution.QueryManager.createQuery(QueryManager.java:323)&amp#27;[0m\n&amp#27;[31m\tat io.trino.dispatcher.LocalDispatchQuery.startExecution(LocalDispatchQuery.java:151)&amp#27;[0m\n&amp#27;[31m\tat io.trino.dispatcher.LocalDispatchQuery.lambda$waitForMinimumWorkers$1(LocalDispatchQuery.java:135)&amp#27;[0m\n&amp#27;[31m\tat io.airlift.concurrent.MoreFutures.lambda$addSuccessCallback$0(MoreFutures.java:570)&amp#27;[0m\n&amp#27;[31m\tat io.airlift.concurrent.MoreFutures$3.onSuccess(MoreFutures.java:545)&amp#27;[0m\n&amp#27;[31m\tat com.google.common.util.concurrent.Futures$CallbackListener.run(Futures.java:1128)&amp#27;[0m\n&amp#27;[31m\tat io.trino.$gen.Trino_testversion___.run(Unknown Source)&amp#27;[0m\n&amp#27;[31m\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)&amp#27;[0m\n&amp#27;[31m\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)&amp#27;[0m\n&amp#27;[31m\tat java.base/java.lang.Thread.run(Thread.java:1474)&amp#27;[0m\n&amp#27;[31mCaused by: java.io.FileNotFoundException: File gs://test-iceberg-gcs-vbahghust2/test_iceberg_gcs_connector_smoke_test_7ohoyv0nr9/test_drop_table_with_missing_snapshot_file_5vhbg60s64-7a6996e6c96a4d37881ba2a583a35e0d/metadata/snap-5397425106473796857-1-ba673929-7356-4853-8b01-7307b42fffc8.avro not found&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.gcs.GcsUtils.lambda$getBlobOrThrow$0(GcsUtils.java:101)&amp#27;[0m\n&amp#27;[31m\tat java.base/java.util.Optional.orElseThrow(Optional.java:403)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.gcs.GcsUtils.getBlobOrThrow(GcsUtils.java:101)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.gcs.GcsInputFile.loadProperties(GcsInputFile.java:125)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.gcs.GcsInputFile.length(GcsInputFile.java:82)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.tracing.Tracing.withTracing(Tracing.java:51)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.tracing.TracingInputFile.length(TracingInputFile.java:81)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.tracking.TrackingInputFile.length(TrackingInputFile.java:57)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.cache.TrinoInputFileBlobSource.length(TrinoInputFileBlobSource.java:40)&amp#27;[0m\n&amp#27;[31m\tat io.trino.blob.cache.memory.MemoryBlobCache.getOrLoad(MemoryBlobCache.java:177)&amp#27;[0m\n&amp#27;[31m\tat io.trino.blob.cache.memory.MemoryBlobCache.get(MemoryBlobCache.java:90)&amp#27;[0m\n&amp#27;[31m\tat io.trino.blob.cache.memory.InMemoryBlobCacheManager$StatsRecordingBlobCache.get(InMemoryBlobCacheManager.java:108)&amp#27;[0m\n&amp#27;[31m\tat io.trino.cache.ScopedBlobCache.get(ScopedBlobCache.java:50)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.tracing.TracingBlobCache.lambda$get$0(TracingBlobCache.java:51)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.tracing.Tracing.withTracing(Tracing.java:51)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.tracing.TracingBlobCache.get(TracingBlobCache.java:51)&amp#27;[0m\n&amp#27;[31m\tat io.trino.filesystem.cache.CacheInputFile.newStream(CacheInputFile.java:69)&amp#27;[0m\n&amp#27;[31m\tat io.trino.plugin.iceberg.fileio.ForwardingInputFile.newStream(ForwardingInputFile.java:52)&amp#27;[0m\n&amp#27;[31m\t... 28 more&amp#27;[0m\n\n\n"
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "test report plugin_trino-iceberg, ,/plugin/trino-iceberg/target/surefire-reports/TEST-io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testMetadataDeleteAfterCommitEnabled",
+      "suitePath": [
+        "io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1197,
+      "errorType": "java.lang.AssertionError",
+      "message": "\nExpecting actual:\n  7\nto be less than or equal to:\n  6 ",
+      "stackText": "java.lang.AssertionError: \n\nExpecting actual:\n  7\nto be less than or equal to:\n  6 \n\tat io.trino.plugin.iceberg.BaseIcebergConnectorSmokeTest.testMetadataDeleteAfterCommitEnabled(BaseIcebergConnectorSmokeTest.java:828)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(ForkJoinPool.java:1490)\n\tat java.base/java.util.concurrent.ForkJoinPool.helpJoin(ForkJoinPool.java:2248)\n\tat java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:499)\n\tat java.base/java.util.concurrent.ForkJoinTask.join(ForkJoinTask.java:669)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "test report plugin_trino-iceberg, ,/plugin/trino-iceberg/target/surefire-reports/TEST-io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testDropTableWithMissingManifestListFile",
+      "suitePath": [
+        "io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 876,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "[Table location should not exist] \nExpecting value to be false but was true",
+      "stackText": "org.opentest4j.AssertionFailedError: \n[Table location should not exist] \nExpecting value to be false but was true\n\tat io.trino.plugin.iceberg.BaseIcebergConnectorSmokeTest.testDropTableWithMissingManifestListFile(BaseIcebergConnectorSmokeTest.java:613)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(ForkJoinPool.java:1490)\n\tat java.base/java.util.concurrent.ForkJoinPool.helpJoin(ForkJoinPool.java:2248)\n\tat java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:499)\n\tat java.base/java.util.concurrent.ForkJoinTask.join(ForkJoinTask.java:669)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "test report plugin_trino-iceberg, ,/plugin/trino-iceberg/target/surefire-reports/TEST-io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testDropTableWithMissingMetadataFile",
+      "suitePath": [
+        "io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1023,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "[Table location should not exist] \nExpecting value to be false but was true",
+      "stackText": "org.opentest4j.AssertionFailedError: \n[Table location should not exist] \nExpecting value to be false but was true\n\tat io.trino.plugin.iceberg.BaseIcebergConnectorSmokeTest.testDropTableWithMissingMetadataFile(BaseIcebergConnectorSmokeTest.java:560)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(ForkJoinPool.java:1490)\n\tat java.base/java.util.concurrent.ForkJoinPool.helpJoin(ForkJoinPool.java:2248)\n\tat java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:499)\n\tat java.base/java.util.concurrent.ForkJoinTask.join(ForkJoinTask.java:669)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": "&amp#27;[90m2026-09-01T23:58:12.258-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mQuery-20260902_055756_00053_rzsvz-317369&amp#27;[0m\t&amp#27;[35morg.apache.hc.client5.http.impl.classic.HttpRequestRetryExec&amp#27;[0m\tex-0000005166 http://localhost:32798 responded with status 500; request will be automatically re-executed in 16371 MILLISECONDS (exec count 6)\n&amp#27;[90m2026-09-01T23:58:12.352-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36miceberg-split-source-iceberg-0&amp#27;[0m\t&amp#27;[35mio.trino.plugin.iceberg.IcebergSplitSource&amp#27;[0m\tGenerated 10 splits, skipped 0 files for OPTIMIZE\n&amp#27;[90m2026-09-01T23:58:12.363-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36miceberg-split-source-iceberg-1&amp#27;[0m\t&amp#27;[35mio.trino.plugin.iceberg.IcebergSplitSource&amp#27;[0m\tGenerated 10 splits, skipped 0 files for OPTIMIZE\n&amp#27;[90m2026-09-01T23:58:12.386-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36miceberg-split-source-iceberg-0&amp#27;[0m\t&amp#27;[35mio.trino.plugin.iceberg.IcebergSplitSource&amp#27;[0m\tGenerated 10 splits, skipped 0 files for OPTIMIZE\n"
+    },
+    {
+      "failureId": "f0019",
+      "sourceFile": "test report plugin_trino-iceberg, ,/plugin/trino-iceberg/target/surefire-reports/TEST-io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testRegisterTableWithDroppedTable",
+      "suitePath": [
+        "io.trino.plugin.iceberg.TestIcebergGcsConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 746,
+      "errorType": "java.lang.AssertionError",
+      "message": "Expected query to fail: CALL system.register_table (CURRENT_SCHEMA, 'test_register_table_with_dropped_table_jtmu8l90by_new', 'gs://test-iceberg-gcs-vbahghust2/test_iceberg_gcs_connector_smoke_test_7ohoyv0nr9/test_register_table_with_dropped_table_jtmu8l90by-8bb26965038c4e17ba419e6dbfa865b8') [QueryId: 20260902_055818_00255_pyas3]",
+      "stackText": "java.lang.AssertionError: Expected query to fail: CALL system.register_table (CURRENT_SCHEMA, 'test_register_table_with_dropped_table_jtmu8l90by_new', 'gs://test-iceberg-gcs-vbahghust2/test_iceberg_gcs_connector_smoke_test_7ohoyv0nr9/test_register_table_with_dropped_table_jtmu8l90by-8bb26965038c4e17ba419e6dbfa865b8') [QueryId: 20260902_055818_00255_pyas3]\n\tat io.trino.testing.QueryAssertions.assertQueryFails(QueryAssertions.java:474)\n\tat io.trino.testing.AbstractTestQueryFramework.assertQueryFails(AbstractTestQueryFramework.java:456)\n\tat io.trino.plugin.iceberg.BaseIcebergConnectorSmokeTest.testRegisterTableWithDroppedTable(BaseIcebergConnectorSmokeTest.java:343)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(ForkJoinPool.java:1490)\n\tat java.base/java.util.concurrent.ForkJoinPool.helpJoin(ForkJoinPool.java:2248)\n\tat java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:499)\n\tat java.base/java.util.concurrent.ForkJoinTask.join(ForkJoinTask.java:669)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": "&amp#27;[90m2026-09-01T23:58:17.957-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36miceberg-split-source-iceberg-1&amp#27;[0m\t&amp#27;[35mio.trino.plugin.iceberg.IcebergSplitSource&amp#27;[0m\tGenerated 10 splits, skipped 0 files for OPTIMIZE\n&amp#27;[90m2026-09-01T23:58:17.962-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36miceberg-split-source-iceberg-0&amp#27;[0m\t&amp#27;[35mio.trino.plugin.iceberg.IcebergSplitSource&amp#27;[0m\tGenerated 10 splits, skipped 0 files for OPTIMIZE\n&amp#27;[90m2026-09-01T23:58:17.991-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36miceberg-split-source-iceberg-2&amp#27;[0m\t&amp#27;[35mio.trino.plugin.iceberg.IcebergSplitSource&amp#27;[0m\tGenerated 10 splits, skipped 0 files for OPTIMIZE\n"
+    },
+    {
+      "failureId": "f0020",
+      "sourceFile": "test report plugin_trino-iceberg, ,/plugin/trino-iceberg/target/surefire-reports/TEST-io.trino.plugin.iceberg.catalog.rest.TestIcebergGcsVendingRestCatalogConnectorSmokeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testDropTableWithNonExistentTableLocation",
+      "suitePath": [
+        "io.trino.plugin.iceberg.catalog.rest.TestIcebergGcsVendingRestCatalogConnectorSmokeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1077,
+      "errorType": "java.lang.AssertionError",
+      "message": "\nExpecting message:\n  \"[Table location should not exist] \nExpecting value to be false but was true\"\nto match regex:\n  \"Failed to load table: (.*)\"\nbut did not.\n\nThrowable that failed the check:\n\norg.opentest4j.AssertionFailedError: [Table location should not exist] \nExpecting value to be false but was true\n at io.trino.plugin.iceberg.BaseIcebergConnectorSmokeTest.testDropTableWithNonExistentTableLocation(BaseIcebergConnectorSmokeTest.java:658)\n at io.trino.plugin.iceberg.catalog.rest.TestIcebergGcsVendingRestCatalogConnectorSmokeTest.lambda$testDropTableWithNonExistentTableLocation$0(TestIcebergGcsVendingRestCatalogConnectorSmokeTest.java:298)\n at io.trino.plugin.iceberg.catalog.rest.TestIcebergGcsVendingRestCatalogConnectorSmokeTest.testDropTableWithNonExistentTableLocation(TestIcebergGcsVendingRestCatalogConnectorSmokeTest.java:298)\n at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\n at java.base/java.lang.reflect.Method.invoke(Method.java:565)\n at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:700)\n at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:528)\n at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:53)\n at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)\n at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)\n at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)\n at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)\n at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)\n at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:124)\n at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)\n at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)\n at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)\n at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)\n at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)\n at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)\n at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)\n at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)\n at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)\n at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)\n at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)\n at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)\n at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)\n at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)\n at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)\n at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)\n at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:139)\n at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)\n at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)\n at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)\n at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)\n at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.exec(ForkJoinPoolHierarchicalTestExecutorService.java:266)\n at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(ForkJoinPool.java:1490)\n at java.base/java.util.concurrent.ForkJoinPool.helpJoin(ForkJoinPool.java:2248)\n at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:499)\n at java.base/java.util.concurrent.ForkJoinTask.join(ForkJoinTask.java:669)\n at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.joinConcurrentTasksInReverseOrderToEnableWorkStealing(ForkJoinPoolHierarchicalTestExecutorService.java:188)\n at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:154)\n at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)\n at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)\n at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)\n at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:139)\n at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)\n at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)\n at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)\n at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)\n at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.exec(ForkJoinPoolHierarchicalTestExecutorService.java:266)\n at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stackText": "java.lang.AssertionError: \n\nExpecting message:\n  \"[Table location should not exist] \nExpecting value to be false but was true\"\nto match regex:\n  \"Failed to load table: (.*)\"\nbut did not.\n\nThrowable that failed the check:\n\norg.opentest4j.AssertionFailedError: [Table location should not exist] \nExpecting value to be false but was true\n\tat io.trino.plugin.iceberg.BaseIcebergConnectorSmokeTest.testDropTableWithNonExistentTableLocation(BaseIcebergConnectorSmokeTest.java:658)\n\tat io.trino.plugin.iceberg.catalog.rest.TestIcebergGcsVendingRestCatalogConnectorSmokeTest.lambda$testDropTableWithNonExistentTableLocation$0(TestIcebergGcsVendingRestCatalogConnectorSmokeTest.java:298)\n\tat io.trino.plugin.iceberg.catalog.rest.TestIcebergGcsVendingRestCatalogConnectorSmokeTest.testDropTableWithNonExistentTableLocation(TestIcebergGcsVendingRestCatalogConnectorSmokeTest.java:298)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:700)\n\tat org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:528)\n\tat org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:53)\n\tat org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)\n\tat org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:124)\n\tat org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)\n\tat org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)\n\tat org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)\n\tat org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:139)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.exec(ForkJoinPoolHierarchicalTestExecutorService.java:266)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(ForkJoinPool.java:1490)\n\tat java.base/java.util.concurrent.ForkJoinPool.helpJoin(ForkJoinPool.java:2248)\n\tat java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:499)\n\tat java.base/java.util.concurrent.ForkJoinTask.join(ForkJoinTask.java:669)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.joinConcurrentTasksInReverseOrderToEnableWorkStealing(ForkJoinPoolHierarchicalTestExecutorService.java:188)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:154)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:139)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.exec(ForkJoinPoolHierarchicalTestExecutorService.java:266)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n\n\tat io.trino.plugin.iceberg.catalog.rest.TestIcebergGcsVendingRestCatalogConnectorSmokeTest.testDropTableWithNonExistentTableLocation(TestIcebergGcsVendingRestCatalogConnectorSmokeTest.java:299)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

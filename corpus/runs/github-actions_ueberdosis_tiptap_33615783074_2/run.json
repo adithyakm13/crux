@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ueberdosis/tiptap:33615783074:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ueberdosis/tiptap",
+    "providerRunId": "33615783074",
+    "runAttempt": 2,
+    "url": "https://github.com/ueberdosis/tiptap/actions/runs/33615783074",
+    "workflowName": "Verify",
+    "event": "pull_request",
+    "headSha": "77227d227c23fb6b7f0306a2c9affcf10fa6d875",
+    "headBranch": "fix/ios-ignore-mutation-contentdom",
+    "artifactIds": [
+      "9841041923",
+      "9841045935",
+      "9841050291"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-03T04:37:58.140Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 494,
+    "failures": 2,
+    "passed": 492,
+    "skipped": 0,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "e2e-blob-report-2/report-chromium-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "text should be wrapped in a paragraph by default",
+      "suitePath": [
+        "/src/Examples/Minimal",
+        "React"
+      ],
+      "filePath": "src/Examples/Minimal/index.spec.ts",
+      "status": "failed",
+      "durationMs": 2439,
+      "errorType": "Error",
+      "message": "Error: locator.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "stackText": "Error: locator.evaluate: Execution context was destroyed, most likely because of a navigation\n    at /home/runner/work/tiptap/tiptap/demos/src/Examples/Minimal/index.spec.ts:18:22",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "e2e-blob-report-3/report-chromium-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "submitting ruby text applies annotation to selection",
+      "suitePath": [
+        "/src/Marks/RubyText",
+        "React"
+      ],
+      "filePath": "src/Marks/RubyText/index.spec.ts",
+      "status": "failed",
+      "durationMs": 6246,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /home/runner/work/tiptap/tiptap/demos/src/Marks/RubyText/index.spec.ts:58:12",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

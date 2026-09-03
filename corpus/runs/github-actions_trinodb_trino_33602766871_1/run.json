@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:trinodb/trino:33602766871:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "trinodb/trino",
+    "providerRunId": "33602766871",
+    "runAttempt": 1,
+    "url": "https://github.com/trinodb/trino/actions/runs/33602766871",
+    "workflowName": "ci",
+    "event": "pull_request",
+    "headSha": "b834504b582b25dd5110323f03bc44b37b48b662",
+    "headBranch": "fix-query-commit-race-30964",
+    "artifactIds": [
+      "9836425682",
+      "9836031836",
+      "9836217950",
+      "9835948562",
+      "9835953724",
+      "9835959495",
+      "9836286955",
+      "9836001472",
+      "9836004438",
+      "9836146947",
+      "9836051368",
+      "9836237117",
+      "9836236425",
+      "9836662011",
+      "9836359669",
+      "9835941887",
+      "9836340218",
+      "9836009205",
+      "9836056682",
+      "9836158627",
+      "9836187635",
+      "9836331522",
+      "9836107042",
+      "9836011837",
+      "9836188839",
+      "9836549209",
+      "9836138135",
+      "9836036571",
+      "9836245290",
+      "9836211282",
+      "9836141761",
+      "9836934944",
+      "9836096120",
+      "9836357660",
+      "9836080593",
+      "9836213222",
+      "9836634355",
+      "9836164039",
+      "9836061828",
+      "9836253190",
+      "9836845230",
+      "9837023126",
+      "9836549467",
+      "9836612153"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T17:32:53.153Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 110929,
+    "failures": 1,
+    "passed": 106398,
+    "skipped": 4530,
+    "filesParsed": 2482,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test report testing_trino-tests, ,/testing/trino-tests/target/surefire-reports/TEST-io.trino.execution.TestQueues.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 40,
+      "attemptIndex": 0,
+      "displayName": "testQueryTypeBasedSelection",
+      "suitePath": [
+        "io.trino.execution.TestQueues"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 240011,
+      "errorType": "java.util.concurrent.TimeoutException",
+      "message": "testQueryTypeBasedSelection() timed out after 240 seconds",
+      "stackText": "java.util.concurrent.TimeoutException: testQueryTypeBasedSelection() timed out after 240 seconds\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\nCaused by: org.junit.jupiter.api.timeout.PreemptiveTimeoutUtils$ExecutionTimeoutException: Execution timed out in thread junit-timeout-thread-4\n\tat java.base/java.lang.Thread.sleepNanos0(Native Method)\n\tat java.base/java.lang.Thread.sleepNanos(Thread.java:509)\n\tat java.base/java.lang.Thread.sleep(Thread.java:577)\n\tat java.base/java.util.concurrent.TimeUnit.sleep(TimeUnit.java:446)\n\tat io.trino.execution.QueryRunnerUtil.waitForQueryState(QueryRunnerUtil.java:66)\n\tat io.trino.execution.TestQueues.assertResourceGroup(TestQueues.java:351)\n\tat io.trino.execution.TestQueues.testQueryTypeBasedSelection(TestQueues.java:331)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

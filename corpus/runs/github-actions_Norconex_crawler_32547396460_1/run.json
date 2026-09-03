@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Norconex/crawler:32547396460:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Norconex/crawler",
+    "providerRunId": "32547396460",
+    "runAttempt": 1,
+    "url": "https://github.com/Norconex/crawler/actions/runs/32547396460",
+    "workflowName": "Nightly Tests",
+    "event": "schedule",
+    "headSha": "2eac45b8138ad1a34f200b2c5d384ac073bc84a1",
+    "headBranch": "main",
+    "artifactIds": [
+      "9469213031"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T08:38:00.527Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1941,
+    "failures": 1,
+    "passed": 1940,
+    "skipped": 0,
+    "filesParsed": 305,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "nightly-test-results/crawler/web/target/surefire-reports/TEST-com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcherTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testCreateCredentialsProviderHostNameOnlyNoPortFromXml",
+      "suitePath": [
+        "com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcherTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 51,
+      "errorType": "java.lang.AssertionError",
+      "message": "\nExpecting actual not to be null",
+      "stackText": "java.lang.AssertionError: \n\nExpecting actual not to be null\n\tat com.norconex.crawler.web.fetch.impl.httpclient.HttpClientFetcherTest.testCreateCredentialsProviderHostNameOnlyNoPortFromXml(HttpClientFetcherTest.java:411)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apple/pkl-go:29035070885:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apple/pkl-go",
+    "providerRunId": "29035070885",
+    "runAttempt": 1,
+    "url": "https://github.com/apple/pkl-go/actions/runs/29035070885",
+    "workflowName": "Pull Request",
+    "event": "pull_request",
+    "headSha": "794a200016a83e9042c04928719d4ba808fe20d7",
+    "headBranch": "resolved-evaluator-settings",
+    "artifactIds": [
+      "8205526764",
+      "8205528409"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T09:04:15.671Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 261,
+    "failures": 2,
+    "passed": 244,
+    "skipped": 15,
+    "filesParsed": 5,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-xml-test-pkl-0-32-0/go-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "TestLoadProjectWithHeaders",
+      "suitePath": [
+        "github.com/apple/pkl-go/pkl"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 20,
+      "errorType": null,
+      "message": "Failed",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-xml-test-pkl-0-32-0/go-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "TestLoadProjectWithHeaders/EvaluatorOptions",
+      "suitePath": [
+        "github.com/apple/pkl-go/pkl"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "Failed",
+      "stackText": "    project_test.go:486: \n        \tError Trace:\t/home/runner/work/pkl-go/pkl-go/pkl/project_test.go:486\n        \tError:      \tNot equal: \n        \t            \texpected: &pkl.EvaluatorOptions{Properties:map[string]string(nil), Env:map[string]string(nil), ModulePaths:[]string(nil), Logger:pkl.Logger(nil), OutputFormat:\"\", AllowedModules:[]string(nil), AllowedResources:[]string(nil), ResourceReaders:[]pkl.ResourceReader(nil), ModuleReaders:[]pkl.ModuleReader(nil), CacheDir:\"\", RootDir:\"\", ProjectBaseURI:\"\", DeclaredProjectDependencies:(*pkl.ProjectDependencies)(nil), Http:(*pkl.Http)(0xc0001a83f0), ExternalModuleReaders:map[string]pkl.ExternalReader(nil), ExternalResourceReaders:map[string]pkl.ExternalReader(nil), TraceMode:\"\"}\n        \t            \tactual  : &pkl.EvaluatorOptions{Properties:map[string]string(nil), Env:map[string]string(nil), ModulePaths:[]string(nil), Logger:pkl.Logger(nil), OutputFormat:\"\", AllowedModules:[]string(nil), AllowedResources:[]string(nil), ResourceReaders:[]pkl.ResourceReader(nil), ModuleReaders:[]pkl.ModuleReader(nil), CacheDir:\"\", RootDir:\"\", ProjectBaseURI:\"\", DeclaredProjectDependencies:(*pkl.ProjectDependencies)(nil), Http:(*pkl.Http)(0xc0001a8300), ExternalModuleReaders:map[string]pkl.ExternalReader(nil), ExternalResourceReaders:map[string]pkl.ExternalReader(nil), TraceMode:\"\"}\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -18,15 +18,3 @@\n        \t            \t   Rewrites: (map[string]string) <nil>,\n        \t            \t-  Headers: (map[string]http.Header) (len=2) {\n        \t            \t-   (string) (len=2) \"**\": (http.Header) (len=1) {\n        \t            \t-    (string) (len=12) \"X-Two-Values\": ([]string) (len=2) {\n        \t            \t-     (string) (len=3) \"foo\",\n        \t            \t-     (string) (len=3) \"bar\"\n        \t            \t-    }\n        \t            \t-   },\n        \t            \t-   (string) (len=34) \"https://*.example.com/foo/*/bar/**\": (http.Header) (len=1) {\n        \t            \t-    (string) (len=11) \"X-One-Value\": ([]string) (len=1) {\n        \t            \t-     (string) (len=11) \"hello world\"\n        \t            \t-    }\n        \t            \t-   }\n        \t            \t-  }\n        \t            \t+  Headers: (map[string]http.Header) <nil>\n        \t            \t  }),\n        \tTest:       \tTestLoadProjectWithHeaders/EvaluatorOptions",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

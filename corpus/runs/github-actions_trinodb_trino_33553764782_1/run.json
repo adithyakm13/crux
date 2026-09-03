@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:trinodb/trino:33553764782:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "trinodb/trino",
+    "providerRunId": "33553764782",
+    "runAttempt": 1,
+    "url": "https://github.com/trinodb/trino/actions/runs/33553764782",
+    "workflowName": "ci",
+    "event": "pull_request",
+    "headSha": "bc57bc978ad103735c947233792a8eb9ba4b42d3",
+    "headBranch": "yunliaw/delta-timestamp-micros",
+    "artifactIds": [
+      "9818755791",
+      "9819229044",
+      "9818773616",
+      "9818649475",
+      "9819098056",
+      "9818772969",
+      "9819025889",
+      "9818982518",
+      "9819106646",
+      "9818698380",
+      "9818998251",
+      "9818721352",
+      "9819373195",
+      "9818736017",
+      "9819615776",
+      "9818733083",
+      "9818712537",
+      "9819359816",
+      "9819541966",
+      "9819857480",
+      "9819384299"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T17:51:00.758Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 87712,
+    "failures": 7,
+    "passed": 86963,
+    "skipped": 742,
+    "filesParsed": 678,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeBasic.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 17,
+      "attemptIndex": 0,
+      "displayName": "testTrinoCreateTableWithTimestampNtz",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeBasic"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 604,
+      "errorType": "java.lang.AssertionError",
+      "message": "For query 20260901_201722_00446_yrj4x: \n SHOW STATS FOR test_create_table_timestamp_ntz2cye0siewc\nnot equal\nActual rows (up to 100 of 1 extra rows shown, 2 rows in total):\n    [x, null, 8.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, +10000-01-01 00:00:00.000992]\nExpected rows (up to 100 of 1 missing rows shown, 2 rows in total):\n    [x, null, 8.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, +10000-01-01 00:00:00.000000]\n",
+      "stackText": "java.lang.AssertionError: \nFor query 20260901_201722_00446_yrj4x: \n SHOW STATS FOR test_create_table_timestamp_ntz2cye0siewc\nnot equal\nActual rows (up to 100 of 1 extra rows shown, 2 rows in total):\n    [x, null, 8.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, +10000-01-01 00:00:00.000992]\nExpected rows (up to 100 of 1 missing rows shown, 2 rows in total):\n    [x, null, 8.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, +10000-01-01 00:00:00.000000]\n\n\tat io.trino.testing.QueryAssertions.assertEqualsIgnoreOrder(QueryAssertions.java:416)\n\tat io.trino.testing.QueryAssertions.assertDistributedQuery(QueryAssertions.java:378)\n\tat io.trino.testing.QueryAssertions.assertQuery(QueryAssertions.java:190)\n\tat io.trino.testing.QueryAssertions.assertQuery(QueryAssertions.java:163)\n\tat io.trino.testing.AbstractTestQueryFramework.assertQuery(AbstractTestQueryFramework.java:356)\n\tat io.trino.plugin.deltalake.TestDeltaLakeBasic.testTrinoCreateTableWithTimestampNtz(TestDeltaLakeBasic.java:1380)\n\tat io.trino.plugin.deltalake.TestDeltaLakeBasic.testTrinoCreateTableWithTimestampNtz(TestDeltaLakeBasic.java:1298)\n\tat io.trino.plugin.deltalake.TestDeltaLakeBasic.testTrinoCreateTableWithTimestampNtz(TestDeltaLakeBasic.java:1287)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeBasic.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 17,
+      "attemptIndex": 0,
+      "displayName": "testTrinoCreateTableAsSelectWithTimestampNtz",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeBasic"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 552,
+      "errorType": "java.lang.AssertionError",
+      "message": "For query 20260901_201729_00542_yrj4x: \n SHOW STATS FOR test_create_table_timestamp_ntzy651c4a21n\nnot equal\nActual rows (up to 100 of 1 extra rows shown, 2 rows in total):\n    [x, null, 8.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, +10000-01-01 00:00:00.000992]\nExpected rows (up to 100 of 1 missing rows shown, 2 rows in total):\n    [x, null, 8.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, +10000-01-01 00:00:00.000000]\n",
+      "stackText": "java.lang.AssertionError: \nFor query 20260901_201729_00542_yrj4x: \n SHOW STATS FOR test_create_table_timestamp_ntzy651c4a21n\nnot equal\nActual rows (up to 100 of 1 extra rows shown, 2 rows in total):\n    [x, null, 8.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, +10000-01-01 00:00:00.000992]\nExpected rows (up to 100 of 1 missing rows shown, 2 rows in total):\n    [x, null, 8.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, +10000-01-01 00:00:00.000000]\n\n\tat io.trino.testing.QueryAssertions.assertEqualsIgnoreOrder(QueryAssertions.java:416)\n\tat io.trino.testing.QueryAssertions.assertDistributedQuery(QueryAssertions.java:378)\n\tat io.trino.testing.QueryAssertions.assertQuery(QueryAssertions.java:190)\n\tat io.trino.testing.QueryAssertions.assertQuery(QueryAssertions.java:163)\n\tat io.trino.testing.AbstractTestQueryFramework.assertQuery(AbstractTestQueryFramework.java:356)\n\tat io.trino.plugin.deltalake.TestDeltaLakeBasic.testTrinoCreateTableWithTimestampNtz(TestDeltaLakeBasic.java:1380)\n\tat io.trino.plugin.deltalake.TestDeltaLakeBasic.testTrinoCreateTableAsSelectWithTimestampNtz(TestDeltaLakeBasic.java:1321)\n\tat io.trino.plugin.deltalake.TestDeltaLakeBasic.testTrinoCreateTableAsSelectWithTimestampNtz(TestDeltaLakeBasic.java:1310)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeBasic.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 17,
+      "attemptIndex": 0,
+      "displayName": "testDeltaTimestampNtz",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeBasic"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 656,
+      "errorType": "java.lang.AssertionError",
+      "message": "For query 20260901_201735_00606_yrj4x: \n SHOW STATS FOR timestamp_ntz4jdc9zv31i\nnot equal\nActual rows (up to 100 of 1 extra rows shown, 2 rows in total):\n    [x, null, 1.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, 2023-01-02 03:04:05.124999]\nExpected rows (up to 100 of 1 missing rows shown, 2 rows in total):\n    [x, null, 1.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, 2023-01-02 03:04:05.124000]\n",
+      "stackText": "java.lang.AssertionError: \nFor query 20260901_201735_00606_yrj4x: \n SHOW STATS FOR timestamp_ntz4jdc9zv31i\nnot equal\nActual rows (up to 100 of 1 extra rows shown, 2 rows in total):\n    [x, null, 1.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, 2023-01-02 03:04:05.124999]\nExpected rows (up to 100 of 1 missing rows shown, 2 rows in total):\n    [x, null, 1.0, 0.1111111111111111, null, 2023-01-02 03:04:05.123000, 2023-01-02 03:04:05.124000]\n\n\tat io.trino.testing.QueryAssertions.assertEqualsIgnoreOrder(QueryAssertions.java:416)\n\tat io.trino.testing.QueryAssertions.assertDistributedQuery(QueryAssertions.java:378)\n\tat io.trino.testing.QueryAssertions.assertQuery(QueryAssertions.java:190)\n\tat io.trino.testing.QueryAssertions.assertQuery(QueryAssertions.java:163)\n\tat io.trino.testing.AbstractTestQueryFramework.assertQuery(AbstractTestQueryFramework.java:356)\n\tat io.trino.plugin.deltalake.TestDeltaLakeBasic.testDeltaTimestampNtz(TestDeltaLakeBasic.java:1272)\n\tat io.trino.plugin.deltalake.TestDeltaLakeBasic.testDeltaTimestampNtz(TestDeltaLakeBasic.java:1223)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeConnectorTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 17,
+      "attemptIndex": 0,
+      "displayName": "testTimestampPredicatePushdown",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeConnectorTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 379,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "\nexpected: 0L\n but was: 13L",
+      "stackText": "org.opentest4j.AssertionFailedError: \n\nexpected: 0L\n but was: 13L\n\tat io.trino.plugin.deltalake.TestDeltaLakeConnectorTest.testTimestampPredicatePushdown(TestDeltaLakeConnectorTest.java:685)\n\tat io.trino.plugin.deltalake.TestDeltaLakeConnectorTest.testTimestampPredicatePushdown(TestDeltaLakeConnectorTest.java:660)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeCreateTableStatistics.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 17,
+      "attemptIndex": 0,
+      "displayName": "testTimestampMilliRecords",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeCreateTableStatistics"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 137,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "\nexpected: Optional[LongTimestampWithTimeZone[epochMillis=1351670400123, picosOfMilli=0, timeZoneKey=0]]\n but was: Optional[LongTimestampWithTimeZone[epochMillis=1351670400123, picosOfMilli=999000000, timeZoneKey=0]]",
+      "stackText": "org.opentest4j.AssertionFailedError: \n\nexpected: Optional[LongTimestampWithTimeZone[epochMillis=1351670400123, picosOfMilli=0, timeZoneKey=0]]\n but was: Optional[LongTimestampWithTimeZone[epochMillis=1351670400123, picosOfMilli=999000000, timeZoneKey=0]]\n\tat io.trino.plugin.deltalake.TestDeltaLakeCreateTableStatistics.testTimestampMilliRecords(TestDeltaLakeCreateTableStatistics.java:372)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test report plugin_trino-delta-lake, ,/plugin/trino-delta-lake/target/surefire-reports/TEST-io.trino.plugin.deltalake.TestDeltaLakeSystemTables.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 17,
+      "attemptIndex": 0,
+      "displayName": "testPartitionsTableColumnTypes",
+      "suitePath": [
+        "io.trino.plugin.deltalake.TestDeltaLakeSystemTables"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 5741,
+      "errorType": "org.assertj.core.error.AssertJMultipleFailuresError",
+      "message": "\nMultiple Failures (1 failure)\n-- failure 1 --\n[Rows for query [SELECT CAST(data._nonpartition AS ROW(TIMESTAMP(6),TIMESTAMP(6), BIGINT)) FROM \"test_partitions_table_data_column_axur2la3sl$partitions\"]] \nExpecting actual:\n  ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.568999, 0]), ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.124999, 0])\nto contain exactly in any order:\n  [([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.568, 0]),\n    ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.124, 0])]\nelements not found:\n  ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.568, 0]), ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.124, 0])\nand elements not expected:\n  ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.568999, 0]), ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.124999, 0])\nat QueryAssertions$ResultAssert.lambda$matches$0(QueryAssertions$ResultAssert.java:730)",
+      "stackText": "org.assertj.core.error.AssertJMultipleFailuresError: \n\nMultiple Failures (1 failure)\n-- failure 1 --\n[Rows for query [SELECT CAST(data._nonpartition AS ROW(TIMESTAMP(6),TIMESTAMP(6), BIGINT)) FROM \"test_partitions_table_data_column_axur2la3sl$partitions\"]] \nExpecting actual:\n  ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.568999, 0]), ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.124999, 0])\nto contain exactly in any order:\n  [([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.568, 0]),\n    ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.124, 0])]\nelements not found:\n  ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.568, 0]), ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.124, 0])\nand elements not expected:\n  ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.568999, 0]), ([2001-05-06T12:34:56.123, 2001-05-06T12:34:56.124999, 0])\nat QueryAssertions$ResultAssert.lambda$matches$0(QueryAssertions$ResultAssert.java:730)\n\tat io.trino.sql.query.QueryAssertions$ResultAssert.matches(QueryAssertions.java:717)\n\tat io.trino.sql.query.QueryAssertions$ResultAssert.matches(QueryAssertions.java:704)\n\tat io.trino.sql.query.QueryAssertions$QueryAssert.matches(QueryAssertions.java:342)\n\tat io.trino.sql.query.QueryAssertions$QueryAssert.matches(QueryAssertions.java:336)\n\tat io.trino.plugin.deltalake.TestDeltaLakeSystemTables.testPartitionsTableColumnTypes(TestDeltaLakeSystemTables.java:505)\n\tat io.trino.plugin.deltalake.TestDeltaLakeSystemTables.testPartitionsTableColumnTypes(TestDeltaLakeSystemTables.java:457)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test report testing_trino-tests, ,/testing/trino-tests/target/surefire-reports/TEST-io.trino.tests.TestWorkerRestart.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 18,
+      "attemptIndex": 0,
+      "displayName": "testStartDuringQuery()[1]",
+      "suitePath": [
+        "io.trino.tests.TestWorkerRestart"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 4963,
+      "errorType": "java.util.concurrent.ExecutionException",
+      "message": "io.trino.testing.QueryFailedException: Error fetching http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0/results/0/0: Expected response code to be 200, but was 503:\nTrino server is still initializing\n",
+      "stackText": "java.util.concurrent.ExecutionException: \nio.trino.testing.QueryFailedException: Error fetching http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0/results/0/0: Expected response code to be 200, but was 503:\nTrino server is still initializing\n\n\tat java.base/java.util.concurrent.FutureTask.report(FutureTask.java:124)\n\tat java.base/java.util.concurrent.FutureTask.get(FutureTask.java:193)\n\tat io.trino.tests.TestWorkerRestart.testStartDuringQuery(TestWorkerRestart.java:140)\nCaused by: io.trino.testing.QueryFailedException: Error fetching http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0/results/0/0: Expected response code to be 200, but was 503:\nTrino server is still initializing\n\n\tat io.trino.testing.AbstractTestingTrinoClient.execute(AbstractTestingTrinoClient.java:138)\n\tat io.trino.testing.DistributedQueryRunner.executeInternal(DistributedQueryRunner.java:597)\n\tat io.trino.testing.DistributedQueryRunner.execute(DistributedQueryRunner.java:580)\n\tat io.trino.testing.QueryRunner.execute(QueryRunner.java:82)\n\tat io.trino.tests.TestWorkerRestart.lambda$testStartDuringQuery$1(TestWorkerRestart.java:137)\n\tSuppressed: java.lang.Exception: SQL: SELECT count(*) FROM tpch.tiny.lineitem -- 5fa66340-cfd3-4dbe-b156-38d102902670\n\t\tat io.trino.testing.DistributedQueryRunner.executeInternal(DistributedQueryRunner.java:604)\n\t\t... 3 more\nCaused by: io.trino.operator.PageTransportErrorException: Error fetching http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0/results/0/0: Expected response code to be 200, but was 503:\nTrino server is still initializing\n\n\tat io.trino.operator.HttpPageBufferClient$PageResponseHandler.handle(HttpPageBufferClient.java:738)\n\tat io.trino.operator.HttpPageBufferClient$PageResponseHandler.handle(HttpPageBufferClient.java:654)\n\tat io.airlift.http.client.jetty.JettyResponseFuture.processResponse(JettyResponseFuture.java:135)\n\tat io.airlift.http.client.jetty.JettyResponseFuture.completed(JettyResponseFuture.java:109)\n\tat io.airlift.http.client.jetty.JettyResponseListener.deliver(JettyResponseListener.java:105)\n\tat io.airlift.http.client.jetty.JettyResponseListener.completeStreamBased(JettyResponseListener.java:89)\n\tat io.airlift.http.client.jetty.JettyResponseListener.onComplete(JettyResponseListener.java:45)\n\tat org.eclipse.jetty.client.transport.ResponseListeners.notifyComplete(ResponseListeners.java:354)\n\tat org.eclipse.jetty.client.transport.ResponseListeners.lambda$addCompleteListener$0(ResponseListeners.java:339)\n\tat org.eclipse.jetty.client.transport.ResponseListeners.notifyComplete(ResponseListeners.java:354)\n\tat org.eclipse.jetty.client.transport.ResponseListeners.notifyComplete(ResponseListeners.java:346)\n\tat org.eclipse.jetty.client.transport.HttpReceiver.terminateResponse(HttpReceiver.java:454)\n\tat org.eclipse.jetty.client.transport.HttpReceiver.terminateResponse(HttpReceiver.java:436)\n\tat org.eclipse.jetty.client.transport.HttpReceiver.lambda$responseSuccess$0(HttpReceiver.java:394)\n\tat org.eclipse.jetty.util.thread.SerializedInvoker$Link.run(SerializedInvoker.java:274)\n\tat org.eclipse.jetty.util.thread.SerializedInvoker.run(SerializedInvoker.java:174)\n\tat org.eclipse.jetty.client.transport.HttpReceiver.responseHeaders(HttpReceiver.java:247)\n\tat org.eclipse.jetty.http2.client.transport.internal.HttpReceiverOverHTTP2.lambda$onResponse$0(HttpReceiverOverHTTP2.java:178)\n\tat org.eclipse.jetty.util.thread.Invocable$ReadyTask.run(Invocable.java:178)\n\tat org.eclipse.jetty.util.thread.SerializedInvoker$Link.run(SerializedInvoker.java:274)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:196)\n\tat org.eclipse.jetty.http2.HTTP2Connection.produce(HTTP2Connection.java:237)\n\tat org.eclipse.jetty.http2.HTTP2Connection.onFillable(HTTP2Connection.java:165)\n\tat org.eclipse.jetty.http2.HTTP2Connection$FillableCallback.succeeded(HTTP2Connection.java:592)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)\n\tat org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)\n\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)\n\tat org.eclipse.jetty.util.thread.MonitoredQueuedThreadPool$1.run(MonitoredQueuedThreadPool.java:73)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)\n\tat java.base/java.lang.Thread.run(Thread.java:1474)\nCaused by: io.trino.operator.PageTransportErrorException: Expected response code to be 200, but was 503:\nTrino server is still initializing\n\n\tat io.trino.operator.HttpPageBufferClient$PageResponseHandler.handle(HttpPageBufferClient.java:703)\n\t... 40 more\n",
+      "stdout": null,
+      "stderr": "&amp#27;[90m2026-09-01T14:17:24.138-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-10273646&amp#27;[0m\t&amp#27;[35mtc.alpine:3.17&amp#27;[0m\tPulling image layers:  0 pending,  1 downloaded,  0 extracted, (47 KB/3 MB)\n&amp#27;[90m2026-09-01T14:17:24.234-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mdocker-java-stream-10273646&amp#27;[0m\t&amp#27;[35mtc.alpine:3.17&amp#27;[0m\tPulling image layers:  0 pending,  1 downloaded,  1 extracted, (3 MB/3 MB)\n&amp#27;[90m2026-09-01T14:17:24.260-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-3&amp#27;[0m\t&amp#27;[35mtc.alpine:3.17&amp#27;[0m\tImage alpine:3.17 pull took PT1.518534125S\n&amp#27;[90m2026-09-01T14:17:25.121-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-3&amp#27;[0m\t&amp#27;[35mtc.localstack/localstack:4.14.0&amp#27;[0m\tContainer localstack/localstack:4.14.0 is starting: 2102fcb15c3121ee3c3d84c66bb349e006dd49e9c8b40b58d7b5ea1ecef22b61\n&amp#27;[90m2026-09-01T14:17:27.201-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mjunit-timeout-thread-47&amp#27;[0m\t&amp#27;[35mio.trino.testing.DistributedQueryRunner&amp#27;[0m\tCreated DistributedQueryRunner in 3.35s (unclosed instances = 3)\n&amp#27;[90m2026-09-01T14:17:27.796-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mhttp-client-node-manager-8831&amp#27;[0m\t&amp#27;[35mio.trino.node.RemoteNodeState&amp#27;[0m\tError fetching node state from http://127.0.0.1:36875/v1/info: Server refused connection: http://127.0.0.1:36875/v1/info\n&amp#27;[90m2026-09-01T14:17:27.812-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mContinuousTaskStatusFetcher-20260901_201727_00001_zt4gf.1.1.0-9010&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError getting task status 20260901_201727_00001_zt4gf.1.1.0: Server refused connection: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0/status: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[90m2026-09-01T14:17:27.812-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mTaskInfoFetcher-20260901_201727_00001_zt4gf.1.1.0-9016&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError getting info for task 20260901_201727_00001_zt4gf.1.1.0: Server refused connection: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0?summarize: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[90m2026-09-01T14:17:27.813-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mUpdateResponseHandler-20260901_201727_00001_zt4gf.1.1.0-9019&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError updating task 20260901_201727_00001_zt4gf.1.1.0: Server refused connection: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0?summarize: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[90m2026-09-01T14:17:27.813-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mContinuousTaskStatusFetcher-20260901_201727_00001_zt4gf.1.1.0-9016&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError getting task status 20260901_201727_00001_zt4gf.1.1.0: Server refused connection: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0/status: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[90m2026-09-01T14:17:27.815-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mUpdateResponseHandler-20260901_201727_00001_zt4gf.1.1.0-9021&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError updating task 20260901_201727_00001_zt4gf.1.1.0: Server refused connection: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0?summarize: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[90m2026-09-01T14:17:27.865-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mContinuousTaskStatusFetcher-20260901_201727_00001_zt4gf.1.1.0-9011&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError getting task status 20260901_201727_00001_zt4gf.1.1.0: Server refused connection: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0/status: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[90m2026-09-01T14:17:27.866-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mUpdateResponseHandler-20260901_201727_00001_zt4gf.1.1.0-9011&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError updating task 20260901_201727_00001_zt4gf.1.1.0: Server refused connection: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0?summarize: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[90m2026-09-01T14:17:27.966-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mContinuousTaskStatusFetcher-20260901_201727_00001_zt4gf.1.1.0-9013&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError getting task status 20260901_201727_00001_zt4gf.1.1.0: Server refused connection: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0/status: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[90m2026-09-01T14:17:27.967-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mUpdateResponseHandler-20260901_201727_00001_zt4gf.1.1.0-9013&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError updating task 20260901_201727_00001_zt4gf.1.1.0: Server refused connection: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0?summarize: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[90m2026-09-01T14:17:28.170-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mContinuousTaskStatusFetcher-20260901_201727_00001_zt4gf.1.1.0-9011&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError getting task status 20260901_201727_00001_zt4gf.1.1.0: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[31mio.trino.server.remotetask.SimpleHttpResponseHandler$ServiceUnavailableException: Server returned SERVICE_UNAVAILABLE: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0/status&amp#27;[0m\n&amp#27;[31m\tat io.trino.server.remotetask.SimpleHttpResponseHandler.onSuccess(SimpleHttpResponseHandler.java:52)&amp#27;[0m\n&amp#27;[31m\tat io.trino.server.remotetask.SimpleHttpResponseHandler.onSuccess(SimpleHttpResponseHandler.java:27)&amp#27;[0m\n&amp#27;[31m\tat com.google.common.util.concurrent.Futures$CallbackListener.run(Futures.java:1128)&amp#27;[0m\n&amp#27;[31m\tat io.airlift.concurrent.BoundedExecutor.drainQueue(BoundedExecutor.java:80)&amp#27;[0m\n&amp#27;[31m\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)&amp#27;[0m\n&amp#27;[31m\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)&amp#27;[0m\n&amp#27;[31m\tat java.base/java.lang.Thread.run(Thread.java:1474)&amp#27;[0m\n\n\n&amp#27;[90m2026-09-01T14:17:28.672-0600&amp#27;[0m\t&amp#27;[33mWARN&amp#27;[0m\t&amp#27;[36mContinuousTaskStatusFetcher-20260901_201727_00001_zt4gf.1.1.0-9011&amp#27;[0m\t&amp#27;[35mio.trino.server.remotetask.RequestErrorTracker&amp#27;[0m\tError getting task status 20260901_201727_00001_zt4gf.1.1.0: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0\n&amp#27;[31mio.trino.server.remotetask.SimpleHttpResponseHandler$ServiceUnavailableException: Server returned SERVICE_UNAVAILABLE: http://127.0.0.1:36875/v1/task/20260901_201727_00001_zt4gf.1.1.0/status&amp#27;[0m\n&amp#27;[31m\tat io.trino.server.remotetask.SimpleHttpResponseHandler.onSuccess(SimpleHttpResponseHandler.java:52)&amp#27;[0m\n&amp#27;[31m\tat io.trino.server.remotetask.SimpleHttpResponseHandler.onSuccess(SimpleHttpResponseHandler.java:27)&amp#27;[0m\n&amp#27;[31m\tat com.google.common.util.concurrent.Futures$CallbackListener.run(Futures.java:1128)&amp#27;[0m\n&amp#27;[31m\tat io.airlift.concurrent.BoundedExecutor.drainQueue(BoundedExecutor.java:80)&amp#27;[0m\n&amp#27;[31m\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)&amp#27;[0m\n&amp#27;[31m\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)&amp#27;[0m\n&amp#27;[31m\tat java.base/java.lang.Thread.run(Thread.java:1474)&amp#27;[0m\n\n\n&amp#27;[90m2026-09-01T14:17:28.756-0600&amp#27;[0m\t&amp#27;[32mINFO&amp#27;[0m\t&amp#27;[36mForkJoinPool-1-worker-3&amp#27;[0m\t&amp#27;[35mtc.localstack/localstack:4.14.0&amp#27;[0m\tContainer localstack/localstack:4.14.0 started in PT6.02423301S\n"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:30225659760:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "asimons81/hermes-vault",
+    "providerRunId": "30225659760",
+    "runAttempt": 1,
+    "url": "https://github.com/asimons81/hermes-vault/actions/runs/30225659760",
+    "workflowName": "CI",
+    "event": "push",
+    "headSha": "ecc99476c1661b951bbd14d854b66b0630d83e34",
+    "headBranch": "master",
+    "artifactIds": [
+      "8638489736",
+      "8638490020",
+      "8638554539",
+      "8638542152"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-02T09:06:14.765Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 3648,
+    "failures": 1,
+    "passed": 3645,
+    "skipped": 2,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-reports-windows-latest-py3.11/core-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_legacy_migration_with_concurrent_writer_does_not_leave_gap",
+      "suitePath": [
+        "pytest",
+        "tests.test_audit_integrity_toctou"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2360,
+      "errorType": null,
+      "message": "AssertionError: Chain should be healthy after migration under contention; got status=failed reason=missing_integrity_record. Errors in writer: []\nassert <AuditIntegrityStatus.failed: 'failed'> is <AuditIntegrityStatus.healthy: 'healthy'>\n +  where <AuditIntegrityStatus.failed: 'failed'> = AuditVerificationResult(status=<AuditIntegrityStatus.failed: 'failed'>, reason_code='missing_integrity_record', chain_...ified backup if needed.', verified_at=datetime.datetime(2026, 7, 26, 23, 39, 45, 772577, tzinfo=datetime.timezone.utc)).status\n +  and   <AuditIntegrityStatus.healthy: 'healthy'> = AuditIntegrityStatus.healthy",
+      "stackText": "tests\\test_audit_integrity_toctou.py:123: in test_legacy_migration_with_concurrent_writer_does_not_leave_gap\n    assert result.status is AuditIntegrityStatus.healthy, (\nE   AssertionError: Chain should be healthy after migration under contention; got status=failed reason=missing_integrity_record. Errors in writer: []\nE   assert <AuditIntegrityStatus.failed: 'failed'> is <AuditIntegrityStatus.healthy: 'healthy'>\nE    +  where <AuditIntegrityStatus.failed: 'failed'> = AuditVerificationResult(status=<AuditIntegrityStatus.failed: 'failed'>, reason_code='missing_integrity_record', chain_...ified backup if needed.', verified_at=datetime.datetime(2026, 7, 26, 23, 39, 45, 772577, tzinfo=datetime.timezone.utc)).status\nE    +  and   <AuditIntegrityStatus.healthy: 'healthy'> = AuditIntegrityStatus.healthy",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -176,3 +176,42 @@ second pass is what confirms convergence.
 **Safe fallback:** if the cap is reached without converging, the last iterate is
 returned — normalization stays total and never throws. A property test over
 generated input asserts that branch is unreachable for anything it can produce.
+
+## Framework detection fails on most failures
+
+`detectFramework` attributes a producing framework from payload evidence only —
+a stack-frame marker, a path shape, an error type. On the committed corpus it
+cannot attribute 1137 of 2076 failures (55%), which arrive as JUnit XML from
+producers that leave no distinguishing tell.
+
+**Why it is not guessed:** JUnit XML is emitted by pytest, jest, vitest,
+surefire, karma and a dozen others. Attributing on filename or adapter name
+would inflate the Gate 0 framework count with a label that identifies nothing,
+which it briefly did.
+
+**Safe fallback:** they are counted as `unidentified` and reported as their own
+row rather than folded into a framework, so the size of the gap is visible in
+every table.
+
+**Roadmap:** more producer tells (surefire's `<properties>`, jest's exact frame
+shape), and a `producerHint` field the harvester can populate from the artifact
+name when the artifact is unambiguous.
+
+## The corpus is heavily concentrated
+
+At 104 committed runs the top three repositories supply most of the failures,
+the median run has 2 failures, and several runs carry over 200 — a whole suite
+collapsing, not hundreds of distinct root causes.
+
+This matters more than it looks because the clustering metric is pair-based: a
+run of n failures contributes n(n-1)/2 pairs, so one 600-failure run outweighs a
+6-failure run by four orders of magnitude in any pooled score.
+
+**Safe fallback:** `corpus status` reports the concentration figures and warns
+when the top three repositories exceed half the corpus or any run exceeds 200
+failures. `corpus label --max-failures N` skips the collapses so a labeller can
+work the tractable runs. Bootstrap intervals resample runs, which limits how far
+one run can move an interval — but not how far it moves the point estimate.
+
+**Roadmap:** per-framework and per-repository F1 reporting, and a documented
+sampling policy for which runs enter the labelled subset.

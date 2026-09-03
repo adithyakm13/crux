@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apple/pkl-go:28979455316:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apple/pkl-go",
+    "providerRunId": "28979455316",
+    "runAttempt": 1,
+    "url": "https://github.com/apple/pkl-go/actions/runs/28979455316",
+    "workflowName": "Pull Request",
+    "event": "pull_request",
+    "headSha": "e569fca383c855729957ef131426ed258542a77f",
+    "headBranch": "http-headers",
+    "artifactIds": [
+      "8183360323",
+      "8183362557"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T09:04:42.702Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 183,
+    "failures": 3,
+    "passed": 167,
+    "skipped": 13,
+    "filesParsed": 5,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-xml-test-pkl-0-32-0/go-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestDecoder_Decode",
+      "suitePath": [
+        "github.com/apple/pkl-go/pkl"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "No test result found",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-xml-test-pkl-0-32-0/go-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestLoadProjectWithHeaders",
+      "suitePath": [
+        "github.com/apple/pkl-go/pkl"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 20,
+      "errorType": null,
+      "message": "Failed",
+      "stackText": "2026/07/08 22:15:02 warn: Cannot find field on Go struct `pkl.Project` matching Pkl property `resolvedEvaluatorSettings`. Ensure the Go structs are up to date with Pkl classes either through codegen or manually adding `pkl` tags.",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-xml-test-pkl-0-32-0/go-test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestLoadProjectWithHeaders/evaluatorSettings",
+      "suitePath": [
+        "github.com/apple/pkl-go/pkl"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "Failed",
+      "stackText": "    project_test.go:447: \n        \tError Trace:\t/home/runner/work/pkl-go/pkl-go/pkl/project_test.go:447\n        \tError:      \tNot equal: \n        \t            \texpected: pkl.ProjectEvaluatorSettings{ExternalProperties:map[string]string(nil), Env:map[string]string(nil), AllowedModules:(*[]string)(nil), AllowedResources:(*[]string)(nil), NoCache:(*bool)(nil), ModulePath:[]string(nil), Timeout:pkl.Duration{Value:0, Unit:0}, ModuleCacheDir:\"\", RootDir:\"\", Http:(*pkl.ProjectEvaluatorSettingsHttp)(0xc0001b4888), Color:\"\", ExternalModuleReaders:map[string]pkl.ProjectEvaluatorSettingExternalReader(nil), ExternalResourceReaders:map[string]pkl.ProjectEvaluatorSettingExternalReader(nil), TraceMode:(*pkl.TraceMode)(nil)}\n        \t            \tactual  : pkl.ProjectEvaluatorSettings{ExternalProperties:map[string]string(nil), Env:map[string]string(nil), AllowedModules:(*[]string)(nil), AllowedResources:(*[]string)(nil), NoCache:(*bool)(nil), ModulePath:[]string(nil), Timeout:pkl.Duration{Value:0, Unit:0}, ModuleCacheDir:\"\", RootDir:\"\", Http:(*pkl.ProjectEvaluatorSettingsHttp)(0xc0001b47b0), Color:\"\", ExternalModuleReaders:map[string]pkl.ProjectEvaluatorSettingExternalReader(nil), ExternalResourceReaders:map[string]pkl.ProjectEvaluatorSettingExternalReader(nil), TraceMode:(*pkl.TraceMode)(nil)}\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -18,3 +18,3 @@\n        \t            \t    (string) (len=2) \"**\": (map[string]interface {}) (len=1) {\n        \t            \t-    (string) (len=12) \"x-two-values\": ([]string) (len=2) {\n        \t            \t+    (string) (len=12) \"x-two-values\": ([]interface {}) (len=2) {\n        \t            \t      (string) (len=3) \"foo\",\n        \tTest:       \tTestLoadProjectWithHeaders/evaluatorSettings",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

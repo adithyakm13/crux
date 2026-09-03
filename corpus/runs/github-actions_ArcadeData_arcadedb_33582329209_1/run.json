@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33582329209:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ArcadeData/arcadedb",
+    "providerRunId": "33582329209",
+    "runAttempt": 1,
+    "url": "https://github.com/ArcadeData/arcadedb/actions/runs/33582329209",
+    "workflowName": "HA Resilence Tests",
+    "event": "schedule",
+    "headSha": "b0c847bc3fa0338db930f23883bdab8141609520",
+    "headBranch": "main",
+    "artifactIds": [
+      "9829669065"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T08:30:37.274Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 34,
+    "failures": 2,
+    "passed": 32,
+    "skipped": 0,
+    "filesParsed": 15,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "e2e-ha-failsafe-reports/TEST-com.arcadedb.containers.ha.LoadThreeInstancesScenarioIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "threeNodeReplication",
+      "suitePath": [
+        "com.arcadedb.containers.ha.LoadThreeInstancesScenarioIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 20190,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "\nExpecting value to be true but was false",
+      "stackText": "org.opentest4j.AssertionFailedError: \n\nExpecting value to be true but was false\n\tat com.arcadedb.test.support.DatabaseWrapper.checkSchema(DatabaseWrapper.java:254)\n\tat com.arcadedb.containers.ha.LoadThreeInstancesScenarioIT.threeNodeReplication(LoadThreeInstancesScenarioIT.java:71)\n",
+      "stdout": "02:39:26.512 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Deleting containers directories\n02:39:26.513 [main] INFO  i.m.c.i.push.PushMeterRegistry - Publishing metrics for LoggingMeterRegistry every 10s\n02:39:26.514 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Creating containers directories\n02:39:26.514 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Creating containers directories\n02:39:26.515 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Creating containers directories\n02:39:26.515 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Starting all containers\n02:39:26.515 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Starting all containers\n02:39:26.515 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Creating container for image: arcadedata/arcadedb:latest\n02:39:26.586 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest is starting: 954126d75f9f6f979061274b56226b37df949b7adfa14c7bb018b6b5940bc27d\n02:39:26.762 [testcontainers-lifecycle-9] INFO  o.t.c.wait.strategy.HttpWaitStrategy - /thirsty_swartz: Waiting for 60 seconds for URL: http://localhost:33246/api/v1/health (where port 33246 maps to container port 2480)\n02:39:29.795 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest started in PT3.279781175S\n02:39:29.795 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Creating container for image: arcadedata/arcadedb:latest\n02:39:29.838 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest is starting: 0d5a9046c301d0d605d68fd239be5ee270a0044eab8549a9d00504b6eb651393\n02:39:30.022 [testcontainers-lifecycle-9] INFO  o.t.c.wait.strategy.HttpWaitStrategy - /brave_morse: Waiting for 60 seconds for URL: http://localhost:33250/api/v1/health (where port 33250 maps to container port 2480)\n02:39:32.827 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest started in PT3.031254763S\n02:39:32.827 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Creating container for image: arcadedata/arcadedb:latest\n02:39:32.870 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest is starting: 85cbec81df127a20db9208326dd1cb56bcb0feca54f769165e58d6068b776f9d\n02:39:33.051 [testcontainers-lifecycle-9] INFO  o.t.c.wait.strategy.HttpWaitStrategy - /serene_burnell: Waiting for 60 seconds for URL: http://localhost:33254/api/v1/health (where port 33254 maps to container port 2480)\n02:39:35.868 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest started in PT3.041392548S\n02:39:42.973 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Raft leader elected on node 2 after 7105ms\n02:39:43.055 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Creating database and schema\n02:39:43.064 [main] INFO  c.a.test.support.DatabaseWrapper - Creating  database playwithpictures\n02:39:44.930 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Checking schema replicated to all nodes\n02:39:45.100 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Stopping all containers\n02:39:45.105 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Stopping container /thirsty_swartz\n02:39:45.640 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Stopping container /brave_morse\n02:39:46.127 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Stopping container /serene_burnell\n02:39:46.609 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Closing Docker network\n02:39:46.698 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Deleting containers directories\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "e2e-ha-failsafe-reports/TEST-com.arcadedb.containers.ha.LoadThreeInstancesScenarioIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "threeNodeReplicationMulti",
+      "suitePath": [
+        "com.arcadedb.containers.ha.LoadThreeInstancesScenarioIT"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 19194,
+      "errorType": "com.arcadedb.exception.SchemaException",
+      "message": "Type with name 'FriendOf' was not found",
+      "stackText": "com.arcadedb.exception.SchemaException: Type with name 'FriendOf' was not found\n\tat com.arcadedb.remote.RemoteHttpComponent.manageException(RemoteHttpComponent.java:739)\n\tat com.arcadedb.remote.RemoteHttpComponent.httpCommand(RemoteHttpComponent.java:380)\n\tat com.arcadedb.remote.RemoteDatabase.databaseCommand(RemoteDatabase.java:686)\n\tat com.arcadedb.remote.RemoteDatabase.command(RemoteDatabase.java:578)\n\tat com.arcadedb.remote.RemoteDatabase.command(RemoteDatabase.java:563)\n\tat com.arcadedb.remote.RemoteDatabase.command(RemoteDatabase.java:584)\n\tat com.arcadedb.remote.RemoteSchema.reload(RemoteSchema.java:798)\n\tat com.arcadedb.remote.RemoteSchema.checkSchemaIsLoaded(RemoteSchema.java:858)\n\tat com.arcadedb.remote.RemoteSchema.existsType(RemoteSchema.java:86)\n\tat com.arcadedb.test.support.DatabaseWrapper.checkSchema(DatabaseWrapper.java:251)\n\tat com.arcadedb.containers.ha.LoadThreeInstancesScenarioIT.threeNodeReplicationMulti(LoadThreeInstancesScenarioIT.java:148)\n",
+      "stdout": "02:39:46.705 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Deleting containers directories\n02:39:46.706 [main] INFO  i.m.c.i.push.PushMeterRegistry - Publishing metrics for LoggingMeterRegistry every 10s\n02:39:46.706 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Creating containers directories\n02:39:46.707 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Creating containers directories\n02:39:46.707 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Creating containers directories\n02:39:46.707 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Starting all containers\n02:39:46.707 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Starting all containers\n02:39:46.707 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Creating container for image: arcadedata/arcadedb:latest\n02:39:46.778 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest is starting: 4ac28c6ce7ca3b40a492404d4207b6cced98d4bd982ee41fb26de9b4ea41f722\n02:39:46.946 [testcontainers-lifecycle-9] INFO  o.t.c.wait.strategy.HttpWaitStrategy - /lucid_lewin: Waiting for 60 seconds for URL: http://localhost:33258/api/v1/health (where port 33258 maps to container port 2480)\n02:39:49.976 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest started in PT3.268998706S\n02:39:49.977 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Creating container for image: arcadedata/arcadedb:latest\n02:39:50.020 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest is starting: 193e0b6142d14a9e8433de67cdaf6da16f85e7c89dd507a009cd5c6b35e59dc3\n02:39:50.197 [testcontainers-lifecycle-9] INFO  o.t.c.wait.strategy.HttpWaitStrategy - /jolly_shannon: Waiting for 60 seconds for URL: http://localhost:33262/api/v1/health (where port 33262 maps to container port 2480)\n02:39:53.009 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest started in PT3.03256848S\n02:39:53.010 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Creating container for image: arcadedata/arcadedb:latest\n02:39:53.052 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest is starting: ccceb2a883db756c80b197b0fb846ba50a3a51009641e35465b53daea048f5ec\n02:39:53.229 [testcontainers-lifecycle-9] INFO  o.t.c.wait.strategy.HttpWaitStrategy - /confident_almeida: Waiting for 60 seconds for URL: http://localhost:33266/api/v1/health (where port 33266 maps to container port 2480)\n02:39:56.053 [testcontainers-lifecycle-9] INFO  tc.arcadedata/arcadedb:latest - Container arcadedata/arcadedb:latest started in PT3.043172433S\n02:40:02.147 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Raft leader elected on node 1 after 6094ms\n02:40:02.248 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Creating database and schema\n02:40:02.255 [main] INFO  c.a.test.support.DatabaseWrapper - Creating  database playwithpictures\n02:40:04.099 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Checking schema replicated to all nodes\n02:40:04.282 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Stopping all containers\n02:40:04.284 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Stopping container /lucid_lewin\n02:40:04.828 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Stopping container /jolly_shannon\n02:40:05.326 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Stopping container /confident_almeida\n02:40:05.810 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Closing Docker network\n02:40:05.898 [main] INFO  c.a.c.h.LoadThreeInstancesScenarioIT - Deleting containers directories\n",
+      "stderr": null
+    }
+  ]
+}

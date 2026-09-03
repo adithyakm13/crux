@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ueberdosis/tiptap:33136766609:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ueberdosis/tiptap",
+    "providerRunId": "33136766609",
+    "runAttempt": 1,
+    "url": "https://github.com/ueberdosis/tiptap/actions/runs/33136766609",
+    "workflowName": "Verify",
+    "event": "push",
+    "headSha": "4ec655c1f336e8c395540feacc9b083eaca6df78",
+    "headBranch": "main",
+    "artifactIds": [
+      "9672396475",
+      "9672396972",
+      "9672397011",
+      "9672409812"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-03T07:12:16.906Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 690,
+    "failures": 3,
+    "passed": 687,
+    "skipped": 0,
+    "filesParsed": 4,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "e2e-blob-report-1/report-chromium-1.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "adds a counter with the next index for a new paragraph",
+      "suitePath": [
+        "/src/Examples/DecorationComponents",
+        "Vue"
+      ],
+      "filePath": "src/Examples/DecorationComponents/index.spec.ts",
+      "status": "failed",
+      "durationMs": 5554,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.decoration-counter')\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.decoration-counter')\u001b[22m\n\u001b[2m    14 × locator resolved to 2 elements\u001b[22m\n\u001b[2m       - unexpected value \"2\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.decoration-counter')\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m2\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.decoration-counter')\u001b[22m\n\u001b[2m    14 × locator resolved to 2 elements\u001b[22m\n\u001b[2m       - unexpected value \"2\"\u001b[22m\n\n    at /home/runner/work/tiptap/tiptap/demos/src/Examples/DecorationComponents/index.spec.ts:52:32",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "e2e-blob-report-1/report-chromium-1.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "should not relink unset links after entering second link",
+      "suitePath": [
+        "/src/Examples/AutolinkValidation",
+        "React"
+      ],
+      "filePath": "src/Examples/AutolinkValidation/index.spec.ts",
+      "status": "timed_out",
+      "durationMs": 30015,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=unsetLink]')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled data-testid=\"unsetLink\">Unset link</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    56 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /home/runner/work/tiptap/tiptap/demos/src/Examples/AutolinkValidation/index.spec.ts:66:57",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "e2e-blob-report-1/report-chromium-1.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "should apply the paragraph style when the keyboard shortcut is pressed",
+      "suitePath": [
+        "/src/Examples/Default",
+        "Vue"
+      ],
+      "filePath": "src/Examples/Default/index.spec.ts",
+      "status": "failed",
+      "durationMs": 6071,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.tiptap p').first()\nExpected substring: \u001b[32m\"Example Text\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.tiptap p').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.tiptap p').first()\nExpected substring: \u001b[32m\"Example Text\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.tiptap p').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n    at /home/runner/work/tiptap/tiptap/demos/src/Examples/Default/index.spec.ts:52:57",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

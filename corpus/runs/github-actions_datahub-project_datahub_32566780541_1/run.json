@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:datahub-project/datahub:32566780541:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "datahub-project/datahub",
+    "providerRunId": "32566780541",
+    "runAttempt": 1,
+    "url": "https://github.com/datahub-project/datahub/actions/runs/32566780541",
+    "workflowName": "Metadata Ingestion",
+    "event": "pull_request",
+    "headSha": "619126493e95ccfb7b84dd01b54b3a7f7ed37eeb",
+    "headBranch": "fix/schema-resolver-normalized-urn-casing",
+    "artifactIds": [
+      "9474327386",
+      "9474557436",
+      "9474468228",
+      "9474459234",
+      "9474453806",
+      "9474461578",
+      "9474418291"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T13:47:14.475Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 18481,
+    "failures": 1,
+    "passed": 18422,
+    "skipped": 58,
+    "filesParsed": 7,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "metadata-ingestion-test-results-5/junit.integrationbatch1.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "test_cll_extraction",
+      "suitePath": [
+        "metadata-ingestion-pytest",
+        "tests.integration.powerbi.test_powerbi"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 19749,
+      "errorType": null,
+      "message": "Failed: Metadata files differ (use `pytest --update-golden-files` to update):\nUrn changed, urn:li:dataset:(urn:li:dataPlatform:powerbi,hr_pbi_test.ms_sql_native_table,DEV):\n<upstreamLineage> changed:\n\tValue of root[0] changed from \n\t\t{\"urn\": \"urn:li:dataset:(urn:li:dataPlatform:powerbi,hr_pbi_test.ms_sql_native_table,DEV)\", \"change_type\": \"UPSERT\", \"aspect_name\": \"upstreamLineage\", \"aspect\": \"<aspect>\", \"headers\": null} to \n\t\t{\"urn\": \"urn:li:dataset:(urn:li:dataPlatform:powerbi,hr_pbi_test.ms_sql_native_table,DEV)\", \"change_type\": \"UPSERT\", \"aspect_name\": \"upstreamLineage\", \"aspect\": \"<aspect>\", \"headers\": null}.",
+      "stackText": "Metadata files differ (use `pytest --update-golden-files` to update):\nUrn changed, urn:li:dataset:(urn:li:dataPlatform:powerbi,hr_pbi_test.ms_sql_native_table,DEV):\n<upstreamLineage> changed:\n\tValue of root[0] changed from \n\t\t{\"urn\": \"urn:li:dataset:(urn:li:dataPlatform:powerbi,hr_pbi_test.ms_sql_native_table,DEV)\", \"change_type\": \"UPSERT\", \"aspect_name\": \"upstreamLineage\", \"aspect\": \"<aspect>\", \"headers\": null} to \n\t\t{\"urn\": \"urn:li:dataset:(urn:li:dataPlatform:powerbi,hr_pbi_test.ms_sql_native_table,DEV)\", \"change_type\": \"UPSERT\", \"aspect_name\": \"upstreamLineage\", \"aspect\": \"<aspect>\", \"headers\": null}.",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

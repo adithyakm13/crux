@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:datahub-project/datahub:32606079478:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "datahub-project/datahub",
+    "providerRunId": "32606079478",
+    "runAttempt": 1,
+    "url": "https://github.com/datahub-project/datahub/actions/runs/32606079478",
+    "workflowName": "Metadata Ingestion",
+    "event": "pull_request",
+    "headSha": "5625c1ed43a93fb97220fe2c64516f4f5beaafa5",
+    "headBranch": "fix/schema-resolver-normalized-urn-casing",
+    "artifactIds": [
+      "9484184757",
+      "9484193839",
+      "9484427053",
+      "9484330197",
+      "9484313320",
+      "9484321470",
+      "9484315170",
+      "9484282248",
+      "9484273385"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T11:13:17.116Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 35903,
+    "failures": 4,
+    "passed": 35793,
+    "skipped": 106,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "metadata-ingestion-test-results-4/junit.integrationbatch0.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_timescaledb_ingest_with_db",
+      "suitePath": [
+        "metadata-ingestion-pytest",
+        "tests.integration.timescaledb.test_timescaledb"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 17004,
+      "errorType": null,
+      "message": "Failed: Metadata files differ (use `pytest --update-golden-files` to update):\n{'values_changed': {\"root[23]['proposedSnapshot']['com.linkedin.pegasus2avro.metadata.snapshot.DatasetSnapshot']['aspects'][1]['com.linkedin.pegasus2avro.dataset.DatasetProperties']['customProperties']['num_chunks']\": {'new_value': '31',\n                                                                                                                                                                                                                           'old_value': '32'}}}",
+      "stackText": "Metadata files differ (use `pytest --update-golden-files` to update):\n{'values_changed': {\"root[23]['proposedSnapshot']['com.linkedin.pegasus2avro.metadata.snapshot.DatasetSnapshot']['aspects'][1]['com.linkedin.pegasus2avro.dataset.DatasetProperties']['customProperties']['num_chunks']\": {'new_value': '31',\n                                                                                                                                                                                                                           'old_value': '32'}}}",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "metadata-ingestion-test-results-4/junit.integrationbatch0.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_timescaledb_ingest_with_jobs",
+      "suitePath": [
+        "metadata-ingestion-pytest",
+        "tests.integration.timescaledb.test_timescaledb"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 963,
+      "errorType": null,
+      "message": "Failed: Metadata files differ (use `pytest --update-golden-files` to update):\n{'values_changed': {\"root[12]['proposedSnapshot']['com.linkedin.pegasus2avro.metadata.snapshot.DatasetSnapshot']['aspects'][1]['com.linkedin.pegasus2avro.dataset.DatasetProperties']['customProperties']['num_chunks']\": {'new_value': '31',\n                                                                                                                                                                                                                           'old_value': '32'}}}",
+      "stackText": "Metadata files differ (use `pytest --update-golden-files` to update):\n{'values_changed': {\"root[12]['proposedSnapshot']['com.linkedin.pegasus2avro.metadata.snapshot.DatasetSnapshot']['aspects'][1]['com.linkedin.pegasus2avro.dataset.DatasetProperties']['customProperties']['num_chunks']\": {'new_value': '31',\n                                                                                                                                                                                                                           'old_value': '32'}}}",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "metadata-ingestion-test-results-4/junit.integrationbatch0.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_timescaledb_lineage",
+      "suitePath": [
+        "metadata-ingestion-pytest",
+        "tests.integration.timescaledb.test_timescaledb"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 816,
+      "errorType": null,
+      "message": "Failed: Metadata files differ (use `pytest --update-golden-files` to update):\n{'values_changed': {\"root[23]['proposedSnapshot']['com.linkedin.pegasus2avro.metadata.snapshot.DatasetSnapshot']['aspects'][1]['com.linkedin.pegasus2avro.dataset.DatasetProperties']['customProperties']['num_chunks']\": {'new_value': '31',\n                                                                                                                                                                                                                           'old_value': '32'}}}",
+      "stackText": "Metadata files differ (use `pytest --update-golden-files` to update):\n{'values_changed': {\"root[23]['proposedSnapshot']['com.linkedin.pegasus2avro.metadata.snapshot.DatasetSnapshot']['aspects'][1]['com.linkedin.pegasus2avro.dataset.DatasetProperties']['customProperties']['num_chunks']\": {'new_value': '31',\n                                                                                                                                                                                                                           'old_value': '32'}}}",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "metadata-ingestion-test-results-4/junit.integrationbatch0.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "test_timescaledb_all_databases",
+      "suitePath": [
+        "metadata-ingestion-pytest",
+        "tests.integration.timescaledb.test_timescaledb"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2783,
+      "errorType": null,
+      "message": "Failed: Metadata files differ (use `pytest --update-golden-files` to update):\n{'values_changed': {\"root[12]['proposedSnapshot']['com.linkedin.pegasus2avro.metadata.snapshot.DatasetSnapshot']['aspects'][1]['com.linkedin.pegasus2avro.dataset.DatasetProperties']['customProperties']['num_chunks']\": {'new_value': '31',\n                                                                                                                                                                                                                           'old_value': '32'}}}",
+      "stackText": "Metadata files differ (use `pytest --update-golden-files` to update):\n{'values_changed': {\"root[12]['proposedSnapshot']['com.linkedin.pegasus2avro.metadata.snapshot.DatasetSnapshot']['aspects'][1]['com.linkedin.pegasus2avro.dataset.DatasetProperties']['customProperties']['num_chunks']\": {'new_value': '31',\n                                                                                                                                                                                                                           'old_value': '32'}}}",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

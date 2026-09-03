@@ -40,6 +40,18 @@ export interface GateZeroStatus {
   fidelityBreakdown: Record<string, number>;
   labelers: string[];
   labeledFailures: number;
+  /**
+   * How concentrated the corpus is. A passing run count means nothing if two
+   * repositories supply most of the failures, and the clustering metric is
+   * pair-based, so a single large run outweighs a small one quadratically.
+   */
+  concentration: {
+    topRunShare: number;
+    topRepoShare: number;
+    top3RepoShare: number;
+    runsOver200Failures: number;
+    medianFailuresPerRun: number;
+  };
   labeledRuns: number;
   perCategoryLabeled: Record<string, number>;
   requirements: Requirement[];
@@ -137,11 +149,44 @@ export async function gateZeroStatus(
     fidelityBreakdown: fidelity,
     labelers,
     labeledFailures: labeledFailureKeys.size,
+    concentration: concentrationOf(runs),
     labeledRuns,
     perCategoryLabeled: perCategory,
     requirements,
     passed: requirements.every((r) => r.met),
     blockedOnHumans: blockedOnHumans(labelers.length, labeledFailureKeys.size),
+  };
+}
+
+/**
+ * Concentration diagnostics. Reported, never gated — the spec states run and
+ * repository counts, not a balance threshold, and inventing one here would be
+ * a number nobody can justify. But an unreported imbalance is how "116 runs,
+ * gate passed" comes to mean something it does not.
+ */
+function concentrationOf(runs: CorpusRun[]): GateZeroStatus['concentration'] {
+  const total = runs.reduce((n, r) => n + r.failures.length, 0);
+  if (total === 0) {
+    return {
+      topRunShare: 0,
+      topRepoShare: 0,
+      top3RepoShare: 0,
+      runsOver200Failures: 0,
+      medianFailuresPerRun: 0,
+    };
+  }
+  const sizes = runs.map((r) => r.failures.length).sort((a, b) => a - b);
+  const byRepo = new Map<string, number>();
+  for (const r of runs) {
+    byRepo.set(r.source.repo, (byRepo.get(r.source.repo) ?? 0) + r.failures.length);
+  }
+  const repoTotals = [...byRepo.values()].sort((a, b) => b - a);
+  return {
+    topRunShare: Math.max(...sizes) / total,
+    topRepoShare: (repoTotals[0] ?? 0) / total,
+    top3RepoShare: repoTotals.slice(0, 3).reduce((a, b) => a + b, 0) / total,
+    runsOver200Failures: runs.filter((r) => r.failures.length > 200).length,
+    medianFailuresPerRun: sizes[Math.floor(sizes.length / 2)] ?? 0,
   };
 }
 
@@ -293,6 +338,22 @@ export function formatGateZeroStatus(s: GateZeroStatus): string {
         .join(' ') || 'n/a'
     }`,
   );
+  const c = s.concentration;
+  const pc = (x: number) => `${(x * 100).toFixed(0)}%`;
+  lines.push(
+    `concentration: largest run ${pc(c.topRunShare)} of failures, ` +
+      `largest repo ${pc(c.topRepoShare)}, top 3 repos ${pc(c.top3RepoShare)}; ` +
+      `median ${c.medianFailuresPerRun} failures/run` +
+      (c.runsOver200Failures > 0 ? `; ${c.runsOver200Failures} run(s) over 200` : ''),
+  );
+  if (c.top3RepoShare > 0.5 || c.runsOver200Failures > 0) {
+    lines.push(
+      `  note: the clustering metric is pair-based, so a run of n failures ` +
+        `contributes n(n-1)/2 pairs — one large run can outweigh a small one by ` +
+        `orders of magnitude. Report per-run F1, and consider --max-failures ` +
+        `when labeling.`,
+    );
+  }
   lines.push(
     `labels: ${s.labeledFailures} failure(s) across ${s.labeledRuns} run(s) by ` +
       `${s.labelers.length} labeler(s)${s.labelers.length ? ` (${s.labelers.join(', ')})` : ''}`,

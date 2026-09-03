@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:siemens/ix:33631507639:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "siemens/ix",
+    "providerRunId": "33631507639",
+    "runAttempt": 1,
+    "url": "https://github.com/siemens/ix/actions/runs/33631507639",
+    "workflowName": "Pull Request",
+    "event": "pull_request",
+    "headSha": "d1048d55dcdcf089938c45e959e98c092647ad4f",
+    "headBranch": "feature/1795_generic-list",
+    "artifactIds": [
+      "9847303502",
+      "9847250195",
+      "9847296923",
+      "9847284818"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-02T17:00:07.444Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 744,
+    "failures": 4,
+    "passed": 738,
+    "skipped": 2,
+    "filesParsed": 4,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "visual-testing-blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "basic",
+      "suitePath": [
+        "range-field"
+      ],
+      "filePath": "tests/range-field/range-field.e2e.ts",
+      "status": "failed",
+      "durationMs": 23257,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nTimeout: 15000ms\n  Timeout 15000ms exceeded.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 15000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - Timeout 15000ms exceeded.\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nTimeout: 15000ms\n  Timeout 15000ms exceeded.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 15000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - Timeout 15000ms exceeded.\u001b[22m\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/range-field/range-field.e2e.ts:16:24",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "visual-testing-blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "tooltip position top",
+      "suitePath": [
+        "tooltip"
+      ],
+      "filePath": "tests/tooltip/tooltip.e2e.ts",
+      "status": "failed",
+      "durationMs": 2229,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  5076 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  5076 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/tooltip/tooltip.e2e.ts:133:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "visual-testing-blob-report-4/report-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "tooltip position right",
+      "suitePath": [
+        "tooltip"
+      ],
+      "filePath": "tests/tooltip/tooltip.e2e.ts",
+      "status": "failed",
+      "durationMs": 3435,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  1255 pixels (ratio 0.01 of all image pixels) are different.\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mBuffer\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  1255 pixels (ratio 0.01 of all image pixels) are different.\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/tooltip/tooltip.e2e.ts:152:55",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "visual-testing-blob-report-4/report-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "basic",
+      "suitePath": [
+        "range-field"
+      ],
+      "filePath": "tests/range-field/range-field.e2e.ts",
+      "status": "failed",
+      "durationMs": 24872,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nTimeout: 15000ms\n  Timeout 15000ms exceeded.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 15000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - Timeout 15000ms exceeded.\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nTimeout: 15000ms\n  Timeout 15000ms exceeded.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 15000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - Timeout 15000ms exceeded.\u001b[22m\n\n    at /home/runner/work/ix/ix/testing/visual-testing/tests/range-field/range-field.e2e.ts:16:24",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/superset:33034080494:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/superset",
+    "providerRunId": "33034080494",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/superset/actions/runs/33034080494",
+    "workflowName": "Python-Unit",
+    "event": "pull_request",
+    "headSha": "6f2097fc3c1606c31627b4890537aaa078fc16db",
+    "headBranch": "feat/mcp-heatmap-plugin",
+    "artifactIds": [
+      "9631802505"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T09:03:18.832Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 13414,
+    "failures": 1,
+    "passed": 13406,
+    "skipped": 7,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "junit-results-current/junit-unit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_all_chart_types_have_examples",
+      "suitePath": [
+        "pytest",
+        "tests.unit_tests.mcp_service.chart.tool.test_get_chart_type_schema.TestGetChartTypeSchema"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3,
+      "errorType": null,
+      "message": "AssertionError: assert 'heatmap_v2' in {'big_number': [{'chart_type': 'big_number', 'metric': {'aggregate': 'SUM', 'name': 'revenue'}}, {'aggregation': 'sum'...type': 'histogram', 'column': {'name': 'fare_amount'}, 'groupby': [{'name': 'payment_type'}], 'normalize': True}], ...}",
+      "stackText": "self = <chart.tool.test_get_chart_type_schema.TestGetChartTypeSchema object at 0x7b5ff5753c50>\n\n    def test_all_chart_types_have_examples(self) -> None:\n        for chart_type in VALID_CHART_TYPES:\n>           assert chart_type in _CHART_EXAMPLES\nE           AssertionError: assert 'heatmap_v2' in {'big_number': [{'chart_type': 'big_number', 'metric': {'aggregate': 'SUM', 'name': 'revenue'}}, {'aggregation': 'sum'...type': 'histogram', 'column': {'name': 'fare_amount'}, 'groupby': [{'name': 'payment_type'}], 'normalize': True}], ...}\n\ntests/unit_tests/mcp_service/chart/tool/test_get_chart_type_schema.py:113: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

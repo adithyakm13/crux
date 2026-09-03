@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:trinodb/trino:33595126187:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "trinodb/trino",
+    "providerRunId": "33595126187",
+    "runAttempt": 1,
+    "url": "https://github.com/trinodb/trino/actions/runs/33595126187",
+    "workflowName": "ci",
+    "event": "pull_request",
+    "headSha": "896ec5f6f47a175487b97bdccc6c0228801caf0a",
+    "headBranch": "findinpath/trino-rest-catalog-corrupted-tables",
+    "artifactIds": [
+      "9833579978",
+      "9833300950",
+      "9833401891",
+      "9833215969",
+      "9833215782",
+      "9833209007",
+      "9833471154",
+      "9833276929",
+      "9833271612",
+      "9833354963",
+      "9833235231",
+      "9833422925",
+      "9833277334",
+      "9833755272",
+      "9833398916",
+      "9833487561",
+      "9833220173",
+      "9833450829",
+      "9833255933",
+      "9833275517",
+      "9833378008",
+      "9833335439",
+      "9833475033",
+      "9833346140",
+      "9833249531",
+      "9833393503",
+      "9833670880",
+      "9833358267",
+      "9833456002",
+      "9833393297",
+      "9833370313",
+      "9833957328",
+      "9833473443",
+      "9833319437",
+      "9833314767",
+      "9833307256",
+      "9833416096",
+      "9833643406",
+      "9833291494",
+      "9833425676",
+      "9833892827",
+      "9833688836",
+      "9833796108",
+      "9833661617",
+      "9833709982"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-02T17:40:51.660Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 113890,
+    "failures": 1,
+    "passed": 109348,
+    "skipped": 4541,
+    "filesParsed": 2749,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 4
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test report plugin_trino-mysql, ,/plugin/trino-mysql/target/surefire-reports/TEST-io.trino.plugin.mysql.TestMySqlLegacyConnectorTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 28,
+      "attemptIndex": 0,
+      "displayName": "testAddColumnConcurrently()[2]",
+      "suitePath": [
+        "io.trino.plugin.mysql.TestMySqlLegacyConnectorTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 33787,
+      "errorType": "java.lang.AssertionError",
+      "message": "Timed out after 30 seconds waiting for concurrent ADD COLUMN operations. Unfinished operations:\n  - ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col0 integer\n  - ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col1 integer\n  - ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col2 integer\n  - ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col3 integer",
+      "stackText": "java.lang.AssertionError: \nTimed out after 30 seconds waiting for concurrent ADD COLUMN operations. Unfinished operations:\n  - ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col0 integer\n  - ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col1 integer\n  - ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col2 integer\n  - ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col3 integer\n\tat io.trino.testing.BaseConnectorTest.concurrentAddColumnTimeout(BaseConnectorTest.java:5911)\n\tat io.trino.testing.BaseConnectorTest.testAddColumnConcurrently(BaseConnectorTest.java:5869)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)\n\tat java.base/java.lang.Thread.run(Thread.java:1474)\n\tSuppressed: java.lang.Exception: Worker thread 'pool-1434-thread-1' executing: ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col0 integer\n\t\tat java.base/jdk.internal.misc.Unsafe.park(Native Method)\n\t\tat java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:223)\n\t\tat java.base/java.util.concurrent.locks.AbstractQueuedLongSynchronizer.acquire(AbstractQueuedLongSynchronizer.java:410)\n\t\tat java.base/java.util.concurrent.locks.AbstractQueuedLongSynchronizer.acquireShared(AbstractQueuedLongSynchronizer.java:739)\n\t\tat java.base/java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock.lock(ReentrantReadWriteLock.java:744)\n\t\tat io.trino.testing.DistributedQueryRunner.executeInternal(DistributedQueryRunner.java:592)\n\t\tat io.trino.testing.DistributedQueryRunner.execute(DistributedQueryRunner.java:580)\n\t\tat io.trino.testing.QueryRunner.execute(QueryRunner.java:82)\n\t\tat io.trino.testing.BaseConnectorTest.lambda$testAddColumnConcurrently$1(BaseConnectorTest.java:5839)\n\t\t... 4 more\n\tSuppressed: java.lang.Exception: Worker thread 'pool-1434-thread-2' executing: ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col1 integer\n\t\tat java.base/jdk.internal.misc.Unsafe.park(Native Method)\n\t\tat java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:223)\n\t\tat java.base/java.util.concurrent.locks.AbstractQueuedLongSynchronizer.acquire(AbstractQueuedLongSynchronizer.java:410)\n\t\tat java.base/java.util.concurrent.locks.AbstractQueuedLongSynchronizer.acquireShared(AbstractQueuedLongSynchronizer.java:739)\n\t\tat java.base/java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock.lock(ReentrantReadWriteLock.java:744)\n\t\tat io.trino.testing.DistributedQueryRunner.executeInternal(DistributedQueryRunner.java:592)\n\t\tat io.trino.testing.DistributedQueryRunner.execute(DistributedQueryRunner.java:580)\n\t\tat io.trino.testing.QueryRunner.execute(QueryRunner.java:82)\n\t\tat io.trino.testing.BaseConnectorTest.lambda$testAddColumnConcurrently$1(BaseConnectorTest.java:5839)\n\t\t... 4 more\n\tSuppressed: java.lang.Exception: Worker thread 'pool-1434-thread-3' executing: ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col2 integer\n\t\tat java.base/jdk.internal.misc.Unsafe.park(Native Method)\n\t\tat java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:223)\n\t\tat java.base/java.util.concurrent.locks.AbstractQueuedLongSynchronizer.acquire(AbstractQueuedLongSynchronizer.java:410)\n\t\tat java.base/java.util.concurrent.locks.AbstractQueuedLongSynchronizer.acquireShared(AbstractQueuedLongSynchronizer.java:739)\n\t\tat java.base/java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock.lock(ReentrantReadWriteLock.java:744)\n\t\tat io.trino.testing.DistributedQueryRunner.executeInternal(DistributedQueryRunner.java:592)\n\t\tat io.trino.testing.DistributedQueryRunner.execute(DistributedQueryRunner.java:580)\n\t\tat io.trino.testing.QueryRunner.execute(QueryRunner.java:82)\n\t\tat io.trino.testing.BaseConnectorTest.lambda$testAddColumnConcurrently$1(BaseConnectorTest.java:5839)\n\t\t... 4 more\n\tSuppressed: java.lang.Exception: Worker thread 'pool-1434-thread-4' executing: ALTER TABLE test_add_columnzuvyafwslj ADD COLUMN col3 integer\n\t\tat java.base/jdk.internal.misc.Unsafe.park(Native Method)\n\t\tat java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:223)\n\t\tat java.base/java.util.concurrent.locks.AbstractQueuedLongSynchronizer.acquire(AbstractQueuedLongSynchronizer.java:410)\n\t\tat java.base/java.util.concurrent.locks.AbstractQueuedLongSynchronizer.acquireShared(AbstractQueuedLongSynchronizer.java:739)\n\t\tat java.base/java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock.lock(ReentrantReadWriteLock.java:744)\n\t\tat io.trino.testing.DistributedQueryRunner.executeInternal(DistributedQueryRunner.java:592)\n\t\tat io.trino.testing.DistributedQueryRunner.execute(DistributedQueryRunner.java:580)\n\t\tat io.trino.testing.QueryRunner.execute(QueryRunner.java:82)\n\t\tat io.trino.testing.BaseConnectorTest.lambda$testAddColumnConcurrently$1(BaseConnectorTest.java:5839)\n\t\t... 4 more\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}
