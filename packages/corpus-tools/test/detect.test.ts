@@ -117,3 +117,39 @@ test('an unrecognisable payload stays unknown rather than being guessed', () => 
   assert.equal(detect(''), 'unknown');
   assert.equal(detectFramework('', null, null), 'unknown');
 });
+
+// ---------------------------------------------------------------------------
+// Artifact dispatch. `corpus scan` and `corpus harvest` must ask the same
+// question — a scan matching artifact *names* declared 27 repositories
+// productive and the harvest then kept runs from one, because a
+// `playwright-report/` of pure HTML passes any name filter and parses to
+// nothing. Both now call pickAdapter, so this is the shared contract.
+// ---------------------------------------------------------------------------
+
+test('artifact dispatch is by content, not by filename', async () => {
+  const { pickAdapter } = await import('../src/harvest.ts');
+  const enc = (s: string) => new TextEncoder().encode(s);
+
+  // Right extension, right content.
+  assert.equal(
+    pickAdapter('test-results/junit.xml', enc('<?xml version="1.0"?><testsuites><testsuite/>'))?.name,
+    'junit',
+  );
+  assert.equal(
+    pickAdapter('blob-report/report.jsonl', enc('{"method":"onBegin","params":{}}'))?.name,
+    'playwright',
+  );
+  assert.equal(
+    pickAdapter('report.json', enc('{"config":{},"suites":[],"errors":[]}'))?.name,
+    'playwright',
+  );
+
+  // A promising name with useless content is the exact false positive that
+  // wasted a harvest: an HTML report, a coverage file, an empty archive.
+  assert.equal(pickAdapter('playwright-report/index.html', enc('<!doctype html><html>')), null);
+  assert.equal(pickAdapter('test-results/index.html', enc('<!doctype html>')), null);
+  assert.equal(pickAdapter('junit/coverage.xml', enc('<?xml version="1.0"?><coverage/>')), null);
+  assert.equal(pickAdapter('test-report.json', enc('{"totals":{"lines":10}}')), null);
+  assert.equal(pickAdapter('test-results.txt', enc('<testsuites/>')), null);
+  assert.equal(pickAdapter('results.xml', enc('')), null);
+});

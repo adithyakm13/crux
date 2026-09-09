@@ -259,5 +259,21 @@ harvesting. The 4 runs that did land were worth it — they were the second jest
 repository, which is what revealed that jest's 0-of-1029 app-frame rate was a
 property of one project's harness rather than of jest.
 
-**Roadmap:** make the scan validate that at least one artifact actually parses
-before counting a repository as productive.
+**Fixed.** `corpus scan` now answers the question the harvest will ask, rather
+than approximating it: it downloads the smallest candidate artifacts, unzips
+them under the same guards, and runs the harvester's own `pickAdapter` and
+parser. A repository counts as productive only when something actually parses to
+a failure. Both commands call the same two functions, so they cannot diverge
+again.
+
+Two calibration details, both learned by checking against a repository whose
+yield was already known:
+
+- The probe's depth defaults to the harvest's depth. druxt/druxt.js is
+  productive at 25 runs and looks dead at 10, because its four productive runs
+  are older than its ten most recent failures. A shallower probe answers a
+  different question.
+- The download budget is per run, not per repository. A repository-wide cap is
+  exhausted by the newest runs, which are often the least interesting.
+
+Cost on that repository: 0.1 MB across 9 artifacts to reach a correct verdict.

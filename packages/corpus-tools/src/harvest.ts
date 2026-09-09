@@ -79,7 +79,7 @@ export const DEFAULT_HARVEST_OPTIONS: Omit<HarvestOptions, 'corpusDir'> = {
  * miss is a lost run, the cost of a false positive is one wasted download that
  * yields no XML and is discarded.
  */
-const ARTIFACT_NAME_HINT =
+export const ARTIFACT_NAME_HINT =
   /junit|test.?results?|test.?report|surefire|failsafe|pytest|xunit|nunit|trx|blob-report|playwright/i;
 
 export interface HarvestSummary {
@@ -296,7 +296,16 @@ export async function harvestRepo(repo: string, opts: HarvestOptions): Promise<H
  * Returning null means "this file is not test results", which is the common
  * case inside a report archive.
  */
-function pickAdapter(entryName: string, bytes: Uint8Array): TestResultAdapter | null {
+/**
+ * Content-based dispatch. Exported so `corpus scan` can ask the same question
+ * the harvester will ask, rather than approximating it.
+ *
+ * A scan that only matched artifact *names* declared 27 repositories productive
+ * and the harvest then kept runs from one: `playwright-report/` containing only
+ * HTML passes any name filter and parses to nothing. Scan and harvest must run
+ * the same predicate or the scan is measuring something else.
+ */
+export function pickAdapter(entryName: string, bytes: Uint8Array): TestResultAdapter | null {
   const head = new TextDecoder('utf-8', { fatal: false }).decode(bytes.subarray(0, 4096));
   const lower = entryName.toLowerCase();
   if (lower.endsWith('.xml') && /<\s*testsuites?[\s>]/i.test(head)) return new JUnitAdapter();
@@ -371,6 +380,175 @@ function absorb(
 // ---------------------------------------------------------------------------
 // Disk layout
 // ---------------------------------------------------------------------------
+
+
+export interface ProbeResult {
+  repo: string;
+  /** True when at least one artifact parsed to at least one failure. */
+  productive: boolean;
+  runsExamined: number;
+  artifactsDownloaded: number;
+  bytesDownloaded: number;
+  failuresFound: number;
+  /** Adapters that successfully parsed something, for reporting. */
+  adapters: string[];
+  /** Why it was not productive, when it was not. */
+  reason: string | null;
+}
+
+export interface ProbeOptions {
+  /**
+   * Failed runs to examine before giving up.
+   *
+   * Defaults to the same depth `harvest` uses. A shallower probe answers a
+   * different question than the harvest will: druxt/druxt.js is productive at
+   * depth 25 and looks dead at depth 10, because its four productive runs are
+   * older than its ten most recent failures. A scan that disagrees with the
+   * harvest is the bug this whole command exists to fix.
+   */
+  runsToProbe?: number;
+  /**
+   * Artifacts to download per run, not per repository.
+   *
+   * A repository-wide cap is exhausted by the newest runs, and the newest run
+   * is frequently the one that failed for an uninteresting reason. druxt/druxt.js
+   * kept four runs during a real harvest and a global cap of twelve downloads
+   * still reported it unproductive, because the productive runs were older than
+   * the budget reached.
+   */
+  maxDownloadsPerRun?: number;
+  /** Total bytes to spend on one repository before giving up. */
+  maxBytes?: number;
+  maxArtifactBytes?: number;
+  requireLicense?: boolean;
+  onProgress?: (line: string) => void;
+}
+
+/**
+ * Ask whether a repository would actually yield corpus data, by doing what the
+ * harvester does and stopping at the first parseable failure.
+ *
+ * Downloads real artifacts, so it is not free — but it is bounded to a couple
+ * of the smallest candidates per repository, and it is far cheaper than a full
+ * harvest that turns out to yield nothing.
+ */
+export async function probeRepo(repo: string, options: ProbeOptions = {}): Promise<ProbeResult> {
+  const runsToProbe = options.runsToProbe ?? 25;
+  const maxDownloadsPerRun = options.maxDownloadsPerRun ?? 4;
+  const maxBytes = options.maxBytes ?? 60 * 1024 * 1024;
+  const maxArtifactBytes = options.maxArtifactBytes ?? 40 * 1024 * 1024;
+  const log = options.onProgress ?? (() => {});
+  const result: ProbeResult = {
+    repo,
+    productive: false,
+    runsExamined: 0,
+    artifactsDownloaded: 0,
+    bytesDownloaded: 0,
+    failuresFound: 0,
+    adapters: [],
+    reason: null,
+  };
+
+  let meta;
+  try {
+    meta = await repoMeta(repo);
+  } catch (e) {
+    result.reason = `metadata failed: ${(e as Error).message.slice(0, 60)}`;
+    return result;
+  }
+  if (meta.archived) {
+    result.reason = 'archived';
+    return result;
+  }
+  if ((options.requireLicense ?? true) && meta.licenseSpdx === null) {
+    result.reason = `licence unidentified (${meta.licenseRaw ?? 'none'})`;
+    return result;
+  }
+
+  let runs;
+  try {
+    runs = await listFailedRuns(repo, runsToProbe);
+  } catch (e) {
+    result.reason = `run listing failed: ${(e as Error).message.slice(0, 60)}`;
+    return result;
+  }
+  if (runs.length === 0) {
+    result.reason = 'no failed runs';
+    return result;
+  }
+
+  let sawLiveArtifact = false;
+  let sawCandidate = false;
+  for (const wr of runs) {
+    if (result.bytesDownloaded >= maxBytes) break;
+    result.runsExamined++;
+    let downloadsThisRun = 0;
+    let artifacts;
+    try {
+      artifacts = await listArtifacts(repo, wr.id);
+    } catch {
+      continue;
+    }
+    const live = artifacts.filter((a) => !a.expired);
+    if (live.length > 0) sawLiveArtifact = true;
+    // The same name filter the harvester uses, then the same content dispatch.
+    const wanted = live
+      .filter((a) => a.sizeInBytes <= maxArtifactBytes && ARTIFACT_NAME_HINT.test(a.name))
+      .sort((a, b) => a.sizeInBytes - b.sizeInBytes);
+    if (wanted.length > 0) sawCandidate = true;
+
+    for (const art of wanted) {
+      if (downloadsThisRun >= maxDownloadsPerRun) break;
+      if (result.bytesDownloaded >= maxBytes) break;
+      let zip: Buffer;
+      try {
+        zip = await downloadArtifact(repo, art.id);
+      } catch {
+        continue;
+      }
+      downloadsThisRun++;
+      result.artifactsDownloaded++;
+      result.bytesDownloaded += zip.byteLength;
+      let entries: Record<string, Uint8Array>;
+      try {
+        let budget = maxArtifactBytes * ZIP_INFLATE_BUDGET_FACTOR;
+        entries = unzipSync(new Uint8Array(zip), {
+          filter: (f) => {
+            if (f.originalSize > budget) return false;
+            budget -= f.originalSize;
+            return true;
+          },
+        });
+      } catch {
+        continue;
+      }
+      for (const [name, bytes] of Object.entries(entries)) {
+        if (bytes.byteLength === 0) continue;
+        const adapter = pickAdapter(name, bytes);
+        if (adapter === null) continue;
+        const attempts = await parseWith(adapter, bytes, new Map(), 0);
+        if (attempts === null) continue;
+        const failures = attempts.filter((a) => a.failure !== null).length;
+        if (failures > 0) {
+          result.failuresFound += failures;
+          if (!result.adapters.includes(adapter.name)) result.adapters.push(adapter.name);
+        }
+      }
+      if (result.failuresFound > 0) {
+        result.productive = true;
+        log(`  ${repo}: ${result.failuresFound} failure(s) via ${result.adapters.join(', ')}`);
+        return result;
+      }
+    }
+  }
+
+  result.reason = !sawLiveArtifact
+    ? 'all artifacts expired'
+    : !sawCandidate
+      ? 'no test-like artifact'
+      : 'artifacts downloaded but nothing parsed to a failure';
+  return result;
+}
 
 export function runsDir(corpusDir: string): string {
   return join(corpusDir, 'runs');

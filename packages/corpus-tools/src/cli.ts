@@ -7,6 +7,7 @@
  *   corpus status                        what the corpus contains vs Gate 0
  *   corpus frames                        app-frame availability per framework
  *   corpus sample                        choose which runs to label
+ *   corpus scan                          which repos would actually yield data
  */
 
 import { readFile } from 'node:fs/promises';
@@ -25,6 +26,7 @@ import {
 } from './commands.ts';
 import { formatBaselineReport, runBaseline } from './baseline.ts';
 import { formatSample, sampleForLabelling } from './sample.ts';
+import { probeRepo, type ProbeResult } from './harvest.ts';
 import { SCHEMA_VERSION } from '@cruxci/core';
 import {
   committedRuns,
@@ -41,6 +43,8 @@ function usage(): string {
     '  corpus harvest --repos <path|owner/name,...> [--runs-per-repo N]',
     '  corpus status',
     '  corpus frames [--markdown] [--include-untracked]',
+    '  corpus scan --repos <file> [--out <file>] [--runs N] [--downloads N]',
+    '                --downloads is per run, not per repository',
     '  corpus sample [--target N] [--min-failures N] [--max-failures N]',
     '                [--slice N] [--ids | --selection <file>]',
     '  corpus label --labeler <name> [--context full|payload-only]',
@@ -190,6 +194,85 @@ async function main(): Promise<number> {
       process.stdout.write(frameReportMarkdown(report) + '\n');
     } else {
       process.stdout.write(formatFrameReport(report) + '\n');
+    }
+    return 0;
+  }
+
+  if (command === 'scan') {
+    const reposFlag = flags.get('repos');
+    if (typeof reposFlag !== 'string') {
+      process.stderr.write(
+        'Error: scan needs --repos <file> (one owner/name per line).\n' +
+          'It downloads a couple of the smallest candidate artifacts per repository\n' +
+          'and checks they actually parse, which is the question harvest will ask.\n',
+      );
+      return 2;
+    }
+    const { readFile, writeFile } = await import('node:fs/promises');
+    const repos = (await readFile(reposFlag, 'utf8'))
+      .split('\n')
+      .map((l) => l.trim())
+      .filter((l) => l !== '' && !l.startsWith('#'));
+    if (repos.length === 0) {
+      process.stderr.write(`Error: ${reposFlag} lists no repositories.\n`);
+      return 2;
+    }
+
+    const results: ProbeResult[] = [];
+    for (const [i, repo] of repos.entries()) {
+      if (!json) process.stderr.write(`[${i + 1}/${repos.length}] ${repo}\n`);
+      results.push(
+        await probeRepo(repo, {
+          ...(flags.has('runs') ? { runsToProbe: Number(flags.get('runs')) } : {}),
+          ...(flags.has('downloads')
+            ? { maxDownloadsPerRun: Number(flags.get('downloads')) }
+            : {}),
+          ...(json
+            ? {}
+            : {
+                onProgress: (line: string) => {
+                  process.stderr.write(line + '\n');
+                },
+              }),
+        }),
+      );
+    }
+
+    const productive = results.filter((r) => r.productive);
+    const outFlag = flags.get('out');
+    if (typeof outFlag === 'string') {
+      await writeFile(outFlag, productive.map((r) => r.repo).join('\n') + '\n', 'utf8');
+      process.stderr.write(`wrote ${productive.length} repo(s) to ${outFlag}\n`);
+    }
+
+    if (json) {
+      process.stdout.write(JSON.stringify({ results }, null, 2) + '\n');
+      return 0;
+    }
+
+    const mb = (n: number) => (n / 1024 / 1024).toFixed(1);
+    const downloaded = results.reduce((n, r) => n + r.bytesDownloaded, 0);
+    process.stdout.write(
+      `\n${productive.length} of ${results.length} repositories yield parseable failures\n` +
+        `downloaded ${mb(downloaded)} MB across ` +
+        `${results.reduce((n, r) => n + r.artifactsDownloaded, 0)} artifact(s)\n\n`,
+    );
+    for (const r of productive) {
+      process.stdout.write(
+        `  ${r.repo}  ${r.failuresFound} failure(s) via ${r.adapters.join(', ')}\n`,
+      );
+    }
+    const reasons = new Map<string, number>();
+    for (const r of results) {
+      if (r.productive) continue;
+      const key = (r.reason ?? 'unknown').replace(/\(.*\)/, '(...)');
+      reasons.set(key, (reasons.get(key) ?? 0) + 1);
+    }
+    if (reasons.size > 0) {
+      process.stdout.write('\nnot productive:\n');
+      for (const [reason, n] of [...reasons].sort((a, b) => b[1] - a[1])) {
+        process.stdout.write(`  ${String(n).padStart(4)}  ${reason}\n`);
+      }
     }
     return 0;
   }
