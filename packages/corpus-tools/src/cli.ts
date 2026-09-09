@@ -6,6 +6,7 @@
  *   corpus harvest --repos <file|list>   pull real failed CI runs into corpus/
  *   corpus status                        what the corpus contains vs Gate 0
  *   corpus frames                        app-frame availability per framework
+ *   corpus sample                        choose which runs to label
  */
 
 import { readFile } from 'node:fs/promises';
@@ -23,6 +24,7 @@ import {
   separabilityReport,
 } from './commands.ts';
 import { formatBaselineReport, runBaseline } from './baseline.ts';
+import { formatSample, sampleForLabelling } from './sample.ts';
 import {
   committedRuns,
   formatFrameReport,
@@ -38,6 +40,7 @@ function usage(): string {
     '  corpus harvest --repos <path|owner/name,...> [--runs-per-repo N]',
     '  corpus status',
     '  corpus frames [--markdown] [--include-untracked]',
+    '  corpus sample [--target N] [--min-failures N] [--max-failures N] [--ids]',
     '  corpus label --labeler <name> [--context full|payload-only]',
     '                [--min-failures N] [--max-failures N]',
     '  corpus agreement --a <labeler> --b <labeler>',
@@ -185,6 +188,39 @@ async function main(): Promise<number> {
       process.stdout.write(frameReportMarkdown(report) + '\n');
     } else {
       process.stdout.write(formatFrameReport(report) + '\n');
+    }
+    return 0;
+  }
+
+  if (command === 'sample') {
+    let runs = await loadRuns(corpusDir);
+    // Committed runs only, by default. A labelling sample that points at runs
+    // the repository does not ship cannot be reproduced by whoever reviews the
+    // resulting numbers.
+    if (!flags.has('include-untracked')) {
+      const tracked = await committedRuns(process.cwd(), runs);
+      if (tracked.length !== runs.length && !json && !flags.has('ids')) {
+        process.stderr.write(
+          `note: ${runs.length - tracked.length} run(s) on disk are not committed ` +
+            `(licence held) and are excluded from the sample.\n`,
+        );
+      }
+      runs = tracked;
+    }
+    const opts: Parameters<typeof sampleForLabelling>[1] = {};
+    if (flags.has('target')) opts.targetFailures = Number(flags.get('target'));
+    if (flags.has('min-failures')) opts.minFailures = Number(flags.get('min-failures'));
+    if (flags.has('max-failures')) opts.maxFailures = Number(flags.get('max-failures'));
+    if (flags.has('max-per-repo')) opts.maxRunsPerRepo = Number(flags.get('max-per-repo'));
+    if (flags.has('seed')) opts.seed = Number(flags.get('seed'));
+    const result = sampleForLabelling(runs, opts);
+    if (json) {
+      process.stdout.write(JSON.stringify(result, null, 2) + '\n');
+    } else if (flags.has('ids')) {
+      // Plain ids, so this can be piped straight into `label --only`.
+      for (const r of result.runs) process.stdout.write(r.corpusRunId + '\n');
+    } else {
+      process.stdout.write(formatSample(result) + '\n');
     }
     return 0;
   }

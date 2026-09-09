@@ -213,5 +213,14 @@ failures. `corpus label --max-failures N` skips the collapses so a labeller can
 work the tractable runs. Bootstrap intervals resample runs, which limits how far
 one run can move an interval — but not how far it moves the point estimate.
 
-**Roadmap:** per-framework and per-repository F1 reporting, and a documented
-sampling policy for which runs enter the labelled subset.
+**The sampling policy now exists.** `corpus sample` chooses the labelled subset
+under a written-down, seeded, reproducible policy: exclude suite collapses and
+single-failure runs, cap runs per repository, and fill framework strata
+round-robin so no family dominates. It reports the sample's framework mix
+against the corpus's, and declares any framework that is a material share of the
+corpus but missing from the sample — currently jest, at 25% of corpus failures
+and 0% of the sample, because no run of 5-40 failures is dominated by it.
+
+**Still open:** per-framework and per-repository F1 reporting in the baseline
+and clustering scores, so a result cannot be read as global when it describes
+one family.

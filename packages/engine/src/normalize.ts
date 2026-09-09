@@ -143,9 +143,37 @@ const URL_NUMERIC_SEGMENT = /(\bhttps?:\/\/[^\s'"`<>]*?)\/\d+(?=\/|\b)/gi;
  * an assertion is signal, a seeded one is noise. The qualifier in the spec's
  * table is "generated", so the rule targets local parts that carry a counter or
  * a random blob, plus the reserved test domains.
+ *
+ * Matching is split in two on purpose. An earlier single pattern wrote the
+ * "generated" test *inside* the match —
+ *   [A-Za-z0-9._%+-]*(?:\d{3,}|[0-9a-f]{8,})[A-Za-z0-9._%+-]*@...
+ * — where the two unbounded classes around the inner alternation overlap it, so
+ * on any long run of hex characters with no `@` the engine tries every split
+ * before failing. Measured through the public `normalize()`: a 4000-character
+ * hex run embedded in a word took 24 seconds, scaling worse than quadratically,
+ * on input a pull request writes. `long-hex` masked the pure case by rewriting
+ * it first, but only when the run sits on word boundaries.
+ *
+ * EMAIL below has no such ambiguity: the local-part class cannot match `@`, so
+ * there is exactly one way to split any candidate. Whether a match is
+ * *generated* is then decided by a plain test on the captured text, which
+ * cannot backtrack at all.
  */
-const GENERATED_EMAIL =
-  /\b[A-Za-z0-9._%+-]*(?:\d{3,}|[0-9a-f]{8,})[A-Za-z0-9._%+-]*@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b|\b[A-Za-z0-9._%+-]+@(?:example|test|invalid|localhost|mailinator|faker)\.[A-Za-z.]+\b/g;
+const EMAIL = /\b[A-Za-z0-9._%+-]{1,64}@[A-Za-z0-9.-]{1,253}\.[A-Za-z]{2,24}\b/g;
+
+/** Reserved and throwaway domains: an address here is never a real identity. */
+const GENERATED_DOMAIN =
+  /@(?:example|test|invalid|localhost|mailinator|faker)\.[A-Za-z.]+$/i;
+
+/** A local part carrying a counter or a random blob. */
+const GENERATED_LOCAL = /\d{3,}|[0-9a-f]{8,}/i;
+
+function isGeneratedEmail(address: string): boolean {
+  if (GENERATED_DOMAIN.test(address)) return true;
+  const at = address.lastIndexOf('@');
+  return at > 0 && GENERATED_LOCAL.test(address.slice(0, at));
+}
+
 const GENERATED_NAME = /\b(?:user|test|fixture|acct|account|tenant|org|customer)[-_]\d+\b/gi;
 
 const WORKER_COUNTER =
@@ -277,7 +305,14 @@ export const RULES: readonly NormalizeRule[] = [
   sub('ipv4', 'IPv4 literals to <ip>.', IPV4, '<ip>'),
   // After the IP rules: the port anchor keys off the `<ip>` they produce.
   sub('port', 'Port numbers to :<port>, only after a host.', PORT, ':<port>'),
-  sub('generated-email', 'Seeded or counter-bearing email addresses to <gen>.', GENERATED_EMAIL, '<gen>'),
+  {
+    id: 'generated-email',
+    description: 'Seeded or counter-bearing email addresses to <gen>.',
+    apply: (text) =>
+      text.includes('@')
+        ? text.replace(EMAIL, (address) => (isGeneratedEmail(address) ? '<gen>' : address))
+        : text,
+  },
   sub('generated-name', 'Counter-bearing fixture identities to <gen>.', GENERATED_NAME, '<gen>'),
   sub('worker-counter', 'Worker, shard, attempt and retry counters to <n>.', WORKER_COUNTER, '<n>'),
   looseOnly(

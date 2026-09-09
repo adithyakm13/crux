@@ -276,3 +276,52 @@ test('the port rule still normalizes ports that follow a host', () => {
   assert.equal(normalize('connect [::1]:5432', 'strict'), 'connect [::1]:<port>');
   assert.match(normalize('GET http://api.example.com:8080/v1', 'strict'), /:<port>\/v1$/);
 });
+
+test('no rule backtracks catastrophically on a long hex run', () => {
+  // Regression, and the reason the suite once took 206 seconds while every
+  // individual test reported under 35 ms: `generated-email` wrapped its
+  // "is this generated" test in unbounded classes either side of an inner
+  // alternation, so a long run of hex characters with no `@` made the engine
+  // try every split. 4000 characters took 24 seconds through the public
+  // normalize(), on input a pull request writes.
+  //
+  // The `'a'.repeat(5000)` sample above only ran fast because `long-hex`
+  // rewrote it first — accidental protection that a hex run embedded in a word
+  // bypasses entirely.
+  for (const size of [1000, 4000]) {
+    const embedded = `z${'a'.repeat(size)}z`;
+    for (const mode of ['strict', 'loose'] as NormalizeMode[]) {
+      const started = performance.now();
+      normalize(embedded, mode);
+      const ms = performance.now() - started;
+      assert.ok(
+        ms < 500,
+        `normalize took ${ms.toFixed(0)}ms on a ${size}-char hex run in ${mode} mode — ` +
+          `that is the signature of catastrophic backtracking`,
+      );
+    }
+  }
+
+  // Every rule individually, so a future rule cannot reintroduce it behind
+  // another rule that happens to rewrite the input first.
+  const hostile = `z${'a'.repeat(4000)}z`;
+  for (const rule of RULES) {
+    for (const mode of ['strict', 'loose'] as NormalizeMode[]) {
+      const started = performance.now();
+      rule.apply(hostile, mode, {});
+      const ms = performance.now() - started;
+      assert.ok(ms < 500, `rule "${rule.id}" took ${ms.toFixed(0)}ms in ${mode} mode`);
+    }
+  }
+});
+
+test('generated addresses still collapse and real ones are left alone', () => {
+  assert.equal(normalize('mail fixture12345@corp.io bounced', 'strict'), 'mail <gen> bounced');
+  assert.equal(normalize('mail someone@example.com bounced', 'strict'), 'mail <gen> bounced');
+  assert.equal(normalize('mail deadbeefcafe@corp.io bounced', 'strict'), 'mail <gen> bounced');
+  // A real-looking address carries signal and must survive.
+  assert.equal(
+    normalize('contact jane.doe@acme.co.uk today', 'strict'),
+    'contact jane.doe@acme.co.uk today',
+  );
+});
