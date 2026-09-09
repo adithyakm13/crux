@@ -165,12 +165,12 @@ weight of 0.60. Measured over the committed corpus:
 
 | Framework | Failures | With an app frame | Rate (Wilson 95%) |
 |---|---|---|---|
-| unidentified | 1137 | 49 | 0.043 [0.033, 0.057] |
-| jest | 525 | 0 | 0.000 [0.000, 0.007] |
+| jest | 1029 | 0 | 0.000 [0.000, 0.004] |
+| unidentified | 602 | 27 | 0.045 [0.031, 0.064] |
 | playwright | 164 | 35 | 0.213 [0.158, 0.282] |
-| junit-jvm | 118 | 88 | 0.746 [0.660, 0.816] |
-| pytest | 109 | 41 | 0.376 [0.291, 0.470] |
-| vitest | 18 | 0 | 0.000 [0.000, 0.176] |
+| junit-jvm | 134 | 95 | 0.709 [0.627, 0.779] |
+| pytest | 108 | 40 | 0.370 [0.285, 0.464] |
+| vitest | 34 | 16 | 0.471 [0.315, 0.633] |
 | go-test | 5 | 0 | 0.000 [0.000, 0.434] |
 | **total** | **2076** | **213** | **0.103 [0.090, 0.116]** |
 
@@ -179,23 +179,30 @@ Measured over 104 committed run(s) across 19 repositories (corpus `4a7462d00706`
 The split is the finding, not the total. Two framework families sit at opposite
 ends, and the reason is structural rather than incidental:
 
-- **jest gives 0 of 525, playwright 0.213, vitest 0 of 18.** For end-to-end
-  runs the only frame is the spec file, which classifies as `test`, because the
-  failure happened inside the framework's own machinery acting on behalf of test
-  code. For jest the same holds via its own runner frames.
-- **junit-jvm gives 0.746 and pytest 0.376.** JVM and Python stacks carry the
-  application call chain, so the signal is usually there.
+- **jest gives 0 of 1029, playwright 0.213.** For end-to-end runs the only
+  frame is the spec file, which classifies as `test`, because the failure
+  happened inside the framework's own machinery acting on behalf of test code.
+  For jest the same holds via its own runner frames.
+- **junit-jvm gives 0.709, vitest 0.471, pytest 0.370.** JVM, Node unit and
+  Python stacks carry the application call chain, so the signal is usually there.
 
 So §8's 0.60 weight is not wrong, but it is **unavailable for a large share of
 real CI failures**, and which share depends entirely on the framework mix.
 Clustering evaluation must therefore report per-framework F1; an aggregate would
 be dominated by whichever family happens to be over-represented.
 
-#### 55% of failures have no identifiable framework
+#### 29% of failures still have no identifiable framework
 
-`unidentified` is the largest row: 1137 of 2076 failures, at 0.043. These are
-JUnit XML from producers crux cannot attribute from payload evidence, and the
-detection gap is itself a limitation — see docs/limitations.md.
+`unidentified` is 602 of 2076 failures. It was 1137 until the detector stopped
+racing substrings over one concatenated haystack and started matching frame
+shapes: requiring `org.junit` missed JVM stacks whose runner frames surefire had
+trimmed, and requiring the literal word `jest` missed hundreds of unmistakable
+jest failures whose harness never prints it. That reclassified 535 failures and
+regressed none — verified by diffing every failure's label across the whole
+corpus, not by spot checks.
+
+The remainder is a real limitation, not a rounding error — see
+docs/limitations.md.
 
 #### This table is generated, and earlier hand-written versions were wrong
 

@@ -181,8 +181,15 @@ generated input asserts that branch is unreachable for anything it can produce.
 
 `detectFramework` attributes a producing framework from payload evidence only —
 a stack-frame marker, a path shape, an error type. On the committed corpus it
-cannot attribute 1137 of 2076 failures (55%), which arrive as JUnit XML from
+cannot attribute 602 of 2076 failures (29%), which arrive as JUnit XML from
 producers that leave no distinguishing tell.
+
+It was 55% until the detector was rewritten to match frame *shapes* before
+lexical tokens. Two rules were wrong in the same way — they demanded a name the
+producer does not always print. JVM required `org.junit`, which surefire trims;
+jest required the literal word `jest`, which Next.js's harness never emits. A
+word appearing anywhere is weak evidence in any case: a test *named* "playwright
+migration" is not a Playwright failure.
 
 **Why it is not guessed:** JUnit XML is emitted by pytest, jest, vitest,
 surefire, karma and a dozen others. Attributing on filename or adapter name

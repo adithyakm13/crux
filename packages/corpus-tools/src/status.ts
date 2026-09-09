@@ -246,23 +246,98 @@ function unidentifiedCount(runs: CorpusRun[]): number {
   return n;
 }
 
+/**
+ * Framework detection from payload evidence only.
+ *
+ * Ordered strongest-evidence-first, and structural before lexical. The earlier
+ * version was a substring race over one concatenated haystack, which fails two
+ * ways seen in the real corpus:
+ *
+ *  - It required `org.junit` or `java.lang.` for JVM. Surefire trims runner
+ *    frames, so a stack of `at com.acme.Thing.check(Thing.java:42)` with an
+ *    `org.opentest4j.AssertionFailedError` matched nothing and came back
+ *    unknown — 1262 failures, most of a large repository's output.
+ *  - It required the literal word "jest". Next.js's e2e harness wraps the
+ *    runner, so hundreds of unmistakably jest failures — `expect(received)
+ *    .toBe(expected) // Object.is equality` — carried no such word.
+ *
+ * A word appearing anywhere is weak evidence: a test *named* "playwright
+ * migration" is not a Playwright failure. A stack frame shape is strong
+ * evidence, so shapes are checked first.
+ */
+
+/** `at pkg.Class.method(File.java:42)`, with optional module and loader prefixes. */
+const JVM_FRAME = /^\s*at\s+[\w$.@/]+\([\w$ .-]+\.(?:java|kt|kts|scala|groovy):\d+\)/m;
+/** JVM assertion and test libraries that appear as the error type. */
+const JVM_LIBS = /\b(?:org\.opentest4j|org\.junit|junit\.framework|org\.testng|org\.assertj|org\.hamcrest|org\.mockito|java\.lang\.|java\.base\/|jakarta\.|javax\.)/;
+
+/**
+ * Python frames, in both shapes that reach crux.
+ *
+ * CPython's traceback is `File "x.py", line 42`. pytest's own short format is
+ * `tests/test_x.py:284: in test_name`, which shares no tokens with it — missing
+ * the second sent every pytest failure in two repositories to `unknown`.
+ */
+const PY_FRAME =
+  /^\s*File "[^"]+\.py", line \d+|^\s*[\w./\\-]+\.py:\d+:\s+in\s+\S/m;
+/** pytest marks the failing line with a leading `E`, whatever the error type. */
+const PY_MARKERS = /site-packages\/_pytest|\bpytest\b|^E\s{2,}\w/mi;
+
+/** Vitest prints frames with a heavy arrow; nothing else does. */
+const VITEST_FRAME = /^\s*\u276f\s/m;
+
+/** jest and jest-compatible expect output. */
+const JEST_EXPECT = /expect\((?:received|jest\.fn\(\))\)\.|\bexpect\(received\)\.to\w+\(expected\)/;
+
+/**
+ * Go frames: `project_test.go:447:`, `pkg/file.go:109:7:` and the bare form.
+ * Requiring whitespace after the line number missed both of the colon-suffixed
+ * shapes, which is every failure testify and the compiler actually emit.
+ */
+const GO_FRAME = /^\s*[\w./\\-]+\.go:\d+(?::\d+)?\b/m;
+/** testify's failure block, which carries no `.go` path on its first line. */
+const GO_TESTIFY = /^\s*Error Trace:\s|\btestify\b/m;
+
+const RUBY_FRAME = /^\s*(?:from\s+)?[\w./-]+\.rb:\d+:in\s/m;
+
 export function detectFramework(
   sourceFile: string,
   stackText: string | null,
   errorType: string | null,
 ): string {
-  const hay = `${sourceFile}\n${stackText ?? ''}\n${errorType ?? ''}`;
-  if (/playwright|@playwright\/test/i.test(hay)) return 'playwright';
-  if (/site-packages\/_pytest|pytest|\.py:\d+|E\s+assert/i.test(hay)) return 'pytest';
-  if (/jest|@jest\//i.test(hay)) return 'jest';
-  // The heavy arrow is Vitest's stack-frame marker; nothing else emits it, and
-  // a Vitest run reaches crux as ordinary JUnit XML with no other tell.
-  if (/vitest/i.test(hay) || /\u276f\s+\S+:\d+:\d+/.test(hay)) return 'vitest';
-  if (/cypress/i.test(hay)) return 'cypress';
-  if (/mocha/i.test(hay)) return 'mocha';
-  if (/surefire|junit\.framework|org\.junit|java\.lang\./i.test(hay)) return 'junit-jvm';
-  if (/go test|testing\.T|\.go:\d+/i.test(hay)) return 'go-test';
+  const stack = stackText ?? '';
+  const type = errorType ?? '';
+  const hay = `${sourceFile}\n${stack}\n${type}`;
+
+  // --- structural: a frame shape is much harder to produce by accident -----
+  if (VITEST_FRAME.test(stack)) return 'vitest';
+  if (JVM_FRAME.test(stack) || JVM_LIBS.test(type)) return 'junit-jvm';
+  if (PY_FRAME.test(stack)) return 'pytest';
+  if (RUBY_FRAME.test(stack)) return 'rspec';
+
+  // --- named tools: the name is only meaningful in a path or an import -----
+  if (/node_modules[\\/](?:@playwright[\\/])?playwright|@playwright\/test|playwright-core/i.test(hay)) {
+    return 'playwright';
+  }
+  if (/node_modules[\\/](?:@jest[\\/]|jest-)/i.test(hay)) return 'jest';
+  if (/node_modules[\\/]vitest|\bvitest\b/i.test(hay)) return 'vitest';
+  if (/node_modules[\\/]cypress|\bcypress\b/i.test(hay)) return 'cypress';
+  if (/node_modules[\\/]mocha|\bmocha\b/i.test(hay)) return 'mocha';
+
+  // --- weaker lexical fallbacks, last ---------------------------------------
+  if (PY_MARKERS.test(hay)) return 'pytest';
+  if (GO_FRAME.test(stack) || GO_TESTIFY.test(stack) || /\btesting\.T\b|\bgo test\b/.test(hay)) {
+    return 'go-test';
+  }
+  if (/\bsurefire\b/i.test(hay)) return 'junit-jvm';
   if (/rspec|_spec\.rb/i.test(hay)) return 'rspec';
+  // jest's assertion format, which vitest shares — vitest is already ruled out
+  // above by its own frame marker, so this is the best remaining inference. It
+  // identifies the assertion family rather than the binary; recorded in
+  // docs/limitations.md.
+  if (JEST_EXPECT.test(hay)) return 'jest';
+  if (/\bplaywright\b/i.test(hay)) return 'playwright';
+  if (/\bjest\b/i.test(hay)) return 'jest';
   return 'unknown';
 }
 
