@@ -256,6 +256,47 @@ mistake:
 `fingerprint()` reports `usedFrameFallback` rather than silently hashing
 whatever frames it found, so the prevalence of this case stays measurable.
 
+### The machine labels survived an adversarial audit built to catch one bias
+
+The 125 machine labels underpinning the pipeline probe were produced by a model
+and then reviewed twice by the same model. Across those reviews it made four
+corrections and **every one was a merge** — it never once found an over-merge. A
+reviewer that only ever merges eventually puts everything in one group, and it
+cannot audit that in itself, because it re-reads its own reasoning and agrees.
+
+So the labels were attacked from both directions by independent agents: sixteen
+tasked with splitting one group each, three lenses hunting cross-group merges
+(shared infrastructure, wrapper-and-wrapped, upstream-downstream), and a skeptic
+refuting every proposal.
+
+**Result: one proposal from nineteen attackers, and it was refuted.** Nothing
+changed.
+
+The single proposal argued that `sdxl-lora-accuracy` should split, on the
+grounds that one failure's degradation was resolution-conditioned while the rest
+were resolution-invariant. The skeptic falsified that from the parametrize list
+quoted in the failures' own stacks: of four `test_crossattndown` parameter
+combinations, three failed and the fourth is absent from the run, and the two
+that differ *only* in image resolution land on opposite sides — one fails at
+0.5315, the other passes. Resolution-conditioning is a property the retained
+group already exhibits, so it cannot be the discriminator that separates
+anything from it. Every PCC value the skeptic quoted was checked against the
+payload and matches.
+
+Two caveats keep this from being stronger than it is:
+
+- The attackers share a model family with the labeller, so correlated blind
+  spots are not excluded. This raises confidence; it does not substitute for a
+  second human.
+- Eighteen agents returning nothing is consistent with solid groupings and also
+  with attacking being harder than defending. Each was verified to have read
+  both the labels and the raw payloads — 8 to 49 tool calls apiece — so the
+  empty results are reasoned rather than idle, but that is the limit of what can
+  be claimed.
+
+What it does establish: the probe's headline — precision 0.981 against recall
+0.677 — does not rest on groupings that fall over when pushed.
+
 ### Licence handling
 
 GitHub reports `NOASSERTION` for a `LICENSE` file it cannot classify, which is
