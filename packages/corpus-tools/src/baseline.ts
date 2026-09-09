@@ -23,6 +23,7 @@ import {
 } from '@cruxci/core';
 import { fingerprint, type FingerprintOptions } from '@cruxci/engine';
 import type { CorpusRun, RunLabels } from './schema.ts';
+import { detectFramework } from './status.ts';
 
 export interface BaselineRunResult {
   corpusRunId: string;
@@ -37,6 +38,18 @@ export interface BaselineRunResult {
   f1: number;
 }
 
+export interface StratumResult {
+  key: string;
+  /** Failures of this stratum that were scored. */
+  failures: number;
+  counts: PairCounts;
+  precision: number;
+  recall: number;
+  f1: number;
+  interval: Interval;
+  runs: number;
+}
+
 export interface BaselineReport {
   strategy: string;
   labeler: string;
@@ -47,6 +60,23 @@ export interface BaselineReport {
   aggregate: { precision: number; recall: number; f1: number };
   f1Interval: Interval;
   perRun: BaselineRunResult[];
+  /**
+   * F1 restricted to pairs whose BOTH members come from the same framework.
+   *
+   * The aggregate blends regimes that are not comparable. In this corpus the
+   * deepest-app-frame signal — §8 weights it 0.60 — is available for 75% of
+   * junit-jvm failures and 0% of jest ones, so a single number describes
+   * whichever family happens to dominate the sample rather than the algorithm.
+   */
+  perFramework: StratumResult[];
+  /** Same, by repository: concentration is the other way an aggregate misleads. */
+  perRepo: StratumResult[];
+  /**
+   * Pairs spanning two different frameworks. Counted in the aggregate, absent
+   * from every per-framework row, so the two need not add up and the reader is
+   * told why.
+   */
+  crossFrameworkPairs: number;
 }
 
 /**
@@ -125,6 +155,8 @@ export function runBaseline(
     options.seed === undefined ? {} : { seed: options.seed },
   );
 
+  const strata = stratify(runs, labelsByRun, perRun, group, options.seed);
+
   return {
     strategy: options.strategy ?? 'naive-loose-fingerprint',
     labeler: options.labeler,
@@ -135,6 +167,102 @@ export function runBaseline(
     aggregate: { precision: agg.precision, recall: agg.recall, f1: agg.f1 },
     f1Interval: interval,
     perRun,
+    perFramework: strata.perFramework,
+    perRepo: strata.perRepo,
+    crossFrameworkPairs: strata.crossFrameworkPairs,
+  };
+}
+
+/**
+ * Score each framework and each repository on its own pairs.
+ *
+ * A pair belongs to a framework only when both of its failures do. That is the
+ * only definition that does not require inventing an answer for a pair spanning
+ * two families, and the pairs it leaves out are reported rather than dropped
+ * silently.
+ */
+function stratify(
+  runs: readonly CorpusRun[],
+  labelsByRun: ReadonlyMap<string, RunLabels>,
+  perRun: readonly BaselineRunResult[],
+  group: (run: CorpusRun) => Map<string, string>,
+  seed: number | undefined,
+): { perFramework: StratumResult[]; perRepo: StratumResult[]; crossFrameworkPairs: number } {
+  const scoredIds = new Set(perRun.map((r) => r.corpusRunId));
+  const fwCounts = new Map<string, PairCounts[]>();
+  const fwFailures = new Map<string, number>();
+  const repoCounts = new Map<string, PairCounts[]>();
+  const repoFailures = new Map<string, number>();
+  let cross = 0;
+
+  for (const run of runs) {
+    if (!scoredIds.has(run.corpusRunId)) continue;
+    const labels = labelsByRun.get(run.corpusRunId)!;
+    const scored = run.failures.filter((f) => labels.labels[f.failureId] !== undefined);
+    const predictedAll = group(run);
+    const rows = scored.map((f) => ({
+      framework: detectFramework(f.sourceFile, f.stackText, f.errorType),
+      predicted: predictedAll.get(f.failureId) ?? `unpredicted:${f.failureId}`,
+      truth: labels.labels[f.failureId]!.group,
+    }));
+
+    for (let i = 0; i < rows.length; i++) {
+      for (let j = i + 1; j < rows.length; j++) {
+        if (rows[i]!.framework !== rows[j]!.framework) cross++;
+      }
+    }
+
+    const byFramework = new Map<string, typeof rows>();
+    for (const row of rows) {
+      const bucket = byFramework.get(row.framework);
+      if (bucket === undefined) byFramework.set(row.framework, [row]);
+      else bucket.push(row);
+    }
+    for (const [framework, bucket] of byFramework) {
+      fwFailures.set(framework, (fwFailures.get(framework) ?? 0) + bucket.length);
+      if (bucket.length < 2) continue;
+      const c = pairCounts(
+        bucket.map((b) => b.predicted),
+        bucket.map((b) => b.truth),
+      );
+      (fwCounts.get(framework) ?? fwCounts.set(framework, []).get(framework)!).push(c);
+    }
+
+    const repo = run.source.repo;
+    repoFailures.set(repo, (repoFailures.get(repo) ?? 0) + rows.length);
+    if (rows.length >= 2) {
+      const c = pairCounts(
+        rows.map((b) => b.predicted),
+        rows.map((b) => b.truth),
+      );
+      (repoCounts.get(repo) ?? repoCounts.set(repo, []).get(repo)!).push(c);
+    }
+  }
+
+  const build = (
+    counts: Map<string, PairCounts[]>,
+    failures: Map<string, number>,
+  ): StratumResult[] =>
+    [...counts]
+      .map(([key, list]) => {
+        const score = prf(sumPairCounts(list));
+        return {
+          key,
+          failures: failures.get(key) ?? 0,
+          counts: sumPairCounts(list),
+          precision: score.precision,
+          recall: score.recall,
+          f1: score.f1,
+          interval: bootstrapPairF1(list, seed === undefined ? {} : { seed }),
+          runs: list.length,
+        };
+      })
+      .sort((a, b) => b.counts.truePositives + b.counts.falsePositives - (a.counts.truePositives + a.counts.falsePositives) || a.key.localeCompare(b.key));
+
+  return {
+    perFramework: build(fwCounts, fwFailures),
+    perRepo: build(repoCounts, repoFailures),
+    crossFrameworkPairs: cross,
   };
 }
 
@@ -164,6 +292,36 @@ export function formatBaselineReport(r: BaselineReport): string {
     `F1 95% bootstrap over runs: [${pct(r.f1Interval.lower)}, ${pct(r.f1Interval.upper)}] ` +
       `(n=${r.f1Interval.n} runs)`,
   );
+  if (r.perFramework.length > 0) {
+    lines.push('');
+    lines.push('per-framework F1 (pairs where both failures share a framework):');
+    const w = Math.max(10, ...r.perFramework.map((x) => x.key.length));
+    for (const st of r.perFramework) {
+      lines.push(
+        `  ${st.key.padEnd(w)}  F1 ${pct(st.f1)}  [${pct(st.interval.lower)}, ${pct(st.interval.upper)}]  ` +
+          `P ${pct(st.precision)}  R ${pct(st.recall)}  ` +
+          `${String(st.failures).padStart(4)} failures, ${st.counts.truePositives + st.counts.falsePositives + st.counts.falseNegatives + st.counts.trueNegatives} pairs, ${st.runs} run(s)`,
+      );
+    }
+    lines.push(
+      `  ${r.crossFrameworkPairs} pair(s) span two frameworks: counted in the aggregate, ` +
+        `absent from every row above, so these need not sum to the total.`,
+    );
+    lines.push(
+      '  A single aggregate blends regimes that are not comparable — the app-frame ' +
+        'signal §8 weights at 0.60 is available for some of these families and not others.',
+    );
+  }
+  if (r.perRepo.length > 1) {
+    lines.push('');
+    lines.push('per-repository F1 (the corpus is concentrated; check no one repo carries the result):');
+    const w = Math.max(10, ...r.perRepo.map((x) => x.key.length));
+    for (const st of r.perRepo) {
+      lines.push(
+        `  ${st.key.padEnd(w)}  F1 ${pct(st.f1)}  ${String(st.failures).padStart(4)} failures, ${st.runs} run(s)`,
+      );
+    }
+  }
   lines.push('');
   lines.push('per-run F1 (one bad run hiding inside a good mean is the failure mode):');
   const sorted = [...r.perRun].sort((a, b) => (a.f1 || 0) - (b.f1 || 0));

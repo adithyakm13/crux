@@ -221,6 +221,11 @@ against the corpus's, and declares any framework that is a material share of the
 corpus but missing from the sample — currently jest, at 25% of corpus failures
 and 0% of the sample, because no run of 5-40 failures is dominated by it.
 
-**Still open:** per-framework and per-repository F1 reporting in the baseline
-and clustering scores, so a result cannot be read as global when it describes
-one family.
+**Per-framework and per-repository F1 now exist** in `corpus baseline`. A pair
+belongs to a framework only when both of its failures do — the only definition
+that does not invent an answer for a cross-family pair — and the pairs that span
+two frameworks are counted in the aggregate and reported separately, so the rows
+need not sum to the total and the reader is told why.
+
+**Still open:** the same stratification for the clustering scores, once
+clustering exists.

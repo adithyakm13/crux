@@ -307,3 +307,30 @@ test('bootstrapProportion ignores empty runs rather than dividing by zero', () =
   assert.ok(Number.isFinite(iv.lower) && Number.isFinite(iv.upper));
   assert.ok(iv.point > 0.8 && iv.point < 0.9);
 });
+
+test('a bootstrap over one unit reports no interval rather than a fake one', () => {
+  // Resampling a single run draws that same run every time, so the percentiles
+  // collapse onto the point estimate. Printing [0.833, 0.833] reads as
+  // certainty when it means the opposite: nothing exists to disagree with it.
+  const one = bootstrapPairF1([
+    { truePositives: 5, falsePositives: 2, falseNegatives: 1, trueNegatives: 20 },
+  ]);
+  assert.equal(one.n, 1);
+  assert.ok(Number.isFinite(one.point), 'the point estimate is still real');
+  assert.ok(Number.isNaN(one.lower) && Number.isNaN(one.upper));
+  // And it must not pass a gate, since gatePasses requires a finite lower bound.
+  assert.equal(gatePasses(one, 0.1), false);
+
+  const oneProp = bootstrapProportion([{ successes: 9, total: 10 }]);
+  assert.equal(oneProp.n, 1);
+  assert.ok(Number.isNaN(oneProp.lower) && Number.isNaN(oneProp.upper));
+
+  // Two units can disagree, so an interval is meaningful again.
+  const two = bootstrapPairF1([
+    { truePositives: 5, falsePositives: 2, falseNegatives: 1, trueNegatives: 20 },
+    { truePositives: 0, falsePositives: 8, falseNegatives: 4, trueNegatives: 3 },
+  ]);
+  assert.equal(two.n, 2);
+  assert.ok(Number.isFinite(two.lower) && Number.isFinite(two.upper));
+  assert.ok(two.upper > two.lower, 'two disagreeing runs must produce a real width');
+});

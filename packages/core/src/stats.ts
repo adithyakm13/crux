@@ -228,6 +228,13 @@ export function bootstrapPairF1(
     return { point: NaN, lower: NaN, upper: NaN, level, method: 'bootstrap-percentile', n: 0 };
   }
   const point = prf(sumPairCounts(perRun)).f1;
+  if (n === 1) {
+    // Resampling one unit draws that same unit every time, so the percentiles
+    // collapse onto the point estimate and [0.83, 0.83] reads as certainty when
+    // it means the opposite: there is no second run to disagree with the first.
+    // Report the point with no bounds instead.
+    return { point, lower: NaN, upper: NaN, level, method: 'bootstrap-percentile', n: 1 };
+  }
   const draws: number[] = [];
   for (let b = 0; b < resamples; b++) {
     const acc = { truePositives: 0, falsePositives: 0, falseNegatives: 0, trueNegatives: 0 };
@@ -338,6 +345,11 @@ export function bootstrapProportion(
     return { point: NaN, lower: NaN, upper: NaN, level, method: 'bootstrap-percentile', n: 0 };
   }
   const point = pooledSuccesses / pooledTotal;
+  if (n === 1) {
+    // See bootstrapPairF1: one unit carries no variance information, and a
+    // degenerate interval is worse than an absent one because it looks precise.
+    return { point, lower: NaN, upper: NaN, level, method: 'bootstrap-percentile', n: 1 };
+  }
   const draws: number[] = [];
   for (let b = 0; b < resamples; b++) {
     let s = 0;
