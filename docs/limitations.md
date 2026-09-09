@@ -276,4 +276,18 @@ yield was already known:
 - The download budget is per run, not per repository. A repository-wide cap is
   exhausted by the newest runs, which are often the least interesting.
 
-Cost on that repository: 0.1 MB across 9 artifacts to reach a correct verdict.
+**The correct scan is expensive, and that is the trade.** Measured over three
+repositories at default depth: 33.5 MB across 54 artifacts, one verdict per
+~11 MB. The old name-only scan was nearly free and wrong; this one is right and
+costs real bandwidth and minutes. Probing a 771-repository code-search pool this
+way would run to gigabytes and hours.
+
+**So use it as the second stage, not the first.** Shortlist cheaply — code
+search, stars, recent activity, a live artifact whose *name* looks plausible —
+then probe only the shortlist, and only then harvest. The name filter is a fine
+way to decide what to probe. It was only wrong as a way to decide what is
+productive.
+
+`--runs` and `--downloads` trade depth for speed, but lowering them below the
+harvest's depth reintroduces exactly the disagreement this command exists to
+remove: druxt/druxt.js is productive at 25 runs and looks dead at 10.
