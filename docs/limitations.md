@@ -236,3 +236,28 @@ need not sum to the total and the reader is told why.
 
 **Still open:** the same stratification for the clustering scores, once
 clustering exists.
+
+## Targeted harvesting for a specific framework has near-zero yield
+
+Closing the jest and Playwright gap by harvesting was tried and mostly failed. A
+code search built a pool of 771 candidate repositories using jest and Playwright
+reporters; filtering for recent activity and a live test-like artifact left 27;
+harvesting 11 of those produced **4 usable runs from 1 repository**.
+
+Two causes, one of them a mistake in the scan rather than in the world:
+
+- The scan filtered on artifact *names* matching `report|junit|jest|test-result`,
+  while the harvester dispatches on file *contents*. A repository uploading
+  `playwright-report/` containing only HTML passes the scan and yields nothing.
+  A parseability check belongs in the scan.
+- The rest is retention and green runs: `all artifacts expired`, and
+  `no failures in run` — artifacts parsed fine, the run simply passed.
+
+**What this justifies:** within-run slicing was the right way to reach a
+framework trapped in suite collapses, not a workaround for insufficient
+harvesting. The 4 runs that did land were worth it — they were the second jest
+repository, which is what revealed that jest's 0-of-1029 app-frame rate was a
+property of one project's harness rather than of jest.
+
+**Roadmap:** make the scan validate that at least one artifact actually parses
+before counting a repository as productive.

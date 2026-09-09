@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:druxt/druxt.js:33619018553:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "druxt/druxt.js",
+    "providerRunId": "33619018553",
+    "runAttempt": 1,
+    "url": "https://github.com/druxt/druxt.js/actions/runs/33619018553",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "ea518d88e2b5822798975a590c33a129ae826e42",
+    "headBranch": "feature/docgen-deprecations",
+    "artifactIds": [
+      "9842212823"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-09T13:39:21.052Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 393,
+    "failures": 8,
+    "passed": 385,
+    "skipped": 0,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 10
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "sectionFor identifies the documentation sections",
+      "suitePath": [
+        "normalisePath",
+        "sectionFor identifies the documentation sections"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2,
+      "errorType": null,
+      "message": "Error: expect(received).toBe(expected) // Object.is equality",
+      "stackText": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"guide\"\nReceived: null\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/docs/nuxt/test/unit/seo.test.js:25:59)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "seoHead serves the generated card for section pages and falls back to the site card",
+      "suitePath": [
+        "normalisePath",
+        "seoHead serves the generated card for section pages and falls back to the site card"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2,
+      "errorType": null,
+      "message": "Error: expect(received).toBe(expected) // Object.is equality",
+      "stackText": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"https://druxtjs.org/og/guide/theming.png\"\nReceived: \"https://druxtjs.org/og/site.png\"\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/docs/nuxt/test/unit/seo.test.js:128:39)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "routes and URLs section pages get card URLs, everything else falls back",
+      "suitePath": [
+        "pageFromDoc",
+        "routes and URLs section pages get card URLs, everything else falls back"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2,
+      "errorType": null,
+      "message": "Error: expect(received).toBe(expected) // Object.is equality",
+      "stackText": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"https://druxtjs.org/og/guide.png\"\nReceived: null\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/docs/nuxt/test/unit/og-card.test.js:104:35)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "buildLlmsTxt lists guide and module documents under their own headings",
+      "suitePath": [
+        "buildLlmsTxt",
+        "buildLlmsTxt lists guide and module documents under their own headings"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2,
+      "errorType": null,
+      "message": "Error: expect(received).toContain(expected) // indexOf",
+      "stackText": "Error: expect(received).toContain(expected) // indexOf\n\nExpected substring: \"## Guide\"\nReceived string:    \"# DruxtJS·\n> Druxt is a framework for building fully decoupled Drupal and Nuxt.js applications and sites.·\nDruxt connects a Drupal backend to a Nuxt frontend. It spans two ecosystems: Drupal modules (PHP) that expose JSON:API resources, and Nuxt/Vue packages (JavaScript) that render them.·\nThe Guide is written by hand. The API reference is generated from the package source by druxt-docgen, so it tracks the released code rather than being maintained separately.·\n## Modules·\n- [Entity](https://example.test/modules/entity?utm_source=llms-txt&utm_medium=ai&utm_campaign=syndication): Entity components.\n\"\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/docs/nuxt/test/unit/llms-txt.test.js:23:17)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "buildLlmsTxt tags every content link so the file can be shown to earn its place",
+      "suitePath": [
+        "buildLlmsTxt",
+        "buildLlmsTxt tags every content link so the file can be shown to earn its place"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": null,
+      "message": "Error: expect(received).toContain(expected) // indexOf",
+      "stackText": "Error: expect(received).toContain(expected) // indexOf\n\nExpected substring: \"?utm_source=llms-txt&utm_medium=ai&utm_campaign=syndication\"\nReceived string:    \"# DruxtJS·\n> Druxt is a framework for building fully decoupled Drupal and Nuxt.js applications and sites.·\nDruxt connects a Drupal backend to a Nuxt frontend. It spans two ecosystems: Drupal modules (PHP) that expose JSON:API resources, and Nuxt/Vue packages (JavaScript) that render them.·\nThe Guide is written by hand. The API reference is generated from the package source by druxt-docgen, so it tracks the released code rather than being maintained separately.\n\"\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/docs/nuxt/test/unit/llms-txt.test.js:31:17)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "buildLlmsTxt orders documents by weight, then route",
+      "suitePath": [
+        "buildLlmsTxt",
+        "buildLlmsTxt orders documents by weight, then route"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": null,
+      "message": "Error: expect(received).toBeLessThan(expected)",
+      "stackText": "Error: expect(received).toBeLessThan(expected)\n\nExpected: < -1\nReceived:   -1\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/docs/nuxt/test/unit/llms-txt.test.js:38:32)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "buildLlmsTxt omits a section entirely when it has no documents",
+      "suitePath": [
+        "buildLlmsTxt",
+        "buildLlmsTxt omits a section entirely when it has no documents"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "Error: expect(received).toContain(expected) // indexOf",
+      "stackText": "Error: expect(received).toContain(expected) // indexOf\n\nExpected substring: \"## Guide\"\nReceived string:    \"# DruxtJS·\n> Druxt is a framework for building fully decoupled Drupal and Nuxt.js applications and sites.·\nDruxt connects a Drupal backend to a Nuxt frontend. It spans two ecosystems: Drupal modules (PHP) that expose JSON:API resources, and Nuxt/Vue packages (JavaScript) that render them.·\nThe Guide is written by hand. The API reference is generated from the package source by druxt-docgen, so it tracks the released code rather than being maintained separately.\n\"\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/docs/nuxt/test/unit/llms-txt.test.js:42:17)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "buildLlmsTxt omits the trailing colon for a document with no description",
+      "suitePath": [
+        "buildLlmsTxt",
+        "buildLlmsTxt omits the trailing colon for a document with no description"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": null,
+      "message": "Error: expect(received).toContain(expected) // indexOf",
+      "stackText": "Error: expect(received).toContain(expected) // indexOf\n\nExpected substring: \"- [Theming](https://example.test/guide/theming?utm_source=llms-txt&utm_medium=ai&utm_campaign=syndication)\n\"\nReceived string:    \"# DruxtJS·\n> Druxt is a framework for building fully decoupled Drupal and Nuxt.js applications and sites.·\nDruxt connects a Drupal backend to a Nuxt frontend. It spans two ecosystems: Drupal modules (PHP) that expose JSON:API resources, and Nuxt/Vue packages (JavaScript) that render them.·\nThe Guide is written by hand. The API reference is generated from the package source by druxt-docgen, so it tracks the released code rather than being maintained separately.\n\"\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/docs/nuxt/test/unit/llms-txt.test.js:76:17)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

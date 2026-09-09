@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:druxt/druxt.js:33850630911:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "druxt/druxt.js",
+    "providerRunId": "33850630911",
+    "runAttempt": 1,
+    "url": "https://github.com/druxt/druxt.js/actions/runs/33850630911",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "f103e74a02e18a36e71db0f6788dc17b2671de80",
+    "headBranch": "feature/docs-api-sweep",
+    "artifactIds": [
+      "9928260447"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-09T13:39:02.156Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 404,
+    "failures": 7,
+    "passed": 397,
+    "skipped": 0,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 10
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "DruxtDocgen processVue injects type and default value from vue-docgen-api",
+      "suitePath": [
+        "DruxtDocgen",
+        "DruxtDocgen processVue injects type and default value from vue-docgen-api"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2,
+      "errorType": null,
+      "message": "Error: expect(received).toBe(expected) // Object.is equality",
+      "stackText": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"false\"\nReceived: false\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/packages/docgen/test/index.test.js:225:37)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "DruxtDocgen writeTemplateData writes generated markdown with frontmatter",
+      "suitePath": [
+        "DruxtDocgen",
+        "DruxtDocgen writeTemplateData writes generated markdown with frontmatter"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "TypeError: Cannot read properties of undefined (reading 'push')",
+      "stackText": "TypeError: Cannot read properties of undefined (reading 'push')\n    at DruxtDocgen.writeTemplateData (/home/runner/work/druxt.js/druxt.js/packages/docgen/src/index.js:10789:19)\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/packages/docgen/test/index.test.js:302:14)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "DruxtDocgen writeTemplateData titles a package index after the package, not the first symbol",
+      "suitePath": [
+        "DruxtDocgen",
+        "DruxtDocgen writeTemplateData titles a package index after the package, not the first symbol"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": null,
+      "message": "TypeError: Cannot read properties of undefined (reading 'push')",
+      "stackText": "TypeError: Cannot read properties of undefined (reading 'push')\n    at DruxtDocgen.writeTemplateData (/home/runner/work/druxt.js/druxt.js/packages/docgen/src/index.js:10789:19)\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/packages/docgen/test/index.test.js:311:14)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "DruxtDocgen writeTemplateData leaves per-symbol page titles alone",
+      "suitePath": [
+        "DruxtDocgen",
+        "DruxtDocgen writeTemplateData leaves per-symbol page titles alone"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": null,
+      "message": "TypeError: Cannot read properties of undefined (reading 'push')",
+      "stackText": "TypeError: Cannot read properties of undefined (reading 'push')\n    at DruxtDocgen.writeTemplateData (/home/runner/work/druxt.js/druxt.js/packages/docgen/src/index.js:10789:19)\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/packages/docgen/test/index.test.js:318:14)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "DruxtDocgen writeTemplateData flags the page when the documented symbol is deprecated",
+      "suitePath": [
+        "DruxtDocgen",
+        "DruxtDocgen writeTemplateData flags the page when the documented symbol is deprecated"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "TypeError: Cannot read properties of undefined (reading 'push')",
+      "stackText": "TypeError: Cannot read properties of undefined (reading 'push')\n    at DruxtDocgen.writeTemplateData (/home/runner/work/druxt.js/druxt.js/packages/docgen/src/index.js:10789:19)\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/packages/docgen/test/index.test.js:325:14)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "DruxtDocgen writeTemplateData flags a class whose root is the constructor signature",
+      "suitePath": [
+        "DruxtDocgen",
+        "DruxtDocgen writeTemplateData flags a class whose root is the constructor signature"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": null,
+      "message": "TypeError: Cannot read properties of undefined (reading 'push')",
+      "stackText": "TypeError: Cannot read properties of undefined (reading 'push')\n    at DruxtDocgen.writeTemplateData (/home/runner/work/druxt.js/druxt.js/packages/docgen/src/index.js:10789:19)\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/packages/docgen/test/index.test.js:333:14)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "DruxtDocgen writeTemplateData does not flag the page when only a member is deprecated",
+      "suitePath": [
+        "DruxtDocgen",
+        "DruxtDocgen writeTemplateData does not flag the page when only a member is deprecated"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "TypeError: Cannot read properties of undefined (reading 'push')",
+      "stackText": "TypeError: Cannot read properties of undefined (reading 'push')\n    at DruxtDocgen.writeTemplateData (/home/runner/work/druxt.js/druxt.js/packages/docgen/src/index.js:10789:19)\n    at Object.<anonymous> (/home/runner/work/druxt.js/druxt.js/packages/docgen/test/index.test.js:343:14)\n    at Promise.then.completed (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:121:9)\n    at run (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/home/runner/work/druxt.js/druxt.js/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/home/runner/work/druxt.js/druxt.js/node_modules/jest-runner/build/runTest.js:444:34)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

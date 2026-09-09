@@ -163,28 +163,57 @@ Playwright-based CI actually uploads.
 meaningful signal in a stack trace", and §8 gives "shared deepest app frame" a
 weight of 0.60. Measured over the committed corpus:
 
-| Framework | Failures | With an app frame | Rate (Wilson 95%) |
-|---|---|---|---|
-| jest | 1029 | 0 | 0.000 [0.000, 0.004] |
-| unidentified | 602 | 27 | 0.045 [0.031, 0.064] |
-| playwright | 164 | 35 | 0.213 [0.158, 0.282] |
-| junit-jvm | 134 | 95 | 0.709 [0.627, 0.779] |
-| pytest | 108 | 40 | 0.370 [0.285, 0.464] |
-| vitest | 34 | 16 | 0.471 [0.315, 0.633] |
-| go-test | 5 | 0 | 0.000 [0.000, 0.434] |
-| **total** | **2076** | **213** | **0.103 [0.090, 0.116]** |
+| Framework | Failures | With an app frame | Repos | Rate (Wilson 95%) |
+|---|---|---|---|---|
+| jest | 1059 | 12 | 2* | 0.011 [0.006, 0.020] |
+| unidentified | 602 | 27 | 5* | 0.045 [0.031, 0.064] |
+| playwright | 164 | 35 | 6 | 0.213 [0.158, 0.282] |
+| junit-jvm | 134 | 95 | 4 | 0.709 [0.627, 0.779] |
+| pytest | 108 | 40 | 6 | 0.370 [0.285, 0.464] |
+| vitest | 34 | 16 | 2 | 0.471 [0.315, 0.633] |
+| go-test | 5 | 0 | **1** | 0.000 [0.000, 0.434] |
+| **total** | **2106** | **225** | **20** | **0.107 [0.094, 0.121]** |
 
-Measured over 104 committed run(s) across 19 repositories (corpus `4a7462d00706`). Regenerate with `pnpm corpus frames --markdown`.
+A **bold** repository count means the row is one repository, and `*` means one repository supplies over 80% of it. Such a row is a claim about those repositories, not about the framework.
+
+Measured over 108 committed run(s) across 20 repositories (corpus `d0add43ea35a`). Regenerate with `pnpm corpus frames --markdown`.
+
+**The split is by repository at least as much as by framework, and that took a
+second repository to see.** jest read 0 of 1029 across every measurement until a
+second jest project entered the corpus and returned 12 of 30 — 0.400
+[0.246, 0.577], an interval that does not overlap the first:
+
+| Repository | jest failures | With an app frame |
+|---|---|---|
+| opennextjs/opennextjs-netlify | 1029 | 0.000 [0.000, 0.004] |
+| druxt/druxt.js | 30 | 0.400 [0.246, 0.577] |
+
+Same framework, opposite results. Next.js's e2e harness wraps every frame in its
+own machinery, so nothing application-level survives; ordinary jest unit tests
+keep their call chain. "jest has no app frames" was a claim about one project.
+
+`corpus frames` now reports a repository count per row and flags any row that is
+one repository, or that one repository supplies more than 80% of. Three of the
+seven rows are currently flagged. A flagged row is a claim about those
+repositories, not about the framework — this is the third time in this project
+that a single-repository sample produced a confident wrong conclusion, so it is
+now surfaced by the tool rather than left to whoever reads the table.
+
+What survives the correction:
 
 The split is the finding, not the total. Two framework families sit at opposite
 ends, and the reason is structural rather than incidental:
 
-- **jest gives 0 of 1029, playwright 0.213.** For end-to-end runs the only
-  frame is the spec file, which classifies as `test`, because the failure
-  happened inside the framework's own machinery acting on behalf of test code.
-  For jest the same holds via its own runner frames.
-- **junit-jvm gives 0.709, vitest 0.471, pytest 0.370.** JVM, Node unit and
-  Python stacks carry the application call chain, so the signal is usually there.
+- **End-to-end suites lose the signal.** Playwright gives 0.213 and Next.js's
+  jest e2e harness gives 0 of 1029: the only frame is the spec file, which
+  classifies as `test`, because the failure happened inside the framework's own
+  machinery acting on behalf of test code.
+- **Unit suites keep it.** junit-jvm 0.709, vitest 0.471, jest-in-druxt 0.400,
+  pytest 0.370. JVM, Node and Python stacks carry the application call chain.
+
+So the axis is closer to *end-to-end versus unit* than to any particular
+framework, and no row should be read as a property of a framework until several
+repositories contribute to it.
 
 So §8's 0.60 weight is not wrong, but it is **unavailable for a large share of
 real CI failures**, and which share depends entirely on the framework mix.
