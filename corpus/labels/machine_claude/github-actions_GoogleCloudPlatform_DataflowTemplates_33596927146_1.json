@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:33596927146:1",
   "labeler": "machine:claude",
-  "labeledAt": "2026-09-09T15:13:02.734Z",
+  "labeledAt": "2026-09-09T15:16:57.970Z",
   "context": "full",
   "labels": {
     "f0001": {

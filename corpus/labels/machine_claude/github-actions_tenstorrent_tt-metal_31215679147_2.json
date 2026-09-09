@@ -2,108 +2,108 @@
   "schemaVersion": 1,
   "corpusRunId": "github-actions:tenstorrent/tt-metal:31215679147:2",
   "labeler": "machine:claude",
-  "labeledAt": "2026-09-09T15:13:02.734Z",
+  "labeledAt": "2026-09-09T15:16:57.971Z",
   "context": "full",
   "labels": {
+    "f0003": {
+      "group": "bge-m3-model-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Ten failures, one cause, merged on review after first being split in two. tests.nightly.single_card.bge_m3.test_ci_dispatch reports \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above\" — and the log above is the other half: models.demos.wormhole.bge_m3.tests.pcc.test_model failing at test_model.py:76 with PCC 0.788-0.881. Same model, and they alternate one-for-one across five runs. The dispatch test is a wrapper reporting the PCC failure, not an independent fault. Splitting them was reading the symptom (a wrapper deferring to a log) instead of the cause."
+    },
+    "f0005": {
+      "group": "bge-m3-model-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Ten failures, one cause, merged on review after first being split in two. tests.nightly.single_card.bge_m3.test_ci_dispatch reports \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above\" — and the log above is the other half: models.demos.wormhole.bge_m3.tests.pcc.test_model failing at test_model.py:76 with PCC 0.788-0.881. Same model, and they alternate one-for-one across five runs. The dispatch test is a wrapper reporting the PCC failure, not an independent fault. Splitting them was reading the symptom (a wrapper deferring to a log) instead of the cause."
+    },
+    "f0007": {
+      "group": "bge-m3-model-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Ten failures, one cause, merged on review after first being split in two. tests.nightly.single_card.bge_m3.test_ci_dispatch reports \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above\" — and the log above is the other half: models.demos.wormhole.bge_m3.tests.pcc.test_model failing at test_model.py:76 with PCC 0.788-0.881. Same model, and they alternate one-for-one across five runs. The dispatch test is a wrapper reporting the PCC failure, not an independent fault. Splitting them was reading the symptom (a wrapper deferring to a log) instead of the cause."
+    },
+    "f0009": {
+      "group": "bge-m3-model-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Ten failures, one cause, merged on review after first being split in two. tests.nightly.single_card.bge_m3.test_ci_dispatch reports \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above\" — and the log above is the other half: models.demos.wormhole.bge_m3.tests.pcc.test_model failing at test_model.py:76 with PCC 0.788-0.881. Same model, and they alternate one-for-one across five runs. The dispatch test is a wrapper reporting the PCC failure, not an independent fault. Splitting them was reading the symptom (a wrapper deferring to a log) instead of the cause."
+    },
+    "f0011": {
+      "group": "bge-m3-model-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Ten failures, one cause, merged on review after first being split in two. tests.nightly.single_card.bge_m3.test_ci_dispatch reports \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above\" — and the log above is the other half: models.demos.wormhole.bge_m3.tests.pcc.test_model failing at test_model.py:76 with PCC 0.788-0.881. Same model, and they alternate one-for-one across five runs. The dispatch test is a wrapper reporting the PCC failure, not an independent fault. Splitting them was reading the symptom (a wrapper deferring to a log) instead of the cause."
+    },
+    "f0004": {
+      "group": "bge-m3-model-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Ten failures, one cause, merged on review after first being split in two. tests.nightly.single_card.bge_m3.test_ci_dispatch reports \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above\" — and the log above is the other half: models.demos.wormhole.bge_m3.tests.pcc.test_model failing at test_model.py:76 with PCC 0.788-0.881. Same model, and they alternate one-for-one across five runs. The dispatch test is a wrapper reporting the PCC failure, not an independent fault. Splitting them was reading the symptom (a wrapper deferring to a log) instead of the cause."
+    },
+    "f0006": {
+      "group": "bge-m3-model-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Ten failures, one cause, merged on review after first being split in two. tests.nightly.single_card.bge_m3.test_ci_dispatch reports \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above\" — and the log above is the other half: models.demos.wormhole.bge_m3.tests.pcc.test_model failing at test_model.py:76 with PCC 0.788-0.881. Same model, and they alternate one-for-one across five runs. The dispatch test is a wrapper reporting the PCC failure, not an independent fault. Splitting them was reading the symptom (a wrapper deferring to a log) instead of the cause."
+    },
+    "f0008": {
+      "group": "bge-m3-model-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Ten failures, one cause, merged on review after first being split in two. tests.nightly.single_card.bge_m3.test_ci_dispatch reports \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above\" — and the log above is the other half: models.demos.wormhole.bge_m3.tests.pcc.test_model failing at test_model.py:76 with PCC 0.788-0.881. Same model, and they alternate one-for-one across five runs. The dispatch test is a wrapper reporting the PCC failure, not an independent fault. Splitting them was reading the symptom (a wrapper deferring to a log) instead of the cause."
+    },
+    "f0010": {
+      "group": "bge-m3-model-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Ten failures, one cause, merged on review after first being split in two. tests.nightly.single_card.bge_m3.test_ci_dispatch reports \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above\" — and the log above is the other half: models.demos.wormhole.bge_m3.tests.pcc.test_model failing at test_model.py:76 with PCC 0.788-0.881. Same model, and they alternate one-for-one across five runs. The dispatch test is a wrapper reporting the PCC failure, not an independent fault. Splitting them was reading the symptom (a wrapper deferring to a log) instead of the cause."
+    },
+    "f0012": {
+      "group": "bge-m3-model-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Ten failures, one cause, merged on review after first being split in two. tests.nightly.single_card.bge_m3.test_ci_dispatch reports \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above\" — and the log above is the other half: models.demos.wormhole.bge_m3.tests.pcc.test_model failing at test_model.py:76 with PCC 0.788-0.881. Same model, and they alternate one-for-one across five runs. The dispatch test is a wrapper reporting the PCC failure, not an independent fault. Splitting them was reading the symptom (a wrapper deferring to a log) instead of the cause."
+    },
     "f0001": {
       "group": "efficientdet-accuracy",
       "category": "PRODUCT_REGRESSION",
-      "note": "EfficientDet PCC below the 0.92 threshold, plus a 300s pytest-timeout on the same test. Numerical accuracy of the kernel, with the timeout most likely the same run failing slowly."
+      "note": "Same wrapper relationship as bge_m3: test_efficientdetd0 at tests/nightly/.../test_ttnn_efficientdetd0.py:17 wraps test_efficient_det at models/experimental/efficientdetd0/tests/pcc/test_efficient_det.py, and both report PCC below the 0.92 threshold."
     },
     "f0002": {
       "group": "efficientdet-accuracy",
       "category": "PRODUCT_REGRESSION",
-      "note": "EfficientDet PCC below the 0.92 threshold, plus a 300s pytest-timeout on the same test. Numerical accuracy of the kernel, with the timeout most likely the same run failing slowly."
+      "note": "Same wrapper relationship as bge_m3: test_efficientdetd0 at tests/nightly/.../test_ttnn_efficientdetd0.py:17 wraps test_efficient_det at models/experimental/efficientdetd0/tests/pcc/test_efficient_det.py, and both report PCC below the 0.92 threshold."
     },
     "f0014": {
       "group": "efficientdet-accuracy",
       "category": "PRODUCT_REGRESSION",
-      "note": "EfficientDet PCC below the 0.92 threshold, plus a 300s pytest-timeout on the same test. Numerical accuracy of the kernel, with the timeout most likely the same run failing slowly."
+      "note": "Same wrapper relationship as bge_m3: test_efficientdetd0 at tests/nightly/.../test_ttnn_efficientdetd0.py:17 wraps test_efficient_det at models/experimental/efficientdetd0/tests/pcc/test_efficient_det.py, and both report PCC below the 0.92 threshold."
     },
     "f0013": {
-      "group": "efficientdet-accuracy",
-      "category": "PRODUCT_REGRESSION",
-      "note": "EfficientDet PCC below the 0.92 threshold, plus a 300s pytest-timeout on the same test. Numerical accuracy of the kernel, with the timeout most likely the same run failing slowly."
-    },
-    "f0003": {
-      "group": "bge-m3-ci-dispatch",
+      "group": "efficientdet-timeout",
       "category": "UNKNOWN",
-      "note": "Five identical \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above.\" The payload defers to a log crux does not have. This is exactly the case docs/evidence.md counts against the payload-only ceiling."
-    },
-    "f0005": {
-      "group": "bge-m3-ci-dispatch",
-      "category": "UNKNOWN",
-      "note": "Five identical \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above.\" The payload defers to a log crux does not have. This is exactly the case docs/evidence.md counts against the payload-only ceiling."
-    },
-    "f0007": {
-      "group": "bge-m3-ci-dispatch",
-      "category": "UNKNOWN",
-      "note": "Five identical \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above.\" The payload defers to a log crux does not have. This is exactly the case docs/evidence.md counts against the payload-only ceiling."
-    },
-    "f0009": {
-      "group": "bge-m3-ci-dispatch",
-      "category": "UNKNOWN",
-      "note": "Five identical \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above.\" The payload defers to a log crux does not have. This is exactly the case docs/evidence.md counts against the payload-only ceiling."
-    },
-    "f0011": {
-      "group": "bge-m3-ci-dispatch",
-      "category": "UNKNOWN",
-      "note": "Five identical \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above.\" The payload defers to a log crux does not have. This is exactly the case docs/evidence.md counts against the payload-only ceiling."
-    },
-    "f0004": {
-      "group": "model-e2e-pcc",
-      "category": "PRODUCT_REGRESSION",
-      "note": "test_model_full_end_to_end[S4096] PCC 0.788-0.881 against threshold, with ATOL deltas around 7. Repeated across runs with two recurring values, so deterministic rather than flaky."
-    },
-    "f0006": {
-      "group": "model-e2e-pcc",
-      "category": "PRODUCT_REGRESSION",
-      "note": "test_model_full_end_to_end[S4096] PCC 0.788-0.881 against threshold, with ATOL deltas around 7. Repeated across runs with two recurring values, so deterministic rather than flaky."
-    },
-    "f0008": {
-      "group": "model-e2e-pcc",
-      "category": "PRODUCT_REGRESSION",
-      "note": "test_model_full_end_to_end[S4096] PCC 0.788-0.881 against threshold, with ATOL deltas around 7. Repeated across runs with two recurring values, so deterministic rather than flaky."
-    },
-    "f0010": {
-      "group": "model-e2e-pcc",
-      "category": "PRODUCT_REGRESSION",
-      "note": "test_model_full_end_to_end[S4096] PCC 0.788-0.881 against threshold, with ATOL deltas around 7. Repeated across runs with two recurring values, so deterministic rather than flaky."
-    },
-    "f0012": {
-      "group": "model-e2e-pcc",
-      "category": "PRODUCT_REGRESSION",
-      "note": "test_model_full_end_to_end[S4096] PCC 0.788-0.881 against threshold, with ATOL deltas around 7. Repeated across runs with two recurring values, so deterministic rather than flaky."
+      "note": "Same test as the group above but a different failure: pytest-timeout at 300s, raised at test_efficient_det.py:71 rather than the assertion at 118. Kept separate deliberately. A hang and a wrong number are different observable phenomena, and while one broken kernel could produce either, nothing in the payload says it did. This is the split I am least sure of."
     },
     "f0015": {
-      "group": "crossattn-accuracy",
+      "group": "sdxl-lora-accuracy",
       "category": "PRODUCT_REGRESSION",
-      "note": "crossattndown/crossattnup correlation 0.53-0.99 — degraded but not broken, consistent with an accuracy regression in the attention blocks."
+      "note": "Six failures, merged on review from three groups. All live under tests/nightly/single_card/stable_diffusion_xl_base/lora/: crossattndownblock2d (0.53, 0.53, 0.60), crossattnupblock2d (0.99), and unet (0.0057, -0.0035). The UNet is built from those attention blocks, so the severity gradient is error compounding through the network rather than three independent faults — degraded blocks composing into an output uncorrelated with the reference. The first pass split unet from crossattn precisely because the magnitudes differed, which is the same mistake as splitting trino on symptom."
     },
     "f0016": {
-      "group": "crossattn-accuracy",
+      "group": "sdxl-lora-accuracy",
       "category": "PRODUCT_REGRESSION",
-      "note": "crossattndown/crossattnup correlation 0.53-0.99 — degraded but not broken, consistent with an accuracy regression in the attention blocks."
+      "note": "Six failures, merged on review from three groups. All live under tests/nightly/single_card/stable_diffusion_xl_base/lora/: crossattndownblock2d (0.53, 0.53, 0.60), crossattnupblock2d (0.99), and unet (0.0057, -0.0035). The UNet is built from those attention blocks, so the severity gradient is error compounding through the network rather than three independent faults — degraded blocks composing into an output uncorrelated with the reference. The first pass split unet from crossattn precisely because the magnitudes differed, which is the same mistake as splitting trino on symptom."
     },
     "f0017": {
-      "group": "crossattn-accuracy",
+      "group": "sdxl-lora-accuracy",
       "category": "PRODUCT_REGRESSION",
-      "note": "crossattndown/crossattnup correlation 0.53-0.99 — degraded but not broken, consistent with an accuracy regression in the attention blocks."
+      "note": "Six failures, merged on review from three groups. All live under tests/nightly/single_card/stable_diffusion_xl_base/lora/: crossattndownblock2d (0.53, 0.53, 0.60), crossattnupblock2d (0.99), and unet (0.0057, -0.0035). The UNet is built from those attention blocks, so the severity gradient is error compounding through the network rather than three independent faults — degraded blocks composing into an output uncorrelated with the reference. The first pass split unet from crossattn precisely because the magnitudes differed, which is the same mistake as splitting trino on symptom."
     },
     "f0018": {
-      "group": "crossattn-accuracy",
+      "group": "sdxl-lora-accuracy",
       "category": "PRODUCT_REGRESSION",
-      "note": "crossattndown/crossattnup correlation 0.53-0.99 — degraded but not broken, consistent with an accuracy regression in the attention blocks."
+      "note": "Six failures, merged on review from three groups. All live under tests/nightly/single_card/stable_diffusion_xl_base/lora/: crossattndownblock2d (0.53, 0.53, 0.60), crossattnupblock2d (0.99), and unet (0.0057, -0.0035). The UNet is built from those attention blocks, so the severity gradient is error compounding through the network rather than three independent faults — degraded blocks composing into an output uncorrelated with the reference. The first pass split unet from crossattn precisely because the magnitudes differed, which is the same mistake as splitting trino on symptom."
     },
     "f0019": {
-      "group": "unet-output-uncorrelated",
+      "group": "sdxl-lora-accuracy",
       "category": "PRODUCT_REGRESSION",
-      "note": "test_unet correlation 0.0057 and -0.0035 — output essentially uncorrelated with reference, an order of magnitude worse than the crossattn failures. Split from them deliberately: near-zero correlation is a different failure from mild degradation and is unlikely to share a cause."
+      "note": "Six failures, merged on review from three groups. All live under tests/nightly/single_card/stable_diffusion_xl_base/lora/: crossattndownblock2d (0.53, 0.53, 0.60), crossattnupblock2d (0.99), and unet (0.0057, -0.0035). The UNet is built from those attention blocks, so the severity gradient is error compounding through the network rather than three independent faults — degraded blocks composing into an output uncorrelated with the reference. The first pass split unet from crossattn precisely because the magnitudes differed, which is the same mistake as splitting trino on symptom."
     },
     "f0020": {
-      "group": "unet-output-uncorrelated",
+      "group": "sdxl-lora-accuracy",
       "category": "PRODUCT_REGRESSION",
-      "note": "test_unet correlation 0.0057 and -0.0035 — output essentially uncorrelated with reference, an order of magnitude worse than the crossattn failures. Split from them deliberately: near-zero correlation is a different failure from mild degradation and is unlikely to share a cause."
+      "note": "Six failures, merged on review from three groups. All live under tests/nightly/single_card/stable_diffusion_xl_base/lora/: crossattndownblock2d (0.53, 0.53, 0.60), crossattnupblock2d (0.99), and unet (0.0057, -0.0035). The UNet is built from those attention blocks, so the severity gradient is error compounding through the network rather than three independent faults — degraded blocks composing into an output uncorrelated with the reference. The first pass split unet from crossattn precisely because the magnitudes differed, which is the same mistake as splitting trino on symptom."
     }
   }
 }
