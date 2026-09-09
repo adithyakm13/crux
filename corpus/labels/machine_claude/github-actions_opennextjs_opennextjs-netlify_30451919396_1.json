@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:opennextjs/opennextjs-netlify:30451919396:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-09T15:09:00.293Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "prefetch-instant-route-content",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two prefetch tests, three attempts each: the response does not contain the expected string. Retries are separate attempts of one cause."
+    },
+    "f0002": {
+      "group": "prefetch-instant-route-content",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two prefetch tests, three attempts each: the response does not contain the expected string. Retries are separate attempts of one cause."
+    },
+    "f0003": {
+      "group": "prefetch-instant-route-content",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two prefetch tests, three attempts each: the response does not contain the expected string. Retries are separate attempts of one cause."
+    },
+    "f0004": {
+      "group": "prefetch-instant-route-content",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two prefetch tests, three attempts each: the response does not contain the expected string. Retries are separate attempts of one cause."
+    },
+    "f0005": {
+      "group": "prefetch-instant-route-content",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two prefetch tests, three attempts each: the response does not contain the expected string. Retries are separate attempts of one cause."
+    },
+    "f0006": {
+      "group": "prefetch-instant-route-content",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two prefetch tests, three attempts each: the response does not contain the expected string. Retries are separate attempts of one cause."
+    },
+    "f0008": {
+      "group": "server-actions-redirect-timeout",
+      "category": "UNKNOWN",
+      "note": "Three attempts of one test, each exceeding the 60s budget. A hang could be the product or the harness; the payload does not distinguish them."
+    },
+    "f0009": {
+      "group": "server-actions-redirect-timeout",
+      "category": "UNKNOWN",
+      "note": "Three attempts of one test, each exceeding the 60s budget. A hang could be the product or the harness; the payload does not distinguish them."
+    },
+    "f0010": {
+      "group": "server-actions-redirect-timeout",
+      "category": "UNKNOWN",
+      "note": "Three attempts of one test, each exceeding the 60s budget. A hang could be the product or the harness; the payload does not distinguish them."
+    },
+    "f0011": {
+      "group": "asset-prefix-not-200",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three attempts: served assetPrefix bundle does not return 200."
+    },
+    "f0012": {
+      "group": "asset-prefix-not-200",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three attempts: served assetPrefix bundle does not return 200."
+    },
+    "f0013": {
+      "group": "asset-prefix-not-200",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three attempts: served assetPrefix bundle does not return 200."
+    },
+    "f0302": {
+      "group": "non-ascii-cache-tag-invalidation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three attempts: waitForSelector times out after updateTag with a non-ASCII tag, i.e. the invalidation never lands."
+    },
+    "f0306": {
+      "group": "non-ascii-cache-tag-invalidation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three attempts: waitForSelector times out after updateTag with a non-ASCII tag, i.e. the invalidation never lands."
+    },
+    "f0310": {
+      "group": "non-ascii-cache-tag-invalidation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three attempts: waitForSelector times out after updateTag with a non-ASCII tag, i.e. the invalidation never lands."
+    },
+    "f0318": {
+      "group": "app-shell-separate-shells",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three attempts: App Shell prefetching does not produce separate shells per root param."
+    },
+    "f0326": {
+      "group": "app-shell-separate-shells",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three attempts: App Shell prefetching does not produce separate shells per root param."
+    },
+    "f0334": {
+      "group": "app-shell-separate-shells",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three attempts: App Shell prefetching does not produce separate shells per root param."
+    },
+    "f0383": {
+      "group": "deploy-swc-helpers",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three attempts: the custom deploy script fails for the non-hoisted swc-helpers fixture. Deploy tooling, before any assertion runs."
+    },
+    "f0384": {
+      "group": "deploy-swc-helpers",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three attempts: the custom deploy script fails for the non-hoisted swc-helpers fixture. Deploy tooling, before any assertion runs."
+    },
+    "f0385": {
+      "group": "deploy-swc-helpers",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three attempts: the custom deploy script fails for the non-hoisted swc-helpers fixture. Deploy tooling, before any assertion runs."
+    },
+    "f0553": {
+      "group": "deploy-esm-import",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three attempts: deploy script fails during pnpm install for the ESM-import fixture. Kept separate from the swc-helpers deploy failures — different fixture, different output — though a shared deploy-infrastructure cause is plausible and would make this one group."
+    },
+    "f0554": {
+      "group": "deploy-esm-import",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three attempts: deploy script fails during pnpm install for the ESM-import fixture. Kept separate from the swc-helpers deploy failures — different fixture, different output — though a shared deploy-infrastructure cause is plausible and would make this one group."
+    },
+    "f0555": {
+      "group": "deploy-esm-import",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three attempts: deploy script fails during pnpm install for the ESM-import fixture. Kept separate from the swc-helpers deploy failures — different fixture, different output — though a shared deploy-infrastructure cause is plausible and would make this one group."
+    }
+  }
+}

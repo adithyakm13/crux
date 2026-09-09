@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:serilog-contrib/serilog-ui:30238903311:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-09T15:09:00.419Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0002": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0003": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0004": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0005": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0006": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0007": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0008": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0009": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0010": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0011": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0012": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0013": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0014": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0015": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0016": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0017": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    },
+    "f0018": {
+      "group": "esm-spy-unsupported",
+      "category": "TEST_DEFECT",
+      "note": "All 18 identical: `Cannot spy on export \"useSearchParams\". Module namespace is not configurable in ESM.` The test technique is invalid under ESM — nothing about the product is being exercised. Fix the test setup (inject the dependency or mock the module), not the code."
+    }
+  }
+}

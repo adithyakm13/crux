@@ -104,6 +104,28 @@ export interface FailureLabel {
   note?: string;
 }
 
+/**
+ * Labellers whose name starts with this are machine-produced.
+ *
+ * They are stored, versioned and scoreable like any other labeller, and they
+ * are excluded from every Gate 0 count — the labelled-failure total, the
+ * labeller count, the per-category floors, inter-labeler agreement and
+ * separability.
+ *
+ * The reason is not squeamishness. Gate 0 asks whether a *human* can tell these
+ * failures apart from the payload alone; that is the entire thesis under test.
+ * A model's labels scored against a model's clustering measure agreement with
+ * the model. Counting them would make the gate report progress that does not
+ * exist, which is the one failure mode the whole evidence-first design exists
+ * to prevent.
+ */
+export const MACHINE_LABELER_PREFIX = 'machine:';
+
+/** True when this labeller's output must never count as ground truth. */
+export function isMachineLabeler(labeler: string): boolean {
+  return labeler.startsWith(MACHINE_LABELER_PREFIX);
+}
+
 export interface RunLabels {
   schemaVersion: number;
   corpusRunId: string;

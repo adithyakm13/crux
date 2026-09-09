@@ -24,6 +24,7 @@ import {
 import { fingerprint, type FingerprintOptions } from '@cruxci/engine';
 import type { CorpusRun, RunLabels } from './schema.ts';
 import { detectFramework } from './status.ts';
+import { isMachineLabeler } from './schema.ts';
 
 export interface BaselineRunResult {
   corpusRunId: string;
@@ -53,6 +54,8 @@ export interface StratumResult {
 export interface BaselineReport {
   strategy: string;
   labeler: string;
+  /** True when scored against machine labels; the result is a probe, not the spike. */
+  machineLabeled: boolean;
   runsScored: number;
   runsExcluded: { corpusRunId: string; reason: string }[];
   failuresScored: number;
@@ -160,6 +163,7 @@ export function runBaseline(
   return {
     strategy: options.strategy ?? 'naive-loose-fingerprint',
     labeler: options.labeler,
+    machineLabeled: isMachineLabeler(options.labeler),
     runsScored: perRun.length,
     runsExcluded: excluded,
     failuresScored: perRun.reduce((n, r) => n + r.failures, 0),
@@ -271,6 +275,19 @@ export function formatBaselineReport(r: BaselineReport): string {
   const pct = (n: number) => (Number.isFinite(n) ? n.toFixed(3) : 'n/a');
   lines.push(`strategy: ${r.strategy}`);
   lines.push(`labeler:  ${r.labeler}`);
+  if (r.machineLabeled) {
+    lines.push('');
+    lines.push(
+      'THESE ARE MACHINE LABELS. This is a pipeline probe, not the baseline spike.',
+    );
+    lines.push(
+      'The score measures agreement between a model and a fingerprint rule, both of',
+    );
+    lines.push(
+      'which read the same payload. It is not evidence about the payload-only thesis,',
+    );
+    lines.push('and it does not count toward Gate 0.');
+  }
   lines.push(
     `scored ${r.runsScored} run(s), ${r.failuresScored} failure(s), ${r.pairsScored} pair(s)`,
   );

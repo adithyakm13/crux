@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:tenstorrent/tt-metal:31215679147:2",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-09T15:09:00.418Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "efficientdet-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "EfficientDet PCC below the 0.92 threshold, plus a 300s pytest-timeout on the same test. Numerical accuracy of the kernel, with the timeout most likely the same run failing slowly."
+    },
+    "f0002": {
+      "group": "efficientdet-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "EfficientDet PCC below the 0.92 threshold, plus a 300s pytest-timeout on the same test. Numerical accuracy of the kernel, with the timeout most likely the same run failing slowly."
+    },
+    "f0014": {
+      "group": "efficientdet-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "EfficientDet PCC below the 0.92 threshold, plus a 300s pytest-timeout on the same test. Numerical accuracy of the kernel, with the timeout most likely the same run failing slowly."
+    },
+    "f0013": {
+      "group": "efficientdet-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "EfficientDet PCC below the 0.92 threshold, plus a 300s pytest-timeout on the same test. Numerical accuracy of the kernel, with the timeout most likely the same run failing slowly."
+    },
+    "f0003": {
+      "group": "bge-m3-ci-dispatch",
+      "category": "UNKNOWN",
+      "note": "Five identical \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above.\" The payload defers to a log crux does not have. This is exactly the case docs/evidence.md counts against the payload-only ceiling."
+    },
+    "f0005": {
+      "group": "bge-m3-ci-dispatch",
+      "category": "UNKNOWN",
+      "note": "Five identical \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above.\" The payload defers to a log crux does not have. This is exactly the case docs/evidence.md counts against the payload-only ceiling."
+    },
+    "f0007": {
+      "group": "bge-m3-ci-dispatch",
+      "category": "UNKNOWN",
+      "note": "Five identical \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above.\" The payload defers to a log crux does not have. This is exactly the case docs/evidence.md counts against the payload-only ceiling."
+    },
+    "f0009": {
+      "group": "bge-m3-ci-dispatch",
+      "category": "UNKNOWN",
+      "note": "Five identical \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above.\" The payload defers to a log crux does not have. This is exactly the case docs/evidence.md counts against the payload-only ceiling."
+    },
+    "f0011": {
+      "group": "bge-m3-ci-dispatch",
+      "category": "UNKNOWN",
+      "note": "Five identical \"One or more CI dispatch tests failed for BAAI/bge-m3. Please check the log above.\" The payload defers to a log crux does not have. This is exactly the case docs/evidence.md counts against the payload-only ceiling."
+    },
+    "f0004": {
+      "group": "model-e2e-pcc",
+      "category": "PRODUCT_REGRESSION",
+      "note": "test_model_full_end_to_end[S4096] PCC 0.788-0.881 against threshold, with ATOL deltas around 7. Repeated across runs with two recurring values, so deterministic rather than flaky."
+    },
+    "f0006": {
+      "group": "model-e2e-pcc",
+      "category": "PRODUCT_REGRESSION",
+      "note": "test_model_full_end_to_end[S4096] PCC 0.788-0.881 against threshold, with ATOL deltas around 7. Repeated across runs with two recurring values, so deterministic rather than flaky."
+    },
+    "f0008": {
+      "group": "model-e2e-pcc",
+      "category": "PRODUCT_REGRESSION",
+      "note": "test_model_full_end_to_end[S4096] PCC 0.788-0.881 against threshold, with ATOL deltas around 7. Repeated across runs with two recurring values, so deterministic rather than flaky."
+    },
+    "f0010": {
+      "group": "model-e2e-pcc",
+      "category": "PRODUCT_REGRESSION",
+      "note": "test_model_full_end_to_end[S4096] PCC 0.788-0.881 against threshold, with ATOL deltas around 7. Repeated across runs with two recurring values, so deterministic rather than flaky."
+    },
+    "f0012": {
+      "group": "model-e2e-pcc",
+      "category": "PRODUCT_REGRESSION",
+      "note": "test_model_full_end_to_end[S4096] PCC 0.788-0.881 against threshold, with ATOL deltas around 7. Repeated across runs with two recurring values, so deterministic rather than flaky."
+    },
+    "f0015": {
+      "group": "crossattn-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "crossattndown/crossattnup correlation 0.53-0.99 — degraded but not broken, consistent with an accuracy regression in the attention blocks."
+    },
+    "f0016": {
+      "group": "crossattn-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "crossattndown/crossattnup correlation 0.53-0.99 — degraded but not broken, consistent with an accuracy regression in the attention blocks."
+    },
+    "f0017": {
+      "group": "crossattn-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "crossattndown/crossattnup correlation 0.53-0.99 — degraded but not broken, consistent with an accuracy regression in the attention blocks."
+    },
+    "f0018": {
+      "group": "crossattn-accuracy",
+      "category": "PRODUCT_REGRESSION",
+      "note": "crossattndown/crossattnup correlation 0.53-0.99 — degraded but not broken, consistent with an accuracy regression in the attention blocks."
+    },
+    "f0019": {
+      "group": "unet-output-uncorrelated",
+      "category": "PRODUCT_REGRESSION",
+      "note": "test_unet correlation 0.0057 and -0.0035 — output essentially uncorrelated with reference, an order of magnitude worse than the crossattn failures. Split from them deliberately: near-zero correlation is a different failure from mild degradation and is unlikely to share a cause."
+    },
+    "f0020": {
+      "group": "unet-output-uncorrelated",
+      "category": "PRODUCT_REGRESSION",
+      "note": "test_unet correlation 0.0057 and -0.0035 — output essentially uncorrelated with reference, an order of magnitude worse than the crossattn failures. Split from them deliberately: near-zero correlation is a different failure from mild degradation and is unlikely to share a cause."
+    }
+  }
+}

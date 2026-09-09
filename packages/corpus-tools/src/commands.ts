@@ -28,6 +28,7 @@ import {
   saveLabels,
   type LabelContext,
 } from './label.ts';
+import { isMachineLabeler } from './schema.ts';
 import type { CorpusRun, RunLabels } from './schema.ts';
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -232,6 +233,15 @@ export async function agreementReport(
   labelerA: string,
   labelerB: string,
 ): Promise<AgreementReport> {
+  for (const name of [labelerA, labelerB]) {
+    if (isMachineLabeler(name)) {
+      throw new Error(
+        `${name} is a machine labeler. Inter-labeler agreement is the ceiling on ` +
+          `what any model can be scored against — measuring it against a model ` +
+          `measures the model, not the task. Use two human labelers.`,
+      );
+    }
+  }
   const runs = await loadRuns(corpusDir);
   const a = await loadLabelerIndex(corpusDir, labelerA, runs);
   const b = await loadLabelerIndex(corpusDir, labelerB, runs);
@@ -319,6 +329,15 @@ export async function separabilityReport(
   fullContextLabeler: string,
   payloadOnlyLabeler: string,
 ): Promise<SeparabilityReport> {
+  for (const name of [fullContextLabeler, payloadOnlyLabeler]) {
+    if (isMachineLabeler(name)) {
+      throw new Error(
+        `${name} is a machine labeler. Separability is defined as what a HUMAN ` +
+          `can conclude from the payload alone — that is the thesis Gate 0 tests. ` +
+          `A model's rate is a different quantity and must not be reported as this one.`,
+      );
+    }
+  }
   const runs = await loadRuns(corpusDir);
   const full = await loadLabelerIndex(corpusDir, fullContextLabeler, runs);
   const payload = await loadLabelerIndex(corpusDir, payloadOnlyLabeler, runs);

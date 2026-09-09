@@ -9,7 +9,12 @@
 
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { validateRunLabels, type CorpusRun, type RunLabels } from './schema.ts';
+import {
+  isMachineLabeler,
+  validateRunLabels,
+  type CorpusRun,
+  type RunLabels,
+} from './schema.ts';
 import { alignLabelers } from './label.ts';
 import { bootstrapProportion, pairwiseAgreement } from '@cruxci/core';
 
@@ -40,6 +45,9 @@ export interface GateZeroStatus {
   fidelityBreakdown: Record<string, number>;
   labelers: string[];
   labeledFailures: number;
+  /** Machine labellers present, excluded from every gate count. */
+  machineLabelers: string[];
+  machineLabeledFailures: number;
   /**
    * How concentrated the corpus is. A passing run count means nothing if two
    * repositories supply most of the failures, and the clustering metric is
@@ -71,7 +79,15 @@ export async function gateZeroStatus(
   for (const r of runs) fidelity[r.fidelity] = (fidelity[r.fidelity] ?? 0) + 1;
   const synthetic = fidelity['synthetic'] ?? 0;
 
-  const labelSets = await loadAllLabels(corpusDir, runs);
+  const allLabelSets = await loadAllLabels(corpusDir, runs);
+  // Machine labels are excluded from every count below. See MACHINE_LABELER_PREFIX.
+  const labelSets = allLabelSets.filter((l) => !isMachineLabeler(l.labeler));
+  const machineLabelers = [
+    ...new Set(allLabelSets.filter((l) => isMachineLabeler(l.labeler)).map((l) => l.labeler)),
+  ].sort();
+  const machineLabeledFailures = allLabelSets
+    .filter((l) => isMachineLabeler(l.labeler))
+    .reduce((n, l) => n + Object.keys(l.labels).length, 0);
   const labelers = [...new Set(labelSets.map((l) => l.labeler))].sort();
   const labeledFailureKeys = new Set<string>();
   // Distinct failures per category, not label rows. Counting rows double-counts
@@ -149,6 +165,8 @@ export async function gateZeroStatus(
     fidelityBreakdown: fidelity,
     labelers,
     labeledFailures: labeledFailureKeys.size,
+    machineLabelers,
+    machineLabeledFailures,
     concentration: concentrationOf(runs),
     labeledRuns,
     perCategoryLabeled: perCategory,
@@ -433,6 +451,13 @@ export function formatGateZeroStatus(s: GateZeroStatus): string {
     `labels: ${s.labeledFailures} failure(s) across ${s.labeledRuns} run(s) by ` +
       `${s.labelers.length} labeler(s)${s.labelers.length ? ` (${s.labelers.join(', ')})` : ''}`,
   );
+  if (s.machineLabelers.length > 0) {
+    lines.push(
+      `  plus ${s.machineLabeledFailures} machine-labelled failure(s) by ` +
+        `${s.machineLabelers.join(', ')} — excluded from every count above and ` +
+        `from every gate. Gate 0 asks what a human concludes.`,
+    );
+  }
   lines.push('');
   lines.push('Gate 0 requirements');
   const width = Math.max(...s.requirements.map((r) => r.description.length));

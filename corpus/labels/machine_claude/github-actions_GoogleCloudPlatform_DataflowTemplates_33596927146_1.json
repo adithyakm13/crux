@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:33596927146:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-09T15:09:00.417Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "cassandra-query-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "DriverTimeoutException, query timed out after PT2S. Infrastructure latency, not an assertion."
+    },
+    "f0002": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0003": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0004": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0005": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0006": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0007": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0008": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0009": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0010": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0011": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0012": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0013": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0014": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0015": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0016": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0017": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0018": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0019": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0020": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    },
+    "f0021": {
+      "group": "gcp-api-400",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+    }
+  }
+}

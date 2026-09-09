@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:siemens/ix:33593151083:2",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-09T15:09:00.419Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0002": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0003": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0004": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0005": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0006": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0007": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0008": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0009": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0010": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0011": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0012": {
+      "group": "visual-snapshot-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Twelve toMatchSnapshot(Buffer) failures across row/column direction variants of the same component. A whole family of visual baselines moving together is a rendering change; whether it was intended (making this a stale-baseline TEST_DEFECT) cannot be told from the payload."
+    },
+    "f0013": {
+      "group": "basic-page-never-rendered",
+      "category": "UNKNOWN",
+      "note": "Same test (\"basic\"): a 30s Playwright timeout and a toHaveScreenshot mismatch. One page failing to reach a stable state explains both. Whether the cause is the app or the runner is not visible here."
+    },
+    "f0014": {
+      "group": "basic-page-never-rendered",
+      "category": "UNKNOWN",
+      "note": "Same test (\"basic\"): a 30s Playwright timeout and a toHaveScreenshot mismatch. One page failing to reach a stable state explains both. Whether the cause is the app or the runner is not visible here."
+    }
+  }
+}
