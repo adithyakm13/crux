@@ -46,6 +46,12 @@ export interface LabelCommandOptions {
   /** Only runs with at least this many failures; these carry the pair metric. */
   minFailures?: number;
   maxFailures?: number;
+  /**
+   * Failure-level selection from `corpus sample --selection`. When a run appears
+   * here with `failureIds`, only those failures are offered — that is how a
+   * slice of a suite collapse gets labelled without labelling all 600 of it.
+   */
+  selection?: Map<string, Set<string> | null>;
   /** Deterministic subset selection, so a second labeler can be given the same one. */
   only?: string[];
 }
@@ -62,8 +68,13 @@ export async function labelCommand(options: LabelCommandOptions): Promise<number
   // produce hundreds of near-duplicate rows that then dominate the pair-based
   // metric. --max-failures lets a labeler work the tractable runs first.
   const maxFailures = options.maxFailures ?? Number.POSITIVE_INFINITY;
+  const selection = options.selection;
   const selected = runs
-    .filter((r) => r.failures.length >= minFailures && r.failures.length <= maxFailures)
+    .filter((r) =>
+      selection === undefined
+        ? r.failures.length >= minFailures && r.failures.length <= maxFailures
+        : selection.has(r.corpusRunId),
+    )
     .filter((r) => options.only === undefined || options.only.includes(r.corpusRunId));
 
   if (selected.length === 0) {
@@ -93,7 +104,12 @@ export async function labelCommand(options: LabelCommandOptions): Promise<number
         );
         continue;
       }
-      const todo = run.failures.filter((f) => labels.labels[f.failureId] === undefined);
+      const wanted = selection?.get(run.corpusRunId) ?? null;
+      const todo = run.failures.filter(
+        (f) =>
+          labels.labels[f.failureId] === undefined &&
+          (wanted === null || wanted.has(f.failureId)),
+      );
       if (todo.length === 0) continue;
 
       runsTouched++;

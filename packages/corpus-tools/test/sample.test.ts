@@ -140,3 +140,76 @@ test('an empty corpus yields an empty sample rather than throwing', () => {
   assert.equal(r.totalPairs, 0);
   assert.deepEqual(r.gaps, []);
 });
+
+// ---------------------------------------------------------------------------
+// Coverage-first selection and within-run slicing.
+//
+// Each of these locks a regression hit while building the policy: stratifying
+// by a run's dominant framework could not reach a framework that never
+// dominates; proportional matching starved small families; and the fallback
+// branch bypassed the slice cap.
+// ---------------------------------------------------------------------------
+
+test('slicing reaches a framework that exists only inside suite collapses', () => {
+  // jest here dominates no eligible run — it lives in a 300-failure collapse,
+  // exactly as in the real corpus.
+  const runs = [
+    runOf('a/small', 20, 'pytest'),
+    runOf('b/collapse', 300, 'jest'),
+  ];
+
+  const without = sampleForLabelling(runs, { targetFailures: 60 });
+  assert.equal(without.sampleMix['jest'] ?? 0, 0, 'without slicing jest is unreachable');
+  assert.ok(without.gaps.some((g) => g.framework === 'jest'));
+
+  const withSlice = sampleForLabelling(runs, { targetFailures: 60, sliceLargeRuns: 20 });
+  assert.ok((withSlice.sampleMix['jest'] ?? 0) > 0, 'slicing must make jest reachable');
+  assert.equal(withSlice.slicedRuns, 1);
+  const sliced = withSlice.runs.find((r) => r.sliced === true);
+  assert.ok(sliced, 'a sliced run should be marked');
+  assert.equal(sliced!.failureIds?.length, 20);
+  assert.equal(sliced!.failures, 20, 'a slice counts its own failures, not the whole run');
+});
+
+test('a slice names the exact failures, and the same seed names the same ones', () => {
+  const runs = [runOf('b/collapse', 300, 'jest')];
+  const a = sampleForLabelling(runs, { targetFailures: 30, sliceLargeRuns: 15, seed: 7 });
+  const b = sampleForLabelling(runs, { targetFailures: 30, sliceLargeRuns: 15, seed: 7 });
+  assert.deepEqual(a.runs[0]!.failureIds, b.runs[0]!.failureIds);
+  assert.equal(new Set(a.runs[0]!.failureIds).size, 15, 'no duplicate failure ids in a slice');
+});
+
+test('one repository cannot supply every slice', () => {
+  // Three collapses from one repo. Without the cap the sample is one project.
+  const runs = [
+    runOf('hog/mono', 300, 'jest'),
+    runOf('hog/mono', 300, 'jest'),
+    runOf('hog/mono', 300, 'jest'),
+    runOf('other/app', 20, 'pytest'),
+  ];
+  const r = sampleForLabelling(runs, {
+    targetFailures: 200,
+    sliceLargeRuns: 20,
+    maxSlicesPerRepo: 1,
+  });
+  assert.equal(r.slicedRuns, 1, `expected 1 slice, got ${r.slicedRuns}`);
+});
+
+test('a small framework is covered rather than swamped by the corpus mix', () => {
+  // pytest is ~5% of failures here. Proportional selection would give it almost
+  // nothing; the coverage floor must pull it in anyway.
+  const runs = [
+    runOf('big/one', 300, 'jest'),
+    runOf('big/two', 300, 'jest'),
+    runOf('small/py', 16, 'pytest'),
+  ];
+  const r = sampleForLabelling(runs, {
+    targetFailures: 100,
+    sliceLargeRuns: 25,
+    minPerFramework: 15,
+  });
+  assert.ok(
+    (r.byFramework['pytest']?.failures ?? 0) >= 15,
+    `pytest should reach the floor, got ${r.byFramework['pytest']?.failures ?? 0}`,
+  );
+});

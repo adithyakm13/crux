@@ -25,6 +25,7 @@ import {
 } from './commands.ts';
 import { formatBaselineReport, runBaseline } from './baseline.ts';
 import { formatSample, sampleForLabelling } from './sample.ts';
+import { SCHEMA_VERSION } from '@cruxci/core';
 import {
   committedRuns,
   formatFrameReport,
@@ -40,9 +41,10 @@ function usage(): string {
     '  corpus harvest --repos <path|owner/name,...> [--runs-per-repo N]',
     '  corpus status',
     '  corpus frames [--markdown] [--include-untracked]',
-    '  corpus sample [--target N] [--min-failures N] [--max-failures N] [--ids]',
+    '  corpus sample [--target N] [--min-failures N] [--max-failures N]',
+    '                [--slice N] [--ids | --selection <file>]',
     '  corpus label --labeler <name> [--context full|payload-only]',
-    '                [--min-failures N] [--max-failures N]',
+    '                [--min-failures N] [--max-failures N] [--selection <file>]',
     '  corpus agreement --a <labeler> --b <labeler>',
     '  corpus separability --full <labeler> --payload <labeler>',
     '  corpus baseline --labeler <name>',
@@ -213,11 +215,44 @@ async function main(): Promise<number> {
     if (flags.has('max-failures')) opts.maxFailures = Number(flags.get('max-failures'));
     if (flags.has('max-per-repo')) opts.maxRunsPerRepo = Number(flags.get('max-per-repo'));
     if (flags.has('seed')) opts.seed = Number(flags.get('seed'));
+    if (flags.has('slice')) opts.sliceLargeRuns = Number(flags.get('slice'));
     const result = sampleForLabelling(runs, opts);
+    const selectionFlag = flags.get('selection');
+    const selectionPath = typeof selectionFlag === 'string' ? selectionFlag : undefined;
+    if (selectionPath !== undefined) {
+      const { writeFile } = await import('node:fs/promises');
+      await writeFile(
+        selectionPath,
+        JSON.stringify(
+          {
+            schemaVersion: SCHEMA_VERSION,
+            digest: result.digest,
+            policy: result.policy,
+            runs: result.runs.map((r) => ({
+              corpusRunId: r.corpusRunId,
+              ...(r.failureIds === undefined ? {} : { failureIds: r.failureIds }),
+            })),
+          },
+          null,
+          2,
+        ) + '\n',
+        'utf8',
+      );
+      process.stderr.write(`wrote selection to ${selectionPath}\n`);
+    }
     if (json) {
       process.stdout.write(JSON.stringify(result, null, 2) + '\n');
     } else if (flags.has('ids')) {
-      // Plain ids, so this can be piped straight into `label --only`.
+      // Plain ids, so this can be piped straight into `label --only`. A sliced
+      // run cannot be expressed this way — use --selection, which carries the
+      // exact failures — so say so rather than silently labelling the whole run.
+      if (result.slicedRuns > 0) {
+        process.stderr.write(
+          `warning: ${result.slicedRuns} selected run(s) are slices; --ids loses that ` +
+            `and would label the whole run. Use --selection <file> with ` +
+            `\`label --selection\` instead.\n`,
+        );
+      }
       for (const r of result.runs) process.stdout.write(r.corpusRunId + '\n');
     } else {
       process.stdout.write(formatSample(result) + '\n');
@@ -242,6 +277,26 @@ async function main(): Promise<number> {
     const opts: Parameters<typeof labelCommand>[0] = { corpusDir, labeler, context };
     if (flags.has('min-failures')) opts.minFailures = Number(flags.get('min-failures'));
     if (flags.has('max-failures')) opts.maxFailures = Number(flags.get('max-failures'));
+    const selFlag = flags.get('selection');
+    if (typeof selFlag === 'string') {
+      const { readFile } = await import('node:fs/promises');
+      const parsed = JSON.parse(await readFile(selFlag, 'utf8')) as {
+        runs?: { corpusRunId?: string; failureIds?: string[] }[];
+      };
+      const map = new Map<string, Set<string> | null>();
+      for (const entry of parsed.runs ?? []) {
+        if (typeof entry.corpusRunId !== 'string') continue;
+        map.set(
+          entry.corpusRunId,
+          Array.isArray(entry.failureIds) ? new Set(entry.failureIds) : null,
+        );
+      }
+      if (map.size === 0) {
+        process.stderr.write(`Error: ${selFlag} names no runs.\n`);
+        return 2;
+      }
+      opts.selection = map;
+    }
     if (flags.has('max-runs')) opts.maxRuns = Number(flags.get('max-runs'));
     return labelCommand(opts);
   }
