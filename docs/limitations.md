@@ -329,3 +329,51 @@ leaving the distinction to this document.
 repository name as case-insensitive substrings of the whole payload. That is
 deliberately loose: it is an upper bound on what the labeller could recognise,
 and over-counting is the safe direction.
+
+### The spike sample is sized in failures; the bootstrap resamples runs
+
+The Gate 0 spike selects 156 failures. That is the right unit for labelling
+effort and the wrong unit for the confidence interval. Pairs within a run are
+correlated — twenty failures from one broken deploy are one event, not 190
+independent observations — so `bootstrapPairF1` resamples **runs**. The spike
+has nine of them.
+
+Run end-to-end on the machine labels, the clustering baseline reports:
+
+```
+pairwise precision 0.976  recall 0.408  F1 0.575
+F1 95% bootstrap over runs: [0.188, 0.926] (n=9 runs)
+```
+
+An interval 0.74 wide clears no threshold and rejects none. Resampling from the
+observed between-run spread of per-run F1 gives the scaling:
+
+```
+ runs   95% interval        width
+    9   [0.231, 0.894]     0.663
+   20   [0.280, 0.741]     0.461
+   40   [0.379, 0.702]     0.323
+   80   [0.476, 0.697]     0.221
+  160   [0.510, 0.664]     0.154
+  320   [0.530, 0.639]     0.109
+```
+
+Around **80 labelled runs** is where the lower bound starts to mean something,
+and even there the interval is ±0.11. This is a property of how variable real
+runs are, not of the estimator: the observed per-run F1 spans 0.007 to 1.000.
+
+Two consequences, both about the shape of the labelling effort rather than its
+size:
+
+1. Gate 0's "1000 labelled failures" is satisfiable by a handful of large runs
+   and would still yield an uninformative interval. **Many small runs beat few
+   large ones** — the corpus median is 3 failures per run, and those cheap runs
+   are worth more per labelling minute than another 200-failure suite collapse.
+2. The 156-failure spike is a pilot for the *procedure* — does the labelling
+   task cohere, do two labellers agree, is the payload separable — and cannot
+   settle any F1 claim. Reporting an F1 point estimate from it, without the
+   interval beside it, would be the exact error §2 forbids.
+
+The agreement and separability numbers are less exposed: Cohen's kappa and the
+separability rate are per-failure, not per-pair, so 156 failures is a real
+sample for those. Only the pair-based clustering metric collapses to n=9.
