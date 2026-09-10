@@ -9,6 +9,7 @@
  *   corpus sample                        choose which runs to label
  *   corpus worksheet                     offline labelling file
  *   corpus import                        read a filled worksheet back
+ *   corpus ledger                        worksheet as a labelling page
  *   corpus scan                          which repos would actually yield data
  */
 
@@ -28,6 +29,7 @@ import {
 } from './commands.ts';
 import { formatBaselineReport, runBaseline } from './baseline.ts';
 import { formatSample, sampleForLabelling } from './sample.ts';
+import { buildLedger } from './ledger.ts';
 import { probeRepo, type ProbeResult } from './harvest.ts';
 import { buildWorksheet, parseWorksheet } from './worksheet.ts';
 import { SCHEMA_VERSION } from '@cruxci/core';
@@ -53,6 +55,7 @@ function usage(): string {
     '                [--slice N] [--ids | --selection <file>]',
     '  corpus worksheet --selection <file> --out <file> [--context full|payload-only]',
     '  corpus import --file <file> --labeler <name> [--key <file>]',
+    '  corpus ledger --worksheet <file> --out <file.html>',
     '  corpus label --labeler <name> [--context full|payload-only]',
     '                [--min-failures N] [--max-failures N] [--selection <file>]',
     '  corpus agreement --a <labeler> --b <labeler>',
@@ -389,6 +392,32 @@ async function main(): Promise<number> {
           : '') +
         `Fill in "group" and "category" for each, then:\n` +
         `  corpus import --file ${outFlag} --labeler <your-name>\n`,
+    );
+    return 0;
+  }
+
+  if (command === 'ledger') {
+    // A worksheet is already the contamination boundary, so the page is built
+    // from one rather than from the corpus: a payload-only worksheet cannot
+    // produce a page that knows the repository, because nothing downstream of
+    // `corpus worksheet` has ever seen it.
+    const wsFlag = flags.get('worksheet');
+    const outFlag = flags.get('out');
+    if (typeof wsFlag !== 'string' || typeof outFlag !== 'string') {
+      process.stderr.write('Error: ledger needs --worksheet <file> and --out <file.html>.\n');
+      return 2;
+    }
+    const { readFile, writeFile } = await import('node:fs/promises');
+    const worksheet = JSON.parse(await readFile(wsFlag, 'utf8')) as Parameters<
+      typeof buildLedger
+    >[0];
+    const html = await buildLedger(worksheet);
+    await writeFile(outFlag, html, 'utf8');
+    process.stdout.write(
+      `wrote ${worksheet.entries.length} entries to ${outFlag} ` +
+        `(${(html.length / 1024).toFixed(0)} KB, context: ${worksheet.context})\n` +
+        `Open it in a browser, or publish it so labels persist across sittings.\n` +
+        `Export from the page, then: corpus import --file <downloaded> --labeler <name>\n`,
     );
     return 0;
   }

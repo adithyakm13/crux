@@ -34,3 +34,6 @@ corpus/runs/github-actions_openobserve_openobserve_33512788428_1
 corpus/runs/github-actions_solidtime-io_solidtime_33403829384_1
 corpus/runs/github-actions_tomquist_AstraMeter_28618285926_1
 corpus/runs/github-actions_tomquist_AstraMeter_31775024322_1
+
+# Generated labelling pages: rebuild with `corpus ledger`, never review a 600KB diff
+corpus/worksheets/*.html
