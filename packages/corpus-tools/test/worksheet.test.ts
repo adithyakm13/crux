@@ -192,3 +192,43 @@ test('a selection naming a run the corpus lacks fails loudly', () => {
     /not in the corpus/,
   );
 });
+
+test('a payload-only worksheet shuffles, deterministically, and full context does not', () => {
+  // Run adjacency is provenance. Twenty-four consecutive entries announce "one
+  // CI run" as loudly as the repository name would, and that is a grouping hint
+  // the separability condition exists to withhold.
+  const a = runWith(12, 'acme/one');
+  const b = runWith(12, 'acme/two');
+  const sel = { digest: 'seed-1', runs: [{ corpusRunId: a.corpusRunId }, { corpusRunId: b.corpusRunId }] };
+
+  const full = buildWorksheet([a, b], sel, 'full');
+  const fullRuns = full.worksheet.entries.map((e) => e.corpusRunId);
+  assert.deepEqual(
+    fullRuns,
+    [...Array(12).fill(a.corpusRunId), ...Array(12).fill(b.corpusRunId)],
+    'full context must keep corpus order',
+  );
+
+  const blind = buildWorksheet([a, b], sel, 'payload-only');
+  const order = blind.worksheet.entries.map((e) => blind.key.entries[e.entryId]!.corpusRunId);
+  assert.equal(order.length, 24);
+  const firstHalf = order.slice(0, 12).filter((r) => r === a.corpusRunId).length;
+  assert.ok(firstHalf < 12, 'the two runs must be interleaved, not concatenated');
+
+  // Same selection, same file — or two labellers handed "the same worksheet"
+  // are not looking at the same thing.
+  const again = buildWorksheet([a, b], sel, 'payload-only');
+  assert.deepEqual(
+    again.worksheet.entries.map((e) => e.message),
+    blind.worksheet.entries.map((e) => e.message),
+  );
+  assert.deepEqual(again.key.entries, blind.key.entries);
+
+  // And the key still points at the right failure after the shuffle.
+  for (const e of blind.worksheet.entries) {
+    const k = blind.key.entries[e.entryId]!;
+    const run = k.corpusRunId === a.corpusRunId ? a : b;
+    const f = run.failures.find((x) => x.failureId === k.failureId)!;
+    assert.equal(e.message, f.message, `${e.entryId} points at the wrong failure`);
+  }
+});

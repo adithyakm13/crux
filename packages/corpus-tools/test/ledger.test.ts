@@ -105,5 +105,16 @@ test('only the listed fields reach the page', async () => {
 test('a template without the placeholder is refused, not silently shipped', async () => {
   const run = runWith(1);
   const { worksheet } = buildWorksheet([run], selOf(run), 'full');
-  await assert.rejects(() => buildLedger(worksheet, '<title>nope</title>'), /placeholder/);
+  await assert.rejects(() => buildLedger(worksheet, { template: '<title>nope</title>' }), /placeholder/);
+});
+
+test('the two contexts produce two differently named pages', async () => {
+  // They are open side by side — primary pass and blind pass — and a labeller
+  // who confuses the tabs has silently destroyed the separability measurement.
+  const run = runWith(1);
+  const full = await buildLedger(buildWorksheet([run], selOf(run), 'full').worksheet);
+  const blind = await buildLedger(buildWorksheet([run], selOf(run), 'payload-only').worksheet);
+  assert.ok(full.includes('<title>Root Cause Ledger</title>'));
+  assert.ok(blind.includes('<title>Sealed Ledger</title>'));
+  assert.ok(!blind.includes('Root Cause Ledger'), 'the full-context name must not survive');
 });

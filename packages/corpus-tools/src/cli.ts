@@ -55,7 +55,7 @@ function usage(): string {
     '                [--slice N] [--ids | --selection <file>]',
     '  corpus worksheet --selection <file> --out <file> [--context full|payload-only]',
     '  corpus import --file <file> --labeler <name> [--key <file>]',
-    '  corpus ledger --worksheet <file> --out <file.html>',
+    '  corpus ledger --worksheet <file> --out <file.html> [--key <file>]',
     '  corpus label --labeler <name> [--context full|payload-only]',
     '                [--min-failures N] [--max-failures N] [--selection <file>]',
     '  corpus agreement --a <labeler> --b <labeler>',
@@ -411,7 +411,22 @@ async function main(): Promise<number> {
     const worksheet = JSON.parse(await readFile(wsFlag, 'utf8')) as Parameters<
       typeof buildLedger
     >[0];
-    const html = await buildLedger(worksheet);
+    // The key is read only to count how often the payload names its own
+    // repository, which the sealed page then states. Nothing from it is
+    // embedded.
+    const keyPathL =
+      typeof flags.get('key') === 'string'
+        ? (flags.get('key') as string)
+        : wsFlag.replace(/\.json$/, '') + '.key.json';
+    let keyL;
+    try {
+      keyL = JSON.parse(await readFile(keyPathL, 'utf8')) as NonNullable<
+        Parameters<typeof buildLedger>[1]
+      >['key'];
+    } catch {
+      keyL = undefined;
+    }
+    const html = await buildLedger(worksheet, keyL === undefined ? {} : { key: keyL });
     await writeFile(outFlag, html, 'utf8');
     process.stdout.write(
       `wrote ${worksheet.entries.length} entries to ${outFlag} ` +

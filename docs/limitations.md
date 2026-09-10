@@ -291,3 +291,41 @@ productive.
 `--runs` and `--downloads` trade depth for speed, but lowering them below the
 harvest's depth reintroduces exactly the disagreement this command exists to
 remove: druxt/druxt.js is productive at 25 runs and looks dead at 10.
+
+### "Payload-only" withholds metadata, not identity
+
+The sealed worksheet withholds repository, workflow, branch, commit, and — since
+the entries are shuffled with a seed derived from the selection — which failures
+came from the same CI run. Run adjacency is provenance: twenty-four consecutive
+entries announce "one CI run" as loudly as a repository name would, and that is
+a grouping hint separability is supposed to withhold.
+
+What it cannot withhold is the failure text. Stack frames carry checkout paths
+(`/home/runner/work/<repo>/<repo>/...`) and test names carry product nouns. On
+the current spike sample, **91 of 156 entries (58%) name their own repository
+somewhere in the payload**, concentrated entirely in four of the six
+repositories:
+
+```
+ 20/20   trinodb/trino
+ 24/24   Sage/carbon
+ 23/23   druxt/druxt.js
+ 24/24   opennextjs/opennextjs-netlify
+  0/20   tenstorrent/tt-metal
+  0/45   GoogleCloudPlatform/DataflowTemplates
+```
+
+This is not scrubbed, and should not be. The payload is what crux will actually
+show a user; a payload edited to hide its own origin would make the separability
+number a measurement of an input nobody will ever see.
+
+The consequence is a limit on interpretation. A separability rate from this
+sample answers "can a labeller judge from the payload the tool displays" — it
+does **not** answer "can a labeller judge without knowing which project this
+is". The sealed page states the count on its own protocol panel rather than
+leaving the distinction to this document.
+
+`provenanceInPayload()` in `corpus-tools` computes it, counting owner and
+repository name as case-insensitive substrings of the whole payload. That is
+deliberately loose: it is an upper bound on what the labeller could recognise,
+and over-counting is the safe direction.

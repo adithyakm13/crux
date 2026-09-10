@@ -105,6 +105,28 @@ const INSTRUCTIONS = [
   'entries do not correspond to the selection.',
 ];
 
+/**
+ * Deterministic PRNG, seeded from a string.
+ *
+ * Determinism matters: the same selection must always produce the same sealed
+ * worksheet, or two labellers handed "the same file" are not comparing notes
+ * on the same thing, and a regenerated worksheet silently stops matching the
+ * one already being filled in.
+ */
+function mulberry32(seed: string): () => number {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < seed.length; i++) {
+    h = Math.imul(h ^ seed.charCodeAt(i), 16777619) >>> 0;
+  }
+  return () => {
+    h = (h + 0x6d2b79f5) >>> 0;
+    let t = h;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 export function buildWorksheet(
   runs: readonly CorpusRun[],
   selection: { digest?: string; runs: { corpusRunId: string; failureIds?: string[] }[] },
@@ -115,6 +137,13 @@ export function buildWorksheet(
   const key: WorksheetKey['entries'] = {};
   let ordinal = 0;
 
+  // Gather first, so a payload-only worksheet can be shuffled before ids are
+  // assigned. Corpus order groups a run's failures together, and run adjacency
+  // is provenance: twenty-four consecutive entries announce "one CI run" as
+  // loudly as the repository name would, and that is a grouping hint the
+  // separability condition is supposed to withhold. Shuffling also removes the
+  // ordering itself as a cue, since a run's failures arrive in file order.
+  const picked: { run: CorpusRun; failure: CorpusRun['failures'][number] }[] = [];
   for (const sel of selection.runs) {
     const run = byId.get(sel.corpusRunId);
     if (run === undefined) {
@@ -126,6 +155,23 @@ export function buildWorksheet(
     const only = sel.failureIds === undefined ? null : new Set(sel.failureIds);
     for (const f of run.failures) {
       if (only !== null && !only.has(f.failureId)) continue;
+      picked.push({ run, failure: f });
+    }
+  }
+
+  if (context === 'payload-only') {
+    // Fisher-Yates, seeded from the selection so the shuffle is reproducible.
+    const rand = mulberry32(`payload-only:${selection.digest ?? 'no-digest'}`);
+    for (let i = picked.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1));
+      const tmp = picked[i]!;
+      picked[i] = picked[j]!;
+      picked[j] = tmp;
+    }
+  }
+
+  {
+    for (const { run, failure: f } of picked) {
       const entryId = `e${String(++ordinal).padStart(4, '0')}`;
       key[entryId] = { corpusRunId: run.corpusRunId, failureId: f.failureId };
       const entry: WorksheetEntry = {

@@ -285,6 +285,7 @@ kbd{
             corpus is the thing every other number gets checked against.</p>
             <p>Nothing here shows you anyone else&rsquo;s answers, or the machine&rsquo;s. That is
             deliberate — an anchored second pass measures nothing.</p>
+            <p id="sealedNote" hidden></p>
           </div>
         </details>
 
@@ -444,7 +445,7 @@ function groupCounts(){
 
 /* ---------- render: rail ---------- */
 var railEl = document.getElementById('rail');
-function shortRepo(r){ return r ? r.split('/').pop() : 'run'; }
+function shortRepo(r){ return r ? r.split('/').pop() : 'sealed \u2014 no provenance'; }
 
 function renderRail(){
   var html = [];
@@ -706,7 +707,24 @@ document.addEventListener('keydown', function(ev){
 
 /* ---------- boot ---------- */
 document.getElementById('ctx').textContent =
-  DATA.context === 'payload-only' ? 'payload only — no provenance' : 'full context';
+  DATA.context === 'payload-only' ? 'sealed — no provenance' : 'full context';
+if (DATA.context === 'payload-only') {
+  // Say plainly what sealing does and does not achieve. Withholding metadata
+  // does not make a failure anonymous, and a separability number read as
+  // "the labeller did not know the repository" would be the wrong number.
+  var sn = document.getElementById('sealedNote');
+  var pip = DATA.provenanceInPayload;
+  sn.innerHTML =
+    '<strong>What is withheld.</strong> Repository, workflow, branch, commit, and which ' +
+    'failures came from the same CI run &mdash; the entries are shuffled, so adjacency ' +
+    'tells you nothing. What cannot be withheld is the failure text itself: checkout ' +
+    'paths and product nouns often name the project outright' +
+    (pip ? ', and in this sample <strong>' + pip.matched + ' of ' + pip.total +
+           '</strong> entries do' : '') +
+    '. Sealed means no metadata, not anonymous. Judge on what is in front of you and ' +
+    'reach for UNKNOWN when it is not enough.';
+  sn.hidden = false;
+}
 var nameEl = document.getElementById('labeler');
 try { nameEl.value = localStorage.getItem('crux.ledger.name') || ''; } catch (e) {}
 slug = nameEl.value ? slugify(nameEl.value) : null;

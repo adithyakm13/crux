@@ -67,5 +67,16 @@ is escaped so a CI log cannot close the data block and inject markup.
 Nothing on the page shows machine labels or another labeller's answers. An
 anchored second pass measures agreement with the anchor.
 
+The two contexts build two differently named pages — **Root Cause Ledger** for
+the primary pass, **Sealed Ledger** for the blind one. They are usually open
+side by side, and a labeller who confuses the tabs has silently destroyed the
+separability measurement.
+
+`corpus ledger` reads the worksheet's key file when one sits beside it, for one
+purpose: counting how often the payload names its own repository, which the
+sealed page then states. Nothing from the key is embedded — the count reaches
+the page, the mapping does not. See `docs/limitations.md` for why that count
+matters and what it was on this sample.
+
 Generated pages are gitignored. The template and builder are versioned; a
 600KB rebuildable artifact is not.

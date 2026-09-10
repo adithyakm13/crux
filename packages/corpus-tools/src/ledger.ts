@@ -27,9 +27,21 @@
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import type { Worksheet, WorksheetEntry } from './worksheet.ts';
+import type { Worksheet, WorksheetEntry, WorksheetKey } from './worksheet.ts';
 
 const PLACEHOLDER = '/*__ENTRIES__*/';
+
+/**
+ * The two contexts are two different jobs and must be two different pages.
+ * They are usually open side by side — the primary pass and the blind pass —
+ * and a labeller who confuses the tabs has silently destroyed the separability
+ * measurement, so the name in the tab has to say which one this is.
+ */
+const TITLE_MARK = '>Root Cause Ledger<';
+const TITLES: Record<string, string> = {
+  full: 'Root Cause Ledger',
+  'payload-only': 'Sealed Ledger',
+};
 
 export function templatePath(): string {
   return join(dirname(fileURLToPath(import.meta.url)), '..', 'ledger', 'ledger.tpl.html');
@@ -68,8 +80,54 @@ function embedJson(value: unknown): string {
   return JSON.stringify(value).replace(/<\//g, '<\\/');
 }
 
-export async function buildLedger(worksheet: Worksheet, template?: string): Promise<string> {
-  const tpl = template ?? (await readFile(templatePath(), 'utf8'));
+/**
+ * How often the payload names its own repository.
+ *
+ * Withholding metadata does not make a failure anonymous. Stack frames carry
+ * checkout paths (`/home/runner/work/<repo>/<repo>/...`) and test names carry
+ * product nouns, so a sealed worksheet can still tell the labeller exactly
+ * where they are. That is not a defect to scrub — scrubbing would falsify the
+ * payload, and the payload is what crux will actually show a user — but it is
+ * a limit on what a separability number means, and a limit stated on the page
+ * is worth more than one buried in a document nobody opens.
+ *
+ * Counted on owner and repository name as case-insensitive substrings of the
+ * whole payload. Deliberately loose: this is an upper bound on how much the
+ * labeller could recognise, and an over-count here is the safe direction.
+ */
+export function provenanceInPayload(
+  worksheet: Worksheet,
+  key: WorksheetKey,
+): { matched: number; total: number } {
+  let matched = 0;
+  for (const e of worksheet.entries) {
+    const mapped = key.entries[e.entryId];
+    if (mapped === undefined) continue;
+    const repo = mapped.corpusRunId.split(':')[1] ?? '';
+    const terms = repo.split('/').filter((t) => t.length > 3);
+    if (terms.length === 0) continue;
+    const blob = [e.test, e.suite, e.file, e.message, e.stack].join('\n').toLowerCase();
+    if (terms.some((t) => blob.includes(t.toLowerCase()))) matched++;
+  }
+  return { matched, total: worksheet.entries.length };
+}
+
+export interface LedgerOptions {
+  /** Override the on-disk template. Tests use this; nothing else should. */
+  template?: string;
+  /**
+   * The sealed worksheet's key. Only used to count how often the payload names
+   * its own repository, which the page then states. Nothing from the key
+   * reaches the page — the count does, the mapping does not.
+   */
+  key?: WorksheetKey;
+}
+
+export async function buildLedger(
+  worksheet: Worksheet,
+  options: LedgerOptions = {},
+): Promise<string> {
+  const tpl = options.template ?? (await readFile(templatePath(), 'utf8'));
   if (!tpl.includes(PLACEHOLDER)) {
     throw new Error(`ledger template has no ${PLACEHOLDER} placeholder`);
   }
@@ -78,6 +136,10 @@ export async function buildLedger(worksheet: Worksheet, template?: string): Prom
     context: worksheet.context,
     selectionDigest: worksheet.selectionDigest,
     instructions: worksheet.instructions,
+    provenanceInPayload:
+      worksheet.context === 'payload-only' && options.key !== undefined
+        ? provenanceInPayload(worksheet, options.key)
+        : null,
     entries: worksheet.entries.map((e) => {
       const out: Record<string, unknown> = {};
       for (const k of KEEP) {
@@ -86,5 +148,15 @@ export async function buildLedger(worksheet: Worksheet, template?: string): Prom
       return out;
     }),
   };
-  return tpl.replace(PLACEHOLDER, embedJson(payload));
+  const title = TITLES[worksheet.context];
+  if (title === undefined) {
+    throw new Error(`ledger has no title for context ${JSON.stringify(worksheet.context)}`);
+  }
+  if (!tpl.includes(TITLE_MARK)) {
+    throw new Error(`ledger template has no ${TITLE_MARK} to name`);
+  }
+  return tpl
+    .split(TITLE_MARK)
+    .join(`>${title}<`)
+    .replace(PLACEHOLDER, embedJson(payload));
 }
