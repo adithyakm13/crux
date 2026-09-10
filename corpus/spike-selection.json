@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "digest": "7eb102a6886d",
+  "policy": {
+    "targetFailures": 150,
+    "minFailures": 5,
+    "maxFailures": 40,
+    "maxRunsPerRepo": 3,
+    "sliceLargeRuns": 24,
+    "minPerFramework": 15,
+    "maxSlicesPerRepo": 1,
+    "seed": 5913886
+  },
+  "runs": [
+    {
+      "corpusRunId": "github-actions:opennextjs/opennextjs-netlify:30451919396:1",
+      "failureIds": [
+        "f0001",
+        "f0002",
+        "f0003",
+        "f0004",
+        "f0005",
+        "f0006",
+        "f0008",
+        "f0009",
+        "f0010",
+        "f0011",
+        "f0012",
+        "f0013",
+        "f0302",
+        "f0306",
+        "f0310",
+        "f0318",
+        "f0326",
+        "f0334",
+        "f0383",
+        "f0384",
+        "f0385",
+        "f0553",
+        "f0554",
+        "f0555"
+      ]
+    },
+    {
+      "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:34339375099:1",
+      "failureIds": [
+        "f0001",
+        "f0002",
+        "f0003",
+        "f0004",
+        "f0005",
+        "f0006",
+        "f0007",
+        "f0008",
+        "f0009",
+        "f0010",
+        "f0011",
+        "f0012",
+        "f0013",
+        "f0014",
+        "f0015",
+        "f0016",
+        "f0017",
+        "f0018",
+        "f0019",
+        "f0020",
+        "f0021",
+        "f0022",
+        "f0023",
+        "f0024"
+      ]
+    },
+    {
+      "corpusRunId": "github-actions:tenstorrent/tt-metal:31215679147:2"
+    },
+    {
+      "corpusRunId": "github-actions:druxt/druxt.js:33618991721:1"
+    },
+    {
+      "corpusRunId": "github-actions:Sage/carbon:34333964341:1",
+      "failureIds": [
+        "f0001",
+        "f0002",
+        "f0003",
+        "f0004",
+        "f0005",
+        "f0006",
+        "f0007",
+        "f0008",
+        "f0009",
+        "f0010",
+        "f0011",
+        "f0012",
+        "f0034",
+        "f0035",
+        "f0036",
+        "f0037",
+        "f0038",
+        "f0039",
+        "f0040",
+        "f0041",
+        "f0042",
+        "f0043",
+        "f0044",
+        "f0045"
+      ]
+    },
+    {
+      "corpusRunId": "github-actions:druxt/druxt.js:33619018553:1"
+    },
+    {
+      "corpusRunId": "github-actions:druxt/druxt.js:33850630911:1"
+    },
+    {
+      "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:33596927146:1"
+    },
+    {
+      "corpusRunId": "github-actions:trinodb/trino:33595159099:1"
+    }
+  ]
+}
