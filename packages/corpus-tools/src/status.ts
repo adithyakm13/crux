@@ -59,6 +59,16 @@ export interface GateZeroStatus {
     top3RepoShare: number;
     runsOver200Failures: number;
     medianFailuresPerRun: number;
+    /**
+     * Runs holding 5-24 failures. This is the band the corpus is actually
+     * short of: a run of 1 contributes no pairs at all, and a run of 200 is a
+     * single bootstrap draw that swamps every other. The confidence interval
+     * is set by the NUMBER of runs, not the number of failures, so this count
+     * predicts whether any F1 claim will be decidable.
+     */
+    runsInBand: number;
+    /** Runs with at least two failures, hence at least one pair. */
+    runsWithPairs: number;
   };
   labeledRuns: number;
   perCategoryLabeled: Record<string, number>;
@@ -191,6 +201,8 @@ function concentrationOf(runs: CorpusRun[]): GateZeroStatus['concentration'] {
       top3RepoShare: 0,
       runsOver200Failures: 0,
       medianFailuresPerRun: 0,
+      runsInBand: 0,
+      runsWithPairs: 0,
     };
   }
   const sizes = runs.map((r) => r.failures.length).sort((a, b) => a - b);
@@ -205,6 +217,8 @@ function concentrationOf(runs: CorpusRun[]): GateZeroStatus['concentration'] {
     top3RepoShare: repoTotals.slice(0, 3).reduce((a, b) => a + b, 0) / total,
     runsOver200Failures: runs.filter((r) => r.failures.length > 200).length,
     medianFailuresPerRun: sizes[Math.floor(sizes.length / 2)] ?? 0,
+    runsInBand: runs.filter((r) => r.failures.length >= 5 && r.failures.length <= 24).length,
+    runsWithPairs: runs.filter((r) => r.failures.length >= 2).length,
   };
 }
 
@@ -438,6 +452,17 @@ export function formatGateZeroStatus(s: GateZeroStatus): string {
       `largest repo ${pc(c.topRepoShare)}, top 3 repos ${pc(c.top3RepoShare)}; ` +
       `median ${c.medianFailuresPerRun} failures/run` +
       (c.runsOver200Failures > 0 ? `; ${c.runsOver200Failures} run(s) over 200` : ''),
+  );
+  // The bootstrap resamples runs, so the interval is set by how many runs
+  // carry pairs — not by the failure count the Gate 0 requirement is stated
+  // in. Say so where the failure count is being read.
+  lines.push(
+    `runs carrying pairs: ${c.runsWithPairs} of ${s.runs}; ` +
+      `${c.runsInBand} in the 5-24 band` +
+      (c.runsInBand < 80
+        ? ` — about 80 labelled runs is where an F1 lower bound starts to ` +
+          `mean anything (see docs/limitations.md)`
+        : ''),
   );
   if (c.top3RepoShare > 0.5 || c.runsOver200Failures > 0) {
     lines.push(
