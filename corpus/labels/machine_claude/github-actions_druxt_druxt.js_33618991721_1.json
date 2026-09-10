@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:druxt/druxt.js:33618991721:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-10T11:43:52.456Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "guide-section-unresolved",
+      "category": "PRODUCT_REGRESSION",
+      "note": "One cause across two independent test files. seo.test.js sees sectionFor() return null where \"guide\" is expected and card URLs fall back; llms-txt.test.js sees output that contains \"## Modules\" with correctly tagged links but no \"## Guide\" at all, and the ordering assertion fails with indexOf -1 because the guide document is absent. Modules resolve, guide does not — one resolution path, two consumers. Could be a fixture that stopped supplying guide docs (DATA_FAILURE); called product because the module path works from the same fixture set."
+    },
+    "f0002": {
+      "group": "guide-section-unresolved",
+      "category": "PRODUCT_REGRESSION",
+      "note": "One cause across two independent test files. seo.test.js sees sectionFor() return null where \"guide\" is expected and card URLs fall back; llms-txt.test.js sees output that contains \"## Modules\" with correctly tagged links but no \"## Guide\" at all, and the ordering assertion fails with indexOf -1 because the guide document is absent. Modules resolve, guide does not — one resolution path, two consumers. Could be a fixture that stopped supplying guide docs (DATA_FAILURE); called product because the module path works from the same fixture set."
+    },
+    "f0003": {
+      "group": "guide-section-unresolved",
+      "category": "PRODUCT_REGRESSION",
+      "note": "One cause across two independent test files. seo.test.js sees sectionFor() return null where \"guide\" is expected and card URLs fall back; llms-txt.test.js sees output that contains \"## Modules\" with correctly tagged links but no \"## Guide\" at all, and the ordering assertion fails with indexOf -1 because the guide document is absent. Modules resolve, guide does not — one resolution path, two consumers. Could be a fixture that stopped supplying guide docs (DATA_FAILURE); called product because the module path works from the same fixture set."
+    },
+    "f0004": {
+      "group": "guide-section-unresolved",
+      "category": "PRODUCT_REGRESSION",
+      "note": "One cause across two independent test files. seo.test.js sees sectionFor() return null where \"guide\" is expected and card URLs fall back; llms-txt.test.js sees output that contains \"## Modules\" with correctly tagged links but no \"## Guide\" at all, and the ordering assertion fails with indexOf -1 because the guide document is absent. Modules resolve, guide does not — one resolution path, two consumers. Could be a fixture that stopped supplying guide docs (DATA_FAILURE); called product because the module path works from the same fixture set."
+    },
+    "f0005": {
+      "group": "guide-section-unresolved",
+      "category": "PRODUCT_REGRESSION",
+      "note": "One cause across two independent test files. seo.test.js sees sectionFor() return null where \"guide\" is expected and card URLs fall back; llms-txt.test.js sees output that contains \"## Modules\" with correctly tagged links but no \"## Guide\" at all, and the ordering assertion fails with indexOf -1 because the guide document is absent. Modules resolve, guide does not — one resolution path, two consumers. Could be a fixture that stopped supplying guide docs (DATA_FAILURE); called product because the module path works from the same fixture set."
+    },
+    "f0006": {
+      "group": "guide-section-unresolved",
+      "category": "PRODUCT_REGRESSION",
+      "note": "One cause across two independent test files. seo.test.js sees sectionFor() return null where \"guide\" is expected and card URLs fall back; llms-txt.test.js sees output that contains \"## Modules\" with correctly tagged links but no \"## Guide\" at all, and the ordering assertion fails with indexOf -1 because the guide document is absent. Modules resolve, guide does not — one resolution path, two consumers. Could be a fixture that stopped supplying guide docs (DATA_FAILURE); called product because the module path works from the same fixture set."
+    },
+    "f0007": {
+      "group": "guide-section-unresolved",
+      "category": "PRODUCT_REGRESSION",
+      "note": "One cause across two independent test files. seo.test.js sees sectionFor() return null where \"guide\" is expected and card URLs fall back; llms-txt.test.js sees output that contains \"## Modules\" with correctly tagged links but no \"## Guide\" at all, and the ordering assertion fails with indexOf -1 because the guide document is absent. Modules resolve, guide does not — one resolution path, two consumers. Could be a fixture that stopped supplying guide docs (DATA_FAILURE); called product because the module path works from the same fixture set."
+    },
+    "f0008": {
+      "group": "guide-section-unresolved",
+      "category": "PRODUCT_REGRESSION",
+      "note": "One cause across two independent test files. seo.test.js sees sectionFor() return null where \"guide\" is expected and card URLs fall back; llms-txt.test.js sees output that contains \"## Modules\" with correctly tagged links but no \"## Guide\" at all, and the ordering assertion fails with indexOf -1 because the guide document is absent. Modules resolve, guide does not — one resolution path, two consumers. Could be a fixture that stopped supplying guide docs (DATA_FAILURE); called product because the module path works from the same fixture set."
+    }
+  }
+}

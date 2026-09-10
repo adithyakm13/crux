@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Sage/carbon:34333964341:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-10T11:43:52.456Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "modal-focus-not-restored",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Focus is not restored to the trigger after a modal closes: one Menu Fullscreen case and three nested Dialog cases, all asserting on the call to activeElement, failing with toBeFocused \"Expected: focused, Received: inactive\". Menu and Dialog are different components but this is one behaviour — focus restoration on close — and they fail the same way."
+    },
+    "f0002": {
+      "group": "modal-focus-not-restored",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Focus is not restored to the trigger after a modal closes: one Menu Fullscreen case and three nested Dialog cases, all asserting on the call to activeElement, failing with toBeFocused \"Expected: focused, Received: inactive\". Menu and Dialog are different components but this is one behaviour — focus restoration on close — and they fail the same way."
+    },
+    "f0003": {
+      "group": "modal-focus-not-restored",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Focus is not restored to the trigger after a modal closes: one Menu Fullscreen case and three nested Dialog cases, all asserting on the call to activeElement, failing with toBeFocused \"Expected: focused, Received: inactive\". Menu and Dialog are different components but this is one behaviour — focus restoration on close — and they fail the same way."
+    },
+    "f0004": {
+      "group": "modal-focus-not-restored",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Focus is not restored to the trigger after a modal closes: one Menu Fullscreen case and three nested Dialog cases, all asserting on the call to activeElement, failing with toBeFocused \"Expected: focused, Received: inactive\". Menu and Dialog are different components but this is one behaviour — focus restoration on close — and they fail the same way."
+    },
+    "f0005": {
+      "group": "file-drop-onchange",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four browsers of one test: dragging and dropping a file does not pass it to the onChange callback."
+    },
+    "f0006": {
+      "group": "file-drop-onchange",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four browsers of one test: dragging and dropping a file does not pass it to the onChange callback."
+    },
+    "f0007": {
+      "group": "file-drop-onchange",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four browsers of one test: dragging and dropping a file does not pass it to the onChange callback."
+    },
+    "f0008": {
+      "group": "file-completed-state-render",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four browsers of one test: in the completed state the filename should be plain text with Preview links, and a toHaveCount assertion disagrees. Kept separate from the drag-and-drop group above — same component area, but a different behaviour and a different assertion, and nothing in the payload ties the two together. Merging on \"both touch the file input\" would be grouping by component, not by cause."
+    },
+    "f0009": {
+      "group": "file-drop-onchange",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four browsers of one test: dragging and dropping a file does not pass it to the onChange callback."
+    },
+    "f0010": {
+      "group": "file-completed-state-render",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four browsers of one test: in the completed state the filename should be plain text with Preview links, and a toHaveCount assertion disagrees. Kept separate from the drag-and-drop group above — same component area, but a different behaviour and a different assertion, and nothing in the payload ties the two together. Merging on \"both touch the file input\" would be grouping by component, not by cause."
+    },
+    "f0011": {
+      "group": "file-completed-state-render",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four browsers of one test: in the completed state the filename should be plain text with Preview links, and a toHaveCount assertion disagrees. Kept separate from the drag-and-drop group above — same component area, but a different behaviour and a different assertion, and nothing in the payload ties the two together. Merging on \"both touch the file input\" would be grouping by component, not by cause."
+    },
+    "f0012": {
+      "group": "file-completed-state-render",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four browsers of one test: in the completed state the filename should be plain text with Preview links, and a toHaveCount assertion disagrees. Kept separate from the drag-and-drop group above — same component area, but a different behaviour and a different assertion, and nothing in the payload ties the two together. Merging on \"both touch the file input\" would be grouping by component, not by cause."
+    },
+    "f0034": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0035": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0036": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0037": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0038": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0039": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0040": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0041": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0042": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0043": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0044": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    },
+    "f0045": {
+      "group": "focus-harness-unmountable",
+      "category": "TEST_DEFECT",
+      "note": "Twelve failures — three \"removing the first/middle/last card's focused action moves focus to...\" tests across four browsers — all erroring before any assertion with: Component \"FocusPreservationHarness\" cannot be mounted. Most likely, this component is defined in the test file. Create a test story instead. Playwright is telling the author exactly what is wrong with the test. Nothing about the product is exercised, so TEST_DEFECT is unambiguous here in a way it rarely is."
+    }
+  }
+}
