@@ -50,6 +50,7 @@ function usage(): string {
     '  corpus status',
     '  corpus frames [--markdown] [--include-untracked]',
     '  corpus scan --repos <file> [--out <file>] [--runs N] [--downloads N]',
+    '                [--min-stars N]  proxy for suite size, not quality — see ProbeOptions',
     '                --downloads is per run, not per repository',
     '  corpus sample [--target N] [--min-failures N] [--max-failures N]',
     '                [--slice N] [--ids | --selection <file>]',
@@ -248,6 +249,7 @@ async function main(): Promise<number> {
           ...(flags.has('downloads')
             ? { maxDownloadsPerRun: Number(flags.get('downloads')) }
             : {}),
+          ...(flags.has('min-stars') ? { minStars: Number(flags.get('min-stars')) } : {}),
           ...(json
             ? {}
             : {

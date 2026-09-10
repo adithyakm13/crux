@@ -457,6 +457,17 @@ export interface ProbeOptions {
   maxBytes?: number;
   maxArtifactBytes?: number;
   requireLicense?: boolean;
+  /**
+   * Skip repositories below this star count, right after the metadata call.
+   *
+   * Not a quality bar — a proxy for suite size. The corpus needs runs of 5-24
+   * failures, and very small projects overwhelmingly produce runs of one,
+   * which contribute no pairs at all and so cannot move the clustering
+   * interval. Of ninety-six sub-100-star candidates that scanned productive,
+   * seven of nine returned a single failure. Bailing here costs one API call
+   * instead of a run listing and two artifact downloads.
+   */
+  minStars?: number;
   onProgress?: (line: string) => void;
 }
 
@@ -498,6 +509,11 @@ export async function probeRepo(repo: string, options: ProbeOptions = {}): Promi
   }
   if ((options.requireLicense ?? true) && meta.licenseSpdx === null) {
     result.reason = `licence unidentified (${meta.licenseRaw ?? 'none'})`;
+    return result;
+  }
+  const minStars = options.minStars ?? 0;
+  if (meta.stars < minStars) {
+    result.reason = `${meta.stars} stars, below --min-stars ${minStars}`;
     return result;
   }
 
