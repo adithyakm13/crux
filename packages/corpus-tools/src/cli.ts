@@ -7,6 +7,8 @@
  *   corpus status                        what the corpus contains vs Gate 0
  *   corpus frames                        app-frame availability per framework
  *   corpus sample                        choose which runs to label
+ *   corpus worksheet                     offline labelling file
+ *   corpus import                        read a filled worksheet back
  *   corpus scan                          which repos would actually yield data
  */
 
@@ -27,6 +29,7 @@ import {
 import { formatBaselineReport, runBaseline } from './baseline.ts';
 import { formatSample, sampleForLabelling } from './sample.ts';
 import { probeRepo, type ProbeResult } from './harvest.ts';
+import { buildWorksheet, parseWorksheet } from './worksheet.ts';
 import { SCHEMA_VERSION } from '@cruxci/core';
 import {
   committedRuns,
@@ -48,6 +51,8 @@ function usage(): string {
     '                --downloads is per run, not per repository',
     '  corpus sample [--target N] [--min-failures N] [--max-failures N]',
     '                [--slice N] [--ids | --selection <file>]',
+    '  corpus worksheet --selection <file> --out <file> [--context full|payload-only]',
+    '  corpus import --file <file> --labeler <name> [--key <file>]',
     '  corpus label --labeler <name> [--context full|payload-only]',
     '                [--min-failures N] [--max-failures N] [--selection <file>]',
     '  corpus agreement --a <labeler> --b <labeler>',
@@ -353,6 +358,88 @@ async function main(): Promise<number> {
     } else {
       process.stdout.write(formatSample(result) + '\n');
     }
+    return 0;
+  }
+
+  if (command === 'worksheet') {
+    const selFlag = flags.get('selection');
+    const outFlag = flags.get('out');
+    if (typeof selFlag !== 'string' || typeof outFlag !== 'string') {
+      process.stderr.write('Error: worksheet needs --selection <file> and --out <file>.\n');
+      return 2;
+    }
+    const ctx = flags.get('context') === 'payload-only' ? 'payload-only' : 'full';
+    const { readFile, writeFile } = await import('node:fs/promises');
+    const selection = JSON.parse(await readFile(selFlag, 'utf8')) as Parameters<
+      typeof buildWorksheet
+    >[1];
+    const runs = await loadRuns(corpusDir);
+    const { worksheet, key } = buildWorksheet(runs, selection, ctx);
+    const keyPath = outFlag.replace(/\.json$/, '') + '.key.json';
+    await writeFile(outFlag, JSON.stringify(worksheet, null, 2) + '\n', 'utf8');
+    await writeFile(keyPath, JSON.stringify(key, null, 2) + '\n', 'utf8');
+    const n = worksheet.entries.length;
+    process.stdout.write(
+      `wrote ${n} entr${n === 1 ? 'y' : 'ies'} to ${outFlag} (context: ${ctx})\n` +
+        `key written to ${keyPath}\n` +
+        (ctx === 'payload-only'
+          ? 'The worksheet carries NO repository, workflow or commit — not even in an ' +
+            'id — because that is the separability condition. The key file maps entries ' +
+            'back; do not open it while labelling.\n'
+          : '') +
+        `Fill in "group" and "category" for each, then:\n` +
+        `  corpus import --file ${outFlag} --labeler <your-name>\n`,
+    );
+    return 0;
+  }
+
+  if (command === 'import') {
+    const fileFlag = flags.get('file');
+    const labeler = flags.get('labeler');
+    if (typeof fileFlag !== 'string' || typeof labeler !== 'string') {
+      process.stderr.write('Error: import needs --file <file> and --labeler <name>.\n');
+      return 2;
+    }
+    const { readFile } = await import('node:fs/promises');
+    const { saveLabels } = await import('./label.ts');
+    // The key sits beside the worksheet unless told otherwise. A full-context
+    // worksheet does not need it; a payload-only one cannot be imported without it.
+    const keyFlag = flags.get('key');
+    const keyPath =
+      typeof keyFlag === 'string' ? keyFlag : fileFlag.replace(/\.json$/, '') + '.key.json';
+    let keyFile;
+    try {
+      keyFile = JSON.parse(await readFile(keyPath, 'utf8')) as Parameters<typeof parseWorksheet>[3];
+    } catch {
+      keyFile = undefined;
+    }
+    let result;
+    try {
+      result = parseWorksheet(
+        JSON.parse(await readFile(fileFlag, 'utf8')),
+        labeler,
+        new Date().toISOString(),
+        keyFile,
+      );
+    } catch (e) {
+      process.stderr.write(`Error: ${(e as Error).message}\n`);
+      return 2;
+    }
+    if (result.filled === 0) {
+      process.stderr.write(
+        `Error: ${fileFlag} has no filled entries — every group and category is blank.\n`,
+      );
+      return 2;
+    }
+    for (const rl of result.labels) await saveLabels(corpusDir, rl);
+    process.stdout.write(
+      `imported ${result.filled} label(s) across ${result.labels.length} run(s) as ` +
+        `${labeler} (context: ${result.context})\n` +
+        (result.blank > 0
+          ? `${result.blank} entr${result.blank === 1 ? 'y is' : 'ies are'} still blank and were skipped\n`
+          : '') +
+        `Next: corpus baseline --labeler ${labeler}\n`,
+    );
     return 0;
   }
 
