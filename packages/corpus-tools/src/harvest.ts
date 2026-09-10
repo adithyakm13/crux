@@ -168,7 +168,13 @@ export async function harvestRepo(repo: string, opts: HarvestOptions): Promise<H
     );
     if (artifacts.some((a) => !a.expired)) runsWithArtifacts++;
     if (wanted.length === 0) {
-      skip(artifacts.every((a) => a.expired) ? 'all artifacts expired' : 'no test-like artifact');
+      skip(
+        artifacts.length === 0
+          ? 'uploads no artifacts at all'
+          : artifacts.every((a) => a.expired)
+            ? 'all artifacts expired'
+            : 'no test-like artifact',
+      );
       continue;
     }
 
@@ -507,6 +513,7 @@ export async function probeRepo(repo: string, options: ProbeOptions = {}): Promi
     return result;
   }
 
+  let sawAnyArtifact = false;
   let sawLiveArtifact = false;
   let sawCandidate = false;
   for (const wr of runs) {
@@ -519,6 +526,7 @@ export async function probeRepo(repo: string, options: ProbeOptions = {}): Promi
     } catch {
       continue;
     }
+    if (artifacts.length > 0) sawAnyArtifact = true;
     const live = artifacts.filter((a) => !a.expired);
     if (live.length > 0) sawLiveArtifact = true;
     // The same name filter the harvester uses, then the same content dispatch.
@@ -572,12 +580,29 @@ export async function probeRepo(repo: string, options: ProbeOptions = {}): Promi
     }
   }
 
-  result.reason = !sawLiveArtifact
-    ? 'all artifacts expired'
-    : !sawCandidate
-      ? 'no test-like artifact'
-      : 'artifacts downloaded but nothing parsed to a failure';
+  result.reason = probeReason({ sawAnyArtifact, sawLiveArtifact, sawCandidate });
   return result;
+}
+
+/**
+ * Why a repository yielded nothing.
+ *
+ * These four are different facts with different consequences, so they get
+ * different strings. A repository that uploads no artifacts at all can be
+ * dropped permanently; one whose artifacts have merely expired is viable on
+ * fresher runs and should be revisited, not deleted from the candidate list.
+ * Conflating them sends the next scan back to repositories that can never
+ * work — `[].every(...)` is `true`, which is exactly how the two got merged.
+ */
+export function probeReason(seen: {
+  sawAnyArtifact: boolean;
+  sawLiveArtifact: boolean;
+  sawCandidate: boolean;
+}): string {
+  if (!seen.sawAnyArtifact) return 'uploads no artifacts at all';
+  if (!seen.sawLiveArtifact) return 'all artifacts expired';
+  if (!seen.sawCandidate) return 'no test-like artifact';
+  return 'artifacts downloaded but nothing parsed to a failure';
 }
 
 export function runsDir(corpusDir: string): string {
