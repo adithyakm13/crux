@@ -1,13 +1,29 @@
-#
-#   1. >= 500 stars and not archived, so the CI is real and maintained
-#   2. at least one recent failed run with a NON-EXPIRED artifact
-#   3. an artifact whose contents an adapter can actually read
-# Criterion 2 is the binding one: most active repositories keep GitHub Actions
 # Repositories harvested for the crux ci corpus.
+#
 # Selection criteria, applied in this order:
+#   1. not archived, not a fork, pushed within the last few months
+#   2. an identified licence (GitHub's NOASSERTION is not one)
+#   3. at least one recent failed run with a NON-EXPIRED artifact
+#   4. an artifact whose contents an adapter can actually read
+#
+# Criterion 3 is the binding one, and popularity does not predict it. A sweep
+# of fifty well-known front-end repositories yielded nothing: vuejs/core has
+# one artifact across twelve failed runs, vitejs/vite none. They read the log
+# instead of uploading test reports. The repositories in this list are
+# survivors of a rare property, not of a quality bar.
+#
+# So candidates are now selected on that property directly, via code search for
+# workflows that upload test reports (`junitxml`, `surefire-reports`,
+# `playwright-report` alongside `upload-artifact`). The old ">= 500 stars" rule
+# has gone: it was a proxy for "the CI is real", which code search establishes
+# outright, and it filtered away exactly the population the corpus is short of.
+# A 200-star project with a modest suite produces the 5-24 failure runs that
+# the clustering bootstrap needs; the big repositories produce 200-failure runs
+# that count as one draw each and swamp the rest. See docs/limitations.md.
+#
+# GitHub keeps artifacts for a few days to ninety, so this list is a snapshot
+# of what was reachable, not of every repository worth harvesting. Re-run
 # `corpus harvest` regularly — it is idempotent on run id and accumulates.
-# artifacts for one to a few days, so this list is a snapshot of what was
-# reachable, not a list of every repository worth harvesting. Re-run
 ArcadeData/arcadedb
 CycloneDX/cyclonedx-node-npm
 Doezer/Questarr
