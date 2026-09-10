@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:34370178198:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Mathews-Tom/archex",
+    "providerRunId": "34370178198",
+    "runAttempt": 1,
+    "url": "https://github.com/Mathews-Tom/archex/actions/runs/34370178198",
+    "workflowName": "CI",
+    "event": "push",
+    "headSha": "1a57d7261cae6afd80451a4330d49c62a2ead9b7",
+    "headBranch": "docs/r19-graft-graph-memory-preregister",
+    "artifactIds": [
+      "10111829402",
+      "10111798517"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T04:38:50.324Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 9326,
+    "failures": 1,
+    "passed": 9307,
+    "skipped": 18,
+    "filesParsed": 2,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-3.11/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_codex_subprocess_search_command_exits_zero_with_empty_object_stdout",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_hooks"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1014,
+      "errorType": null,
+      "message": "AssertionError: assert 'timeout' == 'codex_augmentation_withheld'\n  \n  - codex_augmentation_withheld\n  + timeout",
+      "stackText": "indexed_repo = PosixPath('/tmp/pytest-of-runner/pytest-0/test_codex_subprocess_search_c0/python_simple')\ntmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_codex_subprocess_search_c0')\n\n    def test_codex_subprocess_search_command_exits_zero_with_empty_object_stdout(\n        indexed_repo: Path, tmp_path: Path\n    ) -> None:\n        diagnostics_log = tmp_path / \"codex-subprocess-diag.log\"\n        stdin_payload = json.dumps(\n            {\n                \"tool_name\": \"Bash\",\n                \"tool_input\": {\"command\": \"grep -rn AuthService .\"},\n                \"cwd\": str(indexed_repo),\n            }\n        )\n    \n        result = _run_codex_hook_subprocess(\n            stdin_payload, cwd=indexed_repo, diagnostics_log=diagnostics_log\n        )\n    \n        assert result.returncode == 0, result.stderr\n        assert json.loads(result.stdout) == {}\n        entries = _read_diagnostics(diagnostics_log)\n>       assert entries[-1][\"kind\"] == \"codex_augmentation_withheld\"\nE       AssertionError: assert 'timeout' == 'codex_augmentation_withheld'\nE         \nE         - codex_augmentation_withheld\nE         + timeout\n\ntests/integrations/test_hooks.py:839: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

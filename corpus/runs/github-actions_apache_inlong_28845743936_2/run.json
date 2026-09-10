@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/inlong:28845743936:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/inlong",
+    "providerRunId": "28845743936",
+    "runAttempt": 2,
+    "url": "https://github.com/apache/inlong/actions/runs/28845743936",
+    "workflowName": "InLong Unit Test",
+    "event": "pull_request",
+    "headSha": "64880e39e50f812448c18d15326bc6696ecfcd90",
+    "headBranch": "INLONG-12148",
+    "artifactIds": [
+      "8162980456"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T09:26:39.438Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 858,
+    "failures": 1,
+    "passed": 857,
+    "skipped": 0,
+    "filesParsed": 477,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "surefire-reports/inlong-agent/agent-installer/target/surefire-reports/TEST-installer.AllowedRootsResolverTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "symlinkBypass_nonExistingPath_shouldBeRejected",
+      "suitePath": [
+        "installer.AllowedRootsResolverTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 16,
+      "errorType": "java.lang.AssertionError",
+      "message": "symlink parent pointing outside root must be rejected for non-existing path",
+      "stackText": "java.lang.AssertionError: symlink parent pointing outside root must be rejected for non-existing path\n\tat installer.AllowedRootsResolverTest.symlinkBypass_nonExistingPath_shouldBeRejected(AllowedRootsResolverTest.java:321)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

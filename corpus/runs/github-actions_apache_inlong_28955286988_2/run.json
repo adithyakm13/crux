@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/inlong:28955286988:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/inlong",
+    "providerRunId": "28955286988",
+    "runAttempt": 2,
+    "url": "https://github.com/apache/inlong/actions/runs/28955286988",
+    "workflowName": "InLong Unit Test",
+    "event": "pull_request",
+    "headSha": "099266796df670f7801693a8803a72e5ca60d815",
+    "headBranch": "INLONG-12148",
+    "artifactIds": [
+      "8186926383"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T09:25:41.236Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 936,
+    "failures": 4,
+    "passed": 932,
+    "skipped": 0,
+    "filesParsed": 480,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "surefire-reports/inlong-agent/agent-installer/target/surefire-reports/TEST-installer.AllowedRootsResolverTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "symlinkBypass_nonExistingPath_shouldBeRejected",
+      "suitePath": [
+        "installer.AllowedRootsResolverTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 8,
+      "errorType": "java.lang.AssertionError",
+      "message": "symlink parent pointing outside root must be rejected for non-existing path",
+      "stackText": "java.lang.AssertionError: symlink parent pointing outside root must be rejected for non-existing path\n\tat installer.AllowedRootsResolverTest.symlinkBypass_nonExistingPath_shouldBeRejected(AllowedRootsResolverTest.java:321)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "surefire-reports/inlong-agent/agent-installer/target/surefire-reports/TEST-installer.ModuleCommandValidatorTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "illegal_questionMarkWildcard_shouldRejectByMetaChar",
+      "suitePath": [
+        "installer.ModuleCommandValidatorTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 6,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected rejected, got ValidationResult{ok=true, parsed=[ParsedSubCmd{pipeline=[[rm, -rf, ~/inlong/tmp/log?.txt]], workDir=null}]}",
+      "stackText": "java.lang.AssertionError: expected rejected, got ValidationResult{ok=true, parsed=[ParsedSubCmd{pipeline=[[rm, -rf, ~/inlong/tmp/log?.txt]], workDir=null}]}\n\tat installer.ModuleCommandValidatorTest.assertRejected(ModuleCommandValidatorTest.java:490)\n\tat installer.ModuleCommandValidatorTest.illegal_questionMarkWildcard_shouldRejectByMetaChar(ModuleCommandValidatorTest.java:173)\n",
+      "stdout": "2026-07-09 01:52:09.110 - INFO  [           main] a.i.v.CommandWhitelistResolver:126 CommandWhitelistResolver initialized: argv0Whitelist=[[, awk, bash, cat, cd, chmod, chown, cp, echo, false, grep, java, kill, ln, mkdir, mv, ps, rm, sh, tar, test, true, unzip], writeLikeCommands=[chmod, chown, cp, ln, mkdir, mv, rm, tar, unzip]\n2026-07-09 01:52:09.110 - INFO  [           main] i.a.i.v.ModuleCommandValidator:61 ModuleCommandValidator initialized: argv0Whitelist=[[, awk, bash, cat, cd, chmod, chown, cp, echo, false, grep, java, kill, ln, mkdir, mv, ps, rm, sh, tar, test, true, unzip], writeLikeCommands=[chmod, chown, cp, ln, mkdir, mv, rm, tar, unzip]\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "surefire-reports/inlong-agent/agent-installer/target/surefire-reports/TEST-installer.ModuleCommandValidatorTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "illegal_starInMiddleOfPath_shouldRejectByMetaChar",
+      "suitePath": [
+        "installer.ModuleCommandValidatorTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected rejected, got ValidationResult{ok=true, parsed=[ParsedSubCmd{pipeline=[[rm, -rf, ~/inlong/*/logs]], workDir=null}]}",
+      "stackText": "java.lang.AssertionError: expected rejected, got ValidationResult{ok=true, parsed=[ParsedSubCmd{pipeline=[[rm, -rf, ~/inlong/*/logs]], workDir=null}]}\n\tat installer.ModuleCommandValidatorTest.assertRejected(ModuleCommandValidatorTest.java:490)\n\tat installer.ModuleCommandValidatorTest.illegal_starInMiddleOfPath_shouldRejectByMetaChar(ModuleCommandValidatorTest.java:182)\n",
+      "stdout": "2026-07-09 01:52:09.115 - INFO  [           main] a.i.v.CommandWhitelistResolver:126 CommandWhitelistResolver initialized: argv0Whitelist=[[, awk, bash, cat, cd, chmod, chown, cp, echo, false, grep, java, kill, ln, mkdir, mv, ps, rm, sh, tar, test, true, unzip], writeLikeCommands=[chmod, chown, cp, ln, mkdir, mv, rm, tar, unzip]\n2026-07-09 01:52:09.115 - INFO  [           main] i.a.i.v.ModuleCommandValidator:61 ModuleCommandValidator initialized: argv0Whitelist=[[, awk, bash, cat, cd, chmod, chown, cp, echo, false, grep, java, kill, ln, mkdir, mv, ps, rm, sh, tar, test, true, unzip], writeLikeCommands=[chmod, chown, cp, ln, mkdir, mv, rm, tar, unzip]\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "surefire-reports/inlong-agent/agent-installer/target/surefire-reports/TEST-installer.ModuleCommandValidatorTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "illegal_starWildcard_shouldRejectByMetaChar",
+      "suitePath": [
+        "installer.ModuleCommandValidatorTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected rejected, got ValidationResult{ok=true, parsed=[ParsedSubCmd{pipeline=[[rm, -rf, ~/inlong/tmp/*.log]], workDir=null}]}",
+      "stackText": "java.lang.AssertionError: expected rejected, got ValidationResult{ok=true, parsed=[ParsedSubCmd{pipeline=[[rm, -rf, ~/inlong/tmp/*.log]], workDir=null}]}\n\tat installer.ModuleCommandValidatorTest.assertRejected(ModuleCommandValidatorTest.java:490)\n\tat installer.ModuleCommandValidatorTest.illegal_starWildcard_shouldRejectByMetaChar(ModuleCommandValidatorTest.java:165)\n",
+      "stdout": "2026-07-09 01:52:09.121 - INFO  [           main] a.i.v.CommandWhitelistResolver:126 CommandWhitelistResolver initialized: argv0Whitelist=[[, awk, bash, cat, cd, chmod, chown, cp, echo, false, grep, java, kill, ln, mkdir, mv, ps, rm, sh, tar, test, true, unzip], writeLikeCommands=[chmod, chown, cp, ln, mkdir, mv, rm, tar, unzip]\n2026-07-09 01:52:09.122 - INFO  [           main] i.a.i.v.ModuleCommandValidator:61 ModuleCommandValidator initialized: argv0Whitelist=[[, awk, bash, cat, cd, chmod, chown, cp, echo, false, grep, java, kill, ln, mkdir, mv, ps, rm, sh, tar, test, true, unzip], writeLikeCommands=[chmod, chown, cp, ln, mkdir, mv, rm, tar, unzip]\n",
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Sage/carbon:34366004747:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Sage/carbon",
+    "providerRunId": "34366004747",
+    "runAttempt": 1,
+    "url": "https://github.com/Sage/carbon/actions/runs/34366004747",
+    "workflowName": "Playwright",
+    "event": "pull_request",
+    "headSha": "e6691cfeb912fbcd513dac50507dbd6c8977f2b0",
+    "headBranch": "FE-7161-align-file-input-with-fusion-ds",
+    "artifactIds": [
+      "10110081478",
+      "10110078353",
+      "10110076943",
+      "10110095171",
+      "10110081736",
+      "10110101054",
+      "10110093203",
+      "10110248717"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-09T16:18:24.598Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 2080,
+    "failures": 16,
+    "passed": 2045,
+    "skipped": 19,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-5/report-5.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "when a Menu Fullscreen is opened and then closed, the call to action element should be focused",
+      "suitePath": [
+        "Prop tests for Menu component"
+      ],
+      "filePath": "components/menu/menu.pw.tsx",
+      "status": "failed",
+      "durationMs": 8382,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button').filter({ hasText: 'Menu' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button').filter({ hasText: 'Menu' })\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"inactive\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button').filter({ hasText: 'Menu' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button').filter({ hasText: 'Menu' })\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"inactive\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/menu/menu.pw.tsx:162:24",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "should check clicking Esc key closes dialog",
+      "suitePath": [
+        "should render Confirm component"
+      ],
+      "filePath": "components/confirm/confirm.pw.tsx",
+      "status": "failed",
+      "durationMs": 6471,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBeAttached\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('alertdialog')\nExpected: not attached\nReceived: attached\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toBeAttached\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alertdialog')\u001b[22m\n\u001b[2m    9 × locator resolved to <div tabindex=\"-1\" role=\"alertdialog\" data-element=\"dialog\" data-component=\"confirm\" class=\"sc-bbSZdi jZEEfu\" aria-labelledby=\"carbon-cb0902fb-021d-76a4-1120-7f72fca7fa04\" aria-describedby=\"carbon-7a00d6f7-2a6d-08b6-004f-7366b2a8d5b8\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"attached\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBeAttached\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('alertdialog')\nExpected: not attached\nReceived: attached\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toBeAttached\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alertdialog')\u001b[22m\n\u001b[2m    9 × locator resolved to <div tabindex=\"-1\" role=\"alertdialog\" data-element=\"dialog\" data-component=\"confirm\" class=\"sc-bbSZdi jZEEfu\" aria-labelledby=\"carbon-cb0902fb-021d-76a4-1120-7f72fca7fa04\" aria-describedby=\"carbon-7a00d6f7-2a6d-08b6-004f-7366b2a8d5b8\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"attached\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/confirm/confirm.pw.tsx:332:30",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-7/report-7.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "is set on the event when Enter key is pressed on an option using ArrowDown key to navigate",
+      "suitePath": [
+        "Selection confirmed"
+      ],
+      "filePath": "components/select/simple-select/simple-select.pw.tsx",
+      "status": "failed",
+      "durationMs": 6657,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/select/simple-select/simple-select.pw.tsx:446:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "blob-report-7/report-7.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "is set on the event when Enter key is pressed on an option using ArrowUp key to navigate",
+      "suitePath": [
+        "Selection confirmed"
+      ],
+      "filePath": "components/select/simple-select/simple-select.pw.tsx",
+      "status": "failed",
+      "durationMs": 6606,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: hidden\nReceived: visible\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <span data-element=\"confirmed-selection-5\">5</span>\u001b[22m\n\u001b[2m      - unexpected value \"visible\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-element=\"confirmed-selection-5\"]')\nExpected: hidden\nReceived: visible\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-element=\"confirmed-selection-5\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <span data-element=\"confirmed-selection-5\">5</span>\u001b[22m\n\u001b[2m      - unexpected value \"visible\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/select/simple-select/simple-select.pw.tsx:528:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30816,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:202:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 31114,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:233:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30119,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:202:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30145,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:233:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30117,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:202:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30173,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:233:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30124,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:202:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30145,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:233:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "after dropping a file, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30222,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:264:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "after dropping a file, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30140,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:264:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "after dropping a file, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30120,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:264:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "after dropping a file, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30124,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:264:8",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

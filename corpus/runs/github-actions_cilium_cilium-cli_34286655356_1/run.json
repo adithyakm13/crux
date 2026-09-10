@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:cilium/cilium-cli:34286655356:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "cilium/cilium-cli",
+    "providerRunId": "34286655356",
+    "runAttempt": 1,
+    "url": "https://github.com/cilium/cilium-cli/actions/runs/34286655356",
+    "workflowName": "Kind",
+    "event": "schedule",
+    "headSha": "ef74cc4ec5a3ec4d724e03b39e4454ba727cd15a",
+    "headBranch": "main",
+    "artifactIds": [
+      "10080370755",
+      "10080161474"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T10:23:25.759Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 278,
+    "failures": 1,
+    "passed": 183,
+    "skipped": 94,
+    "filesParsed": 2,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "cilium-junits/cilium-junit-1.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "client-ingress",
+      "suitePath": [
+        "connectivity test"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 75721,
+      "errorType": "failure",
+      "message": "client-ingress failed",
+      "stackText": "client-ingress/client-to-client:ping-ipv4-0: test-namespace-5/client-7b7776c86b-j96rk (10.244.3.29) -> test-namespace-5/client2-57cf4468f-jh87w (10.244.3.2:0)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

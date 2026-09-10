@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:30031299307:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Mathews-Tom/archex",
+    "providerRunId": "30031299307",
+    "runAttempt": 1,
+    "url": "https://github.com/Mathews-Tom/archex/actions/runs/30031299307",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "c9a207dbe368f423c2a04c65e23d1cb99847ec91",
+    "headBranch": "m10-1-facade-contract",
+    "artifactIds": [
+      "8573464947",
+      "8573467832",
+      "8573465155"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T04:40:10.526Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 12009,
+    "failures": 3,
+    "passed": 11979,
+    "skipped": 27,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-3.11/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_context_receipt_enum_members",
+      "suitePath": [
+        "pytest",
+        "tests.test_models"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2,
+      "errorType": null,
+      "message": "AssertionError: assert {'BELOW_THRES...xcluded', ...} == {'BELOW_THRES..._budget', ...}\n  \n  Omitting 7 identical items, use -vv to show\n  Left contains 1 more item:\n  {'FILTER_EXCLUDED': 'filter_excluded'}\n  \n  Full diff:\n    {\n        'BELOW_THRESHOLD': 'below_threshold',\n        'DEPENDENCY_FRONTIER_CUT': 'dependency_frontier_cut',\n        'DUPLICATE': 'duplicate',\n  +     'FILTER_EXCLUDED': 'filter_excluded',\n        'OVER_BUDGET': 'over_budget',\n        'STALE_INDEX': 'stale_index',\n        'TEST_DEPRIORITIZED': 'test_deprioritized',\n        'UNSUPPORTED_GRAMMAR': 'unsupported_grammar',\n    }",
+      "stackText": "def test_context_receipt_enum_members() -> None:\n        assert {member.name: member.value for member in ContextFreshness} == {\n            \"CLEAN\": \"clean\",\n            \"DIRTY\": \"dirty\",\n            \"WATCH_ACTIVE\": \"watch_active\",\n            \"WATCH_UNAVAILABLE\": \"watch_unavailable\",\n            \"UNKNOWN\": \"unknown\",\n        }\n        assert {member.name: member.value for member in ContextCompletenessStatus} == {\n            \"COMPLETE\": \"complete\",\n            \"INCOMPLETE\": \"incomplete\",\n            \"UNKNOWN\": \"unknown\",\n        }\n        assert {member.name: member.value for member in ContextCompletenessReason} == {\n            \"COMPLETE\": \"complete\",\n            \"BUDGET_EXHAUSTED\": \"budget_exhausted\",\n            \"DEPENDENCY_FRONTIER_CUT\": \"dependency_frontier_cut\",\n            \"DUPLICATE_SUPPRESSED\": \"duplicate_suppressed\",\n            \"NO_CANDIDATES\": \"no_candidates\",\n            \"STALE_INDEX\": \"stale_index\",\n            \"UNSUPPORTED_GRAMMAR\": \"unsupported_grammar\",\n            \"UNKNOWN\": \"unknown\",\n        }\n        assert {member.name: member.value for member in ContextRecommendedAction} == {\n            \"USE_BUNDLE\": \"use_bundle\",\n            \"NARROW_QUERY\": \"narrow_query\",\n            \"RAISE_BUDGET\": \"raise_budget\",\n            \"REFRESH_INDEX\": \"refresh_index\",\n            \"FETCH_SKIPPED_CANDIDATE\": \"fetch_skipped_candidate\",\n            \"MANUAL_REVIEW\": \"manual_review\",\n        }\n>       assert {member.name: member.value for member in ContextSkippedReason} == {\n            \"BELOW_THRESHOLD\": \"below_threshold\",\n            \"DEPENDENCY_FRONTIER_CUT\": \"dependency_frontier_cut\",\n            \"DUPLICATE\": \"duplicate\",\n            \"OVER_BUDGET\": \"over_budget\",\n            \"STALE_INDEX\": \"stale_index\",\n            \"TEST_DEPRIORITIZED\": \"test_deprioritized\",\n            \"UNSUPPORTED_GRAMMAR\": \"unsupported_grammar\",\n        }\nE       AssertionError: assert {'BELOW_THRES...xcluded', ...} == {'BELOW_THRES..._budget', ...}\nE         \nE         Omitting 7 identical items, use -vv to show\nE         Left contains 1 more item:\nE         {'FILTER_EXCLUDED': 'filter_excluded'}\nE         \nE         Full diff:\nE           {\nE               'BELOW_THRESHOLD': 'below_threshold',\nE               'DEPENDENCY_FRONTIER_CUT': 'dependency_frontier_cut',\nE               'DUPLICATE': 'duplicate',\nE         +     'FILTER_EXCLUDED': 'filter_excluded',\nE               'OVER_BUDGET': 'over_budget',\nE               'STALE_INDEX': 'stale_index',\nE               'TEST_DEPRIORITIZED': 'test_deprioritized',\nE               'UNSUPPORTED_GRAMMAR': 'unsupported_grammar',\nE           }\n\ntests/test_models.py:134: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-3.13/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_context_receipt_enum_members",
+      "suitePath": [
+        "pytest",
+        "tests.test_models"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2,
+      "errorType": null,
+      "message": "AssertionError: assert {'BELOW_THRES...xcluded', ...} == {'BELOW_THRES..._budget', ...}\n  \n  Omitting 7 identical items, use -vv to show\n  Left contains 1 more item:\n  {'FILTER_EXCLUDED': 'filter_excluded'}\n  \n  Full diff:\n    {\n        'BELOW_THRESHOLD': 'below_threshold',\n        'DEPENDENCY_FRONTIER_CUT': 'dependency_frontier_cut',\n        'DUPLICATE': 'duplicate',\n  +     'FILTER_EXCLUDED': 'filter_excluded',\n        'OVER_BUDGET': 'over_budget',\n        'STALE_INDEX': 'stale_index',\n        'TEST_DEPRIORITIZED': 'test_deprioritized',\n        'UNSUPPORTED_GRAMMAR': 'unsupported_grammar',\n    }",
+      "stackText": "def test_context_receipt_enum_members() -> None:\n        assert {member.name: member.value for member in ContextFreshness} == {\n            \"CLEAN\": \"clean\",\n            \"DIRTY\": \"dirty\",\n            \"WATCH_ACTIVE\": \"watch_active\",\n            \"WATCH_UNAVAILABLE\": \"watch_unavailable\",\n            \"UNKNOWN\": \"unknown\",\n        }\n        assert {member.name: member.value for member in ContextCompletenessStatus} == {\n            \"COMPLETE\": \"complete\",\n            \"INCOMPLETE\": \"incomplete\",\n            \"UNKNOWN\": \"unknown\",\n        }\n        assert {member.name: member.value for member in ContextCompletenessReason} == {\n            \"COMPLETE\": \"complete\",\n            \"BUDGET_EXHAUSTED\": \"budget_exhausted\",\n            \"DEPENDENCY_FRONTIER_CUT\": \"dependency_frontier_cut\",\n            \"DUPLICATE_SUPPRESSED\": \"duplicate_suppressed\",\n            \"NO_CANDIDATES\": \"no_candidates\",\n            \"STALE_INDEX\": \"stale_index\",\n            \"UNSUPPORTED_GRAMMAR\": \"unsupported_grammar\",\n            \"UNKNOWN\": \"unknown\",\n        }\n        assert {member.name: member.value for member in ContextRecommendedAction} == {\n            \"USE_BUNDLE\": \"use_bundle\",\n            \"NARROW_QUERY\": \"narrow_query\",\n            \"RAISE_BUDGET\": \"raise_budget\",\n            \"REFRESH_INDEX\": \"refresh_index\",\n            \"FETCH_SKIPPED_CANDIDATE\": \"fetch_skipped_candidate\",\n            \"MANUAL_REVIEW\": \"manual_review\",\n        }\n>       assert {member.name: member.value for member in ContextSkippedReason} == {\n            \"BELOW_THRESHOLD\": \"below_threshold\",\n            \"DEPENDENCY_FRONTIER_CUT\": \"dependency_frontier_cut\",\n            \"DUPLICATE\": \"duplicate\",\n            \"OVER_BUDGET\": \"over_budget\",\n            \"STALE_INDEX\": \"stale_index\",\n            \"TEST_DEPRIORITIZED\": \"test_deprioritized\",\n            \"UNSUPPORTED_GRAMMAR\": \"unsupported_grammar\",\n        }\nE       AssertionError: assert {'BELOW_THRES...xcluded', ...} == {'BELOW_THRES..._budget', ...}\nE         \nE         Omitting 7 identical items, use -vv to show\nE         Left contains 1 more item:\nE         {'FILTER_EXCLUDED': 'filter_excluded'}\nE         \nE         Full diff:\nE           {\nE               'BELOW_THRESHOLD': 'below_threshold',\nE               'DEPENDENCY_FRONTIER_CUT': 'dependency_frontier_cut',\nE               'DUPLICATE': 'duplicate',\nE         +     'FILTER_EXCLUDED': 'filter_excluded',\nE               'OVER_BUDGET': 'over_budget',\nE               'STALE_INDEX': 'stale_index',\nE               'TEST_DEPRIORITIZED': 'test_deprioritized',\nE               'UNSUPPORTED_GRAMMAR': 'unsupported_grammar',\nE           }\n\ntests/test_models.py:134: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-3.12/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test_context_receipt_enum_members",
+      "suitePath": [
+        "pytest",
+        "tests.test_models"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2,
+      "errorType": null,
+      "message": "AssertionError: assert {'BELOW_THRES...xcluded', ...} == {'BELOW_THRES..._budget', ...}\n  \n  Omitting 7 identical items, use -vv to show\n  Left contains 1 more item:\n  {'FILTER_EXCLUDED': 'filter_excluded'}\n  \n  Full diff:\n    {\n        'BELOW_THRESHOLD': 'below_threshold',\n        'DEPENDENCY_FRONTIER_CUT': 'dependency_frontier_cut',\n        'DUPLICATE': 'duplicate',\n  +     'FILTER_EXCLUDED': 'filter_excluded',\n        'OVER_BUDGET': 'over_budget',\n        'STALE_INDEX': 'stale_index',\n        'TEST_DEPRIORITIZED': 'test_deprioritized',\n        'UNSUPPORTED_GRAMMAR': 'unsupported_grammar',\n    }",
+      "stackText": "def test_context_receipt_enum_members() -> None:\n        assert {member.name: member.value for member in ContextFreshness} == {\n            \"CLEAN\": \"clean\",\n            \"DIRTY\": \"dirty\",\n            \"WATCH_ACTIVE\": \"watch_active\",\n            \"WATCH_UNAVAILABLE\": \"watch_unavailable\",\n            \"UNKNOWN\": \"unknown\",\n        }\n        assert {member.name: member.value for member in ContextCompletenessStatus} == {\n            \"COMPLETE\": \"complete\",\n            \"INCOMPLETE\": \"incomplete\",\n            \"UNKNOWN\": \"unknown\",\n        }\n        assert {member.name: member.value for member in ContextCompletenessReason} == {\n            \"COMPLETE\": \"complete\",\n            \"BUDGET_EXHAUSTED\": \"budget_exhausted\",\n            \"DEPENDENCY_FRONTIER_CUT\": \"dependency_frontier_cut\",\n            \"DUPLICATE_SUPPRESSED\": \"duplicate_suppressed\",\n            \"NO_CANDIDATES\": \"no_candidates\",\n            \"STALE_INDEX\": \"stale_index\",\n            \"UNSUPPORTED_GRAMMAR\": \"unsupported_grammar\",\n            \"UNKNOWN\": \"unknown\",\n        }\n        assert {member.name: member.value for member in ContextRecommendedAction} == {\n            \"USE_BUNDLE\": \"use_bundle\",\n            \"NARROW_QUERY\": \"narrow_query\",\n            \"RAISE_BUDGET\": \"raise_budget\",\n            \"REFRESH_INDEX\": \"refresh_index\",\n            \"FETCH_SKIPPED_CANDIDATE\": \"fetch_skipped_candidate\",\n            \"MANUAL_REVIEW\": \"manual_review\",\n        }\n>       assert {member.name: member.value for member in ContextSkippedReason} == {\n            \"BELOW_THRESHOLD\": \"below_threshold\",\n            \"DEPENDENCY_FRONTIER_CUT\": \"dependency_frontier_cut\",\n            \"DUPLICATE\": \"duplicate\",\n            \"OVER_BUDGET\": \"over_budget\",\n            \"STALE_INDEX\": \"stale_index\",\n            \"TEST_DEPRIORITIZED\": \"test_deprioritized\",\n            \"UNSUPPORTED_GRAMMAR\": \"unsupported_grammar\",\n        }\nE       AssertionError: assert {'BELOW_THRES...xcluded', ...} == {'BELOW_THRES..._budget', ...}\nE         \nE         Omitting 7 identical items, use -vv to show\nE         Left contains 1 more item:\nE         {'FILTER_EXCLUDED': 'filter_excluded'}\nE         \nE         Full diff:\nE           {\nE               'BELOW_THRESHOLD': 'below_threshold',\nE               'DEPENDENCY_FRONTIER_CUT': 'dependency_frontier_cut',\nE               'DUPLICATE': 'duplicate',\nE         +     'FILTER_EXCLUDED': 'filter_excluded',\nE               'OVER_BUDGET': 'over_budget',\nE               'STALE_INDEX': 'stale_index',\nE               'TEST_DEPRIORITIZED': 'test_deprioritized',\nE               'UNSUPPORTED_GRAMMAR': 'unsupported_grammar',\nE           }\n\ntests/test_models.py:134: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

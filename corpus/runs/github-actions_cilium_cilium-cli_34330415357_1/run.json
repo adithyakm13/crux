@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:cilium/cilium-cli:34330415357:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "cilium/cilium-cli",
+    "providerRunId": "34330415357",
+    "runAttempt": 1,
+    "url": "https://github.com/cilium/cilium-cli/actions/runs/34330415357",
+    "workflowName": "Kind",
+    "event": "schedule",
+    "headSha": "ef74cc4ec5a3ec4d724e03b39e4454ba727cd15a",
+    "headBranch": "main",
+    "artifactIds": [
+      "10096227040",
+      "10096434427"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T10:23:21.593Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 415,
+    "failures": 1,
+    "passed": 274,
+    "skipped": 140,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "cilium-junits/cilium-junit-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "check-log-errors",
+      "suitePath": [
+        "connectivity test"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 66834,
+      "errorType": "failure",
+      "message": "check-log-errors failed",
+      "stackText": "check-log-errors/no-errors-in-logs:kind-chart-testing/kube-system/cilium-n9s8t (cilium-agent)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

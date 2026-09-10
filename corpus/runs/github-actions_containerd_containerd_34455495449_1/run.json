@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:containerd/containerd:34455495449:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "containerd/containerd",
+    "providerRunId": "34455495449",
+    "runAttempt": 1,
+    "url": "https://github.com/containerd/containerd/actions/runs/34455495449",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "f5494d52b2515ea872d3f064acfcb299423be44c",
+    "headBranch": "ctr/images-list-dedupe-display",
+    "artifactIds": [
+      "10143472937",
+      "10144353923",
+      "10144208871",
+      "10144201859",
+      "10144444981",
+      "10144444661",
+      "10144409968",
+      "10144490428"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T10:24:01.450Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 10188,
+    "failures": 1,
+    "passed": 10023,
+    "skipped": 164,
+    "filesParsed": 20,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "TestResults windows-2022 cgroupfs/test-integration-serial-junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestContainerPTY",
+      "suitePath": [
+        "github.com/containerd/containerd/v2/integration/client"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 7850,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestContainerPTY\n=== PAUSE TestContainerPTY\n=== CONT  TestContainerPTY\n    container_test.go:2790: expected \\x00 in output, got ``\n--- FAIL: TestContainerPTY (7.85s)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

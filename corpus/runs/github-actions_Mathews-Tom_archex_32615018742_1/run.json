@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:32615018742:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Mathews-Tom/archex",
+    "providerRunId": "32615018742",
+    "runAttempt": 1,
+    "url": "https://github.com/Mathews-Tom/archex/actions/runs/32615018742",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "b1823e18d20b372331a86394529ad14a4f2f06cf",
+    "headBranch": "chore/release-0.28.0",
+    "artifactIds": [
+      "9486708750",
+      "9486707380"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T04:38:57.258Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 9326,
+    "failures": 4,
+    "passed": 9304,
+    "skipped": 18,
+    "filesParsed": 2,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-3.13/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_run_external_mcp_runs_bootstrap_commands",
+      "suitePath": [
+        "pytest",
+        "tests.benchmark.test_external_mcp"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 987,
+      "errorType": null,
+      "message": "MCPError(-32000, 'Connection closed', None) [single exception in ExceptionGroup]",
+      "stackText": "+ Exception Group Traceback (most recent call last):\n  |   File \"/home/runner/work/archex/archex/tests/benchmark/test_external_mcp.py\", line 91, in test_run_external_mcp_runs_bootstrap_commands\n  |     result = run_external_mcp(task, tmp_path, config)\n  |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 283, in run_external_mcp\n  |     result, warm_latency_ms = asyncio.run(_call_mcp_search(config, task, repo_path))\n  |                               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py\", line 196, in run\n  |     return runner.run(main)\n  |            ~~~~~~~~~~^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py\", line 119, in run\n  |     return self._loop.run_until_complete(task)\n  |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py\", line 726, in run_until_complete\n  |     return future.result()\n  |            ~~~~~~~~~~~~~^^\n  |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 144, in _call_mcp_search\n  |     stdio_client(server_params) as (read_stream, write_stream),\n  |     ~~~~~~~~~~~~^^^^^^^^^^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/contextlib.py\", line 235, in __aexit__\n  |     await self.gen.athrow(value)\n  |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/client/stdio.py\", line 200, in stdio_client\n  |     async with anyio.create_task_group() as tg:\n  |                ~~~~~~~~~~~~~~~~~~~~~~~^^\n  |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py\", line 783, in __aexit__\n  |     raise BaseExceptionGroup(\n  |         \"unhandled errors in a TaskGroup\", self._exceptions\n  |     ) from None\n  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)\n  +-+---------------- 1 ----------------\n    | Exception Group Traceback (most recent call last):\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/client/stdio.py\", line 204, in stdio_client\n    |     yield read_stream, write_stream\n    |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 145, in _call_mcp_search\n    |     ClientSession(read_stream, write_stream) as session,\n    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/client/session.py\", line 481, in __aexit__\n    |     result = await self._task_group.__aexit__(exc_type, exc_val, exc_tb)\n    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py\", line 783, in __aexit__\n    |     raise BaseExceptionGroup(\n    |         \"unhandled errors in a TaskGroup\", self._exceptions\n    |     ) from None\n    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)\n    +-+---------------- 1 ----------------\n      | Traceback (most recent call last):\n      |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 147, in _call_mcp_search\n      |     await asyncio.wait_for(session.initialize(), timeout=config.timeout_seconds)\n      |   File \"/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n      |     return await fut\n      |            ^^^^^^^^^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/client/session.py\", line 616, in initialize\n      |     result = await self.send_request(\n      |              ^^^^^^^^^^^^^^^^^^^^^^^^\n      |     ...<9 lines>...\n      |     )\n      |     ^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/client/session.py\", line 553, in send_request\n      |     raw = await self._dispatcher.send_raw_request(method, data.get(\"params\"), opts)\n      |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/shared/jsonrpc_dispatcher.py\", line 444, in send_raw_request\n      |     raise MCPError(code=outcome.code, message=outcome.message, data=outcome.data)\n      | mcp.shared.exceptions.MCPError: Connection closed\n      +------------------------------------",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-3.13/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_run_external_mcp_scores_fixture_server",
+      "suitePath": [
+        "pytest",
+        "tests.benchmark.test_external_mcp"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 914,
+      "errorType": null,
+      "message": "MCPError(-32000, 'Connection closed', None) [single exception in ExceptionGroup]",
+      "stackText": "+ Exception Group Traceback (most recent call last):\n  |   File \"/home/runner/work/archex/archex/tests/benchmark/test_external_mcp.py\", line 141, in test_run_external_mcp_scores_fixture_server\n  |     result = run_external_mcp(task, tmp_path, config)\n  |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 283, in run_external_mcp\n  |     result, warm_latency_ms = asyncio.run(_call_mcp_search(config, task, repo_path))\n  |                               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py\", line 196, in run\n  |     return runner.run(main)\n  |            ~~~~~~~~~~^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py\", line 119, in run\n  |     return self._loop.run_until_complete(task)\n  |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py\", line 726, in run_until_complete\n  |     return future.result()\n  |            ~~~~~~~~~~~~~^^\n  |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 144, in _call_mcp_search\n  |     stdio_client(server_params) as (read_stream, write_stream),\n  |     ~~~~~~~~~~~~^^^^^^^^^^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/contextlib.py\", line 235, in __aexit__\n  |     await self.gen.athrow(value)\n  |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/client/stdio.py\", line 200, in stdio_client\n  |     async with anyio.create_task_group() as tg:\n  |                ~~~~~~~~~~~~~~~~~~~~~~~^^\n  |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py\", line 783, in __aexit__\n  |     raise BaseExceptionGroup(\n  |         \"unhandled errors in a TaskGroup\", self._exceptions\n  |     ) from None\n  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)\n  +-+---------------- 1 ----------------\n    | Exception Group Traceback (most recent call last):\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/client/stdio.py\", line 204, in stdio_client\n    |     yield read_stream, write_stream\n    |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 145, in _call_mcp_search\n    |     ClientSession(read_stream, write_stream) as session,\n    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/client/session.py\", line 481, in __aexit__\n    |     result = await self._task_group.__aexit__(exc_type, exc_val, exc_tb)\n    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py\", line 783, in __aexit__\n    |     raise BaseExceptionGroup(\n    |         \"unhandled errors in a TaskGroup\", self._exceptions\n    |     ) from None\n    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)\n    +-+---------------- 1 ----------------\n      | Traceback (most recent call last):\n      |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 147, in _call_mcp_search\n      |     await asyncio.wait_for(session.initialize(), timeout=config.timeout_seconds)\n      |   File \"/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n      |     return await fut\n      |            ^^^^^^^^^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/client/session.py\", line 616, in initialize\n      |     result = await self.send_request(\n      |              ^^^^^^^^^^^^^^^^^^^^^^^^\n      |     ...<9 lines>...\n      |     )\n      |     ^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/client/session.py\", line 553, in send_request\n      |     raw = await self._dispatcher.send_raw_request(method, data.get(\"params\"), opts)\n      |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.13/site-packages/mcp/shared/jsonrpc_dispatcher.py\", line 444, in send_raw_request\n      |     raise MCPError(code=outcome.code, message=outcome.message, data=outcome.data)\n      | mcp.shared.exceptions.MCPError: Connection closed\n      +------------------------------------",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-3.11/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_run_external_mcp_runs_bootstrap_commands",
+      "suitePath": [
+        "pytest",
+        "tests.benchmark.test_external_mcp"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 990,
+      "errorType": null,
+      "message": "MCPError(-32000, 'Connection closed', None) [single exception in ExceptionGroup]",
+      "stackText": "+ Exception Group Traceback (most recent call last):\n  |   File \"/home/runner/work/archex/archex/tests/benchmark/test_external_mcp.py\", line 91, in test_run_external_mcp_runs_bootstrap_commands\n  |     result = run_external_mcp(task, tmp_path, config)\n  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 283, in run_external_mcp\n  |     result, warm_latency_ms = asyncio.run(_call_mcp_search(config, task, repo_path))\n  |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n  |     return runner.run(main)\n  |            ^^^^^^^^^^^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n  |     return self._loop.run_until_complete(task)\n  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n  |     return future.result()\n  |            ^^^^^^^^^^^^^^^\n  |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 143, in _call_mcp_search\n  |     async with (\n  |   File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/contextlib.py\", line 231, in __aexit__\n  |     await self.gen.athrow(typ, value, traceback)\n  |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/client/stdio.py\", line 200, in stdio_client\n  |     async with anyio.create_task_group() as tg:\n  |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py\", line 783, in __aexit__\n  |     raise BaseExceptionGroup(\n  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)\n  +-+---------------- 1 ----------------\n    | Exception Group Traceback (most recent call last):\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/client/stdio.py\", line 204, in stdio_client\n    |     yield read_stream, write_stream\n    |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 143, in _call_mcp_search\n    |     async with (\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/client/session.py\", line 481, in __aexit__\n    |     result = await self._task_group.__aexit__(exc_type, exc_val, exc_tb)\n    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py\", line 783, in __aexit__\n    |     raise BaseExceptionGroup(\n    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)\n    +-+---------------- 1 ----------------\n      | Traceback (most recent call last):\n      |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 147, in _call_mcp_search\n      |     await asyncio.wait_for(session.initialize(), timeout=config.timeout_seconds)\n      |   File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/asyncio/tasks.py\", line 489, in wait_for\n      |     return fut.result()\n      |            ^^^^^^^^^^^^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/client/session.py\", line 616, in initialize\n      |     result = await self.send_request(\n      |              ^^^^^^^^^^^^^^^^^^^^^^^^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/client/session.py\", line 553, in send_request\n      |     raw = await self._dispatcher.send_raw_request(method, data.get(\"params\"), opts)\n      |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/shared/jsonrpc_dispatcher.py\", line 444, in send_raw_request\n      |     raise MCPError(code=outcome.code, message=outcome.message, data=outcome.data)\n      | mcp.shared.exceptions.MCPError: Connection closed\n      +------------------------------------",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results-3.11/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_run_external_mcp_scores_fixture_server",
+      "suitePath": [
+        "pytest",
+        "tests.benchmark.test_external_mcp"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 943,
+      "errorType": null,
+      "message": "MCPError(-32000, 'Connection closed', None) [single exception in ExceptionGroup]",
+      "stackText": "+ Exception Group Traceback (most recent call last):\n  |   File \"/home/runner/work/archex/archex/tests/benchmark/test_external_mcp.py\", line 141, in test_run_external_mcp_scores_fixture_server\n  |     result = run_external_mcp(task, tmp_path, config)\n  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 283, in run_external_mcp\n  |     result, warm_latency_ms = asyncio.run(_call_mcp_search(config, task, repo_path))\n  |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n  |     return runner.run(main)\n  |            ^^^^^^^^^^^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n  |     return self._loop.run_until_complete(task)\n  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  |   File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n  |     return future.result()\n  |            ^^^^^^^^^^^^^^^\n  |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 143, in _call_mcp_search\n  |     async with (\n  |   File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/contextlib.py\", line 231, in __aexit__\n  |     await self.gen.athrow(typ, value, traceback)\n  |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/client/stdio.py\", line 200, in stdio_client\n  |     async with anyio.create_task_group() as tg:\n  |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py\", line 783, in __aexit__\n  |     raise BaseExceptionGroup(\n  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)\n  +-+---------------- 1 ----------------\n    | Exception Group Traceback (most recent call last):\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/client/stdio.py\", line 204, in stdio_client\n    |     yield read_stream, write_stream\n    |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 143, in _call_mcp_search\n    |     async with (\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/client/session.py\", line 481, in __aexit__\n    |     result = await self._task_group.__aexit__(exc_type, exc_val, exc_tb)\n    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py\", line 783, in __aexit__\n    |     raise BaseExceptionGroup(\n    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)\n    +-+---------------- 1 ----------------\n      | Traceback (most recent call last):\n      |   File \"/home/runner/work/archex/archex/src/archex/benchmark/external_mcp.py\", line 147, in _call_mcp_search\n      |     await asyncio.wait_for(session.initialize(), timeout=config.timeout_seconds)\n      |   File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/asyncio/tasks.py\", line 489, in wait_for\n      |     return fut.result()\n      |            ^^^^^^^^^^^^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/client/session.py\", line 616, in initialize\n      |     result = await self.send_request(\n      |              ^^^^^^^^^^^^^^^^^^^^^^^^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/client/session.py\", line 553, in send_request\n      |     raw = await self._dispatcher.send_raw_request(method, data.get(\"params\"), opts)\n      |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n      |   File \"/home/runner/work/archex/archex/.venv/lib/python3.11/site-packages/mcp/shared/jsonrpc_dispatcher.py\", line 444, in send_raw_request\n      |     raise MCPError(code=outcome.code, message=outcome.message, data=outcome.data)\n      | mcp.shared.exceptions.MCPError: Connection closed\n      +------------------------------------",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/inlong:27930279260:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/inlong",
+    "providerRunId": "27930279260",
+    "runAttempt": 2,
+    "url": "https://github.com/apache/inlong/actions/runs/27930279260",
+    "workflowName": "InLong Unit Test",
+    "event": "pull_request",
+    "headSha": "d5f06ce4c33571ac6223d550bd9850d61063fadc",
+    "headBranch": "INLONG-12143",
+    "artifactIds": [
+      "7784622216"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T09:27:39.118Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 861,
+    "failures": 1,
+    "passed": 860,
+    "skipped": 0,
+    "filesParsed": 476,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "surefire-reports/inlong-agent/agent-plugins/target/surefire-reports/TEST-org.apache.inlong.agent.plugin.fetcher.ManagerFetcherTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testEmptyPatternShouldPass",
+      "suitePath": [
+        "org.apache.inlong.agent.plugin.fetcher.ManagerFetcherTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 56,
+      "errorType": "java.lang.IllegalArgumentException",
+      "message": "File pattern not in allowed directories: ",
+      "stackText": "java.lang.IllegalArgumentException: File pattern not in allowed directories: \n\tat org.apache.inlong.agent.plugin.fetcher.ManagerFetcherTest.testEmptyPatternShouldPass(ManagerFetcherTest.java:107)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

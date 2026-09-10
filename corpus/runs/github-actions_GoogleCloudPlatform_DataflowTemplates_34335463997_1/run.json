@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:34335463997:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "GoogleCloudPlatform/DataflowTemplates",
+    "providerRunId": "34335463997",
+    "runAttempt": 1,
+    "url": "https://github.com/GoogleCloudPlatform/DataflowTemplates/actions/runs/34335463997",
+    "workflowName": "Datastream PR",
+    "event": "pull_request",
+    "headSha": "ad4c7133fda77bced4158d11bbb86e4b78e095df",
+    "headBranch": "oracle_live_it",
+    "artifactIds": [
+      "10099789542",
+      "10097732629"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-09T16:08:58.705Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 773,
+    "failures": 1,
+    "passed": 762,
+    "skipped": 10,
+    "filesParsed": 92,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "surefire-integration-test-results/v2/datastream-to-bigquery/target/surefire-reports/TEST-com.google.cloud.teleport.v2.templates.DataStreamToBigQueryIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testDataStreamOracleToBigQueryJson",
+      "suitePath": [
+        "com.google.cloud.teleport.v2.templates.DataStreamToBigQueryIT"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 126296,
+      "errorType": "org.apache.beam.it.jdbc.JDBCResourceManagerException",
+      "message": "Error creating table with SQL statement:  (for connection with URL jdbc:oracle:thin:@10.128.0.90:1521:xe)",
+      "stackText": "org.apache.beam.it.jdbc.JDBCResourceManagerException: Error creating table with SQL statement:  (for connection with URL jdbc:oracle:thin:@10.128.0.90:1521:xe)\n\tat org.apache.beam.it.jdbc.AbstractJDBCResourceManager.createTable(AbstractJDBCResourceManager.java:149)\n\tat org.apache.beam.it.gcp.cloudsql.CloudSqlResourceManager.createTable(CloudSqlResourceManager.java:84)\n\tat com.google.cloud.teleport.v2.templates.DataStreamToBigQueryIT.simpleJdbcToBigQueryTest(DataStreamToBigQueryIT.java:291)\n\tat com.google.cloud.teleport.v2.templates.DataStreamToBigQueryIT.testDataStreamOracleToBigQueryJson(DataStreamToBigQueryIT.java:194)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\n\tat org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)\n\tat org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\nCaused by: java.sql.SQLException: ORA-01017: invalid username/password; logon denied\n\nhttps://docs.oracle.com/error-help/db/ora-01017/\n\tat oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:718)\n\tat oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:613)\n\tat oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)\n\tat oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1707)\n\tat oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:975)\n\tat oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:975)\n\tat oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237)\n\tat oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:568)\n\tat oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTHWithO5Logon(T4CTTIoauthenticate.java:1829)\n\tat oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1576)\n\tat oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1516)\n\tat oracle.jdbc.driver.T4CConnection.authenticateWithPassword(T4CConnection.java:2495)\n\tat oracle.jdbc.driver.T4CConnection.authenticateUserForLogon(T4CConnection.java:2432)\n\tat oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1161)\n\tat oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1179)\n\tat oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106)\n\tat oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:909)\n\tat oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:707)\n\tat java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)\n\tat java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)\n\tat org.apache.beam.it.jdbc.JDBCDriverFactory.getConnection(JDBCDriverFactory.java:39)\n\tat org.apache.beam.it.jdbc.AbstractJDBCResourceManager.createTable(AbstractJDBCResourceManager.java:134)\n\t... 17 more\n",
+      "stdout": null,
+      "stderr": "SLF4J(W): Class path contains multiple SLF4J providers.\nSLF4J(W): Found provider [org.slf4j.simple.SimpleServiceProvider@74beb1ff]\nSLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@51072d68]\nSLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.\nSLF4J(I): Actual provider is of type [org.slf4j.simple.SimpleServiceProvider@74beb1ff]\n[pool-3-thread-8] INFO org.apache.beam.it.gcp.TemplateTestBase - Starting integration test com.google.cloud.teleport.v2.templates.DataStreamToBigQueryIT.testDataStreamOracleToBigQueryJson\n[Time-limited test] INFO org.apache.beam.it.gcp.storage.GcsResourceManager - Uploading 407 bytes to 'DataStreamToBigQueryIT/20260909-94a9103e-95d6-4225-a99b-030b9af12ac1/udf.js' under bucket 'cloud-teleport-testing-it-gitactions'\n[Time-limited test] INFO org.apache.beam.it.gcp.storage.GcsResourceManager - Successfully uploaded 407 bytes to 'DataStreamToBigQueryIT/20260909-94a9103e-95d6-4225-a99b-030b9af12ac1/udf.js' under bucket 'cloud-teleport-testing-it-gitactions'\n[Time-limited test] INFO org.apache.beam.it.gcp.cloudsql.CloudSqlResourceManager - -DcloudProxyUsername not specified, using default: root\n[Time-limited test] INFO org.apache.beam.it.jdbc.AbstractJDBCResourceManager - Creating table using tableName 'JDBCTOBIGQUERY_QD8PZ'.\n[Time-limited test] INFO org.apache.beam.it.common.utils.ResourceManagerUtils - Cleaning up resource manager CloudOracleResourceManager\n[Time-limited test] INFO org.apache.beam.it.gcp.cloudsql.CloudSqlResourceManager - Attempting to cleanup CloudSQL manager.\n[Time-limited test] INFO org.apache.beam.it.gcp.cloudsql.CloudSqlResourceManager - CloudSQL manager successfully cleaned up.\n[Time-limited test] INFO org.apache.beam.it.common.utils.ResourceManagerUtils - Cleaning up resource manager DatastreamResourceManager\n[Time-limited test] INFO org.apache.beam.it.gcp.datastream.DatastreamResourceManager - Cleaning up Datastream resource manager.\n[Time-limited test] INFO org.apache.beam.it.gcp.datastream.DatastreamResourceManager - Successfully deleted stream(s). \n[Time-limited test] INFO org.apache.beam.it.gcp.datastream.DatastreamResourceManager - Successfully deleted connection profile(s). \n[Time-limited test] INFO org.apache.beam.it.gcp.datastream.DatastreamResourceManager - Successfully cleaned up Datastream resource manager.\n[Time-limited test] INFO org.apache.beam.it.common.utils.ResourceManagerUtils - Cleaning up resource manager BigQueryResourceManager\n[Time-limited test] INFO org.apache.beam.it.gcp.bigquery.BigQueryResourceManager - Attempting to cleanup manager.\n[Time-limited test] INFO org.apache.beam.it.gcp.bigquery.BigQueryResourceManager - Manager successfully cleaned up.\n[Time-limited test] INFO org.apache.beam.it.gcp.TemplateTestBase - Invoking tearDownBase cleanups for testDataStreamOracleToBigQueryJson - test-20260909095639585-5dgwiejsvi\n[Time-limited test] INFO org.apache.beam.it.gcp.dataflow.AbstractPipelineLauncher - Cleaning up Dataflow jobs...\n[Time-limited test] INFO org.apache.beam.it.gcp.dataflow.AbstractPipelineLauncher - Dataflow jobs successfully cleaned up.\n[Time-limited test] INFO org.apache.beam.it.gcp.storage.GcsResourceManager - managed temp dir size : 1\n[Time-limited test] INFO org.apache.beam.it.gcp.storage.GcsResourceManager - Cleaning up everything under 'DataStreamToBigQueryIT/20260909-94a9103e-95d6-4225-a99b-030b9af12ac1' under bucket 'cloud-teleport-testing-it-gitactions'\n"
+    }
+  ]
+}

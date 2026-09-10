@@ -17,7 +17,8 @@
 
 import { mkdir, writeFile, readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
-import { unzipSync } from 'fflate';
+import { gunzipSync, unzipSync } from 'fflate';
+import { DEFAULT_UNTAR_LIMITS, isGzipped, isTarball, untar } from './untar.ts';
 
 /**
  * How much total inflated output one artifact may produce, as a multiple of the
@@ -75,12 +76,19 @@ export const DEFAULT_HARVEST_OPTIONS: Omit<HarvestOptions, 'corpusDir'> = {
 };
 
 /**
- * Artifact names worth downloading. Deliberately generous — the cost of a
- * miss is a lost run, the cost of a false positive is one wasted download that
- * yields no XML and is discarded.
+ * Artifact names worth downloading. Deliberately generous — the cost of a miss
+ * is a lost run, the cost of a false positive is one wasted download whose
+ * contents dispatch to no adapter and are discarded.
+ *
+ * `build-reports` is here because quarkus names its surefire and failsafe
+ * bundles `build-reports-1-<job>`, and requiring the word "test" before
+ * "report" skipped every one of them — a repository verified to carry 1126
+ * JUnit XML files harvested to nothing. The name only decides what to
+ * DOWNLOAD; pickAdapter still decides what counts, so widening this trades
+ * bandwidth for coverage and cannot admit a non-test artifact into the corpus.
  */
 export const ARTIFACT_NAME_HINT =
-  /junit|test.?results?|test.?report|surefire|failsafe|pytest|xunit|nunit|trx|blob-report|playwright/i;
+  /junit|test.?results?|(?:test|build)[-_. ]?reports?|surefire|failsafe|pytest|xunit|nunit|trx|blob-report|playwright/i;
 
 export interface HarvestSummary {
   repo: string;
@@ -216,6 +224,28 @@ export async function harvestRepo(repo: string, opts: HarvestOptions): Promise<H
       // one.
       const flat: Record<string, Uint8Array> = {};
       for (const [name, bytes] of Object.entries(entries)) {
+        // Maven and Gradle CI often tar their reports before uploading, so the
+        // artifact holds one test-reports.tgz rather than the XML. Unwrapping
+        // only .zip meant those artifacts dispatched to no adapter and were
+        // discarded whole — quarkusio/quarkus carries 1126 JUnit XML files and
+        // 248 failures in exactly that shape and yielded nothing.
+        if (isTarball(name) && bytes.byteLength <= opts.maxArtifactBytes) {
+          try {
+            const raw = isGzipped(name, bytes) ? gunzipSync(bytes) : bytes;
+            const members = untar(raw, {
+              ...DEFAULT_UNTAR_LIMITS,
+              maxEntryBytes: opts.maxXmlBytes,
+              maxTotalBytes: opts.maxArtifactBytes * ZIP_INFLATE_BUDGET_FACTOR,
+            });
+            for (const [inner, innerBytes] of Object.entries(members)) {
+              flat[`${name}!${inner}`] = innerBytes;
+            }
+            continue;
+          } catch {
+            skip('nested untar failed');
+            continue;
+          }
+        }
         if (name.toLowerCase().endsWith('.zip') && bytes.byteLength <= opts.maxArtifactBytes) {
           try {
             let innerBudget = opts.maxArtifactBytes * ZIP_INFLATE_BUDGET_FACTOR;

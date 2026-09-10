@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:containerd/containerd:34420435686:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "containerd/containerd",
+    "providerRunId": "34420435686",
+    "runAttempt": 2,
+    "url": "https://github.com/containerd/containerd/actions/runs/34420435686",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "5f11774426e2248b69181a1a064f68e3b19e6347",
+    "headBranch": "mount-manager-v2",
+    "artifactIds": [
+      "10130789506",
+      "10132792695",
+      "10131087466",
+      "10131263254",
+      "10131273351",
+      "10131414205",
+      "10133363288",
+      "10131461218",
+      "10131488701"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T10:44:26.496Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 13539,
+    "failures": 9,
+    "passed": 13327,
+    "skipped": 203,
+    "filesParsed": 22,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "TestResults MacOS/macos-test-junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGCOrphanedBackingMount",
+      "suitePath": [
+        "github.com/containerd/containerd/v2/core/mount/manager"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGCOrphanedBackingMount\n    manager_test.go:1206: \n        \tError Trace:\t/Users/runner/work/containerd/containerd/core/mount/manager/manager_test.go:1206\n        \tError:      \tNot equal: \n        \t            \texpected: 0\n        \t            \tactual  : 1\n        \tTest:       \tTestGCOrphanedBackingMount\n        \tMessages:   \torphaned mount should be unmounted with its handler\n--- FAIL: TestGCOrphanedBackingMount (0.01s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "TestResults MacOS/macos-test-junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestV1OrphanDirs",
+      "suitePath": [
+        "github.com/containerd/containerd/v2/core/mount/manager"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestV1OrphanDirs\n    v1_test.go:727: \n        \tError Trace:\t/Users/runner/work/containerd/containerd/core/mount/manager/v1_test.go:727\n        \tError:      \tNot equal: \n        \t            \texpected: 0\n        \t            \tactual  : 1\n        \tTest:       \tTestV1OrphanDirs\n        \tMessages:   \tthe orphaned v1 mount should be unmounted with its handler\n--- FAIL: TestV1OrphanDirs (0.01s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "TestResults MacOS/macos-test-junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestV1OrphanDirsUnmountsTopFirst",
+      "suitePath": [
+        "github.com/containerd/containerd/v2/core/mount/manager"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestV1OrphanDirsUnmountsTopFirst\n    v1_test.go:795: \n        \tError Trace:\t/Users/runner/work/containerd/containerd/core/mount/manager/v1_test.go:795\n        \tError:      \tNot equal: \n        \t            \texpected: []string{\"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/1\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/2\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/3\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/4\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/5\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/6\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/7\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/8\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/9\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/10\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/11\"}\n        \t            \tactual  : []string{\"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/1\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/2\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/3\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/4\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/5\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/6\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/7\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/8\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/9\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/10\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/11\"}\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,13 +1,13 @@\n        \t            \t ([]string) (len=11) {\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/1\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/2\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/3\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/4\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/5\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/6\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/7\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/8\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/9\",\n        \t            \t- (string) (len=103) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/10\",\n        \t            \t- (string) (len=103) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/11\"\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/1\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/2\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/3\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/4\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/5\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/6\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/7\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/8\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/9\",\n        \t            \t+ (string) (len=111) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/10\",\n        \t            \t+ (string) (len=111) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst3290766276/001/m/77/11\"\n        \t            \t }\n        \tTest:       \tTestV1OrphanDirsUnmountsTopFirst\n        \tMessages:   \ttop of the chain (lowest n) must be unmounted first, base (highest n) last\n--- FAIL: TestV1OrphanDirsUnmountsTopFirst (0.01s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "TestResults MacOS/macos-test-junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestV1AndV2IDsCanCollideNumerically",
+      "suitePath": [
+        "github.com/containerd/containerd/v2/core/mount/manager"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestV1AndV2IDsCanCollideNumerically\n    v1_test.go:901: \n        \tError Trace:\t/Users/runner/work/containerd/containerd/core/mount/manager/v1_test.go:901\n        \tError:      \tNot equal: \n        \t            \texpected: \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1AndV2IDsCanCollideNumerically4154972080/001/m/b/2/fs\"\n        \t            \tactual  : \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1AndV2IDsCanCollideNumerically4154972080/001/m/b/2/fs\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1 +1 @@\n        \t            \t-/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1AndV2IDsCanCollideNumerically4154972080/001/m/b/2/fs\n        \t            \t+/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1AndV2IDsCanCollideNumerically4154972080/001/m/b/2/fs\n        \tTest:       \tTestV1AndV2IDsCanCollideNumerically\n        \tMessages:   \tsanity check on the path this test parsed the id out of\n--- FAIL: TestV1AndV2IDsCanCollideNumerically (0.01s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "TestResults MacOS/macos-test-junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestGCOrphanedBackingMount",
+      "suitePath": [
+        "github.com/containerd/containerd/v2/core/mount/manager"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGCOrphanedBackingMount\n    manager_test.go:1206: \n        \tError Trace:\t/Users/runner/work/containerd/containerd/core/mount/manager/manager_test.go:1206\n        \tError:      \tNot equal: \n        \t            \texpected: 0\n        \t            \tactual  : 1\n        \tTest:       \tTestGCOrphanedBackingMount\n        \tMessages:   \torphaned mount should be unmounted with its handler\n--- FAIL: TestGCOrphanedBackingMount (0.01s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "TestResults MacOS/macos-test-junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestV1OrphanDirs",
+      "suitePath": [
+        "github.com/containerd/containerd/v2/core/mount/manager"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestV1OrphanDirs\n    v1_test.go:727: \n        \tError Trace:\t/Users/runner/work/containerd/containerd/core/mount/manager/v1_test.go:727\n        \tError:      \tNot equal: \n        \t            \texpected: 0\n        \t            \tactual  : 1\n        \tTest:       \tTestV1OrphanDirs\n        \tMessages:   \tthe orphaned v1 mount should be unmounted with its handler\n--- FAIL: TestV1OrphanDirs (0.01s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "TestResults MacOS/macos-test-junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestV1OrphanDirsUnmountsTopFirst",
+      "suitePath": [
+        "github.com/containerd/containerd/v2/core/mount/manager"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 20,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestV1OrphanDirsUnmountsTopFirst\n    v1_test.go:795: \n        \tError Trace:\t/Users/runner/work/containerd/containerd/core/mount/manager/v1_test.go:795\n        \tError:      \tNot equal: \n        \t            \texpected: []string{\"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/1\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/2\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/3\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/4\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/5\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/6\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/7\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/8\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/9\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/10\", \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/11\"}\n        \t            \tactual  : []string{\"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/1\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/2\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/3\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/4\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/5\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/6\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/7\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/8\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/9\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/10\", \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/11\"}\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,13 +1,13 @@\n        \t            \t ([]string) (len=11) {\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/1\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/2\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/3\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/4\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/5\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/6\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/7\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/8\",\n        \t            \t- (string) (len=102) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/9\",\n        \t            \t- (string) (len=103) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/10\",\n        \t            \t- (string) (len=103) \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/11\"\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/1\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/2\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/3\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/4\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/5\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/6\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/7\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/8\",\n        \t            \t+ (string) (len=110) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/9\",\n        \t            \t+ (string) (len=111) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/10\",\n        \t            \t+ (string) (len=111) \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1OrphanDirsUnmountsTopFirst2366081541/001/m/77/11\"\n        \t            \t }\n        \tTest:       \tTestV1OrphanDirsUnmountsTopFirst\n        \tMessages:   \ttop of the chain (lowest n) must be unmounted first, base (highest n) last\n--- FAIL: TestV1OrphanDirsUnmountsTopFirst (0.02s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "TestResults MacOS/macos-test-junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestV1AndV2IDsCanCollideNumerically",
+      "suitePath": [
+        "github.com/containerd/containerd/v2/core/mount/manager"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 20,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestV1AndV2IDsCanCollideNumerically\n    v1_test.go:901: \n        \tError Trace:\t/Users/runner/work/containerd/containerd/core/mount/manager/v1_test.go:901\n        \tError:      \tNot equal: \n        \t            \texpected: \"/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1AndV2IDsCanCollideNumerically3799530146/001/m/b/2/fs\"\n        \t            \tactual  : \"/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1AndV2IDsCanCollideNumerically3799530146/001/m/b/2/fs\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1 +1 @@\n        \t            \t-/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1AndV2IDsCanCollideNumerically3799530146/001/m/b/2/fs\n        \t            \t+/private/var/folders/d8/hvxvltxn0fl4rmnd52sncbth0000gn/T/TestV1AndV2IDsCanCollideNumerically3799530146/001/m/b/2/fs\n        \tTest:       \tTestV1AndV2IDsCanCollideNumerically\n        \tMessages:   \tsanity check on the path this test parsed the id out of\n--- FAIL: TestV1AndV2IDsCanCollideNumerically (0.02s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "TestResults io.containerd.runc.v2 runc ubuntu-24.04 cgroupfs/test-integration-serial-junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "TestRegressionIssue4769",
+      "suitePath": [
+        "github.com/containerd/containerd/v2/integration/client"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 30010,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestRegressionIssue4769\n=== PAUSE TestRegressionIssue4769\n=== CONT  TestRegressionIssue4769\n    log_hook.go:47: time=\"2026-09-10T00:29:48.715760274Z\" level=debug msg=\"remote introspection plugin filters\" func=\"proxy.(*introspectionRemote).Plugins\" file=\"/home/runner/work/containerd/containerd/core/introspection/proxy/remote.go:59\" filters=\"[type==io.containerd.snapshotter.v1, id==overlayfs]\" testcase=TestRegressionIssue4769\n    log_hook.go:47: time=\"2026-09-10T00:29:48.718956921Z\" level=debug msg=resolving func=\"docker.(*dockerResolver).Resolve\" file=\"/home/runner/work/containerd/containerd/core/remotes/docker/resolver.go:332\" host=ghcr.io method=HEAD testcase=TestRegressionIssue4769 url=\"https://ghcr.io/v2/containerd/busybox/manifests/1.36\"\n    log_hook.go:47: time=\"2026-09-10T00:29:48.719313721Z\" level=debug msg=\"do request\" func=\"docker.(*request).do\" file=\"/home/runner/work/containerd/containerd/core/remotes/docker/resolver.go:694\" host=ghcr.io method=HEAD request.header.accept=\"application/vnd.docker.distribution.manifest.v2+json, application/vnd.docker.distribution.manifest.list.v2+json, application/vnd.oci.image.manifest.v1+json, application/vnd.oci.image.index.v1+json, */*\" request.header.user-agent=containerd/2.4.0-beta+unknown request.method=HEAD testcase=TestRegressionIssue4769 url=\"https://ghcr.io/v2/containerd/busybox/manifests/1.36\"\n    log_hook.go:47: time=\"2026-09-10T00:30:18.721283855Z\" level=info msg=\"fetch failed\" func=\"docker.(*dockerResolver).Resolve\" file=\"/home/runner/work/containerd/containerd/core/remotes/docker/resolver.go:342\" error=\"failed to do request: Head \\\"https://ghcr.io/v2/containerd/busybox/manifests/1.36\\\": dial tcp 172.182.252.136:443: i/o timeout\" host=ghcr.io method=HEAD testcase=TestRegressionIssue4769 url=\"https://ghcr.io/v2/containerd/busybox/manifests/1.36\"\n    container_test.go:2079: failed to resolve reference \"ghcr.io/containerd/busybox:1.36\": failed to do request: Head \"https://ghcr.io/v2/containerd/busybox/manifests/1.36\": dial tcp 172.182.252.136:443: i/o timeout\n--- FAIL: TestRegressionIssue4769 (30.01s)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

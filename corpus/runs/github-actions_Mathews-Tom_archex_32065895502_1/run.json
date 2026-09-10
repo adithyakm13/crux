@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:32065895502:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Mathews-Tom/archex",
+    "providerRunId": "32065895502",
+    "runAttempt": 1,
+    "url": "https://github.com/Mathews-Tom/archex/actions/runs/32065895502",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "15efa6222606d2370d51b57782b662c6dc57c7f5",
+    "headBranch": "feat/session-ledger-primer",
+    "artifactIds": [
+      "9299999799",
+      "9300009255"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T04:39:30.722Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 9324,
+    "failures": 8,
+    "passed": 9298,
+    "skipped": 18,
+    "filesParsed": 2,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-3.11/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_current_size_matches_final_recorded_stage[all]",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3,
+      "errorType": null,
+      "message": "assert 20 == 19",
+      "stackText": "self = <tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline object at 0x7f489a6acc50>\nscope_name = 'all'\n\n    @pytest.mark.parametrize(\"scope_name\", [\"all\", \"core\", \"graph\"])\n    def test_current_size_matches_final_recorded_stage(self, scope_name: str) -> None:\n        baseline = _load_baseline()\n        final_stage = baseline[\"stages\"][\"pr3_graph_query\"]  # type: ignore[index]\n        recorded = final_stage[scope_name]  # type: ignore[index]\n    \n        tool_names = resolve_tool_scope(None if scope_name == \"all\" else scope_name)\n        current = measure_tool_schema_size(tool_names)\n    \n>       assert current[\"tool_count\"] == recorded[\"tool_count\"]  # type: ignore[index]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       assert 20 == 19\n\ntests/integrations/test_mcp_schema_size_baseline.py:63: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-3.11/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_current_size_matches_final_recorded_stage[core]",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3,
+      "errorType": null,
+      "message": "assert 15 == 14",
+      "stackText": "self = <tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline object at 0x7f489a6ace50>\nscope_name = 'core'\n\n    @pytest.mark.parametrize(\"scope_name\", [\"all\", \"core\", \"graph\"])\n    def test_current_size_matches_final_recorded_stage(self, scope_name: str) -> None:\n        baseline = _load_baseline()\n        final_stage = baseline[\"stages\"][\"pr3_graph_query\"]  # type: ignore[index]\n        recorded = final_stage[scope_name]  # type: ignore[index]\n    \n        tool_names = resolve_tool_scope(None if scope_name == \"all\" else scope_name)\n        current = measure_tool_schema_size(tool_names)\n    \n>       assert current[\"tool_count\"] == recorded[\"tool_count\"]  # type: ignore[index]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       assert 15 == 14\n\ntests/integrations/test_mcp_schema_size_baseline.py:63: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-3.11/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_unscoped_all_growth_is_exactly_graph_query_no_removal_no_surprise",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3,
+      "errorType": null,
+      "message": "assert 16984 == (13907 + 1695)",
+      "stackText": "self = <tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline object at 0x7f489a6adfd0>\n\n    def test_unscoped_all_growth_is_exactly_graph_query_no_removal_no_surprise(self) -> None:\n        \"\"\"'all' necessarily grows once graph_query is added without removing\n        the five originals (M11's own no-removal constraint) -- but growth\n        must be exactly graph_query's own schema size, never more (a\n        regression here means some *other* tool grew too, not just the\n        expected new one).\"\"\"\n        baseline = _load_baseline()\n        pr2_all_total = baseline[\"stages\"][\"pr2_trimmed_descriptions\"][\"all\"][\"total_chars\"]  # type: ignore[index]\n        graph_query_total = baseline[\"stages\"][\"pr3_graph_query\"][\"graph_query\"][\"total_chars\"]  # type: ignore[index]\n    \n        current_all = measure_tool_schema_size(None)\n>       assert current_all[\"total_chars\"] == pr2_all_total + graph_query_total\nE       assert 16984 == (13907 + 1695)\n\ntests/integrations/test_mcp_schema_size_baseline.py:96: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results-3.11/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_per_tool_chars_final_matches_current_unscoped_measurement",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 4,
+      "errorType": null,
+      "message": "AssertionError: assert {'analyze_rep...et': 892, ...} == {'analyze_rep...et': 892, ...}\n  \n  Omitting 19 identical items, use -vv to show\n  Left contains 1 more item:\n  {'session': 1382}\n  \n  Full diff:\n    {\n        'analyze_repo': 570,\n        'compare_repos': 718,\n        'context': 2279,\n        'explain_target': 892,\n        'generate_onboarding': 715,\n        'get_file_outline': 433,\n        'get_file_tree': 503,\n        'get_impact': 1118,\n        'get_symbol': 352,\n        'get_symbols_batch': 456,\n        'graph_hubs': 584,\n        'graph_lookup': 676,\n        'graph_neighbors': 812,\n        'graph_path': 826,\n        'graph_query': 1695,\n        'graph_stats': 574,\n        'query_repo': 1007,\n        'scout_repo': 703,\n        'search_symbols': 689,\n  +     'session': 1382,\n    }",
+      "stackText": "self = <tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline object at 0x7f489a6ad450>\n\n    def test_per_tool_chars_final_matches_current_unscoped_measurement(self) -> None:\n        baseline = _load_baseline()\n        recorded_per_tool = baseline[\"per_tool_chars_final\"]\n        current = measure_tool_schema_size(None)\n>       assert current[\"per_tool_chars\"] == recorded_per_tool\nE       AssertionError: assert {'analyze_rep...et': 892, ...} == {'analyze_rep...et': 892, ...}\nE         \nE         Omitting 19 identical items, use -vv to show\nE         Left contains 1 more item:\nE         {'session': 1382}\nE         \nE         Full diff:\nE           {\nE               'analyze_repo': 570,\nE               'compare_repos': 718,\nE               'context': 2279,\nE               'explain_target': 892,\nE               'generate_onboarding': 715,\nE               'get_file_outline': 433,\nE               'get_file_tree': 503,\nE               'get_impact': 1118,\nE               'get_symbol': 352,\nE               'get_symbols_batch': 456,\nE               'graph_hubs': 584,\nE               'graph_lookup': 676,\nE               'graph_neighbors': 812,\nE               'graph_path': 826,\nE               'graph_query': 1695,\nE               'graph_stats': 574,\nE               'query_repo': 1007,\nE               'scout_repo': 703,\nE               'search_symbols': 689,\nE         +     'session': 1382,\nE           }\n\ntests/integrations/test_mcp_schema_size_baseline.py:102: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-results-3.12/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_current_size_matches_final_recorded_stage[all]",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 5,
+      "errorType": null,
+      "message": "assert 20 == 19",
+      "stackText": "self = <tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline object at 0x7f5e241808f0>\nscope_name = 'all'\n\n    @pytest.mark.parametrize(\"scope_name\", [\"all\", \"core\", \"graph\"])\n    def test_current_size_matches_final_recorded_stage(self, scope_name: str) -> None:\n        baseline = _load_baseline()\n        final_stage = baseline[\"stages\"][\"pr3_graph_query\"]  # type: ignore[index]\n        recorded = final_stage[scope_name]  # type: ignore[index]\n    \n        tool_names = resolve_tool_scope(None if scope_name == \"all\" else scope_name)\n        current = measure_tool_schema_size(tool_names)\n    \n>       assert current[\"tool_count\"] == recorded[\"tool_count\"]  # type: ignore[index]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       assert 20 == 19\n\ntests/integrations/test_mcp_schema_size_baseline.py:63: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-results-3.12/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_current_size_matches_final_recorded_stage[core]",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 4,
+      "errorType": null,
+      "message": "assert 15 == 14",
+      "stackText": "self = <tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline object at 0x7f5e2410ac90>\nscope_name = 'core'\n\n    @pytest.mark.parametrize(\"scope_name\", [\"all\", \"core\", \"graph\"])\n    def test_current_size_matches_final_recorded_stage(self, scope_name: str) -> None:\n        baseline = _load_baseline()\n        final_stage = baseline[\"stages\"][\"pr3_graph_query\"]  # type: ignore[index]\n        recorded = final_stage[scope_name]  # type: ignore[index]\n    \n        tool_names = resolve_tool_scope(None if scope_name == \"all\" else scope_name)\n        current = measure_tool_schema_size(tool_names)\n    \n>       assert current[\"tool_count\"] == recorded[\"tool_count\"]  # type: ignore[index]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       assert 15 == 14\n\ntests/integrations/test_mcp_schema_size_baseline.py:63: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-results-3.12/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_unscoped_all_growth_is_exactly_graph_query_no_removal_no_surprise",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 4,
+      "errorType": null,
+      "message": "assert 16984 == (13907 + 1695)",
+      "stackText": "self = <tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline object at 0x7f5e241095b0>\n\n    def test_unscoped_all_growth_is_exactly_graph_query_no_removal_no_surprise(self) -> None:\n        \"\"\"'all' necessarily grows once graph_query is added without removing\n        the five originals (M11's own no-removal constraint) -- but growth\n        must be exactly graph_query's own schema size, never more (a\n        regression here means some *other* tool grew too, not just the\n        expected new one).\"\"\"\n        baseline = _load_baseline()\n        pr2_all_total = baseline[\"stages\"][\"pr2_trimmed_descriptions\"][\"all\"][\"total_chars\"]  # type: ignore[index]\n        graph_query_total = baseline[\"stages\"][\"pr3_graph_query\"][\"graph_query\"][\"total_chars\"]  # type: ignore[index]\n    \n        current_all = measure_tool_schema_size(None)\n>       assert current_all[\"total_chars\"] == pr2_all_total + graph_query_total\nE       assert 16984 == (13907 + 1695)\n\ntests/integrations/test_mcp_schema_size_baseline.py:96: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "test-results-3.12/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_per_tool_chars_final_matches_current_unscoped_measurement",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 5,
+      "errorType": null,
+      "message": "AssertionError: assert {'analyze_rep...et': 892, ...} == {'analyze_rep...et': 892, ...}\n  \n  Omitting 19 identical items, use -vv to show\n  Left contains 1 more item:\n  {'session': 1382}\n  \n  Full diff:\n    {\n        'analyze_repo': 570,\n        'compare_repos': 718,\n        'context': 2279,\n        'explain_target': 892,\n        'generate_onboarding': 715,\n        'get_file_outline': 433,\n        'get_file_tree': 503,\n        'get_impact': 1118,\n        'get_symbol': 352,\n        'get_symbols_batch': 456,\n        'graph_hubs': 584,\n        'graph_lookup': 676,\n        'graph_neighbors': 812,\n        'graph_path': 826,\n        'graph_query': 1695,\n        'graph_stats': 574,\n        'query_repo': 1007,\n        'scout_repo': 703,\n        'search_symbols': 689,\n  +     'session': 1382,\n    }",
+      "stackText": "self = <tests.integrations.test_mcp_schema_size_baseline.TestSchemaSizeBaseline object at 0x7f5e2417d8e0>\n\n    def test_per_tool_chars_final_matches_current_unscoped_measurement(self) -> None:\n        baseline = _load_baseline()\n        recorded_per_tool = baseline[\"per_tool_chars_final\"]\n        current = measure_tool_schema_size(None)\n>       assert current[\"per_tool_chars\"] == recorded_per_tool\nE       AssertionError: assert {'analyze_rep...et': 892, ...} == {'analyze_rep...et': 892, ...}\nE         \nE         Omitting 19 identical items, use -vv to show\nE         Left contains 1 more item:\nE         {'session': 1382}\nE         \nE         Full diff:\nE           {\nE               'analyze_repo': 570,\nE               'compare_repos': 718,\nE               'context': 2279,\nE               'explain_target': 892,\nE               'generate_onboarding': 715,\nE               'get_file_outline': 433,\nE               'get_file_tree': 503,\nE               'get_impact': 1118,\nE               'get_symbol': 352,\nE               'get_symbols_batch': 456,\nE               'graph_hubs': 584,\nE               'graph_lookup': 676,\nE               'graph_neighbors': 812,\nE               'graph_path': 826,\nE               'graph_query': 1695,\nE               'graph_stats': 574,\nE               'query_repo': 1007,\nE               'scout_repo': 703,\nE               'search_symbols': 689,\nE         +     'session': 1382,\nE           }\n\ntests/integrations/test_mcp_schema_size_baseline.py:102: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

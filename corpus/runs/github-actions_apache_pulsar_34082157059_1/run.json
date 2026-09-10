@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/pulsar:34082157059:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/pulsar",
+    "providerRunId": "34082157059",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/pulsar/actions/runs/34082157059",
+    "workflowName": "Pulsar CI",
+    "event": "pull_request",
+    "headSha": "2007e92257548627ecbba3459b6765d1142496f8",
+    "headBranch": "permission_replication",
+    "artifactIds": [
+      "10004356404"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T10:11:16.759Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1072,
+    "failures": 1,
+    "passed": 1064,
+    "skipped": 7,
+    "filesParsed": 169,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 13
+    },
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 15
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Unit-BROKER_GROUP_1-test-reports/test-reports/TEST-org.apache.pulsar.broker.service.PersistentTopicTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "testDeleteTopicDeleteOnMetadataStoreFailed",
+      "suitePath": [
+        "org.apache.pulsar.broker.service.PersistentTopicTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 11,
+      "errorType": "java.lang.AssertionError",
+      "message": "java.lang.AssertionError: null",
+      "stackText": "java.lang.AssertionError: null\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.fail(Assert.java:116)\n\tat org.apache.pulsar.broker.service.PersistentTopicTest.testDeleteTopicDeleteOnMetadataStoreFailed(PersistentTopicTest.java:1508)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\n\tat org.testng.internal.invokers.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:47)\n\tat org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:76)\n\tat org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:11)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)\n\tat java.base/java.lang.Thread.run(Thread.java:1474)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

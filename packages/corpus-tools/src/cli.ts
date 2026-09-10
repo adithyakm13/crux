@@ -41,6 +41,7 @@ function usage(): string {
     '',
     'Usage:',
     '  corpus harvest --repos <path|owner/name,...> [--runs-per-repo N]',
+    '                 [--max-bytes-per-run BYTES]',
     '  corpus status',
     '  corpus frames [--markdown] [--include-untracked]',
     '  corpus scan --repos <file> [--out <file>] [--runs N] [--downloads N]',
@@ -56,6 +57,8 @@ function usage(): string {
     'Options:',
     '  --corpus DIR        corpus directory (default: ./corpus)',
     '  --runs-per-repo N   failed runs to examine per repository (default: 30)',
+    '  --max-bytes-per-run BYTES  artifact bytes per run (default: 80MB). Raise for',
+    '                      repositories that shard into many large artifacts.',
     '  --allow-unlicensed  harvest repositories whose licence cannot be identified',
     '  --context C         label context: full (default) or payload-only',
     '  --min-failures N    only label runs with at least N failures (default: 1)',
@@ -132,6 +135,15 @@ async function main(): Promise<number> {
       return 3;
     }
     const runsPerRepo = Number(flags.get('runs-per-repo') ?? DEFAULT_HARVEST_OPTIONS.runsPerRepo);
+    // Exposed because the per-run byte budget, not the run count, is what binds
+    // on repositories that shard heavily. quarkus uploads ~95 artifacts of
+    // ~11 MB per run, so the default 80 MB reaches about seven shards — and
+    // since ordering is smallest-first, it reaches the SAME seven on every run,
+    // which are mostly green. Raising it is the only way to see the shards that
+    // actually failed.
+    const maxBytesPerRun = Number(
+      flags.get('max-bytes-per-run') ?? DEFAULT_HARVEST_OPTIONS.maxBytesPerRun,
+    );
     const remaining = await rateLimitRemaining();
     process.stderr.write(`GitHub API budget remaining: ${remaining}\n`);
 
@@ -144,6 +156,7 @@ async function main(): Promise<number> {
           ...DEFAULT_HARVEST_OPTIONS,
           corpusDir,
           runsPerRepo,
+          maxBytesPerRun,
           requireLicense: flags.get('allow-unlicensed') !== true,
           onProgress: (line) => process.stderr.write(line + '\n'),
         });

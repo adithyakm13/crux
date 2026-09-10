@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/pulsar:34102744480:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/pulsar",
+    "providerRunId": "34102744480",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/pulsar/actions/runs/34102744480",
+    "workflowName": "Pulsar CI",
+    "event": "pull_request",
+    "headSha": "39485b7d8dbe8cafad1cc229a0405748c29f3304",
+    "headBranch": "Demogorgon314/Cancel-queued-transaction-snapshot-recovery-on-topic-close",
+    "artifactIds": [
+      "10012043258"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T10:02:39.474Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1693,
+    "failures": 1,
+    "passed": 1613,
+    "skipped": 79,
+    "filesParsed": 249,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 25
+    },
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 17
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Unit-BROKER_GROUP_1-test-reports/test-reports/TEST-org.apache.pulsar.broker.transaction.buffer.TransactionLowWaterMarkTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "testLowWaterMarkForDifferentTC",
+      "suitePath": [
+        "org.apache.pulsar.broker.transaction.buffer.TransactionLowWaterMarkTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10393,
+      "errorType": "org.awaitility.core.ConditionTimeoutException",
+      "message": "org.awaitility.core.ConditionTimeoutException: Assertion condition defined as a Lambda expression in org.apache.pulsar.broker.transaction.buffer.TransactionLowWaterMarkTest expected [false] but found [true] within 10 seconds.",
+      "stackText": "org.awaitility.core.ConditionTimeoutException: Assertion condition defined as a Lambda expression in org.apache.pulsar.broker.transaction.buffer.TransactionLowWaterMarkTest expected [false] but found [true] within 10 seconds.\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:167)\n\tat org.awaitility.core.AssertionCondition.await(AssertionCondition.java:119)\n\tat org.awaitility.core.AssertionCondition.await(AssertionCondition.java:31)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java:1160)\n\tat org.awaitility.core.ConditionFactory.untilAsserted(ConditionFactory.java:790)\n\tat org.apache.pulsar.broker.transaction.buffer.TransactionLowWaterMarkTest.testLowWaterMarkForDifferentTC(TransactionLowWaterMarkTest.java:430)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\n\tat org.testng.internal.invokers.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:47)\n\tat org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:76)\n\tat org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:11)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)\n\tat java.base/java.lang.Thread.run(Thread.java:1474)\nCaused by: java.lang.AssertionError: expected [false] but found [true]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1590)\n\tat org.testng.Assert.assertFalse(Assert.java:79)\n\tat org.testng.Assert.assertFalse(Assert.java:89)\n\tat org.apache.pulsar.broker.transaction.buffer.TransactionLowWaterMarkTest.lambda$testLowWaterMarkForDifferentTC$1(TransactionLowWaterMarkTest.java:434)\n\tat org.awaitility.core.AssertionCondition.lambda$new$0(AssertionCondition.java:53)\n\tat org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:248)\n\tat org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:235)\n\t... 4 more\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

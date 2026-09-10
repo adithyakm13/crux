@@ -166,17 +166,17 @@ weight of 0.60. Measured over the committed corpus:
 | Framework | Failures | With an app frame | Repos | Rate (Wilson 95%) |
 |---|---|---|---|---|
 | jest | 1059 | 12 | 2* | 0.011 [0.006, 0.020] |
-| unidentified | 602 | 27 | 5* | 0.045 [0.031, 0.064] |
-| playwright | 164 | 35 | 6 | 0.213 [0.158, 0.282] |
-| junit-jvm | 134 | 95 | 4 | 0.709 [0.627, 0.779] |
-| pytest | 108 | 40 | 6 | 0.370 [0.285, 0.464] |
+| unidentified | 625 | 27 | 7* | 0.043 [0.030, 0.062] |
+| junit-jvm | 428 | 246 | 8 | 0.575 [0.527, 0.621] |
+| playwright | 238 | 108 | 6 | 0.454 [0.392, 0.517] |
+| pytest | 138 | 42 | 7 | 0.304 [0.234, 0.386] |
 | vitest | 34 | 16 | 2 | 0.471 [0.315, 0.633] |
-| go-test | 5 | 0 | **1** | 0.000 [0.000, 0.434] |
-| **total** | **2106** | **225** | **20** | **0.107 [0.094, 0.121]** |
+| go-test | 18 | 0 | 2 | 0.000 [0.000, 0.176] |
+| **total** | **2540** | **451** | **27** | **0.178 [0.163, 0.193]** |
 
 A **bold** repository count means the row is one repository, and `*` means one repository supplies over 80% of it. Such a row is a claim about those repositories, not about the framework.
 
-Measured over 108 committed run(s) across 20 repositories (corpus `d0add43ea35a`). Regenerate with `pnpm corpus frames --markdown`.
+Measured over 188 committed run(s) across 27 repositories (corpus `df87bfae72af`). Regenerate with `pnpm corpus frames --markdown`.
 
 **The split is by repository at least as much as by framework, and that took a
 second repository to see.** jest read 0 of 1029 across every measurement until a
@@ -204,16 +204,25 @@ What survives the correction:
 The split is the finding, not the total. Two framework families sit at opposite
 ends, and the reason is structural rather than incidental:
 
-- **End-to-end suites lose the signal.** Playwright gives 0.213 and Next.js's
-  jest e2e harness gives 0 of 1029: the only frame is the spec file, which
-  classifies as `test`, because the failure happened inside the framework's own
-  machinery acting on behalf of test code.
-- **Unit suites keep it.** junit-jvm 0.709, vitest 0.471, jest-in-druxt 0.400,
-  pytest 0.370. JVM, Node and Python stacks carry the application call chain.
+- **A harness that wraps every frame loses the signal.** Next.js's jest e2e
+  harness gives 12 of 1059: the only frame is the spec file, which classifies as
+  `test`, because the failure happened inside the framework's own machinery
+  acting on behalf of test code.
+- **Ordinary suites keep it.** junit-jvm 0.575, vitest 0.471, playwright 0.454,
+  pytest 0.304. JVM, Node and Python stacks carry the application call chain.
 
-So the axis is closer to *end-to-end versus unit* than to any particular
-framework, and no row should be read as a property of a framework until several
-repositories contribute to it.
+Every one of these numbers has moved as repositories were added, and always
+toward the middle. At 4 repositories junit-jvm read 0.709 and now reads 0.575
+across 8; Playwright read 0.213 from 6 runs of one project and now reads 0.454
+across 6 repositories. The aggregate went 0.103 to 0.178. None of those are
+corrections of an arithmetic error — each was the correct figure for the sample
+it was computed over, and each was wrong about the population.
+
+That is the durable lesson of this table, and it is why the tool now prints a
+repository count and flags any row that one project dominates. The axis is
+closer to *what the harness does to the stack* than to any particular
+framework, and no row is a property of a framework until several repositories
+contribute to it.
 
 So §8's 0.60 weight is not wrong, but it is **unavailable for a large share of
 real CI failures**, and which share depends entirely on the framework mix.

@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Sage/carbon:34370458568:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Sage/carbon",
+    "providerRunId": "34370458568",
+    "runAttempt": 1,
+    "url": "https://github.com/Sage/carbon/actions/runs/34370458568",
+    "workflowName": "Playwright",
+    "event": "pull_request",
+    "headSha": "809233842358740fdcb30cdc63e0129f90d8cac7",
+    "headBranch": "FE-7161-align-file-input-with-fusion-ds",
+    "artifactIds": [
+      "10111905574",
+      "10111887768",
+      "10111893600",
+      "10111886398",
+      "10111893529",
+      "10111919869",
+      "10111905551",
+      "10112040892"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-09T16:17:59.626Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 2076,
+    "failures": 12,
+    "passed": 2045,
+    "skipped": 19,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30120,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:202:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30194,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:233:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30129,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:202:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30170,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:233:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30122,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:202:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30184,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:233:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30128,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:202:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30223,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:233:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "after dropping a file, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30152,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:264:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "after dropping a file, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30212,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:264:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "after dropping a file, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30127,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:264:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "after dropping a file, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30121,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:264:8",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

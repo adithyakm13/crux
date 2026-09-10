@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:30100039945:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Mathews-Tom/archex",
+    "providerRunId": "30100039945",
+    "runAttempt": 1,
+    "url": "https://github.com/Mathews-Tom/archex/actions/runs/30100039945",
+    "workflowName": "CI",
+    "event": "push",
+    "headSha": "16ef7bb6b211d877adebaca8900fedd4c1a76f6a",
+    "headBranch": "m9-2-dimensioned-status-surface",
+    "artifactIds": [
+      "8599294359",
+      "8599296021",
+      "8599326889"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T04:40:01.123Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 13227,
+    "failures": 1,
+    "passed": 13199,
+    "skipped": 27,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-3.12/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test_grep_happy_path_returns_receipt_stamped_context",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_hooks"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2493,
+      "errorType": null,
+      "message": "assert None is not None",
+      "stackText": "indexed_repo = PosixPath('/tmp/pytest-of-runner/pytest-0/test_grep_happy_path_returns_r0/python_simple')\n\n    def test_grep_happy_path_returns_receipt_stamped_context(indexed_repo: Path) -> None:\n        payload: dict[str, Any] = {\n            \"tool_name\": \"Grep\",\n            \"tool_input\": {\"pattern\": \"AuthService\"},\n            \"cwd\": str(indexed_repo),\n        }\n    \n        result = handle_pre_tool_use(payload)\n    \n>       assert result is not None\nE       assert None is not None\n\ntests/integrations/test_hooks.py:115: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

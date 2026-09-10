@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:30000571349:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Mathews-Tom/archex",
+    "providerRunId": "30000571349",
+    "runAttempt": 1,
+    "url": "https://github.com/Mathews-Tom/archex/actions/runs/30000571349",
+    "workflowName": "CI",
+    "event": "push",
+    "headSha": "aa362077454451faeeee32d1e438a1c714a66f3f",
+    "headBranch": "m1-provenance-26a2db",
+    "artifactIds": [
+      "8560864104",
+      "8560865323",
+      "8560862854"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T04:40:39.692Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 11412,
+    "failures": 1,
+    "passed": 11384,
+    "skipped": 27,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-3.12/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test_cached_search_phase_totals_cover_at_least_95_percent_of_runtime",
+      "suitePath": [
+        "pytest",
+        "tests.test_api_timing.TestAPITiming"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 121,
+      "errorType": null,
+      "message": "AssertionError: assert (23.926320000015266 / 26.05393900000763) >= 0.95\n +  where 26.05393900000763 = PipelineTiming(acquire_ms=0.0, parse_ms=0.0, index_ms=11.396023999992622, search_ms=1.3958810000076483, assemble_ms=11...succeeded=False, parse_failure_count=0, vector_used=False, vector_build_ms=0.0, vector_index_ms=0.0, strategy='cached').total_ms",
+      "stackText": "self = <tests.test_api_timing.TestAPITiming object at 0x7f69087c3650>\npython_simple_repo = PosixPath('/tmp/pytest-of-runner/pytest-0/test_cached_search_phase_total0/python_simple')\n\n    def test_cached_search_phase_totals_cover_at_least_95_percent_of_runtime(\n        self, python_simple_repo: Path\n    ) -> None:\n        \"\"\"M1 acceptance: runtime phases must account for >= 95% of measured total.\n    \n        A small ``token_budget`` forces the cached search path (rather than\n        passthrough, which trivially covers 100% by construction) so this\n        exercises the phase most prone to under-measurement: loading a cached\n        index (BM25/graph/chunk hydration) between the cache-hit check and the\n        search phase.\n        \"\"\"\n        source = RepoSource(local_path=str(python_simple_repo))\n        config = Config(cache=True)\n    \n        # Warm up cache, then force the non-passthrough cached search path.\n        query(source, \"user session\", config=config, token_budget=200)\n        timing = PipelineTiming()\n        bundle = query(source, \"user session\", config=config, timing=timing, token_budget=200)\n        assert bundle is not None\n        assert timing.strategy == \"cached\"\n    \n        phase_sum = (\n            timing.acquire_ms\n            + timing.parse_ms\n            + timing.index_ms\n            + timing.search_ms\n            + timing.assemble_ms\n        )\n        assert timing.total_ms > 0\n>       assert phase_sum / timing.total_ms >= 0.95\nE       AssertionError: assert (23.926320000015266 / 26.05393900000763) >= 0.95\nE        +  where 26.05393900000763 = PipelineTiming(acquire_ms=0.0, parse_ms=0.0, index_ms=11.396023999992622, search_ms=1.3958810000076483, assemble_ms=11...succeeded=False, parse_failure_count=0, vector_used=False, vector_build_ms=0.0, vector_index_ms=0.0, strategy='cached').total_ms\n\ntests/test_api_timing.py:74: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

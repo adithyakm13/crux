@@ -1,0 +1,917 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Sage/carbon:34333964341:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Sage/carbon",
+    "providerRunId": "34333964341",
+    "runAttempt": 1,
+    "url": "https://github.com/Sage/carbon/actions/runs/34333964341",
+    "workflowName": "Playwright",
+    "event": "pull_request",
+    "headSha": "e7ac6a58b1b70914beffa641cc242d6971fc6a6d",
+    "headBranch": "FE-7161-align-file-input-with-fusion-ds",
+    "artifactIds": [
+      "10097113255",
+      "10097091818",
+      "10097104615",
+      "10097096674",
+      "10097143984",
+      "10097106171",
+      "10097087630",
+      "10097178880"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-09T16:18:53.811Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 2050,
+    "failures": 46,
+    "passed": 1986,
+    "skipped": 18,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-5/report-5.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "when a Menu Fullscreen is opened and then closed, the call to action element should be focused",
+      "suitePath": [
+        "Prop tests for Menu component"
+      ],
+      "filePath": "components/menu/menu.pw.tsx",
+      "status": "failed",
+      "durationMs": 7669,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button').filter({ hasText: 'Menu' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button').filter({ hasText: 'Menu' })\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"inactive\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button').filter({ hasText: 'Menu' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button').filter({ hasText: 'Menu' })\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"inactive\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/menu/menu.pw.tsx:162:24",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "when nested Dialog's are opened/closed their respective call to action elements should be focused correctly",
+      "suitePath": [
+        "Dialog component",
+        "Testing Dialog component properties"
+      ],
+      "filePath": "components/dialog/dialog.pw.tsx",
+      "status": "failed",
+      "durationMs": 6761,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button').filter({ hasText: 'Open Nested Dialog' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button').filter({ hasText: 'Open Nested Dialog' })\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" draggable=\"false\" data-component=\"button\" class=\"sc-Nxspf dlGSrU\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"inactive\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button').filter({ hasText: 'Open Nested Dialog' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button').filter({ hasText: 'Open Nested Dialog' })\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" draggable=\"false\" data-component=\"button\" class=\"sc-Nxspf dlGSrU\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"inactive\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/dialog/dialog.pw.tsx:171:34",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "when nested Dialog's are opened/closed their respective call to action elements should be focused correctly",
+      "suitePath": [
+        "Fullscreen Dialog component",
+        "render full-screen `Dialog` component and check properties"
+      ],
+      "filePath": "components/dialog/dialog.pw.tsx",
+      "status": "failed",
+      "durationMs": 7084,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button').filter({ hasText: 'Open Main Dialog' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button').filter({ hasText: 'Open Main Dialog' })\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" draggable=\"false\" data-component=\"button\" class=\"sc-Nxspf dlGSrU\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"inactive\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button').filter({ hasText: 'Open Main Dialog' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button').filter({ hasText: 'Open Main Dialog' })\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" draggable=\"false\" data-component=\"button\" class=\"sc-Nxspf dlGSrU\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"inactive\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/dialog/dialog.pw.tsx:645:33",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "when nested Dialog's are opened/closed their respective call to action elements should be focused correctly",
+      "suitePath": [
+        "Fullscreen Dialog component",
+        "render full-screen `Dialog` component and check properties"
+      ],
+      "filePath": "components/dialog/dialog.pw.tsx",
+      "status": "failed",
+      "durationMs": 6401,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button').filter({ hasText: 'Open Nested Dialog' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button').filter({ hasText: 'Open Nested Dialog' })\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" draggable=\"false\" data-component=\"button\" class=\"sc-Nxspf dlGSrU\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"inactive\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button').filter({ hasText: 'Open Nested Dialog' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button').filter({ hasText: 'Open Nested Dialog' })\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" draggable=\"false\" data-component=\"button\" class=\"sc-Nxspf dlGSrU\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"inactive\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/dialog/dialog.pw.tsx:641:34",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "dragging and dropping a file passes it to the onChange callback",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 1180,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:168:34",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "dragging and dropping a file passes it to the onChange callback",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 588,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:168:34",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "dragging and dropping a file passes it to the onChange callback",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 587,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:168:34",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "in the completed state, the filename is plain text and Preview links to previewHref",
+      "suitePath": [
+        "with uploadStatus prop"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 6617,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('link', { name: 'foo.pdf' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'foo.pdf' })\u001b[22m\n\u001b[2m    9 × locator resolved to 1 element\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('link', { name: 'foo.pdf' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'foo.pdf' })\u001b[22m\n\u001b[2m    9 × locator resolved to 1 element\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:114:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "dragging and dropping a file passes it to the onChange callback",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 694,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:168:34",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "in the completed state, the filename is plain text and Preview links to previewHref",
+      "suitePath": [
+        "with uploadStatus prop"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 5647,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('link', { name: 'foo.pdf' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'foo.pdf' })\u001b[22m\n\u001b[2m    9 × locator resolved to 1 element\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('link', { name: 'foo.pdf' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'foo.pdf' })\u001b[22m\n\u001b[2m    9 × locator resolved to 1 element\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:114:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "in the completed state, the filename is plain text and Preview links to previewHref",
+      "suitePath": [
+        "with uploadStatus prop"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 5569,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('link', { name: 'foo.pdf' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'foo.pdf' })\u001b[22m\n\u001b[2m    9 × locator resolved to 1 element\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('link', { name: 'foo.pdf' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'foo.pdf' })\u001b[22m\n\u001b[2m    9 × locator resolved to 1 element\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:114:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "in the completed state, the filename is plain text and Preview links to previewHref",
+      "suitePath": [
+        "with uploadStatus prop"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 5531,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('link', { name: 'foo.pdf' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'foo.pdf' })\u001b[22m\n\u001b[2m    9 × locator resolved to 1 element\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('link', { name: 'foo.pdf' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'foo.pdf' })\u001b[22m\n\u001b[2m    9 × locator resolved to 1 element\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:114:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30123,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:196:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30125,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:227:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30120,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:196:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30120,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:227:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30121,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:196:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30124,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:227:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0019",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "while dragging a file, the dashed border becomes thicker",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30121,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:196:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0020",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "when dragging a file off the document, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30152,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:227:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0021",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "while dragging a file over the component, the background color changes",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 647,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:284:29",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0022",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "while dragging a file over the component, the background color changes",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 680,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:284:29",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0023",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "while dragging a file over the component, the background color changes",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 584,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:284:29",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0024",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "while dragging a file over the component, the background color changes",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 603,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:284:29",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0025",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "while dragging a file over the component with an existing Field error, the background color still changes",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 579,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:309:29",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0026",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "while dragging a file over the component with an existing Field error, the background color still changes",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 613,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:309:29",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0027",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "while dragging a file over the component with an existing Field error, the background color still changes",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 569,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:309:29",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0028",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "while dragging a file over the component with an existing Field error, the background color still changes",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 621,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m04\u001b[27m, 2\u001b[7m14\u001b[27m, 2\u001b[7m19\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m, 2\u001b[7m55\u001b[27m)\"\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:309:29",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0029",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "after dropping a file, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "timed_out",
+      "durationMs": 30144,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.evaluate: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-component=\"file-input\"] > div > div > div:last-child svg rect')\u001b[22m\n\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:258:8",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0030",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "dropping a file while a Field error is present passes the file to onChange",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 801,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:340:34",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0031",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "dropping a file while a Field error is present passes the file to onChange",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 596,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:340:34",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0032",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "dropping a file while a Field error is present passes the file to onChange",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 640,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:340:34",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0033",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "dropping a file while a Field error is present passes the file to onChange",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 654,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:340:34",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0034",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "removing the first card's focused action moves focus to the next card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 386,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:465:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0035",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "removing the first card's focused action moves focus to the next card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 240,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:465:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0036",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "removing the first card's focused action moves focus to the next card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 278,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:465:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0037",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "removing the first card's focused action moves focus to the next card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 273,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:465:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0038",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "removing a middle card's focused action moves focus to the next card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 308,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:476:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0039",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "removing a middle card's focused action moves focus to the next card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 256,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:476:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0040",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "removing a middle card's focused action moves focus to the next card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 258,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:476:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0041",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "removing a middle card's focused action moves focus to the next card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 257,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:476:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0042",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "removing the last card's focused action moves focus to the previous card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 260,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:487:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0043",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "removing the last card's focused action moves focus to the previous card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 259,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:487:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0044",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 2,
+      "displayName": "removing the last card's focused action moves focus to the previous card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 264,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:487:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0045",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 3,
+      "displayName": "removing the last card's focused action moves focus to the previous card's action",
+      "suitePath": [
+        "focus management"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "failed",
+      "durationMs": 264,
+      "errorType": "Error",
+      "message": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.",
+      "stackText": "Error: page._wrapApiCall: Component \"FocusPreservationHarness\" cannot be mounted.\nMost likely, this component is defined in the test file. Create a test story instead.\nFor more information, see https://playwright.dev/docs/test-components#test-stories.\n    at mount (/__w/carbon/carbon/node_modules/@playwright/experimental-ct-core/lib/mount.js:45:35)\n    at /__w/carbon/carbon/src/components/file-input/file-input.pw.tsx:487:11",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0046",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 1,
+      "displayName": "after dropping a file, the dashed border returns to the original thickness",
+      "suitePath": [
+        "interactions"
+      ],
+      "filePath": "components/file-input/file-input.pw.tsx",
+      "status": "error",
+      "durationMs": 29275,
+      "errorType": null,
+      "message": "",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

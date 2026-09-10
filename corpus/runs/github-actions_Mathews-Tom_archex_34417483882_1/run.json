@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:34417483882:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "Mathews-Tom/archex",
+    "providerRunId": "34417483882",
+    "runAttempt": 1,
+    "url": "https://github.com/Mathews-Tom/archex/actions/runs/34417483882",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "bd1ad391f570404c816a30948f6baf651c9fb7c4",
+    "headBranch": "docs/r20-evidence",
+    "artifactIds": [
+      "10129730656",
+      "10129781217",
+      "10129827052"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T04:38:39.633Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 14334,
+    "failures": 1,
+    "passed": 14306,
+    "skipped": 27,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-3.12/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test_default_timeout_budget_holds_on_realistic_fixture",
+      "suitePath": [
+        "pytest",
+        "tests.integrations.test_hooks"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 358,
+      "errorType": null,
+      "message": "AssertionError: lookup took 263.3ms, more than half of the 500ms default timeout budget on a small fixture\nassert 0.2632586120000724 < (0.5 * 0.5)",
+      "stackText": "monorepo_simple_repo = PosixPath('/tmp/pytest-of-runner/pytest-0/test_default_timeout_budget_ho0/monorepo_simple')\n\n    def test_default_timeout_budget_holds_on_realistic_fixture(\n        monorepo_simple_repo: Path,\n    ) -> None:\n        \"\"\"Real-world latency evidence that the *default* 0.5s budget is generous.\n    \n        `test_lookup_timeout_degrades_silently_and_logs_diagnostic` above proves\n        the timeout fires under an artificially tiny budget; this test proves the\n        complementary fact — under realistic conditions the timeout does *not*\n        fire, with a wide real margin. Uses `monorepo_simple_repo` (a multi-package\n        fixture, larger than the single-package `python_simple_repo`/`indexed_repo`\n        used elsewhere in this file) indexed for real via the same\n        `init_project` + `cli index` pipeline, then calls `handle_pre_tool_use`\n        in-process with `ARCHEX_HOOK_TIMEOUT_SECONDS` deliberately left unset so\n        the real default budget (`DEFAULT_HOOK_TIMEOUT_SECONDS`) is exercised.\n    \n        Measured locally (8 back-to-back runs, this fixture): ~44-55ms per call —\n        roughly a tenth of the 500ms budget. The `* 0.5` threshold below keeps a\n        wide margin above that measured ceiling (well over 4x) so a loaded CI\n        runner has ample headroom before this test could ever flake, while still\n        failing loudly if a regression pushed the real lookup path anywhere close\n        to the actual timeout.\n        \"\"\"\n        init_project(monorepo_simple_repo)\n        runner = CliRunner()\n        result = runner.invoke(cli, [\"index\", str(monorepo_simple_repo)])\n        assert result.exit_code == 0, result.output\n    \n        payload: dict[str, Any] = {\n            \"tool_name\": \"Grep\",\n            \"tool_input\": {\"pattern\": \"initialize\"},\n            \"cwd\": str(monorepo_simple_repo),\n        }\n    \n        start = time.perf_counter()\n        output = handle_pre_tool_use(payload)\n        elapsed = time.perf_counter() - start\n    \n        # Must not have degraded to a timeout no-op — a `None` here would mean the\n        # timing assertion below is measuring nothing.\n        assert output is not None, \"lookup timed out against a small, freshly-indexed fixture\"\n        context = output[\"hookSpecificOutput\"][\"additionalContext\"]\n        assert \"initialize\" in context\n    \n        budget = DEFAULT_HOOK_TIMEOUT_SECONDS\n>       assert elapsed < budget * 0.5, (\n            f\"lookup took {elapsed * 1000:.1f}ms, more than half of the {budget * 1000:.0f}ms \"\n            \"default timeout budget on a small fixture\"\n        )\nE       AssertionError: lookup took 263.3ms, more than half of the 500ms default timeout budget on a small fixture\nE       assert 0.2632586120000724 < (0.5 * 0.5)\n\ntests/integrations/test_hooks.py:666: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

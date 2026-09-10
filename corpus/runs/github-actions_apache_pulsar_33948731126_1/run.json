@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/pulsar:33948731126:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/pulsar",
+    "providerRunId": "33948731126",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/pulsar/actions/runs/33948731126",
+    "workflowName": "Pulsar CI",
+    "event": "schedule",
+    "headSha": "820761864ed8e2a7d2e52dd9763ad2ae117c1395",
+    "headBranch": "master",
+    "artifactIds": [
+      "9964505412"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T10:15:09.594Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1415,
+    "failures": 1,
+    "passed": 1411,
+    "skipped": 3,
+    "filesParsed": 257,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 4
+    },
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 16
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Unit-BROKER_GROUP_2-test-reports/test-reports/TEST-org.apache.pulsar.client.api.v5.V5DagWatchAutoReconnectTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "testProducerSurvivesDagWatchConnectionDrop",
+      "suitePath": [
+        "org.apache.pulsar.client.api.v5.V5DagWatchAutoReconnectTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 355,
+      "errorType": "java.lang.AssertionError",
+      "message": "java.lang.AssertionError: producer must keep sending after DAG watch reconnect kicks in",
+      "stackText": "java.lang.AssertionError: producer must keep sending after DAG watch reconnect kicks in\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.assertEquals(Assert.java:2039)\n\tat org.apache.pulsar.client.api.v5.V5DagWatchAutoReconnectTest.testProducerSurvivesDagWatchConnectionDrop(V5DagWatchAutoReconnectTest.java:91)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\n\tat org.testng.internal.invokers.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:47)\n\tat org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:76)\n\tat org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:11)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}
