@@ -13,7 +13,10 @@
     "clean": "tsc --build --clean",
     "corpus": "node packages/corpus-tools/src/cli.ts",
     "bench": "node bench/pipeline.bench.ts",
-    "bench:quick": "node bench/pipeline.bench.ts --quick"
+    "bench:quick": "node bench/pipeline.bench.ts --quick",
+    "console": "pnpm --filter @cruxci/console run dev",
+    "console:build": "pnpm --filter @cruxci/console run build",
+    "snapshot": "node packages/corpus-tools/src/cli.ts snapshot --out apps/console/public/corpus.json"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

@@ -419,7 +419,7 @@ function blockedOnHumans(labelers: number, labeled: number): string[] {
   return out;
 }
 
-async function loadAllLabels(corpusDir: string, runs: CorpusRun[]): Promise<RunLabels[]> {
+export async function loadAllLabels(corpusDir: string, runs: CorpusRun[]): Promise<RunLabels[]> {
   const byId = new Map(runs.map((r) => [r.corpusRunId, r]));
   const root = join(corpusDir, 'labels');
   let labelerDirs: string[];

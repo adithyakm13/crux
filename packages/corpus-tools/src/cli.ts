@@ -13,6 +13,7 @@
  *   corpus scan                          which repos would actually yield data
  *   corpus holdout                       which runs may not be committed
  *   corpus compact                       cap stored payload, recording what was cut
+ *   corpus snapshot                      static data bundle for the console
  */
 
 import { readFile } from 'node:fs/promises';
@@ -41,6 +42,7 @@ import {
 } from './license.ts';
 import { corpusRunDir } from './schema.ts';
 import { compactFailure, DEFAULT_MAX_FIELD_BYTES } from './compact.ts';
+import { buildSnapshot } from './snapshot.ts';
 import { probeRepo, type ProbeResult } from './harvest.ts';
 import { buildWorksheet, parseWorksheet } from './worksheet.ts';
 import { SCHEMA_VERSION } from '@cruxci/core';
@@ -75,6 +77,7 @@ function usage(): string {
     '  corpus baseline --labeler <name>',
     '  corpus holdout [--write]           licence hold-out list for .gitignore',
     '  corpus compact [--max-field N] [--over BYTES] [--write]  cap stored payload',
+    '  corpus snapshot --out <file.json>  static data bundle for the console',
     '                --over limits it to run files above that size; default all',
     '',
     'Options:',
@@ -377,6 +380,41 @@ async function main(): Promise<number> {
     } else {
       process.stdout.write(formatSample(result) + '\n');
     }
+    return 0;
+  }
+
+  if (command === 'snapshot') {
+    // Everything the console shows is derived here, from the same functions
+    // the CLI prints from. A console that computed its own numbers would be a
+    // second implementation of the gate, and the two would drift.
+    const outFlag = flags.get('out');
+    if (typeof outFlag !== 'string') {
+      process.stderr.write('Error: snapshot needs --out <file.json>.\n');
+      return 2;
+    }
+    const { mkdir, stat, writeFile } = await import('node:fs/promises');
+    const { dirname } = await import('node:path');
+    const runs = await loadRuns(corpusDir);
+    const sizes = new Map<string, number>();
+    for (const run of runs) {
+      try {
+        sizes.set(
+          run.corpusRunId,
+          (await stat(join(corpusDir, 'runs', corpusRunDir(run.corpusRunId), 'run.json'))).size,
+        );
+      } catch {
+        sizes.set(run.corpusRunId, 0);
+      }
+    }
+    const snapshot = await buildSnapshot(corpusDir, runs, (r) => sizes.get(r.corpusRunId) ?? 0);
+    await mkdir(dirname(resolve(outFlag)), { recursive: true });
+    await writeFile(outFlag, JSON.stringify(snapshot) + '\n', 'utf8');
+    const held = snapshot.runs.filter((r) => r.heldOut !== null).length;
+    process.stdout.write(
+      `wrote ${snapshot.runs.length} run(s), ${snapshot.labelers.length} labeller(s) ` +
+        `to ${outFlag}\n` +
+        `${held} run(s) marked held out; gate evaluated over the committable set\n`,
+    );
     return 0;
   }
 
