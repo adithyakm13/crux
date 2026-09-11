@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/plc4x:34021448327:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/plc4x",
+    "providerRunId": "34021448327",
+    "runAttempt": 2,
+    "url": "https://github.com/apache/plc4x/actions/runs/34021448327",
+    "workflowName": "Java Platform compatibility",
+    "event": "pull_request",
+    "headSha": "a4dbce1422a4ad502cd81874fbce3eb62a273bb6",
+    "headBranch": "fix/throttle-lost-limit-reduction",
+    "artifactIds": [
+      "10100343123",
+      "10100339666",
+      "10100334172",
+      "10100330674",
+      "10096423186",
+      "10096267032",
+      "10096449270",
+      "10096524457"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T07:09:52.380Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 84052,
+    "failures": 12,
+    "passed": 83074,
+    "skipped": 966,
+    "filesParsed": 3712,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "java-test-report-ubuntu-latest-java-21/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "interfaceNameOptionUsedWhenAddressSegmentIsEmpty",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 25,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.LinkageError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.LinkageError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\nCaused by: java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found.\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$4(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\n",
+      "stdout": "10:52:52.917 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface vcan0 (reuseInterface=false)\n10:52:52.919 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "java-test-report-ubuntu-latest-java-21/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "addressSegmentWinsOverInterfaceNameOption",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 9,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.addressSegmentWinsOverInterfaceNameOption(SocketCanTransportTest.java:102)\nCaused by: java.lang.NoClassDefFoundError: Could not initialize class tel.schich.javacan.platform.linux.LinuxNetworkDevice\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$addressSegmentWinsOverInterfaceNameOption$3(SocketCanTransportTest.java:103)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found. [in thread \"main\"]\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$4(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\n",
+      "stdout": "10:52:52.961 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface can0 (reuseInterface=false)\n10:52:52.964 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "java-test-report-ubuntu-latest-java-21/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "addressSegmentNamesTheInterface",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 5,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.addressSegmentNamesTheInterface(SocketCanTransportTest.java:89)\nCaused by: java.lang.NoClassDefFoundError: Could not initialize class tel.schich.javacan.platform.linux.LinuxNetworkDevice\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$addressSegmentNamesTheInterface$2(SocketCanTransportTest.java:90)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found. [in thread \"main\"]\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$4(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\n",
+      "stdout": "10:52:52.973 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface can0 (reuseInterface=false)\n10:52:52.974 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "java-test-report-first-failure-ubuntu-latest-java-21/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "interfaceNameOptionUsedWhenAddressSegmentIsEmpty",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 25,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.LinkageError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.LinkageError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\nCaused by: java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found.\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$4(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\n",
+      "stdout": "10:52:52.917 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface vcan0 (reuseInterface=false)\n10:52:52.919 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "java-test-report-first-failure-ubuntu-latest-java-21/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "addressSegmentWinsOverInterfaceNameOption",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 9,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.addressSegmentWinsOverInterfaceNameOption(SocketCanTransportTest.java:102)\nCaused by: java.lang.NoClassDefFoundError: Could not initialize class tel.schich.javacan.platform.linux.LinuxNetworkDevice\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$addressSegmentWinsOverInterfaceNameOption$3(SocketCanTransportTest.java:103)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found. [in thread \"main\"]\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$4(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\n",
+      "stdout": "10:52:52.961 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface can0 (reuseInterface=false)\n10:52:52.964 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "java-test-report-first-failure-ubuntu-latest-java-21/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "addressSegmentNamesTheInterface",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 5,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.addressSegmentNamesTheInterface(SocketCanTransportTest.java:89)\nCaused by: java.lang.NoClassDefFoundError: Could not initialize class tel.schich.javacan.platform.linux.LinuxNetworkDevice\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$addressSegmentNamesTheInterface$2(SocketCanTransportTest.java:90)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found. [in thread \"main\"]\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$4(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\n",
+      "stdout": "10:52:52.973 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface can0 (reuseInterface=false)\n10:52:52.974 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "java-test-report-ubuntu-latest-java-24/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "interfaceNameOptionUsedWhenAddressSegmentIsEmpty",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 24,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.LinkageError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.LinkageError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\nCaused by: java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found.\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$0(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\n",
+      "stdout": "10:52:36.654 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface vcan0 (reuseInterface=false)\n10:52:36.655 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "java-test-report-ubuntu-latest-java-24/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "addressSegmentWinsOverInterfaceNameOption",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 6,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.addressSegmentWinsOverInterfaceNameOption(SocketCanTransportTest.java:102)\nCaused by: java.lang.NoClassDefFoundError: Could not initialize class tel.schich.javacan.platform.linux.LinuxNetworkDevice\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$addressSegmentWinsOverInterfaceNameOption$0(SocketCanTransportTest.java:103)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found. [in thread \"main\"]\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$0(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\n",
+      "stdout": "10:52:36.695 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface can0 (reuseInterface=false)\n10:52:36.696 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "java-test-report-ubuntu-latest-java-24/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "addressSegmentNamesTheInterface",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 5,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.addressSegmentNamesTheInterface(SocketCanTransportTest.java:89)\nCaused by: java.lang.NoClassDefFoundError: Could not initialize class tel.schich.javacan.platform.linux.LinuxNetworkDevice\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$addressSegmentNamesTheInterface$0(SocketCanTransportTest.java:90)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found. [in thread \"main\"]\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$0(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\n",
+      "stdout": "10:52:36.706 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface can0 (reuseInterface=false)\n10:52:36.707 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "java-test-report-first-failure-ubuntu-latest-java-24/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "interfaceNameOptionUsedWhenAddressSegmentIsEmpty",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 24,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.LinkageError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.LinkageError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\nCaused by: java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found.\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$0(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\n",
+      "stdout": "10:52:36.654 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface vcan0 (reuseInterface=false)\n10:52:36.655 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "java-test-report-first-failure-ubuntu-latest-java-24/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "addressSegmentWinsOverInterfaceNameOption",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 6,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.addressSegmentWinsOverInterfaceNameOption(SocketCanTransportTest.java:102)\nCaused by: java.lang.NoClassDefFoundError: Could not initialize class tel.schich.javacan.platform.linux.LinuxNetworkDevice\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$addressSegmentWinsOverInterfaceNameOption$0(SocketCanTransportTest.java:103)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found. [in thread \"main\"]\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$0(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\n",
+      "stdout": "10:52:36.695 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface can0 (reuseInterface=false)\n10:52:36.696 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "java-test-report-first-failure-ubuntu-latest-java-24/plc4j/transports/can-socketcan/target/surefire-reports/TEST-org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "addressSegmentNamesTheInterface",
+      "suitePath": [
+        "org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 5,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>",
+      "stackText": "org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.Exception> but was: <java.lang.NoClassDefFoundError>\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.addressSegmentNamesTheInterface(SocketCanTransportTest.java:89)\nCaused by: java.lang.NoClassDefFoundError: Could not initialize class tel.schich.javacan.platform.linux.LinuxNetworkDevice\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$addressSegmentNamesTheInterface$0(SocketCanTransportTest.java:90)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\t... 2 more\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.LinkageError: Failed to load the native library javacan-core: /native/libjavacan-core.so not found. [in thread \"main\"]\n\tat tel.schich.javacan.platform.Platform.loadFromClassPath(Platform.java:134)\n\tat tel.schich.javacan.platform.Platform.loadExplicitLibrary(Platform.java:125)\n\tat tel.schich.javacan.platform.Platform.loadNativeLibrary(Platform.java:70)\n\tat tel.schich.javacan.JavaCAN.initialize(JavaCAN.java:44)\n\tat tel.schich.javacan.platform.linux.LinuxNetworkDevice.<clinit>(LinuxNetworkDevice.java:35)\n\tat tel.schich.javacan.NetworkDevice.lookup(NetworkDevice.java:55)\n\tat tel.schich.javacan.CanChannels.newRawChannel(CanChannels.java:81)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.openChannel(SocketCanTransportInstance.java:144)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance.<init>(SocketCanTransportInstance.java:110)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport.createTransportInstance(SocketCanTransport.java:88)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.lambda$interfaceNameOptionUsedWhenAddressSegmentIsEmpty$0(SocketCanTransportTest.java:116)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)\n\tat org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)\n\tat org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3234)\n\tat org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportTest.interfaceNameOptionUsedWhenAddressSegmentIsEmpty(SocketCanTransportTest.java:115)\n",
+      "stdout": "10:52:36.706 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransport -- Creating SocketCAN transport instance for interface can0 (reuseInterface=false)\n10:52:36.707 [main] DEBUG org.apache.plc4x.java.transport.can.socketcan.SocketCanTransportInstance -- SocketCanTransportInstance: Java 17 version\n",
+      "stderr": null
+    }
+  ]
+}

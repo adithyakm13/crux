@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/plc4x:33762085143:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/plc4x",
+    "providerRunId": "33762085143",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/plc4x/actions/runs/33762085143",
+    "workflowName": "Go Platform compatibility",
+    "event": "push",
+    "headSha": "5841a94cc5362f8a6c705545f2a734c16fd929f0",
+    "headBranch": "develop",
+    "artifactIds": [
+      "9899908873",
+      "9896706603",
+      "9896888039",
+      "9896884447"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T07:23:09.764Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 53067,
+    "failures": 4,
+    "passed": 52783,
+    "skipped": 280,
+    "filesParsed": 4,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "golang-test-report-windows-latest/plc4go/target/surefire-reports/go-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "Test_worker_work/Worker_should_work_till_shutdown_(even_if_it_panics)",
+      "suitePath": [
+        "github.com/apache/plc4x/plc4go/spi/pool"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 250,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   Test_worker_work/Worker_should_work_till_shutdown_(even_if_it_panics)\n    buffer.go:279: ���������������worker.go:130: <nil> TRC Working\n    buffer.go:279: ���������������worker.go:135: <nil> DBG Got work item workItem={}\n    buffer.go:279: ���������������worker.go:140: <nil> DBG Running work item workItem={}\n    worker_test.go:381: firstValidation after 50ms\n    worker_test.go:259: \n        \tError Trace:\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker_test.go:259\n        \t            \t\t\t\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker_test.go:382\n        \tError:      \tShould be true\n        \tTest:       \tTest_worker_work/Worker_should_work_till_shutdown_(even_if_it_panics)\n        \tMessages:   \tshould be running\n    worker_test.go:386: manipulator after 0s\n    worker_test.go:391: secondValidation after 150ms\n--- FAIL: Test_worker_work/Worker_should_work_till_shutdown_(even_if_it_panics) (0.25s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "golang-test-report-windows-latest/plc4go/target/surefire-reports/go-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "Test_worker_work",
+      "suitePath": [
+        "github.com/apache/plc4x/plc4go/spi/pool"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 850,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   Test_worker_work\n    writer.go:174: ���������������worker.go:116: <nil> ERR panic-ed err=\"Oh no what should I do???\" stack=\"goroutine 293 [running]:\\nruntime/debug.Stack()\\n\\tC:/Users/runneradmin/.mvnGoLang/go1.27.0.windows-amd64/src/runtime/debug/stack.go:26 +0x5e\\ngithub.com/apache/plc4x/plc4go/spi/pool.(*worker).work.func1()\\n\\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker.go:114 +0x68\\npanic({0x7ff60d972980?, 0x7ff60d6cf700?})\\n\\tC:/Users/runneradmin/.mvnGoLang/go1.27.0.windows-amd64/src/runtime/panic.go:859 +0x125\\ngithub.com/apache/plc4x/plc4go/spi/pool.Test_worker_work.func1.func2.1({0x11eae2682000?, 0x7ff60d6b1d9f?})\\n\\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker_test.go:249 +0x25\\ngithub.com/apache/plc4x/plc4go/spi/pool.(*worker).work(0x11eae26c0780)\\n\\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker.go:141 +0x7e4\\ncreated by github.com/apache/plc4x/plc4go/spi/pool.Test_worker_work.func15 in goroutine 292\\n\\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker_test.go:378 +0x20e\\n\"\n--- FAIL: Test_worker_work (0.85s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "golang-test-report-first-failure-windows-latest/plc4go/target/surefire-reports/go-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "Test_worker_work/Worker_should_work_till_shutdown_(even_if_it_panics)",
+      "suitePath": [
+        "github.com/apache/plc4x/plc4go/spi/pool"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 250,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   Test_worker_work/Worker_should_work_till_shutdown_(even_if_it_panics)\n    buffer.go:279: ���������������worker.go:130: <nil> TRC Working\n    buffer.go:279: ���������������worker.go:135: <nil> DBG Got work item workItem={}\n    buffer.go:279: ���������������worker.go:140: <nil> DBG Running work item workItem={}\n    worker_test.go:381: firstValidation after 50ms\n    worker_test.go:259: \n        \tError Trace:\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker_test.go:259\n        \t            \t\t\t\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker_test.go:382\n        \tError:      \tShould be true\n        \tTest:       \tTest_worker_work/Worker_should_work_till_shutdown_(even_if_it_panics)\n        \tMessages:   \tshould be running\n    worker_test.go:386: manipulator after 0s\n    worker_test.go:391: secondValidation after 150ms\n--- FAIL: Test_worker_work/Worker_should_work_till_shutdown_(even_if_it_panics) (0.25s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "golang-test-report-first-failure-windows-latest/plc4go/target/surefire-reports/go-junit-report.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "Test_worker_work",
+      "suitePath": [
+        "github.com/apache/plc4x/plc4go/spi/pool"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 850,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   Test_worker_work\n    writer.go:174: ���������������worker.go:116: <nil> ERR panic-ed err=\"Oh no what should I do???\" stack=\"goroutine 293 [running]:\\nruntime/debug.Stack()\\n\\tC:/Users/runneradmin/.mvnGoLang/go1.27.0.windows-amd64/src/runtime/debug/stack.go:26 +0x5e\\ngithub.com/apache/plc4x/plc4go/spi/pool.(*worker).work.func1()\\n\\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker.go:114 +0x68\\npanic({0x7ff60d972980?, 0x7ff60d6cf700?})\\n\\tC:/Users/runneradmin/.mvnGoLang/go1.27.0.windows-amd64/src/runtime/panic.go:859 +0x125\\ngithub.com/apache/plc4x/plc4go/spi/pool.Test_worker_work.func1.func2.1({0x11eae2682000?, 0x7ff60d6b1d9f?})\\n\\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker_test.go:249 +0x25\\ngithub.com/apache/plc4x/plc4go/spi/pool.(*worker).work(0x11eae26c0780)\\n\\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker.go:141 +0x7e4\\ncreated by github.com/apache/plc4x/plc4go/spi/pool.Test_worker_work.func15 in goroutine 292\\n\\tD:/a/plc4x/plc4x/plc4go/spi/pool/worker_test.go:378 +0x20e\\n\"\n--- FAIL: Test_worker_work (0.85s)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}
