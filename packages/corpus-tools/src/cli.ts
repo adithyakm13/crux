@@ -385,9 +385,19 @@ async function main(): Promise<number> {
     // harvest, and a stale one is the failure mode that puts copyleft content
     // into git history without anyone deciding to.
     const runs = await loadRuns(corpusDir);
+    const { stat } = await import('node:fs/promises');
     const entries: HoldOutEntry[] = [];
     for (const run of runs) {
-      const reason = holdOutReason(run);
+      // Size is read here rather than carried on the record: it is a property
+      // of the file on this disk, and `corpus compact` can change it.
+      let bytes: number | undefined;
+      try {
+        bytes = (await stat(join(corpusDir, 'runs', corpusRunDir(run.corpusRunId), 'run.json')))
+          .size;
+      } catch {
+        bytes = undefined;
+      }
+      const reason = holdOutReason(run, bytes);
       if (reason === null) continue;
       entries.push({
         dir: corpusRunDir(run.corpusRunId),

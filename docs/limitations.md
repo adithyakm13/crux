@@ -406,6 +406,21 @@ because it changes what every number in that table is a number about. A gate
 that only the harvesting machine can reproduce is not a gate; it is a claim
 about one filesystem.
 
+A third category joins them: a run file too large to redistribute. GitHub hard-
+rejects a file over 100 MB, and one quarkus run reached **147 MB** — 1549
+failures whose stack, stdout and stderr averaged about a megabyte each. It is
+held out at a 50 MB threshold, with margin, since a repository carrying tens of
+megabytes of JSON per run is unpleasant to clone long before git refuses it.
+
+That hold-out is a redistribution limit and nothing more. The separate problem
+with that run — 1549 failures contribute 1.2 million pairs, which swamps every
+other run in the clustering metric — is **not** solved by keeping it out of
+git, because the run is still on disk and still counted locally. Suite collapse
+is handled where it belongs: `--max-failures` when sampling for labelling, and
+the per-run F1 table that makes one run's dominance visible. Conflating the two
+would be tempting and wrong, because it would imply the other eight runs over
+200 failures are safe merely by being smaller files.
+
 `corpus holdout` lists the affected runs and `--write` regenerates the block in
 `.gitignore`. It is regenerated rather than maintained, because the list
 changes with every harvest and a stale one is how copyleft content reaches git

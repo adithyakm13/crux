@@ -23,10 +23,39 @@ import type { CorpusRun } from './schema.ts';
 /** SPDX identifiers whose reciprocal terms put redistribution in question. */
 const COPYLEFT = /^(?:A?GPL|LGPL|GPL|EUPL|OSL|CECILL|SSPL|CPAL)(?:-|$)/i;
 
-export type HoldOutReason = { kind: 'unidentified' | 'copyleft'; detail: string };
+export type HoldOutReason = {
+  kind: 'unidentified' | 'copyleft' | 'oversized';
+  detail: string;
+};
 
-/** Null when the run may be committed. */
-export function holdOutReason(run: CorpusRun): HoldOutReason | null {
+/**
+ * GitHub hard-rejects a file over 100 MB and warns over 50 MB. The margin is
+ * deliberate: a run file is rewritten by `corpus compact` and re-read by every
+ * tool here, and a repository carrying tens of megabytes of JSON per run is
+ * unpleasant to clone long before git refuses it.
+ *
+ * This is a redistribution limit, NOT a judgement about the run's value. The
+ * separate problem — that a 1549-failure run contributes 1.2 million pairs and
+ * swamps every other run in the clustering metric — is not solved by excluding
+ * it from git, because the run is still on disk and still counted locally.
+ * That one is handled where it belongs, by `--max-failures` when sampling for
+ * labelling, and by the per-run F1 table that makes one run's dominance
+ * visible.
+ */
+export const MAX_COMMITTABLE_RUN_BYTES = 50 * 1024 * 1024;
+
+/** Null when the run may be committed. `bytes` is the run.json size on disk. */
+export function holdOutReason(
+  run: CorpusRun,
+  bytes?: number,
+  maxBytes: number = MAX_COMMITTABLE_RUN_BYTES,
+): HoldOutReason | null {
+  if (bytes !== undefined && bytes > maxBytes) {
+    return {
+      kind: 'oversized',
+      detail: `${(bytes / 1048576).toFixed(1)} MB run.json, over the ${(maxBytes / 1048576).toFixed(0)} MB limit`,
+    };
+  }
   const spdx = run.source.licenseSpdx;
   if (spdx === null || spdx === 'NOASSERTION') {
     return { kind: 'unidentified', detail: run.source.licenseRaw ?? 'none' };
@@ -37,8 +66,8 @@ export function holdOutReason(run: CorpusRun): HoldOutReason | null {
   return null;
 }
 
-export function isHeldOut(run: CorpusRun): boolean {
-  return holdOutReason(run) !== null;
+export function isHeldOut(run: CorpusRun, bytes?: number): boolean {
+  return holdOutReason(run, bytes) !== null;
 }
 
 export interface HoldOutEntry {
@@ -90,8 +119,11 @@ export function formatHoldOut(entries: readonly HoldOutEntry[], totalRuns: numbe
     row.failures += e.failures;
     byRepo.set(e.repo, row);
   }
+  const byKind = new Map<string, number>();
+  for (const e of entries) byKind.set(e.reason.kind, (byKind.get(e.reason.kind) ?? 0) + 1);
   const lines = [
-    `held out: ${entries.length} run(s) across ${byRepo.size} repositories`,
+    `held out: ${entries.length} run(s) across ${byRepo.size} repositories ` +
+      `(${[...byKind].map(([k, n]) => `${n} ${k}`).join(', ')})`,
     `committable: ${totalRuns - entries.length} of ${totalRuns} run(s)`,
     '',
     'runs  fails  licence          repository',

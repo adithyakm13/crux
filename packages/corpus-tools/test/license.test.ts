@@ -71,3 +71,28 @@ test('rendering appends a block when the file has none', () => {
   const twice = renderGitignore(after, ['corpus/runs/a']);
   assert.equal(twice.split(HOLDOUT_BEGIN).length - 1, 1);
 });
+
+test('a run file too large to redistribute is held out, whatever its licence', () => {
+  // GitHub hard-rejects over 100 MB. One quarkus run carrying 1549 failures
+  // reached 147 MB and was the reason the first push of this corpus failed.
+  const mit = runWith('MIT');
+  assert.equal(holdOutReason(mit, 1_000_000), null, 'a small MIT run is committable');
+  const r = holdOutReason(mit, 147 * 1024 * 1024);
+  assert.equal(r?.kind, 'oversized');
+  assert.match(r?.detail ?? '', /147\.0 MB/);
+});
+
+test('size is checked before licence, so the reason names the binding constraint', () => {
+  // A run that is both copyleft and oversized is excluded either way, but the
+  // reported reason should be the one that would still exclude it if the
+  // other were fixed — and relicensing is not something we can do.
+  const r = holdOutReason(runWith('GPL-3.0'), 200 * 1024 * 1024);
+  assert.equal(r?.kind, 'oversized');
+});
+
+test('size is only consulted when it is known', () => {
+  // loadRuns can hand over a record whose file is gone; an unknown size must
+  // not be read as zero and must not be read as enormous.
+  assert.equal(holdOutReason(runWith('MIT')), null);
+  assert.equal(holdOutReason(runWith('MIT'), undefined), null);
+});
