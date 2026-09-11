@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:humanspeak/svelte-virtual-list:33883338661:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "humanspeak/svelte-virtual-list",
+    "providerRunId": "33883338661",
+    "runAttempt": 1,
+    "url": "https://github.com/humanspeak/svelte-virtual-list/actions/runs/33883338661",
+    "workflowName": "Publish to NPM",
+    "event": "push",
+    "headSha": "aab5deb30819862d64d3244c7c6673a159d68683",
+    "headBranch": "main",
+    "artifactIds": [
+      "9941101256"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T08:32:45.901Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 470,
+    "failures": 1,
+    "passed": 464,
+    "skipped": 5,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 376
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "playwright-results/junit-playwright.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "Issue 427 - static LTR horizontal virtualization › native deep scrolling moves the rendered horizontal window",
+      "suitePath": [
+        "issues/issue-427.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1461,
+      "errorType": "expect.toBeGreaterThan",
+      "message": "expect(received).toBeGreaterThan(expected)",
+      "stackText": "\n  [webkit] › issues/issue-427.spec.ts:108:5 › Issue 427 - static LTR horizontal virtualization › native deep scrolling moves the rendered horizontal window \n\n    Error: expect(received).toBeGreaterThan(expected)\n\n    Expected: > 4000\n    Received:   0\n\n      109 |         await page.getByTestId('deep-scroll').click()\n      110 |         await expect(page.getByTestId('diag-scroll-left')).not.toHaveText('0')\n    > 111 |         expect(await number(page, 'diag-first-index')).toBeGreaterThan(4000)\n          |                                                        ^\n      112 |         expect(await number(page, 'diag-rendered-count')).toBeLessThan(100)\n      113 |         expect(await number(page, 'diag-transform-x')).toBeGreaterThan(400_000)\n      114 |     })\n        at /home/runner/work/svelte-virtual-list/svelte-virtual-list/tests/issues/issue-427.spec.ts:111:56\n\n    Error Context: ../test-results/issues-issue-427-Issue-427-0a170--rendered-horizontal-window-webkit/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    Error: expect(received).toBeGreaterThan(expected)\n\n    Expected: > 4000\n    Received:   0\n\n      109 |         await page.getByTestId('deep-scroll').click()\n      110 |         await expect(page.getByTestId('diag-scroll-left')).not.toHaveText('0')\n    > 111 |         expect(await number(page, 'diag-first-index')).toBeGreaterThan(4000)\n          |                                                        ^\n      112 |         expect(await number(page, 'diag-rendered-count')).toBeLessThan(100)\n      113 |         expect(await number(page, 'diag-transform-x')).toBeGreaterThan(400_000)\n      114 |     })\n        at /home/runner/work/svelte-virtual-list/svelte-virtual-list/tests/issues/issue-427.spec.ts:111:56\n\n    Error Context: ../test-results/issues-issue-427-Issue-427-0a170--rendered-horizontal-window-webkit-retry1/error-context.md\n\n    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────\n    ../test-results/issues-issue-427-Issue-427-0a170--rendered-horizontal-window-webkit-retry1/trace.zip\n    Usage:\n\n        pnpm exec playwright show-trace ../test-results/issues-issue-427-Issue-427-0a170--rendered-horizontal-window-webkit-retry1/trace.zip\n\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────\n\n    Error: expect(received).toBeGreaterThan(expected)\n\n    Expected: > 4000\n    Received:   0\n\n      109 |         await page.getByTestId('deep-scroll').click()\n      110 |         await expect(page.getByTestId('diag-scroll-left')).not.toHaveText('0')\n    > 111 |         expect(await number(page, 'diag-first-index')).toBeGreaterThan(4000)\n          |                                                        ^\n      112 |         expect(await number(page, 'diag-rendered-count')).toBeLessThan(100)\n      113 |         expect(await number(page, 'diag-transform-x')).toBeGreaterThan(400_000)\n      114 |     })\n        at /home/runner/work/svelte-virtual-list/svelte-virtual-list/tests/issues/issue-427.spec.ts:111:56\n\n    Error Context: ../test-results/issues-issue-427-Issue-427-0a170--rendered-horizontal-window-webkit-retry2/error-context.md\n\n",
+      "stdout": "\n\n[[ATTACHMENT|issues-issue-427-Issue-427-0a170--rendered-horizontal-window-webkit/error-context.md]]\n\n[[ATTACHMENT|issues-issue-427-Issue-427-0a170--rendered-horizontal-window-webkit-retry1/error-context.md]]\n\n[[ATTACHMENT|issues-issue-427-Issue-427-0a170--rendered-horizontal-window-webkit-retry1/trace.zip]]\n\n[[ATTACHMENT|issues-issue-427-Issue-427-0a170--rendered-horizontal-window-webkit-retry2/error-context.md]]\n\n",
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:bilby-dev/bilby:30295270163:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "bilby-dev/bilby",
+    "providerRunId": "30295270163",
+    "runAttempt": 1,
+    "url": "https://github.com/bilby-dev/bilby/actions/runs/30295270163",
+    "workflowName": "Unit testing",
+    "event": "pull_request",
+    "headSha": "3ccbe6ff6852382bf2644c731c0ab35be050eb6f",
+    "headBranch": "combined-priors",
+    "artifactIds": [
+      "8665184123",
+      "8665201290",
+      "8665241462",
+      "8664806637",
+      "8664778357",
+      "8664957160"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T08:17:14.151Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 8284,
+    "failures": 11,
+    "passed": 5497,
+    "skipped": 2776,
+    "filesParsed": 6,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "pytest-311/pytest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test_non_analytic_form_has_correct_statistics",
+      "suitePath": [
+        "pytest",
+        "test.gw.prior_test.TestAlignedSpin"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 46383,
+      "errorType": null,
+      "message": "AssertionError: np.float64(0.0441136875670958) != np.float64(0.031138132141098136) within 2 places (np.float64(0.012975555425997664) difference)",
+      "stackText": "self = <test.gw.prior_test.TestAlignedSpin testMethod=test_non_analytic_form_has_correct_statistics>\n\n    def test_non_analytic_form_has_correct_statistics(self):\n        a_prior = bilby.core.prior.TruncatedGaussian(mu=0, sigma=0.1, minimum=0, maximum=1)\n        z_prior = bilby.core.prior.TruncatedGaussian(mu=0.4, sigma=0.2, minimum=-1, maximum=1)\n        chi_prior = bilby.gw.prior.AlignedSpin(a_prior, z_prior)\n        chis = chi_prior.sample(100000, random_state=self.rng)\n        alts = a_prior.sample(100000, random_state=self.rng) * z_prior.sample(100000, random_state=self.rng)\n        self.assertAlmostEqual(np.mean(chis), np.mean(alts), 2)\n>       self.assertAlmostEqual(np.std(chis), np.std(alts), 2)\nE       AssertionError: np.float64(0.0441136875670958) != np.float64(0.031138132141098136) within 2 places (np.float64(0.012975555425997664) difference)\n\ntest/gw/prior_test.py:588: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "pytest-313/pytest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test_non_analytic_form_has_correct_statistics",
+      "suitePath": [
+        "pytest",
+        "test.gw.prior_test.TestAlignedSpin"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 46938,
+      "errorType": null,
+      "message": "AssertionError: np.float64(0.0441136875670958) != np.float64(0.031138132141098136) within 2 places (np.float64(0.012975555425997664) difference)",
+      "stackText": "self = <test.gw.prior_test.TestAlignedSpin testMethod=test_non_analytic_form_has_correct_statistics>\n\n    def test_non_analytic_form_has_correct_statistics(self):\n        a_prior = bilby.core.prior.TruncatedGaussian(mu=0, sigma=0.1, minimum=0, maximum=1)\n        z_prior = bilby.core.prior.TruncatedGaussian(mu=0.4, sigma=0.2, minimum=-1, maximum=1)\n        chi_prior = bilby.gw.prior.AlignedSpin(a_prior, z_prior)\n        chis = chi_prior.sample(100000, random_state=self.rng)\n        alts = a_prior.sample(100000, random_state=self.rng) * z_prior.sample(100000, random_state=self.rng)\n        self.assertAlmostEqual(np.mean(chis), np.mean(alts), 2)\n>       self.assertAlmostEqual(np.std(chis), np.std(alts), 2)\nE       AssertionError: np.float64(0.0441136875670958) != np.float64(0.031138132141098136) within 2 places (np.float64(0.012975555425997664) difference)\n\ntest/gw/prior_test.py:588: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "pytest-312/pytest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test_non_analytic_form_has_correct_statistics",
+      "suitePath": [
+        "pytest",
+        "test.gw.prior_test.TestAlignedSpin"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 45074,
+      "errorType": null,
+      "message": "AssertionError: np.float64(0.0441136875670958) != np.float64(0.031138132141098136) within 2 places (np.float64(0.012975555425997664) difference)",
+      "stackText": "self = <test.gw.prior_test.TestAlignedSpin testMethod=test_non_analytic_form_has_correct_statistics>\n\n    def test_non_analytic_form_has_correct_statistics(self):\n        a_prior = bilby.core.prior.TruncatedGaussian(mu=0, sigma=0.1, minimum=0, maximum=1)\n        z_prior = bilby.core.prior.TruncatedGaussian(mu=0.4, sigma=0.2, minimum=-1, maximum=1)\n        chi_prior = bilby.gw.prior.AlignedSpin(a_prior, z_prior)\n        chis = chi_prior.sample(100000, random_state=self.rng)\n        alts = a_prior.sample(100000, random_state=self.rng) * z_prior.sample(100000, random_state=self.rng)\n        self.assertAlmostEqual(np.mean(chis), np.mean(alts), 2)\n>       self.assertAlmostEqual(np.std(chis), np.std(alts), 2)\nE       AssertionError: np.float64(0.0441136875670958) != np.float64(0.031138132141098136) within 2 places (np.float64(0.012975555425997664) difference)\n\ntest/gw/prior_test.py:588: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "pytest-array-313-numpy/pytest-array.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "test_non_analytic_form_has_correct_statistics",
+      "suitePath": [
+        "pytest",
+        "test.gw.prior_test.TestAlignedSpin"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 26198,
+      "errorType": null,
+      "message": "AssertionError: np.float64(0.0441136875670958) != np.float64(0.031138132141098136) within 2 places (np.float64(0.012975555425997664) difference)",
+      "stackText": "self = <test.gw.prior_test.TestAlignedSpin testMethod=test_non_analytic_form_has_correct_statistics>\n\n    def test_non_analytic_form_has_correct_statistics(self):\n        a_prior = bilby.core.prior.TruncatedGaussian(mu=0, sigma=0.1, minimum=0, maximum=1)\n        z_prior = bilby.core.prior.TruncatedGaussian(mu=0.4, sigma=0.2, minimum=-1, maximum=1)\n        chi_prior = bilby.gw.prior.AlignedSpin(a_prior, z_prior)\n        chis = chi_prior.sample(100000, random_state=self.rng)\n        alts = a_prior.sample(100000, random_state=self.rng) * z_prior.sample(100000, random_state=self.rng)\n        self.assertAlmostEqual(np.mean(chis), np.mean(alts), 2)\n>       self.assertAlmostEqual(np.std(chis), np.std(alts), 2)\nE       AssertionError: np.float64(0.0441136875670958) != np.float64(0.031138132141098136) within 2 places (np.float64(0.012975555425997664) difference)\n\ntest/gw/prior_test.py:588: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "pytest-array-313-jax/pytest-array.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "test_accuracy",
+      "suitePath": [
+        "pytest",
+        "test.core.prior.prior_test.TestPriorClasses"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": null,
+      "message": "AssertionError: \nArrays are not almost equal to 7 decimals\n\nMismatched elements: 876 / 1000 (87.6%)\nFirst 5 mismatches are at indices:\n [0]: 0.003208686230157687 (ACTUAL), 0.003182992764908255 (DESIRED)\n [1]: 0.0032151745379626617 (ACTUAL), 0.0031893774789402414 (DESIRED)\n [2]: 0.5 (ACTUAL), 0.0031957878575823617 (DESIRED)\n [3]: 0.5 (ACTUAL), 0.0032022240558869266 (DESIRED)\n [6]: 0.5 (ACTUAL), 0.0032216891381465513 (DESIRED)\nMax absolute difference among violations: 0.49681701\nMax relative difference among violations: 155.4559421\n ACTUAL: array([0.0032087, 0.0032152, 0.5      , ..., 0.8185897,\n       0.5      , 0.5      ], shape=(1000,))\n DESIRED: array([0.003183 , 0.0031894, 0.0031958, ..., 0.9968042,\n       0.9968106, 0.996817 ], shape=(1000,))",
+      "stackText": "self = <test.core.prior.prior_test.TestPriorClasses testMethod=test_accuracy>\n\n    def test_accuracy(self):\n        \"\"\"Test that each of the priors' functions is calculated accurately, as compared to scipy's calculations\"\"\"\n        for prior in self.priors:\n            rescale_domain = np.linspace(0, 1, 1000)\n            if isinstance(prior, bilby.core.prior.Uniform):\n                domain = np.linspace(-5, 5, 100)\n                scipy_prob = ss.uniform.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.uniform.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.uniform.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.uniform.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.Gaussian):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.norm.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.norm.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.norm.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.norm.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.Cauchy):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.cauchy.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.cauchy.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.cauchy.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.cauchy.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.StudentT):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.t.pdf(domain, 3, loc=0, scale=1)\n                scipy_lnprob = ss.t.logpdf(domain, 3, loc=0, scale=1)\n                scipy_cdf = ss.t.cdf(domain, 3, loc=0, scale=1)\n                scipy_rescale = ss.t.ppf(rescale_domain, 3, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.Gamma) and not isinstance(\n                prior, bilby.core.prior.ChiSquared\n            ):\n                domain = np.linspace(0.0, 1e2, 5000)\n                scipy_prob = ss.gamma.pdf(domain, 1, loc=0, scale=1)\n                scipy_lnprob = ss.gamma.logpdf(domain, 1, loc=0, scale=1)\n                scipy_cdf = ss.gamma.cdf(domain, 1, loc=0, scale=1)\n                scipy_rescale = ss.gamma.ppf(rescale_domain, 1, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.LogNormal):\n                domain = np.linspace(0.0, 1e2, 1000)\n                scipy_prob = ss.lognorm.pdf(domain, 1, scale=1)\n                scipy_lnprob = ss.lognorm.logpdf(domain, 1, scale=1)\n                scipy_cdf = ss.lognorm.cdf(domain, 1, scale=1)\n                scipy_rescale = ss.lognorm.ppf(rescale_domain, 1, scale=1)\n            elif isinstance(prior, bilby.core.prior.Exponential):\n                domain = np.linspace(0.0, 1e2, 5000)\n                scipy_prob = ss.expon.pdf(domain, scale=1)\n                scipy_lnprob = ss.expon.logpdf(domain, scale=1)\n                scipy_cdf = ss.expon.cdf(domain, scale=1)\n                scipy_rescale = ss.expon.ppf(rescale_domain, scale=1)\n            elif isinstance(prior, bilby.core.prior.Logistic):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.logistic.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.logistic.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.logistic.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.logistic.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.ChiSquared):\n                domain = np.linspace(0.0, 1e2, 5000)\n                scipy_prob = ss.gamma.pdf(domain, 1, loc=0, scale=2)\n                scipy_lnprob = ss.gamma.logpdf(domain, 1, loc=0, scale=2)\n                scipy_cdf = ss.gamma.cdf(domain, 1, loc=0, scale=2)\n                scipy_rescale = ss.gamma.ppf(rescale_domain, 1, loc=0, scale=2)\n            elif isinstance(prior, bilby.core.prior.Beta):\n                domain = np.linspace(-5, 5, 5000)\n                scipy_prob = ss.beta.pdf(domain, 2, 2, loc=0, scale=1)\n                scipy_lnprob = ss.beta.logpdf(domain, 2, 2, loc=0, scale=1)\n                scipy_cdf = ss.beta.cdf(domain, 2, 2, loc=0, scale=1)\n                scipy_rescale = ss.beta.ppf(rescale_domain, 2, 2, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.WeightedDiscreteValues):\n                domain = prior.values\n                rescale_domain = prior.weights\n                scipy_dist = ss.rv_discrete(\n                    a=np.min(domain),\n                    b=np.max(domain),\n                    values=(domain, rescale_domain),\n                )\n                scipy_prob = scipy_dist.pmf(domain)\n                scipy_lnprob = scipy_dist.logpmf(domain)\n                scipy_cdf = scipy_dist.cdf(domain)\n                scipy_rescale = scipy_dist.ppf(rescale_domain)\n            else:\n                continue\n            testTuple = (\n                bilby.core.prior.Uniform,\n                bilby.core.prior.Gaussian,\n                bilby.core.prior.Cauchy,\n                bilby.core.prior.StudentT,\n                bilby.core.prior.Exponential,\n                bilby.core.prior.Logistic,\n                bilby.core.prior.LogNormal,\n                bilby.core.prior.Gamma,\n                bilby.core.prior.Beta,\n                bilby.core.prior.WeightedDiscreteValues,\n            )\n            if isinstance(prior, (testTuple)):\n                with self.subTest(prior=prior):\n                    np.testing.assert_almost_equal(prior.prob(self.xp.asarray(domain)), scipy_prob)\n                    np.testing.assert_almost_equal(prior.ln_prob(self.xp.asarray(domain)), scipy_lnprob)\n>                   np.testing.assert_almost_equal(prior.cdf(self.xp.asarray(domain)), scipy_cdf)\nE                   AssertionError: \nE                   Arrays are not almost equal to 7 decimals\nE                   \nE                   Mismatched elements: 876 / 1000 (87.6%)\nE                   First 5 mismatches are at indices:\nE                    [0]: 0.003208686230157687 (ACTUAL), 0.003182992764908255 (DESIRED)\nE                    [1]: 0.0032151745379626617 (ACTUAL), 0.0031893774789402414 (DESIRED)\nE                    [2]: 0.5 (ACTUAL), 0.0031957878575823617 (DESIRED)\nE                    [3]: 0.5 (ACTUAL), 0.0032022240558869266 (DESIRED)\nE                    [6]: 0.5 (ACTUAL), 0.0032216891381465513 (DESIRED)\nE                   Max absolute difference among violations: 0.49681701\nE                   Max relative difference among violations: 155.4559421\nE                    ACTUAL: array([0.0032087, 0.0032152, 0.5      , ..., 0.8185897,\nE                          0.5      , 0.5      ], shape=(1000,))\nE                    DESIRED: array([0.003183 , 0.0031894, 0.0031958, ..., 0.9968042,\nE                          0.9968106, 0.996817 ], shape=(1000,))\n\ntest/core/prior/prior_test.py:842: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "pytest-array-313-jax/pytest-array.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 1,
+      "displayName": "test_accuracy",
+      "suitePath": [
+        "pytest",
+        "test.core.prior.prior_test.TestPriorClasses"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": null,
+      "message": "AssertionError: \nArrays are not almost equal to 7 decimals\n\nMismatched elements: 876 / 1000 (87.6%)\nFirst 5 mismatches are at indices:\n [0]: 0.003208686230157687 (ACTUAL), 0.003182992764908255 (DESIRED)\n [1]: 0.0032151745379626617 (ACTUAL), 0.0031893774789402414 (DESIRED)\n [2]: 0.5 (ACTUAL), 0.0031957878575823617 (DESIRED)\n [3]: 0.5 (ACTUAL), 0.0032022240558869266 (DESIRED)\n [6]: 0.5 (ACTUAL), 0.0032216891381465513 (DESIRED)\nMax absolute difference among violations: 0.49681701\nMax relative difference among violations: 155.4559421\n ACTUAL: array([0.0032087, 0.0032152, 0.5      , ..., 0.8185897,\n       0.5      , 0.5      ], shape=(1000,))\n DESIRED: array([0.003183 , 0.0031894, 0.0031958, ..., 0.9968042,\n       0.9968106, 0.996817 ], shape=(1000,))",
+      "stackText": "self = <test.core.prior.prior_test.TestPriorClasses testMethod=test_accuracy>\n\n    def test_accuracy(self):\n        \"\"\"Test that each of the priors' functions is calculated accurately, as compared to scipy's calculations\"\"\"\n        for prior in self.priors:\n            rescale_domain = np.linspace(0, 1, 1000)\n            if isinstance(prior, bilby.core.prior.Uniform):\n                domain = np.linspace(-5, 5, 100)\n                scipy_prob = ss.uniform.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.uniform.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.uniform.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.uniform.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.Gaussian):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.norm.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.norm.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.norm.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.norm.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.Cauchy):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.cauchy.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.cauchy.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.cauchy.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.cauchy.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.StudentT):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.t.pdf(domain, 3, loc=0, scale=1)\n                scipy_lnprob = ss.t.logpdf(domain, 3, loc=0, scale=1)\n                scipy_cdf = ss.t.cdf(domain, 3, loc=0, scale=1)\n                scipy_rescale = ss.t.ppf(rescale_domain, 3, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.Gamma) and not isinstance(\n                prior, bilby.core.prior.ChiSquared\n            ):\n                domain = np.linspace(0.0, 1e2, 5000)\n                scipy_prob = ss.gamma.pdf(domain, 1, loc=0, scale=1)\n                scipy_lnprob = ss.gamma.logpdf(domain, 1, loc=0, scale=1)\n                scipy_cdf = ss.gamma.cdf(domain, 1, loc=0, scale=1)\n                scipy_rescale = ss.gamma.ppf(rescale_domain, 1, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.LogNormal):\n                domain = np.linspace(0.0, 1e2, 1000)\n                scipy_prob = ss.lognorm.pdf(domain, 1, scale=1)\n                scipy_lnprob = ss.lognorm.logpdf(domain, 1, scale=1)\n                scipy_cdf = ss.lognorm.cdf(domain, 1, scale=1)\n                scipy_rescale = ss.lognorm.ppf(rescale_domain, 1, scale=1)\n            elif isinstance(prior, bilby.core.prior.Exponential):\n                domain = np.linspace(0.0, 1e2, 5000)\n                scipy_prob = ss.expon.pdf(domain, scale=1)\n                scipy_lnprob = ss.expon.logpdf(domain, scale=1)\n                scipy_cdf = ss.expon.cdf(domain, scale=1)\n                scipy_rescale = ss.expon.ppf(rescale_domain, scale=1)\n            elif isinstance(prior, bilby.core.prior.Logistic):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.logistic.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.logistic.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.logistic.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.logistic.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.ChiSquared):\n                domain = np.linspace(0.0, 1e2, 5000)\n                scipy_prob = ss.gamma.pdf(domain, 1, loc=0, scale=2)\n                scipy_lnprob = ss.gamma.logpdf(domain, 1, loc=0, scale=2)\n                scipy_cdf = ss.gamma.cdf(domain, 1, loc=0, scale=2)\n                scipy_rescale = ss.gamma.ppf(rescale_domain, 1, loc=0, scale=2)\n            elif isinstance(prior, bilby.core.prior.Beta):\n                domain = np.linspace(-5, 5, 5000)\n                scipy_prob = ss.beta.pdf(domain, 2, 2, loc=0, scale=1)\n                scipy_lnprob = ss.beta.logpdf(domain, 2, 2, loc=0, scale=1)\n                scipy_cdf = ss.beta.cdf(domain, 2, 2, loc=0, scale=1)\n                scipy_rescale = ss.beta.ppf(rescale_domain, 2, 2, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.WeightedDiscreteValues):\n                domain = prior.values\n                rescale_domain = prior.weights\n                scipy_dist = ss.rv_discrete(\n                    a=np.min(domain),\n                    b=np.max(domain),\n                    values=(domain, rescale_domain),\n                )\n                scipy_prob = scipy_dist.pmf(domain)\n                scipy_lnprob = scipy_dist.logpmf(domain)\n                scipy_cdf = scipy_dist.cdf(domain)\n                scipy_rescale = scipy_dist.ppf(rescale_domain)\n            else:\n                continue\n            testTuple = (\n                bilby.core.prior.Uniform,\n                bilby.core.prior.Gaussian,\n                bilby.core.prior.Cauchy,\n                bilby.core.prior.StudentT,\n                bilby.core.prior.Exponential,\n                bilby.core.prior.Logistic,\n                bilby.core.prior.LogNormal,\n                bilby.core.prior.Gamma,\n                bilby.core.prior.Beta,\n                bilby.core.prior.WeightedDiscreteValues,\n            )\n            if isinstance(prior, (testTuple)):\n                with self.subTest(prior=prior):\n                    np.testing.assert_almost_equal(prior.prob(self.xp.asarray(domain)), scipy_prob)\n                    np.testing.assert_almost_equal(prior.ln_prob(self.xp.asarray(domain)), scipy_lnprob)\n>                   np.testing.assert_almost_equal(prior.cdf(self.xp.asarray(domain)), scipy_cdf)\nE                   AssertionError: \nE                   Arrays are not almost equal to 7 decimals\nE                   \nE                   Mismatched elements: 876 / 1000 (87.6%)\nE                   First 5 mismatches are at indices:\nE                    [0]: 0.003208686230157687 (ACTUAL), 0.003182992764908255 (DESIRED)\nE                    [1]: 0.0032151745379626617 (ACTUAL), 0.0031893774789402414 (DESIRED)\nE                    [2]: 0.5 (ACTUAL), 0.0031957878575823617 (DESIRED)\nE                    [3]: 0.5 (ACTUAL), 0.0032022240558869266 (DESIRED)\nE                    [6]: 0.5 (ACTUAL), 0.0032216891381465513 (DESIRED)\nE                   Max absolute difference among violations: 0.49681701\nE                   Max relative difference among violations: 155.4559421\nE                    ACTUAL: array([0.0032087, 0.0032152, 0.5      , ..., 0.8185897,\nE                          0.5      , 0.5      ], shape=(1000,))\nE                    DESIRED: array([0.003183 , 0.0031894, 0.0031958, ..., 0.9968042,\nE                          0.9968106, 0.996817 ], shape=(1000,))\n\ntest/core/prior/prior_test.py:842: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "pytest-array-313-jax/pytest-array.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 2,
+      "displayName": "test_accuracy",
+      "suitePath": [
+        "pytest",
+        "test.core.prior.prior_test.TestPriorClasses"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 4823,
+      "errorType": null,
+      "message": "AssertionError: \nArrays are not almost equal to 7 decimals\n\nMismatched elements: 876 / 1000 (87.6%)\nFirst 5 mismatches are at indices:\n [0]: 0.003208686230157687 (ACTUAL), 0.003182992764908255 (DESIRED)\n [1]: 0.0032151745379626617 (ACTUAL), 0.0031893774789402414 (DESIRED)\n [2]: 0.5 (ACTUAL), 0.0031957878575823617 (DESIRED)\n [3]: 0.5 (ACTUAL), 0.0032022240558869266 (DESIRED)\n [6]: 0.5 (ACTUAL), 0.0032216891381465513 (DESIRED)\nMax absolute difference among violations: 0.49681701\nMax relative difference among violations: 155.4559421\n ACTUAL: array([0.0032087, 0.0032152, 0.5      , ..., 0.8185897,\n       0.5      , 0.5      ], shape=(1000,))\n DESIRED: array([0.003183 , 0.0031894, 0.0031958, ..., 0.9968042,\n       0.9968106, 0.996817 ], shape=(1000,))",
+      "stackText": "self = <test.core.prior.prior_test.TestPriorClasses testMethod=test_accuracy>\n\n    def test_accuracy(self):\n        \"\"\"Test that each of the priors' functions is calculated accurately, as compared to scipy's calculations\"\"\"\n        for prior in self.priors:\n            rescale_domain = np.linspace(0, 1, 1000)\n            if isinstance(prior, bilby.core.prior.Uniform):\n                domain = np.linspace(-5, 5, 100)\n                scipy_prob = ss.uniform.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.uniform.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.uniform.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.uniform.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.Gaussian):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.norm.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.norm.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.norm.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.norm.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.Cauchy):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.cauchy.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.cauchy.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.cauchy.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.cauchy.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.StudentT):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.t.pdf(domain, 3, loc=0, scale=1)\n                scipy_lnprob = ss.t.logpdf(domain, 3, loc=0, scale=1)\n                scipy_cdf = ss.t.cdf(domain, 3, loc=0, scale=1)\n                scipy_rescale = ss.t.ppf(rescale_domain, 3, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.Gamma) and not isinstance(\n                prior, bilby.core.prior.ChiSquared\n            ):\n                domain = np.linspace(0.0, 1e2, 5000)\n                scipy_prob = ss.gamma.pdf(domain, 1, loc=0, scale=1)\n                scipy_lnprob = ss.gamma.logpdf(domain, 1, loc=0, scale=1)\n                scipy_cdf = ss.gamma.cdf(domain, 1, loc=0, scale=1)\n                scipy_rescale = ss.gamma.ppf(rescale_domain, 1, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.LogNormal):\n                domain = np.linspace(0.0, 1e2, 1000)\n                scipy_prob = ss.lognorm.pdf(domain, 1, scale=1)\n                scipy_lnprob = ss.lognorm.logpdf(domain, 1, scale=1)\n                scipy_cdf = ss.lognorm.cdf(domain, 1, scale=1)\n                scipy_rescale = ss.lognorm.ppf(rescale_domain, 1, scale=1)\n            elif isinstance(prior, bilby.core.prior.Exponential):\n                domain = np.linspace(0.0, 1e2, 5000)\n                scipy_prob = ss.expon.pdf(domain, scale=1)\n                scipy_lnprob = ss.expon.logpdf(domain, scale=1)\n                scipy_cdf = ss.expon.cdf(domain, scale=1)\n                scipy_rescale = ss.expon.ppf(rescale_domain, scale=1)\n            elif isinstance(prior, bilby.core.prior.Logistic):\n                domain = np.linspace(-1e2, 1e2, 1000)\n                scipy_prob = ss.logistic.pdf(domain, loc=0, scale=1)\n                scipy_lnprob = ss.logistic.logpdf(domain, loc=0, scale=1)\n                scipy_cdf = ss.logistic.cdf(domain, loc=0, scale=1)\n                scipy_rescale = ss.logistic.ppf(rescale_domain, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.ChiSquared):\n                domain = np.linspace(0.0, 1e2, 5000)\n                scipy_prob = ss.gamma.pdf(domain, 1, loc=0, scale=2)\n                scipy_lnprob = ss.gamma.logpdf(domain, 1, loc=0, scale=2)\n                scipy_cdf = ss.gamma.cdf(domain, 1, loc=0, scale=2)\n                scipy_rescale = ss.gamma.ppf(rescale_domain, 1, loc=0, scale=2)\n            elif isinstance(prior, bilby.core.prior.Beta):\n                domain = np.linspace(-5, 5, 5000)\n                scipy_prob = ss.beta.pdf(domain, 2, 2, loc=0, scale=1)\n                scipy_lnprob = ss.beta.logpdf(domain, 2, 2, loc=0, scale=1)\n                scipy_cdf = ss.beta.cdf(domain, 2, 2, loc=0, scale=1)\n                scipy_rescale = ss.beta.ppf(rescale_domain, 2, 2, loc=0, scale=1)\n            elif isinstance(prior, bilby.core.prior.WeightedDiscreteValues):\n                domain = prior.values\n                rescale_domain = prior.weights\n                scipy_dist = ss.rv_discrete(\n                    a=np.min(domain),\n                    b=np.max(domain),\n                    values=(domain, rescale_domain),\n                )\n                scipy_prob = scipy_dist.pmf(domain)\n                scipy_lnprob = scipy_dist.logpmf(domain)\n                scipy_cdf = scipy_dist.cdf(domain)\n                scipy_rescale = scipy_dist.ppf(rescale_domain)\n            else:\n                continue\n            testTuple = (\n                bilby.core.prior.Uniform,\n                bilby.core.prior.Gaussian,\n                bilby.core.prior.Cauchy,\n                bilby.core.prior.StudentT,\n                bilby.core.prior.Exponential,\n                bilby.core.prior.Logistic,\n                bilby.core.prior.LogNormal,\n                bilby.core.prior.Gamma,\n                bilby.core.prior.Beta,\n                bilby.core.prior.WeightedDiscreteValues,\n            )\n            if isinstance(prior, (testTuple)):\n                with self.subTest(prior=prior):\n                    np.testing.assert_almost_equal(prior.prob(self.xp.asarray(domain)), scipy_prob)\n                    np.testing.assert_almost_equal(prior.ln_prob(self.xp.asarray(domain)), scipy_lnprob)\n>                   np.testing.assert_almost_equal(prior.cdf(self.xp.asarray(domain)), scipy_cdf)\nE                   AssertionError: \nE                   Arrays are not almost equal to 7 decimals\nE                   \nE                   Mismatched elements: 876 / 1000 (87.6%)\nE                   First 5 mismatches are at indices:\nE                    [0]: 0.003208686230157687 (ACTUAL), 0.003182992764908255 (DESIRED)\nE                    [1]: 0.0032151745379626617 (ACTUAL), 0.0031893774789402414 (DESIRED)\nE                    [2]: 0.5 (ACTUAL), 0.0031957878575823617 (DESIRED)\nE                    [3]: 0.5 (ACTUAL), 0.0032022240558869266 (DESIRED)\nE                    [6]: 0.5 (ACTUAL), 0.0032216891381465513 (DESIRED)\nE                   Max absolute difference among violations: 0.49681701\nE                   Max relative difference among violations: 155.4559421\nE                    ACTUAL: array([0.0032087, 0.0032152, 0.5      , ..., 0.8185897,\nE                          0.5      , 0.5      ], shape=(1000,))\nE                    DESIRED: array([0.003183 , 0.0031894, 0.0031958, ..., 0.9968042,\nE                          0.9968106, 0.996817 ], shape=(1000,))\n\ntest/core/prior/prior_test.py:842: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "pytest-array-313-jax/pytest-array.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "test_cdf_is_inverse_of_rescaling",
+      "suitePath": [
+        "pytest",
+        "test.core.prior.prior_test.TestPriorClasses"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": null,
+      "message": "AssertionError: np.float64(0.5) not less than 1e-09",
+      "stackText": "self = <test.core.prior.prior_test.TestPriorClasses testMethod=test_cdf_is_inverse_of_rescaling>\n\n    def test_cdf_is_inverse_of_rescaling(self):\n        domain = self.xp.linspace(0, 1, 100)\n        threshold = 1e-9\n        for prior in self.priors:\n            if (\n                isinstance(prior, bilby.core.prior.DeltaFunction)\n                or bilby.core.prior.JointPrior in prior.__class__.__mro__\n            ):\n                continue\n            elif isinstance(prior, bilby.core.prior.StudentT) and \"jax\" in str(self.xp):\n                # JAX implementation of StudentT prior rescale is not accurate enough\n                continue\n            with self.subTest(prior=prior):\n                if isinstance(prior, bilby.core.prior.WeightedDiscreteValues):\n                    rescaled = prior.rescale(domain)\n                    cdf_vals = prior.cdf(rescaled)\n                    rescaled_2 = prior.rescale(cdf_vals)\n                    cdf_vals_2 = prior.cdf(rescaled_2)\n                    self.assertTrue(np.array_equal(rescaled, rescaled_2))\n                    max_difference = max(np.abs(cdf_vals - cdf_vals_2))\n                    for arr in [rescaled, rescaled_2, cdf_vals, cdf_vals_2]:\n                        self._validate_return_type(arr)\n                else:\n                    rescaled = prior.rescale(domain)\n                    max_difference = max(np.abs(domain - prior.cdf(rescaled)))\n                    self._validate_return_type(rescaled)\n>               self.assertLess(max_difference, threshold)\nE               AssertionError: np.float64(0.5) not less than 1e-09\n\ntest/core/prior/prior_test.py:474: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "pytest-array-313-jax/pytest-array.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 1,
+      "displayName": "test_cdf_is_inverse_of_rescaling",
+      "suitePath": [
+        "pytest",
+        "test.core.prior.prior_test.TestPriorClasses"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": null,
+      "message": "AssertionError: np.float64(0.5) not less than 1e-09",
+      "stackText": "self = <test.core.prior.prior_test.TestPriorClasses testMethod=test_cdf_is_inverse_of_rescaling>\n\n    def test_cdf_is_inverse_of_rescaling(self):\n        domain = self.xp.linspace(0, 1, 100)\n        threshold = 1e-9\n        for prior in self.priors:\n            if (\n                isinstance(prior, bilby.core.prior.DeltaFunction)\n                or bilby.core.prior.JointPrior in prior.__class__.__mro__\n            ):\n                continue\n            elif isinstance(prior, bilby.core.prior.StudentT) and \"jax\" in str(self.xp):\n                # JAX implementation of StudentT prior rescale is not accurate enough\n                continue\n            with self.subTest(prior=prior):\n                if isinstance(prior, bilby.core.prior.WeightedDiscreteValues):\n                    rescaled = prior.rescale(domain)\n                    cdf_vals = prior.cdf(rescaled)\n                    rescaled_2 = prior.rescale(cdf_vals)\n                    cdf_vals_2 = prior.cdf(rescaled_2)\n                    self.assertTrue(np.array_equal(rescaled, rescaled_2))\n                    max_difference = max(np.abs(cdf_vals - cdf_vals_2))\n                    for arr in [rescaled, rescaled_2, cdf_vals, cdf_vals_2]:\n                        self._validate_return_type(arr)\n                else:\n                    rescaled = prior.rescale(domain)\n                    max_difference = max(np.abs(domain - prior.cdf(rescaled)))\n                    self._validate_return_type(rescaled)\n>               self.assertLess(max_difference, threshold)\nE               AssertionError: np.float64(0.5) not less than 1e-09\n\ntest/core/prior/prior_test.py:474: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "pytest-array-313-jax/pytest-array.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 2,
+      "displayName": "test_cdf_is_inverse_of_rescaling",
+      "suitePath": [
+        "pytest",
+        "test.core.prior.prior_test.TestPriorClasses"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 4114,
+      "errorType": null,
+      "message": "AssertionError: np.float64(0.5) not less than 1e-09",
+      "stackText": "self = <test.core.prior.prior_test.TestPriorClasses testMethod=test_cdf_is_inverse_of_rescaling>\n\n    def test_cdf_is_inverse_of_rescaling(self):\n        domain = self.xp.linspace(0, 1, 100)\n        threshold = 1e-9\n        for prior in self.priors:\n            if (\n                isinstance(prior, bilby.core.prior.DeltaFunction)\n                or bilby.core.prior.JointPrior in prior.__class__.__mro__\n            ):\n                continue\n            elif isinstance(prior, bilby.core.prior.StudentT) and \"jax\" in str(self.xp):\n                # JAX implementation of StudentT prior rescale is not accurate enough\n                continue\n            with self.subTest(prior=prior):\n                if isinstance(prior, bilby.core.prior.WeightedDiscreteValues):\n                    rescaled = prior.rescale(domain)\n                    cdf_vals = prior.cdf(rescaled)\n                    rescaled_2 = prior.rescale(cdf_vals)\n                    cdf_vals_2 = prior.cdf(rescaled_2)\n                    self.assertTrue(np.array_equal(rescaled, rescaled_2))\n                    max_difference = max(np.abs(cdf_vals - cdf_vals_2))\n                    for arr in [rescaled, rescaled_2, cdf_vals, cdf_vals_2]:\n                        self._validate_return_type(arr)\n                else:\n                    rescaled = prior.rescale(domain)\n                    max_difference = max(np.abs(domain - prior.cdf(rescaled)))\n                    self._validate_return_type(rescaled)\n>               self.assertLess(max_difference, threshold)\nE               AssertionError: np.float64(0.5) not less than 1e-09\n\ntest/core/prior/prior_test.py:474: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "pytest-array-313-jax/pytest-array.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "test_non_analytic_form_has_correct_statistics",
+      "suitePath": [
+        "pytest",
+        "test.gw.prior_test.TestAlignedSpin"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 28076,
+      "errorType": null,
+      "message": "AssertionError: Array(0.04160797, dtype=float64) != Array(0.03114779, dtype=float64) within 2 places (Array(0.01046018, dtype=float64) difference)",
+      "stackText": "self = <test.gw.prior_test.TestAlignedSpin testMethod=test_non_analytic_form_has_correct_statistics>\n\n    def test_non_analytic_form_has_correct_statistics(self):\n        a_prior = bilby.core.prior.TruncatedGaussian(mu=0, sigma=0.1, minimum=0, maximum=1)\n        z_prior = bilby.core.prior.TruncatedGaussian(mu=0.4, sigma=0.2, minimum=-1, maximum=1)\n        chi_prior = bilby.gw.prior.AlignedSpin(a_prior, z_prior)\n        chis = chi_prior.sample(100000, random_state=self.rng)\n        alts = a_prior.sample(100000, random_state=self.rng) * z_prior.sample(100000, random_state=self.rng)\n        self.assertAlmostEqual(np.mean(chis), np.mean(alts), 2)\n>       self.assertAlmostEqual(np.std(chis), np.std(alts), 2)\nE       AssertionError: Array(0.04160797, dtype=float64) != Array(0.03114779, dtype=float64) within 2 places (Array(0.01046018, dtype=float64) difference)\n\ntest/gw/prior_test.py:588: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

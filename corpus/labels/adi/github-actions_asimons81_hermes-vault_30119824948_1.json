@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:30119824948:1",
+  "labeler": "adi",
+  "labeledAt": "2026-09-11T07:41:52.316Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "r04-E",
+      "category": "TEST_DEFECT"
+    },
+    "f0002": {
+      "group": "r04-E",
+      "category": "TEST_DEFECT"
+    },
+    "f0003": {
+      "group": "r04-E",
+      "category": "TEST_DEFECT"
+    },
+    "f0004": {
+      "group": "r04-E",
+      "category": "TEST_DEFECT"
+    }
+  }
+}

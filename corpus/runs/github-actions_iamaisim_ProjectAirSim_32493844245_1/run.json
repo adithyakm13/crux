@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:iamaisim/ProjectAirSim:32493844245:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "iamaisim/ProjectAirSim",
+    "providerRunId": "32493844245",
+    "runAttempt": 1,
+    "url": "https://github.com/iamaisim/ProjectAirSim/actions/runs/32493844245",
+    "workflowName": "ProjectAirSim CI (Self-Hosted)",
+    "event": "pull_request",
+    "headSha": "bc91a55bd85099e3daddd3364f80e6454488fce9",
+    "headBranch": "IAMAI/cpu-improvements",
+    "artifactIds": [
+      "9450837956"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T08:34:17.978Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 17,
+    "failures": 10,
+    "passed": 7,
+    "skipped": 0,
+    "filesParsed": 6,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/client/python/example_user_scripts/mission_with_validation_output.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Never be closer than 10m of Wind Turbine object",
+      "suitePath": [
+        "mission_validation_module.py",
+        "mission_with_validation.py"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "failure",
+      "message": "Task Failed: Never be closer than 10m of Wind Turbine object Failed because 2286 occurences out of 28499 evals were observed with strictness NEVER specified.",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results/client/python/example_user_scripts/scenario-0-output.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Reach within 50m of Destination",
+      "suitePath": [
+        "mission_validation_module.py",
+        "test.py"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "failure",
+      "message": "Task: Reach within 50m of Destination because 0 occurences out of 5500 evals were observed with strictness ATLEAST_ONCE specified.",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results/client/python/example_user_scripts/scenario-0-output.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Get within 5m of LandingPad object",
+      "suitePath": [
+        "mission_validation_module.py",
+        "test.py"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "failure",
+      "message": "Task: Get within 5m of LandingPad object because 0 occurences out of 5498 evals were observed with strictness ATLEAST_ONCE specified.",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results/client/python/example_user_scripts/scenario-1-output.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Reach within 50m of Destination",
+      "suitePath": [
+        "mission_validation_module.py",
+        "test.py"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "failure",
+      "message": "Task: Reach within 50m of Destination because 0 occurences out of 6032 evals were observed with strictness ATLEAST_ONCE specified.",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-results/client/python/example_user_scripts/scenario-1-output.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Get within 5m of LandingPad object",
+      "suitePath": [
+        "mission_validation_module.py",
+        "test.py"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "failure",
+      "message": "Task: Get within 5m of LandingPad object because 0 occurences out of 6030 evals were observed with strictness ATLEAST_ONCE specified.",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-results/client/python/example_user_scripts/scenario-2-output.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Reach within 50m of Destination",
+      "suitePath": [
+        "mission_validation_module.py",
+        "test.py"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "failure",
+      "message": "Task: Reach within 50m of Destination because 0 occurences out of 6187 evals were observed with strictness ATLEAST_ONCE specified.",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-results/client/python/example_user_scripts/scenario-2-output.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Get within 5m of LandingPad object",
+      "suitePath": [
+        "mission_validation_module.py",
+        "test.py"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "failure",
+      "message": "Task: Get within 5m of LandingPad object because 0 occurences out of 6185 evals were observed with strictness ATLEAST_ONCE specified.",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "test-results/client/python/example_user_scripts/scenario-3-output.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Reach within 50m of Destination",
+      "suitePath": [
+        "mission_validation_module.py",
+        "test.py"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "failure",
+      "message": "Task: Reach within 50m of Destination because 0 occurences out of 6542 evals were observed with strictness ATLEAST_ONCE specified.",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "test-results/client/python/example_user_scripts/scenario-3-output.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Get within 5m of LandingPad object",
+      "suitePath": [
+        "mission_validation_module.py",
+        "test.py"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "failure",
+      "message": "Task: Get within 5m of LandingPad object because 0 occurences out of 6542 evals were observed with strictness ATLEAST_ONCE specified.",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "test-results/client/python/example_user_scripts/validation_output.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Never closer than 1m",
+      "suitePath": [
+        "validation_module_example.py",
+        "battery_simple_with_validation.py"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "failure",
+      "message": "Task: Never closer than 1m because 4911 out of 9097 were observed with strictness NEVER specified.",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

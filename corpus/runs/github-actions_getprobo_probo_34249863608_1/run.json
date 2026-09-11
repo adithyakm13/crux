@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:getprobo/probo:34249863608:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "getprobo/probo",
+    "providerRunId": "34249863608",
+    "runAttempt": 1,
+    "url": "https://github.com/getprobo/probo/actions/runs/34249863608",
+    "workflowName": "make",
+    "event": "pull_request",
+    "headSha": "26d6bf69bf51efa63d1fb3eea05405f9dc609f21",
+    "headBranch": "SachaProbo/task-activity-tab",
+    "artifactIds": [
+      "10065960499",
+      "10065987967"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T08:32:00.591Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 7876,
+    "failures": 1,
+    "passed": 7868,
+    "skipped": 7,
+    "filesParsed": 2,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "junit-results/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestCommonTrackerPattern_ResetStaleEnrichments_RespectsMaxAttempts",
+      "suitePath": [
+        "go.probo.inc/probo/pkg/coredata"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 40,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCommonTrackerPattern_ResetStaleEnrichments_RespectsMaxAttempts\n=== PAUSE TestCommonTrackerPattern_ResetStaleEnrichments_RespectsMaxAttempts\n=== CONT  TestCommonTrackerPattern_ResetStaleEnrichments_RespectsMaxAttempts\n    common_tracker_pattern_test.go:506: \n        \tError Trace:\t/home/runner/_work/probo/probo/pkg/coredata/common_tracker_pattern_test.go:506\n        \tError:      \tExpected nil, but got: time.Date(2026, time.September, 8, 16, 25, 29, 903088000, time.Local)\n        \tTest:       \tTestCommonTrackerPattern_ResetStaleEnrichments_RespectsMaxAttempts\n        \tMessages:   \trow at the max-attempts ceiling must not be re-queued\n--- FAIL: TestCommonTrackerPattern_ResetStaleEnrichments_RespectsMaxAttempts (0.04s)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/plc4x:33501547283:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/plc4x",
+    "providerRunId": "33501547283",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/plc4x/actions/runs/33501547283",
+    "workflowName": "Java Platform compatibility",
+    "event": "push",
+    "headSha": "8c468c3ff9ed67e5b56cbf04a5deb239ec0a9e95",
+    "headBranch": "develop",
+    "artifactIds": [
+      "9798696214",
+      "9798693170",
+      "9798717965",
+      "9798453264",
+      "9798469789",
+      "9798454304",
+      "9798438442"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T07:28:00.996Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 80243,
+    "failures": 2,
+    "passed": 79001,
+    "skipped": 1240,
+    "filesParsed": 3825,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "java-test-report-ubuntu-latest-java-21/plc4j/drivers/opcua/target/surefire-reports/TEST-org.apache.plc4x.java.opcua.OpcuaPlcDriverTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "",
+      "suitePath": [
+        "org.apache.plc4x.java.opcua.OpcuaPlcDriverTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 12441,
+      "errorType": "org.testcontainers.containers.ContainerFetchException",
+      "message": "Can't get Docker image: RemoteDockerImage(imageName=<resolving>, imagePullPolicy=DefaultPullPolicy(), imageNameSubstitutor=org.testcontainers.utility.ImageNameSubstitutor$LogWrappedImageNameSubstitutor@561fdee3)",
+      "stackText": "org.testcontainers.containers.ContainerFetchException: Can't get Docker image: RemoteDockerImage(imageName=<resolving>, imagePullPolicy=DefaultPullPolicy(), imageNameSubstitutor=org.testcontainers.utility.ImageNameSubstitutor$LogWrappedImageNameSubstitutor@561fdee3)\n\tat org.testcontainers.containers.GenericContainer.getDockerImageName(GenericContainer.java:1308)\n\tat org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:346)\n\tat org.testcontainers.containers.GenericContainer.start(GenericContainer.java:317)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension$StoreAdapter.start(TestcontainersExtension.java:276)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension$StoreAdapter.access$200(TestcontainersExtension.java:263)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$startContainers$4(TestcontainersExtension.java:83)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$startContainers$5(TestcontainersExtension.java:83)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1596)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.startContainers(TestcontainersExtension.java:83)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:57)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1596)\nCaused by: com.github.dockerjava.api.exception.DockerClientException: Could not build image: ADD failed: failed to GET https://repo1.maven.org/maven2/org/eclipse/milo/server-examples/0.6.16/server-examples-0.6.16.jar with status 429 Too Many Requests: This tool has been identified as abusive and/or wasteful in the way it interacts with Maven Central. Use a caching proxy to limit your impact on the ecosystem. https://www.linkedin.com/feed/update/urn:li:activity:7456004385634992128/\n\tat com.github.dockerjava.api.command.BuildImageResultCallback.getImageId(BuildImageResultCallback.java:71)\n\tat com.github.dockerjava.api.command.BuildImageResultCallback.awaitImageId(BuildImageResultCallback.java:50)\n\tat org.testcontainers.images.builder.ImageFromDockerfile.resolve(ImageFromDockerfile.java:165)\n\tat org.testcontainers.images.builder.ImageFromDockerfile.resolve(ImageFromDockerfile.java:43)\n\tat org.testcontainers.utility.LazyFuture.getResolvedValue(LazyFuture.java:20)\n\tat org.testcontainers.utility.LazyFuture.get(LazyFuture.java:41)\n\tat org.testcontainers.shaded.com.google.common.util.concurrent.Futures$1.get(Futures.java:538)\n\tat org.testcontainers.images.RemoteDockerImage.getImageName(RemoteDockerImage.java:172)\n\tat org.testcontainers.images.RemoteDockerImage.resolve(RemoteDockerImage.java:76)\n\tat org.testcontainers.images.RemoteDockerImage.resolve(RemoteDockerImage.java:35)\n\tat org.testcontainers.utility.LazyFuture.getResolvedValue(LazyFuture.java:20)\n\tat org.testcontainers.utility.LazyFuture.get(LazyFuture.java:41)\n\tat org.testcontainers.containers.GenericContainer.getDockerImageName(GenericContainer.java:1306)\n\t... 11 more\n",
+      "stdout": "2026-09-01 11:39:48,104 ERROR | docker-java-stream--1788708921 | tc.plc4x-milo-test                                      | ADD failed: failed to GET https://repo1.maven.org/maven2/org/eclipse/milo/server-examples/0.6.16/server-examples-0.6.16.jar with status 429 Too Many Requests: This tool has been identified as abusive and/or wasteful in the way it interacts with Maven Central. Use a caching proxy to limit your impact on the ecosystem. https://www.linkedin.com/feed/update/urn:li:activity:7456004385634992128/ \n2026-09-01 11:39:48,130 ERROR | docker-java-stream--1873220512 | tc.plc4x-milo-test                                      | ADD failed: failed to GET https://repo1.maven.org/maven2/org/eclipse/milo/server-examples/0.6.16/server-examples-0.6.16.jar with status 429 Too Many Requests: This tool has been identified as abusive and/or wasteful in the way it interacts with Maven Central. Use a caching proxy to limit your impact on the ecosystem. https://www.linkedin.com/feed/update/urn:li:activity:7456004385634992128/ \n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "java-test-report-first-failure-ubuntu-latest-java-21/plc4j/drivers/opcua/target/surefire-reports/TEST-org.apache.plc4x.java.opcua.OpcuaPlcDriverTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "",
+      "suitePath": [
+        "org.apache.plc4x.java.opcua.OpcuaPlcDriverTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 12441,
+      "errorType": "org.testcontainers.containers.ContainerFetchException",
+      "message": "Can't get Docker image: RemoteDockerImage(imageName=<resolving>, imagePullPolicy=DefaultPullPolicy(), imageNameSubstitutor=org.testcontainers.utility.ImageNameSubstitutor$LogWrappedImageNameSubstitutor@561fdee3)",
+      "stackText": "org.testcontainers.containers.ContainerFetchException: Can't get Docker image: RemoteDockerImage(imageName=<resolving>, imagePullPolicy=DefaultPullPolicy(), imageNameSubstitutor=org.testcontainers.utility.ImageNameSubstitutor$LogWrappedImageNameSubstitutor@561fdee3)\n\tat org.testcontainers.containers.GenericContainer.getDockerImageName(GenericContainer.java:1308)\n\tat org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:346)\n\tat org.testcontainers.containers.GenericContainer.start(GenericContainer.java:317)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension$StoreAdapter.start(TestcontainersExtension.java:276)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension$StoreAdapter.access$200(TestcontainersExtension.java:263)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$startContainers$4(TestcontainersExtension.java:83)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$startContainers$5(TestcontainersExtension.java:83)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1596)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.startContainers(TestcontainersExtension.java:83)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:57)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1596)\nCaused by: com.github.dockerjava.api.exception.DockerClientException: Could not build image: ADD failed: failed to GET https://repo1.maven.org/maven2/org/eclipse/milo/server-examples/0.6.16/server-examples-0.6.16.jar with status 429 Too Many Requests: This tool has been identified as abusive and/or wasteful in the way it interacts with Maven Central. Use a caching proxy to limit your impact on the ecosystem. https://www.linkedin.com/feed/update/urn:li:activity:7456004385634992128/\n\tat com.github.dockerjava.api.command.BuildImageResultCallback.getImageId(BuildImageResultCallback.java:71)\n\tat com.github.dockerjava.api.command.BuildImageResultCallback.awaitImageId(BuildImageResultCallback.java:50)\n\tat org.testcontainers.images.builder.ImageFromDockerfile.resolve(ImageFromDockerfile.java:165)\n\tat org.testcontainers.images.builder.ImageFromDockerfile.resolve(ImageFromDockerfile.java:43)\n\tat org.testcontainers.utility.LazyFuture.getResolvedValue(LazyFuture.java:20)\n\tat org.testcontainers.utility.LazyFuture.get(LazyFuture.java:41)\n\tat org.testcontainers.shaded.com.google.common.util.concurrent.Futures$1.get(Futures.java:538)\n\tat org.testcontainers.images.RemoteDockerImage.getImageName(RemoteDockerImage.java:172)\n\tat org.testcontainers.images.RemoteDockerImage.resolve(RemoteDockerImage.java:76)\n\tat org.testcontainers.images.RemoteDockerImage.resolve(RemoteDockerImage.java:35)\n\tat org.testcontainers.utility.LazyFuture.getResolvedValue(LazyFuture.java:20)\n\tat org.testcontainers.utility.LazyFuture.get(LazyFuture.java:41)\n\tat org.testcontainers.containers.GenericContainer.getDockerImageName(GenericContainer.java:1306)\n\t... 11 more\n",
+      "stdout": "2026-09-01 11:39:48,104 ERROR | docker-java-stream--1788708921 | tc.plc4x-milo-test                                      | ADD failed: failed to GET https://repo1.maven.org/maven2/org/eclipse/milo/server-examples/0.6.16/server-examples-0.6.16.jar with status 429 Too Many Requests: This tool has been identified as abusive and/or wasteful in the way it interacts with Maven Central. Use a caching proxy to limit your impact on the ecosystem. https://www.linkedin.com/feed/update/urn:li:activity:7456004385634992128/ \n2026-09-01 11:39:48,130 ERROR | docker-java-stream--1873220512 | tc.plc4x-milo-test                                      | ADD failed: failed to GET https://repo1.maven.org/maven2/org/eclipse/milo/server-examples/0.6.16/server-examples-0.6.16.jar with status 429 Too Many Requests: This tool has been identified as abusive and/or wasteful in the way it interacts with Maven Central. Use a caching proxy to limit your impact on the ecosystem. https://www.linkedin.com/feed/update/urn:li:activity:7456004385634992128/ \n",
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:bilby-dev/bilby:33852461450:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "bilby-dev/bilby",
+    "providerRunId": "33852461450",
+    "runAttempt": 2,
+    "url": "https://github.com/bilby-dev/bilby/actions/runs/33852461450",
+    "workflowName": "Unit testing",
+    "event": "pull_request",
+    "headSha": "5ad8015f416df4098a4572dfb422cfe8a4aedede",
+    "headBranch": "group-tests",
+    "artifactIds": [
+      "9928933999",
+      "9928943320",
+      "9928959581",
+      "9929545963",
+      "9929429480",
+      "9929598513",
+      "9929177215",
+      "9929100286",
+      "9929271665",
+      "9930242484"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T08:16:17.866Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 9724,
+    "failures": 2,
+    "passed": 6323,
+    "skipped": 3399,
+    "filesParsed": 10,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "pytest-array-313-jax/pytest-array.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "test_prob_and_ln_prob",
+      "suitePath": [
+        "pytest",
+        "test.core.prior.prior_test.TestPriorClasses"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 90,
+      "errorType": null,
+      "message": "AssertionError: np.float32(-3.783466) != array(-3.7834654, dtype=float32) within 6 places (np.float32(7.1525574e-07) difference)",
+      "stackText": "self = <test.core.prior.prior_test.TestPriorClasses testMethod=test_prob_and_ln_prob>\n\n    def test_prob_and_ln_prob(self):\n        for prior in self.priors:\n            sample = prior.sample(random_state=self.rng)\n            if bilby.core.prior.JointPrior in prior.__class__.__mro__:  # noqa\n                # due to the way that the Multivariate Gaussian prior must sequentially call\n                # the prob and ln_prob functions, it must be ignored in this test.\n                continue\n            with self.subTest(prior=prior):\n                lnprob = prior.ln_prob(sample)\n                prob = prior.prob(sample)\n                self._validate_return_type(lnprob)\n                self._validate_return_type(prob)\n                # lower precision for jax running tests with float32\n                lnprob = np.asarray(lnprob)\n                prob = np.asarray(prob)\n>               self.assertAlmostEqual(np.log(prob), lnprob, 6)\nE               AssertionError: np.float32(-3.783466) != array(-3.7834654, dtype=float32) within 6 places (np.float32(7.1525574e-07) difference)\n\ntest/core/prior/prior_test.py:360: AssertionError",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "pytest-array-313-jax/pytest-array.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "test_prob_and_ln_prob",
+      "suitePath": [
+        "pytest",
+        "test.core.prior.prior_test.TestPriorClasses"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 112,
+      "errorType": null,
+      "message": "AssertionError: np.float32(-3.783466) != array(-3.7834654, dtype=float32) within 6 places (np.float32(7.1525574e-07) difference)",
+      "stackText": "self = <test.core.prior.prior_test.TestPriorClasses testMethod=test_prob_and_ln_prob>\n\n    def test_prob_and_ln_prob(self):\n        for prior in self.priors:\n            sample = prior.sample(random_state=self.rng)\n            if bilby.core.prior.JointPrior in prior.__class__.__mro__:  # noqa\n                # due to the way that the Multivariate Gaussian prior must sequentially call\n                # the prob and ln_prob functions, it must be ignored in this test.\n                continue\n            with self.subTest(prior=prior):\n                lnprob = prior.ln_prob(sample)\n                prob = prior.prob(sample)\n                self._validate_return_type(lnprob)\n                self._validate_return_type(prob)\n                # lower precision for jax running tests with float32\n                lnprob = np.asarray(lnprob)\n                prob = np.asarray(prob)\n>               self.assertAlmostEqual(np.log(prob), lnprob, 6)\nE               AssertionError: np.float32(-3.783466) != array(-3.7834654, dtype=float32) within 6 places (np.float32(7.1525574e-07) difference)\n\ntest/core/prior/prior_test.py:360: AssertionError",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

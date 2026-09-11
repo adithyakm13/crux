@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:bilby-dev/bilby:33760377908:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "bilby-dev/bilby",
+    "providerRunId": "33760377908",
+    "runAttempt": 1,
+    "url": "https://github.com/bilby-dev/bilby/actions/runs/33760377908",
+    "workflowName": "Unit testing",
+    "event": "pull_request",
+    "headSha": "a62111eca3fac00963b59e47d3860476aeed868d",
+    "headBranch": "group-tests",
+    "artifactIds": [
+      "9895213716",
+      "9895210570",
+      "9895202079",
+      "9896044694",
+      "9896073646",
+      "9895755573",
+      "9895694778",
+      "9895835601",
+      "9895739840"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T08:16:55.914Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 6219,
+    "failures": 6,
+    "passed": 3683,
+    "skipped": 2530,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 3
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "pytest-312/pytest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test.core.prior.prior_test",
+      "suitePath": [
+        "pytest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "ImportError while importing test module '/home/runner/work/bilby/bilby/test/core/prior/prior_test.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nbilby/gw/prior.py:1524: in _check_imports\n    import healpy\nE   ModuleNotFoundError: No module named 'healpy'\n\nDuring handling of the above exception, another exception occurred:\n.pixi/envs/py312/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntest/core/prior/prior_test.py:23: in <module>\n    hp_dist = bilby.gw.prior.HealPixMapPriorDist(\nbilby/gw/prior.py:1465: in __init__\n    self.hp = self._check_imports()\n              ^^^^^^^^^^^^^^^^^^^^^\nbilby/gw/prior.py:1526: in _check_imports\n    raise ImportError(\"Must have healpy installed on this machine to use HealPixMapPrior\")\nE   ImportError: Must have healpy installed on this machine to use HealPixMapPrior",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "pytest-312/pytest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "test.core.utils_test",
+      "suitePath": [
+        "pytest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "ImportError while importing test module '/home/runner/work/bilby/bilby/test/core/utils_test.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n.pixi/envs/py312/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntest/core/utils_test.py:8: in <module>\n    from astropy import constants\nE   ModuleNotFoundError: No module named 'astropy'",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "pytest-311/pytest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test.core.prior.prior_test",
+      "suitePath": [
+        "pytest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "ImportError while importing test module '/home/runner/work/bilby/bilby/test/core/prior/prior_test.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nbilby/gw/prior.py:1524: in _check_imports\n    import healpy\nE   ModuleNotFoundError: No module named 'healpy'\n\nDuring handling of the above exception, another exception occurred:\n.pixi/envs/py311/lib/python3.11/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntest/core/prior/prior_test.py:23: in <module>\n    hp_dist = bilby.gw.prior.HealPixMapPriorDist(\nbilby/gw/prior.py:1465: in __init__\n    self.hp = self._check_imports()\n              ^^^^^^^^^^^^^^^^^^^^^\nbilby/gw/prior.py:1526: in _check_imports\n    raise ImportError(\"Must have healpy installed on this machine to use HealPixMapPrior\")\nE   ImportError: Must have healpy installed on this machine to use HealPixMapPrior",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "pytest-311/pytest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "test.core.utils_test",
+      "suitePath": [
+        "pytest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "ImportError while importing test module '/home/runner/work/bilby/bilby/test/core/utils_test.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n.pixi/envs/py311/lib/python3.11/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntest/core/utils_test.py:8: in <module>\n    from astropy import constants\nE   ModuleNotFoundError: No module named 'astropy'",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "pytest-313/pytest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test.core.prior.prior_test",
+      "suitePath": [
+        "pytest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "ImportError while importing test module '/home/runner/work/bilby/bilby/test/core/prior/prior_test.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nbilby/gw/prior.py:1524: in _check_imports\n    import healpy\nE   ModuleNotFoundError: No module named 'healpy'\n\nDuring handling of the above exception, another exception occurred:\n.pixi/envs/py313/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntest/core/prior/prior_test.py:23: in <module>\n    hp_dist = bilby.gw.prior.HealPixMapPriorDist(\nbilby/gw/prior.py:1465: in __init__\n    self.hp = self._check_imports()\n              ^^^^^^^^^^^^^^^^^^^^^\nbilby/gw/prior.py:1526: in _check_imports\n    raise ImportError(\"Must have healpy installed on this machine to use HealPixMapPrior\")\nE   ImportError: Must have healpy installed on this machine to use HealPixMapPrior",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "pytest-313/pytest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "test.core.utils_test",
+      "suitePath": [
+        "pytest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": null,
+      "message": "collection failure",
+      "stackText": "ImportError while importing test module '/home/runner/work/bilby/bilby/test/core/utils_test.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n.pixi/envs/py313/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntest/core/utils_test.py:8: in <module>\n    from astropy import constants\nE   ModuleNotFoundError: No module named 'astropy'",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/zookeeper:33441239565:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/zookeeper",
+    "providerRunId": "33441239565",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/zookeeper/actions/runs/33441239565",
+    "workflowName": "CI",
+    "event": "push",
+    "headSha": "ccef53edb9d3e5a951def8d985a46ad1881c6c10",
+    "headBranch": "master",
+    "artifactIds": [
+      "9778263612"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T07:42:40.063Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 3278,
+    "failures": 1,
+    "passed": 3273,
+    "skipped": 4,
+    "filesParsed": 339,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "surefire-reports-full-build-java-tests/zookeeper-server/target/surefire-reports/TEST-org.apache.zookeeper.server.ServerCnxnFactoryTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testShedConnections_SmallPercentageRoundsToZero{FactoryType}[2]",
+      "suitePath": [
+        "org.apache.zookeeper.server.ServerCnxnFactoryTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 33,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "1% of 1 connection should round to 0 ==> expected: <0> but was: <1>",
+      "stackText": "org.opentest4j.AssertionFailedError: 1% of 1 connection should round to 0 ==> expected: <0> but was: <1>\n\tat org.apache.zookeeper.server.ServerCnxnFactoryTest.testShedConnections_SmallPercentageRoundsToZero(ServerCnxnFactoryTest.java:106)\n",
+      "stdout": "2026-08-31 22:01:38,978 [myid:] - INFO  [main:o.a.z.s.NettyServerCnxnFactory@517] - zookeeper.client.certReload=false\n2026-08-31 22:01:38,978 [myid:] - INFO  [main:o.a.z.s.NettyServerCnxnFactory@529] - zookeeper.client.portUnification=false\n2026-08-31 22:01:38,979 [myid:] - INFO  [main:o.a.z.s.NettyServerCnxnFactory@541] - zookeeper.netty.advancedFlowControl.enabled = false\n2026-08-31 22:01:38,979 [myid:] - INFO  [main:o.a.z.s.NettyServerCnxnFactory@104] - handshakeThrottlingEnabled = false, zookeeper.netty.server.outstandingHandshake.limit = -1\n2026-08-31 22:01:38,981 [myid:] - INFO  [main:o.a.z.s.ServerCnxnFactory@210] - Shed 1 out of 1 connections (1%)\n2026-08-31 22:01:38,984 [myid:] - INFO  [main:o.a.z.s.NettyServerCnxnFactory@668] - shutdown called null\n",
+      "stderr": null
+    }
+  ]
+}

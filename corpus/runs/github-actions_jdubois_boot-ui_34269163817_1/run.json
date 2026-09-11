@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:jdubois/boot-ui:34269163817:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "jdubois/boot-ui",
+    "providerRunId": "34269163817",
+    "runAttempt": 1,
+    "url": "https://github.com/jdubois/boot-ui/actions/runs/34269163817",
+    "workflowName": "Build (Java 17 baseline)",
+    "event": "pull_request",
+    "headSha": "48aa26988b66c665bcbfe6e25bccc74870005589",
+    "headBranch": "jdubois-partial-advisor-scoring",
+    "artifactIds": [
+      "10073500879",
+      "10073677945",
+      "10073499317",
+      "10073389391",
+      "10073500263",
+      "10073498358"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:01:09.206Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 8821,
+    "failures": 2,
+    "passed": 8796,
+    "skipped": 23,
+    "filesParsed": 620,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 81
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "junit-test-reports-spring-e2e/test-results/junit/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Database view › runs physical-schema checks and shows a real finding",
+      "suitePath": [
+        "database-advisor.spec.js"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 24558,
+      "errorType": "expect.toContainText",
+      "message": "expect(locator).toContainText(expected) failed",
+      "stackText": "\n  [chromium] › database-advisor.spec.js:6:3 › Database view › runs physical-schema checks and shows a real finding \n\n    Error: expect(locator).toContainText(expected) failed\n\n    Locator: locator('.scanner-card').filter({ hasText: 'Database' })\n    Expected substring: \"Results available\"\n    Received string:    \"DatabaseScan complete84/ 100Known-findings score5 medium1 lowRe-run scanOpen panel\"\n    Timeout: 10000ms\n\n    Call log:\n      - Expect \"toContainText\" with timeout 10000ms\n      - waiting for locator('.scanner-card').filter({ hasText: 'Database' })\n        24 × locator resolved to <div data-v-d7714ffd=\"\" data-v-6b295d99=\"\" class=\"scanner-card card h-100\">…</div>\n           - unexpected value \"DatabaseScan complete84/ 100Known-findings score5 medium1 lowRe-run scanOpen panel\"\n\n\n      33 |     const card = page.locator('.scanner-card').filter({hasText: 'Database'})\n      34 |     await expect(card.locator('.scanner-score')).toHaveText(String(expectedAdvisorScore(report)))\n    > 35 |     await expect(card).toContainText('Results available')\n         |                        ^\n      36 |     await expect(page.locator('.assessment-summary')).toContainText('scan notes')\n      37 |   })\n      38 | })\n        at /home/runner/work/boot-ui/boot-ui/bootui-spring-sample-app/e2e/tests/database-advisor.spec.js:35:24\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/video.webm\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/error-context.md\n\n    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/trace.zip\n    Usage:\n\n        npx playwright show-trace ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/trace.zip\n\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    Error: expect(locator).toContainText(expected) failed\n\n    Locator: locator('.scanner-card').filter({ hasText: 'Database' })\n    Expected substring: \"Results available\"\n    Received string:    \"DatabaseScan complete84/ 100Known-findings score5 medium1 lowRe-run scanOpen panel\"\n    Timeout: 10000ms\n\n    Call log:\n      - Expect \"toContainText\" with timeout 10000ms\n      - waiting for locator('.scanner-card').filter({ hasText: 'Database' })\n        24 × locator resolved to <div data-v-d7714ffd=\"\" data-v-6b295d99=\"\" class=\"scanner-card card h-100\">…</div>\n           - unexpected value \"DatabaseScan complete84/ 100Known-findings score5 medium1 lowRe-run scanOpen panel\"\n\n\n      33 |     const card = page.locator('.scanner-card').filter({hasText: 'Database'})\n      34 |     await expect(card.locator('.scanner-score')).toHaveText(String(expectedAdvisorScore(report)))\n    > 35 |     await expect(card).toContainText('Results available')\n         |                        ^\n      36 |     await expect(page.locator('.assessment-summary')).toContainText('scan notes')\n      37 |   })\n      38 | })\n        at /home/runner/work/boot-ui/boot-ui/bootui-spring-sample-app/e2e/tests/database-advisor.spec.js:35:24\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/video.webm\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/error-context.md\n\n    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/trace.zip\n    Usage:\n\n        npx playwright show-trace ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/trace.zip\n\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n",
+      "stdout": "\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/video.webm]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/error-context.md]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/trace.zip]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/video.webm]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/error-context.md]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/trace.zip]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "playwright-report/test-results/junit/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "Database view › runs physical-schema checks and shows a real finding",
+      "suitePath": [
+        "database-advisor.spec.js"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 24558,
+      "errorType": "expect.toContainText",
+      "message": "expect(locator).toContainText(expected) failed",
+      "stackText": "\n  [chromium] › database-advisor.spec.js:6:3 › Database view › runs physical-schema checks and shows a real finding \n\n    Error: expect(locator).toContainText(expected) failed\n\n    Locator: locator('.scanner-card').filter({ hasText: 'Database' })\n    Expected substring: \"Results available\"\n    Received string:    \"DatabaseScan complete84/ 100Known-findings score5 medium1 lowRe-run scanOpen panel\"\n    Timeout: 10000ms\n\n    Call log:\n      - Expect \"toContainText\" with timeout 10000ms\n      - waiting for locator('.scanner-card').filter({ hasText: 'Database' })\n        24 × locator resolved to <div data-v-d7714ffd=\"\" data-v-6b295d99=\"\" class=\"scanner-card card h-100\">…</div>\n           - unexpected value \"DatabaseScan complete84/ 100Known-findings score5 medium1 lowRe-run scanOpen panel\"\n\n\n      33 |     const card = page.locator('.scanner-card').filter({hasText: 'Database'})\n      34 |     await expect(card.locator('.scanner-score')).toHaveText(String(expectedAdvisorScore(report)))\n    > 35 |     await expect(card).toContainText('Results available')\n         |                        ^\n      36 |     await expect(page.locator('.assessment-summary')).toContainText('scan notes')\n      37 |   })\n      38 | })\n        at /home/runner/work/boot-ui/boot-ui/bootui-spring-sample-app/e2e/tests/database-advisor.spec.js:35:24\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/video.webm\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/error-context.md\n\n    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/trace.zip\n    Usage:\n\n        npx playwright show-trace ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/trace.zip\n\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    Error: expect(locator).toContainText(expected) failed\n\n    Locator: locator('.scanner-card').filter({ hasText: 'Database' })\n    Expected substring: \"Results available\"\n    Received string:    \"DatabaseScan complete84/ 100Known-findings score5 medium1 lowRe-run scanOpen panel\"\n    Timeout: 10000ms\n\n    Call log:\n      - Expect \"toContainText\" with timeout 10000ms\n      - waiting for locator('.scanner-card').filter({ hasText: 'Database' })\n        24 × locator resolved to <div data-v-d7714ffd=\"\" data-v-6b295d99=\"\" class=\"scanner-card card h-100\">…</div>\n           - unexpected value \"DatabaseScan complete84/ 100Known-findings score5 medium1 lowRe-run scanOpen panel\"\n\n\n      33 |     const card = page.locator('.scanner-card').filter({hasText: 'Database'})\n      34 |     await expect(card.locator('.scanner-score')).toHaveText(String(expectedAdvisorScore(report)))\n    > 35 |     await expect(card).toContainText('Results available')\n         |                        ^\n      36 |     await expect(page.locator('.assessment-summary')).toContainText('scan notes')\n      37 |   })\n      38 | })\n        at /home/runner/work/boot-ui/boot-ui/bootui-spring-sample-app/e2e/tests/database-advisor.spec.js:35:24\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/video.webm\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/error-context.md\n\n    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────\n    ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/trace.zip\n    Usage:\n\n        npx playwright show-trace ../test-results/database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/trace.zip\n\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n",
+      "stdout": "\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/video.webm]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/error-context.md]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium/trace.zip]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/video.webm]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/error-context.md]]\n\n[[ATTACHMENT|../database-advisor-Database--e0b71-ks-and-shows-a-real-finding-chromium-retry1/trace.zip]]\n\n",
+      "stderr": null
+    }
+  ]
+}

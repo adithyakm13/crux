@@ -1,0 +1,757 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:docker/buildx:29961736973:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "docker/buildx",
+    "providerRunId": "29961736973",
+    "runAttempt": 1,
+    "url": "https://github.com/docker/buildx/actions/runs/29961736973",
+    "workflowName": "build",
+    "event": "pull_request",
+    "headSha": "7cc02d297ba8ff27fb06eec477b1f9139824861b",
+    "headBranch": "vendor-buildkit-v0.32.0-rc1",
+    "artifactIds": [
+      "8546489368",
+      "8546496965",
+      "8546428636",
+      "8546428115",
+      "8546440544",
+      "8546439723",
+      "8546495569",
+      "8546501899",
+      "8546418068",
+      "8546417037",
+      "8546322169",
+      "8546320646",
+      "8546331283",
+      "8546324886",
+      "8546437033",
+      "8546325173",
+      "8546325751",
+      "8546443242",
+      "8546324189",
+      "8546338458",
+      "8546318443",
+      "8546331693",
+      "8546339609",
+      "8546358399",
+      "8546341300",
+      "8546340074",
+      "8546335155",
+      "8546333095",
+      "8546350984",
+      "8546356222",
+      "8546342360",
+      "8546449564",
+      "8546348907",
+      "8546338734",
+      "8546438819",
+      "8546344978",
+      "8546337829",
+      "8546344670",
+      "8546308057",
+      "8546274168",
+      "8546277567"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T08:22:13.901Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 17436,
+    "failures": 36,
+    "passed": 15566,
+    "skipped": 1834,
+    "filesParsed": 41,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-reports-test-integration-tests-latest-docker-container-experimental/junit-report-test-integration-tests-latest-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 24,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1610,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:eb24d409161dace9630374031cbf75959c8253e63abf62381ad52d458d3c6ce6\"\n        \t            \tactual  : \"sha256:08e44f72400fd0d82b07eab36eb3305ceef97b385e3292abb87ab629c70835d1\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:eb24d409161dace9630374031cbf75959c8253e63abf62381ad52d458d3c6ce6\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:08e44f72400fd0d82b07eab36eb3305ceef97b385e3292abb87ab629c70835d1\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (1.61s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-reports-test-integration-tests-latest-docker-container-experimental/junit-report-test-integration-tests-latest-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 24,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1670,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:cd1a95fd99cf14a23642df6f4a4e7d82bef9185be369217934ae413b954a2abf\"\n        \t            \tactual  : \"sha256:df44b936dd3ada918f1acafd522d1217173ddb96a49430b42b625f89b430d8f8\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:cd1a95fd99cf14a23642df6f4a4e7d82bef9185be369217934ae413b954a2abf\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:df44b936dd3ada918f1acafd522d1217173ddb96a49430b42b625f89b430d8f8\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (1.67s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-reports-test-integration-tests-latest-docker-container-experimental/junit-report-test-integration-tests-latest-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 24,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 12950,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/moby/buildkit:latest to local mirror localhost:42335/moby/buildkit:buildx-stable-1\ntime=\"2026-07-22T22:10:57Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:42335\" method=HEAD url=\"http://localhost:42335/v2/docker/dockerfile-upstream/manifests/1.18.0\"\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:42335/docker/dockerfile-upstream:1.18.0\ntime=\"2026-07-22T22:10:58Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:42335\" method=HEAD url=\"http://localhost:42335/v2/library/busybox/manifests/latest\"\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:42335/library/busybox:latest\ntime=\"2026-07-22T22:10:58Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:42335\" method=HEAD url=\"http://localhost:42335/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:42335/library/alpine:latest\n--- FAIL: TestIntegration (12.95s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-reports-test-integration-tests-buildx-stable-1-docker-container-experimental/junit-report-test-integration-tests-buildx-stable-1-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 25,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1460,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:dcaf34c30132bea83f91214ac14317920491414141a3ee7ee88bd62f9a823b13\"\n        \t            \tactual  : \"sha256:4aff3a89536f8352ab7e1b55fc71e57cf9854a78c0dcbd6b9325bd8a7549e9e8\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:dcaf34c30132bea83f91214ac14317920491414141a3ee7ee88bd62f9a823b13\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:4aff3a89536f8352ab7e1b55fc71e57cf9854a78c0dcbd6b9325bd8a7549e9e8\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (1.46s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-reports-test-integration-tests-buildx-stable-1-docker-container-experimental/junit-report-test-integration-tests-buildx-stable-1-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 25,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1560,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:d93b72659a2def82889319101751fbd88b4a44fa5f2ed6a4621a5a3b84c4d7d6\"\n        \t            \tactual  : \"sha256:21341bcbb55a33748a3110c145f1b021358be7c4df0c943840a749b50a421043\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:d93b72659a2def82889319101751fbd88b4a44fa5f2ed6a4621a5a3b84c4d7d6\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:21341bcbb55a33748a3110c145f1b021358be7c4df0c943840a749b50a421043\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (1.56s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-reports-test-integration-tests-buildx-stable-1-docker-container-experimental/junit-report-test-integration-tests-buildx-stable-1-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 25,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 13200,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:34975/library/busybox:latest\ntime=\"2026-07-22T22:10:55Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:34975\" method=HEAD url=\"http://localhost:34975/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:34975/library/alpine:latest\ntime=\"2026-07-22T22:10:55Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:34975\" method=HEAD url=\"http://localhost:34975/v2/moby/buildkit/manifests/buildx-stable-1\"\n    run.go:331: copied docker.io/moby/buildkit:buildx-stable-1 to local mirror localhost:34975/moby/buildkit:buildx-stable-1\ntime=\"2026-07-22T22:10:56Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:34975\" method=HEAD url=\"http://localhost:34975/v2/docker/dockerfile-upstream/manifests/1.18.0\"\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:34975/docker/dockerfile-upstream:1.18.0\n--- FAIL: TestIntegration (13.20s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-reports-test-integration-tests-v0290-docker-container-experimental/junit-report-test-integration-tests-v0290-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 26,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1330,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:adbf8bdf099d8b472551e371b5e229b4e062dd084a7c5175b7b4d8d676f8ee5b\"\n        \t            \tactual  : \"sha256:fea0fb9311089d9ccf67c6845e617b0f88f48acd124fca3883f4039c625ae581\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:adbf8bdf099d8b472551e371b5e229b4e062dd084a7c5175b7b4d8d676f8ee5b\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:fea0fb9311089d9ccf67c6845e617b0f88f48acd124fca3883f4039c625ae581\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (1.33s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "test-reports-test-integration-tests-v0290-docker-container-experimental/junit-report-test-integration-tests-v0290-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 26,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1860,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:92900063efeecb1fb215be40ac8cae27812e6244136ee6e84530a2af5f6da5b0\"\n        \t            \tactual  : \"sha256:02ec431d94c09e66a783dfd766d5e1b0392c4e5b4b1bc7a44dfbaa9a778fe68c\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:92900063efeecb1fb215be40ac8cae27812e6244136ee6e84530a2af5f6da5b0\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:02ec431d94c09e66a783dfd766d5e1b0392c4e5b4b1bc7a44dfbaa9a778fe68c\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (1.86s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "test-reports-test-integration-tests-v0290-docker-container-experimental/junit-report-test-integration-tests-v0290-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 26,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 14810,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/moby/buildkit:v0.29.0 to local mirror localhost:46397/moby/buildkit:buildx-stable-1\ntime=\"2026-07-22T22:10:55Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:46397\" method=HEAD url=\"http://localhost:46397/v2/docker/dockerfile-upstream/manifests/1.18.0\"\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:46397/docker/dockerfile-upstream:1.18.0\ntime=\"2026-07-22T22:10:56Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:46397\" method=HEAD url=\"http://localhost:46397/v2/library/busybox/manifests/latest\"\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:46397/library/busybox:latest\ntime=\"2026-07-22T22:10:57Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:46397\" method=HEAD url=\"http://localhost:46397/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:46397/library/alpine:latest\n--- FAIL: TestIntegration (14.81s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "test-reports-test-integration-tests-v0281-docker-container-/junit-report-test-integration-tests-v0281-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 27,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1730,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:f5be408e25e79b14d2cae81bc1cfbdfe443d82b477c7a2abae39ad19f555f786\"\n        \t            \tactual  : \"sha256:c9eafef671108ea68098f7730ab15e02c2c4e428991e5a3d9560820b216dc9c0\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:f5be408e25e79b14d2cae81bc1cfbdfe443d82b477c7a2abae39ad19f555f786\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:c9eafef671108ea68098f7730ab15e02c2c4e428991e5a3d9560820b216dc9c0\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (1.73s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "test-reports-test-integration-tests-v0281-docker-container-/junit-report-test-integration-tests-v0281-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 27,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1880,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:8aaeabe44c358188aec45978a8af0024cc3f3f304d5ad55c533ee5939e2720fa\"\n        \t            \tactual  : \"sha256:6bbe156f020d4d7244e47a5ebf8b2cf1c8be7cd3efe95929127d6bea9432c837\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:8aaeabe44c358188aec45978a8af0024cc3f3f304d5ad55c533ee5939e2720fa\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:6bbe156f020d4d7244e47a5ebf8b2cf1c8be7cd3efe95929127d6bea9432c837\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (1.88s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "test-reports-test-integration-tests-v0281-docker-container-/junit-report-test-integration-tests-v0281-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 27,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 13250,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:38767/library/busybox:latest\ntime=\"2026-07-22T22:10:44Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:38767\" method=HEAD url=\"http://localhost:38767/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:38767/library/alpine:latest\ntime=\"2026-07-22T22:10:45Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:38767\" method=HEAD url=\"http://localhost:38767/v2/moby/buildkit/manifests/buildx-stable-1\"\n    run.go:331: copied docker.io/moby/buildkit:v0.28.1 to local mirror localhost:38767/moby/buildkit:buildx-stable-1\ntime=\"2026-07-22T22:10:45Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:38767\" method=HEAD url=\"http://localhost:38767/v2/docker/dockerfile-upstream/manifests/1.18.0\"\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:38767/docker/dockerfile-upstream:1.18.0\n--- FAIL: TestIntegration (13.25s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "test-reports-test-integration-tests-latest-docker-container-/junit-report-test-integration-tests-latest-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 28,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1830,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:68430e2176a04eed290b5bb9544a10451e48d734ff4cb2464f5c978f0d032879\"\n        \t            \tactual  : \"sha256:e940adbaf74c1d571f61a69201916fd7e81a4fc23b60ebbb8cfa33c67ad5006b\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:68430e2176a04eed290b5bb9544a10451e48d734ff4cb2464f5c978f0d032879\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:e940adbaf74c1d571f61a69201916fd7e81a4fc23b60ebbb8cfa33c67ad5006b\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (1.83s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "test-reports-test-integration-tests-latest-docker-container-/junit-report-test-integration-tests-latest-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 28,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1970,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:ec9b1f989671336ba643ec6d59c1e24480b82cc95d59c3fa51ea0fabd344f9e5\"\n        \t            \tactual  : \"sha256:8567f290d0c38f35765ee8367f0a23bffadfe54d946c3d39b80d15d666665225\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:ec9b1f989671336ba643ec6d59c1e24480b82cc95d59c3fa51ea0fabd344f9e5\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:8567f290d0c38f35765ee8367f0a23bffadfe54d946c3d39b80d15d666665225\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (1.97s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "test-reports-test-integration-tests-latest-docker-container-/junit-report-test-integration-tests-latest-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 28,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 13790,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:40721/library/alpine:latest\ntime=\"2026-07-22T22:11:22Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:40721\" method=HEAD url=\"http://localhost:40721/v2/moby/buildkit/manifests/buildx-stable-1\"\n    run.go:331: copied docker.io/moby/buildkit:latest to local mirror localhost:40721/moby/buildkit:buildx-stable-1\ntime=\"2026-07-22T22:11:23Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:40721\" method=HEAD url=\"http://localhost:40721/v2/docker/dockerfile-upstream/manifests/1.18.0\"\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:40721/docker/dockerfile-upstream:1.18.0\ntime=\"2026-07-22T22:11:23Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:40721\" method=HEAD url=\"http://localhost:40721/v2/library/busybox/manifests/latest\"\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:40721/library/busybox:latest\n--- FAIL: TestIntegration (13.79s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "test-reports-test-integration-tests-master-docker-container-/junit-report-test-integration-tests-master-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 29,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2750,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:c5f4a71edfff8a9efa21fdbaea147d6dcacca1c5ac25d49d897f9f818579857e\"\n        \t            \tactual  : \"sha256:54d407b670bc46b07fcf3ece25508870a8e99d619a54a0df85be1dc633d25aa1\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:c5f4a71edfff8a9efa21fdbaea147d6dcacca1c5ac25d49d897f9f818579857e\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:54d407b670bc46b07fcf3ece25508870a8e99d619a54a0df85be1dc633d25aa1\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (2.75s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "test-reports-test-integration-tests-master-docker-container-/junit-report-test-integration-tests-master-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 29,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3960,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:4bec391692fe5c206b1d54b343c8f808359dac38f3da2b4ec828df09ca5d509d\"\n        \t            \tactual  : \"sha256:c115dd1d92be249aa41c2e31315f17832178e8cb064fd72fb1d65deb6cfd43b1\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:4bec391692fe5c206b1d54b343c8f808359dac38f3da2b4ec828df09ca5d509d\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:c115dd1d92be249aa41c2e31315f17832178e8cb064fd72fb1d65deb6cfd43b1\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (3.96s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "test-reports-test-integration-tests-master-docker-container-/junit-report-test-integration-tests-master-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 29,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 31000,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:44935/docker/dockerfile-upstream:1.18.0\ntime=\"2026-07-22T22:10:49Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:44935\" method=HEAD url=\"http://localhost:44935/v2/library/busybox/manifests/latest\"\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:44935/library/busybox:latest\ntime=\"2026-07-22T22:10:50Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:44935\" method=HEAD url=\"http://localhost:44935/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:44935/library/alpine:latest\ntime=\"2026-07-22T22:10:51Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:44935\" method=HEAD url=\"http://localhost:44935/v2/moby/buildkit/manifests/buildx-stable-1\"\n    run.go:331: copied docker.io/moby/buildkit:master to local mirror localhost:44935/moby/buildkit:buildx-stable-1\n--- FAIL: TestIntegration (31.00s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0019",
+      "sourceFile": "test-reports-test-integration-tests-master-docker-container-experimental/junit-report-test-integration-tests-master-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 30,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2700,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:d49e8a69c780fcb1c46afbce9db3b55c586160eab905d812bf7f265a7ab82919\"\n        \t            \tactual  : \"sha256:82f9fceb5bff6de45da0f5dcfd6da2442f7aa78ab99e2fc7316bc1a4d1500878\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:d49e8a69c780fcb1c46afbce9db3b55c586160eab905d812bf7f265a7ab82919\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:82f9fceb5bff6de45da0f5dcfd6da2442f7aa78ab99e2fc7316bc1a4d1500878\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (2.70s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0020",
+      "sourceFile": "test-reports-test-integration-tests-master-docker-container-experimental/junit-report-test-integration-tests-master-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 30,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2070,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:22077959c11382f0cced3151a017a3a1ba0605b7a6512c6e6f3ff727867f72b5\"\n        \t            \tactual  : \"sha256:392d57dd3a08602f7b231a271b67b66958b1437385c01411c26771a357ac882f\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:22077959c11382f0cced3151a017a3a1ba0605b7a6512c6e6f3ff727867f72b5\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:392d57dd3a08602f7b231a271b67b66958b1437385c01411c26771a357ac882f\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (2.07s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0021",
+      "sourceFile": "test-reports-test-integration-tests-master-docker-container-experimental/junit-report-test-integration-tests-master-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 30,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 13380,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:39949/docker/dockerfile-upstream:1.18.0\ntime=\"2026-07-22T22:10:58Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:39949\" method=HEAD url=\"http://localhost:39949/v2/library/busybox/manifests/latest\"\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:39949/library/busybox:latest\ntime=\"2026-07-22T22:10:58Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:39949\" method=HEAD url=\"http://localhost:39949/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:39949/library/alpine:latest\ntime=\"2026-07-22T22:10:58Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:39949\" method=HEAD url=\"http://localhost:39949/v2/moby/buildkit/manifests/buildx-stable-1\"\n    run.go:331: copied docker.io/moby/buildkit:master to local mirror localhost:39949/moby/buildkit:buildx-stable-1\n--- FAIL: TestIntegration (13.38s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0022",
+      "sourceFile": "test-reports-test-integration-tests-buildx-stable-1-docker-container-/junit-report-test-integration-tests-buildx-stable-1-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 32,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1400,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:ca6be57fbf1400e4c33240ec6cd191c41dba54123efa6083fea40987a62bc3d8\"\n        \t            \tactual  : \"sha256:8d17038c554f80ea277405f8a1e5ad4f8cef1f6bf92abc0950345e0a7db4a4b9\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:ca6be57fbf1400e4c33240ec6cd191c41dba54123efa6083fea40987a62bc3d8\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:8d17038c554f80ea277405f8a1e5ad4f8cef1f6bf92abc0950345e0a7db4a4b9\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (1.40s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0023",
+      "sourceFile": "test-reports-test-integration-tests-buildx-stable-1-docker-container-/junit-report-test-integration-tests-buildx-stable-1-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 32,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1750,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:c7d1d563b8c5072642ff6840bd8e1755f679bb32c965eeee37ec9458815c0bcc\"\n        \t            \tactual  : \"sha256:05c6795525cf75344d50c8bd679757ce75b9d625d85beae1515a271f00ebb0e8\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:c7d1d563b8c5072642ff6840bd8e1755f679bb32c965eeee37ec9458815c0bcc\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:05c6795525cf75344d50c8bd679757ce75b9d625d85beae1515a271f00ebb0e8\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (1.75s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0024",
+      "sourceFile": "test-reports-test-integration-tests-buildx-stable-1-docker-container-/junit-report-test-integration-tests-buildx-stable-1-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 32,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 15580,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:38279/library/busybox:latest\ntime=\"2026-07-22T22:11:13Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:38279\" method=HEAD url=\"http://localhost:38279/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:38279/library/alpine:latest\ntime=\"2026-07-22T22:11:14Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:38279\" method=HEAD url=\"http://localhost:38279/v2/moby/buildkit/manifests/buildx-stable-1\"\n    run.go:331: copied docker.io/moby/buildkit:buildx-stable-1 to local mirror localhost:38279/moby/buildkit:buildx-stable-1\ntime=\"2026-07-22T22:11:15Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:38279\" method=HEAD url=\"http://localhost:38279/v2/docker/dockerfile-upstream/manifests/1.18.0\"\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:38279/docker/dockerfile-upstream:1.18.0\n--- FAIL: TestIntegration (15.58s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0025",
+      "sourceFile": "test-reports-test-integration-tests-v0271-docker-container-experimental/junit-report-test-integration-tests-v0271-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 33,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1530,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:f1e9333c9fd91da770a23f249a45376d3505a744de5f4b339f224e478ecfa322\"\n        \t            \tactual  : \"sha256:4260d5d2aa232ad961487b085c1782a54eb4b3d1ec3628c3680c55b7dd05ed08\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:f1e9333c9fd91da770a23f249a45376d3505a744de5f4b339f224e478ecfa322\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:4260d5d2aa232ad961487b085c1782a54eb4b3d1ec3628c3680c55b7dd05ed08\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (1.53s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0026",
+      "sourceFile": "test-reports-test-integration-tests-v0271-docker-container-experimental/junit-report-test-integration-tests-v0271-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 33,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2120,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:ffe98c48631dca4a86bd41166bbe913d267c6f1c58888d3a39455eee1f35b544\"\n        \t            \tactual  : \"sha256:d36487844a3d2a4b324a1d7e55c7ea8c131fbdf4f9bb0cc93e334cd9fdae74a3\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:ffe98c48631dca4a86bd41166bbe913d267c6f1c58888d3a39455eee1f35b544\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:d36487844a3d2a4b324a1d7e55c7ea8c131fbdf4f9bb0cc93e334cd9fdae74a3\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (2.12s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0027",
+      "sourceFile": "test-reports-test-integration-tests-v0271-docker-container-experimental/junit-report-test-integration-tests-v0271-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 33,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 14820,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:42899/library/busybox:latest\ntime=\"2026-07-22T22:10:55Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:42899\" method=HEAD url=\"http://localhost:42899/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:42899/library/alpine:latest\ntime=\"2026-07-22T22:10:56Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:42899\" method=HEAD url=\"http://localhost:42899/v2/moby/buildkit/manifests/buildx-stable-1\"\n    run.go:331: copied docker.io/moby/buildkit:v0.27.1 to local mirror localhost:42899/moby/buildkit:buildx-stable-1\ntime=\"2026-07-22T22:10:57Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:42899\" method=HEAD url=\"http://localhost:42899/v2/docker/dockerfile-upstream/manifests/1.18.0\"\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:42899/docker/dockerfile-upstream:1.18.0\n--- FAIL: TestIntegration (14.82s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0028",
+      "sourceFile": "test-reports-test-integration-tests-v0271-docker-container-/junit-report-test-integration-tests-v0271-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 35,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1480,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:183011ef83cf537f493d4bf1213645489697d5ad875d84b336ec4b9edd430c76\"\n        \t            \tactual  : \"sha256:43113c5441bf762af839bd7f1a334c7da49b95ca2349d1be40a58659329b6e63\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:183011ef83cf537f493d4bf1213645489697d5ad875d84b336ec4b9edd430c76\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:43113c5441bf762af839bd7f1a334c7da49b95ca2349d1be40a58659329b6e63\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (1.48s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0029",
+      "sourceFile": "test-reports-test-integration-tests-v0271-docker-container-/junit-report-test-integration-tests-v0271-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 35,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1890,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:aea75479f83b0fd9eeddbf88fd9431b67d3cf03c40b1b782755cf213d3944dbc\"\n        \t            \tactual  : \"sha256:aa235642f03b3cca991d219be12f8fb8f5f47c17564f4159368ae6ae216c8205\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:aea75479f83b0fd9eeddbf88fd9431b67d3cf03c40b1b782755cf213d3944dbc\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:aa235642f03b3cca991d219be12f8fb8f5f47c17564f4159368ae6ae216c8205\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (1.89s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0030",
+      "sourceFile": "test-reports-test-integration-tests-v0271-docker-container-/junit-report-test-integration-tests-v0271-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 35,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 16570,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:33779/docker/dockerfile-upstream:1.18.0\ntime=\"2026-07-22T22:11:08Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:33779\" method=HEAD url=\"http://localhost:33779/v2/library/busybox/manifests/latest\"\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:33779/library/busybox:latest\ntime=\"2026-07-22T22:11:09Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:33779\" method=HEAD url=\"http://localhost:33779/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:33779/library/alpine:latest\ntime=\"2026-07-22T22:11:10Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:33779\" method=HEAD url=\"http://localhost:33779/v2/moby/buildkit/manifests/buildx-stable-1\"\n    run.go:331: copied docker.io/moby/buildkit:v0.27.1 to local mirror localhost:33779/moby/buildkit:buildx-stable-1\n--- FAIL: TestIntegration (16.57s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0031",
+      "sourceFile": "test-reports-test-integration-tests-v0290-docker-container-/junit-report-test-integration-tests-v0290-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 36,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1780,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:b5ee0a1397208d255ea76562fd2d42ce85cf9c96ce9b2eefe9e5f4a1e1cc1b1b\"\n        \t            \tactual  : \"sha256:d9fad0c2733d2616fd27b261a753b636c1ad7ef215d2145eaaf84e4ba92023c6\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:b5ee0a1397208d255ea76562fd2d42ce85cf9c96ce9b2eefe9e5f4a1e1cc1b1b\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:d9fad0c2733d2616fd27b261a753b636c1ad7ef215d2145eaaf84e4ba92023c6\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (1.78s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0032",
+      "sourceFile": "test-reports-test-integration-tests-v0290-docker-container-/junit-report-test-integration-tests-v0290-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 36,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2100,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:a0d5d9e0d295a0d1f3858b9ac0e716b3263f0f09573fef21c727dfc580f0863e\"\n        \t            \tactual  : \"sha256:2d9382c4362c061b75f15d322e7b72991335c8842b0cf135c91a07daa0f82838\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:a0d5d9e0d295a0d1f3858b9ac0e716b3263f0f09573fef21c727dfc580f0863e\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:2d9382c4362c061b75f15d322e7b72991335c8842b0cf135c91a07daa0f82838\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (2.10s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0033",
+      "sourceFile": "test-reports-test-integration-tests-v0290-docker-container-/junit-report-test-integration-tests-v0290-docker-container-.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 36,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 14330,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:36085/docker/dockerfile-upstream:1.18.0\ntime=\"2026-07-22T22:10:51Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:36085\" method=HEAD url=\"http://localhost:36085/v2/library/busybox/manifests/latest\"\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:36085/library/busybox:latest\ntime=\"2026-07-22T22:10:52Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:36085\" method=HEAD url=\"http://localhost:36085/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:36085/library/alpine:latest\ntime=\"2026-07-22T22:10:52Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:36085\" method=HEAD url=\"http://localhost:36085/v2/moby/buildkit/manifests/buildx-stable-1\"\n    run.go:331: copied docker.io/moby/buildkit:v0.29.0 to local mirror localhost:36085/moby/buildkit:buildx-stable-1\n--- FAIL: TestIntegration (14.33s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0034",
+      "sourceFile": "test-reports-test-integration-tests-v0281-docker-container-experimental/junit-report-test-integration-tests-v0281-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2250,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    imagetools.go:400: \n        \tError Trace:\t/src/tests/imagetools.go:400\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:d90c8f6e5fdfe7408915957ae88b6231f86b99b698d9b044614d26a5a864ac95\"\n        \t            \tactual  : \"sha256:6cb97dcaf75f53cdbb1b0e560e3e59f15021c9ecb198b5ddb74f7ec0d49513bc\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:d90c8f6e5fdfe7408915957ae88b6231f86b99b698d9b044614d26a5a864ac95\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:6cb97dcaf75f53cdbb1b0e560e3e59f15021c9ecb198b5ddb74f7ec0d49513bc\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutInspect/worker=docker-container (2.25s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0035",
+      "sourceFile": "test-reports-test-integration-tests-v0281-docker-container-experimental/junit-report-test-integration-tests-v0281-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1810,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== PAUSE TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n=== CONT  TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    imagetools.go:732: \n        \tError Trace:\t/src/tests/imagetools.go:732\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:105\n        \t            \t\t\t\t/src/vendor/github.com/moby/buildkit/util/testutil/integration/run.go:253\n        \tError:      \tNot equal: \n        \t            \texpected: \"sha256:979f8c1f1e2f1870d1990ce72d593e6ef17bcc76bc600fb2a9bfe82836860dd6\"\n        \t            \tactual  : \"sha256:6f956f174de28c1c91440f2ee511020afa4589a85be374921fc9be19bf9878e8\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1,2 +1,2 @@\n        \t            \t-(digest.Digest) (len=71) \"sha256:979f8c1f1e2f1870d1990ce72d593e6ef17bcc76bc600fb2a9bfe82836860dd6\"\n        \t            \t+(digest.Digest) (len=71) \"sha256:6f956f174de28c1c91440f2ee511020afa4589a85be374921fc9be19bf9878e8\"\n        \t            \t \n        \tTest:       \tTestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container\n    --- FAIL: TestIntegration/TestImagetoolsOCILayoutTargetDigest/worker=docker-container (1.81s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0036",
+      "sourceFile": "test-reports-test-integration-tests-v0281-docker-container-experimental/junit-report-test-integration-tests-v0281-docker-container-experimental.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "TestIntegration",
+      "suitePath": [
+        "github.com/docker/buildx/tests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 16040,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestIntegration\n    run.go:331: copied docker.io/amd64/busybox:latest@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee to local mirror localhost:37947/library/busybox:latest\ntime=\"2026-07-22T22:11:07Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:37947\" method=HEAD url=\"http://localhost:37947/v2/library/alpine/manifests/latest\"\n    run.go:331: copied docker.io/amd64/alpine:latest@sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70 to local mirror localhost:37947/library/alpine:latest\ntime=\"2026-07-22T22:11:08Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:37947\" method=HEAD url=\"http://localhost:37947/v2/moby/buildkit/manifests/buildx-stable-1\"\n    run.go:331: copied docker.io/moby/buildkit:v0.28.1 to local mirror localhost:37947/moby/buildkit:buildx-stable-1\ntime=\"2026-07-22T22:11:10Z\" level=info msg=\"fetch failed after status: 404 Not Found\" host=\"localhost:37947\" method=HEAD url=\"http://localhost:37947/v2/docker/dockerfile-upstream/manifests/1.18.0\"\n    run.go:331: copied docker.io/docker/dockerfile-upstream:1.18.0 to local mirror localhost:37947/docker/dockerfile-upstream:1.18.0\n--- FAIL: TestIntegration (16.04s)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

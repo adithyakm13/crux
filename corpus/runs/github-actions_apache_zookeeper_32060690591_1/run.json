@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/zookeeper:32060690591:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/zookeeper",
+    "providerRunId": "32060690591",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/zookeeper/actions/runs/32060690591",
+    "workflowName": "CI",
+    "event": "push",
+    "headSha": "4ee3b27be53907f991f60138fb8ab0f533726a15",
+    "headBranch": "master",
+    "artifactIds": [
+      "9300220670"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T08:12:10.288Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 3278,
+    "failures": 1,
+    "passed": 3273,
+    "skipped": 4,
+    "filesParsed": 339,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "surefire-reports-full-build-java-tests/zookeeper-server/target/surefire-reports/TEST-org.apache.zookeeper.server.admin.SnapshotAndRestoreCommandTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testSnapshotAndRestoreCommand_streaming",
+      "suitePath": [
+        "org.apache.zookeeper.server.admin.SnapshotAndRestoreCommandTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 23,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "expected: <true> but was: <false>",
+      "stackText": "org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n\tat org.apache.zookeeper.server.admin.SnapshotAndRestoreCommandTest.validateSnapshotMetrics(SnapshotAndRestoreCommandTest.java:398)\n\tat org.apache.zookeeper.server.admin.SnapshotAndRestoreCommandTest.testSnapshotAndRestoreCommand_streaming(SnapshotAndRestoreCommandTest.java:168)\n",
+      "stdout": "2026-08-17 20:08:38,459 [myid:] - INFO  [main:o.a.z.ZKTestCase@107] - STARTING Optional[public void org.apache.zookeeper.server.admin.SnapshotAndRestoreCommandTest.testSnapshotAndRestoreCommand_streaming() throws java.lang.Exception]\n2026-08-17 20:08:38,463 [myid:] - INFO  [qtp1431710377-38:o.a.z.s.p.FileTxnSnapLog@480] - Snapshotting: 0x11 to /tmp/junit16702328767538263071/version-2/snapshot.11\n2026-08-17 20:08:38,463 [myid:] - INFO  [qtp1431710377-38:o.a.z.s.ZooKeeperServer@588] - Snapshot taken in 0 ms\n2026-08-17 20:08:38,464 [myid:] - INFO  [main:o.a.z.s.a.SnapshotAndRestoreCommandTest@371] - Header:last_zxid, Value:0x11\n2026-08-17 20:08:38,464 [myid:] - INFO  [main:o.a.z.s.a.SnapshotAndRestoreCommandTest@376] - Header:snapshot_size, Value:1708\n2026-08-17 20:08:38,475 [myid:] - INFO  [main:o.a.z.ZKTestCase@112] - FINISHED Optional[public void org.apache.zookeeper.server.admin.SnapshotAndRestoreCommandTest.testSnapshotAndRestoreCommand_streaming() throws java.lang.Exception]\n",
+      "stderr": null
+    }
+  ]
+}
