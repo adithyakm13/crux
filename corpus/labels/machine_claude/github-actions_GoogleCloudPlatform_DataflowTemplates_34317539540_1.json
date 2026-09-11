@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:34317539540:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.603Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "dataflow-job-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Two 'Job ID ... failed. Please check cloud console' with no further detail in the payload."
+    },
+    "f0002": {
+      "group": "spanner-ddl-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three CopyDbIT DDL comparisons. Note f0005 expects OPTIONS (locality_group='default') while f0002 and f0004 do not, so this run straddles the schema-emission change seen in run 34273643677."
+    },
+    "f0003": {
+      "group": "dataflow-job-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Two 'Job ID ... failed. Please check cloud console' with no further detail in the payload."
+    },
+    "f0004": {
+      "group": "spanner-ddl-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three CopyDbIT DDL comparisons. Note f0005 expects OPTIONS (locality_group='default') while f0002 and f0004 do not, so this run straddles the schema-emission change seen in run 34273643677."
+    },
+    "f0005": {
+      "group": "spanner-ddl-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three CopyDbIT DDL comparisons. Note f0005 expects OPTIONS (locality_group='default') while f0002 and f0004 do not, so this run straddles the schema-emission change seen in run 34273643677."
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:30404202876:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.614Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "determinism-economics-artifact",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Identical to run 30404201812."
+    },
+    "f0002": {
+      "group": "determinism-economics-artifact",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Identical to run 30404201812."
+    },
+    "f0003": {
+      "group": "determinism-economics-artifact",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Identical to run 30404201812."
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:LingFrame/LingFrame:34103517005:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.606Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same lingReferenceInjector bean failure and its two cached context failures, as in run 34100679037."
+    },
+    "f0002": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same lingReferenceInjector bean failure and its two cached context failures, as in run 34100679037."
+    },
+    "f0003": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same lingReferenceInjector bean failure and its two cached context failures, as in run 34100679037."
+    },
+    "f0004": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same lingReferenceInjector bean failure and its two cached context failures, as in run 34100679037."
+    },
+    "f0005": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same lingReferenceInjector bean failure and its two cached context failures, as in run 34100679037."
+    }
+  }
+}

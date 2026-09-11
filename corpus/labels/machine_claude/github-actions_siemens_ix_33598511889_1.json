@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:siemens/ix:33598511889:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.604Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "input-screenshot",
+      "category": "UNKNOWN",
+      "note": "Two input visual comparisons."
+    },
+    "f0002": {
+      "group": "input-screenshot",
+      "category": "UNKNOWN",
+      "note": "Two input visual comparisons."
+    },
+    "f0003": {
+      "group": "datetime-dropdown-snapshot-20108px",
+      "category": "UNKNOWN",
+      "note": "Two datetime-input dropdown snapshots differing by an identical 20108 pixels."
+    },
+    "f0004": {
+      "group": "datetime-dropdown-snapshot-20108px",
+      "category": "UNKNOWN",
+      "note": "Two datetime-input dropdown snapshots differing by an identical 20108 pixels."
+    },
+    "f0005": {
+      "group": "tabs-overflow-snapshot-43px",
+      "category": "UNKNOWN",
+      "note": "Six tabs overflow snapshots differing by an identical 43 pixels."
+    },
+    "f0006": {
+      "group": "tabs-overflow-snapshot-43px",
+      "category": "UNKNOWN",
+      "note": "Six tabs overflow snapshots differing by an identical 43 pixels."
+    },
+    "f0007": {
+      "group": "tabs-overflow-snapshot-43px",
+      "category": "UNKNOWN",
+      "note": "Six tabs overflow snapshots differing by an identical 43 pixels."
+    },
+    "f0008": {
+      "group": "range-field-screenshot-timeout",
+      "category": "UNKNOWN",
+      "note": "Range-field screenshot timeouts, as in the sibling run."
+    },
+    "f0009": {
+      "group": "tabs-overflow-snapshot-43px",
+      "category": "UNKNOWN",
+      "note": "Six tabs overflow snapshots differing by an identical 43 pixels."
+    },
+    "f0010": {
+      "group": "tabs-overflow-snapshot-43px",
+      "category": "UNKNOWN",
+      "note": "Six tabs overflow snapshots differing by an identical 43 pixels."
+    },
+    "f0011": {
+      "group": "tabs-overflow-snapshot-43px",
+      "category": "UNKNOWN",
+      "note": "Six tabs overflow snapshots differing by an identical 43 pixels."
+    },
+    "f0012": {
+      "group": "range-field-screenshot-timeout",
+      "category": "UNKNOWN",
+      "note": "Range-field screenshot timeouts, as in the sibling run."
+    }
+  }
+}

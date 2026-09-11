@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:siemens/ix:33643043778:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.606Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "category-filter-snapshot",
+      "category": "UNKNOWN",
+      "note": "528-pixel snapshot difference."
+    },
+    "f0002": {
+      "group": "tooltip-position-snapshot",
+      "category": "UNKNOWN",
+      "note": "Tooltip top and left differing by 5076 and 1276 pixels. One component, two placements."
+    },
+    "f0003": {
+      "group": "range-field-screenshot-timeout",
+      "category": "UNKNOWN",
+      "note": "Range-field 30s timeouts, as in the sibling runs."
+    },
+    "f0004": {
+      "group": "tooltip-position-snapshot",
+      "category": "UNKNOWN",
+      "note": "Tooltip top and left differing by 5076 and 1276 pixels. One component, two placements."
+    },
+    "f0005": {
+      "group": "range-field-screenshot-timeout",
+      "category": "UNKNOWN",
+      "note": "Range-field 30s timeouts, as in the sibling runs."
+    }
+  }
+}

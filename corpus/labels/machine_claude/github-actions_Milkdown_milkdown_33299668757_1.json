@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Milkdown/milkdown:33299668757:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.617Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "table-column-picker-timeout",
+      "category": "UNKNOWN",
+      "note": "30s timeout in addTable before the column picker was reached."
+    },
+    "f0002": {
+      "group": "clipboard-inline-mark",
+      "category": "UNKNOWN",
+      "note": "Pasted inline HTML did not extend the mark."
+    }
+  }
+}

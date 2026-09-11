@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/druid:34443744711:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.601Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "Four attempts, EasyMock verify on TaskQueue.shutdown."
+    },
+    "f0002": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "Four attempts, EasyMock verify on TaskQueue.shutdown."
+    },
+    "f0003": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "Four attempts, EasyMock verify on TaskQueue.shutdown."
+    },
+    "f0004": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "Four attempts, EasyMock verify on TaskQueue.shutdown."
+    },
+    "f0005": {
+      "group": "resource-handler-jvm-clear",
+      "category": "UNKNOWN",
+      "note": "expected 1 but was 3."
+    },
+    "f0006": {
+      "group": "partition-row-count",
+      "category": "UNKNOWN",
+      "note": "generatePartitionsWithMaxCount partition #47."
+    },
+    "f0007": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    },
+    "f0008": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    },
+    "f0009": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    }
+  }
+}

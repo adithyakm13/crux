@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:tenstorrent/tt-metal:31216086258:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.618Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The missing ttnn.LayerNormShardedProgramFactory attribute, as in run 31216075581."
+    },
+    "f0002": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The missing ttnn.LayerNormShardedProgramFactory attribute, as in run 31216075581."
+    }
+  }
+}

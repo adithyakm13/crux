@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ueberdosis/tiptap:33136445122:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.611Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "decoration-counter-index",
+      "category": "UNKNOWN",
+      "note": "Decoration counter count mismatch."
+    },
+    "f0002": {
+      "group": "autolink-relink-unset",
+      "category": "UNKNOWN",
+      "note": "The autolink spec timing out."
+    },
+    "f0003": {
+      "group": "paragraph-shortcut-style",
+      "category": "UNKNOWN",
+      "note": "Paragraph shortcut style. Three runs of this repository fail on the same three specs, which is evidence of three stable defects rather than flakiness."
+    }
+  }
+}

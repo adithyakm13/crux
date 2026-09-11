@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Sage/carbon:34370458568:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.604Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0002": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0003": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0004": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0005": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0006": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0007": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0008": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0009": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0010": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0011": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    },
+    "f0012": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag and drop specs across browsers, all 30s timeouts at three source lines. Identical to run 34366004747."
+    }
+  }
+}

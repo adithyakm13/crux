@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:TryGhost/Ghost:33505744100:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.613Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "api-response-disposed",
+      "category": "UNKNOWN",
+      "note": "Three copies of one spec failing with 'apiResponse.json: Response has been disposed' — the test reads a response after Playwright released it. Reads as a test-harness lifetime error, but the payload does not show whether the response was disposed early because the request failed."
+    },
+    "f0002": {
+      "group": "api-response-disposed",
+      "category": "UNKNOWN",
+      "note": "Three copies of one spec failing with 'apiResponse.json: Response has been disposed' — the test reads a response after Playwright released it. Reads as a test-harness lifetime error, but the payload does not show whether the response was disposed early because the request failed."
+    },
+    "f0003": {
+      "group": "api-response-disposed",
+      "category": "UNKNOWN",
+      "note": "Three copies of one spec failing with 'apiResponse.json: Response has been disposed' — the test reads a response after Playwright released it. Reads as a test-harness lifetime error, but the payload does not show whether the response was disposed early because the request failed."
+    }
+  }
+}

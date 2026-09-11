@@ -2,48 +2,48 @@
   "schemaVersion": 1,
   "corpusRunId": "github-actions:druxt/druxt.js:33619018553:1",
   "labeler": "machine:claude",
-  "labeledAt": "2026-09-10T11:43:52.456Z",
+  "labeledAt": "2026-09-11T07:12:42.599Z",
   "context": "full",
   "labels": {
     "f0001": {
       "group": "guide-section-unresolved",
       "category": "PRODUCT_REGRESSION",
-      "note": "The same eight failures as run 33618991721, judged identically: sectionFor returns null where \"guide\" is expected, card URLs fall back, and the llms.txt output carries \"## Modules\" with correctly tagged links but no \"## Guide\" at all. Modules resolve and guide does not — one resolution path, two consumers. A second run reproducing it exactly is mild evidence against flakiness and for a deterministic defect."
+      "note": "Identical eight failures to run 33618991721. A second run reproducing exactly is mild evidence against flakiness."
     },
     "f0002": {
       "group": "guide-section-unresolved",
       "category": "PRODUCT_REGRESSION",
-      "note": "The same eight failures as run 33618991721, judged identically: sectionFor returns null where \"guide\" is expected, card URLs fall back, and the llms.txt output carries \"## Modules\" with correctly tagged links but no \"## Guide\" at all. Modules resolve and guide does not — one resolution path, two consumers. A second run reproducing it exactly is mild evidence against flakiness and for a deterministic defect."
+      "note": "Identical eight failures to run 33618991721. A second run reproducing exactly is mild evidence against flakiness."
     },
     "f0003": {
       "group": "guide-section-unresolved",
       "category": "PRODUCT_REGRESSION",
-      "note": "The same eight failures as run 33618991721, judged identically: sectionFor returns null where \"guide\" is expected, card URLs fall back, and the llms.txt output carries \"## Modules\" with correctly tagged links but no \"## Guide\" at all. Modules resolve and guide does not — one resolution path, two consumers. A second run reproducing it exactly is mild evidence against flakiness and for a deterministic defect."
+      "note": "Identical eight failures to run 33618991721. A second run reproducing exactly is mild evidence against flakiness."
     },
     "f0004": {
       "group": "guide-section-unresolved",
       "category": "PRODUCT_REGRESSION",
-      "note": "The same eight failures as run 33618991721, judged identically: sectionFor returns null where \"guide\" is expected, card URLs fall back, and the llms.txt output carries \"## Modules\" with correctly tagged links but no \"## Guide\" at all. Modules resolve and guide does not — one resolution path, two consumers. A second run reproducing it exactly is mild evidence against flakiness and for a deterministic defect."
+      "note": "Identical eight failures to run 33618991721. A second run reproducing exactly is mild evidence against flakiness."
     },
     "f0005": {
       "group": "guide-section-unresolved",
       "category": "PRODUCT_REGRESSION",
-      "note": "The same eight failures as run 33618991721, judged identically: sectionFor returns null where \"guide\" is expected, card URLs fall back, and the llms.txt output carries \"## Modules\" with correctly tagged links but no \"## Guide\" at all. Modules resolve and guide does not — one resolution path, two consumers. A second run reproducing it exactly is mild evidence against flakiness and for a deterministic defect."
+      "note": "Identical eight failures to run 33618991721. A second run reproducing exactly is mild evidence against flakiness."
     },
     "f0006": {
       "group": "guide-section-unresolved",
       "category": "PRODUCT_REGRESSION",
-      "note": "The same eight failures as run 33618991721, judged identically: sectionFor returns null where \"guide\" is expected, card URLs fall back, and the llms.txt output carries \"## Modules\" with correctly tagged links but no \"## Guide\" at all. Modules resolve and guide does not — one resolution path, two consumers. A second run reproducing it exactly is mild evidence against flakiness and for a deterministic defect."
+      "note": "Identical eight failures to run 33618991721. A second run reproducing exactly is mild evidence against flakiness."
     },
     "f0007": {
       "group": "guide-section-unresolved",
       "category": "PRODUCT_REGRESSION",
-      "note": "The same eight failures as run 33618991721, judged identically: sectionFor returns null where \"guide\" is expected, card URLs fall back, and the llms.txt output carries \"## Modules\" with correctly tagged links but no \"## Guide\" at all. Modules resolve and guide does not — one resolution path, two consumers. A second run reproducing it exactly is mild evidence against flakiness and for a deterministic defect."
+      "note": "Identical eight failures to run 33618991721. A second run reproducing exactly is mild evidence against flakiness."
     },
     "f0008": {
       "group": "guide-section-unresolved",
       "category": "PRODUCT_REGRESSION",
-      "note": "The same eight failures as run 33618991721, judged identically: sectionFor returns null where \"guide\" is expected, card URLs fall back, and the llms.txt output carries \"## Modules\" with correctly tagged links but no \"## Guide\" at all. Modules resolve and guide does not — one resolution path, two consumers. A second run reproducing it exactly is mild evidence against flakiness and for a deterministic defect."
+      "note": "Identical eight failures to run 33618991721. A second run reproducing exactly is mild evidence against flakiness."
     }
   }
 }

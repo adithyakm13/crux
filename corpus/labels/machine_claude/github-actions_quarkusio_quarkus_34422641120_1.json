@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34422641120:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.601Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0002": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0003": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0004": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0005": {
+      "group": "devmode-source-reload",
+      "category": "UNKNOWN",
+      "note": "DevModeClient condition not fulfilled within a minute."
+    },
+    "f0006": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0007": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0008": {
+      "group": "tck-interceptor-property-names",
+      "category": "UNKNOWN",
+      "note": "IOException: Unexpected property names []."
+    },
+    "f0009": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "testPets expected 204, got 500. Same test as the awaitility timeouts elsewhere but a different failure mode; kept in the Kafka group because it is the same endpoint failing to accept a message."
+    },
+    "f0010": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "fakeHost certification-path expectation."
+    }
+  }
+}

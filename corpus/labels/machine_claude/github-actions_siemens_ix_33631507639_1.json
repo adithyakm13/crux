@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:siemens/ix:33631507639:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.610Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "range-field-screenshot-timeout",
+      "category": "UNKNOWN",
+      "note": "Range-field screenshot timeouts."
+    },
+    "f0002": {
+      "group": "tooltip-position-snapshot",
+      "category": "UNKNOWN",
+      "note": "Tooltip top and right differing by 5076 and 1255 pixels. The 5076 figure matches run 33643043778 exactly, so this is one stable rendering change."
+    },
+    "f0003": {
+      "group": "tooltip-position-snapshot",
+      "category": "UNKNOWN",
+      "note": "Tooltip top and right differing by 5076 and 1255 pixels. The 5076 figure matches run 33643043778 exactly, so this is one stable rendering change."
+    },
+    "f0004": {
+      "group": "range-field-screenshot-timeout",
+      "category": "UNKNOWN",
+      "note": "Range-field screenshot timeouts."
+    }
+  }
+}

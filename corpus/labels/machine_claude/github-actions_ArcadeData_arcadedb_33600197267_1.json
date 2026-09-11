@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33600197267:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.608Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "replication-divergence",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four HA failures: three DatabaseAreNotIdentical type-count mismatches (5 vs 6 and 6 vs 5) and one update returning null mid-sequence. Replicas are not converging; the comparator reports it from whichever side it happens to inspect."
+    },
+    "f0002": {
+      "group": "replication-divergence",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four HA failures: three DatabaseAreNotIdentical type-count mismatches (5 vs 6 and 6 vs 5) and one update returning null mid-sequence. Replicas are not converging; the comparator reports it from whichever side it happens to inspect."
+    },
+    "f0003": {
+      "group": "replication-divergence",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four HA failures: three DatabaseAreNotIdentical type-count mismatches (5 vs 6 and 6 vs 5) and one update returning null mid-sequence. Replicas are not converging; the comparator reports it from whichever side it happens to inspect."
+    },
+    "f0004": {
+      "group": "replication-divergence",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four HA failures: three DatabaseAreNotIdentical type-count mismatches (5 vs 6 and 6 vs 5) and one update returning null mid-sequence. Replicas are not converging; the comparator reports it from whichever side it happens to inspect."
+    }
+  }
+}

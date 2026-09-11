@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34296476872:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.600Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "codestart-wrapper-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "buildAllProjects: 'No supported wrapper that can be executed found in this directory: target/quarkus-codestart-test/rest-qute-rest-<uuid>'. Six of these plus two 'Run project return status should be zero' from the same test method — the return-status assertions are the same failure one frame further out, not a second cause. The generated project has no mvnw/gradlew, so nothing is built."
+    },
+    "f0002": {
+      "group": "codestart-wrapper-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "buildAllProjects: 'No supported wrapper that can be executed found in this directory: target/quarkus-codestart-test/rest-qute-rest-<uuid>'. Six of these plus two 'Run project return status should be zero' from the same test method — the return-status assertions are the same failure one frame further out, not a second cause. The generated project has no mvnw/gradlew, so nothing is built."
+    },
+    "f0003": {
+      "group": "codestart-wrapper-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "buildAllProjects: 'No supported wrapper that can be executed found in this directory: target/quarkus-codestart-test/rest-qute-rest-<uuid>'. Six of these plus two 'Run project return status should be zero' from the same test method — the return-status assertions are the same failure one frame further out, not a second cause. The generated project has no mvnw/gradlew, so nothing is built."
+    },
+    "f0004": {
+      "group": "codestart-wrapper-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "buildAllProjects: 'No supported wrapper that can be executed found in this directory: target/quarkus-codestart-test/rest-qute-rest-<uuid>'. Six of these plus two 'Run project return status should be zero' from the same test method — the return-status assertions are the same failure one frame further out, not a second cause. The generated project has no mvnw/gradlew, so nothing is built."
+    },
+    "f0005": {
+      "group": "codestart-wrapper-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "buildAllProjects: 'No supported wrapper that can be executed found in this directory: target/quarkus-codestart-test/rest-qute-rest-<uuid>'. Six of these plus two 'Run project return status should be zero' from the same test method — the return-status assertions are the same failure one frame further out, not a second cause. The generated project has no mvnw/gradlew, so nothing is built."
+    },
+    "f0006": {
+      "group": "codestart-wrapper-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "buildAllProjects: 'No supported wrapper that can be executed found in this directory: target/quarkus-codestart-test/rest-qute-rest-<uuid>'. Six of these plus two 'Run project return status should be zero' from the same test method — the return-status assertions are the same failure one frame further out, not a second cause. The generated project has no mvnw/gradlew, so nothing is built."
+    },
+    "f0007": {
+      "group": "codestart-wrapper-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "buildAllProjects: 'No supported wrapper that can be executed found in this directory: target/quarkus-codestart-test/rest-qute-rest-<uuid>'. Six of these plus two 'Run project return status should be zero' from the same test method — the return-status assertions are the same failure one frame further out, not a second cause. The generated project has no mvnw/gradlew, so nothing is built."
+    },
+    "f0008": {
+      "group": "codestart-wrapper-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "buildAllProjects: 'No supported wrapper that can be executed found in this directory: target/quarkus-codestart-test/rest-qute-rest-<uuid>'. Six of these plus two 'Run project return status should be zero' from the same test method — the return-status assertions are the same failure one frame further out, not a second cause. The generated project has no mvnw/gradlew, so nothing is built."
+    },
+    "f0009": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "org.acme.FlakingException 'deliberate failure run 1' from FlakyHelloResourceTest. A fixture that fails on purpose to exercise the flaky-test machinery. FLAKY is the literal truth here in a way it almost never is."
+    },
+    "f0010": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "org.acme.FlakingException 'deliberate failure run 1' from FlakyHelloResourceTest. A fixture that fails on purpose to exercise the flaky-test machinery. FLAKY is the literal truth here in a way it almost never is."
+    },
+    "f0011": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "org.acme.FlakingException 'deliberate failure run 1' from FlakyHelloResourceTest. A fixture that fails on purpose to exercise the flaky-test machinery. FLAKY is the literal truth here in a way it almost never is."
+    },
+    "f0012": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "org.acme.FlakingException 'deliberate failure run 1' from FlakyHelloResourceTest. A fixture that fails on purpose to exercise the flaky-test machinery. FLAKY is the literal truth here in a way it almost never is."
+    },
+    "f0013": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "org.acme.FlakingException 'deliberate failure run 1' from FlakyHelloResourceTest. A fixture that fails on purpose to exercise the flaky-test machinery. FLAKY is the literal truth here in a way it almost never is."
+    },
+    "f0014": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "org.acme.FlakingException 'deliberate failure run 1' from FlakyHelloResourceTest. A fixture that fails on purpose to exercise the flaky-test machinery. FLAKY is the literal truth here in a way it almost never is."
+    },
+    "f0015": {
+      "group": "virtual-thread-pinning",
+      "category": "PRODUCT_REGRESSION",
+      "note": "testGrpcClient was expected not to pin the carrier thread and one pinning event was captured. A specific, deterministic behavioural assertion."
+    },
+    "f0016": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "fakeHost expected a body containing 'unable to find valid certification path' and got something else. A negative TLS test; whether the product, the fixture host or the CI truststore changed is not visible."
+    }
+  }
+}

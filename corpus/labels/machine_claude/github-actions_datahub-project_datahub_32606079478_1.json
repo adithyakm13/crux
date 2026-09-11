@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:datahub-project/datahub:32606079478:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.608Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "timescaledb-golden-files",
+      "category": "UNKNOWN",
+      "note": "Four 'Metadata files differ (use pytest --update-golden-files to update)'. Golden-file drift: either the emitted metadata changed or the goldens are stale, and the diff summary alone does not say which."
+    },
+    "f0002": {
+      "group": "timescaledb-golden-files",
+      "category": "UNKNOWN",
+      "note": "Four 'Metadata files differ (use pytest --update-golden-files to update)'. Golden-file drift: either the emitted metadata changed or the goldens are stale, and the diff summary alone does not say which."
+    },
+    "f0003": {
+      "group": "timescaledb-golden-files",
+      "category": "UNKNOWN",
+      "note": "Four 'Metadata files differ (use pytest --update-golden-files to update)'. Golden-file drift: either the emitted metadata changed or the goldens are stale, and the diff summary alone does not say which."
+    },
+    "f0004": {
+      "group": "timescaledb-golden-files",
+      "category": "UNKNOWN",
+      "note": "Four 'Metadata files differ (use pytest --update-golden-files to update)'. Golden-file drift: either the emitted metadata changed or the goldens are stale, and the diff summary alone does not say which."
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:LingFrame/LingFrame:34100679037:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.603Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three UnsatisfiedDependencyException on bean 'lingReferenceInjector' and two 'Failed to load ApplicationContext'. The context failures are the same bean failure one layer out — Spring reports the cause on the first test to build the context and the cached-failure message thereafter. One broken bean definition."
+    },
+    "f0002": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three UnsatisfiedDependencyException on bean 'lingReferenceInjector' and two 'Failed to load ApplicationContext'. The context failures are the same bean failure one layer out — Spring reports the cause on the first test to build the context and the cached-failure message thereafter. One broken bean definition."
+    },
+    "f0003": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three UnsatisfiedDependencyException on bean 'lingReferenceInjector' and two 'Failed to load ApplicationContext'. The context failures are the same bean failure one layer out — Spring reports the cause on the first test to build the context and the cached-failure message thereafter. One broken bean definition."
+    },
+    "f0004": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three UnsatisfiedDependencyException on bean 'lingReferenceInjector' and two 'Failed to load ApplicationContext'. The context failures are the same bean failure one layer out — Spring reports the cause on the first test to build the context and the cached-failure message thereafter. One broken bean definition."
+    },
+    "f0005": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three UnsatisfiedDependencyException on bean 'lingReferenceInjector' and two 'Failed to load ApplicationContext'. The context failures are the same bean failure one layer out — Spring reports the cause on the first test to build the context and the cached-failure message thereafter. One broken bean definition."
+    }
+  }
+}

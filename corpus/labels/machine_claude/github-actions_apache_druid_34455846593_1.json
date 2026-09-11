@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/druid:34455846593:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.603Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "resource-handler-jvm-clear",
+      "category": "UNKNOWN",
+      "note": "expected 1 but was 3."
+    },
+    "f0002": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    },
+    "f0003": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    },
+    "f0004": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "982, 997, 999, 985 of 1000."
+    },
+    "f0005": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "982, 997, 999, 985 of 1000."
+    },
+    "f0006": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "982, 997, 999, 985 of 1000."
+    },
+    "f0007": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "982, 997, 999, 985 of 1000."
+    }
+  }
+}

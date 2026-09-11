@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:32065839885:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.608Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same four accounting assertions as run 32065895502: 20==19, 15==14, a growth sum, and one differing entry in a twenty-entry map."
+    },
+    "f0002": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same four accounting assertions as run 32065895502: 20==19, 15==14, a growth sum, and one differing entry in a twenty-entry map."
+    },
+    "f0003": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same four accounting assertions as run 32065895502: 20==19, 15==14, a growth sum, and one differing entry in a twenty-entry map."
+    },
+    "f0004": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same four accounting assertions as run 32065895502: 20==19, 15==14, a growth sum, and one differing entry in a twenty-entry map."
+    }
+  }
+}

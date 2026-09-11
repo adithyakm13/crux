@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34196035268:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.600Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0002": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0003": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0004": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0005": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0006": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0007": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "Four fakeHost certification-path failures and one javaxNetSsl 500. Merged: both are the same TLS integration test class failing to establish or reject a connection as configured, and a broken truststore produces both a wrong body and a 500."
+    },
+    "f0008": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "Four fakeHost certification-path failures and one javaxNetSsl 500. Merged: both are the same TLS integration test class failing to establish or reject a connection as configured, and a broken truststore produces both a wrong body and a 500."
+    },
+    "f0009": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "Four fakeHost certification-path failures and one javaxNetSsl 500. Merged: both are the same TLS integration test class failing to establish or reject a connection as configured, and a broken truststore produces both a wrong body and a 500."
+    },
+    "f0010": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "Four fakeHost certification-path failures and one javaxNetSsl 500. Merged: both are the same TLS integration test class failing to establish or reject a connection as configured, and a broken truststore produces both a wrong body and a 500."
+    },
+    "f0011": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "Four fakeHost certification-path failures and one javaxNetSsl 500. Merged: both are the same TLS integration test class failing to establish or reject a connection as configured, and a broken truststore produces both a wrong body and a 500."
+    }
+  }
+}

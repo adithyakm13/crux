@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:tenstorrent/tt-metal:31216075581:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.605Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All nine: AttributeError, module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'. Both layer_norm and rms_norm tests reference the same missing symbol, so a rename or removal not carried through. One missing attribute, nine tests."
+    },
+    "f0002": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All nine: AttributeError, module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'. Both layer_norm and rms_norm tests reference the same missing symbol, so a rename or removal not carried through. One missing attribute, nine tests."
+    },
+    "f0003": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All nine: AttributeError, module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'. Both layer_norm and rms_norm tests reference the same missing symbol, so a rename or removal not carried through. One missing attribute, nine tests."
+    },
+    "f0004": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All nine: AttributeError, module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'. Both layer_norm and rms_norm tests reference the same missing symbol, so a rename or removal not carried through. One missing attribute, nine tests."
+    },
+    "f0005": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All nine: AttributeError, module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'. Both layer_norm and rms_norm tests reference the same missing symbol, so a rename or removal not carried through. One missing attribute, nine tests."
+    },
+    "f0006": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All nine: AttributeError, module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'. Both layer_norm and rms_norm tests reference the same missing symbol, so a rename or removal not carried through. One missing attribute, nine tests."
+    },
+    "f0007": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All nine: AttributeError, module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'. Both layer_norm and rms_norm tests reference the same missing symbol, so a rename or removal not carried through. One missing attribute, nine tests."
+    },
+    "f0008": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All nine: AttributeError, module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'. Both layer_norm and rms_norm tests reference the same missing symbol, so a rename or removal not carried through. One missing attribute, nine tests."
+    },
+    "f0009": {
+      "group": "ttnn-layernormshardedprogramfactory-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All nine: AttributeError, module 'ttnn' has no attribute 'LayerNormShardedProgramFactory'. Both layer_norm and rms_norm tests reference the same missing symbol, so a rename or removal not carried through. One missing attribute, nine tests."
+    }
+  }
+}

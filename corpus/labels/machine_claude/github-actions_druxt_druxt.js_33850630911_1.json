@@ -2,43 +2,43 @@
   "schemaVersion": 1,
   "corpusRunId": "github-actions:druxt/druxt.js:33850630911:1",
   "labeler": "machine:claude",
-  "labeledAt": "2026-09-10T11:43:52.457Z",
+  "labeledAt": "2026-09-11T07:12:42.603Z",
   "context": "full",
   "labels": {
     "f0001": {
       "group": "docgen-processvue-type-default",
       "category": "PRODUCT_REGRESSION",
-      "note": "Kept separate from the writeTemplateData crash above. Different method (processVue rather than writeTemplateData), different failure mode (a toBe assertion expecting \"false\", not a TypeError), and no shared frame. Both are in DruxtDocgen and a single refactor could plausibly have broken both, but \"same class, same commit\" is not \"same cause\", and nothing in the payload links them."
+      "note": "The processVue assertion, as in run 33847270600."
     },
     "f0002": {
       "group": "docgen-writetemplatedata-undefined-push",
       "category": "PRODUCT_REGRESSION",
-      "note": "Six failures, one crash: TypeError \"Cannot read properties of undefined (reading push)\" raised at the same line every time — DruxtDocgen.writeTemplateData, packages/docgen/src/index.js:10789. Six different test cases reach one broken statement, so this is one defect, not six. A crash at a fixed line is the least ambiguous kind of grouping evidence in this whole sample."
+      "note": "The same writeTemplateData crash, reproducing exactly."
     },
     "f0003": {
       "group": "docgen-writetemplatedata-undefined-push",
       "category": "PRODUCT_REGRESSION",
-      "note": "Six failures, one crash: TypeError \"Cannot read properties of undefined (reading push)\" raised at the same line every time — DruxtDocgen.writeTemplateData, packages/docgen/src/index.js:10789. Six different test cases reach one broken statement, so this is one defect, not six. A crash at a fixed line is the least ambiguous kind of grouping evidence in this whole sample."
+      "note": "The same writeTemplateData crash, reproducing exactly."
     },
     "f0004": {
       "group": "docgen-writetemplatedata-undefined-push",
       "category": "PRODUCT_REGRESSION",
-      "note": "Six failures, one crash: TypeError \"Cannot read properties of undefined (reading push)\" raised at the same line every time — DruxtDocgen.writeTemplateData, packages/docgen/src/index.js:10789. Six different test cases reach one broken statement, so this is one defect, not six. A crash at a fixed line is the least ambiguous kind of grouping evidence in this whole sample."
+      "note": "The same writeTemplateData crash, reproducing exactly."
     },
     "f0005": {
       "group": "docgen-writetemplatedata-undefined-push",
       "category": "PRODUCT_REGRESSION",
-      "note": "Six failures, one crash: TypeError \"Cannot read properties of undefined (reading push)\" raised at the same line every time — DruxtDocgen.writeTemplateData, packages/docgen/src/index.js:10789. Six different test cases reach one broken statement, so this is one defect, not six. A crash at a fixed line is the least ambiguous kind of grouping evidence in this whole sample."
+      "note": "The same writeTemplateData crash, reproducing exactly."
     },
     "f0006": {
       "group": "docgen-writetemplatedata-undefined-push",
       "category": "PRODUCT_REGRESSION",
-      "note": "Six failures, one crash: TypeError \"Cannot read properties of undefined (reading push)\" raised at the same line every time — DruxtDocgen.writeTemplateData, packages/docgen/src/index.js:10789. Six different test cases reach one broken statement, so this is one defect, not six. A crash at a fixed line is the least ambiguous kind of grouping evidence in this whole sample."
+      "note": "The same writeTemplateData crash, reproducing exactly."
     },
     "f0007": {
       "group": "docgen-writetemplatedata-undefined-push",
       "category": "PRODUCT_REGRESSION",
-      "note": "Six failures, one crash: TypeError \"Cannot read properties of undefined (reading push)\" raised at the same line every time — DruxtDocgen.writeTemplateData, packages/docgen/src/index.js:10789. Six different test cases reach one broken statement, so this is one defect, not six. A crash at a fixed line is the least ambiguous kind of grouping evidence in this whole sample."
+      "note": "The same writeTemplateData crash, reproducing exactly."
     }
   }
 }

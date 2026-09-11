@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:QwenLM/qwen-code:34490944852:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.612Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "route-drift-guard-73-vs-72",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of one guard test: the express route list has 73 entries where the explicit expectation names 72. A route was added without updating the guard — which is exactly what the guard exists to catch."
+    },
+    "f0002": {
+      "group": "route-drift-guard-73-vs-72",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of one guard test: the express route list has 73 entries where the explicit expectation names 72. A route was added without updating the guard — which is exactly what the guard exists to catch."
+    },
+    "f0003": {
+      "group": "route-drift-guard-73-vs-72",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of one guard test: the express route list has 73 entries where the explicit expectation names 72. A route was added without updating the guard — which is exactly what the guard exists to catch."
+    }
+  }
+}

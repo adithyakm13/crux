@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/druid:34478248801:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.601Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "resource-handler-jvm-clear",
+      "category": "UNKNOWN",
+      "note": "expected 1 but was 3."
+    },
+    "f0002": {
+      "group": "segment-server-balance",
+      "category": "UNKNOWN",
+      "note": "expected 625.0 but was 573.0 — a statistical balance assertion, the kind that fails on sampling noise."
+    },
+    "f0003": {
+      "group": "partition-row-count",
+      "category": "UNKNOWN",
+      "note": "Two partitions of one generatePartitionsWithMaxCount case."
+    },
+    "f0004": {
+      "group": "partition-row-count",
+      "category": "UNKNOWN",
+      "note": "Two partitions of one generatePartitionsWithMaxCount case."
+    },
+    "f0005": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "EasyMock 'Unexpected method calls' on KubernetesTaskRunnerTest.peonClient. The mock's expectations no longer match what the code under test calls; the assertion is about the mock, not the product."
+    },
+    "f0006": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "EasyMock 'Unexpected method calls' on KubernetesTaskRunnerTest.peonClient. The mock's expectations no longer match what the code under test calls; the assertion is about the mock, not the product."
+    },
+    "f0007": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "doMassLaunchAndExit expected 1000 known tasks, got 996, 998, 961, 989. Four attempts, four different shortfalls — a race in task registration, or a launcher genuinely dropping tasks."
+    },
+    "f0008": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "doMassLaunchAndExit expected 1000 known tasks, got 996, 998, 961, 989. Four attempts, four different shortfalls — a race in task registration, or a launcher genuinely dropping tasks."
+    },
+    "f0009": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "doMassLaunchAndExit expected 1000 known tasks, got 996, 998, 961, 989. Four attempts, four different shortfalls — a race in task registration, or a launcher genuinely dropping tasks."
+    },
+    "f0010": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "doMassLaunchAndExit expected 1000 known tasks, got 996, 998, 961, 989. Four attempts, four different shortfalls — a race in task registration, or a launcher genuinely dropping tasks."
+    }
+  }
+}

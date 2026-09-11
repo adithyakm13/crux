@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:TryGhost/Ghost:33478390257:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.611Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "member-custom-field-import",
+      "category": "UNKNOWN",
+      "note": "Three copies of one spec: a hand-mapped custom field is not visible after import."
+    },
+    "f0002": {
+      "group": "member-custom-field-import",
+      "category": "UNKNOWN",
+      "note": "Three copies of one spec: a hand-mapped custom field is not visible after import."
+    },
+    "f0003": {
+      "group": "member-custom-field-import",
+      "category": "UNKNOWN",
+      "note": "Three copies of one spec: a hand-mapped custom field is not visible after import."
+    }
+  }
+}

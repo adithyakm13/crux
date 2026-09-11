@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:datahub-project/datahub:32591153671:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.604Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0002": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0003": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0004": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0005": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0006": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0007": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0008": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0009": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0010": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0011": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    },
+    "f0012": {
+      "group": "postgres-not-listening",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All twelve fail on setup with psycopg2.OperationalError connecting to localhost. The database service is not up; no test body runs."
+    }
+  }
+}

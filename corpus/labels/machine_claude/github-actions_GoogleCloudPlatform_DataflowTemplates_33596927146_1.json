@@ -2,113 +2,113 @@
   "schemaVersion": 1,
   "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:33596927146:1",
   "labeler": "machine:claude",
-  "labeledAt": "2026-09-10T11:43:52.457Z",
+  "labeledAt": "2026-09-11T07:12:42.598Z",
   "context": "full",
   "labels": {
     "f0001": {
-      "group": "cassandra-query-timeout",
+      "group": "cassandra-driver-timeout",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "DriverTimeoutException, query timed out after PT2S. Infrastructure latency, not an assertion."
+      "note": "DriverTimeoutException, query timed out after PT2S. A two-second driver deadline against a test Cassandra; separate from the job-launch rejections below because nothing reaches Dataflow at all."
     },
     "f0002": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0003": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0004": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0005": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0006": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0007": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0008": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0009": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0010": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0011": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0012": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0013": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0014": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0015": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0016": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0017": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0018": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0019": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0020": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     },
     "f0021": {
-      "group": "gcp-api-400",
+      "group": "dataflow-job-launch-400",
       "category": "ENVIRONMENT_FAILURE",
-      "note": "Twenty failures, all GoogleJsonResponseException 400 Bad Request wrapped in FailsafeException, across tests that share nothing but the harness. A uniform 400 across every integration test reads as CI configuration, credentials or quota rather than twenty separate product faults. Not DEPENDENCY_FAILURE: the spec reserves that for 429/5xx, and a 400 is the service rejecting our request rather than the service being down."
+      "note": "Twenty failures, one cause: FailsafeException wrapping GoogleJsonResponseException 400 Bad Request on POST to dataflow.googleapis.com. The job never launches, so no test logic runs. Twenty unrelated migration tests do not independently regress at once; a quota, credential or template-version problem in the test project produces exactly this."
     }
   }
 }

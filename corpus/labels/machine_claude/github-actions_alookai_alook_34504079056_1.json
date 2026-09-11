@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34504079056:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.614Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "server-rail-visibility",
+      "category": "UNKNOWN",
+      "note": "Server icon not visible on first native tap."
+    },
+    "f0002": {
+      "group": "server-switch-checkpoint",
+      "category": "UNKNOWN",
+      "note": "120s timeout during server switching."
+    },
+    "f0003": {
+      "group": "unread-projection",
+      "category": "UNKNOWN",
+      "note": "A mention source did not disappear from every surface."
+    }
+  }
+}

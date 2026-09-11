@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:33550982055:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.607Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "information-schema-ddl-text",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two exact-string DDL comparisons over placement tables and PG sequences."
+    },
+    "f0002": {
+      "group": "information-schema-ddl-text",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two exact-string DDL comparisons over placement tables and PG sequences."
+    },
+    "f0003": {
+      "group": "spanner-instance-unavailable",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "'Failed to create instance' and a gRPC UNAVAILABLE from Spanner. Provisioning, not schema."
+    },
+    "f0004": {
+      "group": "spanner-instance-unavailable",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "'Failed to create instance' and a gRPC UNAVAILABLE from Spanner. Provisioning, not schema."
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:29938023236:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.607Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'before all' hook timeouts against the same unreachable server."
+    },
+    "f0002": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'before all' hook timeouts against the same unreachable server."
+    },
+    "f0003": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'before all' hook timeouts against the same unreachable server."
+    },
+    "f0004": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'before all' hook timeouts against the same unreachable server."
+    },
+    "f0005": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'before all' hook timeouts against the same unreachable server."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/druid:34220507596:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.601Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "EasyMock verify on TaskQueue.shutdown."
+    },
+    "f0002": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "EasyMock verify on TaskQueue.shutdown."
+    },
+    "f0003": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "EasyMock verify on TaskQueue.shutdown."
+    },
+    "f0004": {
+      "group": "resource-handler-jvm-clear",
+      "category": "UNKNOWN",
+      "note": "expected 1 but was 3."
+    },
+    "f0005": {
+      "group": "radius-bound-filter",
+      "category": "UNKNOWN",
+      "note": "testPreciseRadiusBoundFilter expected true, got false."
+    },
+    "f0006": {
+      "group": "exception-unblocks",
+      "category": "UNKNOWN",
+      "note": "A bare AssertionFailedError with no message."
+    },
+    "f0007": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "955 of 1000 tasks known."
+    },
+    "f0008": {
+      "group": "latchable-emitter-timeout",
+      "category": "UNKNOWN",
+      "note": "Timed out after 60s waiting for an event."
+    },
+    "f0009": {
+      "group": "checkpoint-inactive-taskgroup",
+      "category": "UNKNOWN",
+      "note": "expected true, got false."
+    }
+  }
+}

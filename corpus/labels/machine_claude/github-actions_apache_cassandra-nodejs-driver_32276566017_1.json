@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:32276566017:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.606Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four 'before all' hooks timing out after 120s against @SERVER_API. The hook never connects, so no test body runs — a Cassandra instance that is not answering."
+    },
+    "f0002": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four 'before all' hooks timing out after 120s against @SERVER_API. The hook never connects, so no test body runs — a Cassandra instance that is not answering."
+    },
+    "f0003": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four 'before all' hooks timing out after 120s against @SERVER_API. The hook never connects, so no test body runs — a Cassandra instance that is not answering."
+    },
+    "f0004": {
+      "group": "control-connection-null-once",
+      "category": "UNKNOWN",
+      "note": "TypeError: cannot read 'once' of null in ControlConnection._setHealthListeners. A real crash rather than a timeout, though a connection that never established would also leave that field null — which is why it is kept separate rather than merged on suspicion."
+    },
+    "f0005": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four 'before all' hooks timing out after 120s against @SERVER_API. The hook never connects, so no test body runs — a Cassandra instance that is not answering."
+    }
+  }
+}

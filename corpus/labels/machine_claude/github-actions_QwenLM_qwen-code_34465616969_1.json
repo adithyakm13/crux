@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:QwenLM/qwen-code:34465616969:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.605Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six cases of one test, three asserting true-should-be-false and three the reverse. Both directions of the same boolean in the same test is one inverted or unset flag, not two defects."
+    },
+    "f0002": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six cases of one test, three asserting true-should-be-false and three the reverse. Both directions of the same boolean in the same test is one inverted or unset flag, not two defects."
+    },
+    "f0003": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six cases of one test, three asserting true-should-be-false and three the reverse. Both directions of the same boolean in the same test is one inverted or unset flag, not two defects."
+    },
+    "f0004": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six cases of one test, three asserting true-should-be-false and three the reverse. Both directions of the same boolean in the same test is one inverted or unset flag, not two defects."
+    },
+    "f0005": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six cases of one test, three asserting true-should-be-false and three the reverse. Both directions of the same boolean in the same test is one inverted or unset flag, not two defects."
+    },
+    "f0006": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six cases of one test, three asserting true-should-be-false and three the reverse. Both directions of the same boolean in the same test is one inverted or unset flag, not two defects."
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Sage/carbon:33501972697:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.605Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "simple-select-enter-selection",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eight browser/shard copies of one simple-select test: after Enter on an arrow-key-focused option, the confirmed-selection element is not visible."
+    },
+    "f0002": {
+      "group": "simple-select-enter-selection",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eight browser/shard copies of one simple-select test: after Enter on an arrow-key-focused option, the confirmed-selection element is not visible."
+    },
+    "f0003": {
+      "group": "simple-select-enter-selection",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eight browser/shard copies of one simple-select test: after Enter on an arrow-key-focused option, the confirmed-selection element is not visible."
+    },
+    "f0004": {
+      "group": "simple-select-enter-selection",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eight browser/shard copies of one simple-select test: after Enter on an arrow-key-focused option, the confirmed-selection element is not visible."
+    },
+    "f0005": {
+      "group": "simple-select-enter-selection",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eight browser/shard copies of one simple-select test: after Enter on an arrow-key-focused option, the confirmed-selection element is not visible."
+    },
+    "f0006": {
+      "group": "simple-select-enter-selection",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eight browser/shard copies of one simple-select test: after Enter on an arrow-key-focused option, the confirmed-selection element is not visible."
+    },
+    "f0007": {
+      "group": "simple-select-enter-selection",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eight browser/shard copies of one simple-select test: after Enter on an arrow-key-focused option, the confirmed-selection element is not visible."
+    },
+    "f0008": {
+      "group": "simple-select-enter-selection",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eight browser/shard copies of one simple-select test: after Enter on an arrow-key-focused option, the confirmed-selection element is not visible."
+    }
+  }
+}

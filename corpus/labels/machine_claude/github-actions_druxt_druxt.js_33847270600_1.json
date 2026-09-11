@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:druxt/druxt.js:33847270600:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.603Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "docgen-processvue-type-default",
+      "category": "PRODUCT_REGRESSION",
+      "note": "processVue does not inject type and default from vue-docgen. A toBe assertion, not a crash."
+    },
+    "f0002": {
+      "group": "docgen-writetemplatedata-undefined-push",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six tests, one crash: TypeError 'Cannot read properties of undefined (reading push)' at DruxtDocgen.writeTemplateData. Six cases reaching one broken statement is one defect, not six. Kept apart from processVue: different method, different failure mode, no shared frame."
+    },
+    "f0003": {
+      "group": "docgen-writetemplatedata-undefined-push",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six tests, one crash: TypeError 'Cannot read properties of undefined (reading push)' at DruxtDocgen.writeTemplateData. Six cases reaching one broken statement is one defect, not six. Kept apart from processVue: different method, different failure mode, no shared frame."
+    },
+    "f0004": {
+      "group": "docgen-writetemplatedata-undefined-push",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six tests, one crash: TypeError 'Cannot read properties of undefined (reading push)' at DruxtDocgen.writeTemplateData. Six cases reaching one broken statement is one defect, not six. Kept apart from processVue: different method, different failure mode, no shared frame."
+    },
+    "f0005": {
+      "group": "docgen-writetemplatedata-undefined-push",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six tests, one crash: TypeError 'Cannot read properties of undefined (reading push)' at DruxtDocgen.writeTemplateData. Six cases reaching one broken statement is one defect, not six. Kept apart from processVue: different method, different failure mode, no shared frame."
+    },
+    "f0006": {
+      "group": "docgen-writetemplatedata-undefined-push",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six tests, one crash: TypeError 'Cannot read properties of undefined (reading push)' at DruxtDocgen.writeTemplateData. Six cases reaching one broken statement is one defect, not six. Kept apart from processVue: different method, different failure mode, no shared frame."
+    },
+    "f0007": {
+      "group": "docgen-writetemplatedata-undefined-push",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six tests, one crash: TypeError 'Cannot read properties of undefined (reading push)' at DruxtDocgen.writeTemplateData. Six cases reaching one broken statement is one defect, not six. Kept apart from processVue: different method, different failure mode, no shared frame."
+    }
+  }
+}

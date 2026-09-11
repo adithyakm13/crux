@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:elastic/synthetics:31002476820:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.606Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same zero-step monitor failures, a third run."
+    },
+    "f0002": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same zero-step monitor failures, a third run."
+    },
+    "f0003": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same zero-step monitor failures, a third run."
+    },
+    "f0004": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same zero-step monitor failures, a third run."
+    },
+    "f0005": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same zero-step monitor failures, a third run."
+    }
+  }
+}

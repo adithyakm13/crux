@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:28481948942:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.616Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "control-connection-reconnect-null",
+      "category": "PRODUCT_REGRESSION",
+      "note": "One test failing twice: an AssertionError on reconnect count and a TypeError reading 'endpoint' of null in ControlConnection._refresh. The crash is what the count assertion is measuring the consequence of — the reconnect path dereferences a host that is gone."
+    },
+    "f0002": {
+      "group": "control-connection-reconnect-null",
+      "category": "PRODUCT_REGRESSION",
+      "note": "One test failing twice: an AssertionError on reconnect count and a TypeError reading 'endpoint' of null in ControlConnection._refresh. The crash is what the count assertion is measuring the consequence of — the reconnect path dereferences a host that is gone."
+    }
+  }
+}

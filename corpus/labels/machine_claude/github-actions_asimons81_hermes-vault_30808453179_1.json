@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:30808453179:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.609Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "test-collection-failure",
+      "category": "UNKNOWN",
+      "note": "Four 'collection failure' entries with no message or traceback recorded."
+    },
+    "f0002": {
+      "group": "test-collection-failure",
+      "category": "UNKNOWN",
+      "note": "Four 'collection failure' entries with no message or traceback recorded."
+    },
+    "f0003": {
+      "group": "test-collection-failure",
+      "category": "UNKNOWN",
+      "note": "Four 'collection failure' entries with no message or traceback recorded."
+    },
+    "f0004": {
+      "group": "test-collection-failure",
+      "category": "UNKNOWN",
+      "note": "Four 'collection failure' entries with no message or traceback recorded."
+    }
+  }
+}

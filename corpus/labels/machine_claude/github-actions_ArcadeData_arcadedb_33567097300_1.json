@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33567097300:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.610Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "pq-approximate-search",
+      "category": "UNKNOWN",
+      "note": "IndexException in PQ approximate search."
+    },
+    "f0002": {
+      "group": "raft-forwarding-defects",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Survivors 10 expected, 7 held."
+    },
+    "f0003": {
+      "group": "create-database-400",
+      "category": "UNKNOWN",
+      "note": "'create database RaftDropTest' returned 400 where 200 was expected."
+    },
+    "f0004": {
+      "group": "raft-group-commit-timeout",
+      "category": "UNKNOWN",
+      "note": "Group commit dispatched to Raft, outcome unknown. The error text itself declines to say whether it succeeded."
+    }
+  }
+}

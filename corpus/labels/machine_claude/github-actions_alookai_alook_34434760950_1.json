@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34434760950:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.612Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "user-bar-class",
+      "category": "UNKNOWN",
+      "note": "Two specs failing toHaveClass on shared shell elements."
+    },
+    "f0002": {
+      "group": "user-bar-class",
+      "category": "UNKNOWN",
+      "note": "Two specs failing toHaveClass on shared shell elements."
+    },
+    "f0003": {
+      "group": "community-delete-url",
+      "category": "UNKNOWN",
+      "note": "URL not as expected after a community delete."
+    }
+  }
+}

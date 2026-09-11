@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:tenstorrent/tt-metal:31215156895:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.617Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "all-gather-tensor-mismatch",
+      "category": "UNKNOWN",
+      "note": "Two copies of one all-gather perf test failing a tensor equality check."
+    },
+    "f0002": {
+      "group": "all-gather-tensor-mismatch",
+      "category": "UNKNOWN",
+      "note": "Two copies of one all-gather perf test failing a tensor equality check."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:32614822770:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.609Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "The same external MCP connection failures."
+    },
+    "f0002": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "The same external MCP connection failures."
+    },
+    "f0003": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "The same external MCP connection failures."
+    },
+    "f0004": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "The same external MCP connection failures."
+    }
+  }
+}

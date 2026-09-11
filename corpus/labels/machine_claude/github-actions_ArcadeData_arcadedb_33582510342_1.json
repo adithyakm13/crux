@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33582510342:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.603Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "pq-approximate-search",
+      "category": "UNKNOWN",
+      "note": "IndexException performing PQ approximate search in the vector index."
+    },
+    "f0002": {
+      "group": "http-port-range-exhausted",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "'Unable to listen to a HTTP port in the configured port range 42482 - 42482' — a range of exactly one port, already taken. Three tests fail before their server starts."
+    },
+    "f0003": {
+      "group": "http-port-range-exhausted",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "'Unable to listen to a HTTP port in the configured port range 42482 - 42482' — a range of exactly one port, already taken. Three tests fail before their server starts."
+    },
+    "f0004": {
+      "group": "http-port-range-exhausted",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "'Unable to listen to a HTTP port in the configured port range 42482 - 42482' — a range of exactly one port, already taken. Three tests fail before their server starts."
+    },
+    "f0005": {
+      "group": "grpc-plugin-start",
+      "category": "UNKNOWN",
+      "note": "GrpcServerPlugin failed to start. Plausibly the same port contention, but the payload names a different subsystem and no port, so merging would be a guess."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:33602977931:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.608Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "information-schema-ddl-text",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four exact-string DDL comparisons over placement tables and sequences, both dialects."
+    },
+    "f0002": {
+      "group": "information-schema-ddl-text",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four exact-string DDL comparisons over placement tables and sequences, both dialects."
+    },
+    "f0003": {
+      "group": "information-schema-ddl-text",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four exact-string DDL comparisons over placement tables and sequences, both dialects."
+    },
+    "f0004": {
+      "group": "information-schema-ddl-text",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four exact-string DDL comparisons over placement tables and sequences, both dialects."
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apple/pkl-go:29035070885:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.618Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "loadproject-with-headers",
+      "category": "UNKNOWN",
+      "note": "A test and its subtest, both bare 'Failed'."
+    },
+    "f0002": {
+      "group": "loadproject-with-headers",
+      "category": "UNKNOWN",
+      "note": "A test and its subtest, both bare 'Failed'."
+    }
+  }
+}

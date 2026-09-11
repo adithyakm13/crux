@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:voxel51/fiftyone:33459432399:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.605Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "accelerate-not-installed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same missing 'accelerate' dependency, here surfacing through pytest.importorskip('transformers')."
+    },
+    "f0002": {
+      "group": "accelerate-not-installed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same missing 'accelerate' dependency, here surfacing through pytest.importorskip('transformers')."
+    },
+    "f0003": {
+      "group": "accelerate-not-installed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same missing 'accelerate' dependency, here surfacing through pytest.importorskip('transformers')."
+    },
+    "f0004": {
+      "group": "accelerate-not-installed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same missing 'accelerate' dependency, here surfacing through pytest.importorskip('transformers')."
+    },
+    "f0005": {
+      "group": "accelerate-not-installed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same missing 'accelerate' dependency, here surfacing through pytest.importorskip('transformers')."
+    },
+    "f0006": {
+      "group": "accelerate-not-installed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "The same missing 'accelerate' dependency, here surfacing through pytest.importorskip('transformers')."
+    }
+  }
+}

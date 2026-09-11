@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34202315401:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.609Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "non-member-not-ejected",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two specs in different files asserting the same behaviour: a user who is not a member of a server should be redirected away and is not. Different files, one authorisation rule."
+    },
+    "f0002": {
+      "group": "non-member-not-ejected",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two specs in different files asserting the same behaviour: a user who is not a member of a server should be redirected away and is not. Different files, one authorisation rule."
+    },
+    "f0003": {
+      "group": "channel-ref-pending-anchor",
+      "category": "UNKNOWN",
+      "note": "A pending anchor attribute not as expected."
+    },
+    "f0004": {
+      "group": "server-switch-checkpoint",
+      "category": "UNKNOWN",
+      "note": "A community-channel element not visible after server switching."
+    }
+  }
+}

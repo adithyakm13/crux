@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/beam:33112996724:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.609Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "vertexai-not-available",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four collection failures, each on a pytest.importorskip for 'vertexai' with the reason 'Vertex AI dependencies not available'. The skip guard is itself failing rather than skipping."
+    },
+    "f0002": {
+      "group": "vertexai-not-available",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four collection failures, each on a pytest.importorskip for 'vertexai' with the reason 'Vertex AI dependencies not available'. The skip guard is itself failing rather than skipping."
+    },
+    "f0003": {
+      "group": "vertexai-not-available",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four collection failures, each on a pytest.importorskip for 'vertexai' with the reason 'Vertex AI dependencies not available'. The skip guard is itself failing rather than skipping."
+    },
+    "f0004": {
+      "group": "vertexai-not-available",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four collection failures, each on a pytest.importorskip for 'vertexai' with the reason 'Vertex AI dependencies not available'. The skip guard is itself failing rather than skipping."
+    }
+  }
+}

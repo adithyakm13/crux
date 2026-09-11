@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:LingFrame/LingFrame:34100037426:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.606Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same lingReferenceInjector bean failure, a third run."
+    },
+    "f0002": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same lingReferenceInjector bean failure, a third run."
+    },
+    "f0003": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same lingReferenceInjector bean failure, a third run."
+    },
+    "f0004": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same lingReferenceInjector bean failure, a third run."
+    },
+    "f0005": {
+      "group": "lingreferenceinjector-bean-creation",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same lingReferenceInjector bean failure, a third run."
+    }
+  }
+}

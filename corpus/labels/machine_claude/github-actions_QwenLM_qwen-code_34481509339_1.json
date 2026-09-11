@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:QwenLM/qwen-code:34481509339:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.605Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Identical to run 34465616969, reproducing exactly."
+    },
+    "f0002": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Identical to run 34465616969, reproducing exactly."
+    },
+    "f0003": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Identical to run 34465616969, reproducing exactly."
+    },
+    "f0004": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Identical to run 34465616969, reproducing exactly."
+    },
+    "f0005": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Identical to run 34465616969, reproducing exactly."
+    },
+    "f0006": {
+      "group": "late-source-activation-flag",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Identical to run 34465616969, reproducing exactly."
+    }
+  }
+}

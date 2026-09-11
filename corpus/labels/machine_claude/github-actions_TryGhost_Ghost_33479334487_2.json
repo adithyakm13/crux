@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:TryGhost/Ghost:33479334487:2",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.605Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "published-post-update-text",
+      "category": "UNKNOWN",
+      "note": "Six copies of one e2e spec failing toContainText after updating a published post. One test, six shards or retries; the payload does not say whether the editor, the API or the runner is at fault."
+    },
+    "f0002": {
+      "group": "published-post-update-text",
+      "category": "UNKNOWN",
+      "note": "Six copies of one e2e spec failing toContainText after updating a published post. One test, six shards or retries; the payload does not say whether the editor, the API or the runner is at fault."
+    },
+    "f0003": {
+      "group": "published-post-update-text",
+      "category": "UNKNOWN",
+      "note": "Six copies of one e2e spec failing toContainText after updating a published post. One test, six shards or retries; the payload does not say whether the editor, the API or the runner is at fault."
+    },
+    "f0004": {
+      "group": "published-post-update-text",
+      "category": "UNKNOWN",
+      "note": "Six copies of one e2e spec failing toContainText after updating a published post. One test, six shards or retries; the payload does not say whether the editor, the API or the runner is at fault."
+    },
+    "f0005": {
+      "group": "published-post-update-text",
+      "category": "UNKNOWN",
+      "note": "Six copies of one e2e spec failing toContainText after updating a published post. One test, six shards or retries; the payload does not say whether the editor, the API or the runner is at fault."
+    },
+    "f0006": {
+      "group": "published-post-update-text",
+      "category": "UNKNOWN",
+      "note": "Six copies of one e2e spec failing toContainText after updating a published post. One test, six shards or retries; the payload does not say whether the editor, the API or the runner is at fault."
+    }
+  }
+}

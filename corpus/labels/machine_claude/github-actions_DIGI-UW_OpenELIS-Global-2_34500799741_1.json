@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:DIGI-UW/OpenELIS-Global-2:34500799741:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.615Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "storage-insert-row-count",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same two off-by-one storage insert counts."
+    },
+    "f0002": {
+      "group": "storage-insert-row-count",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same two off-by-one storage insert counts."
+    }
+  }
+}

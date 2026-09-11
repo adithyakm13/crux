@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33597364306:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.612Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "server-503-on-insert",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "HTTP 503 on an INSERT through a follower."
+    },
+    "f0002": {
+      "group": "raft-group-commit-timeout",
+      "category": "UNKNOWN",
+      "note": "Group commit outcome unknown."
+    },
+    "f0003": {
+      "group": "rollback-not-persisted",
+      "category": "PRODUCT_REGRESSION",
+      "note": "'The rolled-back insert must not be persisted' — expected 0 rows, found 1. A durability assertion with an unambiguous meaning."
+    }
+  }
+}

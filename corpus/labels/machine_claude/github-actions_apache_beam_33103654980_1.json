@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/beam:33103654980:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.618Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "yaml-transform-pickle",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two pickling failures in the YAML transform path: 'Unable to translate YamlTransform/Composite' and 'Unable to pickle fn CallableWrapperDoFn'. Both are one serialiser refusing a lambda-bearing transform."
+    },
+    "f0002": {
+      "group": "yaml-transform-pickle",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two pickling failures in the YAML transform path: 'Unable to translate YamlTransform/Composite' and 'Unable to pickle fn CallableWrapperDoFn'. Both are one serialiser refusing a lambda-bearing transform."
+    }
+  }
+}

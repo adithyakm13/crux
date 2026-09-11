@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:siemens/ix:33593151083:2",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.604Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0002": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0003": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0004": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0005": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0006": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0007": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0008": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0009": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0010": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0011": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0012": {
+      "group": "checkbox-group-snapshot-720px",
+      "category": "UNKNOWN",
+      "note": "Twelve checkbox-group visual snapshots all differing by 720 pixels — an identical delta, so one rendering change across every direction and browser. Whether the new rendering or the stored baseline is wrong is exactly what a screenshot diff cannot say."
+    },
+    "f0013": {
+      "group": "range-field-screenshot-timeout",
+      "category": "UNKNOWN",
+      "note": "The range-field spec times out rather than differing. Kept separate: a test that never produced a screenshot has not made a visual comparison at all."
+    },
+    "f0014": {
+      "group": "range-field-screenshot-timeout",
+      "category": "UNKNOWN",
+      "note": "The range-field spec times out rather than differing. Kept separate: a test that never produced a screenshot has not made a visual comparison at all."
+    }
+  }
+}

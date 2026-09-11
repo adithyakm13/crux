@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:datahub-project/datahub:32519914612:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.607Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "threading-speedup-threshold",
+      "category": "UNKNOWN",
+      "note": "'Expected >1.5x speedup but got 1.50x' — 1.4995 against a strict greater-than. A timing assertion failing by four ten-thousandths is a threshold problem, but whether the fix is the code or the bound is not something the payload settles."
+    },
+    "f0002": {
+      "group": "chart-fetch-gating",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of one test: charts are not fetched when explorations are zero but chart count is positive. assert 0 == 1 each time."
+    },
+    "f0003": {
+      "group": "chart-fetch-gating",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of one test: charts are not fetched when explorations are zero but chart count is positive. assert 0 == 1 each time."
+    },
+    "f0004": {
+      "group": "chart-fetch-gating",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of one test: charts are not fetched when explorations are zero but chart count is positive. assert 0 == 1 each time."
+    }
+  }
+}

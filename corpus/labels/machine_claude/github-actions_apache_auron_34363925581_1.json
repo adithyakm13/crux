@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/auron:34363925581:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.600Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0002": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0003": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0004": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0005": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0006": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0007": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0008": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0009": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0010": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0011": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0012": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0013": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    },
+    "f0014": {
+      "group": "not-a-datasource-rdd-partition",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same DataSourceRDDPartition bug as run 34348575052, reproducing exactly."
+    },
+    "f0015": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same Iceberg stage failures."
+    }
+  }
+}

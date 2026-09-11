@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:recharts/recharts:33512941713:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.605Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "dark-mode-vr-timeout",
+      "category": "UNKNOWN",
+      "note": "Nine copies of one visual-regression spec, all 20s timeouts at the same line. One test, nine shards or retries."
+    },
+    "f0002": {
+      "group": "dark-mode-vr-timeout",
+      "category": "UNKNOWN",
+      "note": "Nine copies of one visual-regression spec, all 20s timeouts at the same line. One test, nine shards or retries."
+    },
+    "f0003": {
+      "group": "dark-mode-vr-timeout",
+      "category": "UNKNOWN",
+      "note": "Nine copies of one visual-regression spec, all 20s timeouts at the same line. One test, nine shards or retries."
+    },
+    "f0004": {
+      "group": "dark-mode-vr-timeout",
+      "category": "UNKNOWN",
+      "note": "Nine copies of one visual-regression spec, all 20s timeouts at the same line. One test, nine shards or retries."
+    },
+    "f0005": {
+      "group": "dark-mode-vr-timeout",
+      "category": "UNKNOWN",
+      "note": "Nine copies of one visual-regression spec, all 20s timeouts at the same line. One test, nine shards or retries."
+    },
+    "f0006": {
+      "group": "dark-mode-vr-timeout",
+      "category": "UNKNOWN",
+      "note": "Nine copies of one visual-regression spec, all 20s timeouts at the same line. One test, nine shards or retries."
+    },
+    "f0007": {
+      "group": "dark-mode-vr-timeout",
+      "category": "UNKNOWN",
+      "note": "Nine copies of one visual-regression spec, all 20s timeouts at the same line. One test, nine shards or retries."
+    },
+    "f0008": {
+      "group": "dark-mode-vr-timeout",
+      "category": "UNKNOWN",
+      "note": "Nine copies of one visual-regression spec, all 20s timeouts at the same line. One test, nine shards or retries."
+    },
+    "f0009": {
+      "group": "dark-mode-vr-timeout",
+      "category": "UNKNOWN",
+      "note": "Nine copies of one visual-regression spec, all 20s timeouts at the same line. One test, nine shards or retries."
+    }
+  }
+}

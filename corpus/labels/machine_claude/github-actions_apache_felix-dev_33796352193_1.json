@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/felix-dev:33796352193:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.614Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "system-bundle-headers",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of systemBundleHeaders comparing the exported-package header string. An exact-text assertion over OSGi framework exports — one header changed, three attempts."
+    },
+    "f0002": {
+      "group": "system-bundle-headers",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of systemBundleHeaders comparing the exported-package header string. An exact-text assertion over OSGi framework exports — one header changed, three attempts."
+    },
+    "f0003": {
+      "group": "system-bundle-headers",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of systemBundleHeaders comparing the exported-package header string. An exact-text assertion over OSGi framework exports — one header changed, three attempts."
+    }
+  }
+}

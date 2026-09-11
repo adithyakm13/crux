@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34237934894:3",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.600Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0002": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0003": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0004": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0005": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0006": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0007": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "KafkaConnectorTest awaitility timeouts: expected 0 but was 3 within 10s. Messages not consumed in time; a slow broker and a real consumer bug look identical from here."
+    },
+    "f0008": {
+      "group": "request-reply-error-payload",
+      "category": "UNKNOWN",
+      "note": "testRequestReply got an error document where 'reply-1' was expected. Both carry the same error id, so it is one occurrence reported twice."
+    },
+    "f0009": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "The fakeHost certification-path expectation again."
+    },
+    "f0010": {
+      "group": "keycloak-tenant-role",
+      "category": "UNKNOWN",
+      "note": "Policy enforcer expected true, got false. No other failure in this run touches Keycloak."
+    },
+    "f0011": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "KafkaConnectorTest awaitility timeouts: expected 0 but was 3 within 10s. Messages not consumed in time; a slow broker and a real consumer bug look identical from here."
+    },
+    "f0012": {
+      "group": "request-reply-error-payload",
+      "category": "UNKNOWN",
+      "note": "testRequestReply got an error document where 'reply-1' was expected. Both carry the same error id, so it is one occurrence reported twice."
+    },
+    "f0013": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "The fakeHost certification-path expectation again."
+    }
+  }
+}

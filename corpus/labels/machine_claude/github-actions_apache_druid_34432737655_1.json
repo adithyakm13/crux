@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/druid:34432737655:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.603Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "EasyMock verify on TaskQueue.shutdown."
+    },
+    "f0002": {
+      "group": "latchable-emitter-timeout",
+      "category": "UNKNOWN",
+      "note": "Timed out after 100s waiting for an event."
+    },
+    "f0003": {
+      "group": "resource-handler-jvm-clear",
+      "category": "UNKNOWN",
+      "note": "expected 1 but was 3."
+    },
+    "f0004": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    },
+    "f0005": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    },
+    "f0006": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:32065895502:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.605Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four distinct assertions, each repeated twice: 20==19, 15==14, a growth sum 16984 vs 13907+1695, and a per-tool char map differing in one of twenty entries. Every one is the same measurement disagreeing by a small constant, across scopes and aggregations — one accounting change, four views of it."
+    },
+    "f0002": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four distinct assertions, each repeated twice: 20==19, 15==14, a growth sum 16984 vs 13907+1695, and a per-tool char map differing in one of twenty entries. Every one is the same measurement disagreeing by a small constant, across scopes and aggregations — one accounting change, four views of it."
+    },
+    "f0003": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four distinct assertions, each repeated twice: 20==19, 15==14, a growth sum 16984 vs 13907+1695, and a per-tool char map differing in one of twenty entries. Every one is the same measurement disagreeing by a small constant, across scopes and aggregations — one accounting change, four views of it."
+    },
+    "f0004": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four distinct assertions, each repeated twice: 20==19, 15==14, a growth sum 16984 vs 13907+1695, and a per-tool char map differing in one of twenty entries. Every one is the same measurement disagreeing by a small constant, across scopes and aggregations — one accounting change, four views of it."
+    },
+    "f0005": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four distinct assertions, each repeated twice: 20==19, 15==14, a growth sum 16984 vs 13907+1695, and a per-tool char map differing in one of twenty entries. Every one is the same measurement disagreeing by a small constant, across scopes and aggregations — one accounting change, four views of it."
+    },
+    "f0006": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four distinct assertions, each repeated twice: 20==19, 15==14, a growth sum 16984 vs 13907+1695, and a per-tool char map differing in one of twenty entries. Every one is the same measurement disagreeing by a small constant, across scopes and aggregations — one accounting change, four views of it."
+    },
+    "f0007": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four distinct assertions, each repeated twice: 20==19, 15==14, a growth sum 16984 vs 13907+1695, and a per-tool char map differing in one of twenty entries. Every one is the same measurement disagreeing by a small constant, across scopes and aggregations — one accounting change, four views of it."
+    },
+    "f0008": {
+      "group": "context-size-accounting-off-by-one",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Four distinct assertions, each repeated twice: 20==19, 15==14, a growth sum 16984 vs 13907+1695, and a per-tool char map differing in one of twenty entries. Every one is the same measurement disagreeing by a small constant, across scopes and aggregations — one accounting change, four views of it."
+    }
+  }
+}

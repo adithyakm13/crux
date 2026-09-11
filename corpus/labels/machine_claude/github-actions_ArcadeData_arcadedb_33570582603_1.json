@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33570582603:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.606Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "replication-divergence",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three HA replication failures: an update returning null mid-sequence, page content differing between databases, and a type count of 6 against 5. All three say the replicas did not converge; the comparator is simply looking at different evidence each time."
+    },
+    "f0002": {
+      "group": "replication-divergence",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three HA replication failures: an update returning null mid-sequence, page content differing between databases, and a type count of 6 against 5. All three say the replicas did not converge; the comparator is simply looking at different evidence each time."
+    },
+    "f0003": {
+      "group": "replication-divergence",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three HA replication failures: an update returning null mid-sequence, page content differing between databases, and a type count of 6 against 5. All three say the replicas did not converge; the comparator is simply looking at different evidence each time."
+    },
+    "f0004": {
+      "group": "bolt-routing-table",
+      "category": "UNKNOWN",
+      "note": "Bolt routing expected 1, got 0."
+    },
+    "f0005": {
+      "group": "stale-snapshot-retry-floor",
+      "category": "UNKNOWN",
+      "note": "'a retry was submitted' — expected a non-zero count and got zero."
+    }
+  }
+}

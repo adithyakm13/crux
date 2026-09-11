@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34132277305:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.601Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0002": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0003": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0004": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0005": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0006": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0007": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "Three KafkaConnectorTest awaitility timeouts with different expected counts (0/3, 9/3, 3/0). Different numbers, one stalled consumer."
+    },
+    "f0008": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "Three KafkaConnectorTest awaitility timeouts with different expected counts (0/3, 9/3, 3/0). Different numbers, one stalled consumer."
+    },
+    "f0009": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "Three KafkaConnectorTest awaitility timeouts with different expected counts (0/3, 9/3, 3/0). Different numbers, one stalled consumer."
+    },
+    "f0010": {
+      "group": "request-reply-error-payload",
+      "category": "UNKNOWN",
+      "note": "Error document instead of reply-1."
+    },
+    "f0011": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "fakeHost certification-path expectation."
+    }
+  }
+}

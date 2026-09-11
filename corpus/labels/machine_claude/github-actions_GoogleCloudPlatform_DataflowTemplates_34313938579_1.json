@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:34313938579:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.608Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "spanner-ddl-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three CopyDbIT DDL comparisons. Note f0001 expects no locality_group and f0002/f0004 expect it, so the expectations themselves are inconsistent within one run — which is itself the evidence that a schema-emission change is only half-applied."
+    },
+    "f0002": {
+      "group": "spanner-ddl-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three CopyDbIT DDL comparisons. Note f0001 expects no locality_group and f0002/f0004 expect it, so the expectations themselves are inconsistent within one run — which is itself the evidence that a schema-emission change is only half-applied."
+    },
+    "f0003": {
+      "group": "dataflow-job-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "'Job ID ... failed. Please check cloud console.'"
+    },
+    "f0004": {
+      "group": "spanner-ddl-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three CopyDbIT DDL comparisons. Note f0001 expects no locality_group and f0002/f0004 expect it, so the expectations themselves are inconsistent within one run — which is itself the evidence that a schema-emission change is only half-applied."
+    }
+  }
+}

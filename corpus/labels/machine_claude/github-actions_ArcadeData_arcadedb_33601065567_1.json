@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33601065567:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.613Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "replication-divergence",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Types 6 vs 5 over TLS replication."
+    },
+    "f0002": {
+      "group": "datetime-micros-format",
+      "category": "PRODUCT_REGRESSION",
+      "note": "'2026-09-02T07:05:49.295' against '...295000'. A trailing-zero formatting difference in microsecond timestamps — unambiguous and unrelated to replication."
+    },
+    "f0003": {
+      "group": "durability-boundary-callback",
+      "category": "PRODUCT_REGRESSION",
+      "note": "onOk() must fire at a durability-policy boundary commit and did not."
+    }
+  }
+}

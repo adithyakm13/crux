@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Norconex/crawler:32210224628:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.617Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "start-clean-after-stop",
+      "category": "UNKNOWN",
+      "note": "Expected a positive count, got -4. A negative where a positive was required suggests a counter underflow, but the payload shows only the number."
+    },
+    "f0002": {
+      "group": "credentials-provider-null",
+      "category": "UNKNOWN",
+      "note": "A credentials provider built from XML came back null."
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:mgreminger/EngineeringPaper.xyz:34178582882:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.612Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "esc-undo-delete-value",
+      "category": "UNKNOWN",
+      "note": "Three copies of one spec failing a toBeCloseTo numeric comparison after Esc-to-undo."
+    },
+    "f0002": {
+      "group": "esc-undo-delete-value",
+      "category": "UNKNOWN",
+      "note": "Three copies of one spec failing a toBeCloseTo numeric comparison after Esc-to-undo."
+    },
+    "f0003": {
+      "group": "esc-undo-delete-value",
+      "category": "UNKNOWN",
+      "note": "Three copies of one spec failing a toBeCloseTo numeric comparison after Esc-to-undo."
+    }
+  }
+}

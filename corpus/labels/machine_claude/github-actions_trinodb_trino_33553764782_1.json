@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:trinodb/trino:33553764782:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.603Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "timestamp-ntz-stats-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Five Delta Lake timestamp failures: three SHOW STATS mismatches on timestamp_ntz tables, one LongTimestampWithTimeZone value mismatch, one partitions-table row type mismatch on TIMESTAMP(6) columns. One timestamp representation change, several consumers."
+    },
+    "f0002": {
+      "group": "timestamp-ntz-stats-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Five Delta Lake timestamp failures: three SHOW STATS mismatches on timestamp_ntz tables, one LongTimestampWithTimeZone value mismatch, one partitions-table row type mismatch on TIMESTAMP(6) columns. One timestamp representation change, several consumers."
+    },
+    "f0003": {
+      "group": "timestamp-ntz-stats-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Five Delta Lake timestamp failures: three SHOW STATS mismatches on timestamp_ntz tables, one LongTimestampWithTimeZone value mismatch, one partitions-table row type mismatch on TIMESTAMP(6) columns. One timestamp representation change, several consumers."
+    },
+    "f0004": {
+      "group": "timestamp-predicate-pushdown",
+      "category": "UNKNOWN",
+      "note": "Expected 0 rows processed, got 13 — pushdown not eliminating a predicate. Plausibly the same timestamp change, but this asserts on optimiser behaviour rather than on a value, and the payload does not connect them."
+    },
+    "f0005": {
+      "group": "timestamp-ntz-stats-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Five Delta Lake timestamp failures: three SHOW STATS mismatches on timestamp_ntz tables, one LongTimestampWithTimeZone value mismatch, one partitions-table row type mismatch on TIMESTAMP(6) columns. One timestamp representation change, several consumers."
+    },
+    "f0006": {
+      "group": "timestamp-ntz-stats-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Five Delta Lake timestamp failures: three SHOW STATS mismatches on timestamp_ntz tables, one LongTimestampWithTimeZone value mismatch, one partitions-table row type mismatch on TIMESTAMP(6) columns. One timestamp representation change, several consumers."
+    },
+    "f0007": {
+      "group": "task-results-fetch-failed",
+      "category": "UNKNOWN",
+      "note": "QueryFailedException fetching task results over localhost HTTP."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:30119824948:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.607Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "release-notes-missing-section",
+      "category": "UNKNOWN",
+      "note": "Four copies of one test asserting the README contains \"What's New in 0.21.0\". A documentation assertion; whether the release notes or the expected version string is stale is not in the payload."
+    },
+    "f0002": {
+      "group": "release-notes-missing-section",
+      "category": "UNKNOWN",
+      "note": "Four copies of one test asserting the README contains \"What's New in 0.21.0\". A documentation assertion; whether the release notes or the expected version string is stale is not in the payload."
+    },
+    "f0003": {
+      "group": "release-notes-missing-section",
+      "category": "UNKNOWN",
+      "note": "Four copies of one test asserting the README contains \"What's New in 0.21.0\". A documentation assertion; whether the release notes or the expected version string is stale is not in the payload."
+    },
+    "f0004": {
+      "group": "release-notes-missing-section",
+      "category": "UNKNOWN",
+      "note": "Four copies of one test asserting the README contains \"What's New in 0.21.0\". A documentation assertion; whether the release notes or the expected version string is stale is not in the payload."
+    }
+  }
+}

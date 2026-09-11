@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34339449212:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.615Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "e2e-180s-timeout",
+      "category": "UNKNOWN",
+      "note": "180s timeout."
+    },
+    "f0002": {
+      "group": "websocket-not-authenticated",
+      "category": "UNKNOWN",
+      "note": "'user WebSocket did not authenticate' — the same fixture failure as run 34340951885, on the same test."
+    }
+  }
+}

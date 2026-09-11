@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Sage/carbon:34366004747:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.599Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "menu-fullscreen-focus-restore",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Focus is not returned to the call-to-action after a Menu Fullscreen closes."
+    },
+    "f0002": {
+      "group": "confirm-esc-not-closing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Esc does not detach the alertdialog. Separate component, separate behaviour from the focus group."
+    },
+    "f0003": {
+      "group": "simple-select-enter-selection",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two halves of one behaviour: after Enter on an arrow-key-focused option the confirmed-selection element is neither shown nor hidden as expected."
+    },
+    "f0004": {
+      "group": "simple-select-enter-selection",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two halves of one behaviour: after Enter on an arrow-key-focused option the confirmed-selection element is neither shown nor hidden as expected."
+    },
+    "f0005": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0006": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0007": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0008": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0009": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0010": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0011": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0012": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0013": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0014": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0015": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    },
+    "f0016": {
+      "group": "file-input-drag-timeout",
+      "category": "UNKNOWN",
+      "note": "Twelve file-input drag/drop specs across browsers, all 'Test timeout of 30000ms exceeded' at three source lines. One broken drag interaction repeated over browsers is the obvious reading, but a wholesale 30s timeout is also what a stalled runner looks like, and the payload does not distinguish them."
+    }
+  }
+}

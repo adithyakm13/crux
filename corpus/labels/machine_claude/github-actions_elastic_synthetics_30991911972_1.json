@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:elastic/synthetics:30991911972:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.606Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five monitors, all 'journey did not finish executing, 0 steps ran'. Zero steps means nothing under test was reached; five different monitor ids failing identically is the service, not five journeys."
+    },
+    "f0002": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five monitors, all 'journey did not finish executing, 0 steps ran'. Zero steps means nothing under test was reached; five different monitor ids failing identically is the service, not five journeys."
+    },
+    "f0003": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five monitors, all 'journey did not finish executing, 0 steps ran'. Zero steps means nothing under test was reached; five different monitor ids failing identically is the service, not five journeys."
+    },
+    "f0004": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five monitors, all 'journey did not finish executing, 0 steps ran'. Zero steps means nothing under test was reached; five different monitor ids failing identically is the service, not five journeys."
+    },
+    "f0005": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five monitors, all 'journey did not finish executing, 0 steps ran'. Zero steps means nothing under test was reached; five different monitor ids failing identically is the service, not five journeys."
+    }
+  }
+}

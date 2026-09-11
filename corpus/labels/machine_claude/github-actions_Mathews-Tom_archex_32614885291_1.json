@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:32614885291:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.608Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "MCPError(-32000, 'Connection closed') from the external MCP fixture."
+    },
+    "f0002": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "MCPError(-32000, 'Connection closed') from the external MCP fixture."
+    },
+    "f0003": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "MCPError(-32000, 'Connection closed') from the external MCP fixture."
+    },
+    "f0004": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "MCPError(-32000, 'Connection closed') from the external MCP fixture."
+    }
+  }
+}

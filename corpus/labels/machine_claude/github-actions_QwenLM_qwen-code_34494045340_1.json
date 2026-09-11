@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:QwenLM/qwen-code:34494045340:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.604Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0002": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0003": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0004": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0005": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0006": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0007": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0008": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0009": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0010": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0011": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0012": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0013": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0014": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0015": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0016": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0017": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0018": {
+      "group": "extra-brand-fetch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen cases of one test asserting the request log is ['GET /capabilities'] and finding an extra 'GET /brand'. StrictMode true and false both fail, with two extra requests under StrictMode, which is the same extra fetch doubled by the double-render. One unconditional request that should have been conditional."
+    },
+    "f0019": {
+      "group": "sidebar-brand-null",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six 'expected null not to be null' across two sidebar brand tests. The brand is absent where it should be present — the same brand feature as the fetch group, but a different symptom in a different component, and the payload does not show that one causes the other."
+    },
+    "f0020": {
+      "group": "sidebar-brand-null",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six 'expected null not to be null' across two sidebar brand tests. The brand is absent where it should be present — the same brand feature as the fetch group, but a different symptom in a different component, and the payload does not show that one causes the other."
+    },
+    "f0021": {
+      "group": "sidebar-brand-null",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six 'expected null not to be null' across two sidebar brand tests. The brand is absent where it should be present — the same brand feature as the fetch group, but a different symptom in a different component, and the payload does not show that one causes the other."
+    },
+    "f0022": {
+      "group": "sidebar-brand-null",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six 'expected null not to be null' across two sidebar brand tests. The brand is absent where it should be present — the same brand feature as the fetch group, but a different symptom in a different component, and the payload does not show that one causes the other."
+    },
+    "f0023": {
+      "group": "sidebar-brand-null",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six 'expected null not to be null' across two sidebar brand tests. The brand is absent where it should be present — the same brand feature as the fetch group, but a different symptom in a different component, and the payload does not show that one causes the other."
+    },
+    "f0024": {
+      "group": "sidebar-brand-null",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Six 'expected null not to be null' across two sidebar brand tests. The brand is absent where it should be present — the same brand feature as the fetch group, but a different symptom in a different component, and the payload does not show that one causes the other."
+    }
+  }
+}

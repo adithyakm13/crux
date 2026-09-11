@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/pulsar:34378415833:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.614Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "namespace-not-found",
+      "category": "UNKNOWN",
+      "note": "Namespace not found during a load-manager metrics test."
+    },
+    "f0002": {
+      "group": "message-metadata-required-fields",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two parameterisations of one transaction test, both 'Some required fields are missing' from MessageMetadata.checkRequiredFields. A message built without a mandatory field."
+    },
+    "f0003": {
+      "group": "message-metadata-required-fields",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two parameterisations of one transaction test, both 'Some required fields are missing' from MessageMetadata.checkRequiredFields. A message built without a mandatory field."
+    }
+  }
+}

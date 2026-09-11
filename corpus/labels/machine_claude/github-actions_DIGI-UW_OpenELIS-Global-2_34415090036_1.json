@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:DIGI-UW/OpenELIS-Global-2:34415090036:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.599Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "analyzer-ingress-credential-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "'ANALYZER_INGRESS_USER is required for analyzer-ingress Playwright scenarios', thrown by the credential guard before any product code runs. A missing CI secret."
+    },
+    "f0002": {
+      "group": "analyzer-ingress-credential-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "'ANALYZER_INGRESS_USER is required for analyzer-ingress Playwright scenarios', thrown by the credential guard before any product code runs. A missing CI secret."
+    },
+    "f0003": {
+      "group": "ast-case-setup-timeout",
+      "category": "UNKNOWN",
+      "note": "180s test timeout in captureCard."
+    },
+    "f0004": {
+      "group": "browser-launch-closed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "browserType.launch: target page, context or browser has been closed. The browser never started; nothing about the product was exercised."
+    },
+    "f0005": {
+      "group": "whonet-worklist-not-visible",
+      "category": "UNKNOWN",
+      "note": "Two toBeVisible failures on microbiology worklist regions."
+    },
+    "f0006": {
+      "group": "whonet-worklist-not-visible",
+      "category": "UNKNOWN",
+      "note": "Two toBeVisible failures on microbiology worklist regions."
+    }
+  }
+}

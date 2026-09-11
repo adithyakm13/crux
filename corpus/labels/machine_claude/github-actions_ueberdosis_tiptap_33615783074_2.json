@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ueberdosis/tiptap:33615783074:2",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.618Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "execution-context-destroyed",
+      "category": "UNKNOWN",
+      "note": "locator.evaluate failed because the page navigated underneath it."
+    },
+    "f0002": {
+      "group": "ruby-text-annotation",
+      "category": "UNKNOWN",
+      "note": "Ruby text annotation not applied to the selection."
+    }
+  }
+}

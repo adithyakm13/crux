@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apple/pkl-go:29857993835:2",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.616Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "build-failed",
+      "category": "UNKNOWN",
+      "note": "Two '[build failed] Build error' entries. Compilation never produced a binary, so no test ran and the artifact carries no compiler output."
+    },
+    "f0002": {
+      "group": "build-failed",
+      "category": "UNKNOWN",
+      "note": "Two '[build failed] Build error' entries. Compilation never produced a binary, so no test ran and the artifact carries no compiler output."
+    }
+  }
+}

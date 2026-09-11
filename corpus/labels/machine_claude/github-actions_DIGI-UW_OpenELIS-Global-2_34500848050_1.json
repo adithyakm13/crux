@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:DIGI-UW/OpenELIS-Global-2:34500848050:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.615Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "storage-insert-row-count",
+      "category": "PRODUCT_REGRESSION",
+      "note": "expected 2 got 3, and expected 3 got 4. Both storage inserts off by exactly one row in the same direction — one extra row being created, seen twice."
+    },
+    "f0002": {
+      "group": "storage-insert-row-count",
+      "category": "PRODUCT_REGRESSION",
+      "note": "expected 2 got 3, and expected 3 got 4. Both storage inserts off by exactly one row in the same direction — one extra row being created, seen twice."
+    }
+  }
+}

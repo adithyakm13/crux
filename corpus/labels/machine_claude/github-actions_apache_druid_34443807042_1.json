@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/druid:34443807042:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.602Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "resource-handler-jvm-clear",
+      "category": "UNKNOWN",
+      "note": "expected 1 but was 3."
+    },
+    "f0002": {
+      "group": "segment-server-balance",
+      "category": "UNKNOWN",
+      "note": "Expected 625.0, got 569.0 and 565.0. A sampling-balance assertion failing by similar margins twice."
+    },
+    "f0003": {
+      "group": "segment-server-balance",
+      "category": "UNKNOWN",
+      "note": "Expected 625.0, got 569.0 and 565.0. A sampling-balance assertion failing by similar margins twice."
+    },
+    "f0004": {
+      "group": "compaction-segment-count",
+      "category": "UNKNOWN",
+      "note": "Segment count mismatch in sys.segments, expected 2, got nothing."
+    },
+    "f0005": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    },
+    "f0006": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "993, 997, 999, 983 of 1000."
+    },
+    "f0007": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "993, 997, 999, 983 of 1000."
+    },
+    "f0008": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "993, 997, 999, 983 of 1000."
+    },
+    "f0009": {
+      "group": "mass-launch-task-count",
+      "category": "UNKNOWN",
+      "note": "993, 997, 999, 983 of 1000."
+    }
+  }
+}

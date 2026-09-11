@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:TryGhost/Ghost:33452886432:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.614Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "published-post-update-text",
+      "category": "UNKNOWN",
+      "note": "Three copies of the published-post update spec."
+    },
+    "f0002": {
+      "group": "published-post-update-text",
+      "category": "UNKNOWN",
+      "note": "Three copies of the published-post update spec."
+    },
+    "f0003": {
+      "group": "published-post-update-text",
+      "category": "UNKNOWN",
+      "note": "Three copies of the published-post update spec."
+    }
+  }
+}

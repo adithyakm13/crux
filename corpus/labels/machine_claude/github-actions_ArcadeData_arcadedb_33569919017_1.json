@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33569919017:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.610Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "raft-forwarding-defects",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two guarded Raft defects firing: survivors 10 expected but 9 held, and a follower deriving its own endpoint as the leader address. Both are about forwarding between replicas and both cite the issue they guard."
+    },
+    "f0002": {
+      "group": "raft-forwarding-defects",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Two guarded Raft defects firing: survivors 10 expected but 9 held, and a follower deriving its own endpoint as the leader address. Both are about forwarding between replicas and both cite the issue they guard."
+    },
+    "f0003": {
+      "group": "server-2481-unavailable",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "FileNotFoundException and HTTP 503 against 127.0.0.1:2481. The second node is not serving; kept apart from the Raft assertions because these never reached a Raft decision."
+    },
+    "f0004": {
+      "group": "server-2481-unavailable",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "FileNotFoundException and HTTP 503 against 127.0.0.1:2481. The second node is not serving; kept apart from the Raft assertions because these never reached a Raft decision."
+    }
+  }
+}

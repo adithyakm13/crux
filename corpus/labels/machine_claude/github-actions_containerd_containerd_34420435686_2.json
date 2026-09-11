@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:containerd/containerd:34420435686:2",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.604Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "mount-gc-orphan-suite",
+      "category": "UNKNOWN",
+      "note": "Nine Go tests reporting only 'Failed' with no message, stack or assertion. Names cluster around orphaned mounts and v1/v2 id handling, which is suggestive, but crux has no evidence here beyond the names — and grouping on names alone is what the protocol forbids. Recorded as one group with an explicit warning rather than split arbitrarily."
+    },
+    "f0002": {
+      "group": "mount-gc-orphan-suite",
+      "category": "UNKNOWN",
+      "note": "Nine Go tests reporting only 'Failed' with no message, stack or assertion. Names cluster around orphaned mounts and v1/v2 id handling, which is suggestive, but crux has no evidence here beyond the names — and grouping on names alone is what the protocol forbids. Recorded as one group with an explicit warning rather than split arbitrarily."
+    },
+    "f0003": {
+      "group": "mount-gc-orphan-suite",
+      "category": "UNKNOWN",
+      "note": "Nine Go tests reporting only 'Failed' with no message, stack or assertion. Names cluster around orphaned mounts and v1/v2 id handling, which is suggestive, but crux has no evidence here beyond the names — and grouping on names alone is what the protocol forbids. Recorded as one group with an explicit warning rather than split arbitrarily."
+    },
+    "f0004": {
+      "group": "mount-gc-orphan-suite",
+      "category": "UNKNOWN",
+      "note": "Nine Go tests reporting only 'Failed' with no message, stack or assertion. Names cluster around orphaned mounts and v1/v2 id handling, which is suggestive, but crux has no evidence here beyond the names — and grouping on names alone is what the protocol forbids. Recorded as one group with an explicit warning rather than split arbitrarily."
+    },
+    "f0005": {
+      "group": "mount-gc-orphan-suite",
+      "category": "UNKNOWN",
+      "note": "Nine Go tests reporting only 'Failed' with no message, stack or assertion. Names cluster around orphaned mounts and v1/v2 id handling, which is suggestive, but crux has no evidence here beyond the names — and grouping on names alone is what the protocol forbids. Recorded as one group with an explicit warning rather than split arbitrarily."
+    },
+    "f0006": {
+      "group": "mount-gc-orphan-suite",
+      "category": "UNKNOWN",
+      "note": "Nine Go tests reporting only 'Failed' with no message, stack or assertion. Names cluster around orphaned mounts and v1/v2 id handling, which is suggestive, but crux has no evidence here beyond the names — and grouping on names alone is what the protocol forbids. Recorded as one group with an explicit warning rather than split arbitrarily."
+    },
+    "f0007": {
+      "group": "mount-gc-orphan-suite",
+      "category": "UNKNOWN",
+      "note": "Nine Go tests reporting only 'Failed' with no message, stack or assertion. Names cluster around orphaned mounts and v1/v2 id handling, which is suggestive, but crux has no evidence here beyond the names — and grouping on names alone is what the protocol forbids. Recorded as one group with an explicit warning rather than split arbitrarily."
+    },
+    "f0008": {
+      "group": "mount-gc-orphan-suite",
+      "category": "UNKNOWN",
+      "note": "Nine Go tests reporting only 'Failed' with no message, stack or assertion. Names cluster around orphaned mounts and v1/v2 id handling, which is suggestive, but crux has no evidence here beyond the names — and grouping on names alone is what the protocol forbids. Recorded as one group with an explicit warning rather than split arbitrarily."
+    },
+    "f0009": {
+      "group": "mount-gc-orphan-suite",
+      "category": "UNKNOWN",
+      "note": "Nine Go tests reporting only 'Failed' with no message, stack or assertion. Names cluster around orphaned mounts and v1/v2 id handling, which is suggestive, but crux has no evidence here beyond the names — and grouping on names alone is what the protocol forbids. Recorded as one group with an explicit warning rather than split arbitrarily."
+    }
+  }
+}

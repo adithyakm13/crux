@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:elastic/synthetics:30989842631:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.612Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three monitors, zero steps ran."
+    },
+    "f0002": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three monitors, zero steps ran."
+    },
+    "f0003": {
+      "group": "journey-did-not-execute",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three monitors, zero steps ran."
+    }
+  }
+}

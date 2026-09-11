@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33582329209:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.615Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "three-node-schema-not-replicated",
+      "category": "PRODUCT_REGRESSION",
+      "note": "A schema check failing and a 'Type with name FriendOf was not found' on the other node. Both say the schema did not reach all three nodes."
+    },
+    "f0002": {
+      "group": "three-node-schema-not-replicated",
+      "category": "PRODUCT_REGRESSION",
+      "note": "A schema check failing and a 'Type with name FriendOf was not found' on the other node. Both say the schema did not reach all three nodes."
+    }
+  }
+}

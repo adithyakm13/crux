@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:34293699226:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.609Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "dataflow-job-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "'Job ID ... failed.'"
+    },
+    "f0002": {
+      "group": "spanner-ddl-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three CopyDbIT DDL comparisons carrying locality_group options."
+    },
+    "f0003": {
+      "group": "spanner-ddl-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three CopyDbIT DDL comparisons carrying locality_group options."
+    },
+    "f0004": {
+      "group": "spanner-ddl-mismatch",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three CopyDbIT DDL comparisons carrying locality_group options."
+    }
+  }
+}

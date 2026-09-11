@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/inlong:29798010137:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.615Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "schedule-info-register-update",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Register and update of schedule info both returning false where true was expected. Two operations on one entity failing together."
+    },
+    "f0002": {
+      "group": "schedule-info-register-update",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Register and update of schedule info both returning false where true was expected. Two operations on one entity failing together."
+    }
+  }
+}

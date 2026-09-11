@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:datahub-project/datahub:32529128890:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.609Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "docker-compose-setup-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All four fail on setup with a failing 'docker compose' command. The fixture stack never comes up."
+    },
+    "f0002": {
+      "group": "docker-compose-setup-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All four fail on setup with a failing 'docker compose' command. The fixture stack never comes up."
+    },
+    "f0003": {
+      "group": "docker-compose-setup-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All four fail on setup with a failing 'docker compose' command. The fixture stack never comes up."
+    },
+    "f0004": {
+      "group": "docker-compose-setup-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All four fail on setup with a failing 'docker compose' command. The fixture stack never comes up."
+    }
+  }
+}

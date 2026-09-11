@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:tenstorrent/tt-metal:31215674349:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.605Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "card-hang",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four '[HANG DETECTED] Card hang detected' and two 'TT_THROW ... TIMEOUT: device timeout' from the dispatch system memory manager. Merged deliberately: the hang detector and the dispatch timeout are two instruments reporting one wedged device, and splitting them would count one hardware event twice."
+    },
+    "f0002": {
+      "group": "card-hang",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four '[HANG DETECTED] Card hang detected' and two 'TT_THROW ... TIMEOUT: device timeout' from the dispatch system memory manager. Merged deliberately: the hang detector and the dispatch timeout are two instruments reporting one wedged device, and splitting them would count one hardware event twice."
+    },
+    "f0003": {
+      "group": "card-hang",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four '[HANG DETECTED] Card hang detected' and two 'TT_THROW ... TIMEOUT: device timeout' from the dispatch system memory manager. Merged deliberately: the hang detector and the dispatch timeout are two instruments reporting one wedged device, and splitting them would count one hardware event twice."
+    },
+    "f0004": {
+      "group": "card-hang",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four '[HANG DETECTED] Card hang detected' and two 'TT_THROW ... TIMEOUT: device timeout' from the dispatch system memory manager. Merged deliberately: the hang detector and the dispatch timeout are two instruments reporting one wedged device, and splitting them would count one hardware event twice."
+    },
+    "f0005": {
+      "group": "card-hang",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four '[HANG DETECTED] Card hang detected' and two 'TT_THROW ... TIMEOUT: device timeout' from the dispatch system memory manager. Merged deliberately: the hang detector and the dispatch timeout are two instruments reporting one wedged device, and splitting them would count one hardware event twice."
+    },
+    "f0006": {
+      "group": "card-hang",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Four '[HANG DETECTED] Card hang detected' and two 'TT_THROW ... TIMEOUT: device timeout' from the dispatch system memory manager. Merged deliberately: the hang detector and the dispatch timeout are two instruments reporting one wedged device, and splitting them would count one hardware event twice."
+    }
+  }
+}

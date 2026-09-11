@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34377303228:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.611Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "e2e-180s-timeout",
+      "category": "UNKNOWN",
+      "note": "Two unrelated specs both exceeding a 180s timeout. Grouped on the timeout rather than the feature: at three minutes with no assertion reached, the shared fact is that nothing completed, and a runner stall would produce exactly this."
+    },
+    "f0002": {
+      "group": "bot-token-heatmap",
+      "category": "UNKNOWN",
+      "note": "A heatmap attribute mismatch — an actual assertion, so kept out of the timeout group."
+    },
+    "f0003": {
+      "group": "e2e-180s-timeout",
+      "category": "UNKNOWN",
+      "note": "Two unrelated specs both exceeding a 180s timeout. Grouped on the timeout rather than the feature: at three minutes with no assertion reached, the shared fact is that nothing completed, and a runner stall would produce exactly this."
+    }
+  }
+}

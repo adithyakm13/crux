@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34467770606:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.601Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "Four KafkaConnectorTest awaitility timeouts, expected 4 or 6, got 3."
+    },
+    "f0002": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "Four KafkaConnectorTest awaitility timeouts, expected 4 or 6, got 3."
+    },
+    "f0003": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "Four KafkaConnectorTest awaitility timeouts, expected 4 or 6, got 3."
+    },
+    "f0004": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "Four KafkaConnectorTest awaitility timeouts, expected 4 or 6, got 3."
+    },
+    "f0005": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0006": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0007": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0008": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0009": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0010": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    }
+  }
+}

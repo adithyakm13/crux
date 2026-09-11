@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ueberdosis/tiptap:33136841488:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.611Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "autolink-relink-unset",
+      "category": "UNKNOWN",
+      "note": "Two copies of the autolink validation spec."
+    },
+    "f0002": {
+      "group": "autolink-relink-unset",
+      "category": "UNKNOWN",
+      "note": "Two copies of the autolink validation spec."
+    },
+    "f0003": {
+      "group": "decoration-counter-index",
+      "category": "UNKNOWN",
+      "note": "Decoration counter count mismatch."
+    },
+    "f0004": {
+      "group": "paragraph-shortcut-style",
+      "category": "UNKNOWN",
+      "note": "Keyboard shortcut does not apply the paragraph style."
+    }
+  }
+}

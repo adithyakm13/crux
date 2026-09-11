@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33583876103:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.613Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "deep-repetition-stack-overflow",
+      "category": "PRODUCT_REGRESSION",
+      "note": "StackOverflowError in a test whose name asserts the call stack is not exhausted. The test states the invariant and the invariant broke."
+    },
+    "f0002": {
+      "group": "raft-group-commit-timeout",
+      "category": "UNKNOWN",
+      "note": "Group commit outcome unknown."
+    },
+    "f0003": {
+      "group": "bolt-routing-table",
+      "category": "UNKNOWN",
+      "note": "Bolt routing expected 1, got 0."
+    }
+  }
+}

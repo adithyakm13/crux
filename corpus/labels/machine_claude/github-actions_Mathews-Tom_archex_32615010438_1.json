@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:32615010438:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.605Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "Six copies of two tests, all MCPError(-32000, 'Connection closed'). The external MCP server the fixture spawns is going away; whether it crashed on start or was never reachable is not in the payload."
+    },
+    "f0002": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "Six copies of two tests, all MCPError(-32000, 'Connection closed'). The external MCP server the fixture spawns is going away; whether it crashed on start or was never reachable is not in the payload."
+    },
+    "f0003": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "Six copies of two tests, all MCPError(-32000, 'Connection closed'). The external MCP server the fixture spawns is going away; whether it crashed on start or was never reachable is not in the payload."
+    },
+    "f0004": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "Six copies of two tests, all MCPError(-32000, 'Connection closed'). The external MCP server the fixture spawns is going away; whether it crashed on start or was never reachable is not in the payload."
+    },
+    "f0005": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "Six copies of two tests, all MCPError(-32000, 'Connection closed'). The external MCP server the fixture spawns is going away; whether it crashed on start or was never reachable is not in the payload."
+    },
+    "f0006": {
+      "group": "mcp-connection-closed",
+      "category": "UNKNOWN",
+      "note": "Six copies of two tests, all MCPError(-32000, 'Connection closed'). The external MCP server the fixture spawns is going away; whether it crashed on start or was never reachable is not in the payload."
+    }
+  }
+}

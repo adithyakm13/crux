@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34340951885:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.613Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "e2e-180s-timeout",
+      "category": "UNKNOWN",
+      "note": "180s timeout with no assertion reached."
+    },
+    "f0002": {
+      "group": "websocket-not-authenticated",
+      "category": "UNKNOWN",
+      "note": "'user WebSocket did not authenticate' from the shared fixture."
+    },
+    "f0003": {
+      "group": "scroll-distance-precondition",
+      "category": "UNKNOWN",
+      "note": "A scroll-distance precondition never stabilised."
+    }
+  }
+}

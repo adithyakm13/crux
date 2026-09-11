@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:30975277590:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.613Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "windows-file-lock-on-unlink",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "PermissionError WinError 32 — the file is held by another process at os.unlink. A Windows file-locking artefact of the test teardown, not the product."
+    },
+    "f0002": {
+      "group": "migration-integrity-record-missing",
+      "category": "PRODUCT_REGRESSION",
+      "note": "'Chain should be healthy after migration under contention; got status=failed reason=missing_integrity_record'. A concurrency defect the test was written to catch."
+    },
+    "f0003": {
+      "group": "windows-file-lock-on-unlink",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "PermissionError WinError 32 — the file is held by another process at os.unlink. A Windows file-locking artefact of the test teardown, not the product."
+    }
+  }
+}

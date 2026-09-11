@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:34273643677:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.601Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "spanner-ddl-locality-group",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Nine CopyDbIT and CopyDbRandomisedIT comparisons where the expected DDL carries OPTIONS (locality_group='default') on every column. A schema-emission change that shows up on both GoogleSQL and PostgreSQL dialects and on both fixed and randomised schemas — one serialiser, many tests."
+    },
+    "f0002": {
+      "group": "dataflow-job-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Two RuntimeExceptions: 'Job ID ... under cloud-teleport-testing failed. Please check cloud console.' The message defers to a console crux cannot read."
+    },
+    "f0003": {
+      "group": "spanner-ddl-locality-group",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Nine CopyDbIT and CopyDbRandomisedIT comparisons where the expected DDL carries OPTIONS (locality_group='default') on every column. A schema-emission change that shows up on both GoogleSQL and PostgreSQL dialects and on both fixed and randomised schemas — one serialiser, many tests."
+    },
+    "f0004": {
+      "group": "spanner-ddl-locality-group",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Nine CopyDbIT and CopyDbRandomisedIT comparisons where the expected DDL carries OPTIONS (locality_group='default') on every column. A schema-emission change that shows up on both GoogleSQL and PostgreSQL dialects and on both fixed and randomised schemas — one serialiser, many tests."
+    },
+    "f0005": {
+      "group": "dataflow-job-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Two RuntimeExceptions: 'Job ID ... under cloud-teleport-testing failed. Please check cloud console.' The message defers to a console crux cannot read."
+    },
+    "f0006": {
+      "group": "spanner-ddl-locality-group",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Nine CopyDbIT and CopyDbRandomisedIT comparisons where the expected DDL carries OPTIONS (locality_group='default') on every column. A schema-emission change that shows up on both GoogleSQL and PostgreSQL dialects and on both fixed and randomised schemas — one serialiser, many tests."
+    },
+    "f0007": {
+      "group": "spanner-ddl-locality-group",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Nine CopyDbIT and CopyDbRandomisedIT comparisons where the expected DDL carries OPTIONS (locality_group='default') on every column. A schema-emission change that shows up on both GoogleSQL and PostgreSQL dialects and on both fixed and randomised schemas — one serialiser, many tests."
+    },
+    "f0008": {
+      "group": "spanner-ddl-locality-group",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Nine CopyDbIT and CopyDbRandomisedIT comparisons where the expected DDL carries OPTIONS (locality_group='default') on every column. A schema-emission change that shows up on both GoogleSQL and PostgreSQL dialects and on both fixed and randomised schemas — one serialiser, many tests."
+    },
+    "f0009": {
+      "group": "spanner-ddl-locality-group",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Nine CopyDbIT and CopyDbRandomisedIT comparisons where the expected DDL carries OPTIONS (locality_group='default') on every column. A schema-emission change that shows up on both GoogleSQL and PostgreSQL dialects and on both fixed and randomised schemas — one serialiser, many tests."
+    },
+    "f0010": {
+      "group": "spanner-ddl-locality-group",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Nine CopyDbIT and CopyDbRandomisedIT comparisons where the expected DDL carries OPTIONS (locality_group='default') on every column. A schema-emission change that shows up on both GoogleSQL and PostgreSQL dialects and on both fixed and randomised schemas — one serialiser, many tests."
+    },
+    "f0011": {
+      "group": "spanner-ddl-locality-group",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Nine CopyDbIT and CopyDbRandomisedIT comparisons where the expected DDL carries OPTIONS (locality_group='default') on every column. A schema-emission change that shows up on both GoogleSQL and PostgreSQL dialects and on both fixed and randomised schemas — one serialiser, many tests."
+    }
+  }
+}

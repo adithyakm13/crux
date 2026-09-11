@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:containerd/containerd:34407933094:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.614Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "image-and-lease-suite",
+      "category": "UNKNOWN",
+      "note": "Three Go tests reporting only 'Failed'. Image pull, image usage and lease resources are plausibly one leased-content problem, but the artifact carries no message at all, so this grouping rests on names — recorded with that warning rather than split."
+    },
+    "f0002": {
+      "group": "image-and-lease-suite",
+      "category": "UNKNOWN",
+      "note": "Three Go tests reporting only 'Failed'. Image pull, image usage and lease resources are plausibly one leased-content problem, but the artifact carries no message at all, so this grouping rests on names — recorded with that warning rather than split."
+    },
+    "f0003": {
+      "group": "image-and-lease-suite",
+      "category": "UNKNOWN",
+      "note": "Three Go tests reporting only 'Failed'. Image pull, image usage and lease resources are plausibly one leased-content problem, but the artifact carries no message at all, so this grouping rests on names — recorded with that warning rather than split."
+    }
+  }
+}

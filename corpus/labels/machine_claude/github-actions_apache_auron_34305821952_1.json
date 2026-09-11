@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/auron:34305821952:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.600Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0002": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0003": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0004": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0005": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0006": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0007": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0008": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0009": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0010": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0011": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0012": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0013": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0014": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    },
+    "f0015": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same fifteen Iceberg stage failures as run 34331728554."
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/auron:34245810300:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.604Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "native-paimon-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All five Paimon tests abort with a Spark stage failure in the native scan or shuffle exchange. Same shape as the Iceberg runs in this corpus: every test exercising the native path fails and nothing else is in the run."
+    },
+    "f0002": {
+      "group": "native-paimon-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All five Paimon tests abort with a Spark stage failure in the native scan or shuffle exchange. Same shape as the Iceberg runs in this corpus: every test exercising the native path fails and nothing else is in the run."
+    },
+    "f0003": {
+      "group": "native-paimon-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All five Paimon tests abort with a Spark stage failure in the native scan or shuffle exchange. Same shape as the Iceberg runs in this corpus: every test exercising the native path fails and nothing else is in the run."
+    },
+    "f0004": {
+      "group": "native-paimon-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All five Paimon tests abort with a Spark stage failure in the native scan or shuffle exchange. Same shape as the Iceberg runs in this corpus: every test exercising the native path fails and nothing else is in the run."
+    },
+    "f0005": {
+      "group": "native-paimon-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All five Paimon tests abort with a Spark stage failure in the native scan or shuffle exchange. Same shape as the Iceberg runs in this corpus: every test exercising the native path fails and nothing else is in the run."
+    }
+  }
+}

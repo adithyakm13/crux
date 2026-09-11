@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:sanity-io/sanity:33889905474:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.598Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "variant-create-dialog",
+      "category": "UNKNOWN",
+      "note": "Both fail around the Create-variant dialog: one times out waiting for it, one fails a URL assertion after submitting it. Plausibly one broken dialog flow, but a Playwright timeout is equally consistent with a slow runner and the payload does not separate them."
+    },
+    "f0002": {
+      "group": "variant-create-dialog",
+      "category": "UNKNOWN",
+      "note": "Both fail around the Create-variant dialog: one times out waiting for it, one fails a URL assertion after submitting it. Plausibly one broken dialog flow, but a Playwright timeout is equally consistent with a slow runner and the payload does not separate them."
+    },
+    "f0003": {
+      "group": "draft-document-validation-count",
+      "category": "UNKNOWN",
+      "note": "Both fail a toBeGreaterThanOrEqual on validation-error count inside createDraftDocument. Shared helper and shared assertion, so probably one cause; whether the product or the fixture is wrong is not visible here."
+    },
+    "f0004": {
+      "group": "draft-document-validation-count",
+      "category": "UNKNOWN",
+      "note": "Both fail a toBeGreaterThanOrEqual on validation-error count inside createDraftDocument. Shared helper and shared assertion, so probably one cause; whether the product or the fixture is wrong is not visible here."
+    },
+    "f0005": {
+      "group": "nested-object-dialog-not-visible",
+      "category": "UNKNOWN",
+      "note": "Two enhanced-object-dialog specs failing toBeVisible on the dialog and on a field inside it."
+    },
+    "f0006": {
+      "group": "nested-object-dialog-not-visible",
+      "category": "UNKNOWN",
+      "note": "Two enhanced-object-dialog specs failing toBeVisible on the dialog and on a field inside it."
+    },
+    "f0007": {
+      "group": "document-header-breadcrumb",
+      "category": "UNKNOWN",
+      "note": "Breadcrumb not visible after collapsing the focus pane. Kept separate: different spec file, different element, nothing ties it to the dialog groups."
+    }
+  }
+}

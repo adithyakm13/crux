@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/felix-dev:33558447345:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.609Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "no-framework-context",
+      "category": "UNKNOWN",
+      "note": "Four attempts of one test, IOException 'No framework context found' in the URL handler. One test, four retries."
+    },
+    "f0002": {
+      "group": "no-framework-context",
+      "category": "UNKNOWN",
+      "note": "Four attempts of one test, IOException 'No framework context found' in the URL handler. One test, four retries."
+    },
+    "f0003": {
+      "group": "no-framework-context",
+      "category": "UNKNOWN",
+      "note": "Four attempts of one test, IOException 'No framework context found' in the URL handler. One test, four retries."
+    },
+    "f0004": {
+      "group": "no-framework-context",
+      "category": "UNKNOWN",
+      "note": "Four attempts of one test, IOException 'No framework context found' in the URL handler. One test, four retries."
+    }
+  }
+}

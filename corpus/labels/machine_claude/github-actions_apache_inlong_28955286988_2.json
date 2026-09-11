@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/inlong:28955286988:2",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.609Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "symlink-bypass-not-rejected",
+      "category": "PRODUCT_REGRESSION",
+      "note": "A symlink parent pointing outside the root is accepted for a non-existing path. A path-traversal guard not firing."
+    },
+    "f0002": {
+      "group": "shell-metachar-not-rejected",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three command-validator cases where '?', '*' in the middle of a path, and a trailing '*' are all accepted rather than rejected. One metacharacter check missing, three shapes of it. Kept apart from the symlink case: different validator, different class, and fixing one would not fix the other."
+    },
+    "f0003": {
+      "group": "shell-metachar-not-rejected",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three command-validator cases where '?', '*' in the middle of a path, and a trailing '*' are all accepted rather than rejected. One metacharacter check missing, three shapes of it. Kept apart from the symlink case: different validator, different class, and fixing one would not fix the other."
+    },
+    "f0004": {
+      "group": "shell-metachar-not-rejected",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three command-validator cases where '?', '*' in the middle of a path, and a trailing '*' are all accepted rather than rejected. One metacharacter check missing, three shapes of it. Kept apart from the symlink case: different validator, different class, and fixing one would not fix the other."
+    }
+  }
+}

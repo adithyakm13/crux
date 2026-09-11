@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:34350377904:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.613Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "pipeline-conditions-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three PostgreSQL-to-Spanner size tests, all CONDITION_MET expected and TIMEOUT received. The pipeline never converged."
+    },
+    "f0002": {
+      "group": "pipeline-conditions-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three PostgreSQL-to-Spanner size tests, all CONDITION_MET expected and TIMEOUT received. The pipeline never converged."
+    },
+    "f0003": {
+      "group": "pipeline-conditions-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Three PostgreSQL-to-Spanner size tests, all CONDITION_MET expected and TIMEOUT received. The pipeline never converged."
+    }
+  }
+}

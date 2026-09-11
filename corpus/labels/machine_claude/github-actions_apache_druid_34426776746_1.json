@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/druid:34426776746:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.606Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "resource-handler-jvm-clear",
+      "category": "UNKNOWN",
+      "note": "expected 1 but was 3."
+    },
+    "f0002": {
+      "group": "checkpoint-inactive-taskgroup",
+      "category": "UNKNOWN",
+      "note": "expected true, got false."
+    },
+    "f0003": {
+      "group": "incremental-handoff",
+      "category": "UNKNOWN",
+      "note": "expected SUCCESS, got FAILED."
+    },
+    "f0004": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    },
+    "f0005": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    }
+  }
+}

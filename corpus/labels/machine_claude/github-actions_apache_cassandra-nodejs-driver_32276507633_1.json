@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:32276507633:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.614Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Two 'before all' hook timeouts."
+    },
+    "f0002": {
+      "group": "server-api-before-all-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Two 'before all' hook timeouts."
+    },
+    "f0003": {
+      "group": "schema-change-not-observed",
+      "category": "UNKNOWN",
+      "note": "ControlConnection never saw the SCHEMA_CHANGE event after 100 attempts. Adjacent to the connection failures but this one did connect."
+    }
+  }
+}

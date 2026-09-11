@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34200133233:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.602Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0002": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0003": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0004": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0005": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0006": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture."
+    },
+    "f0007": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "javaxNetSsl 500."
+    },
+    "f0008": {
+      "group": "kafka-connector-lag",
+      "category": "UNKNOWN",
+      "note": "Awaitility timeout, expected 4, got 3."
+    }
+  }
+}

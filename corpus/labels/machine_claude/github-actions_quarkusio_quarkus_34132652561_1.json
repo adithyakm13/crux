@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34132652561:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.601Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0002": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0003": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0004": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0005": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0006": {
+      "group": "deliberate-flaky-fixture",
+      "category": "FLAKY",
+      "note": "The FlakingException fixture again."
+    },
+    "f0007": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "Five javaxNetSsl 500s. Same TLS integration class as the fakeHost failures in sibling runs."
+    },
+    "f0008": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "Five javaxNetSsl 500s. Same TLS integration class as the fakeHost failures in sibling runs."
+    },
+    "f0009": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "Five javaxNetSsl 500s. Same TLS integration class as the fakeHost failures in sibling runs."
+    },
+    "f0010": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "Five javaxNetSsl 500s. Same TLS integration class as the fakeHost failures in sibling runs."
+    },
+    "f0011": {
+      "group": "ssl-truststore-fakehost",
+      "category": "UNKNOWN",
+      "note": "Five javaxNetSsl 500s. Same TLS integration class as the fakeHost failures in sibling runs."
+    }
+  }
+}

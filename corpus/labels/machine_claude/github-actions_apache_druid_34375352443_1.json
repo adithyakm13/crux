@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/druid:34375352443:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.602Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "EasyMock verify on TaskQueue.shutdown, four attempts."
+    },
+    "f0002": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "EasyMock verify on TaskQueue.shutdown, four attempts."
+    },
+    "f0003": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "EasyMock verify on TaskQueue.shutdown, four attempts."
+    },
+    "f0004": {
+      "group": "supervisor-stop-taskgroup-mock",
+      "category": "TEST_DEFECT",
+      "note": "EasyMock verify on TaskQueue.shutdown, four attempts."
+    },
+    "f0005": {
+      "group": "resource-handler-jvm-clear",
+      "category": "UNKNOWN",
+      "note": "expected 1 but was 3."
+    },
+    "f0006": {
+      "group": "counter-snapshots-npe",
+      "category": "PRODUCT_REGRESSION",
+      "note": "NullPointerException: CounterSnapshotsTree.snapshot returned null and the caller dereferenced it. A crash at a named line, not an assertion."
+    },
+    "f0007": {
+      "group": "partition-row-count",
+      "category": "UNKNOWN",
+      "note": "Partitions #36 and #47 of one generatePartitionsWithMaxCount case."
+    },
+    "f0008": {
+      "group": "partition-row-count",
+      "category": "UNKNOWN",
+      "note": "Partitions #36 and #47 of one generatePartitionsWithMaxCount case."
+    },
+    "f0009": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/druid:34443754758:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.603Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "resource-handler-jvm-clear",
+      "category": "UNKNOWN",
+      "note": "expected 1 but was 3."
+    },
+    "f0002": {
+      "group": "load-rate-change",
+      "category": "UNKNOWN",
+      "note": "testLoadRateIsChangedWhenLoadSucceeds expected true, got false."
+    },
+    "f0003": {
+      "group": "latchable-emitter-timeout",
+      "category": "UNKNOWN",
+      "note": "Timed out after 120s waiting for an event."
+    },
+    "f0004": {
+      "group": "restore-after-persisting-sequences",
+      "category": "UNKNOWN",
+      "note": "expected SUCCESS, got FAILED."
+    },
+    "f0005": {
+      "group": "kubernetes-peon-mock-calls",
+      "category": "TEST_DEFECT",
+      "note": "peonClient mock mismatch."
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34404675875:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.614Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "onboarding-timeout",
+      "category": "UNKNOWN",
+      "note": "Two onboarding specs timing out at 90s and 60s."
+    },
+    "f0002": {
+      "group": "onboarding-timeout",
+      "category": "UNKNOWN",
+      "note": "Two onboarding specs timing out at 90s and 60s."
+    },
+    "f0003": {
+      "group": "dm-route-cache",
+      "category": "UNKNOWN",
+      "note": "A warm-cache equality assertion across DM routes."
+    }
+  }
+}

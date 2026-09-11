@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:trinodb/trino:33392379662:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.618Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "cassandra-query-timeout-12s",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Two Cassandra connector queries both timing out after exactly PT12S. A backend not answering within the client deadline."
+    },
+    "f0002": {
+      "group": "cassandra-query-timeout-12s",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Two Cassandra connector queries both timing out after exactly PT12S. A backend not answering within the client deadline."
+    }
+  }
+}

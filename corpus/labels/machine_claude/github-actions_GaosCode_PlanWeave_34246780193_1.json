@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GaosCode/PlanWeave:34246780193:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.604Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0002": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0003": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0004": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0005": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0006": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0007": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0008": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0009": {
+      "group": "migration-reconciliation-list",
+      "category": "PRODUCT_REGRESSION",
+      "note": "29 entries where 28 were expected. Adjacent to the version bump above and plausibly the same migration, but this asserts on list contents rather than a version number, and the payload does not show the extra element."
+    },
+    "f0010": {
+      "group": "acp-task-restorations-already-exists",
+      "category": "PRODUCT_REGRESSION",
+      "note": "'table acp_task_restorations already exists' on four upgrade paths. A migration creating a table without guarding for its prior existence — a different defect from the version constant, and one that stops the upgrade outright."
+    },
+    "f0011": {
+      "group": "acp-task-restorations-already-exists",
+      "category": "PRODUCT_REGRESSION",
+      "note": "'table acp_task_restorations already exists' on four upgrade paths. A migration creating a table without guarding for its prior existence — a different defect from the version constant, and one that stops the upgrade outright."
+    },
+    "f0012": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0013": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0014": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0015": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0016": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0017": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0018": {
+      "group": "acp-task-restorations-already-exists",
+      "category": "PRODUCT_REGRESSION",
+      "note": "'table acp_task_restorations already exists' on four upgrade paths. A migration creating a table without guarding for its prior existence — a different defect from the version constant, and one that stops the upgrade outright."
+    },
+    "f0019": {
+      "group": "acp-task-restorations-already-exists",
+      "category": "PRODUCT_REGRESSION",
+      "note": "'table acp_task_restorations already exists' on four upgrade paths. A migration creating a table without guarding for its prior existence — a different defect from the version constant, and one that stops the upgrade outright."
+    },
+    "f0020": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0021": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0022": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0023": {
+      "group": "schema-version-70-vs-69",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Eighteen migration tests all asserting 'expected 70 to be 69'. A migration was added and the tests' expected latest-schema-version constant was not moved with it — or the migration should not have shipped. Either way one edit, eighteen assertions."
+    },
+    "f0024": {
+      "group": "ripgrep-missing",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "'spawn rg ENOENT' — ripgrep is not installed on the runner. Nothing to do with migrations."
+    }
+  }
+}

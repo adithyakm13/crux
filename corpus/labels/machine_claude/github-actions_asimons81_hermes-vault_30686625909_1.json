@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:asimons81/hermes-vault:30686625909:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.607Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "test-collection-failure",
+      "category": "UNKNOWN",
+      "note": "Four 'collection failure' entries for one module with no message, traceback or import error. pytest could not even collect the file, and the artifact records nothing about why."
+    },
+    "f0002": {
+      "group": "test-collection-failure",
+      "category": "UNKNOWN",
+      "note": "Four 'collection failure' entries for one module with no message, traceback or import error. pytest could not even collect the file, and the artifact records nothing about why."
+    },
+    "f0003": {
+      "group": "test-collection-failure",
+      "category": "UNKNOWN",
+      "note": "Four 'collection failure' entries for one module with no message, traceback or import error. pytest could not even collect the file, and the artifact records nothing about why."
+    },
+    "f0004": {
+      "group": "test-collection-failure",
+      "category": "UNKNOWN",
+      "note": "Four 'collection failure' entries for one module with no message, traceback or import error. pytest could not even collect the file, and the artifact records nothing about why."
+    }
+  }
+}

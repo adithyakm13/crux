@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:tenstorrent/tt-metal:31217788905:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.617Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "card-hang",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Two '[HANG DETECTED] Card hang detected'."
+    },
+    "f0002": {
+      "group": "card-hang",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Two '[HANG DETECTED] Card hang detected'."
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:33584263451:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.603Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "dataflow-job-failed-before-launch",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'The job failed before launch!' plus one 'Job ID ... failed'. Six unrelated templates — JDBC, PubSub, Kafka, PostgreSQL, Iceberg — cannot all regress at once; the launcher is rejecting every job."
+    },
+    "f0002": {
+      "group": "dataflow-job-failed-before-launch",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'The job failed before launch!' plus one 'Job ID ... failed'. Six unrelated templates — JDBC, PubSub, Kafka, PostgreSQL, Iceberg — cannot all regress at once; the launcher is rejecting every job."
+    },
+    "f0003": {
+      "group": "dataflow-job-failed-before-launch",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'The job failed before launch!' plus one 'Job ID ... failed'. Six unrelated templates — JDBC, PubSub, Kafka, PostgreSQL, Iceberg — cannot all regress at once; the launcher is rejecting every job."
+    },
+    "f0004": {
+      "group": "dataflow-job-failed-before-launch",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'The job failed before launch!' plus one 'Job ID ... failed'. Six unrelated templates — JDBC, PubSub, Kafka, PostgreSQL, Iceberg — cannot all regress at once; the launcher is rejecting every job."
+    },
+    "f0005": {
+      "group": "dataflow-job-failed-before-launch",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'The job failed before launch!' plus one 'Job ID ... failed'. Six unrelated templates — JDBC, PubSub, Kafka, PostgreSQL, Iceberg — cannot all regress at once; the launcher is rejecting every job."
+    },
+    "f0006": {
+      "group": "dataflow-job-failed-before-launch",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'The job failed before launch!' plus one 'Job ID ... failed'. Six unrelated templates — JDBC, PubSub, Kafka, PostgreSQL, Iceberg — cannot all regress at once; the launcher is rejecting every job."
+    }
+  }
+}

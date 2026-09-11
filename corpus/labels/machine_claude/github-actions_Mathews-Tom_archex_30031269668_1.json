@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:30031269668:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.612Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "context-receipt-enum-members",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The ContextReceipt enum member set differs by one name, three copies."
+    },
+    "f0002": {
+      "group": "context-receipt-enum-members",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The ContextReceipt enum member set differs by one name, three copies."
+    },
+    "f0003": {
+      "group": "context-receipt-enum-members",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The ContextReceipt enum member set differs by one name, three copies."
+    }
+  }
+}

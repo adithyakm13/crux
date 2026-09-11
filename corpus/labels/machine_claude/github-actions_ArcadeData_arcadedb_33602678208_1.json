@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ArcadeData/arcadedb:33602678208:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.610Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "neo4j-bolt-plugin-start",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All four: 'Error starting plugin: Neo4j-Bolt'. The server never starts, so no Raft behaviour is exercised. Given the sibling run's single-port range exhaustion, a bound port is the likely cause, but the payload names only the plugin."
+    },
+    "f0002": {
+      "group": "neo4j-bolt-plugin-start",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All four: 'Error starting plugin: Neo4j-Bolt'. The server never starts, so no Raft behaviour is exercised. Given the sibling run's single-port range exhaustion, a bound port is the likely cause, but the payload names only the plugin."
+    },
+    "f0003": {
+      "group": "neo4j-bolt-plugin-start",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All four: 'Error starting plugin: Neo4j-Bolt'. The server never starts, so no Raft behaviour is exercised. Given the sibling run's single-port range exhaustion, a bound port is the likely cause, but the payload names only the plugin."
+    },
+    "f0004": {
+      "group": "neo4j-bolt-plugin-start",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "All four: 'Error starting plugin: Neo4j-Bolt'. The server never starts, so no Raft behaviour is exercised. Given the sibling run's single-port range exhaustion, a bound port is the likely cause, but the payload names only the plugin."
+    }
+  }
+}

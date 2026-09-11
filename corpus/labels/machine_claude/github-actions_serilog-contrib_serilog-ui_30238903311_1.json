@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:serilog-contrib/serilog-ui:30238903311:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.604Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0002": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0003": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0004": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0005": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0006": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0007": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0008": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0009": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0010": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0011": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0012": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0013": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0014": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0015": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0016": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0017": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    },
+    "f0018": {
+      "group": "esm-spy-on-usesearchparams",
+      "category": "TEST_DEFECT",
+      "note": "All eighteen fail identically: 'Cannot spy on export useSearchParams. Module namespace is not configurable in ESM.' The test setup uses a spying technique ESM forbids; the product is never reached. Vitest even links its own documentation for the limitation."
+    }
+  }
+}

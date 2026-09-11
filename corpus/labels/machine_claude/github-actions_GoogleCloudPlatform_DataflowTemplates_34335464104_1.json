@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:34335464104:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.600Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "template-jar-developer-path",
+      "category": "TEST_DEFECT",
+      "note": "NoSuchFileException on /home/dhwanilpatel_google_com/MyStorage/OracleSupport/DataflowTemplates/... — an absolute path from one contributor's workstation baked into the test configuration. It cannot resolve anywhere else."
+    },
+    "f0002": {
+      "group": "template-jar-developer-path",
+      "category": "TEST_DEFECT",
+      "note": "NoSuchFileException on /home/dhwanilpatel_google_com/MyStorage/OracleSupport/DataflowTemplates/... — an absolute path from one contributor's workstation baked into the test configuration. It cannot resolve anywhere else."
+    },
+    "f0003": {
+      "group": "datastream-create-failed",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "DatastreamResourceManagerException: failed to create stream. Provisioning, before any pipeline runs."
+    },
+    "f0004": {
+      "group": "template-jar-developer-path",
+      "category": "TEST_DEFECT",
+      "note": "NoSuchFileException on /home/dhwanilpatel_google_com/MyStorage/OracleSupport/DataflowTemplates/... — an absolute path from one contributor's workstation baked into the test configuration. It cannot resolve anywhere else."
+    },
+    "f0005": {
+      "group": "pipeline-conditions-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five migration tests where the pipeline never reached CONDITION_MET and timed out. Kept apart from the data-mismatch group below: a pipeline that never finishes and one that finishes with wrong rows are different failures, and merging them would assume the mismatch is just the timeout seen earlier."
+    },
+    "f0006": {
+      "group": "pipeline-conditions-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five migration tests where the pipeline never reached CONDITION_MET and timed out. Kept apart from the data-mismatch group below: a pipeline that never finishes and one that finishes with wrong rows are different failures, and merging them would assume the mismatch is just the timeout seen earlier."
+    },
+    "f0007": {
+      "group": "pipeline-conditions-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five migration tests where the pipeline never reached CONDITION_MET and timed out. Kept apart from the data-mismatch group below: a pipeline that never finishes and one that finishes with wrong rows are different failures, and merging them would assume the mismatch is just the timeout seen earlier."
+    },
+    "f0008": {
+      "group": "migrated-rows-mismatch",
+      "category": "UNKNOWN",
+      "note": "Rows arrive but do not match: missing MIGRATION_SHARD_ID, timezone columns off. Real data reached Spanner, so this is not a provisioning failure — but whether the template, the fixture or the source DB is wrong is not visible in the payload."
+    },
+    "f0009": {
+      "group": "migrated-rows-mismatch",
+      "category": "UNKNOWN",
+      "note": "Rows arrive but do not match: missing MIGRATION_SHARD_ID, timezone columns off. Real data reached Spanner, so this is not a provisioning failure — but whether the template, the fixture or the source DB is wrong is not visible in the payload."
+    },
+    "f0010": {
+      "group": "migrated-rows-mismatch",
+      "category": "UNKNOWN",
+      "note": "Rows arrive but do not match: missing MIGRATION_SHARD_ID, timezone columns off. Real data reached Spanner, so this is not a provisioning failure — but whether the template, the fixture or the source DB is wrong is not visible in the payload."
+    },
+    "f0011": {
+      "group": "pipeline-conditions-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five migration tests where the pipeline never reached CONDITION_MET and timed out. Kept apart from the data-mismatch group below: a pipeline that never finishes and one that finishes with wrong rows are different failures, and merging them would assume the mismatch is just the timeout seen earlier."
+    },
+    "f0012": {
+      "group": "migrated-rows-mismatch",
+      "category": "UNKNOWN",
+      "note": "Rows arrive but do not match: missing MIGRATION_SHARD_ID, timezone columns off. Real data reached Spanner, so this is not a provisioning failure — but whether the template, the fixture or the source DB is wrong is not visible in the payload."
+    },
+    "f0013": {
+      "group": "oracle-test-user-provisioning",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'Failed to execute SQL statement: CREATE USER U_xxxxx IDENTIFIED BY P_xxxxx' plus one ORA-02421 'missing or invalid schema authorization identifier'. Merged on cause rather than message: ORA-02421 is what a later statement says when the user those CREATE USER calls were meant to make does not exist."
+    },
+    "f0014": {
+      "group": "oracle-test-user-provisioning",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'Failed to execute SQL statement: CREATE USER U_xxxxx IDENTIFIED BY P_xxxxx' plus one ORA-02421 'missing or invalid schema authorization identifier'. Merged on cause rather than message: ORA-02421 is what a later statement says when the user those CREATE USER calls were meant to make does not exist."
+    },
+    "f0015": {
+      "group": "oracle-test-user-provisioning",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'Failed to execute SQL statement: CREATE USER U_xxxxx IDENTIFIED BY P_xxxxx' plus one ORA-02421 'missing or invalid schema authorization identifier'. Merged on cause rather than message: ORA-02421 is what a later statement says when the user those CREATE USER calls were meant to make does not exist."
+    },
+    "f0016": {
+      "group": "oracle-test-user-provisioning",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'Failed to execute SQL statement: CREATE USER U_xxxxx IDENTIFIED BY P_xxxxx' plus one ORA-02421 'missing or invalid schema authorization identifier'. Merged on cause rather than message: ORA-02421 is what a later statement says when the user those CREATE USER calls were meant to make does not exist."
+    },
+    "f0017": {
+      "group": "oracle-test-user-provisioning",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'Failed to execute SQL statement: CREATE USER U_xxxxx IDENTIFIED BY P_xxxxx' plus one ORA-02421 'missing or invalid schema authorization identifier'. Merged on cause rather than message: ORA-02421 is what a later statement says when the user those CREATE USER calls were meant to make does not exist."
+    },
+    "f0018": {
+      "group": "oracle-test-user-provisioning",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five 'Failed to execute SQL statement: CREATE USER U_xxxxx IDENTIFIED BY P_xxxxx' plus one ORA-02421 'missing or invalid schema authorization identifier'. Merged on cause rather than message: ORA-02421 is what a later statement says when the user those CREATE USER calls were meant to make does not exist."
+    },
+    "f0019": {
+      "group": "pipeline-conditions-timeout",
+      "category": "ENVIRONMENT_FAILURE",
+      "note": "Five migration tests where the pipeline never reached CONDITION_MET and timed out. Kept apart from the data-mismatch group below: a pipeline that never finishes and one that finishes with wrong rows are different failures, and merging them would assume the mismatch is just the timeout seen earlier."
+    },
+    "f0020": {
+      "group": "migrated-rows-mismatch",
+      "category": "UNKNOWN",
+      "note": "Rows arrive but do not match: missing MIGRATION_SHARD_ID, timezone columns off. Real data reached Spanner, so this is not a provisioning failure — but whether the template, the fixture or the source DB is wrong is not visible in the payload."
+    }
+  }
+}

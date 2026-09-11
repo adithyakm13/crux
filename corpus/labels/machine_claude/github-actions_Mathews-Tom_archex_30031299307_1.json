@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:Mathews-Tom/archex:30031299307:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.611Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "context-receipt-enum-members",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of one test: the ContextReceipt enum members differ from the expected set by one name. An enum value renamed on one side only."
+    },
+    "f0002": {
+      "group": "context-receipt-enum-members",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of one test: the ContextReceipt enum members differ from the expected set by one name. An enum value renamed on one side only."
+    },
+    "f0003": {
+      "group": "context-receipt-enum-members",
+      "category": "PRODUCT_REGRESSION",
+      "note": "Three copies of one test: the ContextReceipt enum members differ from the expected set by one name. An enum value renamed on one side only."
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/auron:34331728554:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.600Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0002": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0003": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0004": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0005": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0006": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0007": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0008": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0009": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0010": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0011": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0012": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0013": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0014": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    },
+    "f0015": {
+      "group": "native-iceberg-scan-task-failure",
+      "category": "PRODUCT_REGRESSION",
+      "note": "All fifteen Iceberg tests abort with a Spark stage failure at the same point. Every test in the suite that exercises the native Iceberg scan fails and the run contains nothing else, which is what a broken code path looks like rather than a flaky environment."
+    }
+  }
+}

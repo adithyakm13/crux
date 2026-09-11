@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:34269023866:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.610Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "information-schema-ddl-text",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same four information-schema DDL comparisons."
+    },
+    "f0002": {
+      "group": "information-schema-ddl-text",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same four information-schema DDL comparisons."
+    },
+    "f0003": {
+      "group": "information-schema-ddl-text",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same four information-schema DDL comparisons."
+    },
+    "f0004": {
+      "group": "information-schema-ddl-text",
+      "category": "PRODUCT_REGRESSION",
+      "note": "The same four information-schema DDL comparisons."
+    }
+  }
+}

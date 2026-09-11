@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apple/pkl-go:28979455316:1",
+  "labeler": "machine:claude",
+  "labeledAt": "2026-09-11T07:12:42.613Z",
+  "context": "full",
+  "labels": {
+    "f0001": {
+      "group": "loadproject-with-headers",
+      "category": "UNKNOWN",
+      "note": "'No test result found' and two 'Failed' with no message. The Go adapter has recorded the outcome and nothing else; a parent test and its subtest are among them, which is a hierarchy rather than independent causes."
+    },
+    "f0002": {
+      "group": "loadproject-with-headers",
+      "category": "UNKNOWN",
+      "note": "'No test result found' and two 'Failed' with no message. The Go adapter has recorded the outcome and nothing else; a parent test and its subtest are among them, which is a hierarchy rather than independent causes."
+    },
+    "f0003": {
+      "group": "loadproject-with-headers",
+      "category": "UNKNOWN",
+      "note": "'No test result found' and two 'Failed' with no message. The Go adapter has recorded the outcome and nothing else; a parent test and its subtest are among them, which is a hierarchy rather than independent causes."
+    }
+  }
+}
