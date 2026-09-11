@@ -377,3 +377,36 @@ size:
 The agreement and separability numbers are less exposed: Cohen's kappa and the
 separability rate are per-failure, not per-pair, so 156 failures is a real
 sample for those. Only the pair-based clustering metric collapses to n=9.
+
+### Gate figures are computed over the committable corpus, not the disk
+
+Two categories of harvested run are kept on disk and out of git: copyleft
+(GPL/LGPL/AGPL and similar reciprocal licences) and any licence GitHub could
+not identify. crux itself is Apache-2.0, and the stored payload — failure
+messages and stack traces — is arguably factual CI output rather than licensed
+expression, but "arguably" is not a basis for putting it in git history.
+
+The consequence is not the count, it is reproducibility. A held-out run is
+present for every number computed on the harvesting machine and absent from
+every number computed on a fresh clone. At the point this policy was confirmed:
+
+```
+held out: 53 run(s), 2678 failure(s), 12 repositories, 12 of them in the 5-24 band
+```
+
+Twelve in-band runs is material — the whole reason the band is tracked is that
+the clustering interval is set by run count, and 80 is where the lower bound
+starts to mean anything. Three of the four largest hold-outs are mid-size Java
+projects (the SonarSource pair, Oblikovati) found by exactly the code-search
+sourcing that works best, so this is a recurring cost rather than a one-off.
+
+So `gateZeroStatus` evaluates every requirement over the committable runs and
+reports the hold-out separately, above the gate table rather than below it,
+because it changes what every number in that table is a number about. A gate
+that only the harvesting machine can reproduce is not a gate; it is a claim
+about one filesystem.
+
+`corpus holdout` lists the affected runs and `--write` regenerates the block in
+`.gitignore`. It is regenerated rather than maintained, because the list
+changes with every harvest and a stale one is how copyleft content reaches git
+history without anyone deciding it should.

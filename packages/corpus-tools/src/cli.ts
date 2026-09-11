@@ -11,6 +11,7 @@
  *   corpus import                        read a filled worksheet back
  *   corpus ledger                        worksheet as a labelling page
  *   corpus scan                          which repos would actually yield data
+ *   corpus holdout                       which runs may not be committed
  */
 
 import { readFile } from 'node:fs/promises';
@@ -30,6 +31,14 @@ import {
 import { formatBaselineReport, runBaseline } from './baseline.ts';
 import { formatSample, sampleForLabelling } from './sample.ts';
 import { buildLedger } from './ledger.ts';
+import {
+  formatHoldOut,
+  holdOutReason,
+  isHeldOut,
+  renderGitignore,
+  type HoldOutEntry,
+} from './license.ts';
+import { corpusRunDir } from './schema.ts';
 import { probeRepo, type ProbeResult } from './harvest.ts';
 import { buildWorksheet, parseWorksheet } from './worksheet.ts';
 import { SCHEMA_VERSION } from '@cruxci/core';
@@ -62,6 +71,7 @@ function usage(): string {
     '  corpus agreement --a <labeler> --b <labeler>',
     '  corpus separability --full <labeler> --payload <labeler>',
     '  corpus baseline --labeler <name>',
+    '  corpus holdout [--write]           licence hold-out list for .gitignore',
     '',
     'Options:',
     '  --corpus DIR        corpus directory (default: ./corpus)',
@@ -362,6 +372,43 @@ async function main(): Promise<number> {
       for (const r of result.runs) process.stdout.write(r.corpusRunId + '\n');
     } else {
       process.stdout.write(formatSample(result) + '\n');
+    }
+    return 0;
+  }
+
+  if (command === 'holdout') {
+    // Recomputed rather than maintained by hand: the list changes with every
+    // harvest, and a stale one is the failure mode that puts copyleft content
+    // into git history without anyone deciding to.
+    const runs = await loadRuns(corpusDir);
+    const entries: HoldOutEntry[] = [];
+    for (const run of runs) {
+      const reason = holdOutReason(run);
+      if (reason === null) continue;
+      entries.push({
+        dir: corpusRunDir(run.corpusRunId),
+        repo: run.source.repo,
+        license: run.source.licenseSpdx ?? run.source.licenseRaw ?? 'none',
+        reason,
+        failures: run.failures.length,
+      });
+    }
+    process.stdout.write(formatHoldOut(entries, runs.length));
+
+    if (flags.get('write') === true) {
+      const { readFile, writeFile } = await import('node:fs/promises');
+      const path = resolve('.gitignore');
+      let existing = '';
+      try {
+        existing = await readFile(path, 'utf8');
+      } catch {
+        existing = '';
+      }
+      const rel = entries.map((e) => `corpus/runs/${e.dir}`);
+      await writeFile(path, renderGitignore(existing, rel), 'utf8');
+      process.stdout.write(`\nwrote ${rel.length} path(s) to ${path}\n`);
+    } else if (entries.length > 0) {
+      process.stdout.write('\nRe-run with --write to update .gitignore.\n');
     }
     return 0;
   }

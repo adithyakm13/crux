@@ -5,23 +5,55 @@ dist/
 corpus/raw/
 corpus/.cache/
 
-# Corpus runs held out of version control pending a licence decision.
-#
-# Two categories, both on disk and usable locally, neither committed:
-#
-#  1. Unidentified licence — GitHub reports NOASSERTION for a LICENSE file it
-#     cannot classify, which is not the same as having no licence.
-#
-#  2. Copyleft — GPL/LGPL/AGPL. crux itself is Apache-2.0, and committing
-#     copyleft-derived content into it is a decision for a human, not a default.
-#     The stored payload is failure messages and stack traces, arguably factual
-#     CI output rather than licensed expression, but "arguably" is not a basis
-#     for putting it in git history.
-#
-# Regenerate this list after a harvest; force-add one run to override:
+# Generated labelling pages: rebuild with `corpus ledger`, never review a 600KB diff
+corpus/worksheets/*.html
+
+# >>> corpus holdout (generated — do not edit by hand) >>>
+# Runs held out of version control: copyleft, or a licence GitHub could not
+# identify. Present on disk and usable locally; absent from a fresh clone.
+# Regenerate with `corpus holdout --write`. Force-add one to override:
 #   git add -f corpus/runs/<dir>
 corpus/runs/github-actions_HobbitDur_FF8UltimateEditor_34338551290_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33153335855_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33159545389_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33160746688_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33162719774_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33163624770_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33384495622_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33473731061_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33473740834_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33481317552_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33483513564_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33485746160_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33499251312_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_33503390529_1
+corpus/runs/github-actions_Oblikovati_Oblikovati_34280554924_1
 corpus/runs/github-actions_PostHog_posthog_30958002173_1
+corpus/runs/github-actions_SonarSource_sonarlint-core_28396058556_2
+corpus/runs/github-actions_SonarSource_sonarlint-core_28659355844_2
+corpus/runs/github-actions_SonarSource_sonarlint-core_28868510946_2
+corpus/runs/github-actions_SonarSource_sonarlint-core_28918923738_3
+corpus/runs/github-actions_SonarSource_sonarlint-core_29560707003_1
+corpus/runs/github-actions_SonarSource_sonarlint-core_29585804016_1
+corpus/runs/github-actions_SonarSource_sonarlint-core_29713917614_1
+corpus/runs/github-actions_SonarSource_sonarlint-core_29801488291_1
+corpus/runs/github-actions_SonarSource_sonarlint-core_29918620977_1
+corpus/runs/github-actions_SonarSource_sonarlint-core_29920442768_3
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_29572642554_1
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_29752014747_2
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_29752020677_1
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_29752022072_1
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_30180289252_1
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_30244766490_1
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_30521697921_7
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_32004095917_2
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_32342282066_4
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_32457014860_3
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_32699830380_1
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_33150066269_1
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_33366790590_1
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_34321778970_1
+corpus/runs/github-actions_SonarSource_sonarlint-eclipse_34449237180_1
 corpus/runs/github-actions_ag-grid_ag-grid_32964424029_1
 corpus/runs/github-actions_ag-grid_ag-grid_33077370609_2
 corpus/runs/github-actions_canonical_lxd-ui_33537798827_1
@@ -34,6 +66,4 @@ corpus/runs/github-actions_openobserve_openobserve_33512788428_1
 corpus/runs/github-actions_solidtime-io_solidtime_33403829384_1
 corpus/runs/github-actions_tomquist_AstraMeter_28618285926_1
 corpus/runs/github-actions_tomquist_AstraMeter_31775024322_1
-
-# Generated labelling pages: rebuild with `corpus ledger`, never review a 600KB diff
-corpus/worksheets/*.html
+# <<< corpus holdout <<<

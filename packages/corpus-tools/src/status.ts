@@ -16,6 +16,7 @@ import {
   type RunLabels,
 } from './schema.ts';
 import { alignLabelers } from './label.ts';
+import { isHeldOut } from './license.ts';
 import { bootstrapProportion, pairwiseAgreement } from '@cruxci/core';
 
 export interface Requirement {
@@ -34,6 +35,19 @@ export interface Requirement {
 
 export interface GateZeroStatus {
   corpusDir: string;
+  /**
+   * Runs present on disk but excluded from every figure below, because their
+   * licence keeps them out of git. A gate computed over the on-disk corpus is
+   * not reproducible from a clone, so the gates are computed over what is
+   * committable and this records the difference.
+   */
+  heldOut: {
+    runs: number;
+    failures: number;
+    repositories: number;
+    runsWithAtLeast5Failures: number;
+    runsInBand: number;
+  };
   runs: number;
   failures: number;
   repositories: number;
@@ -80,8 +94,20 @@ export interface GateZeroStatus {
 
 export async function gateZeroStatus(
   corpusDir: string,
-  runs: CorpusRun[],
+  allRuns: CorpusRun[],
 ): Promise<GateZeroStatus> {
+  // Gates are evaluated over what a fresh clone would have. A held-out run is
+  // real evidence and stays usable locally, but a number that only this
+  // machine can reproduce is not a gate — it is a claim about one filesystem.
+  const held = allRuns.filter(isHeldOut);
+  const runs = allRuns.filter((r) => !isHeldOut(r));
+  const heldOut = {
+    runs: held.length,
+    failures: held.reduce((n, r) => n + r.failures.length, 0),
+    repositories: new Set(held.map((r) => r.source.repo)).size,
+    runsWithAtLeast5Failures: held.filter((r) => r.failures.length >= 5).length,
+    runsInBand: held.filter((r) => r.failures.length >= 5 && r.failures.length <= 24).length,
+  };
   const repos = new Set(runs.map((r) => r.source.repo));
   const failures = runs.reduce((n, r) => n + r.failures.length, 0);
   const runsWith5 = runs.filter((r) => r.failures.length >= 5).length;
@@ -165,6 +191,7 @@ export async function gateZeroStatus(
 
   return {
     corpusDir,
+    heldOut,
     runs: runs.length,
     failures,
     repositories: repos.size,
@@ -445,6 +472,17 @@ export function formatGateZeroStatus(s: GateZeroStatus): string {
         .join(' ') || 'n/a'
     }`,
   );
+  if (s.heldOut.runs > 0) {
+    // Stated before the gate table, not after it, because it changes what
+    // every number in that table is a number about.
+    lines.push(
+      `held out of git: ${s.heldOut.runs} run(s), ${s.heldOut.failures} failure(s), ` +
+        `${s.heldOut.repositories} repositories (copyleft or unidentified licence)` +
+        (s.heldOut.runsInBand > 0 ? `, ${s.heldOut.runsInBand} of them in the 5-24 band` : '') +
+        `\n  Every figure here is computed over the committable corpus, so it is ` +
+        `reproducible from a clone. On-disk totals are higher. \`corpus holdout\` lists them.`,
+    );
+  }
   const c = s.concentration;
   const pc = (x: number) => `${(x * 100).toFixed(0)}%`;
   lines.push(
