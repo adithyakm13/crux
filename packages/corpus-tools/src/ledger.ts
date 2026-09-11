@@ -28,6 +28,7 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import type { Worksheet, WorksheetEntry, WorksheetKey } from './worksheet.ts';
+import { truncateField } from './compact.ts';
 
 const PLACEHOLDER = '/*__ENTRIES__*/';
 
@@ -112,6 +113,17 @@ export function provenanceInPayload(
   return { matched, total: worksheet.entries.length };
 }
 
+/**
+ * Cap on the payload the PAGE carries, per field.
+ *
+ * A published page has a hard size ceiling, and a 1077-entry Gate 0 worksheet
+ * renders to about 15 MB unbounded — close enough to fail on the next harvest.
+ * The worksheet itself keeps the full text; only the view is capped, and the
+ * cut announces itself inline, so a labeller can see that what they are
+ * reading is not all of it and reach for UNKNOWN accordingly.
+ */
+export const DEFAULT_LEDGER_MAX_FIELD = 6 * 1024;
+
 export interface LedgerOptions {
   /** Override the on-disk template. Tests use this; nothing else should. */
   template?: string;
@@ -121,6 +133,8 @@ export interface LedgerOptions {
    * reaches the page — the count does, the mapping does not.
    */
   key?: WorksheetKey;
+  /** Per-field display cap. Defaults to DEFAULT_LEDGER_MAX_FIELD. */
+  maxField?: number;
 }
 
 export async function buildLedger(
@@ -128,6 +142,7 @@ export async function buildLedger(
   options: LedgerOptions = {},
 ): Promise<string> {
   const tpl = options.template ?? (await readFile(templatePath(), 'utf8'));
+  const maxField = options.maxField ?? DEFAULT_LEDGER_MAX_FIELD;
   if (!tpl.includes(PLACEHOLDER)) {
     throw new Error(`ledger template has no ${PLACEHOLDER} placeholder`);
   }
@@ -143,7 +158,12 @@ export async function buildLedger(
     entries: worksheet.entries.map((e) => {
       const out: Record<string, unknown> = {};
       for (const k of KEEP) {
-        if (e[k] !== undefined) out[k] = e[k];
+        if (e[k] === undefined) continue;
+        const v = e[k];
+        out[k] =
+          typeof v === 'string' && (k === 'message' || k === 'stack')
+            ? truncateField(v, maxField)
+            : v;
       }
       return out;
     }),

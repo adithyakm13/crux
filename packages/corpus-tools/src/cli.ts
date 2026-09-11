@@ -550,7 +550,10 @@ async function main(): Promise<number> {
     } catch {
       keyL = undefined;
     }
-    const html = await buildLedger(worksheet, keyL === undefined ? {} : { key: keyL });
+    const html = await buildLedger(worksheet, {
+      ...(keyL === undefined ? {} : { key: keyL }),
+      ...(flags.has('max-field') ? { maxField: Number(flags.get('max-field')) } : {}),
+    });
     await writeFile(outFlag, html, 'utf8');
     process.stdout.write(
       `wrote ${worksheet.entries.length} entries to ${outFlag} ` +
