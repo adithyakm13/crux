@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:34288945117:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/cassandra-nodejs-driver",
+    "providerRunId": "34288945117",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/cassandra-nodejs-driver/actions/runs/34288945117",
+    "workflowName": "Unit and Integration Tests for Apache Cassandra NodeJS Driver",
+    "event": "pull_request",
+    "headSha": "35706d4f2272536e1cfa4ebaf2de01589751ac32",
+    "headBranch": "dependabot/npm_and_yarn/js-yaml-4.3.2",
+    "artifactIds": [
+      "10081683126",
+      "10081537190",
+      "10081641746",
+      "10081666154",
+      "10081645266",
+      "10081611693",
+      "10081592798",
+      "10081618609",
+      "10081631299",
+      "10081714345",
+      "10081730340",
+      "10081709686"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T06:06:22.161Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 23276,
+    "failures": 3,
+    "passed": 23273,
+    "skipped": 0,
+    "filesParsed": 12,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 24
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Test Results (Node.js 24, Cassandra 4.1)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Client @SERVER_API #batch(queries, {prepare: 0}, callback) \"before all\" hook for \"should execute a batch of queries with no params\"",
+      "suitePath": [
+        "#batch(queries, {prepare: 0}, callback)",
+        "\"before all\" hook for \"should execute a batch of queries with no params\""
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js",
+      "status": "failed",
+      "durationMs": 120102,
+      "errorType": "Error",
+      "message": "Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)",
+      "stackText": "Error: Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)\n    at listOnTimeout (node:internal/timers:685:17)\n    at process.processTimers (node:internal/timers:618:7)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "Test Results (Node.js 24, Cassandra 4.1)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Client @SERVER_API #batch(queries, {prepare: 1}, callback) \"before all\" hook for \"should prepare and send the request\"",
+      "suitePath": [
+        "#batch(queries, {prepare: 1}, callback)",
+        "\"before all\" hook for \"should prepare and send the request\""
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js",
+      "status": "failed",
+      "durationMs": 120016,
+      "errorType": "Error",
+      "message": "Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)",
+      "stackText": "Error: Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)\n    at listOnTimeout (node:internal/timers:685:17)\n    at process.processTimers (node:internal/timers:618:7)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "Test Results (Node.js 22, Cassandra 4.0)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "ControlConnection #init() should subscribe to SCHEMA_CHANGE events and refresh keyspace information",
+      "suitePath": [
+        "#init()",
+        "should subscribe to SCHEMA_CHANGE events and refresh keyspace information"
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/control-connection-tests.js",
+      "status": "failed",
+      "durationMs": 6878,
+      "errorType": "Error",
+      "message": "Condition still false after 100 attempts: () => !cc.metadata.keyspaces['sample_change_1']",
+      "stackText": "Error: Condition still false after 100 attempts: () => !cc.metadata.keyspaces['sample_change_1']\n    at whilstItem (test/test-helper.js:769:23)\n    at Timeout.next [as _onTimeout] (lib/utils.js:1042:5)\n    at listOnTimeout (node:internal/timers:585:17)\n    at process.processTimers (node:internal/timers:521:7)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

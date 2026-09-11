@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:elastic/synthetics:30994185246:3",
+  "source": {
+    "provider": "github-actions",
+    "repo": "elastic/synthetics",
+    "providerRunId": "30994185246",
+    "runAttempt": 3,
+    "url": "https://github.com/elastic/synthetics/actions/runs/30994185246",
+    "workflowName": "e2e",
+    "event": "pull_request",
+    "headSha": "c464416c25661234ebcc3ab6fced906ae191d4ec",
+    "headBranch": "shahzad/e2e-stack-version-026b56",
+    "artifactIds": [
+      "8961598765",
+      "8961592336",
+      "8961610630",
+      "8961577270",
+      "8961589826",
+      "8961585558",
+      "8967551987",
+      "8967600154",
+      "8961582291"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-10T18:03:19.150Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 54,
+    "failures": 4,
+    "passed": 50,
+    "skipped": 0,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-9.5.0/__tests__/e2e/junit_9.5.0.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "wait for synthetics data",
+      "suitePath": [
+        "9.5.0 e2e test synthetics api - browser",
+        "9.5.0 e2e test synthetics api - browser wait for synthetics data"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10069,
+      "errorType": "Error",
+      "message": "Monitor 159a4721-1abe-4fca-ac72-a21ea041a91f check failed: journey did not finish executing, 0 steps ran (attempt: 1): error executing step: command '/usr/share/elastic-agent/.node/node/bin/elastic-synthetics --screenshots on --throttling {&quot;download&quot;:5,&quot;latency&quot;:20,&quot;upload&quot;:3} --inline --rich-events --outfd 3' exited unexpectedly with code: 1",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-9.5.0/__tests__/e2e/junit_9.5.0.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "wait for synthetics data",
+      "suitePath": [
+        "9.5.0 e2e test synthetics api - browser",
+        "9.5.0 e2e test synthetics api - browser wait for synthetics data"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10062,
+      "errorType": "Error",
+      "message": "Monitor 434b09a7-821e-44f2-8eda-7ff4edc5cd6e check failed: journey did not finish executing, 0 steps ran (attempt: 1): error executing step: command '/usr/share/elastic-agent/.node/node/bin/elastic-synthetics --screenshots on --throttling {&quot;download&quot;:5,&quot;latency&quot;:20,&quot;upload&quot;:3} --inline --rich-events --outfd 3' exited unexpectedly with code: 1",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-9.5.0-SNAPSHOT/__tests__/e2e/junit_9.5.0-SNAPSHOT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "wait for synthetics data",
+      "suitePath": [
+        "9.5.0 e2e test synthetics api - browser",
+        "9.5.0 e2e test synthetics api - browser wait for synthetics data"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10052,
+      "errorType": "Error",
+      "message": "Monitor 1eea3e01-24db-480e-bda2-5e2cedcc7069 check failed: journey did not finish executing, 0 steps ran (attempt: 2): error executing step: command '/usr/share/elastic-agent/.node/node/bin/elastic-synthetics --screenshots on --throttling {&quot;download&quot;:5,&quot;latency&quot;:20,&quot;upload&quot;:3} --inline --rich-events --outfd 3' exited unexpectedly with code: 1",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results-9.5.0-SNAPSHOT/__tests__/e2e/junit_9.5.0-SNAPSHOT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "wait for synthetics data",
+      "suitePath": [
+        "9.5.0 e2e test synthetics api - browser",
+        "9.5.0 e2e test synthetics api - browser wait for synthetics data"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10062,
+      "errorType": "Error",
+      "message": "Monitor d4b55fcf-61cf-44ab-9991-054bd2f4c77e check failed: journey did not finish executing, 0 steps ran (attempt: 2): error executing step: command '/usr/share/elastic-agent/.node/node/bin/elastic-synthetics --screenshots on --throttling {&quot;download&quot;:5,&quot;latency&quot;:20,&quot;upload&quot;:3} --inline --rich-events --outfd 3' exited unexpectedly with code: 1",
+      "stackText": null,
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

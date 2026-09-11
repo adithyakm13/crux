@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34422605184:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34422605184",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34422605184",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "884cb35e051c7472e25afadf05ee16532495e886",
+    "headBranch": "fix/community-reconnect-overlay",
+    "artifactIds": [
+      "10131664471",
+      "10131677990",
+      "10131686808",
+      "10131691457",
+      "10131683720",
+      "10131683321",
+      "10131731605",
+      "10131743764",
+      "10131745792"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:30:15.840Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 203,
+    "failures": 2,
+    "passed": 198,
+    "skipped": 3,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34422605184-6/blob-report/report-58ad2f3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "an active onboarding form yields focus priority during outage, then resumes",
+      "suitePath": [],
+      "filePath": "25-community-ws-reconnect-overlay.spec.ts",
+      "status": "failed",
+      "durationMs": 12903,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-ws-reconnect-overlay')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-ws-reconnect-overlay')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-ws-reconnect-overlay')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-ws-reconnect-overlay')\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/25-community-ws-reconnect-overlay.spec.ts:213:27",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-34422605184-9/blob-report/report-749d542.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 10,
+      "attemptIndex": 0,
+      "displayName": "a DM message reaches the peer live and the conversation appears without reload",
+      "suitePath": [
+        "direct messages"
+      ],
+      "filePath": "04-dm.spec.ts",
+      "status": "failed",
+      "durationMs": 7954,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m500\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m500\u001b[39m\n    at /__w/alook/alook/src/web/src/test/e2e-ui/04-dm.spec.ts:259:31",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

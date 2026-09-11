@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34470282097:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "quarkusio/quarkus",
+    "providerRunId": "34470282097",
+    "runAttempt": 1,
+    "url": "https://github.com/quarkusio/quarkus/actions/runs/34470282097",
+    "workflowName": "Quarkus CI",
+    "event": "pull_request",
+    "headSha": "e71df100b8b6f5aab4f69441a68896ae7192510d",
+    "headBranch": "3.33-remove-kubernetes-windows-tests",
+    "artifactIds": [
+      "10149914781",
+      "10150158193",
+      "10150176525",
+      "10150368554",
+      "10150258021",
+      "10150258850",
+      "10150748521",
+      "10150252600",
+      "10150651642",
+      "10150668044",
+      "10151200704",
+      "10150609644",
+      "10150232664",
+      "10150497514",
+      "10151201469",
+      "10150759315",
+      "10150786476",
+      "10151035206",
+      "10151049285",
+      "10150727183",
+      "10150925151",
+      "10150791697",
+      "10150983685",
+      "10150872909",
+      "10150864701",
+      "10150682295",
+      "10150507919",
+      "10151090845",
+      "10150512959",
+      "10151843223",
+      "10150621601",
+      "10150399166",
+      "10150034845",
+      "10150417414",
+      "10150683004",
+      "10151883003",
+      "10152820960",
+      "10152989888",
+      "10150964722",
+      "10153086087",
+      "10152097864",
+      "10154741703",
+      "10156092499",
+      "10156513354",
+      "10155848117",
+      "10157693672"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T16:49:57.516Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 30303,
+    "failures": 6,
+    "passed": 29142,
+    "skipped": 1155,
+    "filesParsed": 7145,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 5
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 10, 2026 12:18:48 PM io.quarkus.deployment.index.IndexingUtil$MetaInfJandexReader apply\nWARN: Reindexing /home/runner/.m2/repository/io/smallrye/common/smallrye-common-vertx-context/1.13.2/smallrye-common-vertx-context-1.13.2.jar, at least Jandex 3.0 must be used to index an application dependency (index version is 10)\nSep 10, 2026 12:18:50 PM io.quarkus.deployment.index.IndexingUtil$MetaInfJandexReader apply\nWARN: Reindexing /home/runner/.m2/repository/io/smallrye/common/smallrye-common-vertx-context/1.13.2/smallrye-common-vertx-context-1.13.2.jar, at least Jandex 3.0 must be used to index an application dependency (index version is 10)\nSep 10, 2026 12:18:51 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 3.33.999-SNAPSHOT) started in 4.654s. Listening on: http://localhost:8081\nSep 10, 2026 12:18:51 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 10, 2026 12:18:51 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 10, 2026 12:18:52 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 37,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 10, 2026 12:18:34 PM io.quarkus.deployment.index.IndexingUtil$MetaInfJandexReader apply\nWARN: Reindexing /home/runner/.m2/repository/io/smallrye/common/smallrye-common-vertx-context/1.13.2/smallrye-common-vertx-context-1.13.2.jar, at least Jandex 3.0 must be used to index an application dependency (index version is 10)\nSep 10, 2026 12:18:36 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 3.33.999-SNAPSHOT) started in 2.877s. Listening on: http://localhost:8081\nSep 10, 2026 12:18:36 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 10, 2026 12:18:36 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 10, 2026 12:18:37 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25 Semeru/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 38,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 10, 2026 12:38:11 PM io.quarkus.deployment.index.IndexingUtil$MetaInfJandexReader apply\nWARN: Reindexing /home/runner/.m2/repository/io/smallrye/common/smallrye-common-vertx-context/1.13.2/smallrye-common-vertx-context-1.13.2.jar, at least Jandex 3.0 must be used to index an application dependency (index version is 10)\nSep 10, 2026 12:38:14 PM io.quarkus.deployment.index.IndexingUtil$MetaInfJandexReader apply\nWARN: Reindexing /home/runner/.m2/repository/io/smallrye/common/smallrye-common-vertx-context/1.13.2/smallrye-common-vertx-context-1.13.2.jar, at least Jandex 3.0 must be used to index an application dependency (index version is 10)\nSep 10, 2026 12:38:16 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 3.33.999-SNAPSHOT) started in 6.522s. Listening on: http://localhost:8081\nSep 10, 2026 12:38:16 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 10, 2026 12:38:16 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 10, 2026 12:38:17 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25 Semeru/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 38,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 10, 2026 12:37:52 PM io.quarkus.deployment.index.IndexingUtil$MetaInfJandexReader apply\nWARN: Reindexing /home/runner/.m2/repository/io/smallrye/common/smallrye-common-vertx-context/1.13.2/smallrye-common-vertx-context-1.13.2.jar, at least Jandex 3.0 must be used to index an application dependency (index version is 10)\nSep 10, 2026 12:37:54 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 3.33.999-SNAPSHOT) started in 3.740s. Listening on: http://localhost:8081\nSep 10, 2026 12:37:54 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 10, 2026 12:37:54 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 10, 2026 12:37:55 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 17 Windows/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 39,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 10, 2026 12:41:35 PM io.quarkus.deployment.index.IndexingUtil$MetaInfJandexReader apply\nWARN: Reindexing C:\\Users\\runneradmin\\.m2\\repository\\io\\smallrye\\common\\smallrye-common-vertx-context\\1.13.2\\smallrye-common-vertx-context-1.13.2.jar, at least Jandex 3.0 must be used to index an application dependency (index version is 10)\nSep 10, 2026 12:41:39 PM io.quarkus.deployment.index.IndexingUtil$MetaInfJandexReader apply\nWARN: Reindexing C:\\Users\\runneradmin\\.m2\\repository\\io\\smallrye\\common\\smallrye-common-vertx-context\\1.13.2\\smallrye-common-vertx-context-1.13.2.jar, at least Jandex 3.0 must be used to index an application dependency (index version is 10)\nSep 10, 2026 12:41:42 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 3.33.999-SNAPSHOT) started in 7.802s. Listening on: http://localhost:8081\nSep 10, 2026 12:41:42 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 10, 2026 12:41:42 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 10, 2026 12:41:43 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 17 Windows/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 39,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 10, 2026 12:41:12 PM io.quarkus.deployment.index.IndexingUtil$MetaInfJandexReader apply\nWARN: Reindexing C:\\Users\\runneradmin\\.m2\\repository\\io\\smallrye\\common\\smallrye-common-vertx-context\\1.13.2\\smallrye-common-vertx-context-1.13.2.jar, at least Jandex 3.0 must be used to index an application dependency (index version is 10)\nSep 10, 2026 12:41:15 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 3.33.999-SNAPSHOT) started in 4.798s. Listening on: http://localhost:8081\nSep 10, 2026 12:41:15 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 10, 2026 12:41:15 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 10, 2026 12:41:16 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

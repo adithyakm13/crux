@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34462450157:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34462450157",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34462450157",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "358834ac70d0ecc6550e299ba1660daf8190b3ba",
+    "headBranch": "feat/user-plan-bot-activation",
+    "artifactIds": [
+      "10146436865",
+      "10146444856",
+      "10146456776",
+      "10146460317",
+      "10146442534",
+      "10146521193",
+      "10146542574",
+      "10146647355",
+      "10146450713"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:28:39.928Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 205,
+    "failures": 1,
+    "passed": 201,
+    "skipped": 3,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34462450157-1/blob-report/report-be3be0b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "desktop restored generic file survives upload failure, retries once, and never revives",
+      "suitePath": [
+        "same-tab Community attachment drafts"
+      ],
+      "filePath": "43-composer-attachment-drafts.spec.ts",
+      "status": "timed_out",
+      "durationMs": 120213,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m\nError: page.waitForResponse: Target page, context or browser has been closed\n    at /__w/alook/alook/src/web/src/test/e2e-ui/43-composer-attachment-drafts.spec.ts:197:28",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

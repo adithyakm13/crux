@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:baloise/design-system:34488498271:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "baloise/design-system",
+    "providerRunId": "34488498271",
+    "runAttempt": 1,
+    "url": "https://github.com/baloise/design-system/actions/runs/34488498271",
+    "workflowName": "👷 Continuous",
+    "event": "pull_request",
+    "headSha": "8bd7a64db8c73ccca9ae35f27d1d4d622e910452",
+    "headBranch": "feat/date-value-accessor",
+    "artifactIds": [
+      "10156964142",
+      "10156968193",
+      "10156993160",
+      "10157005282",
+      "10156983213",
+      "10156931294"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:44:08.510Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1957,
+    "failures": 1,
+    "passed": 1907,
+    "skipped": 49,
+    "filesParsed": 6,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "playwright-blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "should clear value when only the year is deleted and the field is blurred",
+      "suitePath": [
+        "type"
+      ],
+      "filePath": "src/components/date/test/date.component.play.ts",
+      "status": "failed",
+      "durationMs": 7015,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('ds-date').locator('[part=\"input\"]')\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"__.__.____\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('ds-date').locator('[part=\"input\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"input\" type=\"text\" required=\"\" part=\"input\" placeholder=\"\" name=\"ds-date-0\" autocomplete=\"off\" inputmode=\"numeric\" aria-invalid=\"false\" aria-describedby=\"description\"/>\u001b[22m\n\u001b[2m      - unexpected value \"__.__.____\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('ds-date').locator('[part=\"input\"]')\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"__.__.____\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('ds-date').locator('[part=\"input\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"input\" type=\"text\" required=\"\" part=\"input\" placeholder=\"\" name=\"ds-date-0\" autocomplete=\"off\" inputmode=\"numeric\" aria-invalid=\"false\" aria-describedby=\"description\"/>\u001b[22m\n\u001b[2m      - unexpected value \"__.__.____\"\u001b[22m\n\n    at DsDate.assertValue (/__w/design-system/design-system/packages/playwright/src/lib/components/date.po.ts:75:38)\n    at /__w/design-system/design-system/packages/core/src/components/date/test/date.component.play.ts:29:16",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

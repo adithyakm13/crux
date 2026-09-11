@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/felix-dev:33558447345:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/felix-dev",
+    "providerRunId": "33558447345",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/felix-dev/actions/runs/33558447345",
+    "workflowName": "Github CI Build",
+    "event": "pull_request",
+    "headSha": "35ef9d2fce168e23e05de049efa7ba0aa0eed5b0",
+    "headBranch": "feature/FELIX-6759-plurl",
+    "artifactIds": [
+      "9820299135",
+      "9820293360",
+      "9820290268",
+      "9820297478"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T06:17:08.181Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 484,
+    "failures": 4,
+    "passed": 480,
+    "skipped": 0,
+    "filesParsed": 148,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-jdk17/framework/target/surefire-reports/TEST-org.apache.felix.framework.URLHandlersTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "urlHandlersWithClassLoaderIsolation",
+      "suitePath": [
+        "org.apache.felix.framework.URLHandlersTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 167,
+      "errorType": "java.io.IOException",
+      "message": "No framework context found",
+      "stackText": "java.io.IOException: No framework context found\n\tat org.apache.felix.framework.URLHandlersBundleStreamHandler.openConnection(URLHandlersBundleStreamHandler.java:81)\n\tat org.apache.felix.framework.plurl.impl.PlurlImpl$PlurlRootURLStreamHandler.openConnection(PlurlImpl.java:1481)\n\tat java.base/java.net.URL.openConnection(URL.java:1094)\n\tat java.base/java.net.URL.openStream(URL.java:1161)\n\tat org.apache.felix.framework.URLHandlersTest.urlHandlers(URLHandlersTest.java:80)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.apache.felix.framework.URLHandlersTest.urlHandlersWithClassLoaderIsolation(URLHandlersTest.java:117)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-jdk21/framework/target/surefire-reports/TEST-org.apache.felix.framework.URLHandlersTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "urlHandlersWithClassLoaderIsolation",
+      "suitePath": [
+        "org.apache.felix.framework.URLHandlersTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 195,
+      "errorType": "java.io.IOException",
+      "message": "No framework context found",
+      "stackText": "java.io.IOException: No framework context found\n\tat org.apache.felix.framework.URLHandlersBundleStreamHandler.openConnection(URLHandlersBundleStreamHandler.java:81)\n\tat org.apache.felix.framework.plurl.impl.PlurlImpl$PlurlRootURLStreamHandler.openConnection(PlurlImpl.java:1481)\n\tat java.base/java.net.URL.openConnection(URL.java:1258)\n\tat java.base/java.net.URL.openStream(URL.java:1325)\n\tat org.apache.felix.framework.URLHandlersTest.urlHandlers(URLHandlersTest.java:80)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat org.apache.felix.framework.URLHandlersTest.urlHandlersWithClassLoaderIsolation(URLHandlersTest.java:117)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1596)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1596)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-jdk25/framework/target/surefire-reports/TEST-org.apache.felix.framework.URLHandlersTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "urlHandlersWithClassLoaderIsolation",
+      "suitePath": [
+        "org.apache.felix.framework.URLHandlersTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 161,
+      "errorType": "java.io.IOException",
+      "message": "No framework context found",
+      "stackText": "java.io.IOException: No framework context found\n\tat org.apache.felix.framework.URLHandlersBundleStreamHandler.openConnection(URLHandlersBundleStreamHandler.java:81)\n\tat org.apache.felix.framework.plurl.impl.PlurlImpl$PlurlRootURLStreamHandler.openConnection(PlurlImpl.java:1481)\n\tat java.base/java.net.URL.openConnection(URL.java:1209)\n\tat java.base/java.net.URL.openStream(URL.java:1263)\n\tat org.apache.felix.framework.URLHandlersTest.urlHandlers(URLHandlersTest.java:80)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat org.apache.felix.framework.URLHandlersTest.urlHandlersWithClassLoaderIsolation(URLHandlersTest.java:117)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results-jdk23/framework/target/surefire-reports/TEST-org.apache.felix.framework.URLHandlersTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "urlHandlersWithClassLoaderIsolation",
+      "suitePath": [
+        "org.apache.felix.framework.URLHandlersTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 153,
+      "errorType": "java.io.IOException",
+      "message": "No framework context found",
+      "stackText": "java.io.IOException: No framework context found\n\tat org.apache.felix.framework.URLHandlersBundleStreamHandler.openConnection(URLHandlersBundleStreamHandler.java:81)\n\tat org.apache.felix.framework.plurl.impl.PlurlImpl$PlurlRootURLStreamHandler.openConnection(PlurlImpl.java:1481)\n\tat java.base/java.net.URL.openConnection(URL.java:1258)\n\tat java.base/java.net.URL.openStream(URL.java:1325)\n\tat org.apache.felix.framework.URLHandlersTest.urlHandlers(URLHandlersTest.java:80)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat org.apache.felix.framework.URLHandlersTest.urlHandlersWithClassLoaderIsolation(URLHandlersTest.java:117)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

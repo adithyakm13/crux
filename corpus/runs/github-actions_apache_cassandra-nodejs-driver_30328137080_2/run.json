@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:30328137080:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/cassandra-nodejs-driver",
+    "providerRunId": "30328137080",
+    "runAttempt": 2,
+    "url": "https://github.com/apache/cassandra-nodejs-driver/actions/runs/30328137080",
+    "workflowName": "Unit and Integration Tests for Apache Cassandra NodeJS Driver",
+    "event": "pull_request",
+    "headSha": "cf898b3d98a87cc4a5f624fe065879916101f6e9",
+    "headBranch": "token-ring-fix",
+    "artifactIds": [
+      "8742507021",
+      "8742517972",
+      "8742461529",
+      "8742489173",
+      "8742495515",
+      "8742483814",
+      "8742449752",
+      "8742457104",
+      "8742486969",
+      "8742575675",
+      "8742562002",
+      "8742572608"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T06:11:29.699Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 23274,
+    "failures": 3,
+    "passed": 23271,
+    "skipped": 0,
+    "filesParsed": 12,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 24
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Test Results (Node.js 22, Cassandra 3.11)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Client @SERVER_API #batch(queries, {prepare: 0}, callback) \"before all\" hook for \"should execute a batch of queries with no params\"",
+      "suitePath": [
+        "#batch(queries, {prepare: 0}, callback)",
+        "\"before all\" hook for \"should execute a batch of queries with no params\""
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js",
+      "status": "failed",
+      "durationMs": 120052,
+      "errorType": "Error",
+      "message": "Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)",
+      "stackText": "Error: Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)\n    at listOnTimeout (node:internal/timers:585:17)\n    at process.processTimers (node:internal/timers:521:7)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "Test Results (Node.js 22, Cassandra 4.1)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "Client @SERVER_API #batch(queries, {prepare: 0}, callback) \"before all\" hook for \"should execute a batch of queries with no params\"",
+      "suitePath": [
+        "#batch(queries, {prepare: 0}, callback)",
+        "\"before all\" hook for \"should execute a batch of queries with no params\""
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js",
+      "status": "failed",
+      "durationMs": 120091,
+      "errorType": "Error",
+      "message": "Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)",
+      "stackText": "Error: Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)\n    at listOnTimeout (node:internal/timers:585:17)\n    at process.processTimers (node:internal/timers:521:7)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "Test Results (Node.js 24, Cassandra 4.0)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "Client @SERVER_API #batch(queries, {prepare: 0}, callback) \"before all\" hook for \"should execute a batch of queries with no params\"",
+      "suitePath": [
+        "#batch(queries, {prepare: 0}, callback)",
+        "\"before all\" hook for \"should execute a batch of queries with no params\""
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js",
+      "status": "failed",
+      "durationMs": 120102,
+      "errorType": "Error",
+      "message": "Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)",
+      "stackText": "Error: Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

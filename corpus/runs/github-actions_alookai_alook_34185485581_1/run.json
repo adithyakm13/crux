@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34185485581:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34185485581",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34185485581",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "ae5fb8c2ec8954527ee66f7df3790cfc93a4e2f8",
+    "headBranch": "feat/account-deletion-minimal",
+    "artifactIds": [
+      "10040494157",
+      "10040507930",
+      "10040500373",
+      "10040500976",
+      "10040503212",
+      "10040506262",
+      "10040510903",
+      "10040502269",
+      "10040507912"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:41:20.621Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 199,
+    "failures": 1,
+    "passed": 196,
+    "skipped": 2,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34185485581-7/blob-report/report-e071aed.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "server unread owns exact rail geometry, folder aggregation, read clear, and mobile parity",
+      "suitePath": [],
+      "filePath": "40-server-rail-unread.spec.ts",
+      "status": "failed",
+      "durationMs": 7938,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at combineServers (/__w/alook/alook/src/web/src/test/e2e-ui/40-server-rail-unread.spec.ts:44:28)\n    at /__w/alook/alook/src/web/src/test/e2e-ui/40-server-rail-unread.spec.ts:83:3",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

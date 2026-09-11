@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34339449212:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34339449212",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34339449212",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "0f00a434d2831ff967710f6d41934ad807ea70e8",
+    "headBranch": "feat/user-plan-bot-activation",
+    "artifactIds": [
+      "10099421115",
+      "10099437391",
+      "10099446455",
+      "10099453768",
+      "10099453550",
+      "10099444128",
+      "10099535354",
+      "10099437915",
+      "10099515325"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:36:45.675Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 200,
+    "failures": 2,
+    "passed": 196,
+    "skipped": 2,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34339449212-3/blob-report/report-7573a5b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "CommunitySheet footers keep four consumers horizontal and intrinsic at 390/639/640",
+      "suitePath": [],
+      "filePath": "30-bot-profile-audit-preview.spec.ts",
+      "status": "timed_out",
+      "durationMs": 180265,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m\nError: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Create a bot', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button disabled tabindex=\"0\" type=\"button\" data-disabled=\"\" data-slot=\"button\" data-testid=\"create-bot\" title=\"Bot limit reached. Delete a bot or change plan to create another.\" class=\"group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:po…>Create a bot</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    345 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m        - element is not enabled\u001b[22m\n\u001b[2m      - retrying click action\u001b[22m\n\u001b[2m        - waiting 500ms\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/30-bot-profile-audit-preview.spec.ts:717:73",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-34339449212-4/blob-report/report-a74636e.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "My Bots restores the 30-day token heatmap across PC and mobile",
+      "suitePath": [],
+      "filePath": "35-bot-token-usage-quota.spec.ts",
+      "status": "failed",
+      "durationMs": 20297,
+      "errorType": "Error",
+      "message": "Error: user WebSocket did not authenticate",
+      "stackText": "Error: user WebSocket did not authenticate\n    at Timeout.<anonymous> (/__w/alook/alook/src/web/src/test/e2e-ui/_fixtures/actions.ts:31:43)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34196035268:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "quarkusio/quarkus",
+    "providerRunId": "34196035268",
+    "runAttempt": 1,
+    "url": "https://github.com/quarkusio/quarkus/actions/runs/34196035268",
+    "workflowName": "Quarkus CI",
+    "event": "pull_request",
+    "headSha": "0ae3f1291296464297010c400a3863ceaf05bf63",
+    "headBranch": "#56375",
+    "artifactIds": [
+      "10044582894",
+      "10044614716",
+      "10044654123",
+      "10044803529",
+      "10044759935",
+      "10044802813",
+      "10045000826",
+      "10045005165",
+      "10045057607",
+      "10044914174",
+      "10044945155",
+      "10045397639",
+      "10044836338",
+      "10044916616",
+      "10044933221",
+      "10044617481",
+      "10044629077",
+      "10044632229",
+      "10044616796",
+      "10044648062",
+      "10044884982",
+      "10045145319",
+      "10045255277",
+      "10045379537",
+      "10045450151",
+      "10045853470",
+      "10045372444",
+      "10045509615",
+      "10045653907",
+      "10044502956",
+      "10045376639",
+      "10045094215",
+      "10045597762",
+      "10046054285",
+      "10045669255",
+      "10044861685",
+      "10046304761",
+      "10045816137",
+      "10044674759",
+      "10045022197",
+      "10045099388",
+      "10046347927",
+      "10047439751",
+      "10047828267",
+      "10045751323",
+      "10046948292",
+      "10047890376",
+      "10046332855",
+      "10050951468",
+      "10049342501",
+      "10050953622",
+      "10049808463"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:46:19.062Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 31497,
+    "failures": 11,
+    "passed": 30468,
+    "skipped": 1018,
+    "filesParsed": 7440,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 3
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 43,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 08, 2026 7:52:33 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 4.497s. Listening on: http://localhost:8081\nSep 08, 2026 7:52:33 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 7:52:33 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 7:52:34 AM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 43,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 08, 2026 7:52:17 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 2.867s. Listening on: http://localhost:8081\nSep 08, 2026 7:52:17 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 7:52:17 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 7:52:18 AM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25 Semeru/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 44,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 08, 2026 8:15:58 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 7.166s. Listening on: http://localhost:8081\nSep 08, 2026 8:15:58 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 8:15:58 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 8:16:00 AM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25 Semeru/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 44,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 08, 2026 8:15:32 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 4.143s. Listening on: http://localhost:8081\nSep 08, 2026 8:15:32 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 8:15:32 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 8:15:34 AM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 21 Windows/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 45,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 08, 2026 8:26:40 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 9.365s. Listening on: http://localhost:8081\nSep 08, 2026 8:26:40 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 8:26:40 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 8:26:42 AM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 21 Windows/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 45,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 08, 2026 8:26:04 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 4.290s. Listening on: http://localhost:8081\nSep 08, 2026 8:26:04 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 8:26:04 AM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 8:26:06 AM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-reports-JVM Integration Tests - JDK 25 Semeru/test-reports.tgz!./integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 50,
+      "attemptIndex": 0,
+      "displayName": "fakeHost",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nResponse body doesn't match expectation.\nExpected: a string containing \"unable to find valid certification path\" ignoring case\n  Actual: java.lang.IllegalStateException: Client is closed\n at io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:228)\n at io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:173)\n at io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:178)\n at io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:308)\n at io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.connect(SharedHttpClientConnectionGroup.java:240)\n at io.vertx.core.internal.pool.SimpleConnectionPool.connect(SimpleConnectionPool.java:251)\n at io.vertx.core.internal.pool.SimpleConnectionPool$Acquire$3.run(SimpleConnectionPool.java:599)\n at io.vertx.core.internal.pool.Task.runNextTasks(Task.java:43)\n at io.vertx.core.internal.pool.CombinerExecutor.submit(CombinerExecutor.java:91)\n at io.vertx.core.internal.pool.SimpleConnectionPool.execute(SimpleConnectionPool.java:242)\n at io.vertx.core.internal.pool.SimpleConnectionPool.acquire(SimpleConnectionPool.java:649)\n at io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.acquire(SharedHttpClientConnectionGroup.java:277)\n at io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Request.acquire(SharedHttpClientConnectionGroup.java:141)\n at io.vertx.core.http.impl.SharedHttpClientConnectionGroup.requestConnection(SharedHttpClientConnectionGroup.java:151)\n at io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:700)\n at io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:697)\n at io.vertx.core.http.impl.HttpClientImpl.lambda$getPool$12(HttpClientImpl.java:764)\n at io.vertx.core.internal.resource.ResourceManager.lambda$withResourceAsync$3(ResourceManager.java:101)\n at io.vertx.core.internal.resource.ResourceManager.withResource(ResourceManager.java:85)\n at io.vertx.core.internal.resource.ResourceManager.withResourceAsync(ResourceManager.java:99)\n at io.vertx.core.http.impl.HttpClientImpl.getPool(HttpClientImpl.java:764)\n at io.vertx.core.http.impl.HttpClientImpl.lambda$doRequest$11(HttpClientImpl.java:690)\n at io.vertx.core.impl.future.Composition.complete(Composition.java:40)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n at io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n at io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:143)\n at io.vertx.core.Promise.succeed(Promise.java:92)\n at io.vertx.core.Promise.complete(Promise.java:60)\n at io.vertx.core.impl.future.FutureImpl$ListenerArray.complete(FutureImpl.java:188)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n at io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n at io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n at io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n at io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n at io.vertx.core.impl.future.FutureBase$EmitResultTask.run(FutureBase.java:125)\n at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:148)\n at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:141)\n at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:535)\n at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:201)\n at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1204)\n at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n at java.base/java.lang.Thread.run(Thread.java:1485)\n\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nResponse body doesn't match expectation.\nExpected: a string containing \"unable to find valid certification path\" ignoring case\n  Actual: java.lang.IllegalStateException: Client is closed\n\tat io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:228)\n\tat io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:173)\n\tat io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:178)\n\tat io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:308)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.connect(SharedHttpClientConnectionGroup.java:240)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.connect(SimpleConnectionPool.java:251)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool$Acquire$3.run(SimpleConnectionPool.java:599)\n\tat io.vertx.core.internal.pool.Task.runNextTasks(Task.java:43)\n\tat io.vertx.core.internal.pool.CombinerExecutor.submit(CombinerExecutor.java:91)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.execute(SimpleConnectionPool.java:242)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.acquire(SimpleConnectionPool.java:649)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.acquire(SharedHttpClientConnectionGroup.java:277)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Request.acquire(SharedHttpClientConnectionGroup.java:141)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup.requestConnection(SharedHttpClientConnectionGroup.java:151)\n\tat io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:700)\n\tat io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:697)\n\tat io.vertx.core.http.impl.HttpClientImpl.lambda$getPool$12(HttpClientImpl.java:764)\n\tat io.vertx.core.internal.resource.ResourceManager.lambda$withResourceAsync$3(ResourceManager.java:101)\n\tat io.vertx.core.internal.resource.ResourceManager.withResource(ResourceManager.java:85)\n\tat io.vertx.core.internal.resource.ResourceManager.withResourceAsync(ResourceManager.java:99)\n\tat io.vertx.core.http.impl.HttpClientImpl.getPool(HttpClientImpl.java:764)\n\tat io.vertx.core.http.impl.HttpClientImpl.lambda$doRequest$11(HttpClientImpl.java:690)\n\tat io.vertx.core.impl.future.Composition.complete(Composition.java:40)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:143)\n\tat io.vertx.core.Promise.succeed(Promise.java:92)\n\tat io.vertx.core.Promise.complete(Promise.java:60)\n\tat io.vertx.core.impl.future.FutureImpl$ListenerArray.complete(FutureImpl.java:188)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n\tat io.vertx.core.impl.future.FutureBase$EmitResultTask.run(FutureBase.java:125)\n\tat io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:148)\n\tat io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:141)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:535)\n\tat io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:201)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1204)\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:1485)\n\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:111)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.fakeHost(ExternalSelfSignedTestCase.java:41)\n\n      Request method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/fake-host\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 3995\n\njava.lang.IllegalStateException: Client is closed\n\tat io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:228)\n\tat io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:173)\n\tat io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:178)\n\tat io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:308)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.connect(SharedHttpClientConnectionGroup.java:240)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.connect(SimpleConnectionPool.java:251)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool$Acquire$3.run(SimpleConnectionPool.java:599)\n\tat io.vertx.core.internal.pool.Task.runNextTasks(Task.java:43)\n\tat io.vertx.core.internal.pool.CombinerExecutor.submit(CombinerExecutor.java:91)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.execute(SimpleConnectionPool.java:242)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.acquire(SimpleConnectionPool.java:649)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.acquire(SharedHttpClientConnectionGroup.java:277)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Request.acquire(SharedHttpClientConnectionGroup.java:141)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup.requestConnection(SharedHttpClientConnectionGroup.java:151)\n\tat io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:700)\n\tat io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:697)\n\tat io.vertx.core.http.impl.HttpClientImpl.lambda$getPool$12(HttpClientImpl.java:764)\n\tat io.vertx.core.internal.resource.ResourceManager.lambda$withResourceAsync$3(ResourceManager.java:101)\n\tat io.vertx.core.internal.resource.ResourceManager.withResource(ResourceManager.java:85)\n\tat io.vertx.core.internal.resource.ResourceManager.withResourceAsync(ResourceManager.java:99)\n\tat io.vertx.core.http.impl.HttpClientImpl.getPool(HttpClientImpl.java:764)\n\tat io.vertx.core.http.impl.HttpClientImpl.lambda$doRequest$11(HttpClientImpl.java:690)\n\tat io.vertx.core.impl.future.Composition.complete(Composition.java:40)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:143)\n\tat io.vertx.core.Promise.succeed(Promise.java:92)\n\tat io.vertx.core.Promise.complete(Promise.java:60)\n\tat io.vertx.core.impl.future.FutureImpl$ListenerArray.complete(FutureImpl.java:188)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n\tat io.vertx.core.impl.future.FutureBase$EmitResultTask.run(FutureBase.java:125)\n\tat io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:148)\n\tat io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:141)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:535)\n\tat io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:201)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1204)\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:1485)\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 21/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 52,
+      "attemptIndex": 0,
+      "displayName": "fakeHost",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nResponse body doesn't match expectation.\nExpected: a string containing \"unable to find valid certification path\" ignoring case\n  Actual: io.vertx.core.VertxException: Pool closed\n\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nResponse body doesn't match expectation.\nExpected: a string containing \"unable to find valid certification path\" ignoring case\n  Actual: io.vertx.core.VertxException: Pool closed\n\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:111)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.fakeHost(ExternalSelfSignedTestCase.java:41)\n\n      Request method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/fake-host\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 42\n\nio.vertx.core.VertxException: Pool closed\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 21/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 52,
+      "attemptIndex": 1,
+      "displayName": "fakeHost",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nResponse body doesn't match expectation.\nExpected: a string containing \"unable to find valid certification path\" ignoring case\n  Actual: io.vertx.core.VertxException: Pool closed\n\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nResponse body doesn't match expectation.\nExpected: a string containing \"unable to find valid certification path\" ignoring case\n  Actual: io.vertx.core.VertxException: Pool closed\n\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:111)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.fakeHost(ExternalSelfSignedTestCase.java:41)\n\n      2026-09-08 08:50:02,067 INFO  [io.quarkus] (main) quarkus-integration-test-rest-client stopped in 0.074s\n2026-09-08 08:50:02,806 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ⭐  PKCS12 keystore and truststore generated successfully!\n2026-09-08 08:50:02,807 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) 🔐  Key Store File: /home/runner/_work/quarkus/quarkus/integration-tests/rest-client/target/certs/self-signed-keystore.p12\n2026-09-08 08:50:02,807 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) 🔓  Trust Store File: /home/runner/_work/quarkus/quarkus/integration-tests/rest-client/target/certs/self-signed-truststore.p12\n2026-09-08 08:50:02,919 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ⭐  PKCS12 keystore and truststore generated successfully!\n2026-09-08 08:50:02,919 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) 🔐  Key Store File: /home/runner/_work/quarkus/quarkus/integration-tests/rest-client/target/certs/fake-host-keystore.p12\n2026-09-08 08:50:02,919 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) 🔓  Trust Store File: /home/runner/_work/quarkus/quarkus/integration-tests/rest-client/target/certs/fake-host-truststore.p12\n2026-09-08 08:50:03,109 INFO  [io.quarkus] (main) quarkus-integration-test-rest-client 999-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 0.911s. Listening on: http://localhost:8081\n2026-09-08 08:50:03,109 INFO  [io.quarkus] (main) Profile test activated. \n2026-09-08 08:50:03,109 INFO  [io.quarkus] (main) Installed features: [cdi, micrometer, resteasy, resteasy-client, smallrye-context-propagation, smallrye-fault-tolerance, vertx]\nRequest method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/fake-host\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 42\n\nio.vertx.core.VertxException: Pool closed\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 21/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 52,
+      "attemptIndex": 0,
+      "displayName": "javaxNetSsl",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <500>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <500>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.javaxNetSsl(ExternalSelfSignedTestCase.java:31)\n\n      Request method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/javax.net.ssl\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 42\n\nio.vertx.core.VertxException: Pool closed\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 25 Semeru/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 53,
+      "attemptIndex": 0,
+      "displayName": "fakeHost",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nResponse body doesn't match expectation.\nExpected: a string containing \"unable to find valid certification path\" ignoring case\n  Actual: java.lang.IllegalStateException: Client is closed\n at io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:228)\n at io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:173)\n at io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:178)\n at io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:308)\n at io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.connect(SharedHttpClientConnectionGroup.java:240)\n at io.vertx.core.internal.pool.SimpleConnectionPool.connect(SimpleConnectionPool.java:251)\n at io.vertx.core.internal.pool.SimpleConnectionPool$Acquire$3.run(SimpleConnectionPool.java:599)\n at io.vertx.core.internal.pool.Task.runNextTasks(Task.java:43)\n at io.vertx.core.internal.pool.CombinerExecutor.submit(CombinerExecutor.java:91)\n at io.vertx.core.internal.pool.SimpleConnectionPool.execute(SimpleConnectionPool.java:242)\n at io.vertx.core.internal.pool.SimpleConnectionPool.acquire(SimpleConnectionPool.java:649)\n at io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.acquire(SharedHttpClientConnectionGroup.java:277)\n at io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Request.acquire(SharedHttpClientConnectionGroup.java:141)\n at io.vertx.core.http.impl.SharedHttpClientConnectionGroup.requestConnection(SharedHttpClientConnectionGroup.java:151)\n at io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:700)\n at io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:697)\n at io.vertx.core.http.impl.HttpClientImpl.lambda$getPool$12(HttpClientImpl.java:764)\n at io.vertx.core.internal.resource.ResourceManager.lambda$withResourceAsync$3(ResourceManager.java:101)\n at io.vertx.core.internal.resource.ResourceManager.withResource(ResourceManager.java:85)\n at io.vertx.core.internal.resource.ResourceManager.withResourceAsync(ResourceManager.java:99)\n at io.vertx.core.http.impl.HttpClientImpl.getPool(HttpClientImpl.java:764)\n at io.vertx.core.http.impl.HttpClientImpl.lambda$doRequest$11(HttpClientImpl.java:690)\n at io.vertx.core.impl.future.Composition.complete(Composition.java:40)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n at io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n at io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:143)\n at io.vertx.core.Promise.succeed(Promise.java:92)\n at io.vertx.core.Promise.complete(Promise.java:60)\n at io.vertx.core.impl.future.FutureImpl$ListenerArray.complete(FutureImpl.java:188)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n at io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n at io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n at io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n at io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n at io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n at io.vertx.core.impl.future.FutureBase$EmitResultTask.run(FutureBase.java:125)\n at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:148)\n at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:141)\n at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:535)\n at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:201)\n at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1204)\n at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n at java.base/java.lang.Thread.run(Thread.java:1485)\n\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nResponse body doesn't match expectation.\nExpected: a string containing \"unable to find valid certification path\" ignoring case\n  Actual: java.lang.IllegalStateException: Client is closed\n\tat io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:228)\n\tat io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:173)\n\tat io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:178)\n\tat io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:308)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.connect(SharedHttpClientConnectionGroup.java:240)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.connect(SimpleConnectionPool.java:251)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool$Acquire$3.run(SimpleConnectionPool.java:599)\n\tat io.vertx.core.internal.pool.Task.runNextTasks(Task.java:43)\n\tat io.vertx.core.internal.pool.CombinerExecutor.submit(CombinerExecutor.java:91)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.execute(SimpleConnectionPool.java:242)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.acquire(SimpleConnectionPool.java:649)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.acquire(SharedHttpClientConnectionGroup.java:277)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Request.acquire(SharedHttpClientConnectionGroup.java:141)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup.requestConnection(SharedHttpClientConnectionGroup.java:151)\n\tat io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:700)\n\tat io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:697)\n\tat io.vertx.core.http.impl.HttpClientImpl.lambda$getPool$12(HttpClientImpl.java:764)\n\tat io.vertx.core.internal.resource.ResourceManager.lambda$withResourceAsync$3(ResourceManager.java:101)\n\tat io.vertx.core.internal.resource.ResourceManager.withResource(ResourceManager.java:85)\n\tat io.vertx.core.internal.resource.ResourceManager.withResourceAsync(ResourceManager.java:99)\n\tat io.vertx.core.http.impl.HttpClientImpl.getPool(HttpClientImpl.java:764)\n\tat io.vertx.core.http.impl.HttpClientImpl.lambda$doRequest$11(HttpClientImpl.java:690)\n\tat io.vertx.core.impl.future.Composition.complete(Composition.java:40)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:143)\n\tat io.vertx.core.Promise.succeed(Promise.java:92)\n\tat io.vertx.core.Promise.complete(Promise.java:60)\n\tat io.vertx.core.impl.future.FutureImpl$ListenerArray.complete(FutureImpl.java:188)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n\tat io.vertx.core.impl.future.FutureBase$EmitResultTask.run(FutureBase.java:125)\n\tat io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:148)\n\tat io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:141)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:535)\n\tat io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:201)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1204)\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:1485)\n\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:111)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.fakeHost(ExternalSelfSignedTestCase.java:41)\n\n      Request method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/fake-host\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 3995\n\njava.lang.IllegalStateException: Client is closed\n\tat io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:228)\n\tat io.vertx.core.net.impl.tcp.NetClientImpl.connectInternal(NetClientImpl.java:173)\n\tat io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:178)\n\tat io.vertx.core.http.impl.tcp.TcpHttpClientTransport.connect(TcpHttpClientTransport.java:308)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.connect(SharedHttpClientConnectionGroup.java:240)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.connect(SimpleConnectionPool.java:251)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool$Acquire$3.run(SimpleConnectionPool.java:599)\n\tat io.vertx.core.internal.pool.Task.runNextTasks(Task.java:43)\n\tat io.vertx.core.internal.pool.CombinerExecutor.submit(CombinerExecutor.java:91)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.execute(SimpleConnectionPool.java:242)\n\tat io.vertx.core.internal.pool.SimpleConnectionPool.acquire(SimpleConnectionPool.java:649)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Pool.acquire(SharedHttpClientConnectionGroup.java:277)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup$Request.acquire(SharedHttpClientConnectionGroup.java:141)\n\tat io.vertx.core.http.impl.SharedHttpClientConnectionGroup.requestConnection(SharedHttpClientConnectionGroup.java:151)\n\tat io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:700)\n\tat io.vertx.core.http.impl.HttpClientImpl$1.apply(HttpClientImpl.java:697)\n\tat io.vertx.core.http.impl.HttpClientImpl.lambda$getPool$12(HttpClientImpl.java:764)\n\tat io.vertx.core.internal.resource.ResourceManager.lambda$withResourceAsync$3(ResourceManager.java:101)\n\tat io.vertx.core.internal.resource.ResourceManager.withResource(ResourceManager.java:85)\n\tat io.vertx.core.internal.resource.ResourceManager.withResourceAsync(ResourceManager.java:99)\n\tat io.vertx.core.http.impl.HttpClientImpl.getPool(HttpClientImpl.java:764)\n\tat io.vertx.core.http.impl.HttpClientImpl.lambda$doRequest$11(HttpClientImpl.java:690)\n\tat io.vertx.core.impl.future.Composition.complete(Composition.java:40)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:143)\n\tat io.vertx.core.Promise.succeed(Promise.java:92)\n\tat io.vertx.core.Promise.complete(Promise.java:60)\n\tat io.vertx.core.impl.future.FutureImpl$ListenerArray.complete(FutureImpl.java:188)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:94)\n\tat io.vertx.core.impl.future.FutureBase.emitResult(FutureBase.java:85)\n\tat io.vertx.core.impl.future.FutureImpl.completeInternal(FutureImpl.java:137)\n\tat io.vertx.core.impl.future.Mapping.complete(Mapping.java:45)\n\tat io.vertx.core.impl.future.FutureBase$EmitResultTask.run(FutureBase.java:125)\n\tat io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:148)\n\tat io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:141)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:535)\n\tat io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:201)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1204)\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:1485)\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

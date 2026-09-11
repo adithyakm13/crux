@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:32276073492:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/cassandra-nodejs-driver",
+    "providerRunId": "32276073492",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/cassandra-nodejs-driver/actions/runs/32276073492",
+    "workflowName": "Unit and Integration Tests for Apache Cassandra NodeJS Driver",
+    "event": "pull_request",
+    "headSha": "6a21ab29d0d8dc94aa23c432478a7649e4c46bf4",
+    "headBranch": "pr-4.10.0",
+    "artifactIds": [
+      "9377698392",
+      "9377678386",
+      "9377678067",
+      "9377581147",
+      "9377643529",
+      "9377593458",
+      "9377719621",
+      "9377697166",
+      "9377754287",
+      "9377921636",
+      "9377724386",
+      "9377825069"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T06:09:51.480Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 23272,
+    "failures": 2,
+    "passed": 23270,
+    "skipped": 0,
+    "filesParsed": 12,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 24
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Test Results (Node.js 20, Cassandra 4.1)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "Client @SERVER_API #batch(queries, {prepare: 0}, callback) \"before all\" hook for \"should execute a batch of queries with no params\"",
+      "suitePath": [
+        "#batch(queries, {prepare: 0}, callback)",
+        "\"before all\" hook for \"should execute a batch of queries with no params\""
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js",
+      "status": "failed",
+      "durationMs": 120019,
+      "errorType": "Error",
+      "message": "Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)",
+      "stackText": "Error: Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "Test Results (Node.js 22, Cassandra 5.0)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "Client @SERVER_API #batch(queries, {prepare: 0}, callback) \"before all\" hook for \"should execute a batch of queries with no params\"",
+      "suitePath": [
+        "#batch(queries, {prepare: 0}, callback)",
+        "\"before all\" hook for \"should execute a batch of queries with no params\""
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js",
+      "status": "failed",
+      "durationMs": 120088,
+      "errorType": "Error",
+      "message": "Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)",
+      "stackText": "Error: Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)\n    at listOnTimeout (node:internal/timers:585:17)\n    at process.processTimers (node:internal/timers:521:7)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

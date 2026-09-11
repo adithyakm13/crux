@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34202315401:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34202315401",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34202315401",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "171f69f39e5a0763a209423c278c2fc9d66b8565",
+    "headBranch": "feat/structural-snapshot-v1",
+    "artifactIds": [
+      "10046620809",
+      "10046636912",
+      "10046634252",
+      "10046622211",
+      "10046637284",
+      "10046675765",
+      "10046610736",
+      "10046647522"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:40:25.821Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 171,
+    "failures": 4,
+    "passed": 157,
+    "skipped": 10,
+    "filesParsed": 8,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 2
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34202315401-1/blob-report/report-be3be0b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "a non-member is ejected when hitting the server URL directly",
+      "suitePath": [
+        "channel & member admin"
+      ],
+      "filePath": "06-channel-member-admin.spec.ts",
+      "status": "failed",
+      "durationMs": 21760,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/\\/channels\\/f0f-HQZbrJsEotyObdP4I\\/GokPnI_E4-11FTd1__dT0$/\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3000/c\u001b[7m/channels/f0f-HQZbrJsEotyObdP4I/GokPnI_E4-11FTd1__dT0\u001b[27m\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    43 × locator resolved to <html lang=\"en\" class=\"dmsans_c227b566-module__TN79BG__variable dmmono_bdd112d4-module__Yjgkaa__variable instrumentserif_418434b8-module__1PnwCG__variable caveat_26f4596c-module__cdAQxq__variable vt323_4fc70ac5-module__ACS4JW__variable literata_1e5e3d3f-module__313Aia__variable h-full antialiased light\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:3000/c/channels/f0f-HQZbrJsEotyObdP4I/GokPnI_E4-11FTd1__dT0\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/\\/channels\\/f0f-HQZbrJsEotyObdP4I\\/GokPnI_E4-11FTd1__dT0$/\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3000/c\u001b[7m/channels/f0f-HQZbrJsEotyObdP4I/GokPnI_E4-11FTd1__dT0\u001b[27m\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    43 × locator resolved to <html lang=\"en\" class=\"dmsans_c227b566-module__TN79BG__variable dmmono_bdd112d4-module__Yjgkaa__variable instrumentserif_418434b8-module__1PnwCG__variable caveat_26f4596c-module__cdAQxq__variable vt323_4fc70ac5-module__ACS4JW__variable literata_1e5e3d3f-module__313Aia__variable h-full antialiased light\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:3000/c/channels/f0f-HQZbrJsEotyObdP4I/GokPnI_E4-11FTd1__dT0\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/06-channel-member-admin.spec.ts:22:28",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-34202315401-2/blob-report/report-8f9233e.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "direct URL to a server you're not in redirects away",
+      "suitePath": [
+        "eject, navigation & logout"
+      ],
+      "filePath": "10-eject-nav-auth.spec.ts",
+      "status": "failed",
+      "durationMs": 21605,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/\\/channels\\/B0653-x5CTtaQEKahiXU-\\/RWaQN9tan1tdOjJRgcd-w$/\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3000/c\u001b[7m/channels/B0653-x5CTtaQEKahiXU-/RWaQN9tan1tdOjJRgcd-w\u001b[27m\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    43 × locator resolved to <html lang=\"en\" class=\"dmsans_c227b566-module__TN79BG__variable dmmono_bdd112d4-module__Yjgkaa__variable instrumentserif_418434b8-module__1PnwCG__variable caveat_26f4596c-module__cdAQxq__variable vt323_4fc70ac5-module__ACS4JW__variable literata_1e5e3d3f-module__313Aia__variable h-full antialiased light\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:3000/c/channels/B0653-x5CTtaQEKahiXU-/RWaQN9tan1tdOjJRgcd-w\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/\\/channels\\/B0653-x5CTtaQEKahiXU-\\/RWaQN9tan1tdOjJRgcd-w$/\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3000/c\u001b[7m/channels/B0653-x5CTtaQEKahiXU-/RWaQN9tan1tdOjJRgcd-w\u001b[27m\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    43 × locator resolved to <html lang=\"en\" class=\"dmsans_c227b566-module__TN79BG__variable dmmono_bdd112d4-module__Yjgkaa__variable instrumentserif_418434b8-module__1PnwCG__variable caveat_26f4596c-module__cdAQxq__variable vt323_4fc70ac5-module__ACS4JW__variable literata_1e5e3d3f-module__313Aia__variable h-full antialiased light\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:3000/c/channels/B0653-x5CTtaQEKahiXU-/RWaQN9tan1tdOjJRgcd-w\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/10-eject-nav-auth.spec.ts:18:28",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-34202315401-4/blob-report/report-a74636e.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "cold pending stays anchored through query updates and resolves without false-empty",
+      "suitePath": [
+        "DM channel-reference directory states"
+      ],
+      "filePath": "35-channel-ref-directory-states.spec.ts",
+      "status": "failed",
+      "durationMs": 12631,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('community-channel-ref-status')\nExpected: \u001b[32m\"loading\"\u001b[39m\nReceived: \u001b[31m\"empty\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-channel-ref-status')\u001b[22m\n\u001b[2m    24 × locator resolved to <div data-state=\"empty\" data-testid=\"community-channel-ref-status\" class=\"px-2 py-2 text-xs text-muted-foreground\">No matching channels</div>\u001b[22m\n\u001b[2m       - unexpected value \"empty\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('community-channel-ref-status')\nExpected: \u001b[32m\"loading\"\u001b[39m\nReceived: \u001b[31m\"empty\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-channel-ref-status')\u001b[22m\n\u001b[2m    24 × locator resolved to <div data-state=\"empty\" data-testid=\"community-channel-ref-status\" class=\"px-2 py-2 text-xs text-muted-foreground\">No matching channels</div>\u001b[22m\n\u001b[2m       - unexpected value \"empty\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/35-channel-ref-directory-states.spec.ts:105:26",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "blob-report-34202315401-4/blob-report/report-a74636e.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "server switching exposes one target-scoped cold checkpoint and skips it when warm",
+      "suitePath": [],
+      "filePath": "36-server-switch-pending-checkpoint.spec.ts",
+      "status": "failed",
+      "durationMs": 14591,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-channel-sidebar-pending-iqW1VHsKqBD5kaaKccqvG')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-channel-sidebar-pending-iqW1VHsKqBD5kaaKccqvG')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-channel-sidebar-pending-iqW1VHsKqBD5kaaKccqvG')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-channel-sidebar-pending-iqW1VHsKqBD5kaaKccqvG')\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/36-server-switch-pending-checkpoint.spec.ts:160:70",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

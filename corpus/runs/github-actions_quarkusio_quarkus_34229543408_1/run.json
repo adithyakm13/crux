@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34229543408:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "quarkusio/quarkus",
+    "providerRunId": "34229543408",
+    "runAttempt": 1,
+    "url": "https://github.com/quarkusio/quarkus/actions/runs/34229543408",
+    "workflowName": "Quarkus CI",
+    "event": "pull_request",
+    "headSha": "f8407d80486cf31a7fa4358a34d14ed825c18ada",
+    "headBranch": "invokeHandlerOptimization",
+    "artifactIds": [
+      "10058130105",
+      "10058443154",
+      "10058383528",
+      "10058446465",
+      "10058674085",
+      "10058796085",
+      "10058748679",
+      "10058569245",
+      "10059282208",
+      "10058604637",
+      "10058531604",
+      "10058593292",
+      "10058690558",
+      "10058192961",
+      "10058246441",
+      "10058186338",
+      "10058182399",
+      "10058189305",
+      "10058551901",
+      "10059046868",
+      "10058918157",
+      "10059301351",
+      "10059344514",
+      "10059390199",
+      "10059223467",
+      "10059671732",
+      "10059229549",
+      "10058037760",
+      "10059690123",
+      "10058822978",
+      "10059372306",
+      "10060187923",
+      "10059631855",
+      "10058550425",
+      "10060538534",
+      "10059923035",
+      "10058286188",
+      "10058754979",
+      "10059124998",
+      "10060566116",
+      "10061572072",
+      "10061810085",
+      "10059852325",
+      "10061996635",
+      "10062159944",
+      "10060720421",
+      "10065477758",
+      "10064266153",
+      "10064164643",
+      "10065480244",
+      "10064996739"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:38:20.251Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 35505,
+    "failures": 8,
+    "passed": 34452,
+    "skipped": 1045,
+    "filesParsed": 8494,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 5
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 41,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 08, 2026 2:10:18 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 4.454s. Listening on: http://localhost:8081\nSep 08, 2026 2:10:18 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 2:10:18 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 2:10:19 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 41,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 08, 2026 2:10:02 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 2.879s. Listening on: http://localhost:8081\nSep 08, 2026 2:10:02 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 2:10:02 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 2:10:03 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 21 Windows/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 08, 2026 2:29:11 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 7.288s. Listening on: http://localhost:8081\nSep 08, 2026 2:29:11 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 2:29:11 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 2:29:13 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 21 Windows/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 08, 2026 2:28:44 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 3.627s. Listening on: http://localhost:8081\nSep 08, 2026 2:28:44 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 2:28:44 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 2:28:45 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25 Semeru/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 43,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 08, 2026 2:32:40 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 6.554s. Listening on: http://localhost:8081\nSep 08, 2026 2:32:40 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 2:32:40 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 2:32:42 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25 Semeru/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 43,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 08, 2026 2:32:17 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 3.834s. Listening on: http://localhost:8081\nSep 08, 2026 2:32:17 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 2:32:17 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 2:32:19 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-reports-JVM Integration Tests - JDK 25 Semeru/test-reports.tgz!./integration-tests/keycloak-authorization/target/surefire-reports/TEST-io.quarkus.it.keycloak.StaticTenantConfigPolicyEnforcerTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 48,
+      "attemptIndex": 0,
+      "displayName": "testUserHasSuperUserRoleWebTenantWithMatrix",
+      "suitePath": [
+        "io.quarkus.it.keycloak.StaticTenantConfigPolicyEnforcerTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "expected: <true> but was: <false>",
+      "stackText": "\n      org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n\tat io.quarkus.it.keycloak.AbstractPolicyEnforcerTest.testWebAppTenantAllowed(AbstractPolicyEnforcerTest.java:128)\n\tat io.quarkus.it.keycloak.AbstractPolicyEnforcerTest.testUserHasSuperUserRoleWebTenantWithMatrix(AbstractPolicyEnforcerTest.java:110)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:571)\n\tat io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1005)\n\tat io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:852)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 25 Semeru/build-reports.zip!integration-tests/keycloak-authorization/target/surefire-reports/TEST-io.quarkus.it.keycloak.StaticTenantConfigPolicyEnforcerTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 51,
+      "attemptIndex": 0,
+      "displayName": "testUserHasSuperUserRoleWebTenantWithMatrix",
+      "suitePath": [
+        "io.quarkus.it.keycloak.StaticTenantConfigPolicyEnforcerTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "expected: <true> but was: <false>",
+      "stackText": "\n      org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n\tat io.quarkus.it.keycloak.AbstractPolicyEnforcerTest.testWebAppTenantAllowed(AbstractPolicyEnforcerTest.java:128)\n\tat io.quarkus.it.keycloak.AbstractPolicyEnforcerTest.testUserHasSuperUserRoleWebTenantWithMatrix(AbstractPolicyEnforcerTest.java:110)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:571)\n\tat io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1005)\n\tat io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:852)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

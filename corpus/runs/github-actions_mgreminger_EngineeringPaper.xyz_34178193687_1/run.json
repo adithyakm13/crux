@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:mgreminger/EngineeringPaper.xyz:34178193687:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "mgreminger/EngineeringPaper.xyz",
+    "providerRunId": "34178193687",
+    "runAttempt": 1,
+    "url": "https://github.com/mgreminger/EngineeringPaper.xyz/actions/runs/34178193687",
+    "workflowName": "Playwright Tests",
+    "event": "pull_request",
+    "headSha": "8b85183e75894b3710e0c6636d16141ab06e015e",
+    "headBranch": "page-break",
+    "artifactIds": [
+      "10038275421"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-10T18:09:44.360Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 291,
+    "failures": 1,
+    "passed": 290,
+    "skipped": 0,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-4/report-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Test parse id bug",
+      "suitePath": [],
+      "filePath": "test_parse_id_bug.spec.mjs",
+      "status": "failed",
+      "durationMs": 130644,
+      "errorType": "TimeoutError",
+      "message": "TimeoutError: locator.textContent: Timeout 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#result-value-18')\u001b[22m\n",
+      "stackText": "TimeoutError: locator.textContent: Timeout 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#result-value-18')\u001b[22m\n\n    at /home/runner/work/EngineeringPaper.xyz/EngineeringPaper.xyz/tests/test_parse_id_bug.spec.mjs:44:56",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

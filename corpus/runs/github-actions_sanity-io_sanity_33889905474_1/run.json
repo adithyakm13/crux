@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:sanity-io/sanity:33889905474:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "sanity-io/sanity",
+    "providerRunId": "33889905474",
+    "runAttempt": 1,
+    "url": "https://github.com/sanity-io/sanity/actions/runs/33889905474",
+    "workflowName": "End-to-End Tests",
+    "event": "pull_request",
+    "headSha": "2f327dff8f2c24dc1ecf97bb0d782eec02ff05e8",
+    "headBranch": "cursor/migrate-styled-components-to-vanilla-extract-0868",
+    "artifactIds": [
+      "9943628092",
+      "9943656484"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-10T18:21:23.275Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 83,
+    "failures": 7,
+    "passed": 54,
+    "skipped": 22,
+    "filesParsed": 2,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 4
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "playwright-report-firefox-4/blob-report/report-firefox-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "validates title and complete condition rows",
+      "suitePath": [
+        "Variants create flow"
+      ],
+      "filePath": "variants/variantTool.spec.ts",
+      "status": "failed",
+      "durationMs": 26727,
+      "errorType": "TimeoutError",
+      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Create variant definition' }).getByTestId('submit-variant-button')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" data-ui=\"Button\" data-disabled=\"false\" data-testid=\"submit-variant-button\" class=\"StyledButton-sc-gom2qw-0 gOPyBx\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+      "stackText": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Create variant definition' }).getByTestId('submit-variant-button')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" data-ui=\"Button\" data-disabled=\"false\" data-testid=\"submit-variant-button\" class=\"StyledButton-sc-gom2qw-0 gOPyBx\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at /home/runner/work/sanity/sanity/e2e/tests/variants/variantTool.spec.ts:319:24",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "playwright-report-firefox-4/blob-report/report-firefox-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "creates a variant and persists conditions",
+      "suitePath": [
+        "Variants create flow"
+      ],
+      "filePath": "variants/variantTool.spec.ts",
+      "status": "failed",
+      "durationMs": 64498,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/variants\\/[^/?#]+$/\u001b[39m\nReceived string:  \u001b[31m\"https://e2e-studio-947wfix2f.sanity.dev/firefox/variants\"\u001b[39m\nTimeout: 30000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 30000ms\u001b[22m\n\u001b[2m    58 × locator resolved to <html lang=\"en\" data-sanity-global-styles=\"\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"https://e2e-studio-947wfix2f.sanity.dev/firefox/variants\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/variants\\/[^/?#]+$/\u001b[39m\nReceived string:  \u001b[31m\"https://e2e-studio-947wfix2f.sanity.dev/firefox/variants\"\u001b[39m\nTimeout: 30000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 30000ms\u001b[22m\n\u001b[2m    58 × locator resolved to <html lang=\"en\" data-sanity-global-styles=\"\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"https://e2e-studio-947wfix2f.sanity.dev/firefox/variants\"\u001b[22m\n\n    at submitCreateVariantDialog (/home/runner/work/sanity/sanity/e2e/tests/variants/variantTool.spec.ts:263:22)\n    at /home/runner/work/sanity/sanity/e2e/tests/variants/variantTool.spec.ts:301:22",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "playwright-report-firefox-4/blob-report/report-firefox-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "and the one array item has been deleted there are more validation errors outside of the array",
+      "suitePath": [
+        "Validation test",
+        "should not throw error when a validation error is present"
+      ],
+      "filePath": "validation-test/validation.spec.ts",
+      "status": "failed",
+      "durationMs": 67726,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m3\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 30000ms exceeded while waiting on the predicate",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m3\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 30000ms exceeded while waiting on the predicate\n    at createDraftDocument (/home/runner/work/sanity/sanity/e2e/studio-test.ts:137:10)\n    at /home/runner/work/sanity/sanity/e2e/tests/validation-test/validation.spec.ts:192:7",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "playwright-report-chromium-2/blob-report/report-chromium-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "opening - when creating new array item, the tree editing modal should open",
+      "suitePath": [
+        "Enhanced Object Dialog - open and close"
+      ],
+      "filePath": "enhanced-object-dialog/smoke.spec.ts",
+      "status": "failed",
+      "durationMs": 52944,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m3\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 30000ms exceeded while waiting on the predicate",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m3\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 30000ms exceeded while waiting on the predicate\n    at createDraftDocument (/home/runner/work/sanity/sanity/e2e/studio-test.ts:137:10)\n    at /home/runner/work/sanity/sanity/e2e/tests/enhanced-object-dialog/smoke.spec.ts:8:5",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "playwright-report-chromium-2/blob-report/report-chromium-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "opens the nested object dialog for an array item field in presentation",
+      "suitePath": [
+        "Edit intent links with a nested path param"
+      ],
+      "filePath": "enhanced-object-dialog/deepLinkPath.spec.ts",
+      "status": "failed",
+      "durationMs": 67588,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('nested-object-dialog')\nExpected: visible\nTimeout: 40000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 40000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('nested-object-dialog')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('nested-object-dialog')\nExpected: visible\nTimeout: 40000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 40000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('nested-object-dialog')\u001b[22m\n\n    at /home/runner/work/sanity/sanity/e2e/tests/enhanced-object-dialog/deepLinkPath.spec.ts:71:26",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "playwright-report-chromium-2/blob-report/report-chromium-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "expands a collapsed collapsible object to reveal the target field",
+      "suitePath": [
+        "Edit intent links with a nested path param"
+      ],
+      "filePath": "enhanced-object-dialog/deepLinkPath.spec.ts",
+      "status": "failed",
+      "durationMs": 73892,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('field-simple.name').getByTestId('string-input')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('field-simple.name').getByTestId('string-input')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('field-simple.name').getByTestId('string-input')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('field-simple.name').getByTestId('string-input')\u001b[22m\n\n    at /home/runner/work/sanity/sanity/e2e/tests/enhanced-object-dialog/deepLinkPath.spec.ts:54:31",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "playwright-report-chromium-2/blob-report/report-chromium-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "focus pane button collapses the pane breadcrumb when the focus pane button is clicked again",
+      "suitePath": [
+        "maximized document"
+      ],
+      "filePath": "expanded-document/expanded.spec.ts",
+      "status": "failed",
+      "durationMs": 46111,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('document-header-breadcrumb').getByText('Test Author')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('document-header-breadcrumb').getByText('Test Author')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('document-header-breadcrumb').getByText('Test Author')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('document-header-breadcrumb').getByText('Test Author')\u001b[22m\n\n    at /home/runner/work/sanity/sanity/e2e/tests/expanded-document/expanded.spec.ts:32:7",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

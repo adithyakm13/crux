@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34132652561:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "quarkusio/quarkus",
+    "providerRunId": "34132652561",
+    "runAttempt": 1,
+    "url": "https://github.com/quarkusio/quarkus/actions/runs/34132652561",
+    "workflowName": "Quarkus CI",
+    "event": "pull_request",
+    "headSha": "a361f6173165bf5fbba35cea80824949ffcf6190",
+    "headBranch": "dependabot/maven/main/org.checkerframework-checker-qual-4.2.3",
+    "artifactIds": [
+      "10059564909",
+      "10059897857",
+      "10059825131",
+      "10059885213",
+      "10060675917",
+      "10060264668",
+      "10060024142",
+      "10060781855",
+      "10060194792",
+      "10060080466",
+      "10060262895",
+      "10060689351",
+      "10059616205",
+      "10060552434",
+      "10059496142",
+      "10059592570",
+      "10059502059",
+      "10059925815",
+      "10059988106",
+      "10060567109",
+      "10060770587",
+      "10060344610",
+      "10060833357",
+      "10061332252",
+      "10061124253",
+      "10059447227",
+      "10060670080",
+      "10061134455",
+      "10061826681",
+      "10061026966",
+      "10061185097",
+      "10060861658",
+      "10061035076",
+      "10060989506",
+      "10060927483",
+      "10060554628",
+      "10060247522",
+      "10062606467",
+      "10060117467",
+      "10061440846",
+      "10061057663",
+      "10059709189",
+      "10060664291",
+      "10060189827",
+      "10060547072",
+      "10062129961",
+      "10063185736",
+      "10063949089",
+      "10061237968",
+      "10063110100",
+      "10062102069",
+      "10065057801",
+      "10066832765",
+      "10066677318",
+      "10068770989"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T18:15:34.088Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 27693,
+    "failures": 11,
+    "passed": 26650,
+    "skipped": 1032,
+    "filesParsed": 6564,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 6
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 46,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 08, 2026 2:44:44 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 4.589s. Listening on: http://localhost:8081\nSep 08, 2026 2:44:44 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 2:44:44 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 2:44:45 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 46,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 08, 2026 2:44:27 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 2.903s. Listening on: http://localhost:8081\nSep 08, 2026 2:44:27 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 2:44:27 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 2:44:28 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25 Semeru/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 47,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 08, 2026 3:02:57 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 6.215s. Listening on: http://localhost:8081\nSep 08, 2026 3:02:57 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 3:02:57 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 3:02:58 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25 Semeru/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 47,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 08, 2026 3:02:35 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 3.645s. Listening on: http://localhost:8081\nSep 08, 2026 3:02:35 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 3:02:35 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 3:02:36 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 21 Windows/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 48,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 08, 2026 3:19:01 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 9.796s. Listening on: http://localhost:8081\nSep 08, 2026 3:19:01 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 3:19:01 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 3:19:02 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 21 Windows/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 48,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 08, 2026 3:18:28 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 4.696s. Listening on: http://localhost:8081\nSep 08, 2026 3:18:28 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 08, 2026 3:18:28 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 08, 2026 3:18:30 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 21 Windows/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 52,
+      "attemptIndex": 0,
+      "displayName": "javaxNetSsl",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <500>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <500>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.javaxNetSsl(ExternalSelfSignedTestCase.java:31)\n\n      Request method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/javax.net.ssl\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 43\n\nio.vertx.core.VertxException: Pool closed\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 21 Windows/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 52,
+      "attemptIndex": 1,
+      "displayName": "javaxNetSsl",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <500>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <500>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.javaxNetSsl(ExternalSelfSignedTestCase.java:31)\n\n      2026-09-08 15:24:53,276 INFO  [io.quarkus] (main) quarkus-integration-test-rest-client stopped in 0.018s\n2026-09-08 15:24:54,142 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  PKCS12 keystore and truststore generated successfully!\n2026-09-08 15:24:54,143 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  Key Store File: D:\\a\\quarkus\\quarkus\\integration-tests\\rest-client\\target\\certs\\self-signed-keystore.p12\n2026-09-08 15:24:54,143 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  Trust Store File: D:\\a\\quarkus\\quarkus\\integration-tests\\rest-client\\target\\certs\\self-signed-truststore.p12\n2026-09-08 15:24:54,233 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  PKCS12 keystore and truststore generated successfully!\n2026-09-08 15:24:54,233 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  Key Store File: D:\\a\\quarkus\\quarkus\\integration-tests\\rest-client\\target\\certs\\fake-host-keystore.p12\n2026-09-08 15:24:54,234 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  Trust Store File: D:\\a\\quarkus\\quarkus\\integration-tests\\rest-client\\target\\certs\\fake-host-truststore.p12\n2026-09-08 15:24:54,355 INFO  [io.quarkus] (main) quarkus-integration-test-rest-client 999-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 0.943s. Listening on: http://localhost:8081\n2026-09-08 15:24:54,356 INFO  [io.quarkus] (main) Profile test activated. \n2026-09-08 15:24:54,356 INFO  [io.quarkus] (main) Installed features: [cdi, micrometer, resteasy, resteasy-client, smallrye-context-propagation, smallrye-fault-tolerance, vertx]\nRequest method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/javax.net.ssl\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 43\n\nio.vertx.core.VertxException: Pool closed\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 25/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 54,
+      "attemptIndex": 0,
+      "displayName": "javaxNetSsl",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <500>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <500>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.javaxNetSsl(ExternalSelfSignedTestCase.java:31)\n\n      Request method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/javax.net.ssl\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 42\n\nio.vertx.core.VertxException: Pool closed\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 25/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 54,
+      "attemptIndex": 1,
+      "displayName": "javaxNetSsl",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <500>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <500>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.javaxNetSsl(ExternalSelfSignedTestCase.java:31)\n\n      2026-09-08 16:05:26,106 INFO  [io.quarkus] (main) quarkus-integration-test-rest-client stopped in 0.016s\n2026-09-08 16:05:26,841 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ⭐  PKCS12 keystore and truststore generated successfully!\n2026-09-08 16:05:26,842 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) 🔐  Key Store File: /home/runner/_work/quarkus/quarkus/integration-tests/rest-client/target/certs/self-signed-keystore.p12\n2026-09-08 16:05:26,842 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) 🔓  Trust Store File: /home/runner/_work/quarkus/quarkus/integration-tests/rest-client/target/certs/self-signed-truststore.p12\n2026-09-08 16:05:27,065 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ⭐  PKCS12 keystore and truststore generated successfully!\n2026-09-08 16:05:27,065 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) 🔐  Key Store File: /home/runner/_work/quarkus/quarkus/integration-tests/rest-client/target/certs/fake-host-keystore.p12\n2026-09-08 16:05:27,065 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) 🔓  Trust Store File: /home/runner/_work/quarkus/quarkus/integration-tests/rest-client/target/certs/fake-host-truststore.p12\n2026-09-08 16:05:27,210 INFO  [io.quarkus] (main) quarkus-integration-test-rest-client 999-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 1.032s. Listening on: http://localhost:8081\n2026-09-08 16:05:27,211 INFO  [io.quarkus] (main) Profile test activated. \n2026-09-08 16:05:27,211 INFO  [io.quarkus] (main) Installed features: [cdi, micrometer, resteasy, resteasy-client, smallrye-context-propagation, smallrye-fault-tolerance, vertx]\nRequest method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/javax.net.ssl\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 42\n\nio.vertx.core.VertxException: Pool closed\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 25 Semeru/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 55,
+      "attemptIndex": 0,
+      "displayName": "javaxNetSsl",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <500>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <500>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.javaxNetSsl(ExternalSelfSignedTestCase.java:31)\n\n      Request method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/javax.net.ssl\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 42\n\nio.vertx.core.VertxException: Pool closed\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

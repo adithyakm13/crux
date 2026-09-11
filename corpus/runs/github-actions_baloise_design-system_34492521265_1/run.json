@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:baloise/design-system:34492521265:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "baloise/design-system",
+    "providerRunId": "34492521265",
+    "runAttempt": 1,
+    "url": "https://github.com/baloise/design-system/actions/runs/34492521265",
+    "workflowName": "👷 Continuous",
+    "event": "pull_request",
+    "headSha": "322a145cf5ff8816b6f08bef4a57bb92d7dd5787",
+    "headBranch": "feat/date-value-accessor",
+    "artifactIds": [
+      "10158683503",
+      "10158730291",
+      "10158719539",
+      "10158745199",
+      "10158739947",
+      "10158668404"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:42:38.795Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1957,
+    "failures": 1,
+    "passed": 1907,
+    "skipped": 49,
+    "filesParsed": 6,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "playwright-blob-report-2/report-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "should reject a date below min when typed",
+      "suitePath": [
+        "min / max"
+      ],
+      "filePath": "src/components/date/test/date.component.play.ts",
+      "status": "failed",
+      "durationMs": 1670,
+      "errorType": "Error",
+      "message": "Error: expected event \"dsChange\" to have been called 0 times, but it was called 1 times",
+      "stackText": "Error: expected event \"dsChange\" to have been called 0 times, but it was called 1 times\n    at /__w/design-system/design-system/packages/core/src/components/date/test/date.component.play.ts:58:23",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

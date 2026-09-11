@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:30328129086:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/cassandra-nodejs-driver",
+    "providerRunId": "30328129086",
+    "runAttempt": 2,
+    "url": "https://github.com/apache/cassandra-nodejs-driver/actions/runs/30328129086",
+    "workflowName": "Unit and Integration Tests for Apache Cassandra NodeJS Driver",
+    "event": "pull_request",
+    "headSha": "82f357a566af3bff2909d60b3f7dd6658c7ac728",
+    "headBranch": "fix-status-changes-dropped",
+    "artifactIds": [
+      "8742196025",
+      "8742093207",
+      "8742124167",
+      "8742159830",
+      "8742167762",
+      "8742171868",
+      "8742184451",
+      "8742127898",
+      "8742160227",
+      "8742239460",
+      "8742254144",
+      "8742250533"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T06:12:01.937Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 23272,
+    "failures": 2,
+    "passed": 23270,
+    "skipped": 0,
+    "filesParsed": 12,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 24
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Test Results (Node.js 20, Cassandra 3.11)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "Client @SERVER_API #batch(queries, {prepare: 0}, callback) \"before all\" hook for \"should execute a batch of queries with no params\"",
+      "suitePath": [
+        "#batch(queries, {prepare: 0}, callback)",
+        "\"before all\" hook for \"should execute a batch of queries with no params\""
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js",
+      "status": "failed",
+      "durationMs": 120070,
+      "errorType": "Error",
+      "message": "Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)",
+      "stackText": "Error: Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "Test Results (Node.js 24, Cassandra 5.0)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 10,
+      "attemptIndex": 0,
+      "displayName": "Client @SERVER_API #batch(queries, {prepare: 0}, callback) \"before all\" hook for \"should execute a batch of queries with no params\"",
+      "suitePath": [
+        "#batch(queries, {prepare: 0}, callback)",
+        "\"before all\" hook for \"should execute a batch of queries with no params\""
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js",
+      "status": "failed",
+      "durationMs": 120102,
+      "errorType": "Error",
+      "message": "Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)",
+      "stackText": "Error: Timeout of 120000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/client-batch-tests.js)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

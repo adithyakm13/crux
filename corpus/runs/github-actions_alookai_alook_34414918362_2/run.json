@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34414918362:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34414918362",
+    "runAttempt": 2,
+    "url": "https://github.com/alookai/alook/actions/runs/34414918362",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "6a26b22552d857a3ad9e65a85af67c5b92248885",
+    "headBranch": "fix/mobile-touch-drag-intent-gate",
+    "artifactIds": [
+      "10128949281",
+      "10128962364",
+      "10128959064",
+      "10129234375",
+      "10129228989",
+      "10128962075",
+      "10128988905",
+      "10129008563",
+      "10128961010"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:31:02.472Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 202,
+    "failures": 1,
+    "passed": 199,
+    "skipped": 2,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 2
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34414918362-6/blob-report/report-58ad2f3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "short server rail keeps Add adjacent and desktop geometry stable",
+      "suitePath": [],
+      "filePath": "37-server-rail-pdd.spec.ts",
+      "status": "failed",
+      "durationMs": 12548,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-server-icon-bbQZBMZFHZkJ3_zhMgLYH')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-server-icon-bbQZBMZFHZkJ3_zhMgLYH')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-server-icon-bbQZBMZFHZkJ3_zhMgLYH')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-server-icon-bbQZBMZFHZkJ3_zhMgLYH')\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/37-server-rail-pdd.spec.ts:643:28",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

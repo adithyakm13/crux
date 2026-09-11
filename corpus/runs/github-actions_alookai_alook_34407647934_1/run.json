@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34407647934:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34407647934",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34407647934",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "344531cf56a4adde41d3ec0233ec2c7e4e1b234e",
+    "headBranch": "fix/mobile-signup-onboarding-gate",
+    "artifactIds": [
+      "10126240485",
+      "10126265747",
+      "10126261409",
+      "10126268738",
+      "10126306727",
+      "10126248262",
+      "10126335877",
+      "10126337662",
+      "10126263430"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:31:51.483Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 202,
+    "failures": 1,
+    "passed": 199,
+    "skipped": 2,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34407647934-6/blob-report/report-58ad2f3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "an active onboarding form yields focus priority during outage, then resumes",
+      "suitePath": [],
+      "filePath": "25-community-ws-reconnect-overlay.spec.ts",
+      "status": "timed_out",
+      "durationMs": 90020,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m\nError: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation to \"**/c/me/machines\" until \"commit\"\n  navigated to \"http://localhost:3000/c/me\"\n  navigated to \"http://localhost:3000/c/me\"\n============================================================\n    at /__w/alook/alook/src/web/src/test/e2e-ui/25-community-ws-reconnect-overlay.spec.ts:149:16",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

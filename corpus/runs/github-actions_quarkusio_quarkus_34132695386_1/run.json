@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:quarkusio/quarkus:34132695386:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "quarkusio/quarkus",
+    "providerRunId": "34132695386",
+    "runAttempt": 1,
+    "url": "https://github.com/quarkusio/quarkus/actions/runs/34132695386",
+    "workflowName": "Quarkus CI",
+    "event": "pull_request",
+    "headSha": "d920e41d3adc7fe2adda9c3b0261a67abacaa1a7",
+    "headBranch": "polish-MultipartParser",
+    "artifactIds": [
+      "10023520116",
+      "10023772437",
+      "10023720919",
+      "10023769694",
+      "10023950763",
+      "10023994659",
+      "10023997024",
+      "10023878080",
+      "10024412192",
+      "10023819165",
+      "10023541510",
+      "10023808729",
+      "10023911272",
+      "10023438059",
+      "10023895754",
+      "10023553573",
+      "10023582816",
+      "10023444836",
+      "10024229044",
+      "10023860582",
+      "10024164103",
+      "10024386150",
+      "10024485161",
+      "10024498611",
+      "10024434778",
+      "10023437825",
+      "10024660737",
+      "10024061572",
+      "10024359304",
+      "10024598377",
+      "10025081804",
+      "10024531200",
+      "10024713771",
+      "10023837234",
+      "10025252386",
+      "10024843227",
+      "10023629120",
+      "10024015717",
+      "10024278331",
+      "10025343742",
+      "10026193060",
+      "10026192925",
+      "10025994003",
+      "10024731257",
+      "10026347466",
+      "10025367413",
+      "10027654719",
+      "10027524529",
+      "10027656296",
+      "10028520555",
+      "10028090155"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T18:12:28.039Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 34654,
+    "failures": 9,
+    "passed": 33567,
+    "skipped": 1078,
+    "filesParsed": 8140,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 3
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 41,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 07, 2026 3:30:37 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 4.474s. Listening on: http://localhost:8081\nSep 07, 2026 3:30:37 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 07, 2026 3:30:37 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 07, 2026 3:30:38 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 41,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 07, 2026 3:30:21 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 2.882s. Listening on: http://localhost:8081\nSep 07, 2026 3:30:21 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 07, 2026 3:30:21 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 07, 2026 3:30:22 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 21 Windows/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 07, 2026 3:54:30 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 5.874s. Listening on: http://localhost:8081\nSep 07, 2026 3:54:30 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 07, 2026 3:54:30 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 07, 2026 3:54:31 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 21 Windows/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 42,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 07, 2026 3:54:08 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 3.630s. Listening on: http://localhost:8081\nSep 07, 2026 3:54:08 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 07, 2026 3:54:08 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 07, 2026 3:54:09 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25 Semeru/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-multiple-profiles-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceWithAnotherProfileTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 43,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceWithAnotherProfileTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceWithAnotherProfileTest.testHelloEndpoint(FlakyHelloResourceWithAnotherProfileTest.java:35)\n\n      Sep 07, 2026 3:52:56 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 6.421s. Listening on: http://localhost:8081\nSep 07, 2026 3:52:56 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 07, 2026 3:52:56 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 07, 2026 3:52:57 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "build-reports-1-Maven Tests - JDK 25 Semeru/build-reports.zip!integration-tests/maven/target/test-classes/projects/test-flaky-test-single-profile-processed/target/surefire-reports/TEST-org.acme.FlakyHelloResourceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 43,
+      "attemptIndex": 0,
+      "displayName": "testHelloEndpoint",
+      "suitePath": [
+        "org.acme.FlakyHelloResourceTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "org.acme.FlakingException",
+      "message": "deliberate failure run 1",
+      "stackText": "\n      org.acme.FlakingException: deliberate failure run 1\n\tat org.acme.FlakyHelloResourceTest.testHelloEndpoint(FlakyHelloResourceTest.java:31)\n\n      Sep 07, 2026 3:52:33 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: acme 1.0-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 3.968s. Listening on: http://localhost:8081\nSep 07, 2026 3:52:33 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Profile test activated. \nSep 07, 2026 3:52:33 PM io.quarkus.bootstrap.runner.Timing printStartupTime\nINFO: Installed features: [cdi, resteasy, smallrye-context-propagation, vertx, websockets, websockets-client]\nSep 07, 2026 3:52:34 PM org.jboss.logmanager.JBossLoggerFinder getLogger\nERROR: The LogManager accessed before the \"java.util.logging.manager\" system property was set to \"org.jboss.logmanager.LogManager\". Results may be unexpected.\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 21 Windows/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 46,
+      "attemptIndex": 0,
+      "displayName": "javaxNetSsl",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <500>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <500>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.javaxNetSsl(ExternalSelfSignedTestCase.java:31)\n\n      Request method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/javax.net.ssl\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 43\n\nio.vertx.core.VertxException: Pool closed\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 21 Windows/build-reports.zip!integration-tests/rest-client/target/surefire-reports/TEST-io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 46,
+      "attemptIndex": 1,
+      "displayName": "javaxNetSsl",
+      "suitePath": [
+        "io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <500>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <500>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.quarkus.it.rest.client.selfsigned.ExternalSelfSignedTestCase.javaxNetSsl(ExternalSelfSignedTestCase.java:31)\n\n      2026-09-07 15:39:06,340 INFO  [io.quarkus] (main) quarkus-integration-test-rest-client stopped in 0.058s\n2026-09-07 15:39:07,992 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  PKCS12 keystore and truststore generated successfully!\n2026-09-07 15:39:07,992 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  Key Store File: D:\\a\\quarkus\\quarkus\\integration-tests\\rest-client\\target\\certs\\self-signed-keystore.p12\n2026-09-07 15:39:07,992 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  Trust Store File: D:\\a\\quarkus\\quarkus\\integration-tests\\rest-client\\target\\certs\\self-signed-truststore.p12\n2026-09-07 15:39:08,147 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  PKCS12 keystore and truststore generated successfully!\n2026-09-07 15:39:08,147 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  Key Store File: D:\\a\\quarkus\\quarkus\\integration-tests\\rest-client\\target\\certs\\fake-host-keystore.p12\n2026-09-07 15:39:08,147 INFO  [io.smallrye.certs.CertificateGenerator] (pool-29-thread-1) ?  Trust Store File: D:\\a\\quarkus\\quarkus\\integration-tests\\rest-client\\target\\certs\\fake-host-truststore.p12\n2026-09-07 15:39:08,304 INFO  [io.quarkus] (main) quarkus-integration-test-rest-client 999-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 1.721s. Listening on: http://localhost:8081\n2026-09-07 15:39:08,304 INFO  [io.quarkus] (main) Profile test activated. \n2026-09-07 15:39:08,304 INFO  [io.quarkus] (main) Installed features: [cdi, micrometer, resteasy, resteasy-client, smallrye-context-propagation, smallrye-fault-tolerance, vertx]\nRequest method:\tGET\nRequest URI:\thttp://localhost:8081/self-signed/HttpClient/javax.net.ssl\nProxy:\t\t\t<none>\nRequest params:\t<none>\nQuery params:\t<none>\nForm params:\t<none>\nPath params:\t<none>\nHeaders:\t\tAccept=*/*\nCookies:\t\t<none>\nMultiparts:\t\t<none>\nBody:\t\t\t<none>\n\nHTTP/1.1 500 Internal Server Error\nContent-Type: text/plain;charset=UTF-8\ncontent-length: 43\n\nio.vertx.core.VertxException: Pool closed\n\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "build-reports-1-JVM Integration Tests - JDK 25/build-reports.zip!integration-tests/virtual-threads/grpc-virtual-threads/target/surefire-reports/TEST-io.quarkus.grpc.example.streaming.VirtualThreadTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 49,
+      "attemptIndex": 0,
+      "displayName": "testGrpcClient",
+      "suitePath": [
+        "io.quarkus.grpc.example.streaming.VirtualThreadTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "The test testGrpcClient() was expected to NOT pin the carrier thread, but we collected 1 event(s)\n* Pinning event captured: \n Blocking Operation: Contended monitor enter\n Pinned Reason: Freeze or preempt failed (2)\n Carrier Thread: {\n  osName = \"ForkJoinPool-1-worker-1\"\n  osThreadId = 197767\n  javaName = \"ForkJoinPool-1-worker-1\"\n  javaThreadId = 68\n  group = {\n    parent = {\n      parent = N/A\n      name = \"system\"\n    }\n    name = \"CarrierThreads\"\n  }\n  virtual = false\n}\n\n Duration (ns): 39033\n Stack trace:\n   io.quarkus.fs.util.rozip.ReadOnlyZipFileSystem.readCompressedData(io.quarkus.fs.util.rozip.ReadOnlyZipFileSystem.java:469)\n   io.quarkus.fs.util.rozip.ReadOnlyZipFileSystem.readEntryData(io.quarkus.fs.util.rozip.ReadOnlyZipFileSystem.java:428)\n   io.quarkus.fs.util.rozip.ReadOnlyZipFileSystemProvider.newByteChannel(io.quarkus.fs.util.rozip.ReadOnlyZipFileSystemProvider.java:141)\n   java.nio.file.Files.newByteChannel(java.nio.file.Files.java:357)\n   java.nio.file.Files.newByteChannel(java.nio.file.Files.java:399)\n   java.nio.file.Files.readAllBytes(java.nio.file.Files.java:2973)\n   io.quarkus.bootstrap.classloading.PathTreeClassPathElement$Resource.getData(io.quarkus.bootstrap.classloading.PathTreeClassPathElement$Resource.java:292)\n   io.quarkus.bootstrap.classloading.QuarkusClassLoader.loadClass(io.quarkus.bootstrap.classloading.QuarkusClassLoader.java:611)\n   io.quarkus.bootstrap.classloading.QuarkusClassLoader.loadClass(io.quarkus.bootstrap.classloading.QuarkusClassLoader.java:571)\n   io.vertx.core.http.impl.HttpClientImpl.wrap(io.vertx.core.http.impl.HttpClientImpl.java:776)\n   io.vertx.core.http.impl.HttpClientImpl.doRequest(io.vertx.core.http.impl.HttpClientImpl.java:721)\n   io.vertx.core.http.impl.HttpClientImpl.doRequest(io.vertx.core.http.impl.HttpClientImpl.java:570)\n   io.vertx.core.http.impl.HttpClientImpl.doRequest(io.vertx.core.http.impl.HttpClientImpl.java:513)\n   io.vertx.core.http.impl.HttpClientImpl.request(io.vertx.core.http.impl.HttpClientImpl.java:435)\n   io.vertx.core.http.impl.CleanableHttpClient.request(io.vertx.core.http.impl.CleanableHttpClient.java:43)\n   io.vertx.grpc.client.impl.GrpcClientImpl.request(io.vertx.grpc.client.impl.GrpcClientImpl.java:131)\n   io.vertx.grpc.client.impl.GrpcClientImpl.request(io.vertx.grpc.client.impl.GrpcClientImpl.java:125)\n   io.vertx.grpcio.client.GrpcIoClientChannel$1.invoker(io.vertx.grpcio.client.GrpcIoClientChannel$1.java:43)\n   io.vertx.grpcio.client.VertxClientCall.start(io.vertx.grpcio.client.VertxClientCall.java:85)\n   io.grpc.ForwardingClientCall.start(io.grpc.ForwardingClientCall.java:32)\n   io.quarkus.grpc.runtime.supports.IOThreadClientInterceptor$1.start(io.quarkus.grpc.runtime.supports.IOThreadClientInterceptor$1.java:38)\n   io.grpc.stub.ClientCalls.startCall(io.grpc.stub.ClientCalls.java:435)\n   io.grpc.stub.ClientCalls.asyncUnaryRequestCall(io.grpc.stub.ClientCalls.java:411)\n   io.grpc.stub.ClientCalls.asyncUnaryRequestCall(io.grpc.stub.ClientCalls.java:399)\n   io.grpc.stub.ClientCalls.asyncUnaryCall(io.grpc.stub.ClientCalls.java:84)\n   io.grpc.testing.integration.TestServiceGrpc$TestServiceStub.unaryCall(io.grpc.testing.integration.TestServiceGrpc$TestServiceStub.java:190)\n   io.grpc.testing.integration.MutinyTestServiceGrpc$MutinyTestServiceStub$$Lambda.0x000000004eaf5ef0.accept(io.grpc.testing.integration.MutinyTestServiceGrpc$MutinyTestServiceStub$$Lambda.0x000000004eaf5ef0.java:-1)\n   io.quarkus.grpc.stubs.ClientCalls$1.accept(io.quarkus.grpc.stubs.ClientCalls$1.java:43)\n   io.quarkus.grpc.stubs.ClientCalls$1.accept(io.quarkus.grpc.stubs.ClientCalls$1.java:40)\n   io.smallrye.context.impl.wrappers.SlowContextualConsumer.accept(io.smallrye.context.impl.wrappers.SlowContextualConsumer.java:21)\n   io.smallrye.mutiny.operators.uni.builders.UniCreateWithEmitter.subscribe(io.smallrye.mutiny.operators.uni.builders.UniCreateWithEmitter.java:22)\n   io.smallrye.mutiny.operators.AbstractUni.subscribe(io.smallrye.mutiny.operators.AbstractUni.java:35)\n   io.smallrye.mutiny.operators.uni.UniBlockingAwait.await(io.smallrye.mutiny.operators.uni.UniBlockingAwait.java:61)\n   io.smallrye.mutiny.groups.UniAwait.atMost(io.smallrye.mutiny.groups.UniAwait.java:76)\n   io.quarkus.grpc.example.streaming.Endpoint.invokeGrpcService(io.quarkus.grpc.example.streaming.Endpoint.java:27)\n   io.quarkus.grpc.example.streaming.Endpoint$quarkusrestinvoker$invokeGrpcService_6ac9262aa2fee10f12ad240f712a563605d38dca.invoke(io.quarkus.grpc.example.streaming.Endpoint$quarkusrestinvoker$invokeGrpcService_6ac9262aa2fee10f12ad240f712a563605d38dca.java:-1)\n   org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(org.jboss.resteasy.reactive.server.handlers.InvocationHandler.java:29)\n   io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.java:196)\n   org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.java:150)\n   io.quarkus.virtual.threads.ContextPreservingExecutorService$ContextPreservingRunnable.run(io.quarkus.virtual.threads.ContextPreservingExecutorService$ContextPreservingRunnable.java:45)\n   java.util.concurrent.ThreadPerTaskExecutor$TaskRunner.run(java.util.concurrent.ThreadPerTaskExecutor$TaskRunner.java:291)\n   java.lang.Thread.runWith(java.lang.Thread.java:1487)\n   java.lang.VirtualThread.run(java.lang.VirtualThread.java:460)\n   java.lang.VirtualThread$VThreadContinuation$1.run(java.lang.VirtualThread$VThreadContinuation$1.java:252)\n   jdk.internal.vm.Continuation.enter0(jdk.internal.vm.Continuation.java:325)\n   jdk.internal.vm.Continuation.enter(jdk.internal.vm.Continuation.java:316)\n   jdk.internal.vm.Continuation.enterSpecial(jdk.internal.vm.Continuation.java:-1)\n",
+      "stackText": "\n      java.lang.AssertionError: \nThe test testGrpcClient() was expected to NOT pin the carrier thread, but we collected 1 event(s)\n* Pinning event captured: \n\tBlocking Operation: Contended monitor enter\n\tPinned Reason: Freeze or preempt failed (2)\n\tCarrier Thread: {\n  osName = \"ForkJoinPool-1-worker-1\"\n  osThreadId = 197767\n  javaName = \"ForkJoinPool-1-worker-1\"\n  javaThreadId = 68\n  group = {\n    parent = {\n      parent = N/A\n      name = \"system\"\n    }\n    name = \"CarrierThreads\"\n  }\n  virtual = false\n}\n\n\tDuration (ns): 39033\n\tStack trace:\n\t\t\tio.quarkus.fs.util.rozip.ReadOnlyZipFileSystem.readCompressedData(io.quarkus.fs.util.rozip.ReadOnlyZipFileSystem.java:469)\n\t\t\tio.quarkus.fs.util.rozip.ReadOnlyZipFileSystem.readEntryData(io.quarkus.fs.util.rozip.ReadOnlyZipFileSystem.java:428)\n\t\t\tio.quarkus.fs.util.rozip.ReadOnlyZipFileSystemProvider.newByteChannel(io.quarkus.fs.util.rozip.ReadOnlyZipFileSystemProvider.java:141)\n\t\t\tjava.nio.file.Files.newByteChannel(java.nio.file.Files.java:357)\n\t\t\tjava.nio.file.Files.newByteChannel(java.nio.file.Files.java:399)\n\t\t\tjava.nio.file.Files.readAllBytes(java.nio.file.Files.java:2973)\n\t\t\tio.quarkus.bootstrap.classloading.PathTreeClassPathElement$Resource.getData(io.quarkus.bootstrap.classloading.PathTreeClassPathElement$Resource.java:292)\n\t\t\tio.quarkus.bootstrap.classloading.QuarkusClassLoader.loadClass(io.quarkus.bootstrap.classloading.QuarkusClassLoader.java:611)\n\t\t\tio.quarkus.bootstrap.classloading.QuarkusClassLoader.loadClass(io.quarkus.bootstrap.classloading.QuarkusClassLoader.java:571)\n\t\t\tio.vertx.core.http.impl.HttpClientImpl.wrap(io.vertx.core.http.impl.HttpClientImpl.java:776)\n\t\t\tio.vertx.core.http.impl.HttpClientImpl.doRequest(io.vertx.core.http.impl.HttpClientImpl.java:721)\n\t\t\tio.vertx.core.http.impl.HttpClientImpl.doRequest(io.vertx.core.http.impl.HttpClientImpl.java:570)\n\t\t\tio.vertx.core.http.impl.HttpClientImpl.doRequest(io.vertx.core.http.impl.HttpClientImpl.java:513)\n\t\t\tio.vertx.core.http.impl.HttpClientImpl.request(io.vertx.core.http.impl.HttpClientImpl.java:435)\n\t\t\tio.vertx.core.http.impl.CleanableHttpClient.request(io.vertx.core.http.impl.CleanableHttpClient.java:43)\n\t\t\tio.vertx.grpc.client.impl.GrpcClientImpl.request(io.vertx.grpc.client.impl.GrpcClientImpl.java:131)\n\t\t\tio.vertx.grpc.client.impl.GrpcClientImpl.request(io.vertx.grpc.client.impl.GrpcClientImpl.java:125)\n\t\t\tio.vertx.grpcio.client.GrpcIoClientChannel$1.invoker(io.vertx.grpcio.client.GrpcIoClientChannel$1.java:43)\n\t\t\tio.vertx.grpcio.client.VertxClientCall.start(io.vertx.grpcio.client.VertxClientCall.java:85)\n\t\t\tio.grpc.ForwardingClientCall.start(io.grpc.ForwardingClientCall.java:32)\n\t\t\tio.quarkus.grpc.runtime.supports.IOThreadClientInterceptor$1.start(io.quarkus.grpc.runtime.supports.IOThreadClientInterceptor$1.java:38)\n\t\t\tio.grpc.stub.ClientCalls.startCall(io.grpc.stub.ClientCalls.java:435)\n\t\t\tio.grpc.stub.ClientCalls.asyncUnaryRequestCall(io.grpc.stub.ClientCalls.java:411)\n\t\t\tio.grpc.stub.ClientCalls.asyncUnaryRequestCall(io.grpc.stub.ClientCalls.java:399)\n\t\t\tio.grpc.stub.ClientCalls.asyncUnaryCall(io.grpc.stub.ClientCalls.java:84)\n\t\t\tio.grpc.testing.integration.TestServiceGrpc$TestServiceStub.unaryCall(io.grpc.testing.integration.TestServiceGrpc$TestServiceStub.java:190)\n\t\t\tio.grpc.testing.integration.MutinyTestServiceGrpc$MutinyTestServiceStub$$Lambda.0x000000004eaf5ef0.accept(io.grpc.testing.integration.MutinyTestServiceGrpc$MutinyTestServiceStub$$Lambda.0x000000004eaf5ef0.java:-1)\n\t\t\tio.quarkus.grpc.stubs.ClientCalls$1.accept(io.quarkus.grpc.stubs.ClientCalls$1.java:43)\n\t\t\tio.quarkus.grpc.stubs.ClientCalls$1.accept(io.quarkus.grpc.stubs.ClientCalls$1.java:40)\n\t\t\tio.smallrye.context.impl.wrappers.SlowContextualConsumer.accept(io.smallrye.context.impl.wrappers.SlowContextualConsumer.java:21)\n\t\t\tio.smallrye.mutiny.operators.uni.builders.UniCreateWithEmitter.subscribe(io.smallrye.mutiny.operators.uni.builders.UniCreateWithEmitter.java:22)\n\t\t\tio.smallrye.mutiny.operators.AbstractUni.subscribe(io.smallrye.mutiny.operators.AbstractUni.java:35)\n\t\t\tio.smallrye.mutiny.operators.uni.UniBlockingAwait.await(io.smallrye.mutiny.operators.uni.UniBlockingAwait.java:61)\n\t\t\tio.smallrye.mutiny.groups.UniAwait.atMost(io.smallrye.mutiny.groups.UniAwait.java:76)\n\t\t\tio.quarkus.grpc.example.streaming.Endpoint.invokeGrpcService(io.quarkus.grpc.example.streaming.Endpoint.java:27)\n\t\t\tio.quarkus.grpc.example.streaming.Endpoint$quarkusrestinvoker$invokeGrpcService_6ac9262aa2fee10f12ad240f712a563605d38dca.invoke(io.quarkus.grpc.example.streaming.Endpoint$quarkusrestinvoker$invokeGrpcService_6ac9262aa2fee10f12ad240f712a563605d38dca.java:-1)\n\t\t\torg.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(org.jboss.resteasy.reactive.server.handlers.InvocationHandler.java:29)\n\t\t\tio.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.java:196)\n\t\t\torg.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.java:150)\n\t\t\tio.quarkus.virtual.threads.ContextPreservingExecutorService$ContextPreservingRunnable.run(io.quarkus.virtual.threads.ContextPreservingExecutorService$ContextPreservingRunnable.java:45)\n\t\t\tjava.util.concurrent.ThreadPerTaskExecutor$TaskRunner.run(java.util.concurrent.ThreadPerTaskExecutor$TaskRunner.java:291)\n\t\t\tjava.lang.Thread.runWith(java.lang.Thread.java:1487)\n\t\t\tjava.lang.VirtualThread.run(java.lang.VirtualThread.java:460)\n\t\t\tjava.lang.VirtualThread$VThreadContinuation$1.run(java.lang.VirtualThread$VThreadContinuation$1.java:252)\n\t\t\tjdk.internal.vm.Continuation.enter0(jdk.internal.vm.Continuation.java:325)\n\t\t\tjdk.internal.vm.Continuation.enter(jdk.internal.vm.Continuation.java:316)\n\t\t\tjdk.internal.vm.Continuation.enterSpecial(jdk.internal.vm.Continuation.java:-1)\n\n\tat io.quarkus.test.junit.virtual.internal.VirtualThreadExtension.afterEach(VirtualThreadExtension.java:169)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n      2026-09-07 16:51:58,652 WARN  [io.quarkus.arc.deployment.SplitPackageProcessor] (build-8) Detected a split package usage which is considered a bad practice and should be avoided. Following packages were detected in multiple archives: \n- \"com.google.protobuf\" found in [com.google.protobuf:protobuf-java:4.35.0, io.quarkus:quarkus-integration-test-virtual-threads-grpc:999-SNAPSHOT]\n2026-09-07 16:51:59,746 WARN  [io.quarkus.deployment.jvm] (main) Could not get access to jdk.internal.module API: this is required for Quarkus to adjust Java Modules configuration to match the various requirements of each extension. Please ensure this JVM is launched with --add-opens=java.base/java.lang.invoke=ALL-UNNAMED.\n2026-09-07 16:52:00,951 INFO  [io.quarkus.grpc.runtime.GrpcServerRecorder] (main) Enabling gRPC server\n2026-09-07 16:52:01,053 INFO  [io.quarkus] (main) quarkus-integration-test-virtual-threads-grpc 999-SNAPSHOT on JVM (powered by Quarkus 999-SNAPSHOT) started in 3.910s. Listening on: http://localhost:8081\n2026-09-07 16:52:01,054 INFO  [io.quarkus] (main) Profile test activated. \n2026-09-07 16:52:01,054 INFO  [io.quarkus] (main) Installed features: [cdi, grpc-client, grpc-server, rest, rest-jackson, smallrye-context-propagation, vertx]\n\n      WARNING: A Java agent has been loaded dynamically (/home/runner/.m2/repository/net/bytebuddy/byte-buddy-agent/1.18.8/byte-buddy-agent-1.18.8.jar)\nWARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning\nWARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information\nWARNING: Dynamic loading of agents will be disallowed by default in a future release\n\n    ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

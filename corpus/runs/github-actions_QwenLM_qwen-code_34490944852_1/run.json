@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:QwenLM/qwen-code:34490944852:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "QwenLM/qwen-code",
+    "providerRunId": "34490944852",
+    "runAttempt": 1,
+    "url": "https://github.com/QwenLM/qwen-code/actions/runs/34490944852",
+    "workflowName": "Qwen Code CI",
+    "event": "pull_request",
+    "headSha": "565a32c391a49696b998bb951c737891d34c9ed9",
+    "headBranch": "feat/task-flow-dynamic-workflow",
+    "artifactIds": [
+      "10158650651"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:33:16.056Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 62724,
+    "failures": 3,
+    "passed": 62620,
+    "skipped": 101,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 156
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/cli/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "legacy session telemetry route drift guard > matches the explicit Express route registrations in both directions",
+      "suitePath": [
+        "src/serve/server/telemetry-catalog.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'DELETE /session/:id', …(72) ] to have a length of 72 but got 73",
+      "stackText": "\nAssertionError: expected [ 'DELETE /session/:id', …(72) ] to have a length of 72 but got 73\n\n- Expected\n+ Received\n\n- 72\n+ 73\n\n ❯ src/serve/server/telemetry-catalog.test.ts:101:24\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/cli/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "legacy session telemetry route drift guard > matches the explicit Express route registrations in both directions",
+      "suitePath": [
+        "src/serve/server/telemetry-catalog.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'DELETE /session/:id', …(72) ] to have a length of 72 but got 73",
+      "stackText": "\nAssertionError: expected [ 'DELETE /session/:id', …(72) ] to have a length of 72 but got 73\n\n- Expected\n+ Received\n\n- 72\n+ 73\n\n ❯ src/serve/server/telemetry-catalog.test.ts:101:24\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/cli/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "legacy session telemetry route drift guard > matches the explicit Express route registrations in both directions",
+      "suitePath": [
+        "src/serve/server/telemetry-catalog.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 25,
+      "errorType": "AssertionError",
+      "message": "expected [ 'DELETE /session/:id', …(72) ] to have a length of 72 but got 73",
+      "stackText": "\nAssertionError: expected [ 'DELETE /session/:id', …(72) ] to have a length of 72 but got 73\n\n- Expected\n+ Received\n\n- 72\n+ 73\n\n ❯ src/serve/server/telemetry-catalog.test.ts:101:24\n            ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

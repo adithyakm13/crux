@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/accumulo:33209844878:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/accumulo",
+    "providerRunId": "33209844878",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/accumulo/actions/runs/33209844878",
+    "workflowName": "QA",
+    "event": "pull_request",
+    "headSha": "1e7aa8aef700a7a29c9fc4d39d4dd4ef47b95886",
+    "headBranch": "feature/thrift-0.24.0",
+    "artifactIds": [
+      "9701750017"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T06:01:57.618Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1825,
+    "failures": 1,
+    "passed": 1824,
+    "skipped": 0,
+    "filesParsed": 345,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "surefire-reports-unit-tests/server/base/target/surefire-reports/TEST-org.apache.accumulo.server.rpc.ThriftServerTypeTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testDefaultServer",
+      "suitePath": [
+        "org.apache.accumulo.server.rpc.ThriftServerTypeTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 18,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "expected: <custom_hs_ha> but was: <threaded_selector>",
+      "stackText": "org.opentest4j.AssertionFailedError: expected: <custom_hs_ha> but was: <threaded_selector>\n\tat org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)\n\tat org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)\n\tat org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)\n\tat org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)\n\tat org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)\n\tat org.apache.accumulo.server.rpc.ThriftServerTypeTest.testDefaultServer(ThriftServerTypeTest.java:30)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1596)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1596)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

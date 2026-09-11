@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:DIGI-UW/OpenELIS-Global-2:34422503501:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "DIGI-UW/OpenELIS-Global-2",
+    "providerRunId": "34422503501",
+    "runAttempt": 1,
+    "url": "https://github.com/DIGI-UW/OpenELIS-Global-2/actions/runs/34422503501",
+    "workflowName": "E2E / Tests",
+    "event": "workflow_run",
+    "headSha": "66d892122863a6a55944b555b76f41632f84e6ae",
+    "headBranch": "develop",
+    "artifactIds": [
+      "10131596639",
+      "10131632910",
+      "10131561334",
+      "10131553860"
+    ],
+    "licenseSpdx": "MPL-2.0",
+    "licenseRaw": "MPL-2.0",
+    "retrievedAt": "2026-09-10T17:25:15.665Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 137,
+    "failures": 1,
+    "passed": 134,
+    "skipped": 2,
+    "filesParsed": 4,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "harness-blob-report-2/report-harness-foundational-harness-demo-2.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "reviews safe ASTM and FILE traffic entirely through the visible UI",
+      "suitePath": [
+        "OGC-1054 assembled analyzer MVP"
+      ],
+      "filePath": "demo/harness/ogc-1054-analyzer-mvp.spec.ts",
+      "status": "failed",
+      "durationMs": 9296,
+      "errorType": "Error",
+      "message": "Error: Analyzer dashboard should not overflow the mobile page horizontally\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+      "stackText": "Error: Analyzer dashboard should not overflow the mobile page horizontally\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /home/runner/work/OpenELIS-Global-2/OpenELIS-Global-2/frontend/playwright/tests/demo/harness/ogc-1054-analyzer-mvp.spec.ts:266:7",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34489643328:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34489643328",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34489643328",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "27e2a7dbcdfe688d086059b30e1cc938f73d8366",
+    "headBranch": "feat/official-server",
+    "artifactIds": [
+      "10157560880",
+      "10157554792",
+      "10157555971",
+      "10157584039",
+      "10157555352",
+      "10157710629",
+      "10157546689",
+      "10157808127",
+      "10157656693"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:25:42.291Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 205,
+    "failures": 2,
+    "passed": 201,
+    "skipped": 2,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34489643328-3/blob-report/report-7573a5b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "a visible live tail clears both devices while an unseen tail stays unread",
+      "suitePath": [],
+      "filePath": "29-multi-device-read-state.spec.ts",
+      "status": "timed_out",
+      "durationMs": 180280,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m\nError: page.waitForResponse: Target page, context or browser has been closed\n    at /__w/alook/alook/src/web/src/test/e2e-ui/29-multi-device-read-state.spec.ts:494:36",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-34489643328-5/blob-report/report-eb2ed85.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "existing channel/server deletes converge UI, WS, pending rows, linked media, and icon reads",
+      "suitePath": [],
+      "filePath": "28-community-delete-media-cleanup.spec.ts",
+      "status": "failed",
+      "durationMs": 26281,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/c\\/channels\\/[^/]+\\/[^/]+$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:3000/c/channels/zIm25UJdeQBwS2a5gJbxt\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    24 × locator resolved to <html lang=\"en\" class=\"dmsans_c227b566-module__TN79BG__variable dmmono_bdd112d4-module__Yjgkaa__variable instrumentserif_418434b8-module__1PnwCG__variable caveat_26f4596c-module__cdAQxq__variable vt323_4fc70ac5-module__ACS4JW__variable literata_1e5e3d3f-module__313Aia__variable h-full antialiased light\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:3000/c/channels/zIm25UJdeQBwS2a5gJbxt\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/c\\/channels\\/[^/]+\\/[^/]+$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:3000/c/channels/zIm25UJdeQBwS2a5gJbxt\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    24 × locator resolved to <html lang=\"en\" class=\"dmsans_c227b566-module__TN79BG__variable dmmono_bdd112d4-module__Yjgkaa__variable instrumentserif_418434b8-module__1PnwCG__variable caveat_26f4596c-module__cdAQxq__variable vt323_4fc70ac5-module__ACS4JW__variable literata_1e5e3d3f-module__313Aia__variable h-full antialiased light\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:3000/c/channels/zIm25UJdeQBwS2a5gJbxt\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/28-community-delete-media-cleanup.spec.ts:185:28",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

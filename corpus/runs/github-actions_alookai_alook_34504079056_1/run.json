@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34504079056:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34504079056",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34504079056",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "24c6c1233c38ec51f00955e2a8f853831b443186",
+    "headBranch": "fix/server-rail-first-touch-indicators",
+    "artifactIds": [
+      "10163435967",
+      "10163438057",
+      "10163573198",
+      "10163467795",
+      "10163485909",
+      "10163479238",
+      "10163605345",
+      "10163624037",
+      "10163440559"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:24:49.903Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 206,
+    "failures": 3,
+    "passed": 198,
+    "skipped": 5,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34504079056-6/blob-report/report-58ad2f3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "first native Server tap is one root push with a stable handle and zero rail PATCH",
+      "suitePath": [],
+      "filePath": "37-server-rail-pdd.spec.ts",
+      "status": "failed",
+      "durationMs": 33761,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-server-icon-rq7wokBWcoEpGmdUIitcu')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-server-icon-rq7wokBWcoEpGmdUIitcu')\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-server-icon-rq7wokBWcoEpGmdUIitcu')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-server-icon-rq7wokBWcoEpGmdUIitcu')\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/37-server-rail-pdd.spec.ts:403:65",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-34504079056-4/blob-report/report-a74636e.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "server switching exposes one target-scoped cold checkpoint and skips it when warm",
+      "suitePath": [],
+      "filePath": "36-server-switch-pending-checkpoint.spec.ts",
+      "status": "timed_out",
+      "durationMs": 120180,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m\nError: page.waitForResponse: Target page, context or browser has been closed\n    at map (/__w/alook/alook/src/web/src/test/e2e-ui/36-server-switch-pending-checkpoint.spec.ts:129:28)\n    at /__w/alook/alook/src/web/src/test/e2e-ui/36-server-switch-pending-checkpoint.spec.ts:129:5",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-34504079056-9/blob-report/report-749d542.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 11,
+      "attemptIndex": 0,
+      "displayName": "one mention source disappears from Unreads, Mentions, and every dot in the same frame",
+      "suitePath": [
+        "account unread projection"
+      ],
+      "filePath": "41-account-unread-projection.spec.ts",
+      "status": "failed",
+      "durationMs": 16492,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31m32\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31m32\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at /__w/alook/alook/src/web/src/test/e2e-ui/41-account-unread-projection.spec.ts:289:71",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

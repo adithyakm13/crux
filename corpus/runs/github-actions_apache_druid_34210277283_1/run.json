@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/druid:34210277283:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/druid",
+    "providerRunId": "34210277283",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/druid/actions/runs/34210277283",
+    "workflowName": "Unit & Integration tests CI",
+    "event": "pull_request",
+    "headSha": "82ab2975c9d311a5043e7d5bc8fb044932ccff26",
+    "headBranch": "dependabot/maven/fabric8.version-7.9.0",
+    "artifactIds": [
+      "10050919132",
+      "10050914667",
+      "10050836595",
+      "10051125735",
+      "10050967044",
+      "10051254243",
+      "10050876982",
+      "10051139418",
+      "10051043772"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T16:45:37.226Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 272639,
+    "failures": 1,
+    "passed": 265089,
+    "skipped": 7549,
+    "filesParsed": 1510,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "unit-test-reports-jdk25-f7b3ee25/processing/target/surefire-reports/TEST-org.apache.druid.collections.ReferenceCountingResourceHolderTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "testResourceHandlerClearedByJVM",
+      "suitePath": [
+        "org.apache.druid.collections.ReferenceCountingResourceHolderTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "expected: <1> but was: <3>",
+      "stackText": "\n      org.opentest4j.AssertionFailedError: expected: <1> but was: <3>\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:673)\n\tat org.apache.druid.collections.ReferenceCountingResourceHolderTest.verifyCleanerRun(ReferenceCountingResourceHolderTest.java:126)\n\tat org.apache.druid.collections.ReferenceCountingResourceHolderTest.testResourceHandlerClearedByJVM(ReferenceCountingResourceHolderTest.java:95)\n\n      2026-09-08T10:05:51,819 WARN [Cleaner-0] org.apache.druid.collections.ReferenceCountingResourceHolder - Not closed! Object was[org.apache.druid.collections.ReferenceCountingResourceHolderTest$1@9808e5c]\n2026-09-08T10:05:51,821 WARN [Cleaner-0] org.apache.druid.collections.ReferenceCountingResourceHolder - Not closed! Object was[foo]\n2026-09-08T10:05:51,821 WARN [Cleaner-0] org.apache.druid.collections.ReferenceCountingResourceHolder - Not closed! Object was[bar]\n\n    ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

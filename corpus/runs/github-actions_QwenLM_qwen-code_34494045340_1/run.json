@@ -1,0 +1,494 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:QwenLM/qwen-code:34494045340:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "QwenLM/qwen-code",
+    "providerRunId": "34494045340",
+    "runAttempt": 1,
+    "url": "https://github.com/QwenLM/qwen-code/actions/runs/34494045340",
+    "workflowName": "Qwen Code CI",
+    "event": "pull_request",
+    "headSha": "27c7ec3912ff6f52efa83356d5be77ab2a262086",
+    "headBranch": "fix/lsp-document-sync",
+    "artifactIds": [
+      "10160644027"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:33:10.774Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 62455,
+    "failures": 24,
+    "passed": 62333,
+    "skipped": 98,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 156
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "loads once and survives a refresh failure (StrictMode=false, initialFailure='none')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "loads once and survives a refresh failure (StrictMode=false, initialFailure='none')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "loads once and survives a refresh failure (StrictMode=false, initialFailure='none')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 71,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "loads once and survives a refresh failure (StrictMode=false, initialFailure='http')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "loads once and survives a refresh failure (StrictMode=false, initialFailure='http')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "loads once and survives a refresh failure (StrictMode=false, initialFailure='http')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 19,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "loads once and survives a refresh failure (StrictMode=false, initialFailure='network')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "loads once and survives a refresh failure (StrictMode=false, initialFailure='network')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "loads once and survives a refresh failure (StrictMode=false, initialFailure='network')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 27,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', 'GET /brand' ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "loads once and survives a refresh failure (StrictMode=true, initialFailure='none')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "loads once and survives a refresh failure (StrictMode=true, initialFailure='none')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "loads once and survives a refresh failure (StrictMode=true, initialFailure='none')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 20,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "loads once and survives a refresh failure (StrictMode=true, initialFailure='http')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "loads once and survives a refresh failure (StrictMode=true, initialFailure='http')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "loads once and survives a refresh failure (StrictMode=true, initialFailure='http')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "loads once and survives a refresh failure (StrictMode=true, initialFailure='network')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "loads once and survives a refresh failure (StrictMode=true, initialFailure='network')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "loads once and survives a refresh failure (StrictMode=true, initialFailure='network')",
+      "suitePath": [
+        "components/WorkspaceSessionProvider.loading.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 11,
+      "errorType": "AssertionError",
+      "message": "expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]",
+      "stackText": "\nAssertionError: expected [ 'GET /capabilities', …(2) ] to deeply equal [ 'GET /capabilities' ]\n\n- Expected\n+ Received\n\n  [\n    \"GET /capabilities\",\n+   \"GET /brand\",\n+   \"GET /brand\",\n  ]\n\n ❯ components/WorkspaceSessionProvider.loading.test.tsx:199:21\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0019",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "sidebar brand > treats an empty name as unset rather than blanking the brand row",
+      "suitePath": [
+        "components/sidebar/WebShellSidebar.brand.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected null not to be null",
+      "stackText": "\nAssertionError: expected null not to be null\n ❯ components/sidebar/WebShellSidebar.brand.test.tsx:204:11\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0020",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "sidebar brand > treats an empty name as unset rather than blanking the brand row",
+      "suitePath": [
+        "components/sidebar/WebShellSidebar.brand.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected null not to be null",
+      "stackText": "\nAssertionError: expected null not to be null\n ❯ components/sidebar/WebShellSidebar.brand.test.tsx:204:11\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0021",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "sidebar brand > treats an empty name as unset rather than blanking the brand row",
+      "suitePath": [
+        "components/sidebar/WebShellSidebar.brand.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 93,
+      "errorType": "AssertionError",
+      "message": "expected null not to be null",
+      "stackText": "\nAssertionError: expected null not to be null\n ❯ components/sidebar/WebShellSidebar.brand.test.tsx:204:11\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0022",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "sidebar brand > names the version tooltip after the brand",
+      "suitePath": [
+        "components/sidebar/WebShellSidebar.brand.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected null not to be null",
+      "stackText": "\nAssertionError: expected null not to be null\n ❯ components/sidebar/WebShellSidebar.brand.test.tsx:212:11\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0023",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "sidebar brand > names the version tooltip after the brand",
+      "suitePath": [
+        "components/sidebar/WebShellSidebar.brand.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected null not to be null",
+      "stackText": "\nAssertionError: expected null not to be null\n ❯ components/sidebar/WebShellSidebar.brand.test.tsx:212:11\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0024",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/web-shell/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "sidebar brand > names the version tooltip after the brand",
+      "suitePath": [
+        "components/sidebar/WebShellSidebar.brand.test.tsx"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 113,
+      "errorType": "AssertionError",
+      "message": "expected null not to be null",
+      "stackText": "\nAssertionError: expected null not to be null\n ❯ components/sidebar/WebShellSidebar.brand.test.tsx:212:11\n            ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

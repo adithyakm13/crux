@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:RackulaLives/Rackula:33958583822:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "RackulaLives/Rackula",
+    "providerRunId": "33958583822",
+    "runAttempt": 1,
+    "url": "https://github.com/RackulaLives/Rackula/actions/runs/33958583822",
+    "workflowName": "Full E2E Tests",
+    "event": "schedule",
+    "headSha": "a023bffb3939a3b037d3ac3ff5dc86cef6de6ef8",
+    "headBranch": "main",
+    "artifactIds": [
+      "9967231025",
+      "9967251334",
+      "9967218815",
+      "9967216882"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-10T17:17:04.500Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 485,
+    "failures": 1,
+    "passed": 478,
+    "skipped": 6,
+    "filesParsed": 4,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-4/report-4.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 3,
+      "attemptIndex": 0,
+      "displayName": "bottom sheet closes on backdrop click",
+      "suitePath": [
+        "Bottom Sheet"
+      ],
+      "filePath": "android-chrome.spec.ts",
+      "status": "failed",
+      "durationMs": 3962,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.dialog--sheet')\nExpected: not visible\nReceived: visible\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"not toBeVisible\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for locator('.dialog--sheet')\u001b[22m\n\u001b[2m    8 × locator resolved to <div data-size=\"M\" id=\"bits-c36\" role=\"dialog\" tabindex=\"-1\" aria-modal=\"true\" data-state=\"open\" data-dialog-content=\"\" aria-labelledby=\"bits-c37\" class=\"dialog dialog--sheet\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"visible\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.dialog--sheet')\nExpected: not visible\nReceived: visible\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"not toBeVisible\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for locator('.dialog--sheet')\u001b[22m\n\u001b[2m    8 × locator resolved to <div data-size=\"M\" id=\"bits-c36\" role=\"dialog\" tabindex=\"-1\" aria-modal=\"true\" data-state=\"open\" data-dialog-content=\"\" aria-labelledby=\"bits-c37\" class=\"dialog dialog--sheet\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"visible\"\u001b[22m\n\n    at /home/runner/work/Rackula/Rackula/e2e/android-chrome.spec.ts:156:35",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

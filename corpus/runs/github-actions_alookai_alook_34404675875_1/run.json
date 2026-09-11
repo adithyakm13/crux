@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34404675875:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34404675875",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34404675875",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "f17f096f7263f8d0d07480b0c57a4e90fa0c8bf0",
+    "headBranch": "fix/mobile-signup-onboarding-gate",
+    "artifactIds": [
+      "10125163698",
+      "10125185200",
+      "10125181617",
+      "10125179786",
+      "10125175895",
+      "10125268541",
+      "10125250111",
+      "10125188165",
+      "10125326734"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:32:39.764Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 202,
+    "failures": 3,
+    "passed": 195,
+    "skipped": 4,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34404675875-6/blob-report/report-58ad2f3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "an active onboarding form yields focus priority during outage, then resumes",
+      "suitePath": [],
+      "filePath": "25-community-ws-reconnect-overlay.spec.ts",
+      "status": "timed_out",
+      "durationMs": 90021,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m\nError: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation to \"**/c/me/machines\" until \"commit\"\n  navigated to \"http://localhost:3000/c/me\"\n  navigated to \"http://localhost:3000/c/me\"\n============================================================\n    at /__w/alook/alook/src/web/src/test/e2e-ui/25-community-ws-reconnect-overlay.spec.ts:149:16",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-34404675875-6/blob-report/report-58ad2f3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "first-signup mobile opens onboarding before the empty Machines guide",
+      "suitePath": [],
+      "filePath": "31-machine-guide-motion.spec.ts",
+      "status": "timed_out",
+      "durationMs": 62339,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m\nError: page.waitForURL: Test timeout of 60000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/c/me/machines\" until \"commit\"\n  navigated to \"http://localhost:3000/c/me\"\n  navigated to \"http://localhost:3000/c/me\"\n============================================================\n    at /__w/alook/alook/src/web/src/test/e2e-ui/31-machine-guide-motion.spec.ts:15:16",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-34404675875-4/blob-report/report-a74636e.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "warm cache crosses DM routes without a duplicate request or status flash",
+      "suitePath": [
+        "DM channel-reference directory states"
+      ],
+      "filePath": "35-channel-ref-directory-states.spec.ts",
+      "status": "failed",
+      "durationMs": 6857,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at /__w/alook/alook/src/web/src/test/e2e-ui/35-channel-ref-directory-states.spec.ts:201:27",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

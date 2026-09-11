@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34213551314:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34213551314",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34213551314",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "1dd84aefeb312218df396e9e2d4e530cb4d6bc3f",
+    "headBranch": "feat/apple-login",
+    "artifactIds": [
+      "10051154069",
+      "10051160490",
+      "10051159236",
+      "10051165439",
+      "10051186763",
+      "10051173509",
+      "10051162646",
+      "10051155578",
+      "10051228116"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:39:38.444Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 199,
+    "failures": 5,
+    "passed": 186,
+    "skipped": 8,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 2
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34213551314-7/blob-report/report-e071aed.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "Android Chrome/WebView keep 320/390/639 cold frames mobile before breakpoint hydration",
+      "suitePath": [
+        "community Android loading geometry"
+      ],
+      "filePath": "46-community-loading-geometry-android.spec.ts",
+      "status": "failed",
+      "durationMs": 45452,
+      "errorType": "Error",
+      "message": "Error: frame 0 visible modules: {\"overflow\":0,\"geometry\":{\"shell\":{\"x\":0,\"y\":0,\"width\":639,\"height\":900}}}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 0\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[32m-   \"main\",\u001b[39m\n\u001b[2m    \"shell\",\u001b[22m\n\u001b[32m-   \"surface\",\u001b[39m\n\u001b[2m  ]\u001b[22m",
+      "stackText": "Error: frame 0 visible modules: {\"overflow\":0,\"geometry\":{\"shell\":{\"x\":0,\"y\":0,\"width\":639,\"height\":900}}}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 0\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[32m-   \"main\",\u001b[39m\n\u001b[2m    \"shell\",\u001b[22m\n\u001b[32m-   \"surface\",\u001b[39m\n\u001b[2m  ]\u001b[22m\n    at expectMobileGeometry (/__w/alook/alook/src/web/src/test/e2e-ui/_fixtures/community-loading-geometry.ts:242:7)\n    at runAndroidLoadingGeometry (/__w/alook/alook/src/web/src/test/e2e-ui/_fixtures/community-loading-geometry.ts:414:11)\n    at /__w/alook/alook/src/web/src/test/e2e-ui/46-community-loading-geometry-android.spec.ts:10:5",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-34213551314-1/blob-report/report-be3be0b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "a non-member is ejected when hitting the server URL directly",
+      "suitePath": [
+        "channel & member admin"
+      ],
+      "filePath": "06-channel-member-admin.spec.ts",
+      "status": "failed",
+      "durationMs": 21093,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/\\/channels\\/0MXZ2DyQmc2iBW-IZ-FDy\\/enyOB_yxizRezwv4yQ8a3$/\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3000/c\u001b[7m/channels/0MXZ2DyQmc2iBW-IZ-FDy/enyOB_yxizRezwv4yQ8a3\u001b[27m\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    43 × locator resolved to <html lang=\"en\" class=\"dmsans_c227b566-module__TN79BG__variable dmmono_bdd112d4-module__Yjgkaa__variable instrumentserif_418434b8-module__1PnwCG__variable caveat_26f4596c-module__cdAQxq__variable vt323_4fc70ac5-module__ACS4JW__variable literata_1e5e3d3f-module__313Aia__variable h-full antialiased light\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:3000/c/channels/0MXZ2DyQmc2iBW-IZ-FDy/enyOB_yxizRezwv4yQ8a3\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/\\/channels\\/0MXZ2DyQmc2iBW-IZ-FDy\\/enyOB_yxizRezwv4yQ8a3$/\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3000/c\u001b[7m/channels/0MXZ2DyQmc2iBW-IZ-FDy/enyOB_yxizRezwv4yQ8a3\u001b[27m\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    43 × locator resolved to <html lang=\"en\" class=\"dmsans_c227b566-module__TN79BG__variable dmmono_bdd112d4-module__Yjgkaa__variable instrumentserif_418434b8-module__1PnwCG__variable caveat_26f4596c-module__cdAQxq__variable vt323_4fc70ac5-module__ACS4JW__variable literata_1e5e3d3f-module__313Aia__variable h-full antialiased light\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:3000/c/channels/0MXZ2DyQmc2iBW-IZ-FDy/enyOB_yxizRezwv4yQ8a3\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/06-channel-member-admin.spec.ts:22:28",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-34213551314-1/blob-report/report-be3be0b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "desktop restores scoped real image/file drafts, rebuilds URLs, and removal never revives",
+      "suitePath": [
+        "same-tab Community attachment drafts"
+      ],
+      "filePath": "43-composer-attachment-drafts.spec.ts",
+      "status": "failed",
+      "durationMs": 20874,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-composer-input').locator('[contenteditable=\\'true\\']')\nExpected substring: \u001b[32m\"image draft 1788862437296\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-composer-input').locator('[contenteditable=\\'true\\']')\u001b[22m\n\u001b[2m    24 × locator resolved to <div tabindex=\"0\" translate=\"no\" enterkeyhint=\"send\" contenteditable=\"true\" class=\"tiptap ProseMirror outline-none ProseMirror-focused\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-composer-input').locator('[contenteditable=\\'true\\']')\nExpected substring: \u001b[32m\"image draft 1788862437296\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-composer-input').locator('[contenteditable=\\'true\\']')\u001b[22m\n\u001b[2m    24 × locator resolved to <div tabindex=\"0\" translate=\"no\" enterkeyhint=\"send\" contenteditable=\"true\" class=\"tiptap ProseMirror outline-none ProseMirror-focused\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/43-composer-attachment-drafts.spec.ts:130:42",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "blob-report-34213551314-1/blob-report/report-be3be0b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "draft, undo, IME, plain paste, and forum-body boundaries remain stable",
+      "suitePath": [
+        "chat composer ordered-list continuation"
+      ],
+      "filePath": "52-chat-composer-ordered-list.spec.ts",
+      "status": "failed",
+      "durationMs": 24611,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('community-composer-input').locator('[contenteditable=\\'true\\']').locator('ol')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-composer-input').locator('[contenteditable=\\'true\\']').locator('ol')\u001b[22m\n\u001b[2m    24 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('community-composer-input').locator('[contenteditable=\\'true\\']').locator('ol')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-composer-input').locator('[contenteditable=\\'true\\']').locator('ol')\u001b[22m\n\u001b[2m    24 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/52-chat-composer-ordered-list.spec.ts:239:42",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "blob-report-34213551314-1/blob-report/report-be3be0b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "remote receive states and sustained upward input produce diagnostic traces",
+      "suitePath": [
+        "message scroll characterization"
+      ],
+      "filePath": "55-message-scroll-characterization.spec.ts",
+      "status": "failed",
+      "durationMs": 17132,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m35\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m35\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at /__w/alook/alook/src/web/src/test/e2e-ui/55-message-scroll-characterization.spec.ts:567:86",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

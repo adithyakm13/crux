@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/accumulo:30392433501:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/accumulo",
+    "providerRunId": "30392433501",
+    "runAttempt": 2,
+    "url": "https://github.com/apache/accumulo/actions/runs/30392433501",
+    "workflowName": "QA",
+    "event": "pull_request",
+    "headSha": "3e740e6c7d9523362b81842e49478549a0b723e1",
+    "headBranch": "todos",
+    "artifactIds": [
+      "8703493958"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T06:04:19.743Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1782,
+    "failures": 1,
+    "passed": 1781,
+    "skipped": 0,
+    "filesParsed": 243,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 175
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "surefire-reports-unit-tests/core/target/surefire-reports/TEST-org.apache.accumulo.core.spi.scan.ConfigurableScanServerSelectorTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testServerSetChanges",
+      "suitePath": [
+        "org.apache.accumulo.core.spi.scan.ConfigurableScanServerSelectorTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 5059,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "expected: <3> but was: <2>",
+      "stackText": "org.opentest4j.AssertionFailedError: expected: <3> but was: <2>\n\tat org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)\n\tat org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)\n\tat org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)\n\tat org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)\n\tat org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)\n\tat org.apache.accumulo.core.spi.scan.ConfigurableScanServerSelectorTest.testServerSetChanges(ConfigurableScanServerSelectorTest.java:616)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1596)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1596)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

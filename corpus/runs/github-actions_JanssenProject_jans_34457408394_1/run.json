@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:JanssenProject/jans:34457408394:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "JanssenProject/jans",
+    "providerRunId": "34457408394",
+    "runAttempt": 1,
+    "url": "https://github.com/JanssenProject/jans/actions/runs/34457408394",
+    "workflowName": "Test: Terraform Provider",
+    "event": "schedule",
+    "headSha": "960a09e135c20ad6d169c8f8e21629adaf38fffe",
+    "headBranch": "main",
+    "artifactIds": [
+      "10144246617",
+      "10144236915"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:27:31.113Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 546,
+    "failures": 1,
+    "passed": 545,
+    "skipped": 0,
+    "filesParsed": 2,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-reports-PGSQL/TEST-terraform-PGSQL.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "TestScope",
+      "suitePath": [
+        "github.com/jans/terraform-provider-jans/jans"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 70,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestScope\n    scope_test.go:19: failed to get all scopes: failed to fetch page at index 1: bad request: {\"code\":\"400\",\"message\":\"Maximum number of results per page is 5\"}\n--- FAIL: TestScope (0.07s)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

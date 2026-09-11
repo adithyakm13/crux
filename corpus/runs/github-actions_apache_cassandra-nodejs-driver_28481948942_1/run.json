@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:28481948942:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/cassandra-nodejs-driver",
+    "providerRunId": "28481948942",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/cassandra-nodejs-driver/actions/runs/28481948942",
+    "workflowName": "Unit and Integration Tests for Apache Cassandra NodeJS Driver",
+    "event": "pull_request",
+    "headSha": "edf6e13caf47fe1997bb4450f1aa159c2bcab1e1",
+    "headBranch": "dependabot/npm_and_yarn/js-yaml-4.3.0",
+    "artifactIds": [
+      "7996279657",
+      "7996291927",
+      "7996254385",
+      "7996257270",
+      "7996299057",
+      "7996287626",
+      "7996255666",
+      "7996304223",
+      "7996292086",
+      "7996351328",
+      "7996327499",
+      "7996331439"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T06:13:42.299Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 23293,
+    "failures": 2,
+    "passed": 23291,
+    "skipped": 0,
+    "filesParsed": 12,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 25
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Test Results (Node.js 22, Cassandra 5.0)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 11,
+      "attemptIndex": 0,
+      "displayName": "pool with a 3-node simulated cluster should reconnect in the background when hosts are back online",
+      "suitePath": [
+        "with a 3-node simulated cluster",
+        "should reconnect in the background when hosts are back online"
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/pool-simulator-tests.js",
+      "status": "failed",
+      "durationMs": 215,
+      "errorType": "AssertionError",
+      "message": "expected 1 to equal +0",
+      "stackText": "AssertionError: expected 1 to equal +0\n    at /home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/pool-simulator-tests.js:261:49\n    at Array.forEach (<anonymous>)\n    at Context.<anonymous> (test/integration/short/pool-simulator-tests.js:261:29)\n\n      + expected - actual\n\n      -1\n      +0\n      ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "Test Results (Node.js 22, Cassandra 5.0)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 11,
+      "attemptIndex": 1,
+      "displayName": "pool with a 3-node simulated cluster should reconnect in the background when hosts are back online",
+      "suitePath": [
+        "with a 3-node simulated cluster",
+        "should reconnect in the background when hosts are back online"
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/pool-simulator-tests.js",
+      "status": "failed",
+      "durationMs": 215,
+      "errorType": "TypeError",
+      "message": "Cannot read properties of null (reading 'endpoint')",
+      "stackText": "TypeError: Cannot read properties of null (reading 'endpoint')\n    at ControlConnection._refresh (lib/control-connection.js:495:40)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

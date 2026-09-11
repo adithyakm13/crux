@@ -1,0 +1,1296 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:JanssenProject/jans:34260461261:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "JanssenProject/jans",
+    "providerRunId": "34260461261",
+    "runAttempt": 1,
+    "url": "https://github.com/JanssenProject/jans/actions/runs/34260461261",
+    "workflowName": "Test: Integration",
+    "event": "workflow_dispatch",
+    "headSha": "cb8517b9969001d2cf446822388ea0b11e87c5c1",
+    "headBranch": "main",
+    "artifactIds": [
+      "10071151100"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:27:47.818Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 6066,
+    "failures": 64,
+    "passed": 5889,
+    "skipped": 113,
+    "filesParsed": 699,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 202
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-reports-PGSQL/jans-auth-server_client-TEST-io.jans.as.client.ws.rs.uma.AccessProtectedResourceFlowHttpTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "claimsGathering",
+      "suitePath": [
+        "io.jans.as.client.ws.rs.uma.AccessProtectedResourceFlowHttpTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 37,
+      "errorType": "java.lang.IllegalStateException",
+      "message": "Current page is not a SgmlPage",
+      "stackText": "\n      java.lang.IllegalStateException: Current page is not a SgmlPage\nat org.openqa.selenium.htmlunit.HtmlUnitElementFinder$HtmlUnitElementLocator.getLastPage(HtmlUnitElementFinder.java:730)\nat org.openqa.selenium.htmlunit.HtmlUnitElementFinder$FindByID.findElement(HtmlUnitElementFinder.java:164)\nat org.openqa.selenium.htmlunit.HtmlUnitElementFinder.findElement(HtmlUnitElementFinder.java:105)\nat org.openqa.selenium.htmlunit.HtmlUnitDriver.lambda$findElement$8(HtmlUnitDriver.java:832)\nat org.openqa.selenium.htmlunit.HtmlUnitDriver.implicitlyWaitFor(HtmlUnitDriver.java:1487)\nat org.openqa.selenium.htmlunit.HtmlUnitDriver.findElement(HtmlUnitDriver.java:832)\nat io.jans.as.client.ws.rs.uma.AccessProtectedResourceFlowHttpTest.claimsGathering(AccessProtectedResourceFlowHttpTest.java:139)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)\nat org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)\nat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\nat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\nat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\nat java.base/java.lang.Thread.run(Thread.java:840)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-reports-PGSQL/jans-auth-server_client-TEST-io.jans.as.client.ws.rs.uma.UmaSpontaneousScopeHttpTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "rptStatus",
+      "suitePath": [
+        "io.jans.as.client.ws.rs.uma.UmaSpontaneousScopeHttpTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 12,
+      "errorType": "java.lang.AssertionError",
+      "message": "Token is not active expected [true] but found [false]",
+      "stackText": "\n      java.lang.AssertionError: Token is not active expected [true] but found [false]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertTrue(Assert.java:57)\nat io.jans.as.test.UmaTestUtil.assertIt(UmaTestUtil.java:36)\nat io.jans.as.client.ws.rs.uma.UmaSpontaneousScopeHttpTest.rptStatus(UmaSpontaneousScopeHttpTest.java:132)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)\nat org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)\nat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\nat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\nat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\nat java.base/java.lang.Thread.run(Thread.java:840)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-reports-PGSQL/jans-auth-server_client-UMA Spontaneous Scope test (HTTP).xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 3,
+      "displayName": "rptStatus",
+      "suitePath": [
+        "UMA Spontaneous Scope test (HTTP)",
+        "io.jans.as.client.ws.rs.uma.UmaSpontaneousScopeHttpTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 12,
+      "errorType": "java.lang.AssertionError",
+      "message": "Token is not active expected [true] but found [false]",
+      "stackText": "\n      java.lang.AssertionError: Token is not active expected [true] but found [false]\nat io.jans.as.test.UmaTestUtil.assertIt(UmaTestUtil.java:36)\nat io.jans.as.client.ws.rs.uma.UmaSpontaneousScopeHttpTest.rptStatus(UmaSpontaneousScopeHttpTest.java:132)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\nat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\nat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\nat java.base/java.lang.Thread.run(Thread.java:840)\n... Removed 20 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-reports-PGSQL/jans-auth-server_client-UMA _ Test for getting access to UMA protected resource (HTTP).xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 3,
+      "displayName": "claimsGathering",
+      "suitePath": [
+        "UMA : Test for getting access to UMA protected resource (HTTP)",
+        "io.jans.as.client.ws.rs.uma.AccessProtectedResourceFlowHttpTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 37,
+      "errorType": "java.lang.IllegalStateException",
+      "message": "Current page is not a SgmlPage",
+      "stackText": "\n      java.lang.IllegalStateException: Current page is not a SgmlPage\nat org.openqa.selenium.htmlunit.HtmlUnitElementFinder$HtmlUnitElementLocator.getLastPage(HtmlUnitElementFinder.java:730)\nat org.openqa.selenium.htmlunit.HtmlUnitElementFinder$FindByID.findElement(HtmlUnitElementFinder.java:164)\nat org.openqa.selenium.htmlunit.HtmlUnitElementFinder.findElement(HtmlUnitElementFinder.java:105)\nat org.openqa.selenium.htmlunit.HtmlUnitDriver.lambda$findElement$8(HtmlUnitDriver.java:832)\nat org.openqa.selenium.htmlunit.HtmlUnitDriver.implicitlyWaitFor(HtmlUnitDriver.java:1487)\nat org.openqa.selenium.htmlunit.HtmlUnitDriver.findElement(HtmlUnitDriver.java:832)\nat io.jans.as.client.ws.rs.uma.AccessProtectedResourceFlowHttpTest.claimsGathering(AccessProtectedResourceFlowHttpTest.java:139)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\nat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\nat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\nat java.base/java.lang.Thread.run(Thread.java:840)\n... Removed 17 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-Fido2Metrics.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsAdoptionMetrics",
+      "suitePath": [
+        "Fido2Metrics",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 105,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsAdoptionMetrics(Fido2MetricsTest.java:145)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 38 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-Fido2Metrics.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsDevicesMetrics",
+      "suitePath": [
+        "Fido2Metrics",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 52,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsDevicesMetrics(Fido2MetricsTest.java:185)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 38 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-Fido2Metrics.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsErrorsMetrics",
+      "suitePath": [
+        "Fido2Metrics",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 55,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsErrorsMetrics(Fido2MetricsTest.java:204)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 38 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-Fido2Metrics.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsPerformanceMetric",
+      "suitePath": [
+        "Fido2Metrics",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 53,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsPerformanceMetric(Fido2MetricsTest.java:165)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 38 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-Fido2Metrics.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsTrendsMetrics",
+      "suitePath": [
+        "Fido2Metrics",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 46,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsTrendsMetrics(Fido2MetricsTest.java:223)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 38 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-Fido2Metrics.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getFido2AggregationMetrics",
+      "suitePath": [
+        "Fido2Metrics",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 65,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getFido2AggregationMetrics(Fido2MetricsTest.java:105)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 38 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-Fido2Metrics.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getFido2AggregationSummaryMetrics",
+      "suitePath": [
+        "Fido2Metrics",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 43,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getFido2AggregationSummaryMetrics(Fido2MetricsTest.java:125)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 38 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsAdoptionMetrics[https://aio.jans.io, /jans-config-api/fido2/metrics, /analytics/adoption](1)",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 108,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [200] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsAdoptionMetrics(Fido2MetricsTest.java:145)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:848)\n\tat org.testng.TestRunner.run(TestRunner.java:621)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:336)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\n\tat org.testng.TestNG.runSuites(TestNG.java:1114)\n\tat org.testng.TestNG.run(TestNG.java:1082)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+      "stdout": "08-09-2026 18:22:53.087 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:21- \n\n\n *** FIDO2 Plugin propertiesMap.get(fido2ConfigUrl):/jans-config-api/fido2/fido2-config \n\n\n\n08-09-2026 18:22:53.088 ERROR core.test.service.ResteasyService ResteasyService.java:66- \n\n\n *** Execut GET - url:https://aio.jans.io/jans-config-api/fido2/fido2-config, accessToken:c6270bbb-cb2b-45df-8658-5b1b4e43e7cc\n08-09-2026 18:22:53.135 ERROR core.test.service.ResteasyService ResteasyService.java:74- \n\n\n response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@7c8d5312\n08-09-2026 18:22:53.135 ERROR configapi.core.test.BaseTest BaseTest.java:175- *** \n\n\n Check endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@7c8d5312 \n\n\n\n08-09-2026 18:22:53.135 ERROR configapi.core.test.BaseTest BaseTest.java:177- *** \n\n\n Response for endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response.getStatus():200 \n\n\n\n08-09-2026 18:22:53.136 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:23- \n\n\n *** FIDO2 Plugin isAvailable:true \n\n\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsDevicesMetrics[https://aio.jans.io, /jans-config-api/fido2/metrics, /analytics/devices](1)",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 49,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [200] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsDevicesMetrics(Fido2MetricsTest.java:185)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:848)\n\tat org.testng.TestRunner.run(TestRunner.java:621)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:336)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\n\tat org.testng.TestNG.runSuites(TestNG.java:1114)\n\tat org.testng.TestNG.run(TestNG.java:1082)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+      "stdout": "08-09-2026 18:22:54.595 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:21- \n\n\n *** FIDO2 Plugin propertiesMap.get(fido2ConfigUrl):/jans-config-api/fido2/fido2-config \n\n\n\n08-09-2026 18:22:54.595 ERROR core.test.service.ResteasyService ResteasyService.java:66- \n\n\n *** Execut GET - url:https://aio.jans.io/jans-config-api/fido2/fido2-config, accessToken:d647cf9b-3ba9-4ad2-b31d-e00fec474297\n08-09-2026 18:22:54.644 ERROR core.test.service.ResteasyService ResteasyService.java:74- \n\n\n response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@10fda3d0\n08-09-2026 18:22:54.644 ERROR configapi.core.test.BaseTest BaseTest.java:175- *** \n\n\n Check endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@10fda3d0 \n\n\n\n08-09-2026 18:22:54.644 ERROR configapi.core.test.BaseTest BaseTest.java:177- *** \n\n\n Response for endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response.getStatus():200 \n\n\n\n08-09-2026 18:22:54.645 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:23- \n\n\n *** FIDO2 Plugin isAvailable:true \n\n\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsErrorsMetrics[https://aio.jans.io, /jans-config-api/fido2/metrics, /analytics/errors](1)",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 52,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [200] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsErrorsMetrics(Fido2MetricsTest.java:204)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:848)\n\tat org.testng.TestRunner.run(TestRunner.java:621)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:336)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\n\tat org.testng.TestNG.runSuites(TestNG.java:1114)\n\tat org.testng.TestNG.run(TestNG.java:1082)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+      "stdout": "08-09-2026 18:22:56.089 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:21- \n\n\n *** FIDO2 Plugin propertiesMap.get(fido2ConfigUrl):/jans-config-api/fido2/fido2-config \n\n\n\n08-09-2026 18:22:56.089 ERROR core.test.service.ResteasyService ResteasyService.java:66- \n\n\n *** Execut GET - url:https://aio.jans.io/jans-config-api/fido2/fido2-config, accessToken:0bf4a184-1887-400a-9ddf-8fdc88b5af10\n08-09-2026 18:22:56.137 ERROR core.test.service.ResteasyService ResteasyService.java:74- \n\n\n response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@435e60ff\n08-09-2026 18:22:56.138 ERROR configapi.core.test.BaseTest BaseTest.java:175- *** \n\n\n Check endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@435e60ff \n\n\n\n08-09-2026 18:22:56.138 ERROR configapi.core.test.BaseTest BaseTest.java:177- *** \n\n\n Response for endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response.getStatus():200 \n\n\n\n08-09-2026 18:22:56.139 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:23- \n\n\n *** FIDO2 Plugin isAvailable:true \n\n\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsPerformanceMetric[https://aio.jans.io, /jans-config-api/fido2/metrics, /analytics/performance](1)",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 53,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [200] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsPerformanceMetric(Fido2MetricsTest.java:165)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:848)\n\tat org.testng.TestRunner.run(TestRunner.java:621)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:336)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\n\tat org.testng.TestNG.runSuites(TestNG.java:1114)\n\tat org.testng.TestNG.run(TestNG.java:1082)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+      "stdout": "08-09-2026 18:22:57.543 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:21- \n\n\n *** FIDO2 Plugin propertiesMap.get(fido2ConfigUrl):/jans-config-api/fido2/fido2-config \n\n\n\n08-09-2026 18:22:57.543 ERROR core.test.service.ResteasyService ResteasyService.java:66- \n\n\n *** Execut GET - url:https://aio.jans.io/jans-config-api/fido2/fido2-config, accessToken:356e0a7a-c631-4ec4-9aa8-6b49fa4ebee1\n08-09-2026 18:22:57.593 ERROR core.test.service.ResteasyService ResteasyService.java:74- \n\n\n response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@534c6767\n08-09-2026 18:22:57.593 ERROR configapi.core.test.BaseTest BaseTest.java:175- *** \n\n\n Check endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@534c6767 \n\n\n\n08-09-2026 18:22:57.593 ERROR configapi.core.test.BaseTest BaseTest.java:177- *** \n\n\n Response for endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response.getStatus():200 \n\n\n\n08-09-2026 18:22:57.594 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:23- \n\n\n *** FIDO2 Plugin isAvailable:true \n\n\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsTrendsMetrics[https://aio.jans.io, /jans-config-api/fido2/metrics, /analytics/trends/HOURLY](1)",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 44,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [200] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsTrendsMetrics(Fido2MetricsTest.java:223)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:848)\n\tat org.testng.TestRunner.run(TestRunner.java:621)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:336)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\n\tat org.testng.TestNG.runSuites(TestNG.java:1114)\n\tat org.testng.TestNG.run(TestNG.java:1082)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+      "stdout": "08-09-2026 18:22:59.096 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:21- \n\n\n *** FIDO2 Plugin propertiesMap.get(fido2ConfigUrl):/jans-config-api/fido2/fido2-config \n\n\n\n08-09-2026 18:22:59.097 ERROR core.test.service.ResteasyService ResteasyService.java:66- \n\n\n *** Execut GET - url:https://aio.jans.io/jans-config-api/fido2/fido2-config, accessToken:4e9bb852-219d-4e3b-9349-adca2315b004\n08-09-2026 18:22:59.140 ERROR core.test.service.ResteasyService ResteasyService.java:74- \n\n\n response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@b16e202\n08-09-2026 18:22:59.140 ERROR configapi.core.test.BaseTest BaseTest.java:175- *** \n\n\n Check endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@b16e202 \n\n\n\n08-09-2026 18:22:59.140 ERROR configapi.core.test.BaseTest BaseTest.java:177- *** \n\n\n Response for endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response.getStatus():200 \n\n\n\n08-09-2026 18:22:59.140 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:23- \n\n\n *** FIDO2 Plugin isAvailable:true \n\n\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getFido2AggregationMetrics[https://aio.jans.io, /jans-config-api/fido2/metrics, /aggregations/HOURLY](1)",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 63,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [200] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getFido2AggregationMetrics(Fido2MetricsTest.java:105)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:848)\n\tat org.testng.TestRunner.run(TestRunner.java:621)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:336)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\n\tat org.testng.TestNG.runSuites(TestNG.java:1114)\n\tat org.testng.TestNG.run(TestNG.java:1082)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+      "stdout": "08-09-2026 18:23:00.632 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:21- \n\n\n *** FIDO2 Plugin propertiesMap.get(fido2ConfigUrl):/jans-config-api/fido2/fido2-config \n\n\n\n08-09-2026 18:23:00.634 ERROR core.test.service.ResteasyService ResteasyService.java:66- \n\n\n *** Execut GET - url:https://aio.jans.io/jans-config-api/fido2/fido2-config, accessToken:e19ee120-0878-438f-bd16-c99765a2c2d4\n08-09-2026 18:23:00.770 ERROR core.test.service.ResteasyService ResteasyService.java:74- \n\n\n response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@3ad4a7d6\n08-09-2026 18:23:00.770 ERROR configapi.core.test.BaseTest BaseTest.java:175- *** \n\n\n Check endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@3ad4a7d6 \n\n\n\n08-09-2026 18:23:00.770 ERROR configapi.core.test.BaseTest BaseTest.java:177- *** \n\n\n Response for endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response.getStatus():200 \n\n\n\n08-09-2026 18:23:00.771 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:23- \n\n\n *** FIDO2 Plugin isAvailable:true \n\n\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getFido2AggregationSummaryMetrics[https://aio.jans.io, /jans-config-api/fido2/metrics, /aggregations/HOURLY/summary](1)",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 40,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [200] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getFido2AggregationSummaryMetrics(Fido2MetricsTest.java:125)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:848)\n\tat org.testng.TestRunner.run(TestRunner.java:621)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:336)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\n\tat org.testng.TestNG.runSuites(TestNG.java:1114)\n\tat org.testng.TestNG.run(TestNG.java:1082)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+      "stdout": "08-09-2026 18:23:02.141 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:21- \n\n\n *** FIDO2 Plugin propertiesMap.get(fido2ConfigUrl):/jans-config-api/fido2/fido2-config \n\n\n\n08-09-2026 18:23:02.142 ERROR core.test.service.ResteasyService ResteasyService.java:66- \n\n\n *** Execut GET - url:https://aio.jans.io/jans-config-api/fido2/fido2-config, accessToken:01d6d305-456a-4333-89b2-7fc32943774b\n08-09-2026 18:23:02.193 ERROR core.test.service.ResteasyService ResteasyService.java:74- \n\n\n response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@35267fd4\n08-09-2026 18:23:02.193 ERROR configapi.core.test.BaseTest BaseTest.java:175- *** \n\n\n Check endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response:org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$3@35267fd4 \n\n\n\n08-09-2026 18:23:02.193 ERROR configapi.core.test.BaseTest BaseTest.java:177- *** \n\n\n Response for endpoint url:https://aio.jans.io/jans-config-api/fido2/fido2-config, response.getStatus():200 \n\n\n\n08-09-2026 18:23:02.193 ERROR configapi.plugin.fido2.Fido2BaseTest Fido2BaseTest.java:23- \n\n\n *** FIDO2 Plugin isAvailable:true \n\n\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0019",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getFido2AggregationMetrics",
+      "suitePath": [
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1451,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getFido2AggregationMetrics(Fido2MetricsTest.java:105)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\nat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\nat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0020",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getFido2AggregationSummaryMetrics",
+      "suitePath": [
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1399,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getFido2AggregationSummaryMetrics(Fido2MetricsTest.java:125)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\nat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\nat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0021",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsAdoptionMetrics",
+      "suitePath": [
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1499,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsAdoptionMetrics(Fido2MetricsTest.java:145)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\nat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\nat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0022",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsErrorsMetrics",
+      "suitePath": [
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1554,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsErrorsMetrics(Fido2MetricsTest.java:204)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\nat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\nat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0023",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsTrendsMetrics",
+      "suitePath": [
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1533,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsTrendsMetrics(Fido2MetricsTest.java:223)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\nat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\nat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0024",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsPerformanceMetric",
+      "suitePath": [
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1548,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsPerformanceMetric(Fido2MetricsTest.java:165)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\nat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\nat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0025",
+      "sourceFile": "test-reports-PGSQL/jans-config-api_plugins_fido2-plugin-TEST-io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "getAnalyticsDevicesMetrics",
+      "suitePath": [
+        "io.jans.configapi.plugin.fido2.test.Fido2MetricsTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1491,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.configapi.plugin.fido2.test.Fido2MetricsTest.getAnalyticsDevicesMetrics(Fido2MetricsTest.java:185)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\nat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\nat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0026",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-Additional tests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "retrieve",
+      "suitePath": [
+        "Additional tests",
+        "io.jans.scim2.client.tokens.UserTokensTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 202,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [403]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [403]\nat io.jans.scim2.client.tokens.UserTokensTest.getTokens(UserTokensTest.java:116)\nat io.jans.scim2.client.tokens.UserTokensTest.retrieve(UserTokensTest.java:76)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 43 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0027",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-Attributes query param tests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "create1",
+      "suitePath": [
+        "Attributes query param tests",
+        "io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 39,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [201] but found [500]\nat io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.create1(QueryParamCreateUpdateTest.java:45)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 43 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0028",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-Attributes query param tests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete1",
+      "suitePath": [
+        "Attributes query param tests",
+        "io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke &quot;io.jans.scim.model.scim2.user.UserResource.getUserName()&quot; because &quot;user&quot; is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.delete1(QueryParamCreateUpdateTest.java:54)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 36 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0029",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-Attributes query param tests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "Attributes query param tests",
+        "io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke &quot;io.jans.scim.model.scim2.user.UserResource.getUserName()&quot; because &quot;user&quot; is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.delete(QueryParamCreateUpdateTest.java:150)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 36 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0030",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-Fido Devices Test.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "search",
+      "suitePath": [
+        "Fido Devices Test",
+        "io.jans.scim2.client.singleresource.Fido2DeviceTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 38,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat io.jans.scim2.client.singleresource.Fido2DeviceTest.search(Fido2DeviceTest.java:33)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 43 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0031",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "createFull",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.singleresource.FullUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 73,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [201] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\n\tat io.jans.scim2.client.singleresource.FullUserTest.createFull(FullUserTest.java:40)\n",
+      "stdout": "18:21:50 DEBUG FullUserTest.java:39 - Creating user from json...\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0032",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.singleresource.FullUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\n\tat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\n\tat io.jans.scim2.client.singleresource.FullUserTest.delete(FullUserTest.java:164)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0033",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "create1",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 40,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [201] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.create1(QueryParamCreateUpdateTest.java:45)\n",
+      "stdout": "18:21:52 DEBUG QueryParamCreateUpdateTest.java:39 - Creating user from json...\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0034",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete1",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\n\tat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\n\tat io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.delete1(QueryParamCreateUpdateTest.java:54)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0035",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\n\tat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\n\tat io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.delete(QueryParamCreateUpdateTest.java:150)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0036",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "createForReplace",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.patch.PatchReplaceUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 44,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [201] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\n\tat io.jans.scim2.client.patch.PatchReplaceUserTest.createForReplace(PatchReplaceUserTest.java:42)\n",
+      "stdout": "18:21:53 DEBUG PatchReplaceUserTest.java:41 - Creating user from json...\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0037",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.patch.PatchReplaceUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\n\tat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\n\tat io.jans.scim2.client.patch.PatchReplaceUserTest.delete(PatchReplaceUserTest.java:206)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0038",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "createForDel",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.patch.PatchDeleteUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 38,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [201] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\n\tat io.jans.scim2.client.patch.PatchDeleteUserTest.createForDel(PatchDeleteUserTest.java:32)\n",
+      "stdout": "18:21:53 DEBUG PatchDeleteUserTest.java:31 - Creating user from json...\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0039",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.patch.PatchDeleteUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\n\tat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\n\tat io.jans.scim2.client.patch.PatchDeleteUserTest.delete(PatchDeleteUserTest.java:61)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0040",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "create",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.patch.PatchUserExtTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 39,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [201] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\n\tat io.jans.scim2.client.patch.PatchUserExtTest.create(PatchUserExtTest.java:41)\n",
+      "stdout": "18:21:53 DEBUG PatchUserExtTest.java:40 - Creating user from json...\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0041",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.patch.PatchUserExtTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\n\tat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\n\tat io.jans.scim2.client.patch.PatchUserExtTest.delete(PatchUserExtTest.java:105)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0042",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "search",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.singleresource.Fido2DeviceTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 39,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "java.lang.AssertionError: expected [200] but found [500]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.scim2.client.singleresource.Fido2DeviceTest.search(Fido2DeviceTest.java:33)\n",
+      "stdout": "18:21:54 DEBUG Fido2DeviceTest.java:31 - Searching all fido 2 devices\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0043",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-TestSuite.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "retrieve",
+      "suitePath": [
+        "TestSuite",
+        "io.jans.scim2.client.tokens.UserTokensTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 202,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [403]",
+      "stackText": "java.lang.AssertionError: expected [200] but found [403]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat org.testng.Assert.assertEquals(Assert.java:1419)\n\tat org.testng.Assert.assertEquals(Assert.java:1383)\n\tat org.testng.Assert.assertEquals(Assert.java:1429)\n\tat io.jans.scim2.client.tokens.UserTokensTest.getTokens(UserTokensTest.java:116)\n\tat io.jans.scim2.client.tokens.UserTokensTest.retrieve(UserTokensTest.java:76)\n",
+      "stdout": "18:21:57 DEBUG UserTokensTest.java:68 - Creating user from json...\n18:21:57 DEBUG UserBaseTest.java:31 - User created with id a4d2b5c0-c52e-4853-8d7b-7c8e0f75e556\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0044",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.patch.PatchDeleteUserTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "io.jans.scim2.client.patch.PatchDeleteUserTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 1,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.patch.PatchDeleteUserTest.delete(PatchDeleteUserTest.java:61)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0045",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.patch.PatchDeleteUserTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "createForDel",
+      "suitePath": [
+        "io.jans.scim2.client.patch.PatchDeleteUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 37,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [201] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\nat io.jans.scim2.client.patch.PatchDeleteUserTest.createForDel(PatchDeleteUserTest.java:32)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0046",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.patch.PatchReplaceUserTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "io.jans.scim2.client.patch.PatchReplaceUserTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.patch.PatchReplaceUserTest.delete(PatchReplaceUserTest.java:206)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0047",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.patch.PatchReplaceUserTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "createForReplace",
+      "suitePath": [
+        "io.jans.scim2.client.patch.PatchReplaceUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 43,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [201] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\nat io.jans.scim2.client.patch.PatchReplaceUserTest.createForReplace(PatchReplaceUserTest.java:42)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0048",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.patch.PatchUserExtTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "io.jans.scim2.client.patch.PatchUserExtTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.patch.PatchUserExtTest.delete(PatchUserExtTest.java:105)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0049",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.patch.PatchUserExtTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "create",
+      "suitePath": [
+        "io.jans.scim2.client.patch.PatchUserExtTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 40,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [201] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\nat io.jans.scim2.client.patch.PatchUserExtTest.create(PatchUserExtTest.java:41)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0050",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.singleresource.Fido2DeviceTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "search",
+      "suitePath": [
+        "io.jans.scim2.client.singleresource.Fido2DeviceTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 38,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.scim2.client.singleresource.Fido2DeviceTest.search(Fido2DeviceTest.java:33)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0051",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.singleresource.FullUserTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "io.jans.scim2.client.singleresource.FullUserTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.singleresource.FullUserTest.delete(FullUserTest.java:164)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0052",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.singleresource.FullUserTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "createFull",
+      "suitePath": [
+        "io.jans.scim2.client.singleresource.FullUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 70,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [201] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\nat io.jans.scim2.client.singleresource.FullUserTest.createFull(FullUserTest.java:40)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0053",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete1",
+      "suitePath": [
+        "io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.delete1(QueryParamCreateUpdateTest.java:54)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0054",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.delete(QueryParamCreateUpdateTest.java:150)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0055",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "create1",
+      "suitePath": [
+        "io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 39,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [201] but found [500]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.scim2.client.singleresource.QueryParamCreateUpdateTest.create1(QueryParamCreateUpdateTest.java:45)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0056",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-TEST-io.jans.scim2.client.tokens.UserTokensTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "retrieve",
+      "suitePath": [
+        "io.jans.scim2.client.tokens.UserTokensTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 202,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [200] but found [403]",
+      "stackText": "\n      java.lang.AssertionError: expected [200] but found [403]\nat org.testng.Assert.fail(Assert.java:111)\nat org.testng.Assert.failNotEquals(Assert.java:1578)\nat org.testng.Assert.assertEqualsImpl(Assert.java:150)\nat org.testng.Assert.assertEquals(Assert.java:132)\nat org.testng.Assert.assertEquals(Assert.java:1419)\nat org.testng.Assert.assertEquals(Assert.java:1383)\nat org.testng.Assert.assertEquals(Assert.java:1429)\nat io.jans.scim2.client.tokens.UserTokensTest.getTokens(UserTokensTest.java:116)\nat io.jans.scim2.client.tokens.UserTokensTest.retrieve(UserTokensTest.java:76)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)\nat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)\nat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)\nat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)\nat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)\nat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)\nat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nat org.testng.TestRunner.privateRun(TestRunner.java:848)\nat org.testng.TestRunner.run(TestRunner.java:621)\nat org.testng.SuiteRunner.runTest(SuiteRunner.java:443)\nat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)\nat org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)\nat org.testng.SuiteRunner.run(SuiteRunner.java:336)\nat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\nat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\nat org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)\nat org.testng.TestNG.runSuitesLocally(TestNG.java:1200)\nat org.testng.TestNG.runSuites(TestNG.java:1114)\nat org.testng.TestNG.run(TestNG.java:1082)\nat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)\nat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)\nat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\nat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.base/java.lang.reflect.Method.invoke(Method.java:569)\nat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\nat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\nat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\nat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\nat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0057",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-User Patches.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "createForReplace",
+      "suitePath": [
+        "User Patches",
+        "io.jans.scim2.client.patch.PatchReplaceUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 43,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [201] but found [500]\nat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\nat io.jans.scim2.client.patch.PatchReplaceUserTest.createForReplace(PatchReplaceUserTest.java:42)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 43 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0058",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-User Patches.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "User Patches",
+        "io.jans.scim2.client.patch.PatchReplaceUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke &quot;io.jans.scim.model.scim2.user.UserResource.getUserName()&quot; because &quot;user&quot; is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.patch.PatchReplaceUserTest.delete(PatchReplaceUserTest.java:206)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 36 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0059",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-User Patches.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "createForDel",
+      "suitePath": [
+        "User Patches",
+        "io.jans.scim2.client.patch.PatchDeleteUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 37,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [201] but found [500]\nat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\nat io.jans.scim2.client.patch.PatchDeleteUserTest.createForDel(PatchDeleteUserTest.java:32)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 43 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0060",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-User Patches.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "User Patches",
+        "io.jans.scim2.client.patch.PatchDeleteUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke &quot;io.jans.scim.model.scim2.user.UserResource.getUserName()&quot; because &quot;user&quot; is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.patch.PatchDeleteUserTest.delete(PatchDeleteUserTest.java:61)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 36 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0061",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-User Patches.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "create",
+      "suitePath": [
+        "User Patches",
+        "io.jans.scim2.client.patch.PatchUserExtTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 40,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [201] but found [500]\nat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\nat io.jans.scim2.client.patch.PatchUserExtTest.create(PatchUserExtTest.java:41)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 43 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0062",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-User Patches.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "User Patches",
+        "io.jans.scim2.client.patch.PatchUserExtTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke &quot;io.jans.scim.model.scim2.user.UserResource.getUserName()&quot; because &quot;user&quot; is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.patch.PatchUserExtTest.delete(PatchUserExtTest.java:105)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 36 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0063",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-User Resource Test.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "createFull",
+      "suitePath": [
+        "User Resource Test",
+        "io.jans.scim2.client.singleresource.FullUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 70,
+      "errorType": "java.lang.AssertionError",
+      "message": "expected [201] but found [500]",
+      "stackText": "\n      java.lang.AssertionError: expected [201] but found [500]\nat io.jans.scim2.client.UserBaseTest.createUserFromJson(UserBaseTest.java:27)\nat io.jans.scim2.client.singleresource.FullUserTest.createFull(FullUserTest.java:40)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 43 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0064",
+      "sourceFile": "test-reports-PGSQL/jans-scim_client-User Resource Test.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "delete",
+      "suitePath": [
+        "User Resource Test",
+        "io.jans.scim2.client.singleresource.FullUserTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "java.lang.NullPointerException",
+      "message": "Cannot invoke &quot;io.jans.scim.model.scim2.user.UserResource.getUserName()&quot; because &quot;user&quot; is null",
+      "stackText": "\n      java.lang.NullPointerException: Cannot invoke \"io.jans.scim.model.scim2.user.UserResource.getUserName()\" because \"user\" is null\nat io.jans.scim2.client.UserBaseTest.deleteUser(UserBaseTest.java:38)\nat io.jans.scim2.client.singleresource.FullUserTest.delete(FullUserTest.java:164)\nat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n... Removed 36 stack frames\n    ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

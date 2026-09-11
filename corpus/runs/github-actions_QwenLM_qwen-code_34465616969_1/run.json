@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:QwenLM/qwen-code:34465616969:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "QwenLM/qwen-code",
+    "providerRunId": "34465616969",
+    "runAttempt": 1,
+    "url": "https://github.com/QwenLM/qwen-code/actions/runs/34465616969",
+    "workflowName": "Qwen Code CI",
+    "event": "pull_request",
+    "headSha": "1d42f34976765792d8e960b6f223da81e510f6c6",
+    "headBranch": "dragon/deferred-tool-call-bridge",
+    "artifactIds": [
+      "10148241732"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:33:40.944Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 62424,
+    "failures": 6,
+    "passed": 62317,
+    "skipped": 101,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 159
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/core/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "late session source activation > refreshes source discovery and declarations ('registered', visible=false)",
+      "suitePath": [
+        "src/config/session-source-tool-activation.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected true to be false // Object.is equality",
+      "stackText": "\nAssertionError: expected true to be false // Object.is equality\n\n- Expected\n+ Received\n\n- false\n+ true\n\n ❯ src/config/session-source-tool-activation.test.ts:119:9\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/core/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "late session source activation > refreshes source discovery and declarations ('registered', visible=false)",
+      "suitePath": [
+        "src/config/session-source-tool-activation.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected true to be false // Object.is equality",
+      "stackText": "\nAssertionError: expected true to be false // Object.is equality\n\n- Expected\n+ Received\n\n- false\n+ true\n\n ❯ src/config/session-source-tool-activation.test.ts:119:9\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/core/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "late session source activation > refreshes source discovery and declarations ('registered', visible=false)",
+      "suitePath": [
+        "src/config/session-source-tool-activation.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 32,
+      "errorType": "AssertionError",
+      "message": "expected true to be false // Object.is equality",
+      "stackText": "\nAssertionError: expected true to be false // Object.is equality\n\n- Expected\n+ Received\n\n- false\n+ true\n\n ❯ src/config/session-source-tool-activation.test.ts:119:9\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/core/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "late session source activation > refreshes source discovery and declarations ('deferred', visible=false)",
+      "suitePath": [
+        "src/config/session-source-tool-activation.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected false to be true // Object.is equality",
+      "stackText": "\nAssertionError: expected false to be true // Object.is equality\n\n- Expected\n+ Received\n\n- true\n+ false\n\n ❯ src/config/session-source-tool-activation.test.ts:127:73\n            ",
+      "stdout": null,
+      "stderr": "\ntools.eager is holding back 1 tool(s) in a session where the ToolSearch + ToolCall bridge is incomplete (tool_call not registered), so they are not offered to the model and cannot be loaded through the bridge until restart; they remain registered and direct calls by name still use normal approval: record_source. Enable tools.toolSearch.enabled (which registers both bridge tools) and drop any tool_search/tool_call deny rule, --exclude-tools entry, or tools.disabled entry to keep them loadable, list them in tools.eager to send their schemas upfront, or use permissions.deny if removal was the intent.\n\ntools.eager is holding back 1 tool(s) in a session where the ToolSearch + ToolCall bridge is incomplete (tool_call not registered), so they are not offered to the model and cannot be loaded through the bridge until restart; they remain registered and direct calls by name still use normal approval: record_source. Enable tools.toolSearch.enabled (which registers both bridge tools) and drop any tool_search/tool_call deny rule, --exclude-tools entry, or tools.disabled entry to keep them loadable, list them in tools.eager to send their schemas upfront, or use permissions.deny if removal was the intent.\n\ntools.eager is holding back 1 tool(s) in a session where the ToolSearch + ToolCall bridge is incomplete (tool_call not registered), so they are not offered to the model and cannot be loaded through the bridge until restart; they remain registered and direct calls by name still use normal approval: record_source. Enable tools.toolSearch.enabled (which registers both bridge tools) and drop any tool_search/tool_call deny rule, --exclude-tools entry, or tools.disabled entry to keep them loadable, list them in tools.eager to send their schemas upfront, or use permissions.deny if removal was the intent.\n\n            "
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/core/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "late session source activation > refreshes source discovery and declarations ('deferred', visible=false)",
+      "suitePath": [
+        "src/config/session-source-tool-activation.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "AssertionError",
+      "message": "expected false to be true // Object.is equality",
+      "stackText": "\nAssertionError: expected false to be true // Object.is equality\n\n- Expected\n+ Received\n\n- true\n+ false\n\n ❯ src/config/session-source-tool-activation.test.ts:127:73\n            ",
+      "stdout": null,
+      "stderr": "\ntools.eager is holding back 1 tool(s) in a session where the ToolSearch + ToolCall bridge is incomplete (tool_call not registered), so they are not offered to the model and cannot be loaded through the bridge until restart; they remain registered and direct calls by name still use normal approval: record_source. Enable tools.toolSearch.enabled (which registers both bridge tools) and drop any tool_search/tool_call deny rule, --exclude-tools entry, or tools.disabled entry to keep them loadable, list them in tools.eager to send their schemas upfront, or use permissions.deny if removal was the intent.\n\ntools.eager is holding back 1 tool(s) in a session where the ToolSearch + ToolCall bridge is incomplete (tool_call not registered), so they are not offered to the model and cannot be loaded through the bridge until restart; they remain registered and direct calls by name still use normal approval: record_source. Enable tools.toolSearch.enabled (which registers both bridge tools) and drop any tool_search/tool_call deny rule, --exclude-tools entry, or tools.disabled entry to keep them loadable, list them in tools.eager to send their schemas upfront, or use permissions.deny if removal was the intent.\n\ntools.eager is holding back 1 tool(s) in a session where the ToolSearch + ToolCall bridge is incomplete (tool_call not registered), so they are not offered to the model and cannot be loaded through the bridge until restart; they remain registered and direct calls by name still use normal approval: record_source. Enable tools.toolSearch.enabled (which registers both bridge tools) and drop any tool_search/tool_call deny rule, --exclude-tools entry, or tools.disabled entry to keep them loadable, list them in tools.eager to send their schemas upfront, or use permissions.deny if removal was the intent.\n\n            "
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-results-fork-22.x-ubuntu-latest/core/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 2,
+      "displayName": "late session source activation > refreshes source discovery and declarations ('deferred', visible=false)",
+      "suitePath": [
+        "src/config/session-source-tool-activation.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "AssertionError",
+      "message": "expected false to be true // Object.is equality",
+      "stackText": "\nAssertionError: expected false to be true // Object.is equality\n\n- Expected\n+ Received\n\n- true\n+ false\n\n ❯ src/config/session-source-tool-activation.test.ts:127:73\n            ",
+      "stdout": null,
+      "stderr": "\ntools.eager is holding back 1 tool(s) in a session where the ToolSearch + ToolCall bridge is incomplete (tool_call not registered), so they are not offered to the model and cannot be loaded through the bridge until restart; they remain registered and direct calls by name still use normal approval: record_source. Enable tools.toolSearch.enabled (which registers both bridge tools) and drop any tool_search/tool_call deny rule, --exclude-tools entry, or tools.disabled entry to keep them loadable, list them in tools.eager to send their schemas upfront, or use permissions.deny if removal was the intent.\n\ntools.eager is holding back 1 tool(s) in a session where the ToolSearch + ToolCall bridge is incomplete (tool_call not registered), so they are not offered to the model and cannot be loaded through the bridge until restart; they remain registered and direct calls by name still use normal approval: record_source. Enable tools.toolSearch.enabled (which registers both bridge tools) and drop any tool_search/tool_call deny rule, --exclude-tools entry, or tools.disabled entry to keep them loadable, list them in tools.eager to send their schemas upfront, or use permissions.deny if removal was the intent.\n\ntools.eager is holding back 1 tool(s) in a session where the ToolSearch + ToolCall bridge is incomplete (tool_call not registered), so they are not offered to the model and cannot be loaded through the bridge until restart; they remain registered and direct calls by name still use normal approval: record_source. Enable tools.toolSearch.enabled (which registers both bridge tools) and drop any tool_search/tool_call deny rule, --exclude-tools entry, or tools.disabled entry to keep them loadable, list them in tools.eager to send their schemas upfront, or use permissions.deny if removal was the intent.\n\n            "
+    }
+  ]
+}

@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:GaosCode/PlanWeave:34246780193:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "GaosCode/PlanWeave",
+    "providerRunId": "34246780193",
+    "runAttempt": 1,
+    "url": "https://github.com/GaosCode/PlanWeave/actions/runs/34246780193",
+    "workflowName": "CI",
+    "event": "push",
+    "headSha": "a5115d9d8237500be191b3c236b720e62eb474fa",
+    "headBranch": "main",
+    "artifactIds": [
+      "10064827959",
+      "10064571985"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-10T17:26:45.021Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 3933,
+    "failures": 24,
+    "passed": 3902,
+    "skipped": 7,
+    "filesParsed": 2,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 19
+    },
+    {
+      "code": "XML_ERROR",
+      "count": 23
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "canvas command baseline migration > marks legacy nondeterministic layout journals for an authoritative baseline rebuild",
+      "suitePath": [
+        "packages/server/src/__tests__/canvasCommandBaselineMigration.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 142,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/canvasCommandBaselineMigration.test.ts:157:42\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "canvas command service (OSS-004 B-002) > migrates v30 and enforces CAS + operationId idempotency",
+      "suitePath": [
+        "packages/server/src/__tests__/canvasCommandService.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 172,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/canvasCommandService.test.ts:42:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "comment/activity migration v20 > creates comments, activity_records, and outbox on upgrade",
+      "suitePath": [
+        "packages/server/src/__tests__/commentActivityPersistence.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 216,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/commentActivityPersistence.test.ts:128:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "authoritative content version repository > persists a verified immutable version before creating the first head",
+      "suitePath": [
+        "packages/server/src/__tests__/contentVersionRepository.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 185,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/contentVersionRepository.test.ts:216:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "SQLite exposure lease store > migrates and persists the single exact Tailscale exposure lease",
+      "suitePath": [
+        "packages/server/src/__tests__/exposureLeaseRepository.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 150,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/exposureLeaseRepository.test.ts:40:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "human identity credentials > issues, renews, and revokes independently of workspace sessions",
+      "suitePath": [
+        "packages/server/src/__tests__/humanIdentityCredential.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 8,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/humanIdentityCredential.test.ts:19:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "human identity migration v16 > creates normalized identity tables on upgrade from v15",
+      "suitePath": [
+        "packages/server/src/__tests__/humanIdentityRepository.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 199,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/humanIdentityRepository.test.ts:159:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "HumanObserverJournal > isolates identical project IDs across workspaces for head, replay, retention, and subscriptions",
+      "suitePath": [
+        "packages/server/src/__tests__/humanObserverJournal.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 145,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/humanObserverJournal.test.ts:69:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "collaboration migration reconciliation > keeps OSS-001 through OSS-005 registered in their owning domain order",
+      "suitePath": [
+        "packages/server/src/__tests__/migrationReconciliation.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 13,
+      "errorType": "AssertionError",
+      "message": "expected [ { …(2) }, …(29) ] to deeply equal [ { …(2) }, …(28) ]",
+      "stackText": "\nAssertionError: expected [ { …(2) }, …(29) ] to deeply equal [ { …(2) }, …(28) ]\n\n- Expected\n+ Received\n\n@@ -185,6 +185,12 @@\n      \"name\": \"owner-canvas-materialization\",\n      \"versions\": [\n        67,\n      ],\n    },\n+   {\n+     \"name\": \"acp-task-restorations\",\n+     \"versions\": [\n+       70,\n+     ],\n+   },\n  ]\n\n ❯ packages/server/src/__tests__/migrationReconciliation.test.ts:194:7\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "collaboration migration reconciliation > upgrades a representative v53 database through v58 exactly once",
+      "suitePath": [
+        "packages/server/src/__tests__/migrationReconciliation.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 185,
+      "errorType": "Error",
+      "message": "table acp_task_restorations already exists",
+      "stackText": "\nError: table acp_task_restorations already exists\n ❯ applyMigrations packages/server/src/migrations.ts:60:20\n ❯ packages/server/src/__tests__/migrationReconciliation.test.ts:334:5\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nSerialized Error: { code: 'ERR_SQLITE_ERROR', errcode: 1, errstr: 'SQL logic error' }\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "collaboration migration reconciliation > maps a representative v26 project to one stable Workspace and package registry key",
+      "suitePath": [
+        "packages/server/src/__tests__/migrationReconciliation.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 215,
+      "errorType": "Error",
+      "message": "table acp_task_restorations already exists",
+      "stackText": "\nError: table acp_task_restorations already exists\n ❯ applyMigrations packages/server/src/migrations.ts:60:20\n ❯ packages/server/src/__tests__/migrationReconciliation.test.ts:417:5\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nSerialized Error: { code: 'ERR_SQLITE_ERROR', errcode: 1, errstr: 'SQL logic error' }\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "OwnerCanvasMaterializationService > registers the owner materialization migration",
+      "suitePath": [
+        "packages/server/src/__tests__/ownerCanvasMaterializationService.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 176,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/ownerCanvasMaterializationService.test.ts:62:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "remote agent registry migration v57 > registers as latest schema version",
+      "suitePath": [
+        "packages/server/src/__tests__/remoteAgentRegistryMigration.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 8,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/remoteAgentRegistryMigration.test.ts:92:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "remote agent registry migration v57 > creates both tables and the active-grant index on an empty database",
+      "suitePath": [
+        "packages/server/src/__tests__/remoteAgentRegistryMigration.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 144,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/remoteAgentRegistryMigration.test.ts:98:44\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "remote agent registry migration v57 > is a no-op when applyMigrations is re-run",
+      "suitePath": [
+        "packages/server/src/__tests__/remoteAgentRegistryMigration.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 138,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/remoteAgentRegistryMigration.test.ts:131:44\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "remote agent registry migration v57 > backfills repair-required agents from readiness profiles without grants or unrestricted mode",
+      "suitePath": [
+        "packages/server/src/__tests__/remoteAgentRegistryMigration.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 141,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/remoteAgentRegistryMigration.test.ts:174:44\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "remote agent registry migration v57 > upgrades v57 to v58 once and is reentrant",
+      "suitePath": [
+        "packages/server/src/__tests__/remoteAgentRegistryMigration.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 136,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/remoteAgentRegistryMigration.test.ts:342:44\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "RemoteBlockCoordinator startup reconciliation > upgrades a v17 database and seals human NULL authority recovery locally",
+      "suitePath": [
+        "packages/server/src/__tests__/remoteBlockCoordinatorStartup.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 612,
+      "errorType": "Error",
+      "message": "table acp_task_restorations already exists",
+      "stackText": "\nError: table acp_task_restorations already exists\n ❯ applyMigrations packages/server/src/migrations.ts:60:20\n ❯ startPlanweaveServer packages/server/src/lifecycle.ts:41:5\n ❯ startRemoteBlockCoordinationServer packages/server/src/distributedCoordination.ts:557:18\n ❯ StartupHarness.start packages/server/src/__tests__/remoteBlockCoordinatorStartup.test.ts:160:21\n ❯ packages/server/src/__tests__/remoteBlockCoordinatorStartup.test.ts:769:23\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nSerialized Error: { code: 'ERR_SQLITE_ERROR', errcode: 1, errstr: 'SQL logic error' }\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0019",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "RemoteBlockCoordinator startup reconciliation > upgrades a v17 database and seals unassigned NULL authority recovery locally",
+      "suitePath": [
+        "packages/server/src/__tests__/remoteBlockCoordinatorStartup.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 542,
+      "errorType": "Error",
+      "message": "table acp_task_restorations already exists",
+      "stackText": "\nError: table acp_task_restorations already exists\n ❯ applyMigrations packages/server/src/migrations.ts:60:20\n ❯ startPlanweaveServer packages/server/src/lifecycle.ts:41:5\n ❯ startRemoteBlockCoordinationServer packages/server/src/distributedCoordination.ts:557:18\n ❯ StartupHarness.start packages/server/src/__tests__/remoteBlockCoordinatorStartup.test.ts:160:21\n ❯ packages/server/src/__tests__/remoteBlockCoordinatorStartup.test.ts:769:23\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nSerialized Error: { code: 'ERR_SQLITE_ERROR', errcode: 1, errstr: 'SQL logic error' }\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0020",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "remote execution action migration v22 > preserves historical action states without inferring rejection",
+      "suitePath": [
+        "packages/server/src/__tests__/remoteExecutionActions.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 207,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/remoteExecutionActions.test.ts:670:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0021",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "remote operation retention migration > replays idempotently when the existing v49 objects have the expected shape",
+      "suitePath": [
+        "packages/server/src/__tests__/remoteOperationRetentionMigration.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 154,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/remoteOperationRetentionMigration.test.ts:27:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0022",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "stock host fleet migration v46 > registers as latest schema version",
+      "suitePath": [
+        "packages/server/src/__tests__/stockHostFleetMigration.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 8,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/stockHostFleetMigration.test.ts:39:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0023",
+      "sourceFile": "integration-test-report-distributed/integration-distributed.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "work assignment migration v17 > creates work_assignments on upgrade from v16",
+      "suitePath": [
+        "packages/server/src/__tests__/workAssignmentRepository.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 219,
+      "errorType": "AssertionError",
+      "message": "expected 70 to be 69 // Object.is equality",
+      "stackText": "\nAssertionError: expected 70 to be 69 // Object.is equality\n\n- Expected\n+ Received\n\n- 69\n+ 70\n\n ❯ packages/server/src/__tests__/workAssignmentRepository.test.ts:112:40\n            ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0024",
+      "sourceFile": "integration-test-report-core/integration-core.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "workspace execution architecture boundaries > keeps Node coordination out of the Desktop renderer import graph",
+      "suitePath": [
+        "packages/runtime/src/__tests__/workspaceExecutionArchitectureBoundaries.test.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 12,
+      "errorType": "AssertionError",
+      "message": "expected Error: spawn rg ENOENT { …(8) } to match object { code: 1 } (7 matching properties omitted from actual)",
+      "stackText": "\nAssertionError: expected Error: spawn rg ENOENT { …(8) } to match object { code: 1 }\n(7 matching properties omitted from actual)\n\n- Expected\n+ Received\n\n- {\n-   \"code\": 1,\n+ Error {\n+   \"code\": \"ENOENT\",\n  }\n\n ❯ packages/runtime/src/__tests__/workspaceExecutionArchitectureBoundaries.test.ts:44:20\n            ",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

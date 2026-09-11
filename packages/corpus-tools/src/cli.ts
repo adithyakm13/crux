@@ -12,10 +12,11 @@
  *   corpus ledger                        worksheet as a labelling page
  *   corpus scan                          which repos would actually yield data
  *   corpus holdout                       which runs may not be committed
+ *   corpus compact                       cap stored payload, recording what was cut
  */
 
 import { readFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { join, resolve } from 'node:path';
 import { DEFAULT_HARVEST_OPTIONS, harvestRepo, loadRuns } from './harvest.ts';
 import { rateLimitRemaining } from './github.ts';
 import { gateZeroStatus, formatGateZeroStatus } from './status.ts';
@@ -39,6 +40,7 @@ import {
   type HoldOutEntry,
 } from './license.ts';
 import { corpusRunDir } from './schema.ts';
+import { compactFailure, DEFAULT_MAX_FIELD_BYTES } from './compact.ts';
 import { probeRepo, type ProbeResult } from './harvest.ts';
 import { buildWorksheet, parseWorksheet } from './worksheet.ts';
 import { SCHEMA_VERSION } from '@cruxci/core';
@@ -72,6 +74,8 @@ function usage(): string {
     '  corpus separability --full <labeler> --payload <labeler>',
     '  corpus baseline --labeler <name>',
     '  corpus holdout [--write]           licence hold-out list for .gitignore',
+    '  corpus compact [--max-field N] [--over BYTES] [--write]  cap stored payload',
+    '                --over limits it to run files above that size; default all',
     '',
     'Options:',
     '  --corpus DIR        corpus directory (default: ./corpus)',
@@ -410,6 +414,67 @@ async function main(): Promise<number> {
     } else if (entries.length > 0) {
       process.stdout.write('\nRe-run with --write to update .gitignore.\n');
     }
+    return 0;
+  }
+
+  if (command === 'compact') {
+    // CI emits without limit. One quarkus run held 1549 failures whose stack,
+    // stdout and stderr averaged a megabyte each — 147 MB in one file, past
+    // GitHub's limit and past anything a person could read while labelling.
+    const maxField = flags.has('max-field')
+      ? Number(flags.get('max-field'))
+      : DEFAULT_MAX_FIELD_BYTES;
+    const write = flags.get('write') === true;
+    // Compacting rewrites stored evidence, so by default this only touches
+    // run files that cannot be committed at all. Capping every oversized
+    // field corpus-wide is a separate, larger decision: it would change what
+    // a labeller sees on runs already in the spike sample.
+    const minRunBytes = flags.has('over') ? Number(flags.get('over')) : 0;
+    const { readdir, readFile, writeFile, stat } = await import('node:fs/promises');
+    const dir = join(corpusDir, 'runs');
+    let touched = 0;
+    let fields = 0;
+    let dropped = 0;
+    const report: string[] = [];
+    for (const entry of await readdir(dir)) {
+      const path = join(dir, entry, 'run.json');
+      let before;
+      try {
+        before = (await stat(path)).size;
+      } catch {
+        continue;
+      }
+      if (before < minRunBytes) continue;
+      const run = JSON.parse(await readFile(path, 'utf8')) as {
+        failures: Record<string, unknown>[];
+      };
+      let runFields = 0;
+      let runDropped = 0;
+      for (const f of run.failures) {
+        const r = compactFailure(f, maxField);
+        runFields += r.fieldsTruncated;
+        runDropped += r.charactersDropped;
+      }
+      if (runFields === 0) continue;
+      touched++;
+      fields += runFields;
+      dropped += runDropped;
+      const text = JSON.stringify(run, null, 2) + '\n';
+      report.push(
+        `  ${(before / 1048576).toFixed(1)} MB -> ${(text.length / 1048576).toFixed(1)} MB  ` +
+          `${runFields} field(s)  ${entry}`,
+      );
+      if (write) await writeFile(path, text, 'utf8');
+    }
+    process.stdout.write(
+      `${touched} run(s) over the ${maxField}-character cap, ` +
+        `${fields} field(s), ${(dropped / 1048576).toFixed(1)} MB of payload\n` +
+        report.slice(0, 20).join('\n') +
+        (report.length > 0 ? '\n' : '') +
+        (write
+          ? 'rewritten. Original lengths are recorded per field in `truncated`.\n'
+          : 'Re-run with --write to apply. Original lengths are recorded per field.\n'),
+    );
     return 0;
   }
 

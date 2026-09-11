@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:27596562262:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "apache/cassandra-nodejs-driver",
+    "providerRunId": "27596562262",
+    "runAttempt": 1,
+    "url": "https://github.com/apache/cassandra-nodejs-driver/actions/runs/27596562262",
+    "workflowName": "Unit and Integration Tests for Apache Cassandra NodeJS Driver",
+    "event": "pull_request",
+    "headSha": "43d4fa5c6a721a18762412b0e72a304a6ae23621",
+    "headBranch": "dependabot/npm_and_yarn/js-yaml-4.2.0",
+    "artifactIds": [
+      "7658557100",
+      "7658563249",
+      "7658572689",
+      "7658569719",
+      "7658535231",
+      "7658542313",
+      "7658581204",
+      "7658535817",
+      "7658582509",
+      "7658620568",
+      "7658634999",
+      "7658607467"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T06:14:47.297Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 23292,
+    "failures": 1,
+    "passed": 23291,
+    "skipped": 0,
+    "filesParsed": 12,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 24
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Test Results (Node.js 24, Cassandra 4.1)/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "ControlConnection #init() should subscribe to SCHEMA_CHANGE events and refresh keyspace information",
+      "suitePath": [
+        "#init()",
+        "should subscribe to SCHEMA_CHANGE events and refresh keyspace information"
+      ],
+      "filePath": "/home/runner/work/cassandra-nodejs-driver/cassandra-nodejs-driver/test/integration/short/control-connection-tests.js",
+      "status": "failed",
+      "durationMs": 6762,
+      "errorType": "Error",
+      "message": "Condition still false after 100 attempts: () => cc.metadata.keyspaces['sample_change_1'].strategyOptions.replication_factor === '2'",
+      "stackText": "Error: Condition still false after 100 attempts: () => cc.metadata.keyspaces['sample_change_1'].strategyOptions.replication_factor === '2'\n    at whilstItem (test/test-helper.js:769:23)\n    at Timeout.next [as _onTimeout] (lib/utils.js:1042:5)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

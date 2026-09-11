@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34236617237:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34236617237",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34236617237",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "c74d2327d2703ac3a5062a8ce422ff39a8f453d7",
+    "headBranch": "fix/android-adaptive-launcher-scale",
+    "artifactIds": [
+      "10060555152",
+      "10060551913",
+      "10060550771",
+      "10060558579",
+      "10060547131",
+      "10060575636",
+      "10060576431",
+      "10060553063",
+      "10060688575"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:38:11.857Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 199,
+    "failures": 1,
+    "passed": 196,
+    "skipped": 2,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34236617237-3/blob-report/report-7573a5b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "a visible live tail clears both devices while an unseen tail stays unread",
+      "suitePath": [],
+      "filePath": "29-multi-device-read-state.spec.ts",
+      "status": "timed_out",
+      "durationMs": 180281,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m\nError: page.waitForResponse: Target page, context or browser has been closed\n    at /__w/alook/alook/src/web/src/test/e2e-ui/29-multi-device-read-state.spec.ts:494:36",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

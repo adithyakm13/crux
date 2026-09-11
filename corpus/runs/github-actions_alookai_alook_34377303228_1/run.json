@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34377303228:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34377303228",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34377303228",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "79262fac96a19dcd1b099e38c53e59d0dde4354c",
+    "headBranch": "feat/user-bar-extension-slot",
+    "artifactIds": [
+      "10115167343",
+      "10115188163",
+      "10114773684",
+      "10114787631",
+      "10114799182",
+      "10114909438",
+      "10114882616",
+      "10114886339",
+      "10114895386"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:34:06.533Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 203,
+    "failures": 3,
+    "passed": 191,
+    "skipped": 9,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34377303228-8/blob-report/report-e964136.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "an Inbox click closes, publishes, and hides only its exact row before read settles",
+      "suitePath": [
+        "Inbox/read refresh ownership"
+      ],
+      "filePath": "34-inbox-read-race.spec.ts",
+      "status": "timed_out",
+      "durationMs": 180170,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m\nError: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Inbox', exact: true })\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/34-inbox-read-race.spec.ts:129:68",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-34377303228-4/blob-report/report-a74636e.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "My Bots restores the 30-day token heatmap across PC and mobile",
+      "suitePath": [],
+      "filePath": "35-bot-token-usage-quota.spec.ts",
+      "status": "failed",
+      "durationMs": 12940,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('community-machine-quota-machine_telemetry')\nExpected: \u001b[32m\"\u001b[7mtru\u001b[27me\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mfals\u001b[27me\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-machine-quota-machine_telemetry')\u001b[22m\n\u001b[2m    24 × locator resolved to <button tabindex=\"0\" type=\"button\" id=\"base-ui-_r_90_\" aria-expanded=\"false\" aria-haspopup=\"dialog\" data-slot=\"popover-trigger\" data-base-ui-click-trigger=\"\" data-testid=\"community-machine-quota-machine_telemetry\" aria-label=\"Quota details: Claude 64% left; Codex 18% left; Grok 72% left. 4 limits\" class=\"group flex min-h-11 max-w-full min-w-0 flex-wrap items-center gap-x-2 gap-y-1 rounded-md py-2 text-left text-xs text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-2 focus…>…</button>\u001b[22m\n\u001b[2m       - unexpected value \"false\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('community-machine-quota-machine_telemetry')\nExpected: \u001b[32m\"\u001b[7mtru\u001b[27me\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mfals\u001b[27me\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-machine-quota-machine_telemetry')\u001b[22m\n\u001b[2m    24 × locator resolved to <button tabindex=\"0\" type=\"button\" id=\"base-ui-_r_90_\" aria-expanded=\"false\" aria-haspopup=\"dialog\" data-slot=\"popover-trigger\" data-base-ui-click-trigger=\"\" data-testid=\"community-machine-quota-machine_telemetry\" aria-label=\"Quota details: Claude 64% left; Codex 18% left; Grok 72% left. 4 limits\" class=\"group flex min-h-11 max-w-full min-w-0 flex-wrap items-center gap-x-2 gap-y-1 rounded-md py-2 text-left text-xs text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-2 focus…>…</button>\u001b[22m\n\u001b[2m       - unexpected value \"false\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/35-bot-token-usage-quota.spec.ts:354:23",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-34377303228-9/blob-report/report-749d542.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 10,
+      "attemptIndex": 0,
+      "displayName": "one committed bundle projects every surface and only a visible row clears it",
+      "suitePath": [
+        "account unread projection"
+      ],
+      "filePath": "41-account-unread-projection.spec.ts",
+      "status": "timed_out",
+      "durationMs": 180341,
+      "errorType": null,
+      "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m\n[+1 more error(s)]",
+      "stackText": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m\nError: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Inbox', exact: true })\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/41-account-unread-projection.spec.ts:369:68",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

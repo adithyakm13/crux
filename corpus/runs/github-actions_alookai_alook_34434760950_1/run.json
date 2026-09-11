@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34434760950:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34434760950",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34434760950",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "4c0ee356d00c1943c7666134392ddd00a30ea8fd",
+    "headBranch": "feat/user-bar-extension-slot",
+    "artifactIds": [
+      "10135927673",
+      "10135939459",
+      "10135939465",
+      "10135940489",
+      "10135942302",
+      "10135947068",
+      "10135993442",
+      "10135950678",
+      "10135985034"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:29:20.213Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 205,
+    "failures": 3,
+    "passed": 198,
+    "skipped": 4,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34434760950-6/blob-report/report-58ad2f3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "Update, Inbox, and viewer Profile share one persistent User Bar extension",
+      "suitePath": [],
+      "filePath": "50-daemon-update-notice.spec.ts",
+      "status": "failed",
+      "durationMs": 13069,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-inbox-trigger').locator('svg')\nExpected pattern: \u001b[32m/fill-current/\u001b[39m\nReceived string:  \u001b[31m\"lucide lucide-inbox size-4\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveClass\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-inbox-trigger').locator('svg')\u001b[22m\n\u001b[2m    24 × locator resolved to <svg width=\"24\" height=\"24\" fill=\"none\" stroke-width=\"2\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"lucide lucide-inbox size-4\">…</svg>\u001b[22m\n\u001b[2m       - unexpected value \"lucide lucide-inbox size-4\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-inbox-trigger').locator('svg')\nExpected pattern: \u001b[32m/fill-current/\u001b[39m\nReceived string:  \u001b[31m\"lucide lucide-inbox size-4\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveClass\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-inbox-trigger').locator('svg')\u001b[22m\n\u001b[2m    24 × locator resolved to <svg width=\"24\" height=\"24\" fill=\"none\" stroke-width=\"2\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"lucide lucide-inbox size-4\">…</svg>\u001b[22m\n\u001b[2m       - unexpected value \"lucide lucide-inbox size-4\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/50-daemon-update-notice.spec.ts:145:45",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-34434760950-9/blob-report/report-749d542.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "keeps the mobile shell unmasked and dismisses on outside press without writes",
+      "suitePath": [
+        "mobile Inbox interactive user-bar base"
+      ],
+      "filePath": "53-mobile-inbox-surface.spec.ts",
+      "status": "failed",
+      "durationMs": 12346,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-inbox-trigger').locator('svg')\nExpected pattern: \u001b[32m/fill-current/\u001b[39m\nReceived string:  \u001b[31m\"lucide lucide-inbox size-4\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveClass\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-inbox-trigger').locator('svg')\u001b[22m\n\u001b[2m    24 × locator resolved to <svg width=\"24\" height=\"24\" fill=\"none\" stroke-width=\"2\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"lucide lucide-inbox size-4\">…</svg>\u001b[22m\n\u001b[2m       - unexpected value \"lucide lucide-inbox size-4\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('community-inbox-trigger').locator('svg')\nExpected pattern: \u001b[32m/fill-current/\u001b[39m\nReceived string:  \u001b[31m\"lucide lucide-inbox size-4\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveClass\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('community-inbox-trigger').locator('svg')\u001b[22m\n\u001b[2m    24 × locator resolved to <svg width=\"24\" height=\"24\" fill=\"none\" stroke-width=\"2\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" class=\"lucide lucide-inbox size-4\">…</svg>\u001b[22m\n\u001b[2m       - unexpected value \"lucide lucide-inbox size-4\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/53-mobile-inbox-surface.spec.ts:165:29",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-34434760950-5/blob-report/report-eb2ed85.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 10,
+      "attemptIndex": 0,
+      "displayName": "existing channel/server deletes converge UI, WS, pending rows, linked media, and icon reads",
+      "suitePath": [],
+      "filePath": "28-community-delete-media-cleanup.spec.ts",
+      "status": "failed",
+      "durationMs": 28892,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/c\\/channels\\/[^/]+\\/[^/]+$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:3000/c/channels/Po_Oq_zON4m1fNwQ64gJX\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    24 × locator resolved to <html lang=\"en\" class=\"dmsans_c227b566-module__TN79BG__variable dmmono_bdd112d4-module__Yjgkaa__variable instrumentserif_418434b8-module__1PnwCG__variable caveat_26f4596c-module__cdAQxq__variable vt323_4fc70ac5-module__ACS4JW__variable literata_1e5e3d3f-module__313Aia__variable h-full antialiased light\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:3000/c/channels/Po_Oq_zON4m1fNwQ64gJX\"\u001b[22m\n",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/c\\/channels\\/[^/]+\\/[^/]+$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:3000/c/channels/Po_Oq_zON4m1fNwQ64gJX\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    24 × locator resolved to <html lang=\"en\" class=\"dmsans_c227b566-module__TN79BG__variable dmmono_bdd112d4-module__Yjgkaa__variable instrumentserif_418434b8-module__1PnwCG__variable caveat_26f4596c-module__cdAQxq__variable vt323_4fc70ac5-module__ACS4JW__variable literata_1e5e3d3f-module__313Aia__variable h-full antialiased light\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:3000/c/channels/Po_Oq_zON4m1fNwQ64gJX\"\u001b[22m\n\n    at /__w/alook/alook/src/web/src/test/e2e-ui/28-community-delete-media-cleanup.spec.ts:185:28",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

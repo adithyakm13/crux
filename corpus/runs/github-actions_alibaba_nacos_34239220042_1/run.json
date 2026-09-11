@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alibaba/nacos:34239220042:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alibaba/nacos",
+    "providerRunId": "34239220042",
+    "runAttempt": 1,
+    "url": "https://github.com/alibaba/nacos/actions/runs/34239220042",
+    "workflowName": "Integration Test",
+    "event": "pull_request",
+    "headSha": "c156d3c3e4bd6712547e43c027a73afc6846849c",
+    "headBranch": "codex/mcp-console-ui-adjustments",
+    "artifactIds": [
+      "10061876253"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:38:56.152Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 435,
+    "failures": 1,
+    "passed": 424,
+    "skipped": 10,
+    "filesParsed": 94,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "integration-test-reports-and-logs/nacos/nacos/test/openapi-test/target/failsafe-reports/TEST-com.alibaba.nacos.test.openapi.auth.ModuleAuthorizationITCase.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "testEverySecuredOperationIsCoveredOrExplicitlyClassified",
+      "suitePath": [
+        "com.alibaba.nacos.test.openapi.auth.ModuleAuthorizationITCase"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 296,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "The operation-level inventory changed; classify every added, removed, or re-annotated @Secured method before updating the registry ==> expected: <{McpClientController=6, AiResourceImportAdminController=4, RoleControllerV3=4, ArdWellKnownController=1, ConfigOpsControllerV3=4, AgentSpecClientController=2, ConsoleCopilotConfigController=2, ServerLoaderControllerV3=5, PluginControllerV3=4, PermissionControllerV3=4, ConsoleServiceController=8, A2aAdminController=6, ConsoleAgentController=17, ConsoleHistoryController=4, ConsoleAgentSpecController=17, ArdSearchController=5, AgentAdminController=17, AiResourceSearchClientController=1, VisibilityGrantControllerV3=2, ServiceControllerV3=7, ListenerControllerV3=1, ConsoleMcpController=20, InstanceControllerV3=8, HistoryControllerV3=4, ConfigControllerV3=15, AgentSpecAdminController=18, ConsoleA2aController=6, CapacityControllerV3=2, ConsoleClusterController=1, ConsoleAiResourceImportController=4, CoreOpsControllerV3=3, PromptClientController=2, ConfigOpenApiController=1, PipelineAdminController=4, PromptAdminController=24, NamespaceControllerV3=6, ClusterControllerV3=1, McpAdminController=17, ConsoleCopilotController=4, ConsoleNamespaceController=6, OperatorControllerV3=4, SkillClientController=2, ConsoleInstanceController=3, ConsoleSkillController=20, ConsolePluginController=5, ConsoleConfigController=13, NacosClusterControllerV3=4, AgentClientController=7, ConsolePromptController=18, ConsolePipelineController=4, MetricsControllerV3=2, SkillAdminController=20, InstanceOpenApiController=3, UserControllerV3=5, HealthControllerV3=2, ClientControllerV3=7}> but was: <{A2aAdminController=6, AgentAdminController=17, AgentClientController=7, AgentSpecAdminController=18, AgentSpecClientController=2, AiResourceImportAdminController=4, AiResourceSearchClientController=1, ArdSearchController=5, ArdWellKnownController=1, CapacityControllerV3=2, ClientControllerV3=7, ClusterControllerV3=1, ConfigControllerV3=15, ConfigOpenApiController=1, ConfigOpsControllerV3=4, ConsoleA2aController=6, ConsoleAgentController=17, ConsoleAgentSpecController=17, ConsoleAiResourceImportController=4, ConsoleClusterController=1, ConsoleConfigController=13, ConsoleCopilotConfigController=2, ConsoleCopilotController=4, ConsoleHistoryController=4, ConsoleInstanceController=3, ConsoleMcpController=22, ConsoleNamespaceController=6, ConsolePipelineController=4, ConsolePluginController=5, ConsolePromptController=18, ConsoleServiceController=8, ConsoleSkillController=20, CoreOpsControllerV3=3, HealthControllerV3=2, HistoryControllerV3=4, InstanceControllerV3=8, InstanceOpenApiController=3, ListenerControllerV3=1, McpAdminController=19, McpClientController=6, MetricsControllerV3=2, NacosClusterControllerV3=4, NamespaceControllerV3=6, OperatorControllerV3=4, PermissionControllerV3=4, PipelineAdminController=4, PluginControllerV3=4, PromptAdminController=24, PromptClientController=2, RoleControllerV3=4, ServerLoaderControllerV3=5, ServiceControllerV3=7, SkillAdminController=20, SkillClientController=2, UserControllerV3=5, VisibilityGrantControllerV3=2}>",
+      "stackText": "org.opentest4j.AssertionFailedError: The operation-level inventory changed; classify every added, removed, or re-annotated @Secured method before updating the registry ==> expected: <{McpClientController=6, AiResourceImportAdminController=4, RoleControllerV3=4, ArdWellKnownController=1, ConfigOpsControllerV3=4, AgentSpecClientController=2, ConsoleCopilotConfigController=2, ServerLoaderControllerV3=5, PluginControllerV3=4, PermissionControllerV3=4, ConsoleServiceController=8, A2aAdminController=6, ConsoleAgentController=17, ConsoleHistoryController=4, ConsoleAgentSpecController=17, ArdSearchController=5, AgentAdminController=17, AiResourceSearchClientController=1, VisibilityGrantControllerV3=2, ServiceControllerV3=7, ListenerControllerV3=1, ConsoleMcpController=20, InstanceControllerV3=8, HistoryControllerV3=4, ConfigControllerV3=15, AgentSpecAdminController=18, ConsoleA2aController=6, CapacityControllerV3=2, ConsoleClusterController=1, ConsoleAiResourceImportController=4, CoreOpsControllerV3=3, PromptClientController=2, ConfigOpenApiController=1, PipelineAdminController=4, PromptAdminController=24, NamespaceControllerV3=6, ClusterControllerV3=1, McpAdminController=17, ConsoleCopilotController=4, ConsoleNamespaceController=6, OperatorControllerV3=4, SkillClientController=2, ConsoleInstanceController=3, ConsoleSkillController=20, ConsolePluginController=5, ConsoleConfigController=13, NacosClusterControllerV3=4, AgentClientController=7, ConsolePromptController=18, ConsolePipelineController=4, MetricsControllerV3=2, SkillAdminController=20, InstanceOpenApiController=3, UserControllerV3=5, HealthControllerV3=2, ClientControllerV3=7}> but was: <{A2aAdminController=6, AgentAdminController=17, AgentClientController=7, AgentSpecAdminController=18, AgentSpecClientController=2, AiResourceImportAdminController=4, AiResourceSearchClientController=1, ArdSearchController=5, ArdWellKnownController=1, CapacityControllerV3=2, ClientControllerV3=7, ClusterControllerV3=1, ConfigControllerV3=15, ConfigOpenApiController=1, ConfigOpsControllerV3=4, ConsoleA2aController=6, ConsoleAgentController=17, ConsoleAgentSpecController=17, ConsoleAiResourceImportController=4, ConsoleClusterController=1, ConsoleConfigController=13, ConsoleCopilotConfigController=2, ConsoleCopilotController=4, ConsoleHistoryController=4, ConsoleInstanceController=3, ConsoleMcpController=22, ConsoleNamespaceController=6, ConsolePipelineController=4, ConsolePluginController=5, ConsolePromptController=18, ConsoleServiceController=8, ConsoleSkillController=20, CoreOpsControllerV3=3, HealthControllerV3=2, HistoryControllerV3=4, InstanceControllerV3=8, InstanceOpenApiController=3, ListenerControllerV3=1, McpAdminController=19, McpClientController=6, MetricsControllerV3=2, NacosClusterControllerV3=4, NamespaceControllerV3=6, OperatorControllerV3=4, PermissionControllerV3=4, PipelineAdminController=4, PluginControllerV3=4, PromptAdminController=24, PromptClientController=2, RoleControllerV3=4, ServerLoaderControllerV3=5, ServiceControllerV3=7, SkillAdminController=20, SkillClientController=2, UserControllerV3=5, VisibilityGrantControllerV3=2}>\n\tat org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)\n\tat org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)\n\tat org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:201)\n\tat org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:184)\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1199)\n\tat com.alibaba.nacos.test.openapi.auth.ModuleAuthorizationITCase.testEverySecuredOperationIsCoveredOrExplicitlyClassified(ModuleAuthorizationITCase.java:173)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

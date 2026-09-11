@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:mgreminger/EngineeringPaper.xyz:34178582882:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "mgreminger/EngineeringPaper.xyz",
+    "providerRunId": "34178582882",
+    "runAttempt": 1,
+    "url": "https://github.com/mgreminger/EngineeringPaper.xyz/actions/runs/34178582882",
+    "workflowName": "Playwright Tests",
+    "event": "pull_request",
+    "headSha": "ec3c5d9e28af17de265c766d88c4d906db3fc8d9",
+    "headBranch": "page-break",
+    "artifactIds": [
+      "10038368146",
+      "10038612441"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-10T18:09:31.556Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 588,
+    "failures": 3,
+    "passed": 584,
+    "skipped": 1,
+    "filesParsed": 2,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "Test esc to undo delete",
+      "suitePath": [],
+      "filePath": "test_keyboard_shortcuts.spec.mjs",
+      "status": "failed",
+      "durationMs": 1210,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31mNaN\u001b[39m\n\nExpected precision:    13\nExpected difference: < \u001b[32m0.00000000000005\u001b[39m\nReceived difference:   \u001b[31mNaN\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31mNaN\u001b[39m\n\nExpected precision:    13\nExpected difference: < \u001b[32m0.00000000000005\u001b[39m\nReceived difference:   \u001b[31mNaN\u001b[39m\n    at /home/runner/work/EngineeringPaper.xyz/EngineeringPaper.xyz/tests/test_keyboard_shortcuts.spec.mjs:231:36",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 1,
+      "displayName": "Test esc to undo delete",
+      "suitePath": [],
+      "filePath": "test_keyboard_shortcuts.spec.mjs",
+      "status": "failed",
+      "durationMs": 1810,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31mNaN\u001b[39m\n\nExpected precision:    13\nExpected difference: < \u001b[32m0.00000000000005\u001b[39m\nReceived difference:   \u001b[31mNaN\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31mNaN\u001b[39m\n\nExpected precision:    13\nExpected difference: < \u001b[32m0.00000000000005\u001b[39m\nReceived difference:   \u001b[31mNaN\u001b[39m\n    at /home/runner/work/EngineeringPaper.xyz/EngineeringPaper.xyz/tests/test_keyboard_shortcuts.spec.mjs:231:36",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "blob-report-3/report-3.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 1,
+      "attemptIndex": 2,
+      "displayName": "Test esc to undo delete",
+      "suitePath": [],
+      "filePath": "test_keyboard_shortcuts.spec.mjs",
+      "status": "failed",
+      "durationMs": 1240,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31mNaN\u001b[39m\n\nExpected precision:    13\nExpected difference: < \u001b[32m0.00000000000005\u001b[39m\nReceived difference:   \u001b[31mNaN\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31mNaN\u001b[39m\n\nExpected precision:    13\nExpected difference: < \u001b[32m0.00000000000005\u001b[39m\nReceived difference:   \u001b[31mNaN\u001b[39m\n    at /home/runner/work/EngineeringPaper.xyz/EngineeringPaper.xyz/tests/test_keyboard_shortcuts.spec.mjs:231:36",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

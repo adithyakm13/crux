@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34486522447:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34486522447",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34486522447",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "1b17242b8e9b1097a6fdb2457f7a62829f711328",
+    "headBranch": "feat/official-server",
+    "artifactIds": [
+      "10156244644",
+      "10156251673",
+      "10156254175",
+      "10156408448",
+      "10156250358",
+      "10156297847",
+      "10156364169",
+      "10156262528",
+      "10156439103"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:26:31.999Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 205,
+    "failures": 1,
+    "passed": 200,
+    "skipped": 4,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34486522447-1/blob-report/report-be3be0b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "remote receive states and sustained upward input produce diagnostic traces",
+      "suitePath": [
+        "message scroll characterization"
+      ],
+      "filePath": "55-message-scroll-characterization.spec.ts",
+      "status": "failed",
+      "durationMs": 27827,
+      "errorType": "Error",
+      "message": "Error: remote-pinned: 0px distance must remain stable without another write\n\nremote-pinned: 0px distance must remain stable without another write\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"atTarget\": true,\u001b[39m\n\u001b[31m+   \"atTarget\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 20000ms exceeded while waiting on the predicate",
+      "stackText": "Error: remote-pinned: 0px distance must remain stable without another write\n\nremote-pinned: 0px distance must remain stable without another write\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"atTarget\": true,\u001b[39m\n\u001b[31m+   \"atTarget\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 20000ms exceeded while waiting on the predicate\n    at establishScrollDistancePrecondition (/__w/alook/alook/src/web/src/test/e2e-ui/55-message-scroll-characterization.spec.ts:189:6)\n    at /__w/alook/alook/src/web/src/test/e2e-ui/55-message-scroll-characterization.spec.ts:555:32",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

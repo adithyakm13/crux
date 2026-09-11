@@ -69,6 +69,18 @@ export interface CorpusFailure {
   stackText: string | null;
   stdout: string | null;
   stderr: string | null;
+  /**
+   * Original byte lengths of any field that was truncated on the way in,
+   * keyed by field name. Absent when nothing was truncated.
+   *
+   * Truncation has to be recorded rather than applied silently: a labeller
+   * judging a cut-off stack is judging different evidence than the CI run
+   * produced, and a corpus that hides that is not a ground truth. One
+   * quarkus run carried 1549 failures averaging a megabyte of stack and a
+   * megabyte of stderr each — 147 MB in a single file, past GitHub's limit
+   * and past anything a human could read.
+   */
+  truncated?: Record<string, number>;
 }
 
 export interface CorpusRun {

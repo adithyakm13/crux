@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:alookai/alook:34464274880:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "alookai/alook",
+    "providerRunId": "34464274880",
+    "runAttempt": 1,
+    "url": "https://github.com/alookai/alook/actions/runs/34464274880",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "565fefdaf565b40620b42916ed466f6370858099",
+    "headBranch": "feat/user-plan-bot-activation",
+    "artifactIds": [
+      "10147154905",
+      "10147143446",
+      "10147148217",
+      "10147164317",
+      "10147153976",
+      "10147289660",
+      "10147236678",
+      "10147162387",
+      "10147291742"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-10T17:27:56.309Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 205,
+    "failures": 1,
+    "passed": 202,
+    "skipped": 2,
+    "filesParsed": 9,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "blob-report-34464274880-3/blob-report/report-7573a5b.zip!report.jsonl",
+      "producerAdapter": "playwright",
+      "shardIndex": 9,
+      "attemptIndex": 0,
+      "displayName": "one human account converges read state across two browser profiles",
+      "suitePath": [],
+      "filePath": "29-multi-device-read-state.spec.ts",
+      "status": "failed",
+      "durationMs": 57128,
+      "errorType": "Error",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+      "stackText": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /__w/alook/alook/src/web/src/test/e2e-ui/29-multi-device-read-state.spec.ts:287:84",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}
