@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "digest": "b7fa53f4a96e",
+  "policy": {
+    "targetFailures": 150,
+    "minFailures": 2,
+    "maxFailures": 4,
+    "maxRunsPerRepo": 2,
+    "sliceLargeRuns": 0,
+    "minPerFramework": 15,
+    "maxSlicesPerRepo": 1,
+    "seed": 5913886
+  },
+  "runs": [
+    {
+      "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:34293699226:1"
+    },
+    {
+      "corpusRunId": "github-actions:ArcadeData/arcadedb:33602678208:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:32276756865:1"
+    },
+    {
+      "corpusRunId": "github-actions:asimons81/hermes-vault:30119824948:1"
+    },
+    {
+      "corpusRunId": "github-actions:siemens/ix:33631507639:1"
+    },
+    {
+      "corpusRunId": "github-actions:Mathews-Tom/archex:32614822770:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/druid:34233723203:2"
+    },
+    {
+      "corpusRunId": "github-actions:ArcadeData/arcadedb:33569919017:1"
+    },
+    {
+      "corpusRunId": "github-actions:asimons81/hermes-vault:30808453179:1"
+    },
+    {
+      "corpusRunId": "github-actions:datahub-project/datahub:32519914612:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/plc4x:33762085143:1"
+    },
+    {
+      "corpusRunId": "github-actions:GoogleCloudPlatform/DataflowTemplates:33550982055:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/beam:33112996724:1"
+    },
+    {
+      "corpusRunId": "github-actions:datahub-project/datahub:32606079478:1"
+    },
+    {
+      "corpusRunId": "github-actions:elastic/synthetics:30990690185:1"
+    },
+    {
+      "corpusRunId": "github-actions:elastic/synthetics:30994185246:3"
+    },
+    {
+      "corpusRunId": "github-actions:Mathews-Tom/archex:32614885291:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/auron:34256801829:1"
+    },
+    {
+      "corpusRunId": "github-actions:ueberdosis/tiptap:33136841488:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/felix-dev:33558447345:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/cassandra-nodejs-driver:27728487696:2"
+    },
+    {
+      "corpusRunId": "github-actions:apache/plc4x:33770869618:1"
+    },
+    {
+      "corpusRunId": "github-actions:alookai/alook:34202315401:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/inlong:28955286988:2"
+    },
+    {
+      "corpusRunId": "github-actions:apache/druid:34317396221:1"
+    },
+    {
+      "corpusRunId": "github-actions:LingFrame/LingFrame:34105350794:2"
+    },
+    {
+      "corpusRunId": "github-actions:alookai/alook:34434760950:1"
+    },
+    {
+      "corpusRunId": "github-actions:TryGhost/Ghost:33478390257:1"
+    },
+    {
+      "corpusRunId": "github-actions:mgreminger/EngineeringPaper.xyz:34178582882:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/felix-dev:33796352193:1"
+    },
+    {
+      "corpusRunId": "github-actions:ueberdosis/tiptap:33136766609:1"
+    },
+    {
+      "corpusRunId": "github-actions:TryGhost/Ghost:33456034502:1"
+    },
+    {
+      "corpusRunId": "github-actions:apple/pkl-go:28979455316:1"
+    },
+    {
+      "corpusRunId": "github-actions:containerd/containerd:34407933094:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/pulsar:34369099050:1"
+    },
+    {
+      "corpusRunId": "github-actions:QwenLM/qwen-code:34490944852:1"
+    },
+    {
+      "corpusRunId": "github-actions:apache/pulsar:34378415833:1"
+    },
+    {
+      "corpusRunId": "github-actions:apple/pkl-go:29035070885:1"
+    },
+    {
+      "corpusRunId": "github-actions:Milkdown/milkdown:33299668757:1"
+    },
+    {
+      "corpusRunId": "github-actions:trinodb/trino:33392379662:1"
+    },
+    {
+      "corpusRunId": "github-actions:Norconex/crawler:32210224628:1"
+    },
+    {
+      "corpusRunId": "github-actions:DIGI-UW/OpenELIS-Global-2:34500848050:1"
+    },
+    {
+      "corpusRunId": "github-actions:tenstorrent/tt-metal:31217788905:1"
+    },
+    {
+      "corpusRunId": "github-actions:tenstorrent/tt-metal:31216086258:1"
+    }
+  ]
+}

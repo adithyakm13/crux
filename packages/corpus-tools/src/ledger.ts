@@ -73,12 +73,27 @@ const KEEP = [
 ] as const satisfies readonly (keyof WorksheetEntry)[];
 
 /**
- * `</script>` anywhere in a failure message would end the data block early and
- * spill the rest of the corpus into the document as markup. CI logs contain
- * arbitrary bytes, so this is a real case and not a theoretical one.
+ * Make the JSON safe to sit inside an HTML document.
+ *
+ * CI logs contain arbitrary bytes, so each of these is a real case:
+ *
+ *  - `</script>` would end the data block early and spill the rest of the
+ *    corpus into the document as markup.
+ *  - U+FFFD, the replacement character, is what invalid UTF-8 in a CI log
+ *    decodes to, and it reaches the corpus verbatim. The artifact host rejects
+ *    a document containing it raw, because a lone U+FFFD is indistinguishable
+ *    from an encoding bug introduced in transit. Escaping it as `\ufffd` keeps
+ *    the byte out of the file while parsing back to the same character, so the
+ *    labeller still sees exactly what CI emitted.
+ *  - U+2028 and U+2029 are line terminators in JavaScript but not in JSON, and
+ *    break any consumer that evaluates rather than parses the block.
  */
 function embedJson(value: unknown): string {
-  return JSON.stringify(value).replace(/<\//g, '<\\/');
+  return JSON.stringify(value)
+    .replace(/<\//g, '<\\/')
+    .replace(/\uFFFD/g, '\\ufffd')
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
 }
 
 /**

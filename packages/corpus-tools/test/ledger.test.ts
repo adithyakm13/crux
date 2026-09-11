@@ -118,3 +118,22 @@ test('the two contexts produce two differently named pages', async () => {
   assert.ok(blind.includes('<title>Sealed Ledger</title>'));
   assert.ok(!blind.includes('Root Cause Ledger'), 'the full-context name must not survive');
 });
+
+test('characters that break an HTML document are escaped, not stripped', async () => {
+  // U+FFFD is what invalid UTF-8 in a CI log decodes to and it reaches the
+  // corpus verbatim; the artifact host rejects a document containing it raw.
+  // U+2028 terminates a line in JavaScript but not in JSON.
+  const run = runWith(1, { message: 'bad byte � here', stackText: 'line break' });
+  const { worksheet } = buildWorksheet([run], selOf(run), 'full');
+  const html = await buildLedger(worksheet);
+  assert.ok(!html.includes('�'), 'a raw replacement character survived');
+  assert.ok(!html.includes(' '), 'a raw line separator survived');
+  assert.ok(html.includes('\\ufffd') && html.includes('\\u2028'), 'expected escaped forms');
+
+  // And it must still parse back to the original text, or the labeller is
+  // judging different evidence than CI produced.
+  const json = html.slice(html.indexOf('id="crux-data">') + 15);
+  const data = JSON.parse(json.slice(0, json.indexOf('</script>')).replace(/<\\\//g, '</'));
+  assert.equal(data.entries[0].message, 'bad byte � here');
+  assert.equal(data.entries[0].stack, 'line break');
+});
