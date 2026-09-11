@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:osmosis-labs/osmosis-frontend:34200065655:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "osmosis-labs/osmosis-frontend",
+    "providerRunId": "34200065655",
+    "runAttempt": 2,
+    "url": "https://github.com/osmosis-labs/osmosis-frontend/actions/runs/34200065655",
+    "workflowName": "Synthetic Quote Geo Monitoring Frontend tests",
+    "event": "schedule",
+    "headSha": "b519ec713ef838e07ca2809f74e08a60ac191cc9",
+    "headBranch": "stage",
+    "artifactIds": [
+      "10045726575",
+      "10046341724",
+      "10046432752"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:40:30.513Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 48,
+    "failures": 10,
+    "passed": 35,
+    "skipped": 3,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "prod-usa1-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Test Select Swap Pair feature › User should be able to select INJ/USDC",
+      "suitePath": [
+        "select.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 180247,
+      "errorType": "FAILURE",
+      "message": "select.spec.ts:54:7 User should be able to select INJ/USDC",
+      "stackText": "\n  [chromium] › select.spec.ts:54:7 › Test Select Swap Pair feature › User should be able to select INJ/USDC \n\n    Test timeout of 90000ms exceeded.\n\n    Error: locator.innerText: Target page, context or browser has been closed\n    Call log:\n      - waiting for locator('//span[@data-testid=\"token-price\"]')\n\n\n       at ../pages/trade-page.ts:323\n\n      321 |\n      322 |   async getExchangeRate() {\n    > 323 |     return await this.exchangeRate.innerText();\n          |                                    ^\n      324 |   }\n      325 |\n      326 |   async isTransactionSuccesful(delay = 7) {\n        at TradePage.getExchangeRate (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:323:36)\n        at TradePage.selectPair (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:318:23)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/select.spec.ts:55:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/select-Test-Select-Swap-Pa-e6be6--be-able-to-select-INJ-USDC-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/select-Test-Select-Swap-Pa-e6be6--be-able-to-select-INJ-USDC-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    Test timeout of 90000ms exceeded.\n\n    Error: locator.innerText: Target page, context or browser has been closed\n    Call log:\n      - waiting for locator('//span[@data-testid=\"token-price\"]')\n\n\n       at ../pages/trade-page.ts:323\n\n      321 |\n      322 |   async getExchangeRate() {\n    > 323 |     return await this.exchangeRate.innerText();\n          |                                    ^\n      324 |   }\n      325 |\n      326 |   async isTransactionSuccesful(delay = 7) {\n        at TradePage.getExchangeRate (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:323:36)\n        at TradePage.selectPair (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:318:23)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/select.spec.ts:55:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/select-Test-Select-Swap-Pa-e6be6--be-able-to-select-INJ-USDC-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/select-Test-Select-Swap-Pa-e6be6--be-able-to-select-INJ-USDC-chromium-retry1/error-context.md\n\n",
+      "stdout": "\nFE opened at: https://app.osmosis.zone/\nSelect pair INJ to USDC\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-e6be6--be-able-to-select-INJ-USDC-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-e6be6--be-able-to-select-INJ-USDC-chromium/error-context.md]]\nFE opened at: https://app.osmosis.zone/\nFE opened at: https://app.osmosis.zone/\nSelect pair INJ to USDC\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-e6be6--be-able-to-select-INJ-USDC-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-e6be6--be-able-to-select-INJ-USDC-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "prod-fra1-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "Test Select Pool feature › User should be able to see at least 10 pools",
+      "suitePath": [
+        "pools.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 39832,
+      "errorType": "FAILURE",
+      "message": "pools.spec.ts:31:7 User should be able to see at least 10 pools",
+      "stackText": "\n  [chromium] › pools.spec.ts:31:7 › Test Select Pool feature › User should be able to see at least 10 pools \n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:32:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:32:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/error-context.md\n\n",
+      "stdout": "\nGet Test Proxy configuration for server: http://138.68.112.16:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/error-context.md]]\nGet Test Proxy configuration for server: http://138.68.112.16:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "prod-fra1-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "Test Select Pool feature › User should be able to select ATOM/USDC pool",
+      "suitePath": [
+        "pools.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 39952,
+      "errorType": "FAILURE",
+      "message": "pools.spec.ts:48:7 User should be able to select ATOM/USDC pool",
+      "stackText": "\n  [chromium] › pools.spec.ts:48:7 › Test Select Pool feature › User should be able to select ATOM/USDC pool \n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:50:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:50:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/error-context.md\n\n",
+      "stdout": "\nGet Test Proxy configuration for server: http://138.68.112.16:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/error-context.md]]\nGet Test Proxy configuration for server: http://138.68.112.16:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "prod-fra1-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "Test Select Pool feature › User should be able to select OSMO/USDC pool",
+      "suitePath": [
+        "pools.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 41466,
+      "errorType": "FAILURE",
+      "message": "pools.spec.ts:63:7 User should be able to select OSMO/USDC pool",
+      "stackText": "\n  [chromium] › pools.spec.ts:63:7 › Test Select Pool feature › User should be able to select OSMO/USDC pool \n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:65:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:65:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/error-context.md\n\n",
+      "stdout": "\nGet Test Proxy configuration for server: http://138.68.112.16:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/error-context.md]]\nGet Test Proxy configuration for server: http://138.68.112.16:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "prod-fra1-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "Test Select Swap Pair feature › User should be able to select BTC/USDC",
+      "suitePath": [
+        "select.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 180211,
+      "errorType": "FAILURE",
+      "message": "select.spec.ts:36:7 User should be able to select BTC/USDC",
+      "stackText": "\n  [chromium] › select.spec.ts:36:7 › Test Select Swap Pair feature › User should be able to select BTC/USDC \n\n    Test timeout of 90000ms exceeded.\n\n    Error: locator.innerText: Target page, context or browser has been closed\n    Call log:\n      - waiting for locator('//span[@data-testid=\"token-price\"]')\n\n\n       at ../pages/trade-page.ts:323\n\n      321 |\n      322 |   async getExchangeRate() {\n    > 323 |     return await this.exchangeRate.innerText();\n          |                                    ^\n      324 |   }\n      325 |\n      326 |   async isTransactionSuccesful(delay = 7) {\n        at TradePage.getExchangeRate (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:323:36)\n        at TradePage.selectPair (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:318:23)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/select.spec.ts:37:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    Test timeout of 90000ms exceeded.\n\n    Error: locator.innerText: Target page, context or browser has been closed\n    Call log:\n      - waiting for locator('//span[@data-testid=\"token-price\"]')\n\n\n       at ../pages/trade-page.ts:323\n\n      321 |\n      322 |   async getExchangeRate() {\n    > 323 |     return await this.exchangeRate.innerText();\n          |                                    ^\n      324 |   }\n      325 |\n      326 |   async isTransactionSuccesful(delay = 7) {\n        at TradePage.getExchangeRate (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:323:36)\n        at TradePage.selectPair (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:318:23)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/select.spec.ts:37:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium-retry1/error-context.md\n\n",
+      "stdout": "\nGet Test Proxy configuration for server: http://138.68.112.16:8888\nFE opened at: https://app.osmosis.zone/\nFE opened at: https://app.osmosis.zone/\nSelect pair nBTC to USDC\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium/error-context.md]]\nGet Test Proxy configuration for server: http://138.68.112.16:8888\nFE opened at: https://app.osmosis.zone/\nFE opened at: https://app.osmosis.zone/\nSelect pair nBTC to USDC\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "prod-sgp1-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "Test Select Pool feature › User should be able to see at least 10 pools",
+      "suitePath": [
+        "pools.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 54558,
+      "errorType": "FAILURE",
+      "message": "pools.spec.ts:31:7 User should be able to see at least 10 pools",
+      "stackText": "\n  [chromium] › pools.spec.ts:31:7 › Test Select Pool feature › User should be able to see at least 10 pools \n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:32:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:32:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/error-context.md\n\n",
+      "stdout": "\nGet Test Proxy configuration for server: http://139.59.218.19:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/error-context.md]]\nGet Test Proxy configuration for server: http://139.59.218.19:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "prod-sgp1-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "Test Select Pool feature › User should be able to select ATOM/USDC pool",
+      "suitePath": [
+        "pools.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 47227,
+      "errorType": "FAILURE",
+      "message": "pools.spec.ts:48:7 User should be able to select ATOM/USDC pool",
+      "stackText": "\n  [chromium] › pools.spec.ts:48:7 › Test Select Pool feature › User should be able to select ATOM/USDC pool \n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:50:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:50:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/error-context.md\n\n",
+      "stdout": "\nGet Test Proxy configuration for server: http://139.59.218.19:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/error-context.md]]\nGet Test Proxy configuration for server: http://139.59.218.19:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "prod-sgp1-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "Test Select Pool feature › User should be able to select OSMO/USDC pool",
+      "suitePath": [
+        "pools.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 55897,
+      "errorType": "FAILURE",
+      "message": "pools.spec.ts:63:7 User should be able to select OSMO/USDC pool",
+      "stackText": "\n  [chromium] › pools.spec.ts:63:7 › Test Select Pool feature › User should be able to select OSMO/USDC pool \n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:65:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:65:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/error-context.md\n\n",
+      "stdout": "\nGet Test Proxy configuration for server: http://139.59.218.19:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/error-context.md]]\nGet Test Proxy configuration for server: http://139.59.218.19:8888\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "prod-sgp1-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "Test Select Swap Pair feature › User should be able to select BTC/USDC",
+      "suitePath": [
+        "select.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 180237,
+      "errorType": "FAILURE",
+      "message": "select.spec.ts:36:7 User should be able to select BTC/USDC",
+      "stackText": "\n  [chromium] › select.spec.ts:36:7 › Test Select Swap Pair feature › User should be able to select BTC/USDC \n\n    Test timeout of 90000ms exceeded.\n\n    Error: locator.innerText: Target page, context or browser has been closed\n    Call log:\n      - waiting for locator('//span[@data-testid=\"token-price\"]')\n\n\n       at ../pages/trade-page.ts:323\n\n      321 |\n      322 |   async getExchangeRate() {\n    > 323 |     return await this.exchangeRate.innerText();\n          |                                    ^\n      324 |   }\n      325 |\n      326 |   async isTransactionSuccesful(delay = 7) {\n        at TradePage.getExchangeRate (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:323:36)\n        at TradePage.selectPair (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:318:23)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/select.spec.ts:37:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    Test timeout of 90000ms exceeded.\n\n    Error: locator.innerText: Target page, context or browser has been closed\n    Call log:\n      - waiting for locator('//span[@data-testid=\"token-price\"]')\n\n\n       at ../pages/trade-page.ts:323\n\n      321 |\n      322 |   async getExchangeRate() {\n    > 323 |     return await this.exchangeRate.innerText();\n          |                                    ^\n      324 |   }\n      325 |\n      326 |   async isTransactionSuccesful(delay = 7) {\n        at TradePage.getExchangeRate (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:323:36)\n        at TradePage.selectPair (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:318:23)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/select.spec.ts:37:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium-retry1/error-context.md\n\n",
+      "stdout": "\nGet Test Proxy configuration for server: http://139.59.218.19:8888\nFE opened at: https://app.osmosis.zone/\nFE opened at: https://app.osmosis.zone/\nSelect pair nBTC to USDC\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium/error-context.md]]\nGet Test Proxy configuration for server: http://139.59.218.19:8888\nFE opened at: https://app.osmosis.zone/\nFE opened at: https://app.osmosis.zone/\nSelect pair nBTC to USDC\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-dfe8a--be-able-to-select-BTC-USDC-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "prod-sgp1-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "Test Select Swap Pair feature › User should be able to select OSMO/USDC",
+      "suitePath": [
+        "select.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 180243,
+      "errorType": "FAILURE",
+      "message": "select.spec.ts:48:7 User should be able to select OSMO/USDC",
+      "stackText": "\n  [chromium] › select.spec.ts:48:7 › Test Select Swap Pair feature › User should be able to select OSMO/USDC \n\n    Test timeout of 90000ms exceeded.\n\n    Error: locator.innerText: Target page, context or browser has been closed\n    Call log:\n      - waiting for locator('//span[@data-testid=\"token-price\"]')\n\n\n       at ../pages/trade-page.ts:323\n\n      321 |\n      322 |   async getExchangeRate() {\n    > 323 |     return await this.exchangeRate.innerText();\n          |                                    ^\n      324 |   }\n      325 |\n      326 |   async isTransactionSuccesful(delay = 7) {\n        at TradePage.getExchangeRate (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:323:36)\n        at TradePage.selectPair (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:318:23)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/select.spec.ts:49:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/select-Test-Select-Swap-Pa-6a397-be-able-to-select-OSMO-USDC-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/select-Test-Select-Swap-Pa-6a397-be-able-to-select-OSMO-USDC-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    Test timeout of 90000ms exceeded.\n\n    Error: locator.innerText: Target page, context or browser has been closed\n    Call log:\n      - waiting for locator('//span[@data-testid=\"token-price\"]')\n\n\n       at ../pages/trade-page.ts:323\n\n      321 |\n      322 |   async getExchangeRate() {\n    > 323 |     return await this.exchangeRate.innerText();\n          |                                    ^\n      324 |   }\n      325 |\n      326 |   async isTransactionSuccesful(delay = 7) {\n        at TradePage.getExchangeRate (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:323:36)\n        at TradePage.selectPair (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/trade-page.ts:318:23)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/select.spec.ts:49:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/select-Test-Select-Swap-Pa-6a397-be-able-to-select-OSMO-USDC-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/select-Test-Select-Swap-Pa-6a397-be-able-to-select-OSMO-USDC-chromium-retry1/error-context.md\n\n",
+      "stdout": "\nGet Test Proxy configuration for server: http://139.59.218.19:8888\nFE opened at: https://app.osmosis.zone/\nFE opened at: https://app.osmosis.zone/\nSelect pair OSMO to USDC\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-6a397-be-able-to-select-OSMO-USDC-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-6a397-be-able-to-select-OSMO-USDC-chromium/error-context.md]]\nGet Test Proxy configuration for server: http://139.59.218.19:8888\nFE opened at: https://app.osmosis.zone/\nFE opened at: https://app.osmosis.zone/\nSelect pair OSMO to USDC\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-6a397-be-able-to-select-OSMO-USDC-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/select-Test-Select-Swap-Pa-6a397-be-able-to-select-OSMO-USDC-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    }
+  ]
+}

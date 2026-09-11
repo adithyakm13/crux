@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:openbao/openbao:33860896055:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "openbao/openbao",
+    "providerRunId": "33860896055",
+    "runAttempt": 1,
+    "url": "https://github.com/openbao/openbao/actions/runs/33860896055",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "361eb2f2a91b871cd20f0ea17080f306ea3446d7",
+    "headBranch": "plugin-by-manifest-digest",
+    "artifactIds": [
+      "9932295805",
+      "9932358064",
+      "9932286266",
+      "9932443305",
+      "9932278979",
+      "9932291031",
+      "9932373651",
+      "9932331931",
+      "9932334735",
+      "9932498740",
+      "9932323532",
+      "9932298064",
+      "9932331714",
+      "9932355686",
+      "9932323439",
+      "9932660008",
+      "9932562297"
+    ],
+    "licenseSpdx": "MPL-2.0",
+    "licenseRaw": "MPL-2.0",
+    "retrievedAt": "2026-09-11T09:32:43.391Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 5511,
+    "failures": 1,
+    "passed": 5468,
+    "skipped": 42,
+    "filesParsed": 17,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-14-default/results-14.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 11,
+      "attemptIndex": 0,
+      "displayName": "TestMain",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/vault"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "FAIL\tgithub.com/openbao/openbao/v2/internal/vault [build failed]\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

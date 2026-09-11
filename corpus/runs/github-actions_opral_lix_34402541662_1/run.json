@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:opral/lix:34402541662:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "opral/lix",
+    "providerRunId": "34402541662",
+    "runAttempt": 1,
+    "url": "https://github.com/opral/lix/actions/runs/34402541662",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "02427d2d9abdab3388583b3ba523bd297837c1aa",
+    "headBranch": "fix/plugin-undo-binary-refs",
+    "artifactIds": [
+      "10124286136",
+      "10124372700",
+      "10124387609"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:38:11.682Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 4581,
+    "failures": 1,
+    "passed": 4580,
+    "skipped": 0,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "v2_csv_rename_and_same_row_edit_fail_without_a_cross_row_conflict_api",
+      "suitePath": [
+        "lix_e2e::e2e"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 107,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'v2_csv_rename_and_same_row_edit_fail_without_a_cross_row_conflict_api' (27806) panicked at /home/runner/work/lix/lix/packages/e2e/tests/e2e.rs:3205:10",
+      "stackText": "thread 'v2_csv_rename_and_same_row_edit_fail_without_a_cross_row_conflict_api' (27806) panicked at /home/runner/work/lix/lix/packages/e2e/tests/e2e.rs:3205:10:\ndescriptor-plus-row reconciliation needs a future cross-row API: MergeBranchReceipt { outcome: MergeCommitted, target_branch_id: \"01a087ef-a4bf-7632-8010-f4118e9e34d2\", source_branch_id: \"01920000-0000-7000-8000-00000000050c\", base_commit_id: \"01a087ef-a4fb-7362-a523-ae6400000000\", target_head_before_commit_id: \"01a087ef-a501-7132-958f-369c00000000\", source_head_before_commit_id: \"01a087ef-a50b-7503-889c-595300000000\", target_head_after_commit_id: \"01a087ef-a512-7581-a633-0a4200000000\", created_merge_commit_id: Some(\"01a087ef-a512-7581-a633-0a4200000000\"), change_stats: MergeChangeStats { total: 3, added: 0, modified: 3, removed: 0 } }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest v2_csv_rename_and_same_row_edit_fail_without_a_cross_row_conflict_api ... FAILED\n\nfailures:\n\nfailures:\n    v2_csv_rename_and_same_row_edit_fail_without_a_cross_row_conflict_api\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 96 filtered out; finished in 0.09s\n\n",
+      "stderr": "\nthread 'v2_csv_rename_and_same_row_edit_fail_without_a_cross_row_conflict_api' (27806) panicked at /home/runner/work/lix/lix/packages/e2e/tests/e2e.rs:3205:10:\ndescriptor-plus-row reconciliation needs a future cross-row API: MergeBranchReceipt { outcome: MergeCommitted, target_branch_id: \"01a087ef-a4bf-7632-8010-f4118e9e34d2\", source_branch_id: \"01920000-0000-7000-8000-00000000050c\", base_commit_id: \"01a087ef-a4fb-7362-a523-ae6400000000\", target_head_before_commit_id: \"01a087ef-a501-7132-958f-369c00000000\", source_head_before_commit_id: \"01a087ef-a50b-7503-889c-595300000000\", target_head_after_commit_id: \"01a087ef-a512-7581-a633-0a4200000000\", created_merge_commit_id: Some(\"01a087ef-a512-7581-a633-0a4200000000\"), change_stats: MergeChangeStats { total: 3, added: 0, modified: 3, removed: 0 } }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    }
+  ]
+}

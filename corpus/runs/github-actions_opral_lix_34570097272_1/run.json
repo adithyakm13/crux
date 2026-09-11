@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:opral/lix:34570097272:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "opral/lix",
+    "providerRunId": "34570097272",
+    "runAttempt": 1,
+    "url": "https://github.com/opral/lix/actions/runs/34570097272",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "f56318159e1f4c1c116381749a7ee3d3b6abc331",
+    "headBranch": "feat/schema-descriptions",
+    "artifactIds": [
+      "10187584701",
+      "10187610777",
+      "10187659296"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:36:20.191Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 4612,
+    "failures": 1,
+    "passed": 4611,
+    "skipped": 0,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "released_v75_repository_auto_upgrades_with_semantics_intact",
+      "suitePath": [
+        "lix::migration_v75"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 48,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'released_v75_repository_auto_upgrades_with_semantics_intact' (39318) panicked at packages/lix/tests/migration_v75.rs:30:33",
+      "stackText": "thread 'released_v75_repository_auto_upgrades_with_semantics_intact' (39318) panicked at packages/lix/tests/migration_v75.rs:30:33:\nkey-value read for fixture-shared failed: LixError { code: \"LIX_ERROR_SCHEMA_VALIDATION\", message: \"durable typed row fingerprint for schema 'lix_key_value' does not match the resolved schema\", hint: None, details: None }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest released_v75_repository_auto_upgrades_with_semantics_intact ... FAILED\n\nfailures:\n\nfailures:\n    released_v75_repository_auto_upgrades_with_semantics_intact\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'released_v75_repository_auto_upgrades_with_semantics_intact' (39318) panicked at packages/lix/tests/migration_v75.rs:30:33:\nkey-value read for fixture-shared failed: LixError { code: \"LIX_ERROR_SCHEMA_VALIDATION\", message: \"durable typed row fingerprint for schema 'lix_key_value' does not match the resolved schema\", hint: None, details: None }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    }
+  ]
+}

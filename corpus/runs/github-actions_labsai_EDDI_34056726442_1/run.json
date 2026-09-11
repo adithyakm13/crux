@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:labsai/EDDI:34056726442:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "labsai/EDDI",
+    "providerRunId": "34056726442",
+    "runAttempt": 1,
+    "url": "https://github.com/labsai/EDDI/actions/runs/34056726442",
+    "workflowName": "CI/CD",
+    "event": "pull_request",
+    "headSha": "b94633ebc0eca7a8f92acccccc63b36ffa700f02",
+    "headBranch": "fix/review-agent-sync",
+    "artifactIds": [
+      "9996262092"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:07:37.667Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 20727,
+    "failures": 2,
+    "passed": 20722,
+    "skipped": 3,
+    "filesParsed": 928,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.backup.impl.RestImportServiceArchiveContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "previewMatchesSchedulesByNameAgainstTheTargetAgent",
+      "suitePath": [
+        "ai.labs.eddi.backup.impl.RestImportServiceArchiveContractTest",
+        "schedules"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 24,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "a merge overwrites the target's schedule of that name: {sched2=ResourceDiff[sourceId=sched2, resourceType=schedule, name=nightly, action=UPDATE, targetId=alreadyHere, targetVersion=null, matchStrategy=name, sourceContent=null, targetContent=null, workflowIndex=-1], sched1=ResourceDiff[sourceId=sched1, resourceType=schedule, name=nightly, action=CREATE, targetId=null, targetVersion=null, matchStrategy=null, sourceContent=null, targetContent=null, workflowIndex=-1], sched3=ResourceDiff[sourceId=sched3, resourceType=schedule, name=heartbeat, action=CREATE, targetId=null, targetVersion=null, matchStrategy=null, sourceContent=null, targetContent=null, workflowIndex=-1]} ==> expected: <UPDATE> but was: <CREATE>",
+      "stackText": "org.opentest4j.AssertionFailedError: a merge overwrites the target's schedule of that name: {sched2=ResourceDiff[sourceId=sched2, resourceType=schedule, name=nightly, action=UPDATE, targetId=alreadyHere, targetVersion=null, matchStrategy=name, sourceContent=null, targetContent=null, workflowIndex=-1], sched1=ResourceDiff[sourceId=sched1, resourceType=schedule, name=nightly, action=CREATE, targetId=null, targetVersion=null, matchStrategy=null, sourceContent=null, targetContent=null, workflowIndex=-1], sched3=ResourceDiff[sourceId=sched3, resourceType=schedule, name=heartbeat, action=CREATE, targetId=null, targetVersion=null, matchStrategy=null, sourceContent=null, targetContent=null, workflowIndex=-1]} ==> expected: <UPDATE> but was: <CREATE>\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1210)\n\tat ai.labs.eddi.backup.impl.RestImportServiceArchiveContractTest$Schedules.previewMatchesSchedulesByNameAgainstTheTargetAgent(RestImportServiceArchiveContractTest.java:785)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.backup.impl.RestImportServiceScheduleFailureTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "failingRollbackDoesNotMaskTheOriginalFailure",
+      "suitePath": [
+        "ai.labs.eddi.backup.impl.RestImportServiceScheduleFailureTest",
+        "RestImportService — schedules that cannot be written"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 39,
+      "errorType": "Wanted but not invoked",
+      "message": "\nWanted but not invoked:\niScheduleStore.updateSchedule(\n    \"alreadyHere\",\n    <any>\n);\n-> at ai.labs.eddi.backup.impl.RestImportServiceScheduleFailureTest.failingRollbackDoesNotMaskTheOriginalFailure(RestImportServiceScheduleFailureTest.java:296)\n\nHowever, there was exactly 1 interaction with this mock:\niScheduleStore.readSchedulesByAgentId(\n    \"ccdd11112222333344445555\"\n);\n-> at ai.labs.eddi.backup.impl.RestImportService.existingScheduleIdsByName(RestImportService.java:1452)\n\n",
+      "stackText": "Wanted but not invoked:\niScheduleStore.updateSchedule(\n    \"alreadyHere\",\n    <any>\n);\n-> at ai.labs.eddi.backup.impl.RestImportServiceScheduleFailureTest.failingRollbackDoesNotMaskTheOriginalFailure(RestImportServiceScheduleFailureTest.java:296)\n\nHowever, there was exactly 1 interaction with this mock:\niScheduleStore.readSchedulesByAgentId(\n    \"ccdd11112222333344445555\"\n);\n-> at ai.labs.eddi.backup.impl.RestImportService.existingScheduleIdsByName(RestImportService.java:1452)\n\n\n\tat ai.labs.eddi.backup.impl.RestImportServiceScheduleFailureTest.failingRollbackDoesNotMaskTheOriginalFailure(RestImportServiceScheduleFailureTest.java:296)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

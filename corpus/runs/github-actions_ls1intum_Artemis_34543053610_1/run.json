@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ls1intum/Artemis:34543053610:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ls1intum/Artemis",
+    "providerRunId": "34543053610",
+    "runAttempt": 1,
+    "url": "https://github.com/ls1intum/Artemis/actions/runs/34543053610",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "cbe0cea8e3922c330d4e29c992ae94ec0b19ad6f",
+    "headBranch": "chore/course-update-resource-athena-config-repository",
+    "artifactIds": [
+      "10178282490",
+      "10178998384",
+      "10178608881",
+      "10178160069",
+      "10178150282",
+      "10178249295",
+      "10178200446",
+      "10178326332",
+      "10178185769",
+      "10178257677"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:12:07.346Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 34101,
+    "failures": 7,
+    "passed": 33976,
+    "skipped": 118,
+    "filesParsed": 1224,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 2515
+    },
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 11
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.communication.MessageIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "[1] userMention = \"no mention\", isUserMentionValid = true",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.communication.MessageIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2225,
+      "errorType": "org.mockito.exceptions.verification.WantedButNotInvoked",
+      "message": "org.mockito.exceptions.verification.WantedButNotInvoked: \nWanted but not invoked:\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/100\",\n    <any de.tum.cit.aet.artemis.communication.dto.PostBroadcastDTO>\n);\n-> at de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\nActually, there were zero interactions with this mock.\n",
+      "stackText": "Wanted but not invoked:\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/100\",\n    <any de.tum.cit.aet.artemis.communication.dto.PostBroadcastDTO>\n);\n-> at de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\nActually, there were zero interactions with this mock.\n\n\tat de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\n\tat de.tum.cit.aet.artemis.communication.MessageIntegrationTest.testCreateConversationPostWithUserMention(MessageIntegrationTest.java:276)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.communication.MessageIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "[2] userMention = \"[user]messageintegrationstudent1First messageintegrationstudent1Last(messageintegrationstudent1)[/user]\", isUserMentionValid = true",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.communication.MessageIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2220,
+      "errorType": "org.mockito.exceptions.verification.WantedButNotInvoked",
+      "message": "org.mockito.exceptions.verification.WantedButNotInvoked: \nWanted but not invoked:\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/101\",\n    <any de.tum.cit.aet.artemis.communication.dto.PostBroadcastDTO>\n);\n-> at de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\nActually, there were zero interactions with this mock.\n",
+      "stackText": "Wanted but not invoked:\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/101\",\n    <any de.tum.cit.aet.artemis.communication.dto.PostBroadcastDTO>\n);\n-> at de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\nActually, there were zero interactions with this mock.\n\n\tat de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\n\tat de.tum.cit.aet.artemis.communication.MessageIntegrationTest.testCreateConversationPostWithUserMention(MessageIntegrationTest.java:276)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.communication.MessageIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "[6] userMention = \"[user]messageintegrationstudent2First messageintegrationstudent2Last(messageintegrationstudent2)[/user][user]messageintegrationstudent1First messageintegrationstudent1Last(messageintegrationstudent1)[/user]\", isUserMentionValid = true",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.communication.MessageIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2221,
+      "errorType": "org.mockito.exceptions.verification.WantedButNotInvoked",
+      "message": "org.mockito.exceptions.verification.WantedButNotInvoked: \nWanted but not invoked:\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/105\",\n    <any de.tum.cit.aet.artemis.communication.dto.PostBroadcastDTO>\n);\n-> at de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\nActually, there were zero interactions with this mock.\n",
+      "stackText": "Wanted but not invoked:\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/105\",\n    <any de.tum.cit.aet.artemis.communication.dto.PostBroadcastDTO>\n);\n-> at de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\nActually, there were zero interactions with this mock.\n\n\tat de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\n\tat de.tum.cit.aet.artemis.communication.MessageIntegrationTest.testCreateConversationPostWithUserMention(MessageIntegrationTest.java:276)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.communication.MessageIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "[9] userMention = \"[user]invalidName[user]messageintegrationstudent1First messageintegrationstudent1Last(messageintegrationstudent1)[/user](invalid)[/user]\", isUserMentionValid = true",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.communication.MessageIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2204,
+      "errorType": "org.mockito.exceptions.verification.WantedButNotInvoked",
+      "message": "org.mockito.exceptions.verification.WantedButNotInvoked: \nWanted but not invoked:\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/108\",\n    <any de.tum.cit.aet.artemis.communication.dto.PostBroadcastDTO>\n);\n-> at de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\nActually, there were zero interactions with this mock.\n",
+      "stackText": "Wanted but not invoked:\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/108\",\n    <any de.tum.cit.aet.artemis.communication.dto.PostBroadcastDTO>\n);\n-> at de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\nActually, there were zero interactions with this mock.\n\n\tat de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\n\tat de.tum.cit.aet.artemis.communication.MessageIntegrationTest.testCreateConversationPostWithUserMention(MessageIntegrationTest.java:276)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.communication.MessageIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "testCreateAnnouncementInPrivateChannel()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.communication.MessageIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 2321,
+      "errorType": "org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent",
+      "message": "org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent: \nArgument(s) are different! Wanted:\nwebsocketMessagingService.sendMessage(\n    <custom argument matcher>,\n    <custom argument matcher>\n);\n-> at de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\nActual invocations have different arguments at position [1]:\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/90\",\n    PostBroadcastDTO[post=PostResponseDTO[id=1279, author=UserSummaryDTO[id=104, name=messageintegrationstudent1First messageintegrationstudent1Last, imageUrl=null, bot=false], authorRole=USER, creationDate=2026-09-10T23:44:12.992590397Z[UTC], updatedDate=null, content=null, title=null, visibleForStudents=null, displayPriority=NONE, conversation=ConversationRefDTO[id=370, type=channel, name=test, isPublic=true, isAnnouncementChannel=false, isArchived=false, isCourseWide=true, lastMessageDate=2026-09-10T23:44:12.999696768Z[UTC]], plagiarismCase=null, resolved=false, isSaved=false, hasForwardedMessages=false, reactions=[], answers=[]], action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.PostingService.broadcastForPost(PostingService.java:156)\nwebsocketMessagingService.sendMessage(\n    \"/topic/metis/courses/90\",\n    PostBroadcastDTO[post=PostResponseDTO[id=1279, author=UserSummaryDTO[id=104, name=messageintegrationstudent1First messageintegrationstudent1Last, imageUrl=null, bot=false], authorRole=USER, creationDate=2026-09-10T23:44:12.992590397Z[UTC], updatedDate=null, content=null, title=null, visibleForStudents=null, displayPriority=NONE, conversation=ConversationRefDTO[id=370, type=channel, name=test, isPublic=true, isAnnouncementChannel=false, isArchived=false, isCourseWide=true, lastMessageDate=2026-09-10T23:44:12.999696768Z[UTC]], plagiarismCase=null, resolved=false, isSaved=false, hasForwardedMessages=false, reactions=[], answers=[]], action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.PostingService.broadcastForPost(PostingService.java:158)\nwebsocketMessagingService.sendMessageToUser(\n    \"messageintegrationstudent1\",\n    \"/topic/communication/courses/85/conversations/user/104\",\n    ConversationWebsocketDTO[conversation=OneToOneChatDTO{members=[UserPublicInfoDTO{id=104, login='messageintegrationstudent1', name='messageintegrationstudent1First messageintegrationstudent1Last', firstName='messageintegrationstudent1First', lastName='messageintegrationstudent1Last', imageUrl='null', isInstructor=false, isEditor=false, isTeachingAssistant=false, isStudent=false}, UserPublicInfoDTO{id=105, login='messageintegrationstudent2', name='messageintegrationstudent2First messageintegrationstudent2Last', firstName='messageintegrationstudent2First', lastName='messageintegrationstudent2Last', imageUrl='null', isInstructor=false, isEditor=false, isTeachingAssistant=false, isStudent=false}]} ConversationDTO{type='oneToOneChat', id=347, creationDate=2026-09-10T23:44:12.251Z, lastMessageDate=2026-09-10T23:44:12.266812132Z[UTC], unreadMessageCount=0, lastReadDate=2026-09-10T23:44:12.267Z, isMember=true, isFavorite=false, isHidden=false, isCreator=true, numberOfMembers=2, creator=messageintegrationstudent1First messageintegrationstudent1Last}, action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.conversation.ConversationService.sendToConversationMembershipChannel(ConversationService.java:403)\nwebsocketMessagingService.sendMessageToUser(\n    \"messageintegrationstudent1\",\n    \"/topic/metis/courses/85/conversations/user/104\",\n    ConversationWebsocketDTO[conversation=OneToOneChatDTO{members=[UserPublicInfoDTO{id=104, login='messageintegrationstudent1', name='messageintegrationstudent1First messageintegrationstudent1Last', firstName='messageintegrationstudent1First', lastName='messageintegrationstudent1Last', imageUrl='null', isInstructor=false, isEditor=false, isTeachingAssistant=false, isStudent=false}, UserPublicInfoDTO{id=105, login='messageintegrationstudent2', name='messageintegrationstudent2First messageintegrationstudent2Last', firstName='messageintegrationstudent2First', lastName='messageintegrationstudent2Last', imageUrl='null', isInstructor=false, isEditor=false, isTeachingAssistant=false, isStudent=false}]} ConversationDTO{type='oneToOneChat', id=347, creationDate=2026-09-10T23:44:12.251Z, lastMessageDate=2026-09-10T23:44:12.266812132Z[UTC], unreadMessageCount=0, lastReadDate=2026-09-10T23:44:12.267Z, isMember=true, isFavorite=false, isHidden=false, isCreator=true, numberOfMembers=2, creator=messageintegrationstudent1First messageintegrationstudent1Last}, action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.conversation.ConversationService.sendToConversationMembershipChannel(ConversationService.java:405)\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/98\",\n    PostBroadcastDTO[post=PostResponseDTO[id=1466, author=UserSummaryDTO[id=116, name=messageintegrationinstructor1First messageintegrationinstructor1Last, imageUrl=null, bot=false], authorRole=INSTRUCTOR, creationDate=2026-09-10T23:44:14.695274056Z[UTC], updatedDate=null, content=null, title=null, visibleForStudents=null, displayPriority=NONE, conversation=ConversationRefDTO[id=424, type=channel, name=channel-for-pinned-test, isPublic=true, isAnnouncementChannel=false, isArchived=false, isCourseWide=true, lastMessageDate=2026-09-10T23:44:14.701367975Z[UTC]], plagiarismCase=null, resolved=false, isSaved=false, hasForwardedMessages=false, reactions=[], answers=[]], action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.PostingService.broadcastForPost(PostingService.java:156)\nwebsocketMessagingService.sendMessage(\n    \"/topic/metis/courses/98\",\n    PostBroadcastDTO[post=PostResponseDTO[id=1466, author=UserSummaryDTO[id=116, name=messageintegrationinstructor1First messageintegrationinstructor1Last, imageUrl=null, bot=false], authorRole=INSTRUCTOR, creationDate=2026-09-10T23:44:14.695274056Z[UTC], updatedDate=null, content=null, title=null, visibleForStudents=null, displayPriority=NONE, conversation=ConversationRefDTO[id=424, type=channel, name=channel-for-pinned-test, isPublic=true, isAnnouncementChannel=false, isArchived=false, isCourseWide=true, lastMessageDate=2026-09-10T23:44:14.701367975Z[UTC]], plagiarismCase=null, resolved=false, isSaved=false, hasForwardedMessages=false, reactions=[], answers=[]], action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.PostingService.broadcastForPost(PostingService.java:158)\n",
+      "stackText": "Argument(s) are different! Wanted:\nwebsocketMessagingService.sendMessage(\n    <custom argument matcher>,\n    <custom argument matcher>\n);\n-> at de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\nActual invocations have different arguments at position [1]:\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/90\",\n    PostBroadcastDTO[post=PostResponseDTO[id=1279, author=UserSummaryDTO[id=104, name=messageintegrationstudent1First messageintegrationstudent1Last, imageUrl=null, bot=false], authorRole=USER, creationDate=2026-09-10T23:44:12.992590397Z[UTC], updatedDate=null, content=null, title=null, visibleForStudents=null, displayPriority=NONE, conversation=ConversationRefDTO[id=370, type=channel, name=test, isPublic=true, isAnnouncementChannel=false, isArchived=false, isCourseWide=true, lastMessageDate=2026-09-10T23:44:12.999696768Z[UTC]], plagiarismCase=null, resolved=false, isSaved=false, hasForwardedMessages=false, reactions=[], answers=[]], action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.PostingService.broadcastForPost(PostingService.java:156)\nwebsocketMessagingService.sendMessage(\n    \"/topic/metis/courses/90\",\n    PostBroadcastDTO[post=PostResponseDTO[id=1279, author=UserSummaryDTO[id=104, name=messageintegrationstudent1First messageintegrationstudent1Last, imageUrl=null, bot=false], authorRole=USER, creationDate=2026-09-10T23:44:12.992590397Z[UTC], updatedDate=null, content=null, title=null, visibleForStudents=null, displayPriority=NONE, conversation=ConversationRefDTO[id=370, type=channel, name=test, isPublic=true, isAnnouncementChannel=false, isArchived=false, isCourseWide=true, lastMessageDate=2026-09-10T23:44:12.999696768Z[UTC]], plagiarismCase=null, resolved=false, isSaved=false, hasForwardedMessages=false, reactions=[], answers=[]], action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.PostingService.broadcastForPost(PostingService.java:158)\nwebsocketMessagingService.sendMessageToUser(\n    \"messageintegrationstudent1\",\n    \"/topic/communication/courses/85/conversations/user/104\",\n    ConversationWebsocketDTO[conversation=OneToOneChatDTO{members=[UserPublicInfoDTO{id=104, login='messageintegrationstudent1', name='messageintegrationstudent1First messageintegrationstudent1Last', firstName='messageintegrationstudent1First', lastName='messageintegrationstudent1Last', imageUrl='null', isInstructor=false, isEditor=false, isTeachingAssistant=false, isStudent=false}, UserPublicInfoDTO{id=105, login='messageintegrationstudent2', name='messageintegrationstudent2First messageintegrationstudent2Last', firstName='messageintegrationstudent2First', lastName='messageintegrationstudent2Last', imageUrl='null', isInstructor=false, isEditor=false, isTeachingAssistant=false, isStudent=false}]} ConversationDTO{type='oneToOneChat', id=347, creationDate=2026-09-10T23:44:12.251Z, lastMessageDate=2026-09-10T23:44:12.266812132Z[UTC], unreadMessageCount=0, lastReadDate=2026-09-10T23:44:12.267Z, isMember=true, isFavorite=false, isHidden=false, isCreator=true, numberOfMembers=2, creator=messageintegrationstudent1First messageintegrationstudent1Last}, action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.conversation.ConversationService.sendToConversationMembershipChannel(ConversationService.java:403)\nwebsocketMessagingService.sendMessageToUser(\n    \"messageintegrationstudent1\",\n    \"/topic/metis/courses/85/conversations/user/104\",\n    ConversationWebsocketDTO[conversation=OneToOneChatDTO{members=[UserPublicInfoDTO{id=104, login='messageintegrationstudent1', name='messageintegrationstudent1First messageintegrationstudent1Last', firstName='messageintegrationstudent1First', lastName='messageintegrationstudent1Last', imageUrl='null', isInstructor=false, isEditor=false, isTeachingAssistant=false, isStudent=false}, UserPublicInfoDTO{id=105, login='messageintegrationstudent2', name='messageintegrationstudent2First messageintegrationstudent2Last', firstName='messageintegrationstudent2First', lastName='messageintegrationstudent2Last', imageUrl='null', isInstructor=false, isEditor=false, isTeachingAssistant=false, isStudent=false}]} ConversationDTO{type='oneToOneChat', id=347, creationDate=2026-09-10T23:44:12.251Z, lastMessageDate=2026-09-10T23:44:12.266812132Z[UTC], unreadMessageCount=0, lastReadDate=2026-09-10T23:44:12.267Z, isMember=true, isFavorite=false, isHidden=false, isCreator=true, numberOfMembers=2, creator=messageintegrationstudent1First messageintegrationstudent1Last}, action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.conversation.ConversationService.sendToConversationMembershipChannel(ConversationService.java:405)\nwebsocketMessagingService.sendMessage(\n    \"/topic/communication/courses/98\",\n    PostBroadcastDTO[post=PostResponseDTO[id=1466, author=UserSummaryDTO[id=116, name=messageintegrationinstructor1First messageintegrationinstructor1Last, imageUrl=null, bot=false], authorRole=INSTRUCTOR, creationDate=2026-09-10T23:44:14.695274056Z[UTC], updatedDate=null, content=null, title=null, visibleForStudents=null, displayPriority=NONE, conversation=ConversationRefDTO[id=424, type=channel, name=channel-for-pinned-test, isPublic=true, isAnnouncementChannel=false, isArchived=false, isCourseWide=true, lastMessageDate=2026-09-10T23:44:14.701367975Z[UTC]], plagiarismCase=null, resolved=false, isSaved=false, hasForwardedMessages=false, reactions=[], answers=[]], action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.PostingService.broadcastForPost(PostingService.java:156)\nwebsocketMessagingService.sendMessage(\n    \"/topic/metis/courses/98\",\n    PostBroadcastDTO[post=PostResponseDTO[id=1466, author=UserSummaryDTO[id=116, name=messageintegrationinstructor1First messageintegrationinstructor1Last, imageUrl=null, bot=false], authorRole=INSTRUCTOR, creationDate=2026-09-10T23:44:14.695274056Z[UTC], updatedDate=null, content=null, title=null, visibleForStudents=null, displayPriority=NONE, conversation=ConversationRefDTO[id=424, type=channel, name=channel-for-pinned-test, isPublic=true, isAnnouncementChannel=false, isArchived=false, isCourseWide=true, lastMessageDate=2026-09-10T23:44:14.701367975Z[UTC]], plagiarismCase=null, resolved=false, isSaved=false, hasForwardedMessages=false, reactions=[], answers=[]], action=CREATE]\n);\n-> at de.tum.cit.aet.artemis.communication.service.PostingService.broadcastForPost(PostingService.java:158)\n\n\tat de.tum.cit.aet.artemis.communication.service.WebsocketMessagingService.sendMessage(WebsocketMessagingService.java:69)\n\tat de.tum.cit.aet.artemis.communication.MessageIntegrationTest.testCreateAnnouncementInPrivateChannel(MessageIntegrationTest.java:218)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "courseManagementDetailCarriesTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 87,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "org.opentest4j.AssertionFailedError: [athenaGradingFeedbackEnabled must reach the client; the assessment views gate feedback suggestions on it] \nExpecting value to be true but was false",
+      "stackText": "org.opentest4j.AssertionFailedError: [athenaGradingFeedbackEnabled must reach the client; the assessment views gate feedback suggestions on it] \nExpecting value to be true but was false\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.assertBothFlagsPresent(AthenaConfigWireContractTest.java:85)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.courseManagementDetailCarriesTheAthenaFlags(AthenaConfigWireContractTest.java:126)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.CourseAthenaSchedulingUpdateIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 7,
+      "attemptIndex": 0,
+      "displayName": "updateCourse_disablingGradingFeedback_reschedulesExistingExercises()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.CourseAthenaSchedulingUpdateIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 124,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "org.opentest4j.AssertionFailedError: \nExpecting value to be true but was false",
+      "stackText": "org.opentest4j.AssertionFailedError: \nExpecting value to be true but was false\n\tat de.tum.cit.aet.artemis.course.CourseAthenaSchedulingUpdateIntegrationTest.updateCourse_disablingGradingFeedback_reschedulesExistingExercises(CourseAthenaSchedulingUpdateIntegrationTest.java:124)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

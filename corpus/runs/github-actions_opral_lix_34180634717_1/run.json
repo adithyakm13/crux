@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:opral/lix:34180634717:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "opral/lix",
+    "providerRunId": "34180634717",
+    "runAttempt": 1,
+    "url": "https://github.com/opral/lix/actions/runs/34180634717",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "c3cb56a090401a82dd58551c87c5cca9f7daadcf",
+    "headBranch": "codex/independent-transactions",
+    "artifactIds": [
+      "10038886993",
+      "10038926334",
+      "10038945540"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:39:24.700Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 4406,
+    "failures": 2,
+    "passed": 4404,
+    "skipped": 0,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "transaction_blocks_session_execute_on_same_handle",
+      "suitePath": [
+        "lix_e2e::rust_sdk_api"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 25,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'transaction_blocks_session_execute_on_same_handle' (32047) panicked at /home/runner/work/lix/lix/packages/e2e/tests/rust_sdk_api.rs:622:10",
+      "stackText": "thread 'transaction_blocks_session_execute_on_same_handle' (32047) panicked at /home/runner/work/lix/lix/packages/e2e/tests/rust_sdk_api.rs:622:10:\nsession writes should be blocked while explicit transaction is active: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest transaction_blocks_session_execute_on_same_handle ... FAILED\n\nfailures:\n\nfailures:\n    transaction_blocks_session_execute_on_same_handle\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 36 filtered out; finished in 0.01s\n\n",
+      "stderr": "\nthread 'transaction_blocks_session_execute_on_same_handle' (32047) panicked at /home/runner/work/lix/lix/packages/e2e/tests/rust_sdk_api.rs:622:10:\nsession writes should be blocked while explicit transaction is active: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "connected_api_routes_authority_work_and_hot_reads_need_no_round_trip",
+      "suitePath": [
+        "lix_e2e::sync_mode"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 968,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'connected_api_routes_authority_work_and_hot_reads_need_no_round_trip' (32237) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:704:28",
+      "stackText": "thread 'connected_api_routes_authority_work_and_hot_reads_need_no_round_trip' (32237) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:704:28:\nsame-handle work must be blocked by connected transaction: ()\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest connected_api_routes_authority_work_and_hot_reads_need_no_round_trip ... FAILED\n\nfailures:\n\nfailures:\n    connected_api_routes_authority_work_and_hot_reads_need_no_round_trip\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 12 filtered out; finished in 0.96s\n\n",
+      "stderr": "\nthread 'connected_api_routes_authority_work_and_hot_reads_need_no_round_trip' (32237) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:704:28:\nsame-handle work must be blocked by connected transaction: ()\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    }
+  ]
+}

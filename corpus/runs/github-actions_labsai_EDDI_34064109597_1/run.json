@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:labsai/EDDI:34064109597:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "labsai/EDDI",
+    "providerRunId": "34064109597",
+    "runAttempt": 1,
+    "url": "https://github.com/labsai/EDDI/actions/runs/34064109597",
+    "workflowName": "CI/CD",
+    "event": "pull_request",
+    "headSha": "d908e2d66d7a2a871c62ca31d2b67b854d3c2283",
+    "headBranch": "chore/ubi10-base-image",
+    "artifactIds": [
+      "9998585337",
+      "9998465578"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:07:06.802Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 21010,
+    "failures": 6,
+    "passed": 20999,
+    "skipped": 5,
+    "filesParsed": 980,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.AgentUseCaseIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "",
+      "suitePath": [
+        "ai.labs.eddi.integration.AgentUseCaseIT"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "java.lang.NoClassDefFoundError",
+      "message": "Could not initialize class ai.labs.eddi.integration.ContainerBaseIT",
+      "stackText": "\n      java.lang.NoClassDefFoundError: Could not initialize class ai.labs.eddi.integration.ContainerBaseIT\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1169)\n\tat java.base/java.lang.reflect.Field.acquireOverrideFieldAccessor(Field.java:1195)\n\tat java.base/java.lang.reflect.Field.getOverrideFieldAccessor(Field.java:1164)\n\tat java.base/java.lang.reflect.Field.get(Field.java:440)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.getContainerInstance(TestcontainersExtension.java:248)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$findSharedContainers$10(TestcontainersExtension.java:209)\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)\n\tat java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)\n\tat java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)\n\tat java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.findSharedContainers(TestcontainersExtension.java:210)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:55)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.NullPointerException [in thread \"main\"]\n\tat java.base/java.util.Objects.requireNonNull(Objects.java:220)\n\tat ai.labs.eddi.integration.ContainerBaseIT.productionBaseImage(ContainerBaseIT.java:113)\n\tat ai.labs.eddi.integration.ContainerBaseIT.buildEddiImage(ContainerBaseIT.java:196)\n\tat ai.labs.eddi.integration.ContainerBaseIT.<clinit>(ContainerBaseIT.java:61)\n\t... 17 more\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.AgentUseCaseIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "",
+      "suitePath": [
+        "ai.labs.eddi.integration.AgentUseCaseIT"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 9,
+      "errorType": "java.lang.ExceptionInInitializerError",
+      "message": "java.lang.ExceptionInInitializerError",
+      "stackText": "java.lang.ExceptionInInitializerError\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1169)\n\tat java.base/java.lang.reflect.Field.acquireOverrideFieldAccessor(Field.java:1195)\n\tat java.base/java.lang.reflect.Field.getOverrideFieldAccessor(Field.java:1164)\n\tat java.base/java.lang.reflect.Field.get(Field.java:440)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.getContainerInstance(TestcontainersExtension.java:248)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$findSharedContainers$10(TestcontainersExtension.java:209)\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)\n\tat java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)\n\tat java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)\n\tat java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.findSharedContainers(TestcontainersExtension.java:210)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:55)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\nCaused by: java.lang.NullPointerException\n\tat java.base/java.util.Objects.requireNonNull(Objects.java:220)\n\tat ai.labs.eddi.integration.ContainerBaseIT.productionBaseImage(ContainerBaseIT.java:113)\n\tat ai.labs.eddi.integration.ContainerBaseIT.buildEddiImage(ContainerBaseIT.java:196)\n\tat ai.labs.eddi.integration.ContainerBaseIT.<clinit>(ContainerBaseIT.java:61)\n\t... 17 more\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.CreateApiAgentIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "",
+      "suitePath": [
+        "ai.labs.eddi.integration.CreateApiAgentIT"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "java.lang.NoClassDefFoundError",
+      "message": "Could not initialize class ai.labs.eddi.integration.ContainerBaseIT",
+      "stackText": "\n      java.lang.NoClassDefFoundError: Could not initialize class ai.labs.eddi.integration.ContainerBaseIT\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1169)\n\tat java.base/java.lang.reflect.Field.acquireOverrideFieldAccessor(Field.java:1195)\n\tat java.base/java.lang.reflect.Field.getOverrideFieldAccessor(Field.java:1164)\n\tat java.base/java.lang.reflect.Field.get(Field.java:440)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.getContainerInstance(TestcontainersExtension.java:248)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$findSharedContainers$10(TestcontainersExtension.java:209)\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)\n\tat java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)\n\tat java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)\n\tat java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.findSharedContainers(TestcontainersExtension.java:210)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:55)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.NullPointerException [in thread \"main\"]\n\tat java.base/java.util.Objects.requireNonNull(Objects.java:220)\n\tat ai.labs.eddi.integration.ContainerBaseIT.productionBaseImage(ContainerBaseIT.java:113)\n\tat ai.labs.eddi.integration.ContainerBaseIT.buildEddiImage(ContainerBaseIT.java:196)\n\tat ai.labs.eddi.integration.ContainerBaseIT.<clinit>(ContainerBaseIT.java:61)\n\t... 17 more\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.CreateApiAgentIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "",
+      "suitePath": [
+        "ai.labs.eddi.integration.CreateApiAgentIT"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 1,
+      "errorType": "java.lang.NoClassDefFoundError",
+      "message": "Could not initialize class ai.labs.eddi.integration.ContainerBaseIT",
+      "stackText": "java.lang.NoClassDefFoundError: Could not initialize class ai.labs.eddi.integration.ContainerBaseIT\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1169)\n\tat java.base/java.lang.reflect.Field.acquireOverrideFieldAccessor(Field.java:1195)\n\tat java.base/java.lang.reflect.Field.getOverrideFieldAccessor(Field.java:1164)\n\tat java.base/java.lang.reflect.Field.get(Field.java:440)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.getContainerInstance(TestcontainersExtension.java:248)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$findSharedContainers$10(TestcontainersExtension.java:209)\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)\n\tat java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)\n\tat java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)\n\tat java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.findSharedContainers(TestcontainersExtension.java:210)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:55)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.NullPointerException [in thread \"main\"]\n\tat java.base/java.util.Objects.requireNonNull(Objects.java:220)\n\tat ai.labs.eddi.integration.ContainerBaseIT.productionBaseImage(ContainerBaseIT.java:113)\n\tat ai.labs.eddi.integration.ContainerBaseIT.buildEddiImage(ContainerBaseIT.java:196)\n\tat ai.labs.eddi.integration.ContainerBaseIT.<clinit>(ContainerBaseIT.java:61)\n\t... 17 more\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.postgres.PostgresAgentUseCaseIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "",
+      "suitePath": [
+        "ai.labs.eddi.integration.postgres.PostgresAgentUseCaseIT"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": null,
+      "errorType": "java.lang.NoClassDefFoundError",
+      "message": "Could not initialize class ai.labs.eddi.integration.postgres.PostgresAgentUseCaseIT",
+      "stackText": "\n      java.lang.NoClassDefFoundError: Could not initialize class ai.labs.eddi.integration.postgres.PostgresAgentUseCaseIT\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1169)\n\tat java.base/java.lang.reflect.Field.acquireOverrideFieldAccessor(Field.java:1195)\n\tat java.base/java.lang.reflect.Field.getOverrideFieldAccessor(Field.java:1164)\n\tat java.base/java.lang.reflect.Field.get(Field.java:440)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.getContainerInstance(TestcontainersExtension.java:248)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$findSharedContainers$10(TestcontainersExtension.java:209)\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)\n\tat java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)\n\tat java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)\n\tat java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.findSharedContainers(TestcontainersExtension.java:210)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:55)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class ai.labs.eddi.integration.ContainerBaseIT [in thread \"main\"]\n\tat ai.labs.eddi.integration.postgres.PostgresAgentUseCaseIT.<clinit>(PostgresAgentUseCaseIT.java:55)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.postgres.PostgresAgentUseCaseIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "",
+      "suitePath": [
+        "ai.labs.eddi.integration.postgres.PostgresAgentUseCaseIT"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 3,
+      "errorType": "java.lang.NoClassDefFoundError",
+      "message": "Could not initialize class ai.labs.eddi.integration.ContainerBaseIT",
+      "stackText": "java.lang.NoClassDefFoundError: Could not initialize class ai.labs.eddi.integration.ContainerBaseIT\n\tat ai.labs.eddi.integration.postgres.PostgresAgentUseCaseIT.<clinit>(PostgresAgentUseCaseIT.java:55)\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.NullPointerException [in thread \"main\"]\n\tat java.base/java.util.Objects.requireNonNull(Objects.java:220)\n\tat ai.labs.eddi.integration.ContainerBaseIT.productionBaseImage(ContainerBaseIT.java:113)\n\tat ai.labs.eddi.integration.ContainerBaseIT.buildEddiImage(ContainerBaseIT.java:196)\n\tat ai.labs.eddi.integration.ContainerBaseIT.<clinit>(ContainerBaseIT.java:61)\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)\n\tat java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1169)\n\tat java.base/java.lang.reflect.Field.acquireOverrideFieldAccessor(Field.java:1195)\n\tat java.base/java.lang.reflect.Field.getOverrideFieldAccessor(Field.java:1164)\n\tat java.base/java.lang.reflect.Field.get(Field.java:440)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.getContainerInstance(TestcontainersExtension.java:248)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$findSharedContainers$10(TestcontainersExtension.java:209)\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)\n\tat java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)\n\tat java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)\n\tat java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.findSharedContainers(TestcontainersExtension.java:210)\n\tat org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:55)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ls1intum/Artemis:34512430735:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ls1intum/Artemis",
+    "providerRunId": "34512430735",
+    "runAttempt": 1,
+    "url": "https://github.com/ls1intum/Artemis/actions/runs/34512430735",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "6dfdd134257e6aee4fdcaf46eb46957a2193234e",
+    "headBranch": "chore/exercise/participation-dto-migration",
+    "artifactIds": [
+      "10168238117",
+      "10167207929",
+      "10166850019",
+      "10166622408",
+      "10166668580",
+      "10166889020",
+      "10166782937",
+      "10166680282",
+      "10166997305"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:19:44.410Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 34099,
+    "failures": 17,
+    "passed": 33964,
+    "skipped": 118,
+    "filesParsed": 1220,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 2517
+    },
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 12
+    },
+    {
+      "code": "ARTIFACTS_OVER_BUDGET",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Server JUnit Test Results (JenkinsLocalVC)/TEST-de.-5M7I1E1T44MJ8.cit.aet.artemis.exam.StudentExamIntegrationTest$ChangedAndUnchangedSubmissionsIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "testStartParticipationQueryCount()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.exam.StudentExamIntegrationTest$ChangedAndUnchangedSubmissionsIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 769,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 646] (through reference chain: de.tum.cit.aet.artemis.exercise.domain.participation.StudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 646] (through reference chain: de.tum.cit.aet.artemis.exercise.domain.participation.StudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.exam.StudentExamIntegrationTest$ChangedAndUnchangedSubmissionsIntegrationTest.lambda$testStartParticipationQueryCount$0(StudentExamIntegrationTest.java:4056)\n\tat de.tum.cit.aet.artemis.core.util.QueryCountAssert.performCall(QueryCountAssert.java:59)\n\tat de.tum.cit.aet.artemis.core.util.QueryCountAssert.hasBeenCalledAtMostTimes(QueryCountAssert.java:46)\n\tat de.tum.cit.aet.artemis.exam.StudentExamIntegrationTest$ChangedAndUnchangedSubmissionsIntegrationTest.testStartParticipationQueryCount(StudentExamIntegrationTest.java:4057)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.text.TextExerciseIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 5,
+      "attemptIndex": 0,
+      "displayName": "submitEnglishTextExercise()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.text.TextExerciseIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 94,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 833] (through reference chain: de.tum.cit.aet.artemis.exercise.domain.participation.StudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 833] (through reference chain: de.tum.cit.aet.artemis.exercise.domain.participation.StudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:449)\n\tat de.tum.cit.aet.artemis.text.TextExerciseIntegrationTest.submitEnglishTextExercise(TextExerciseIntegrationTest.java:217)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.t-079E7D7QRUS1I.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$AssignmentRepositoryTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_instructorAssignmentRepository()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$AssignmentRepositoryTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 756,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 846] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 846] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$AssignmentRepositoryTests.testFetchPush_instructorAssignmentRepository(LocalVCFetchAndPushIntegrationTest.java:885)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.t-079E7D7QRUS1I.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$AssignmentRepositoryTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_teachingAssistantAssignmentRepository()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$AssignmentRepositoryTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 827,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 805] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 805] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$AssignmentRepositoryTests.testFetchPush_teachingAssistantAssignmentRepository(LocalVCFetchAndPushIntegrationTest.java:851)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localci.service.LocalVCLocalCIParticipationIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testStartParticipationRepairsUnparseableTemplateRepositoryUri()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localci.service.LocalVCLocalCIParticipationIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 325,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 919] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 919] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localci.service.LocalVCLocalCIParticipationIntegrationTest.testStartParticipationRepairsUnparseableTemplateRepositoryUri(LocalVCLocalCIParticipationIntegrationTest.java:98)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localci.service.LocalVCLocalCIParticipationIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testStartParticipationRepairsTemplateRepositoryUriPointingToMissingRepository()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localci.service.LocalVCLocalCIParticipationIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 348,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 920] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 920] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localci.service.LocalVCLocalCIParticipationIntegrationTest.testStartParticipationRepairsTemplateRepositoryUriPointingToMissingRepository(LocalVCLocalCIParticipationIntegrationTest.java:126)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localci.service.LocalVCLocalCIParticipationIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testStartParticipationRepairsTemplateRepositoryUriPointingToAnotherProject()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localci.service.LocalVCLocalCIParticipationIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 371,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 918] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 918] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localci.service.LocalVCLocalCIParticipationIntegrationTest.testStartParticipationRepairsTemplateRepositoryUriPointingToAnotherProject(LocalVCLocalCIParticipationIntegrationTest.java:158)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$CourseExerciseTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_studentRepository_afterDueDate()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$CourseExerciseTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 719,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 822] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 822] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$CourseExerciseTests.testFetchPush_studentRepository_afterDueDate(LocalVCFetchAndPushIntegrationTest.java:556)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$CourseExerciseTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_studentRepository_duringWorkingTime()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$CourseExerciseTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 736,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 822] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 822] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$CourseExerciseTests.testFetchPush_studentRepository_duringWorkingTime(LocalVCFetchAndPushIntegrationTest.java:504)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$CourseExerciseTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_twoStudentsStartExercise()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$CourseExerciseTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 897,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 820] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 820] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$CourseExerciseTests.testFetchPush_twoStudentsStartExercise(LocalVCFetchAndPushIntegrationTest.java:596)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$ParticipationTokenTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_teamExercise_withParticipationVcsAccessToken()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$ParticipationTokenTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 655,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 819] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 819] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$ParticipationTokenTests.testFetchPush_teamExercise_withParticipationVcsAccessToken(LocalVCFetchAndPushIntegrationTest.java:1465)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$ParticipationTokenTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_individualExercise_withParticipationVcsAccessToken()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$ParticipationTokenTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 590,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 822] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 822] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$ParticipationTokenTests.testFetchPush_individualExercise_withParticipationVcsAccessToken(LocalVCFetchAndPushIntegrationTest.java:1507)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$PracticeRepositoryTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_instructorPracticeRepository()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$PracticeRepositoryTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 635,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 791] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 791] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$PracticeRepositoryTests.testFetchPush_instructorPracticeRepository(LocalVCFetchAndPushIntegrationTest.java:1018)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$PracticeRepositoryTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_studentPracticeRepository()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$PracticeRepositoryTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 633,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 767] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 767] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$PracticeRepositoryTests.testFetchPush_studentPracticeRepository(LocalVCFetchAndPushIntegrationTest.java:926)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$PracticeRepositoryTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_teachingAssistantPracticeRepository()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$PracticeRepositoryTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 712,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 751] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 751] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$PracticeRepositoryTests.testFetchPush_teachingAssistantPracticeRepository(LocalVCFetchAndPushIntegrationTest.java:975)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$TeamModeTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_teamRepository_afterDueDate()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$TeamModeTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 770,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 805] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 805] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$TeamModeTests.testFetchPush_teamRepository_afterDueDate(LocalVCFetchAndPushIntegrationTest.java:809)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "Server JUnit Test Results (LocalCILocalVCBatch)/TEST-de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$TeamModeTests.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 8,
+      "attemptIndex": 0,
+      "displayName": "testFetchPush_teamRepository_teamMemberAccess()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$TeamModeTests"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 708,
+      "errorType": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException",
+      "message": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 805] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])",
+      "stackText": "com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [simple type, class de.tum.cit.aet.artemis.exercise.domain.Exercise]: missing type id property 'type' (for POJO property 'exercise')\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 805] (through reference chain: de.tum.cit.aet.artemis.programming.domain.ProgrammingExerciseStudentParticipation[\"exercise\"])\n\tat com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n\tat com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2098)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1669)\n\tat com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:308)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:210)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:144)\n\tat com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:262)\n\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:138)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:212)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:169)\n\tat com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:135)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeWithType(BeanDeserializerBase.java:1387)\n\tat com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3922)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:319)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:388)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBody(RequestUtilService.java:400)\n\tat de.tum.cit.aet.artemis.localvc.service.LocalVCFetchAndPushIntegrationTest$TeamModeTests.testFetchPush_teamRepository_teamMemberAccess(LocalVCFetchAndPushIntegrationTest.java:706)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

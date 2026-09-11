@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:openbao/openbao:33913166746:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "openbao/openbao",
+    "providerRunId": "33913166746",
+    "runAttempt": 1,
+    "url": "https://github.com/openbao/openbao/actions/runs/33913166746",
+    "workflowName": "CI",
+    "event": "push",
+    "headSha": "42ac581569a5c772f98979a2b02e96a11f726f35",
+    "headBranch": "main",
+    "artifactIds": [
+      "9952302168",
+      "9952308823",
+      "9952300927",
+      "9952374697",
+      "9952323106",
+      "9952399854",
+      "9952466464",
+      "9952441951",
+      "9952300164",
+      "9952327920",
+      "9952311932",
+      "9952425276",
+      "9952391345",
+      "9952381097",
+      "9952388312",
+      "9952351906",
+      "9952481289",
+      "9952366751",
+      "9952409936",
+      "9952517023",
+      "9952644998",
+      "9952362373",
+      "9952356009",
+      "9952380153",
+      "9952391169",
+      "9952331248",
+      "9952387565",
+      "9952702991",
+      "9952575575",
+      "9952579076",
+      "9952684963",
+      "9952453624",
+      "9952556023"
+    ],
+    "licenseSpdx": "MPL-2.0",
+    "licenseRaw": "MPL-2.0",
+    "retrievedAt": "2026-09-11T09:24:56.800Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 13329,
+    "failures": 3,
+    "passed": 13238,
+    "skipped": 88,
+    "filesParsed": 33,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 29,
+      "attemptIndex": 0,
+      "displayName": "TestOperatorInitCommand_Run/validations/root_token_pgp_key_multi_inline",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 4520,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestOperatorInitCommand_Run/validations/root_token_pgp_key_multi_inline\n=== PAUSE TestOperatorInitCommand_Run/validations/root_token_pgp_key_multi_inline\n=== CONT  TestOperatorInitCommand_Run/validations/root_token_pgp_key_multi_inline\n2026-09-04T20:04:16.787Z [DEBUG] core: set config: sanitized config=\"{\\\"allow_audit_log_prefixing\\\":false,\\\"allow_unauthenticated_workflows\\\":false,\\\"api_addr\\\":\\\"\\\",\\\"cache_size\\\":0,\\\"cluster_addr\\\":\\\"\\\",\\\"cluster_cipher_suites\\\":\\\"\\\",\\\"cluster_name\\\":\\\"\\\",\\\"default_lease_ttl\\\":0,\\\"default_max_request_duration\\\":0,\\\"detect_deadlocks\\\":\\\"\\\",\\\"disable_cache\\\":false,\\\"disable_clustering\\\":false,\\\"disable_indexing\\\":false,\\\"disable_performance_standby\\\":false,\\\"disable_printable_check\\\":false,\\\"disable_sealwrap\\\":false,\\\"disable_sentinel_trace\\\":false,\\\"disable_standby_reads\\\":false,\\\"enable_response_header_hostname\\\":false,\\\"enable_response_header_raft_node_id\\\":false,\\\"enable_ui\\\":false,\\\"imprecise_lease_role_tracking\\\":false,\\\"introspection_endpoint\\\":false,\\\"log_format\\\":\\\"unspecified\\\",\\\"log_level\\\":\\\"\\\",\\\"log_requests_level\\\":\\\"\\\",\\\"max_lease_ttl\\\":0,\\\"pid_file\\\":\\\"\\\",\\\"plugin_directory\\\":\\\"\\\",\\\"plugin_file_permissions\\\":0,\\\"plugin_file_uid\\\":0,\\\"raw_storage_endpoint\\\":false,\\\"unsafe_allow_api_audit_creation\\\":true,\\\"unsafe_cross_namespace_identity\\\":false,\\\"unsafe_relative_paths\\\":false}\"\n2026-09-04T20:04:16.787Z [DEBUG] storage.cache: creating LRU cache: size=0\n2026-09-04T20:04:16.787Z [INFO]  core: Initializing version history cache for core\n2026-09-04T20:04:16.787Z [INFO]  core: assigning cluster listener for test core: core=0 port=0\n2026-09-04T20:04:16.787Z [INFO]  core: security barrier not initialized\n2026-09-04T20:04:16.787Z [INFO]  core: security barrier not initialized\n2026-09-04T20:04:16.787Z [INFO]  core: acquired HA initialization lock\n2026-09-04T20:04:16.787Z [INFO]  core: security barrier initialized: shares=3 threshold=3\n2026-09-04T20:04:16.787Z [DEBUG] core: cluster name set: name=TestOperatorInitCommand_Run/validations/root_token_pgp_key_multi_inline\n2026-09-04T20:04:16.787Z [DEBUG] core: cluster ID not found, generating new\n2026-09-04T20:04:16.787Z [DEBUG] core: cluster ID set: id=23529706-801b-e17d-211f-268d7feedaad\n2026-09-04T20:04:16.787Z [DEBUG] core: generating cluster private key\n2026-09-04T20:04:16.788Z [DEBUG] core: generating local cluster certificate: host=fw-af679222-3688-d638-4741-4f63a5a85905\n2026-09-04T20:04:16.790Z [INFO]  core: post-unseal setup starting\n2026-09-04T20:04:16.790Z [DEBUG] core: standard unseal starting\n2026-09-04T20:04:16.790Z [DEBUG] core: clearing forwarding clients\n2026-09-04T20:04:16.790Z [DEBUG] core: done clearing forwarding clients\n2026-09-04T20:04:16.790Z [INFO]  core: loaded wrapping token key\n2026-09-04T20:04:16.790Z [INFO]  core: successfully setup plugin catalog: plugin-directory=\"\"\n2026-09-04T20:04:16.791Z [INFO]  core: no mounts in legacy mount table; adding default mount table\n2026-09-04T20:04:16.791Z [INFO]  core: successfully mounted: type=cubbyhole version=\"v2.0.0+builtin.bao\" path=cubbyhole/ namespace=\"ID: root. Path: \"\n2026-09-04T20:04:16.791Z [INFO]  core: successfully mounted: type=system version=\"v2.0.0+builtin.bao\" path=sys/ namespace=\"ID: root. Path: \"\n2026-09-04T20:04:16.792Z [INFO]  core: successfully mounted: type=identity version=\"v2.0.0+builtin.bao\" path=identity/ namespace=\"ID: root. Path: \"\n2026-09-04T20:04:16.792Z [INFO]  core: no mounts in legacy auth table; adding default mount table\n2026-09-04T20:04:16.793Z [INFO]  core: successfully mounted: type=token version=\"v2.0.0+builtin.bao\" path=token/ namespace=\"ID: root. Path: \"\n2026-09-04T20:04:16.793Z [INFO]  rollback: Starting the rollback manager with 256 workers\n2026-09-04T20:04:16.793Z [INFO]  core: restoring leases\n2026-09-04T20:04:16.793Z [INFO]  rollback: starting rollback manager\n2026-09-04T20:04:16.793Z [DEBUG] expiration: collecting leases\n2026-09-04T20:04:16.793Z [DEBUG] expiration: leases collected: num_existing=0 namespaces=1\n2026-09-04T20:04:16.793Z [INFO]  expiration: lease restore complete\n2026-09-04T20:04:16.794Z [DEBUG] core: loading entities: namespace=\"\"\n2026-09-04T20:04:16.794Z [DEBUG] core: entities collected: num_existing=0\n2026-09-04T20:04:16.794Z [INFO]  core: entities restored\n2026-09-04T20:04:16.794Z [DEBUG] core: identity loading groups: namespace=\"\"\n2026-09-04T20:04:16.794Z [DEBUG] core: groups collected: num_existing=0\n2026-09-04T20:04:16.794Z [INFO]  core: groups restored\n2026-09-04T20:04:16.794Z [DEBUG] core: identity loading OIDC clients: namespace=\"\"\n2026-09-04T20:04:16.794Z [INFO]  core: Recorded vault version: vault version=2.0.0 upgrade time=\"2026-09-04 20:04:16.794338863 +0000 UTC\" commit date=\"\"\n2026-09-04T20:04:16.794Z [INFO]  core: usage gauge collection is disabled\n2026-09-04T20:04:16.794Z [DEBUG] core: wrote OIDC default provider\n2026-09-04T20:04:16.794Z [DEBUG] core: wrote OIDC default key\n2026-09-04T20:04:16.794Z [DEBUG] core: wrote OIDC allow_all assignment\n2026-09-04T20:04:16.794Z [INFO]  core: post-unseal setup complete\n2026-09-04T20:04:16.794Z [INFO]  core: root token generated\n2026-09-04T20:04:16.794Z [INFO]  core: pre-seal teardown starting\n2026-09-04T20:04:16.794Z [DEBUG] core.invalidate-dispatch: stop triggered\n2026-09-04T20:04:16.794Z [DEBUG] core.invalidate-dispatch: finished stopping\n2026-09-04T20:04:16.794Z [DEBUG] expiration: stop triggered\n2026-09-04T20:04:16.794Z [DEBUG] expiration: finished stopping\n2026-09-04T20:04:16.794Z [INFO]  rollback: stopping rollback manager\n2026-09-04T20:04:16.795Z [INFO]  core: pre-seal teardown complete\n2026-09-04T20:04:16.795Z [DEBUG] core: unseal key supplied: migrate=false\n2026-09-04T20:04:16.795Z [DEBUG] seals: cannot unseal namespace, not enough keys: keys=1 threshold=3 nonce=2424d231-b1d0-643e-2465-e2ef07f9a36c\n2026-09-04T20:04:16.795Z [DEBUG] core: unseal key supplied: migrate=false\n2026-09-04T20:04:16.795Z [DEBUG] seals: cannot unseal namespace, not enough keys: keys=2 threshold=3 nonce=2424d231-b1d0-643e-2465-e2ef07f9a36c\n2026-09-04T20:04:16.795Z [DEBUG] core: unseal key supplied: migrate=false\n2026-09-04T20:04:16.795Z [DEBUG] core: starting cluster listeners\n2026-09-04T20:04:16.795Z [INFO]  core.cluster-listener.tcp: starting listener: listener_address=127.0.0.1:0\n2026-09-04T20:04:16.795Z [INFO]  core.cluster-listener: serving cluster requests: cluster_listen_address=127.0.0.1:46111\n2026-09-04T20:04:16.795Z [INFO]  core: vault is unsealed\n2026-09-04T20:04:16.795Z [INFO]  core: attempting leadership lock acquisition\n2026-09-04T20:04:16.795Z [INFO]  core: acquired lock, enabling active operation\n2026-09-04T20:04:16.795Z [DEBUG] core: context cancelled before grabbing state lock\n2026-09-04T20:04:16.795Z [DEBUG] core: generating cluster private key\n2026-09-04T20:04:16.796Z [DEBUG] core: generating local cluster certificate: host=fw-a1839b90-323b-77be-5260-c79b37f0c488\n2026-09-04T20:04:16.798Z [INFO]  core: pre-seal teardown starting\n2026-09-04T20:04:16.798Z [DEBUG] core.invalidate-dispatch: stop triggered\n2026-09-04T20:04:16.798Z [DEBUG] core.invalidate-dispatch: finished stopping\n2026-09-04T20:04:16.798Z [INFO]  core: pre-seal teardown complete\n2026-09-04T20:04:16.798Z [INFO]  core: post-unseal setup starting\n2026-09-04T20:04:16.798Z [DEBUG] core: standard unseal starting\n2026-09-04T20:04:16.798Z [DEBUG] core: clearing forwarding clients\n2026-09-04T20:04:16.798Z [DEBUG] core: done clearing forwarding clients\n2026-09-04T20:04:16.798Z [INFO]  core: loaded wrapping token key\n2026-09-04T20:04:16.798Z [INFO]  core: successfully setup plugin catalog: plugin-directory=\"\"\n2026-09-04T20:04:16.799Z [INFO]  core: successfully mounted: type=system version=\"v2.0.0+builtin.bao\" path=sys/ namespace=\"ID: root. Path: \"\n2026-09-04T20:04:16.799Z [INFO]  core: successfully mounted: type=identity version=\"v2.0.0+builtin.bao\" path=identity/ namespace=\"ID: root. Path: \"\n2026-09-04T20:04:16.799Z [INFO]  core: successfully mounted: type=cubbyhole version=\"v2.0.0+builtin.bao\" path=cubbyhole/ namespace=\"ID: root. Path: \"\n2026-09-04T20:04:16.800Z [INFO]  core: successfully mounted: type=token version=\"v2.0.0+builtin.bao\" path=token/ namespace=\"ID: root. Path: \"\n2026-09-04T20:04:16.800Z [INFO]  rollback: Starting the rollback manager with 256 workers\n2026-09-04T20:04:16.800Z [INFO]  core: restoring leases\n2026-09-04T20:04:16.800Z [DEBUG] core: loading entities: namespace=\"\"\n2026-09-04T20:04:16.800Z [DEBUG] core: entities collected: num_existing=0\n2026-09-04T20:04:16.800Z [INFO]  rollback: starting rollback manager\n2026-09-04T20:04:16.800Z [DEBUG] expiration: collecting leases\n2026-09-04T20:04:16.800Z [DEBUG] expiration: leases collected: num_existing=0 namespaces=1\n2026-09-04T20:04:16.800Z [INFO]  core: entities restored\n2026-09-04T20:04:16.800Z [DEBUG] core: identity loading groups: namespace=\"\"\n2026-09-04T20:04:16.800Z [DEBUG] core: groups collected: num_existing=0\n2026-09-04T20:04:16.800Z [INFO]  core: groups restored\n2026-09-04T20:04:16.800Z [DEBUG] core: identity loading OIDC clients: namespace=\"\"\n2026-09-04T20:04:16.800Z [DEBUG] core: request forwarding setup function\n2026-09-04T20:04:16.800Z [DEBUG] core: clearing forwarding clients\n2026-09-04T20:04:16.800Z [DEBUG] core: done clearing forwarding clients\n2026-09-04T20:04:16.800Z [INFO]  expiration: lease restore complete\n2026-09-04T20:04:16.800Z [DEBUG] core: leaving request forwarding setup function\n2026-09-04T20:04:16.800Z [INFO]  core: usage gauge collection is disabled\n2026-09-04T20:04:16.800Z [INFO]  core: post-unseal setup complete\n2026-09-04T20:04:16.801Z [INFO]  core: successful mount: namespace=\"\" path=secret/ type=kv version=\"\"\n2026-09-04T20:04:16.801Z [INFO]  TestOperatorInitCommand_Run/validations/root_token_pgp_key_multi_inline: starting listener for test core: core=0 port=37251\n2026-09-04T20:04:16.834Z [DEBUG] core.invalidate-dispatch: stop triggered\n2026-09-04T20:04:16.834Z [DEBUG] core.invalidate-dispatch: finished stopping\n2026-09-04T20:04:16.834Z [DEBUG] expiration: stop triggered\n2026-09-04T20:04:16.834Z [DEBUG] expiration: finished stopping\n2026-09-04T20:04:16.834Z [INFO]  rollback: stopping rollback manager\n2026-09-04T20:04:16.834Z [INFO]  core: pre-seal teardown complete\n2026-09-04T20:04:16.834Z [INFO]  core: stopping cluster listeners\n2026-09-04T20:04:16.834Z [INFO]  core.cluster-listener: forwarding rpc listeners stopped\n2026-09-04T20:04:16.867Z [INFO]  core.cluster-listener: rpc listeners successfully shut down\n2026-09-04T20:04:16.867Z [INFO]  core: cluster listeners successfully shut down\n2026-09-04T20:04:16.867Z [DEBUG] core: sealing all barriers\n2026-09-04T20:04:16.867Z [INFO]  core: vault is sealed\n2026-09-04T20:04:16.867Z [INFO]  core: vault test core stopped\n2026-09-04T20:04:16.968Z [ERROR] seals: invalid rotate seal configuration: error=\"count mismatch between number of provided PGP keys and number of shares\"\n2026-09-04T20:04:16.968Z [INFO]  TestOperatorRotateKeysCommand_Run/validations/key_shares_pgp_more: cleaning up vault cluster\n2026-09-04T20:04:16.968Z [INFO]  core: stopping vault test core\n2026-09-04T20:04:16.968Z [INFO]  core: listeners successfully shut down\n2026-09-04T20:04:16.968Z [DEBUG] core: shutdown called\n2026-09-04T20:04:16.968Z [INFO]  core: marked as sealed\n2026-09-04T20:04:16.968Z [DEBUG] core: clearing forwarding clients\n2026-09-04T20:04:16.968Z [DEBUG] core: done clearing forwarding clients\n2026-09-04T20:04:16.968Z [DEBUG] core: finished triggering haLoopCh for runHALoop\n2026-09-04T20:04:16.968Z [DEBUG] core: shutting down periodic keyring upgrade checker\n2026-09-04T20:04:16.968Z [DEBUG] core: shutting down periodic leader refresh\n2026-09-04T20:04:16.968Z [DEBUG] core: shutting down periodic metrics\n2026-09-04T20:04:16.968Z [DEBUG] core: shutting down read-enabled standby handler\n2026-09-04T20:04:16.968Z [DEBUG] core: shutting down leader elections\n2026-09-04T20:04:16.968Z [INFO]  core: done with active loop iteration\n2026-09-04T20:04:17.030Z [DEBUG] core.invalidate-dispatch: stop triggered\n2026-09-04T20:04:17.030Z [DEBUG] core.invalidate-dispatch: finished stopping\n2026-09-04T20:04:17.030Z [DEBUG] expiration: stop triggered\n2026-09-04T20:04:17.030Z [DEBUG] expiration: finished stopping\n2026-09-04T20:04:17.030Z [INFO]  rollback: stopping rollback manager\n2026-09-04T20:04:17.030Z [INFO]  core: pre-seal teardown complete\n2026-09-04T20:04:17.030Z [INFO]  core: stopping cluster listeners\n2026-09-04T20:04:17.030Z [INFO]  core.cluster-listener: forwarding rpc listeners stopped\n2026-09-04T20:04:17.053Z [ERROR] seals: invalid rotate seal configuration: error=\"count mismatch between number of provided PGP keys and number of shares\"\n2026-09-04T20:04:17.054Z [INFO]  TestOperatorRotateKeysCommand_Run/validations/key_shares_pgp_less: cleaning up vault cluster\n2026-09-04T20:04:17.054Z [INFO]  core: stopping vault test core\n2026-09-04T20:04:17.054Z [INFO]  core: listeners successfully shut down\n2026-09-04T20:04:17.054Z [DEBUG] core: shutdown called\n2026-09-04T20:04:17.054Z [INFO]  core: marked as sealed\n2026-09-04T20:04:17.054Z [DEBUG] core: clearing forwarding clients\n2026-09-04T20:04:17.054Z [DEBUG] core: done clearing forwarding clients\n2026-09-04T20:04:17.054Z [DEBUG] core: finished triggering haLoopCh for runHALoop\n2026-09-04T20:04:17.054Z [DEBUG] core: shutting down periodic keyring upgrade checker\n2026-09-04T20:04:17.054Z [DEBUG] core: shutting down periodic leader refresh\n2026-09-04T20:04:17.054Z [DEBUG] core: shutting down periodic metrics\n2026-09-04T20:04:17.054Z [DEBUG] core: shutting down read-enabled standby handler\n2026-09-04T20:04:17.054Z [DEBUG] core: shutting down leader elections\n2026-09-04T20:04:17.054Z [INFO]  core: done with active loop iteration\n    operator_init_test.go:123: expected \"invalid value \\\"keybase:hashicorp,keybase:jefferai\\\" for flag -root-token-pgp-key: invalid character '<' looking for beginning of value\\n\" to contain \"can only specify one pgp key\"\n2026-09-04T20:04:18.944Z [INFO]  TestOperatorInitCommand_Run/validations/root_token_pgp_key_multi_inline: cleaning up vault cluster\n2026-09-04T20:04:18.944Z [INFO]  core: stopping vault test core\n2026-09-04T20:04:18.944Z [INFO]  core: listeners successfully shut down\n2026-09-04T20:04:18.944Z [DEBUG] core: shutdown called\n2026-09-04T20:04:18.944Z [INFO]  core: marked as sealed\n2026-09-04T20:04:18.944Z [DEBUG] core: clearing forwarding clients\n2026-09-04T20:04:18.944Z [DEBUG] core: done clearing forwarding clients\n2026-09-04T20:04:18.944Z [DEBUG] core: finished triggering haLoopCh for runHALoop\n2026-09-04T20:04:18.944Z [DEBUG] core: shutting down periodic keyring upgrade checker\n2026-09-04T20:04:18.944Z [DEBUG] core: shutting down periodic leader refresh\n2026-09-04T20:04:18.944Z [DEBUG] core: shutting down periodic metrics\n2026-09-04T20:04:18.944Z [DEBUG] core: shutting down read-enabled standby handler\n2026-09-04T20:04:18.944Z [DEBUG] core: shutting down leader elections\n2026-09-04T20:04:18.944Z [INFO]  core: done with active loop iteration\n2026-09-04T20:04:19.003Z [INFO]  core.cluster-listener: rpc listeners successfully shut down\n2026-09-04T20:04:19.003Z [INFO]  core: cluster listeners successfully shut down\n2026-09-04T20:04:19.003Z [DEBUG] core: sealing all barriers\n2026-09-04T20:04:19.003Z [INFO]  core: vault is sealed\n2026-09-04T20:04:19.003Z [INFO]  core: vault test core stopped\n2026-09-04T20:04:19.162Z [DEBUG] core.invalidate-dispatch: stop triggered\n2026-09-04T20:04:19.162Z [DEBUG] core.invalidate-dispatch: finished stopping\n2026-09-04T20:04:19.162Z [DEBUG] expiration: stop triggered\n2026-09-04T20:04:19.162Z [DEBUG] expiration: finished stopping\n2026-09-04T20:04:19.162Z [INFO]  rollback: stopping rollback manager\n2026-09-04T20:04:19.163Z [INFO]  core: pre-seal teardown complete\n2026-09-04T20:04:19.163Z [INFO]  core: stopping cluster listeners\n2026-09-04T20:04:19.163Z [INFO]  core.cluster-listener: forwarding rpc listeners stopped\n--- FAIL: TestOperatorInitCommand_Run/validations/root_token_pgp_key_multi_inline (4.52s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 29,
+      "attemptIndex": 0,
+      "displayName": "TestOperatorInitCommand_Run/validations",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestOperatorInitCommand_Run/validations\n=== PAUSE TestOperatorInitCommand_Run/validations\n=== CONT  TestOperatorInitCommand_Run/validations\n--- FAIL: TestOperatorInitCommand_Run/validations (0.00s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 29,
+      "attemptIndex": 0,
+      "displayName": "TestOperatorInitCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestOperatorInitCommand_Run\n=== PAUSE TestOperatorInitCommand_Run\n=== CONT  TestOperatorInitCommand_Run\n--- FAIL: TestOperatorInitCommand_Run (0.00s)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

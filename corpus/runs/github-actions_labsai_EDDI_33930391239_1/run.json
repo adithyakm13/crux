@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:labsai/EDDI:33930391239:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "labsai/EDDI",
+    "providerRunId": "33930391239",
+    "runAttempt": 1,
+    "url": "https://github.com/labsai/EDDI/actions/runs/33930391239",
+    "workflowName": "CI/CD",
+    "event": "pull_request",
+    "headSha": "20ea2e75d9c25e47c23d5669c3b5c8e2a24c3509",
+    "headBranch": "fix/review-schedules",
+    "artifactIds": [
+      "9958426368"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:09:00.250Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 20610,
+    "failures": 1,
+    "passed": 20606,
+    "skipped": 3,
+    "filesParsed": 909,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.ImportStyleTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "noInlineFullyQualifiedNames",
+      "suitePath": [
+        "ai.labs.eddi.ImportStyleTest",
+        "import style (AGENTS.md 4.7)"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 883,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "AGENTS.md 4.7: use a top-level import and the simple name. If two classes genuinely share a simple name in one file, add that file to ALLOWED with a note.\n  src/test/java/ai/labs/eddi/engine/schedule/rest/RestScheduleStoreTest.java:789  java.util.concurrent.atomic.AtomicBoolean\n  src/test/java/ai/labs/eddi/engine/schedule/mongo/MongoScheduleStoreTest.java:366  java.util.Arrays ==> expected: <[]> but was: <[src/test/java/ai/labs/eddi/engine/schedule/rest/RestScheduleStoreTest.java:789  java.util.concurrent.atomic.AtomicBoolean, src/test/java/ai/labs/eddi/engine/schedule/mongo/MongoScheduleStoreTest.java:366  java.util.Arrays]>",
+      "stackText": "org.opentest4j.AssertionFailedError: \nAGENTS.md 4.7: use a top-level import and the simple name. If two classes genuinely share a simple name in one file, add that file to ALLOWED with a note.\n  src/test/java/ai/labs/eddi/engine/schedule/rest/RestScheduleStoreTest.java:789  java.util.concurrent.atomic.AtomicBoolean\n  src/test/java/ai/labs/eddi/engine/schedule/mongo/MongoScheduleStoreTest.java:366  java.util.Arrays ==> expected: <[]> but was: <[src/test/java/ai/labs/eddi/engine/schedule/rest/RestScheduleStoreTest.java:789  java.util.concurrent.atomic.AtomicBoolean, src/test/java/ai/labs/eddi/engine/schedule/mongo/MongoScheduleStoreTest.java:366  java.util.Arrays]>\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1210)\n\tat ai.labs.eddi.ImportStyleTest.noInlineFullyQualifiedNames(ImportStyleTest.java:143)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

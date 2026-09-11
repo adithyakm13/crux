@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:opral/lix:34547133597:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "opral/lix",
+    "providerRunId": "34547133597",
+    "runAttempt": 1,
+    "url": "https://github.com/opral/lix/actions/runs/34547133597",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "36124b985662ca8c7b41ad228519235a491337cb",
+    "headBranch": "codex/lix-retire-private-apis",
+    "artifactIds": [
+      "10179549790",
+      "10179595597",
+      "10179606092"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:36:40.711Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 4602,
+    "failures": 1,
+    "passed": 4601,
+    "skipped": 0,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "crdt_benchmarks_b3_1_json_concurrent_map_sets",
+      "suitePath": [
+        "lix_e2e::crdt_benchmarks_baseline"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1888,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'crdt_benchmarks_b3_1_json_concurrent_map_sets' (24950) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crdt_benchmarks_baseline.rs:193:5",
+      "stackText": "thread 'crdt_benchmarks_b3_1_json_concurrent_map_sets' (24950) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crdt_benchmarks_baseline.rs:193:5:\nsame-base durable commit service p95 was 163.110 ms\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest crdt_benchmarks_b3_1_json_concurrent_map_sets ... FAILED\n\nfailures:\n\nfailures:\n    crdt_benchmarks_b3_1_json_concurrent_map_sets\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 5 filtered out; finished in 1.86s\n\n",
+      "stderr": "crdt_benchmarks_baseline workload=B3.1 format=json clients=100 samples=500 p95_ms=163.110 commit_batch_ms=[163.617722, 21.192174, 20.335886000000002, 12.248427, 26.668381]\n\nthread 'crdt_benchmarks_b3_1_json_concurrent_map_sets' (24950) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crdt_benchmarks_baseline.rs:193:5:\nsame-base durable commit service p95 was 163.110 ms\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    }
+  ]
+}

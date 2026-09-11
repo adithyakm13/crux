@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:labsai/EDDI:34163541865:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "labsai/EDDI",
+    "providerRunId": "34163541865",
+    "runAttempt": 1,
+    "url": "https://github.com/labsai/EDDI/actions/runs/34163541865",
+    "workflowName": "CI/CD",
+    "event": "pull_request",
+    "headSha": "9f0c40d24c1c7d14168171bbec6fe4e92752b15b",
+    "headBranch": "dependabot/maven/minor-and-patch-f2a4fd996a",
+    "artifactIds": [
+      "10033514011"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:02:41.464Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 21442,
+    "failures": 1,
+    "passed": 21438,
+    "skipped": 3,
+    "filesParsed": 945,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.BuildQualityGatesTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "swaggerAnnotationsKeepsItsShippedVersion",
+      "suitePath": [
+        "ai.labs.eddi.BuildQualityGatesTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 15,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "io.swagger.core.v3:swagger-annotations must stay managed at 2.2.54. Unmanaged it resolves to whatever swagger-parser drags in (2.2.52), so removing the declaration is not a removal — the jar still ships, still lands in the CycloneDX SBOM and is still scanned by Trivy, just older, silently reversing a deliberate bump. ==> expected: <2.2.54> but was: <2.2.55>",
+      "stackText": "org.opentest4j.AssertionFailedError: io.swagger.core.v3:swagger-annotations must stay managed at 2.2.54. Unmanaged it resolves to whatever swagger-parser drags in (2.2.52), so removing the declaration is not a removal — the jar still ships, still lands in the CycloneDX SBOM and is still scanned by Trivy, just older, silently reversing a deliberate bump. ==> expected: <2.2.54> but was: <2.2.55>\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1210)\n\tat ai.labs.eddi.BuildQualityGatesTest.swaggerAnnotationsKeepsItsShippedVersion(BuildQualityGatesTest.java:928)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

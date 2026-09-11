@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:labsai/EDDI:33930597518:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "labsai/EDDI",
+    "providerRunId": "33930597518",
+    "runAttempt": 1,
+    "url": "https://github.com/labsai/EDDI/actions/runs/33930597518",
+    "workflowName": "CI/CD",
+    "event": "pull_request",
+    "headSha": "e54293923464fca864c2163069d7ee3463f05c01",
+    "headBranch": "fix/review-deploy",
+    "artifactIds": [
+      "9958502157"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:08:49.532Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 20550,
+    "failures": 6,
+    "passed": 20541,
+    "skipped": 3,
+    "filesParsed": 909,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.deploy.DeploymentManifestsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "keycloakStateIsPersisted",
+      "suitePath": [
+        "ai.labs.eddi.deploy.DeploymentManifestsTest",
+        "keycloak"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "k8s/overlays/auth/keycloak-statefulset.yaml must be a StatefulSet: the data claim is ReadWriteOnce and a Deployment's RollingUpdate would deadlock on it ==> expected: <true> but was: <false>",
+      "stackText": "org.opentest4j.AssertionFailedError: k8s/overlays/auth/keycloak-statefulset.yaml must be a StatefulSet: the data claim is ReadWriteOnce and a Deployment's RollingUpdate would deadlock on it ==> expected: <true> but was: <false>\n\tat org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:232)\n\tat ai.labs.eddi.deploy.DeploymentManifestsTest$Keycloak.keycloakStateIsPersisted(DeploymentManifestsTest.java:397)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.deploy.DeploymentManifestsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "realmVolumeResolvesToTheGeneratedConfigMap",
+      "suitePath": [
+        "ai.labs.eddi.deploy.DeploymentManifestsTest",
+        "keycloak"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 9,
+      "errorType": "java.lang.AssertionError",
+      "message": "k8s/overlays/auth/keycloak-statefulset.yaml contains no StatefulSet",
+      "stackText": "java.lang.AssertionError: k8s/overlays/auth/keycloak-statefulset.yaml contains no StatefulSet\n\tat ai.labs.eddi.deploy.DeploymentManifestsTest.documentOfKind(DeploymentManifestsTest.java:1361)\n\tat ai.labs.eddi.deploy.DeploymentManifestsTest$Keycloak.realmVolumeResolvesToTheGeneratedConfigMap(DeploymentManifestsTest.java:498)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.deploy.DeploymentManifestsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "keycloakKindChangeIsDocumentedAsAnUpgradeStep",
+      "suitePath": [
+        "ai.labs.eddi.deploy.DeploymentManifestsTest",
+        "keycloak"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "k8s/overlays/auth/keycloak-statefulset.yaml must tell the operator to delete the old `keycloak` Deployment: this StatefulSet takes its name and its pod labels, kubectl apply -k does not prune, and the Service below then load-balances across both ==> expected: <true> but was: <false>",
+      "stackText": "org.opentest4j.AssertionFailedError: k8s/overlays/auth/keycloak-statefulset.yaml must tell the operator to delete the old `keycloak` Deployment: this StatefulSet takes its name and its pod labels, kubectl apply -k does not prune, and the Service below then load-balances across both ==> expected: <true> but was: <false>\n\tat org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:232)\n\tat ai.labs.eddi.deploy.DeploymentManifestsTest$Keycloak.keycloakKindChangeIsDocumentedAsAnUpgradeStep(DeploymentManifestsTest.java:546)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.deploy.DeploymentManifestsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "realmIsImported",
+      "suitePath": [
+        "ai.labs.eddi.deploy.DeploymentManifestsTest",
+        "keycloak"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "k8s/overlays/auth/keycloak-statefulset.yaml must start Keycloak with --import-realm ==> expected: <true> but was: <false>",
+      "stackText": "org.opentest4j.AssertionFailedError: k8s/overlays/auth/keycloak-statefulset.yaml must start Keycloak with --import-realm ==> expected: <true> but was: <false>\n\tat org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:232)\n\tat ai.labs.eddi.deploy.DeploymentManifestsTest$Keycloak.realmIsImported(DeploymentManifestsTest.java:376)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.deploy.DeploymentManifestsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "healthProbesUseManagementPort",
+      "suitePath": [
+        "ai.labs.eddi.deploy.DeploymentManifestsTest",
+        "keycloak"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "k8s/overlays/auth/keycloak-statefulset.yaml must set KC_HEALTH_ENABLED — Keycloak serves /health/* only when it is on ==> expected: <true> but was: <false>",
+      "stackText": "org.opentest4j.AssertionFailedError: k8s/overlays/auth/keycloak-statefulset.yaml must set KC_HEALTH_ENABLED — Keycloak serves /health/* only when it is on ==> expected: <true> but was: <false>\n\tat org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:232)\n\tat ai.labs.eddi.deploy.DeploymentManifestsTest$Keycloak.healthProbesUseManagementPort(DeploymentManifestsTest.java:354)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.deploy.DeploymentManifestsTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "secretCreationSnippetsAreIdempotent",
+      "suitePath": [
+        "ai.labs.eddi.deploy.DeploymentManifestsTest",
+        "vault secret"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "k8s/base/eddi-secret.yaml.example has 1 `kubectl create secret generic eddi-secrets` snippet(s) but 0 piped through `--dry-run=client -o yaml | kubectl apply -f -`; a bare create fails with AlreadyExists on the second run ==> expected: <1> but was: <0>",
+      "stackText": "org.opentest4j.AssertionFailedError: k8s/base/eddi-secret.yaml.example has 1 `kubectl create secret generic eddi-secrets` snippet(s) but 0 piped through `--dry-run=client -o yaml | kubectl apply -f -`; a bare create fails with AlreadyExists on the second run ==> expected: <1> but was: <0>\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:601)\n\tat ai.labs.eddi.deploy.DeploymentManifestsTest$VaultSecret.secretCreationSnippetsAreIdempotent(DeploymentManifestsTest.java:326)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

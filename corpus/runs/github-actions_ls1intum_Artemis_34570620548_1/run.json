@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ls1intum/Artemis:34570620548:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ls1intum/Artemis",
+    "providerRunId": "34570620548",
+    "runAttempt": 1,
+    "url": "https://github.com/ls1intum/Artemis/actions/runs/34570620548",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "3afc73995db02d8745d732c6b234b60a1c9cfac4",
+    "headBranch": "chore/development/retire-deprecated-apis",
+    "artifactIds": [
+      "10188789027",
+      "10188201996",
+      "10187877222",
+      "10187799055",
+      "10187795381",
+      "10187839868",
+      "10187823078",
+      "10187840535",
+      "10187885371"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:11:31.286Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 34114,
+    "failures": 1,
+    "passed": 33995,
+    "skipped": 118,
+    "filesParsed": 1223,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 2515
+    },
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 12
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Server JUnit Test Results (Remaining)/TEST-de.tum.cit.aet.artemis.core.architecture.TempFileArchitectureTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "testNoDirectCreateTempFile()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.core.architecture.TempFileArchitectureTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 274,
+      "errorType": "java.lang.AssertionError",
+      "message": "java.lang.AssertionError: Architecture Violation [Priority: MEDIUM] - Rule 'no classes should call method where calls Files.createTempFile, because All code must use TempFileUtilService.createTempFile() instead of Files.createTempFile(). This ensures proper temp file isolation within the configured temp path. Inject TempFileUtilService and call createTempFile(prefix, suffix) or createTempFile(parent, prefix, suffix).' was violated (3 times):\nMethod <de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBodyFile(java.lang.String, java.lang.Object, org.springframework.http.HttpStatus)> calls method <java.nio.file.Files.createTempFile(java.nio.file.Path, java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (RequestUtilService.java:435)\nMethod <de.tum.cit.aet.artemis.programming.service.sharing.SharingInfoDTOTest.testSharingZipFilePropertiesAndFileTransfer()> calls method <java.nio.file.Files.createTempFile(java.nio.file.Path, java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (SharingInfoDTOTest.java:57)\nMethod <de.tum.cit.aet.artemis.programming.web.repository.AuxiliaryRepositoryResourceTest.updateAuxiliaryFiles_savesEveryFileAndReportsTheOnesThatFailedIndividually()> calls method <java.nio.file.Files.createTempFile(java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (AuxiliaryRepositoryResourceTest.java:401)",
+      "stackText": "java.lang.AssertionError: Architecture Violation [Priority: MEDIUM] - Rule 'no classes should call method where calls Files.createTempFile, because All code must use TempFileUtilService.createTempFile() instead of Files.createTempFile(). This ensures proper temp file isolation within the configured temp path. Inject TempFileUtilService and call createTempFile(prefix, suffix) or createTempFile(parent, prefix, suffix).' was violated (3 times):\nMethod <de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBodyFile(java.lang.String, java.lang.Object, org.springframework.http.HttpStatus)> calls method <java.nio.file.Files.createTempFile(java.nio.file.Path, java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (RequestUtilService.java:435)\nMethod <de.tum.cit.aet.artemis.programming.service.sharing.SharingInfoDTOTest.testSharingZipFilePropertiesAndFileTransfer()> calls method <java.nio.file.Files.createTempFile(java.nio.file.Path, java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (SharingInfoDTOTest.java:57)\nMethod <de.tum.cit.aet.artemis.programming.web.repository.AuxiliaryRepositoryResourceTest.updateAuxiliaryFiles_savesEveryFileAndReportsTheOnesThatFailedIndividually()> calls method <java.nio.file.Files.createTempFile(java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (AuxiliaryRepositoryResourceTest.java:401)\n\tat com.tngtech.archunit.lang.ArchRule$Assertions.assertNoViolation(ArchRule.java:94)\n\tat com.tngtech.archunit.lang.ArchRule$Assertions.check(ArchRule.java:86)\n\tat com.tngtech.archunit.lang.ArchRule$Factory$SimpleArchRule.check(ArchRule.java:165)\n\tat de.tum.cit.aet.artemis.core.architecture.TempFileArchitectureTest.testNoDirectCreateTempFile(TempFileArchitectureTest.java:83)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

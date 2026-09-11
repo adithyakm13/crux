@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ls1intum/Artemis:34575183195:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ls1intum/Artemis",
+    "providerRunId": "34575183195",
+    "runAttempt": 1,
+    "url": "https://github.com/ls1intum/Artemis/actions/runs/34575183195",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "06696c56cbda31de4ed2cda63c57e5aead1a48d7",
+    "headBranch": "chore/account/organizations-users-admin-entities-dto-migration",
+    "artifactIds": [
+      "10189904993",
+      "10190205607",
+      "10189740805",
+      "10189864238",
+      "10190133908",
+      "10189847813",
+      "10190025756",
+      "10190039178",
+      "10189940484"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:10:50.501Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 33701,
+    "failures": 1,
+    "passed": 33589,
+    "skipped": 111,
+    "filesParsed": 1224,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 2514
+    },
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 12
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Server JUnit Test Results (Remaining)/TEST-de.tum.cit.aet.artemis.buildagent.service.BuildAgentIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "testBuildAgentJobCancelled()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.buildagent.service.BuildAgentIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 30089,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "org.opentest4j.AssertionFailedError: [container start should be reached within 30s] \nExpecting value to be true but was false",
+      "stackText": "org.opentest4j.AssertionFailedError: [container start should be reached within 30s] \nExpecting value to be true but was false\n\tat de.tum.cit.aet.artemis.buildagent.service.BuildAgentIntegrationTest.testBuildAgentJobCancelled(BuildAgentIntegrationTest.java:318)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

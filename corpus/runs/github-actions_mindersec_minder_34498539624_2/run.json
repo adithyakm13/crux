@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:mindersec/minder:34498539624:2",
+  "source": {
+    "provider": "github-actions",
+    "repo": "mindersec/minder",
+    "providerRunId": "34498539624",
+    "runAttempt": 2,
+    "url": "https://github.com/mindersec/minder/actions/runs/34498539624",
+    "workflowName": "PR",
+    "event": "pull_request",
+    "headSha": "4eb403f11e3dc652b753dcbe21e2401743deacb2",
+    "headBranch": "fix/list-artifacts-repo-filter",
+    "artifactIds": [
+      "10170541633"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:21:16.965Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 3473,
+    "failures": 2,
+    "passed": 3471,
+    "skipped": 0,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListArtifacts_RepoFilter/filter_by_unknown_repo_returns_empty_list",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListArtifacts_RepoFilter/filter_by_unknown_repo_returns_empty_list\n=== PAUSE TestListArtifacts_RepoFilter/filter_by_unknown_repo_returns_empty_list\n=== CONT  TestListArtifacts_RepoFilter/filter_by_unknown_repo_returns_empty_list\n    handlers_artifacts_test.go:193: \n        \tError Trace:\t/home/runner/work/minder/minder/internal/controlplane/handlers_artifacts_test.go:193\n        \tError:      \tShould be empty, but was [artifact-a artifact-b artifact-no-repo]\n        \tTest:       \tTestListArtifacts_RepoFilter/filter_by_unknown_repo_returns_empty_list\n    --- FAIL: TestListArtifacts_RepoFilter/filter_by_unknown_repo_returns_empty_list (0.00s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListArtifacts_RepoFilter",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListArtifacts_RepoFilter\n=== PAUSE TestListArtifacts_RepoFilter\n=== CONT  TestListArtifacts_RepoFilter\n--- FAIL: TestListArtifacts_RepoFilter (0.00s)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

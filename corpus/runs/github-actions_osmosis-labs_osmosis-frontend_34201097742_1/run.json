@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:osmosis-labs/osmosis-frontend:34201097742:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "osmosis-labs/osmosis-frontend",
+    "providerRunId": "34201097742",
+    "runAttempt": 1,
+    "url": "https://github.com/osmosis-labs/osmosis-frontend/actions/runs/34201097742",
+    "workflowName": "Synthetic Monitoring Server tests",
+    "event": "schedule",
+    "headSha": "b519ec713ef838e07ca2809f74e08a60ac191cc9",
+    "headBranch": "stage",
+    "artifactIds": [
+      "10045928050"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:40:18.829Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 3,
+    "failures": 3,
+    "passed": 0,
+    "skipped": 0,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "staging-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Test Select Pool feature › User should be able to see at least 10 pools",
+      "suitePath": [
+        "pools.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 32396,
+      "errorType": "FAILURE",
+      "message": "pools.spec.ts:31:7 User should be able to see at least 10 pools",
+      "stackText": "\n  [chromium] › pools.spec.ts:31:7 › Test Select Pool feature › User should be able to see at least 10 pools \n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:32:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:32:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/error-context.md\n\n",
+      "stdout": "\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium/error-context.md]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-fa61c-le-to-see-at-least-10-pools-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "staging-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Test Select Pool feature › User should be able to select ATOM/USDC pool",
+      "suitePath": [
+        "pools.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 32174,
+      "errorType": "FAILURE",
+      "message": "pools.spec.ts:48:7 User should be able to select ATOM/USDC pool",
+      "stackText": "\n  [chromium] › pools.spec.ts:48:7 › Test Select Pool feature › User should be able to select ATOM/USDC pool \n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:50:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:50:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/error-context.md\n\n",
+      "stdout": "\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium/error-context.md]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-1b90c-le-to-select-ATOM-USDC-pool-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "staging-quote-test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Test Select Pool feature › User should be able to select OSMO/USDC pool",
+      "suitePath": [
+        "pools.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 32093,
+      "errorType": "FAILURE",
+      "message": "pools.spec.ts:63:7 User should be able to select OSMO/USDC pool",
+      "stackText": "\n  [chromium] › pools.spec.ts:63:7 › Test Select Pool feature › User should be able to select OSMO/USDC pool \n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:65:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\n    Call log:\n      - waiting for locator('//tr/td//a[contains(@href, \"/pool/\")]/../..').first() to be visible\n\n\n       at ../pages/pools-page.ts:34\n\n      32 |     // drop off the first page when liquidity rankings shift).\n      33 |     const anyPoolRow = '//tr/td//a[contains(@href, \"/pool/\")]/../..'\n    > 34 |     await this.page.locator(anyPoolRow).first().waitFor({ timeout: 10000 })\n         |                                                 ^\n      35 |     await super.printUrl()\n      36 |     await this.dismissVariantsPopupIfPresent()\n      37 |   }\n        at PoolsPage.goto (/home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/pages/pools-page.ts:34:49)\n        at /home/runner/work/osmosis-frontend/osmosis-frontend/packages/e2e/tests/pools.spec.ts:65:5\n\n    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────\n    test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/test-failed-1.png\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: ../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/error-context.md\n\n",
+      "stdout": "\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium/error-context.md]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/test-failed-1.png]]\n\n[[ATTACHMENT|../test-results/pools-Test-Select-Pool-fea-de214-le-to-select-OSMO-USDC-pool-chromium-retry1/error-context.md]]\n\n",
+      "stderr": null
+    }
+  ]
+}

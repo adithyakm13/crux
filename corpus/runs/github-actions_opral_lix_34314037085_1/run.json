@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:opral/lix:34314037085:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "opral/lix",
+    "providerRunId": "34314037085",
+    "runAttempt": 1,
+    "url": "https://github.com/opral/lix/actions/runs/34314037085",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "c1464ba2df7e2117599b82a0e6a4e27dc6bbf019",
+    "headBranch": "codex/simplify-version-control-sql",
+    "artifactIds": [
+      "10089528888",
+      "10089573127",
+      "10089585258"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:38:19.359Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 4559,
+    "failures": 18,
+    "passed": 4541,
+    "skipped": 0,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "rust-nextest-junit-tooling/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "commands::exp::git_replay::tests::rocksdb_replay_installs_format_plugins_and_keeps_nul_files_binary",
+      "suitePath": [
+        "lix_cli"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1143,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'commands::exp::git_replay::tests::rocksdb_replay_installs_format_plugins_and_keeps_nul_files_binary' (22905) panicked at /home/runner/work/lix/lix/packages/cli/src/commands/exp/git_replay.rs:3374:9",
+      "stackText": "thread 'commands::exp::git_replay::tests::rocksdb_replay_installs_format_plugins_and_keeps_nul_files_binary' (22905) panicked at /home/runner/work/lix/lix/packages/cli/src/commands/exp/git_replay.rs:3374:9:\nassertion `left == right` failed: initialization plus four replayed commits should publish five checkpoints\n  left: 4\n right: 5\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\n[git-replay] replaying 4 commits over 6 scoped paths from /tmp/lix-cli-git-replay-test-22856-1788931176807610960/repo into rocksdb\n[git-replay] 1/4 commits (applied=1, markerOnly=0, changedPaths=3)\n[git-replay] 4/4 commits (applied=4, markerOnly=1, changedPaths=6)\n[git-replay] done\n[git-replay] ref: main\n[git-replay] output rocksdb: /tmp/lix-cli-git-replay-test-22856-1788931176807610960/replay.rocksdb\n[git-replay] commits replayed: 4\n[git-replay] commits applied: 4\n[git-replay] commits with marker only: 1\n[git-replay] changed paths total: 6\n[git-replay] history scope: complete (6 paths)\n[git-replay] plugins: all\n[git-replay] materialized 0 unique Git LFS objects (0 bytes)\n[git-replay] text/CSV/Markdown/Excalidraw plugin setup excluded from replay timing: 63.811ms\n[git-replay] replay elapsed: 802.243ms\n[git-replay] scoped final Git tree manifest verified in 8.168ms\n[git-replay] profile json: /tmp/lix-cli-git-replay-test-22856-1788931176807610960/profile.json\ntest commands::exp::git_replay::tests::rocksdb_replay_installs_format_plugins_and_keeps_nul_files_binary ... FAILED\n\nfailures:\n\nfailures:\n    commands::exp::git_replay::tests::rocksdb_replay_installs_format_plugins_and_keeps_nul_files_binary\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 66 filtered out; finished in 1.13s\n\n",
+      "stderr": "\nthread 'commands::exp::git_replay::tests::rocksdb_replay_installs_format_plugins_and_keeps_nul_files_binary' (22905) panicked at /home/runner/work/lix/lix/packages/cli/src/commands/exp/git_replay.rs:3374:9:\nassertion `left == right` failed: initialization plus four replayed commits should publish five checkpoints\n  left: 4\n right: 5\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "await_durable_publication_round_trips_through_the_resumable_upload_path",
+      "suitePath": [
+        "lix_e2e::crash_consistency_qualification"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 142,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'await_durable_publication_round_trips_through_the_resumable_upload_path' (25870) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crash_consistency_qualification.rs:1627:10",
+      "stackText": "thread 'await_durable_publication_round_trips_through_the_resumable_upload_path' (25870) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crash_consistency_qualification.rs:1627:10:\ncrash-consistency verify thread should not panic: Any { .. }",
+      "stdout": "\nrunning 1 test\ntest await_durable_publication_round_trips_through_the_resumable_upload_path ... FAILED\n\nfailures:\n\nfailures:\n    await_durable_publication_round_trips_through_the_resumable_upload_path\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.12s\n\n",
+      "stderr": "\nthread 'crash-consistency-verify' (25953) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crash_consistency_qualification.rs:1356:18:\ndurable upload handshake returns a session\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n\nthread 'await_durable_publication_round_trips_through_the_resumable_upload_path' (25870) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crash_consistency_qualification.rs:1627:10:\ncrash-consistency verify thread should not panic: Any { .. }\n"
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "slatedb_durable_acknowledgement_survives_sigkill",
+      "suitePath": [
+        "lix_e2e::crash_consistency_qualification"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 185,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'slatedb_durable_acknowledgement_survives_sigkill' (25910) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crash_consistency_qualification.rs:1059:9",
+      "stackText": "thread 'slatedb_durable_acknowledgement_survives_sigkill' (25910) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crash_consistency_qualification.rs:1059:9:\nclean-close control failed before any kill was issued — the harness, not the crash, is the problem: history view unreadable after crash: code: LIX_COLUMN_NOT_FOUND\nmessage: sql2 DataFusion error: Schema error: No field named generation. Valid fields are \"lix_history()\".row_ref, \"lix_history()\".id, \"lix_history()\".diff_type, \"lix_history()\".from_generation, \"lix_history()\".to_generation, \"lix_history()\".from_payload, \"lix_history()\".to_payload, \"lix_history()\".from_lixcol_schema_key, \"lix_history()\".to_lixcol_schema_key, \"lix_history()\".from_lixcol_file_id, \"lix_history()\".to_lixcol_file_id, \"lix_history()\".from_lixcol_metadata, \"lix_history()\".to_lixcol_metadata, \"lix_history()\".from_lixcol_created_at, \"lix_history()\".to_lixcol_created_at, \"lix_history()\".from_lixcol_updated_at, \"lix_history()\".to_lixcol_updated_at, \"lix_history()\".from_lixcol_global, \"lix_history()\".to_lixcol_global, \"lix_history()\".from_lixcol_change_id, \"lix_history()\".to_lixcol_change_id, \"lix_history()\".from_lixcol_commit_id, \"lix_history()\".to_lixcol_commit_id, \"lix_history()\".from_lixcol_untracked, \"lix_history()\".to_lixcol_untracked, \"lix_history()\".row_count, \"lix_history()\".lixcol_from_commit_id, \"lix_history()\".lixcol_to_commit_id, \"lix_history()\".lixcol_commit_created_at, \"lix_history()\".lixcol_commit_is_checkpoint, \"lix_history()\".lixcol_position.\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest slatedb_durable_acknowledgement_survives_sigkill ... FAILED\n\nfailures:\n\nfailures:\n    slatedb_durable_acknowledgement_survives_sigkill\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.16s\n\n",
+      "stderr": "\nthread 'slatedb_durable_acknowledgement_survives_sigkill' (25910) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crash_consistency_qualification.rs:1059:9:\nclean-close control failed before any kill was issued — the harness, not the crash, is the problem: history view unreadable after crash: code: LIX_COLUMN_NOT_FOUND\nmessage: sql2 DataFusion error: Schema error: No field named generation. Valid fields are \"lix_history()\".row_ref, \"lix_history()\".id, \"lix_history()\".diff_type, \"lix_history()\".from_generation, \"lix_history()\".to_generation, \"lix_history()\".from_payload, \"lix_history()\".to_payload, \"lix_history()\".from_lixcol_schema_key, \"lix_history()\".to_lixcol_schema_key, \"lix_history()\".from_lixcol_file_id, \"lix_history()\".to_lixcol_file_id, \"lix_history()\".from_lixcol_metadata, \"lix_history()\".to_lixcol_metadata, \"lix_history()\".from_lixcol_created_at, \"lix_history()\".to_lixcol_created_at, \"lix_history()\".from_lixcol_updated_at, \"lix_history()\".to_lixcol_updated_at, \"lix_history()\".from_lixcol_global, \"lix_history()\".to_lixcol_global, \"lix_history()\".from_lixcol_change_id, \"lix_history()\".to_lixcol_change_id, \"lix_history()\".from_lixcol_commit_id, \"lix_history()\".to_lixcol_commit_id, \"lix_history()\".from_lixcol_untracked, \"lix_history()\".to_lixcol_untracked, \"lix_history()\".row_count, \"lix_history()\".lixcol_from_commit_id, \"lix_history()\".lixcol_to_commit_id, \"lix_history()\".lixcol_commit_created_at, \"lix_history()\".lixcol_commit_is_checkpoint, \"lix_history()\".lixcol_position.\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "rocksdb_publication_window_survives_sigkill_at_every_storage_event",
+      "suitePath": [
+        "lix_e2e::crash_consistency_qualification"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 300,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'rocksdb_publication_window_survives_sigkill_at_every_storage_event' (25903) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crash_consistency_qualification.rs:1059:9",
+      "stackText": "thread 'rocksdb_publication_window_survives_sigkill_at_every_storage_event' (25903) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crash_consistency_qualification.rs:1059:9:\nclean-close control failed before any kill was issued — the harness, not the crash, is the problem: history view unreadable after crash: code: LIX_COLUMN_NOT_FOUND\nmessage: sql2 DataFusion error: Schema error: No field named generation. Valid fields are \"lix_history()\".row_ref, \"lix_history()\".id, \"lix_history()\".diff_type, \"lix_history()\".from_generation, \"lix_history()\".to_generation, \"lix_history()\".from_payload, \"lix_history()\".to_payload, \"lix_history()\".from_lixcol_schema_key, \"lix_history()\".to_lixcol_schema_key, \"lix_history()\".from_lixcol_file_id, \"lix_history()\".to_lixcol_file_id, \"lix_history()\".from_lixcol_metadata, \"lix_history()\".to_lixcol_metadata, \"lix_history()\".from_lixcol_created_at, \"lix_history()\".to_lixcol_created_at, \"lix_history()\".from_lixcol_updated_at, \"lix_history()\".to_lixcol_updated_at, \"lix_history()\".from_lixcol_global, \"lix_history()\".to_lixcol_global, \"lix_history()\".from_lixcol_change_id, \"lix_history()\".to_lixcol_change_id, \"lix_history()\".from_lixcol_commit_id, \"lix_history()\".to_lixcol_commit_id, \"lix_history()\".from_lixcol_untracked, \"lix_history()\".to_lixcol_untracked, \"lix_history()\".row_count, \"lix_history()\".lixcol_from_commit_id, \"lix_history()\".lixcol_to_commit_id, \"lix_history()\".lixcol_commit_created_at, \"lix_history()\".lixcol_commit_is_checkpoint, \"lix_history()\".lixcol_position.\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest rocksdb_publication_window_survives_sigkill_at_every_storage_event ... FAILED\n\nfailures:\n\nfailures:\n    rocksdb_publication_window_survives_sigkill_at_every_storage_event\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.28s\n\n",
+      "stderr": "\nthread 'rocksdb_publication_window_survives_sigkill_at_every_storage_event' (25903) panicked at /home/runner/work/lix/lix/packages/e2e/tests/crash_consistency_qualification.rs:1059:9:\nclean-close control failed before any kill was issued — the harness, not the crash, is the problem: history view unreadable after crash: code: LIX_COLUMN_NOT_FOUND\nmessage: sql2 DataFusion error: Schema error: No field named generation. Valid fields are \"lix_history()\".row_ref, \"lix_history()\".id, \"lix_history()\".diff_type, \"lix_history()\".from_generation, \"lix_history()\".to_generation, \"lix_history()\".from_payload, \"lix_history()\".to_payload, \"lix_history()\".from_lixcol_schema_key, \"lix_history()\".to_lixcol_schema_key, \"lix_history()\".from_lixcol_file_id, \"lix_history()\".to_lixcol_file_id, \"lix_history()\".from_lixcol_metadata, \"lix_history()\".to_lixcol_metadata, \"lix_history()\".from_lixcol_created_at, \"lix_history()\".to_lixcol_created_at, \"lix_history()\".from_lixcol_updated_at, \"lix_history()\".to_lixcol_updated_at, \"lix_history()\".from_lixcol_global, \"lix_history()\".to_lixcol_global, \"lix_history()\".from_lixcol_change_id, \"lix_history()\".to_lixcol_change_id, \"lix_history()\".from_lixcol_commit_id, \"lix_history()\".to_lixcol_commit_id, \"lix_history()\".from_lixcol_untracked, \"lix_history()\".to_lixcol_untracked, \"lix_history()\".row_count, \"lix_history()\".lixcol_from_commit_id, \"lix_history()\".lixcol_to_commit_id, \"lix_history()\".lixcol_commit_created_at, \"lix_history()\".lixcol_commit_is_checkpoint, \"lix_history()\".lixcol_position.\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "rocksdb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen",
+      "suitePath": [
+        "lix_e2e::checkpoint_gc_replay_reopen"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 502,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'rocksdb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen' (25844) panicked at /home/runner/work/lix/lix/packages/e2e/tests/checkpoint_gc_replay_reopen.rs:78:10",
+      "stackText": "thread 'rocksdb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen' (25844) panicked at /home/runner/work/lix/lix/packages/e2e/tests/checkpoint_gc_replay_reopen.rs:78:10:\ncheckpoint-GC test thread should not panic: Any { .. }",
+      "stdout": "\nrunning 1 test\ntest rocksdb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen ... FAILED\n\nfailures:\n\nfailures:\n    rocksdb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.48s\n\n",
+      "stderr": "\nthread 'checkpoint-gc-replay' (25852) panicked at /home/runner/work/lix/lix/packages/e2e/tests/checkpoint_gc_replay_reopen.rs:312:10:\nread compacted checkpoint-GC history: LixError { code: \"LIX_COLUMN_NOT_FOUND\", message: \"sql2 DataFusion error: Schema error: No field named note. Valid fields are \\\"lix_history()\\\".row_ref, \\\"lix_history()\\\".id, \\\"lix_history()\\\".diff_type, \\\"lix_history()\\\".from_indexed_value, \\\"lix_history()\\\".to_indexed_value, \\\"lix_history()\\\".from_note, \\\"lix_history()\\\".to_note, \\\"lix_history()\\\".from_generation, \\\"lix_history()\\\".to_generation, \\\"lix_history()\\\".from_lixcol_schema_key, \\\"lix_history()\\\".to_lixcol_schema_key, \\\"lix_history()\\\".from_lixcol_file_id, \\\"lix_history()\\\".to_lixcol_file_id, \\\"lix_history()\\\".from_lixcol_metadata, \\\"lix_history()\\\".to_lixcol_metadata, \\\"lix_history()\\\".from_lixcol_created_at, \\\"lix_history()\\\".to_lixcol_created_at, \\\"lix_history()\\\".from_lixcol_updated_at, \\\"lix_history()\\\".to_lixcol_updated_at, \\\"lix_history()\\\".from_lixcol_global, \\\"lix_history()\\\".to_lixcol_global, \\\"lix_history()\\\".from_lixcol_change_id, \\\"lix_history()\\\".to_lixcol_change_id, \\\"lix_history()\\\".from_lixcol_commit_id, \\\"lix_history()\\\".to_lixcol_commit_id, \\\"lix_history()\\\".from_lixcol_untracked, \\\"lix_history()\\\".to_lixcol_untracked, \\\"lix_history()\\\".row_count, \\\"lix_history()\\\".lixcol_from_commit_id, \\\"lix_history()\\\".lixcol_to_commit_id, \\\"lix_history()\\\".lixcol_commit_created_at, \\\"lix_history()\\\".lixcol_commit_is_checkpoint, \\\"lix_history()\\\".lixcol_position.\", hint: None, details: None }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n\nthread 'rocksdb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen' (25844) panicked at /home/runner/work/lix/lix/packages/e2e/tests/checkpoint_gc_replay_reopen.rs:78:10:\ncheckpoint-GC test thread should not panic: Any { .. }\n"
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "slatedb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen",
+      "suitePath": [
+        "lix_e2e::checkpoint_gc_replay_reopen"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 549,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'slatedb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen' (25898) panicked at /home/runner/work/lix/lix/packages/e2e/tests/checkpoint_gc_replay_reopen.rs:78:10",
+      "stackText": "thread 'slatedb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen' (25898) panicked at /home/runner/work/lix/lix/packages/e2e/tests/checkpoint_gc_replay_reopen.rs:78:10:\ncheckpoint-GC test thread should not panic: Any { .. }",
+      "stdout": "\nrunning 1 test\ntest slatedb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen ... FAILED\n\nfailures:\n\nfailures:\n    slatedb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.52s\n\n",
+      "stderr": "\nthread 'checkpoint-gc-replay' (25901) panicked at /home/runner/work/lix/lix/packages/e2e/tests/checkpoint_gc_replay_reopen.rs:312:10:\nread compacted checkpoint-GC history: LixError { code: \"LIX_COLUMN_NOT_FOUND\", message: \"sql2 DataFusion error: Schema error: No field named note. Valid fields are \\\"lix_history()\\\".row_ref, \\\"lix_history()\\\".id, \\\"lix_history()\\\".diff_type, \\\"lix_history()\\\".from_indexed_value, \\\"lix_history()\\\".to_indexed_value, \\\"lix_history()\\\".from_note, \\\"lix_history()\\\".to_note, \\\"lix_history()\\\".from_generation, \\\"lix_history()\\\".to_generation, \\\"lix_history()\\\".from_lixcol_schema_key, \\\"lix_history()\\\".to_lixcol_schema_key, \\\"lix_history()\\\".from_lixcol_file_id, \\\"lix_history()\\\".to_lixcol_file_id, \\\"lix_history()\\\".from_lixcol_metadata, \\\"lix_history()\\\".to_lixcol_metadata, \\\"lix_history()\\\".from_lixcol_created_at, \\\"lix_history()\\\".to_lixcol_created_at, \\\"lix_history()\\\".from_lixcol_updated_at, \\\"lix_history()\\\".to_lixcol_updated_at, \\\"lix_history()\\\".from_lixcol_global, \\\"lix_history()\\\".to_lixcol_global, \\\"lix_history()\\\".from_lixcol_change_id, \\\"lix_history()\\\".to_lixcol_change_id, \\\"lix_history()\\\".from_lixcol_commit_id, \\\"lix_history()\\\".to_lixcol_commit_id, \\\"lix_history()\\\".from_lixcol_untracked, \\\"lix_history()\\\".to_lixcol_untracked, \\\"lix_history()\\\".row_count, \\\"lix_history()\\\".lixcol_from_commit_id, \\\"lix_history()\\\".lixcol_to_commit_id, \\\"lix_history()\\\".lixcol_commit_created_at, \\\"lix_history()\\\".lixcol_commit_is_checkpoint, \\\"lix_history()\\\".lixcol_position.\", hint: None, details: None }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n\nthread 'slatedb_checkpoint_gc_retains_replay_and_selected_owners_after_reopen' (25898) panicked at /home/runner/work/lix/lix/packages/e2e/tests/checkpoint_gc_replay_reopen.rs:78:10:\ncheckpoint-GC test thread should not panic: Any { .. }\n"
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "batch_idempotency_replays_all_results_after_slatedb_acknowledgement_loss",
+      "suitePath": [
+        "lix_e2e::server_protocol_durable_idempotency"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 29,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'batch_idempotency_replays_all_results_after_slatedb_acknowledgement_loss' (28981) panicked at /home/runner/work/lix/lix/packages/e2e/tests/server_protocol_durable_idempotency.rs:179:5",
+      "stackText": "thread 'batch_idempotency_replays_all_results_after_slatedb_acknowledgement_loss' (28981) panicked at /home/runner/work/lix/lix/packages/e2e/tests/server_protocol_durable_idempotency.rs:179:5:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest batch_idempotency_replays_all_results_after_slatedb_acknowledgement_loss ... FAILED\n\nfailures:\n\nfailures:\n    batch_idempotency_replays_all_results_after_slatedb_acknowledgement_loss\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.02s\n\n",
+      "stderr": "\nthread 'batch_idempotency_replays_all_results_after_slatedb_acknowledgement_loss' (28981) panicked at /home/runner/work/lix/lix/packages/e2e/tests/server_protocol_durable_idempotency.rs:179:5:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "idempotency_replays_a_slatedb_post_commit_acknowledgement_loss_once",
+      "suitePath": [
+        "lix_e2e::server_protocol_durable_idempotency"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 35,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'idempotency_replays_a_slatedb_post_commit_acknowledgement_loss_once' (28997) panicked at /home/runner/work/lix/lix/packages/e2e/tests/server_protocol_durable_idempotency.rs:179:5",
+      "stackText": "thread 'idempotency_replays_a_slatedb_post_commit_acknowledgement_loss_once' (28997) panicked at /home/runner/work/lix/lix/packages/e2e/tests/server_protocol_durable_idempotency.rs:179:5:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest idempotency_replays_a_slatedb_post_commit_acknowledgement_loss_once ... FAILED\n\nfailures:\n\nfailures:\n    idempotency_replays_a_slatedb_post_commit_acknowledgement_loss_once\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.02s\n\n",
+      "stderr": "\nthread 'idempotency_replays_a_slatedb_post_commit_acknowledgement_loss_once' (28997) panicked at /home/runner/work/lix/lix/packages/e2e/tests/server_protocol_durable_idempotency.rs:179:5:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "connected_api_routes_local_work_and_hot_reads_need_no_round_trip",
+      "suitePath": [
+        "lix_e2e::sync_mode"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 24,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'connected_api_routes_local_work_and_hot_reads_need_no_round_trip' (29023) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9",
+      "stackText": "thread 'connected_api_routes_local_work_and_hot_reads_need_no_round_trip' (29023) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest connected_api_routes_local_work_and_hot_reads_need_no_round_trip ... FAILED\n\nfailures:\n\nfailures:\n    connected_api_routes_local_work_and_hot_reads_need_no_round_trip\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.01s\n\n",
+      "stderr": "\nthread 'connected_api_routes_local_work_and_hot_reads_need_no_round_trip' (29023) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "delta_hydrates_external_blob_survivors_in_an_in_page_child",
+      "suitePath": [
+        "lix_e2e::sync_mode"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 27,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'delta_hydrates_external_blob_survivors_in_an_in_page_child' (29035) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9",
+      "stackText": "thread 'delta_hydrates_external_blob_survivors_in_an_in_page_child' (29035) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest delta_hydrates_external_blob_survivors_in_an_in_page_child ... FAILED\n\nfailures:\n\nfailures:\n    delta_hydrates_external_blob_survivors_in_an_in_page_child\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.01s\n\n",
+      "stderr": "\nthread 'delta_hydrates_external_blob_survivors_in_an_in_page_child' (29035) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "delta_hydrates_only_final_hot_blob_payloads_after_large_churn",
+      "suitePath": [
+        "lix_e2e::sync_mode"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 38,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'delta_hydrates_only_final_hot_blob_payloads_after_large_churn' (29043) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9",
+      "stackText": "thread 'delta_hydrates_only_final_hot_blob_payloads_after_large_churn' (29043) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest delta_hydrates_only_final_hot_blob_payloads_after_large_churn ... FAILED\n\nfailures:\n\nfailures:\n    delta_hydrates_only_final_hot_blob_payloads_after_large_churn\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.02s\n\n",
+      "stderr": "\nthread 'delta_hydrates_only_final_hot_blob_payloads_after_large_churn' (29043) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "local_writes_checkpoints_and_folder_moves_survive_offline_reopen",
+      "suitePath": [
+        "lix_e2e::sync_mode"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 29,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'local_writes_checkpoints_and_folder_moves_survive_offline_reopen' (29097) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9",
+      "stackText": "thread 'local_writes_checkpoints_and_folder_moves_survive_offline_reopen' (29097) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest local_writes_checkpoints_and_folder_moves_survive_offline_reopen ... FAILED\n\nfailures:\n\nfailures:\n    local_writes_checkpoints_and_folder_moves_survive_offline_reopen\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.02s\n\n",
+      "stderr": "\nthread 'local_writes_checkpoints_and_folder_moves_survive_offline_reopen' (29097) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "selected_all_checkpoint_from_uncheckpointed_authority_survives_reconnect",
+      "suitePath": [
+        "lix_e2e::sync_mode"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 33,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'selected_all_checkpoint_from_uncheckpointed_authority_survives_reconnect' (29136) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:1544:10",
+      "stackText": "thread 'selected_all_checkpoint_from_uncheckpointed_authority_survives_reconnect' (29136) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:1544:10:\ncalled `Result::unwrap()` on an `Err` value: LixError { code: \"LIX_ERROR_UNKNOWN\", message: \"sql2 DataFusion error: Error during planning: Invalid function 'lix_latest_checkpoint_commit_id'.\\nDid you mean 'lix_active_branch_commit_id'?\", hint: None, details: None }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest selected_all_checkpoint_from_uncheckpointed_authority_survives_reconnect ... FAILED\n\nfailures:\n\nfailures:\n    selected_all_checkpoint_from_uncheckpointed_authority_survives_reconnect\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.02s\n\n",
+      "stderr": "\nthread 'selected_all_checkpoint_from_uncheckpointed_authority_survives_reconnect' (29136) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:1544:10:\ncalled `Result::unwrap()` on an `Err` value: LixError { code: \"LIX_ERROR_UNKNOWN\", message: \"sql2 DataFusion error: Error during planning: Invalid function 'lix_latest_checkpoint_commit_id'.\\nDid you mean 'lix_active_branch_commit_id'?\", hint: None, details: None }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "selected_subset_checkpoint_from_uncheckpointed_authority_survives_reconnect",
+      "suitePath": [
+        "lix_e2e::sync_mode"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 35,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'selected_subset_checkpoint_from_uncheckpointed_authority_survives_reconnect' (29168) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:1544:10",
+      "stackText": "thread 'selected_subset_checkpoint_from_uncheckpointed_authority_survives_reconnect' (29168) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:1544:10:\ncalled `Result::unwrap()` on an `Err` value: LixError { code: \"LIX_ERROR_UNKNOWN\", message: \"sql2 DataFusion error: Error during planning: Invalid function 'lix_latest_checkpoint_commit_id'.\\nDid you mean 'lix_active_branch_commit_id'?\", hint: None, details: None }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest selected_subset_checkpoint_from_uncheckpointed_authority_survives_reconnect ... FAILED\n\nfailures:\n\nfailures:\n    selected_subset_checkpoint_from_uncheckpointed_authority_survives_reconnect\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.02s\n\n",
+      "stderr": "\nthread 'selected_subset_checkpoint_from_uncheckpointed_authority_survives_reconnect' (29168) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:1544:10:\ncalled `Result::unwrap()` on an `Err` value: LixError { code: \"LIX_ERROR_UNKNOWN\", message: \"sql2 DataFusion error: Error during planning: Invalid function 'lix_latest_checkpoint_commit_id'.\\nDid you mean 'lix_active_branch_commit_id'?\", hint: None, details: None }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "stale_pending_branch_resets_to_server_without_conflicts",
+      "suitePath": [
+        "lix_e2e::sync_mode"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 31,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'stale_pending_branch_resets_to_server_without_conflicts' (29221) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9",
+      "stackText": "thread 'stale_pending_branch_resets_to_server_without_conflicts' (29221) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest stale_pending_branch_resets_to_server_without_conflicts ... FAILED\n\nfailures:\n\nfailures:\n    stale_pending_branch_resets_to_server_without_conflicts\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.01s\n\n",
+      "stderr": "\nthread 'stale_pending_branch_resets_to_server_without_conflicts' (29221) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "sync_runtime_outlives_the_primary_session",
+      "suitePath": [
+        "lix_e2e::sync_mode"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 27,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'sync_runtime_outlives_the_primary_session' (29232) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9",
+      "stackText": "thread 'sync_runtime_outlives_the_primary_session' (29232) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest sync_runtime_outlives_the_primary_session ... FAILED\n\nfailures:\n\nfailures:\n    sync_runtime_outlives_the_primary_session\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.01s\n\n",
+      "stderr": "\nthread 'sync_runtime_outlives_the_primary_session' (29232) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "two_clients_receive_remote_writes_through_a_held_long_poll",
+      "suitePath": [
+        "lix_e2e::sync_mode"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 30,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'two_clients_receive_remote_writes_through_a_held_long_poll' (29262) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9",
+      "stackText": "thread 'two_clients_receive_remote_writes_through_a_held_long_poll' (29262) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest two_clients_receive_remote_writes_through_a_held_long_poll ... FAILED\n\nfailures:\n\nfailures:\n    two_clients_receive_remote_writes_through_a_held_long_poll\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.02s\n\n",
+      "stderr": "\nthread 'two_clients_receive_remote_writes_through_a_held_long_poll' (29262) panicked at /home/runner/work/lix/lix/packages/e2e/tests/sync_mode.rs:2026:9:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "rust-nextest-junit-e2e/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 1,
+      "attemptIndex": 0,
+      "displayName": "same_base_server_protocol_plugin_updates_conflict_then_retry",
+      "suitePath": [
+        "lix_e2e::server_protocol_plugin_convergence"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 62,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'same_base_server_protocol_plugin_updates_conflict_then_retry' (28998) panicked at /home/runner/work/lix/lix/packages/e2e/tests/server_protocol_plugin_convergence.rs:167:5",
+      "stackText": "thread 'same_base_server_protocol_plugin_updates_conflict_then_retry' (28998) panicked at /home/runner/work/lix/lix/packages/e2e/tests/server_protocol_plugin_convergence.rs:167:5:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest same_base_server_protocol_plugin_updates_conflict_then_retry ... FAILED\n\nfailures:\n\nfailures:\n    same_base_server_protocol_plugin_updates_conflict_then_retry\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'same_base_server_protocol_plugin_updates_conflict_then_retry' (28998) panicked at /home/runner/work/lix/lix/packages/e2e/tests/server_protocol_plugin_convergence.rs:167:5:\nassertion `left == right` failed\n  left: 426\n right: 200\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    }
+  ]
+}

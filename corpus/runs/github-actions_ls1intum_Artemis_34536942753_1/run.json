@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ls1intum/Artemis:34536942753:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ls1intum/Artemis",
+    "providerRunId": "34536942753",
+    "runAttempt": 1,
+    "url": "https://github.com/ls1intum/Artemis/actions/runs/34536942753",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "f5842b2606ae9cb728eb709bbe241e6b62cf5673",
+    "headBranch": "feature/exam-mode/add-simulation-exam-to-test-exam",
+    "artifactIds": [
+      "10177003125",
+      "10177090521",
+      "10175990258",
+      "10175968286",
+      "10176065699",
+      "10176014236",
+      "10175989225",
+      "10176000800",
+      "10176088836"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:12:49.329Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 34123,
+    "failures": 2,
+    "passed": 34003,
+    "skipped": 118,
+    "filesParsed": 1221,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 2516
+    },
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 11
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "JUnit Test Results/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Course overview tabs › Exams tab lists an exam the student is registered for",
+      "suitePath": [
+        "e2e/course/CourseTabs.spec.ts"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 23387,
+      "errorType": "expect.toHaveLength",
+      "message": "entering exams must load its data exactly once: [\"https://artemis-nginx/api/exam/courses/9056/exams-for-overview\",\"https://artemis-nginx/api/exam/courses/9056/exams-for-overview\"]",
+      "stackText": "\n  [fast-tests] › e2e/course/CourseTabs.spec.ts:139:9 › Course overview tabs › Exams tab lists an exam the student is registered for @fast \n\n    Error: entering exams must load its data exactly once: [\"https://artemis-nginx/api/exam/courses/9056/exams-for-overview\",\"https://artemis-nginx/api/exam/courses/9056/exams-for-overview\"]\n\n    expect(received).toHaveLength(expected)\n\n    Expected length: 1\n    Received length: 2\n    Received array:  [\"https://artemis-nginx/api/exam/courses/9056/exams-for-overview\", \"https://artemis-nginx/api/exam/courses/9056/exams-for-overview\"]\n\n      69 |     // Settle before counting, so a second request that is on its way is counted rather than missed\n      70 |     await page.waitForTimeout(1500);\n    > 71 |     expect(requests, `entering ${tab} must load its data exactly once: ${JSON.stringify(requests)}`).toHaveLength(1);\n         |                                                                                                      ^\n      72 |\n      73 |     await selectTab(page, courseId, tab);\n      74 |     await expect.poll(() => requests.length, { message: `re-selecting ${tab} must refresh it`, timeout: 20_000 }).toBeGreaterThan(1);\n        at expectLoadsOnceAndRefreshesOnReselect (/app/artemis/src/test/playwright/e2e/course/CourseTabs.spec.ts:71:102)\n        at /app/artemis/src/test/playwright/e2e/course/CourseTabs.spec.ts:154:9\n\n    Error Context: test-results/e2e-course-CourseTabs-Cour-68122-e-student-is-registered-for-fast-tests/error-context.md\n\n    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────\n\n    Error: entering exams must load its data exactly once: [\"https://artemis-nginx/api/exam/courses/9060/exams-for-overview\",\"https://artemis-nginx/api/exam/courses/9060/exams-for-overview\",\"https://artemis-nginx/api/exam/courses/9060/exams-for-overview\"]\n\n    expect(received).toHaveLength(expected)\n\n    Expected length: 1\n    Received length: 3\n    Received array:  [\"https://artemis-nginx/api/exam/courses/9060/exams-for-overview\", \"https://artemis-nginx/api/exam/courses/9060/exams-for-overview\", \"https://artemis-nginx/api/exam/courses/9060/exams-for-overview\"]\n\n      69 |     // Settle before counting, so a second request that is on its way is counted rather than missed\n      70 |     await page.waitForTimeout(1500);\n    > 71 |     expect(requests, `entering ${tab} must load its data exactly once: ${JSON.stringify(requests)}`).toHaveLength(1);\n         |                                                                                                      ^\n      72 |\n      73 |     await selectTab(page, courseId, tab);\n      74 |     await expect.poll(() => requests.length, { message: `re-selecting ${tab} must refresh it`, timeout: 20_000 }).toBeGreaterThan(1);\n        at expectLoadsOnceAndRefreshesOnReselect (/app/artemis/src/test/playwright/e2e/course/CourseTabs.spec.ts:71:102)\n        at /app/artemis/src/test/playwright/e2e/course/CourseTabs.spec.ts:154:9\n\n    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────\n    test-results/e2e-course-CourseTabs-Cour-68122-e-student-is-registered-for-fast-tests-retry1/video.webm\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n    Error Context: test-results/e2e-course-CourseTabs-Cour-68122-e-student-is-registered-for-fast-tests-retry1/error-context.md\n\n    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────\n    test-results/e2e-course-CourseTabs-Cour-68122-e-student-is-registered-for-fast-tests-retry1/trace.zip\n    Usage:\n\n        pnpm exec playwright show-trace test-results/e2e-course-CourseTabs-Cour-68122-e-student-is-registered-for-fast-tests-retry1/trace.zip\n\n    ────────────────────────────────────────────────────────────────────────────────────────────────\n\n",
+      "stdout": "\n\n[[ATTACHMENT|../test-results/e2e-course-CourseTabs-Cour-68122-e-student-is-registered-for-fast-tests/error-context.md]]\n[prewarm] skipping chunk warm — admin JWT not available\n\n[[ATTACHMENT|../test-results/e2e-course-CourseTabs-Cour-68122-e-student-is-registered-for-fast-tests-retry1/video.webm]]\n\n[[ATTACHMENT|../test-results/e2e-course-CourseTabs-Cour-68122-e-student-is-registered-for-fast-tests-retry1/error-context.md]]\n\n[[ATTACHMENT|../test-results/e2e-course-CourseTabs-Cour-68122-e-student-is-registered-for-fast-tests-retry1/trace.zip]]\n\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.core.DatabaseQueryCountTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "testExamQueryCount()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.core.DatabaseQueryCountTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 236,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "org.opentest4j.AssertionFailedError: Expected at most <6> queries, but <9> were performed.",
+      "stackText": "org.opentest4j.AssertionFailedError: Expected at most <6> queries, but <9> were performed.\n\tat de.tum.cit.aet.artemis.core.DatabaseQueryCountTest.testExamQueryCount(DatabaseQueryCountTest.java:92)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

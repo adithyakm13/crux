@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:labsai/EDDI:34128037471:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "labsai/EDDI",
+    "providerRunId": "34128037471",
+    "runAttempt": 1,
+    "url": "https://github.com/labsai/EDDI/actions/runs/34128037471",
+    "workflowName": "CI/CD",
+    "event": "pull_request",
+    "headSha": "699476d46a1e1a5445b5b870335a54ac0002abef",
+    "headBranch": "chore/ubi10-base-image",
+    "artifactIds": [
+      "10021124374"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:03:28.675Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 21442,
+    "failures": 2,
+    "passed": 21437,
+    "skipped": 3,
+    "filesParsed": 945,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.engine.audit.AuditDeadLetterImageProvisioningTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "imageProvisionsTheDefaultDeadLetterDirectory",
+      "suitePath": [
+        "ai.labs.eddi.engine.audit.AuditDeadLetterImageProvisioningTest",
+        "audit dead-letter sink — container image provisioning"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "the image must create /opt/eddi/data — the runtime user cannot create it under /opt itself ==> expected: <true> but was: <false>",
+      "stackText": "org.opentest4j.AssertionFailedError: the image must create /opt/eddi/data — the runtime user cannot create it under /opt itself ==> expected: <true> but was: <false>\n\tat org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:232)\n\tat ai.labs.eddi.engine.audit.AuditDeadLetterImageProvisioningTest.imageProvisionsTheDefaultDeadLetterDirectory(AuditDeadLetterImageProvisioningTest.java:71)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.engine.audit.AuditDeadLetterImageProvisioningTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "directoryIsCreatedWhileStillRoot",
+      "suitePath": [
+        "ai.labs.eddi.engine.audit.AuditDeadLetterImageProvisioningTest",
+        "audit dead-letter sink — container image provisioning"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 1,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "the mkdir must come after USER root ==> expected: <true> but was: <false>",
+      "stackText": "org.opentest4j.AssertionFailedError: the mkdir must come after USER root ==> expected: <true> but was: <false>\n\tat org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:232)\n\tat ai.labs.eddi.engine.audit.AuditDeadLetterImageProvisioningTest.directoryIsCreatedWhileStillRoot(AuditDeadLetterImageProvisioningTest.java:116)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

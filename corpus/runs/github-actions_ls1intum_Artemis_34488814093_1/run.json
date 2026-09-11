@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ls1intum/Artemis:34488814093:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ls1intum/Artemis",
+    "providerRunId": "34488814093",
+    "runAttempt": 1,
+    "url": "https://github.com/ls1intum/Artemis/actions/runs/34488814093",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "ce0feaafa4a17466310e2cae1cc76383d8695cc8",
+    "headBranch": "feature/atlas-ai-provenance",
+    "artifactIds": [
+      "10159386142",
+      "10157999854",
+      "10157477914",
+      "10157460851",
+      "10157533694",
+      "10157354201",
+      "10157720649",
+      "10157757918",
+      "10157465601"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:20:43.482Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 34105,
+    "failures": 1,
+    "passed": 33986,
+    "skipped": 118,
+    "filesParsed": 1224,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 2515
+    },
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 12
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Server JUnit Test Results (Remaining)/TEST-de.tum.cit.aet.artemis.atlas.architecture.AtlasRepositoryArchitectureTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "testNoClassLevelTransactional()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.atlas.architecture.AtlasRepositoryArchitectureTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 10,
+      "errorType": "java.lang.AssertionError",
+      "message": "java.lang.AssertionError: Architecture Violation [Priority: MEDIUM] - Rule 'no classes that reside in a package 'de.tum.cit.aet.artemis.atlas..' and are not annotated with @Repository should be annotated with Annotation with simple name Transactional, because a class-level boundary makes every method of the class transactional, which is never what a service or controller needs' was violated (1 times):\nClass <de.tum.cit.aet.artemis.atlas.competency.AiGeneratedProvenanceIntegrationTest> is annotated with Annotation with simple name Transactional in (AiGeneratedProvenanceIntegrationTest.java:0)",
+      "stackText": "java.lang.AssertionError: Architecture Violation [Priority: MEDIUM] - Rule 'no classes that reside in a package 'de.tum.cit.aet.artemis.atlas..' and are not annotated with @Repository should be annotated with Annotation with simple name Transactional, because a class-level boundary makes every method of the class transactional, which is never what a service or controller needs' was violated (1 times):\nClass <de.tum.cit.aet.artemis.atlas.competency.AiGeneratedProvenanceIntegrationTest> is annotated with Annotation with simple name Transactional in (AiGeneratedProvenanceIntegrationTest.java:0)\n\tat com.tngtech.archunit.lang.ArchRule$Assertions.assertNoViolation(ArchRule.java:94)\n\tat com.tngtech.archunit.lang.ArchRule$Assertions.check(ArchRule.java:86)\n\tat com.tngtech.archunit.lang.ArchRule$Factory$SimpleArchRule.check(ArchRule.java:165)\n\tat de.tum.cit.aet.artemis.shared.architecture.module.AbstractModuleRepositoryArchitectureTest.testNoClassLevelTransactional(AbstractModuleRepositoryArchitectureTest.java:170)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

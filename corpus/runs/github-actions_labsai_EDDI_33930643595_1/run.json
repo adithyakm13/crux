@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:labsai/EDDI:33930643595:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "labsai/EDDI",
+    "providerRunId": "33930643595",
+    "runAttempt": 1,
+    "url": "https://github.com/labsai/EDDI/actions/runs/33930643595",
+    "workflowName": "CI/CD",
+    "event": "pull_request",
+    "headSha": "d2928b00db57be5824d3ee9fb5845a46bda49a1c",
+    "headBranch": "fix/review-quality-gates",
+    "artifactIds": [
+      "9958723059",
+      "9958528840"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:08:34.143Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 21007,
+    "failures": 2,
+    "passed": 21000,
+    "skipped": 5,
+    "filesParsed": 980,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.postgres.PostgresAgentEngineIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "checkSecondTimeWordInput",
+      "suitePath": [
+        "ai.labs.eddi.integration.postgres.PostgresAgentEngineIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nJSON path conversationSteps doesn't match.\nExpected: a collection with size <3>\n  Actual: <[{conversationStep=[{key=actions, value=[CONVERSATION_START, welcome], timestamp=1788566503091}, {key=output:text:welcome, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566503093}, {key=output:text:welcome:preTemplated, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566503100}, {key=output:text:welcome:postTemplated, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566503100}], timestamp=1788566503100}, {conversationStep=[{key=input:initial, value=hello, timestamp=1788566503430, originWorkflowId=68833f2f-6421-4668-aa01-a15be19569d6}, {key=actions, value=[greet], timestamp=1788566503432, originWorkflowId=68833f2f-6421-4668-aa01-a15be19569d6}, {key=output:text:greet, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566503433, originWorkflowId=68833f2f-6421-4668-aa01-a15be19569d6}, {key=output:text:greet:preTemplated, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566503434, originWorkflowId=68833f2f-6421-4668-aa01-a15be19569d6}, {key=output:text:greet:postTemplated, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566503434, originWorkflowId=68833f2f-6421-4668-aa01-a15be19569d6}], timestamp=1788566503434}]>\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nJSON path conversationSteps doesn't match.\nExpected: a collection with size <3>\n  Actual: <[{conversationStep=[{key=actions, value=[CONVERSATION_START, welcome], timestamp=1788566503091}, {key=output:text:welcome, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566503093}, {key=output:text:welcome:preTemplated, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566503100}, {key=output:text:welcome:postTemplated, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566503100}], timestamp=1788566503100}, {conversationStep=[{key=input:initial, value=hello, timestamp=1788566503430, originWorkflowId=68833f2f-6421-4668-aa01-a15be19569d6}, {key=actions, value=[greet], timestamp=1788566503432, originWorkflowId=68833f2f-6421-4668-aa01-a15be19569d6}, {key=output:text:greet, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566503433, originWorkflowId=68833f2f-6421-4668-aa01-a15be19569d6}, {key=output:text:greet:preTemplated, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566503434, originWorkflowId=68833f2f-6421-4668-aa01-a15be19569d6}, {key=output:text:greet:postTemplated, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566503434, originWorkflowId=68833f2f-6421-4668-aa01-a15be19569d6}], timestamp=1788566503434}]>\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:274)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.selectMethod(IndyInterface.java:373)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:121)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\n\tat ai.labs.eddi.integration.AgentEngineIT.checkSecondTimeWordInput(AgentEngineIT.java:129)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1005)\n\tat io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:852)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n      2026-09-05 00:01:29 WARN  [io.qua.sma.openapi]] (build-2) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-05 00:01:29 WARN  [io.qua.sma.openapi]] (build-2) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-05 00:01:29 WARN  [io.qua.sma.openapi]] (build-2) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-05 00:01:29 WARN  [io.qua.sma.openapi]] (build-2) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-05 00:01:37 WARN  [io.qua.sma.openapi]] (build-7) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-05 00:01:37 WARN  [io.qua.sma.openapi]] (build-7) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-05 00:01:37 WARN  [io.qua.sma.openapi]] (build-7) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-05 00:01:37 WARN  [io.qua.sma.openapi]] (build-7) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-05 00:01:41 WARN  [org.hib.val.int.met.agg.CascadingMetaDataBuilder]] (main) HV000271: Using `@Valid` on a container (java.util.List) is deprecated. You should apply the annotation on the type argument(s). Affected element: DiscussRequest#ai.labs.eddi.engine.api.IRestGroupConversation$DiscussRequest(String, String, List)\n2026-09-05 00:01:41 WARN  [org.hib.val.int.met.agg.CascadingMetaDataBuilder]] (main) HV000271: Using `@Valid` on a container (java.util.List) is deprecated. You should apply the annotation on the type argument(s). Affected element: attachments\n2026-09-05 00:01:41 WARN  [org.hib.val.int.met.agg.CascadingMetaDataBuilder]] (main) HV000271: Using `@Valid` on a container (java.util.List) is deprecated. You should apply the annotation on the type argument(s). Affected element: DiscussRequest#attachments()\nREADY\nREADY\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.postgres.PostgresAgentEngineIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "checkSecondTimeWordInput",
+      "suitePath": [
+        "ai.labs.eddi.integration.postgres.PostgresAgentEngineIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 122,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nJSON path conversationSteps doesn't match.\nExpected: a collection with size <3>\n  Actual: <[{conversationStep=[{key=actions, value=[CONVERSATION_START, welcome], timestamp=1788566354946}, {key=output:text:welcome, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566354946}, {key=output:text:welcome:preTemplated, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566354946}, {key=output:text:welcome:postTemplated, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566354946}], timestamp=1788566354946}, {conversationStep=[{key=input:initial, value=hello, timestamp=1788566355035, originWorkflowId=2501adef-a462-4a46-afa7-81d1e87e9e37}, {key=actions, value=[greet], timestamp=1788566355036, originWorkflowId=2501adef-a462-4a46-afa7-81d1e87e9e37}, {key=output:text:greet, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566355037, originWorkflowId=2501adef-a462-4a46-afa7-81d1e87e9e37}, {key=output:text:greet:preTemplated, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566355038, originWorkflowId=2501adef-a462-4a46-afa7-81d1e87e9e37}, {key=output:text:greet:postTemplated, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566355038, originWorkflowId=2501adef-a462-4a46-afa7-81d1e87e9e37}], timestamp=1788566355038}]>\n",
+      "stackText": "java.lang.AssertionError: \n1 expectation failed.\nJSON path conversationSteps doesn't match.\nExpected: a collection with size <3>\n  Actual: <[{conversationStep=[{key=actions, value=[CONVERSATION_START, welcome], timestamp=1788566354946}, {key=output:text:welcome, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566354946}, {key=output:text:welcome:preTemplated, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566354946}, {key=output:text:welcome:postTemplated, value={text=Welcome! I am E.D.D.I., type=text, delay=0}, timestamp=1788566354946}], timestamp=1788566354946}, {conversationStep=[{key=input:initial, value=hello, timestamp=1788566355035, originWorkflowId=2501adef-a462-4a46-afa7-81d1e87e9e37}, {key=actions, value=[greet], timestamp=1788566355036, originWorkflowId=2501adef-a462-4a46-afa7-81d1e87e9e37}, {key=output:text:greet, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566355037, originWorkflowId=2501adef-a462-4a46-afa7-81d1e87e9e37}, {key=output:text:greet:preTemplated, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566355038, originWorkflowId=2501adef-a462-4a46-afa7-81d1e87e9e37}, {key=output:text:greet:postTemplated, value={type=text, text=Hi there! Nice to meet up! :-), delay=0}, timestamp=1788566355038, originWorkflowId=2501adef-a462-4a46-afa7-81d1e87e9e37}], timestamp=1788566355038}]>\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:274)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.selectMethod(IndyInterface.java:373)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:121)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\n\tat ai.labs.eddi.integration.AgentEngineIT.checkSecondTimeWordInput(AgentEngineIT.java:129)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1005)\n\tat io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:852)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

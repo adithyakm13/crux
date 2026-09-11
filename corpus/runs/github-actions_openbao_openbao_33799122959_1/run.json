@@ -1,0 +1,2782 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:openbao/openbao:33799122959:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "openbao/openbao",
+    "providerRunId": "33799122959",
+    "runAttempt": 1,
+    "url": "https://github.com/openbao/openbao/actions/runs/33799122959",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "88ec4c79bb09866480c3b2baa1381e7108ca0e55",
+    "headBranch": "file-only-migrate",
+    "artifactIds": [
+      "9910535714",
+      "9910576373",
+      "9910536406",
+      "9910662120",
+      "9910722738",
+      "9910580569",
+      "9910728009",
+      "9910759526",
+      "9910543368",
+      "9910602995",
+      "9910541370",
+      "9910679127",
+      "9910644385",
+      "9910582444",
+      "9910756745",
+      "9910597615",
+      "9910649604",
+      "9910691807",
+      "9910792374",
+      "9910947867",
+      "9910734141",
+      "9910603659",
+      "9910869664",
+      "9910618134",
+      "9910584252",
+      "9910633481",
+      "9910677087",
+      "9910605123",
+      "9910604718",
+      "9910979580",
+      "9911003749",
+      "9910705118",
+      "9910832715"
+    ],
+    "licenseSpdx": "MPL-2.0",
+    "licenseRaw": "MPL-2.0",
+    "retrievedAt": "2026-09-11T09:33:54.851Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 11875,
+    "failures": 143,
+    "passed": 11646,
+    "skipped": 86,
+    "filesParsed": 33,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestMigration/Default",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestMigration/Default\n--- FAIL: TestMigration/Default (0.00s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestMigration",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestMigration\n--- FAIL: TestMigration (0.00s)\npanic: runtime error: invalid memory address or nil pointer dereference [recovered, repanicked]\n[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x388178f]\n\ngoroutine 73658 [running]:\ntesting.tRunner.func1.2({0x721c150, 0x787e2b0})\n\t/opt/hostedtoolcache/go/1.27.0/x64/src/testing/testing.go:2123 +0x232\ntesting.tRunner.func1()\n\t/opt/hostedtoolcache/go/1.27.0/x64/src/testing/testing.go:2126 +0x329\npanic({0x721c150?, 0x787e2b0?})\n\t/opt/hostedtoolcache/go/1.27.0/x64/src/runtime/panic.go:859 +0x125\ngithub.com/openbao/openbao/v2/internal/command.TestMigration.func1(0xceee6169688)\n\t/home/runner/work/openbao/openbao/internal/command/operator_migrate_test.go:43 +0xcf\ntesting.tRunner(0xceee6169688, 0x7861ae0)\n\t/opt/hostedtoolcache/go/1.27.0/x64/src/testing/testing.go:2193 +0xea\ncreated by testing.(*T).Run in goroutine 73657\n\t/opt/hostedtoolcache/go/1.27.0/x64/src/testing/testing.go:2258 +0x4d4\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestAuthEnableCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthEnableCommand_Run\n=== PAUSE TestAuthEnableCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteCommand_Run\n=== PAUSE TestDeleteCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceLookupCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceLookupCommand_Run\n=== PAUSE TestNamespaceLookupCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestWrapTokenOnly",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestWrapTokenOnly\n=== PAUSE TestWrapTokenOnly\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestWrapNoStore",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestWrapNoStore\n=== PAUSE TestWrapNoStore\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestCommunicationFailure",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCommunicationFailure\n=== PAUSE TestCommunicationFailure\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestArgWarnings",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestArgWarnings\n=== PAUSE TestArgWarnings\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_Paths",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_Paths\n=== PAUSE TestPredict_Paths\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestPadEqualSigns",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPadEqualSigns\n=== PAUSE TestPadEqualSigns\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestLeaseLookupCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLeaseLookupCommand_Run\n=== PAUSE TestLeaseLookupCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestCustomPath",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCustomPath\n=== PAUSE TestCustomPath\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestAuthMoveCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthMoveCommand_Run\n=== PAUSE TestAuthMoveCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestAuthTuneCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthTuneCommand_Run\n=== PAUSE TestAuthTuneCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_Audits",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_Audits\n=== PAUSE TestPredict_Audits\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_Mounts",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_Mounts\n=== PAUSE TestPredict_Mounts\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_Plugins",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_Plugins\n=== PAUSE TestPredict_Plugins\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0019",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_Policies",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_Policies\n=== PAUSE TestPredict_Policies\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0020",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestMonitorCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestMonitorCommand_Run\n=== PAUSE TestMonitorCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0021",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceListCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceListCommand_Run\n=== PAUSE TestNamespaceListCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0022",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestAuditListCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuditListCommand_Run\n=== PAUSE TestAuditListCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0023",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceScanCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceScanCommand_Run\n=== PAUSE TestNamespaceScanCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0024",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestTokenOnly",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestTokenOnly\n=== PAUSE TestTokenOnly\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0025",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNoTabs",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNoTabs\n=== PAUSE TestNoTabs\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0026",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestLoginMFATwoPhase",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLoginMFATwoPhase\n=== PAUSE TestLoginMFATwoPhase\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0027",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestOperatorGenerateRootCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestOperatorGenerateRootCommand_Run\n=== PAUSE TestOperatorGenerateRootCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0028",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestOperatorInitCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestOperatorInitCommand_Run\n=== PAUSE TestOperatorInitCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0029",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestAuthListCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthListCommand_Run\n=== PAUSE TestAuthListCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0030",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestLoginMFATwoPhaseNonInteractiveMethodName",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLoginMFATwoPhaseNonInteractiveMethodName\n=== PAUSE TestLoginMFATwoPhaseNonInteractiveMethodName\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0031",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestAuthHelpCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthHelpCommand_Run\n=== PAUSE TestAuthHelpCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0032",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_CaptureTargets",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_CaptureTargets\n=== PAUSE TestDebugCommand_CaptureTargets\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0033",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestKVGetCommand",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestKVGetCommand\n=== PAUSE TestKVGetCommand\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0034",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceUnsealCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceUnsealCommand_Run\n=== PAUSE TestNamespaceUnsealCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0035",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestParseFlagFile",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestParseFlagFile\n=== PAUSE TestParseFlagFile\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0036",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_IndexFile",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_IndexFile\n=== PAUSE TestDebugCommand_IndexFile\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0037",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_NoConnection",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_NoConnection\n=== PAUSE TestDebugCommand_NoConnection\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0038",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_OutputExists",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_OutputExists\n=== PAUSE TestDebugCommand_OutputExists\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0039",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNoStore",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNoStore\n=== PAUSE TestNoStore\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0040",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestAuditDisableCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuditDisableCommand_Run\n=== PAUSE TestAuditDisableCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0041",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestListCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListCommand_Run\n=== PAUSE TestListCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0042",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNamespacePatchCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespacePatchCommand_Run\n=== PAUSE TestNamespacePatchCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0043",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceSealCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceSealCommand_Run\n=== PAUSE TestNamespaceSealCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0044",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestStores",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestStores\n=== PAUSE TestStores\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0045",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestAuditEnableCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuditEnableCommand_Run\n=== PAUSE TestAuditEnableCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0046",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_HasPathArg",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_HasPathArg\n=== PAUSE TestPredict_HasPathArg\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0047",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestLeaseRevokeCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLeaseRevokeCommand_Run\n=== PAUSE TestLeaseRevokeCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0048",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_Archive",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_Archive\n=== PAUSE TestDebugCommand_Archive\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0049",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestLeaseRenewCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLeaseRenewCommand_Run\n=== PAUSE TestLeaseRenewCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0050",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestFailureNoStore",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestFailureNoStore\n=== PAUSE TestFailureNoStore\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0051",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestOperatorKeyStatusCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestOperatorKeyStatusCommand_Run\n=== PAUSE TestOperatorKeyStatusCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0052",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestAuthCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthCommand_Run\n=== PAUSE TestAuthCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0053",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestParseArgsData",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestParseArgsData\n=== PAUSE TestParseArgsData\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0054",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_Run\n=== PAUSE TestDebugCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0055",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_InsecureUmask",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_InsecureUmask\n=== PAUSE TestDebugCommand_InsecureUmask\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0056",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestWrapAutoUnwrap",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestWrapAutoUnwrap\n=== PAUSE TestWrapAutoUnwrap\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0057",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestOperatorDiagnoseCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestOperatorDiagnoseCommand_Run\n=== PAUSE TestOperatorDiagnoseCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0058",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_ListPaths",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_ListPaths\n=== PAUSE TestPredict_ListPaths\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0059",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestKVPutCommand",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestKVPutCommand\n=== PAUSE TestKVPutCommand\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0060",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestKVPatchCommand_ArgValidation",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestKVPatchCommand_ArgValidation\n=== PAUSE TestKVPatchCommand_ArgValidation\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0061",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceSealStatusCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceSealStatusCommand_Run\n=== PAUSE TestNamespaceSealStatusCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0062",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestTruncateToSeconds",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestTruncateToSeconds\n=== PAUSE TestTruncateToSeconds\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0063",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestKVMetadataGetCommand",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestKVMetadataGetCommand\n=== PAUSE TestKVMetadataGetCommand\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0064",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestLoginMFASinglePhase",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLoginMFASinglePhase\n=== PAUSE TestLoginMFASinglePhase\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0065",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceCreateCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceCreateCommand_Run\n=== PAUSE TestNamespaceCreateCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0066",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceDeleteCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceDeleteCommand_Run\n=== PAUSE TestNamespaceDeleteCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0067",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestAuthDisableCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthDisableCommand_Run\n=== PAUSE TestAuthDisableCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0068",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestKvMetadataPatchCommand_Flags",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestKvMetadataPatchCommand_Flags\n=== PAUSE TestKvMetadataPatchCommand_Flags\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0069",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceDeleteSealedCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceDeleteSealedCommand_Run\n=== PAUSE TestNamespaceDeleteSealedCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0070",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestPredictVaultPaths",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredictVaultPaths\n=== PAUSE TestPredictVaultPaths\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0071",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_PathsKVv2",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_PathsKVv2\n=== PAUSE TestPredict_PathsKVv2\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0072",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_TimingChecks",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_TimingChecks\n=== PAUSE TestDebugCommand_TimingChecks\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0073",
+      "sourceFile": "test-results-2-default/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 20,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_PartialPermissions",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_PartialPermissions\n=== PAUSE TestDebugCommand_PartialPermissions\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0074",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestMigration/Default",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestMigration/Default\n--- FAIL: TestMigration/Default (0.00s)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0075",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestMigration",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestMigration\n--- FAIL: TestMigration (0.00s)\npanic: runtime error: invalid memory address or nil pointer dereference [recovered, repanicked]\n[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x60273c4]\n\ngoroutine 83002 [running]:\ntesting.tRunner.func1.2({0xa1878b8, 0xa7fc330})\n\t/opt/hostedtoolcache/go/1.27.0/x64/src/testing/testing.go:2123 +0x419\ntesting.tRunner.func1()\n\t/opt/hostedtoolcache/go/1.27.0/x64/src/testing/testing.go:2126 +0x65f\npanic({0xa1878b8?, 0xa7fc330?})\n\t/opt/hostedtoolcache/go/1.27.0/x64/src/runtime/panic.go:859 +0x125\ngithub.com/openbao/openbao/v2/internal/command.TestMigration.func1(0xc0064ce488)\n\t/home/runner/work/openbao/openbao/internal/command/operator_migrate_test.go:43 +0x124\ntesting.tRunner(0xc0064ce488, 0xa7d6440)\n\t/opt/hostedtoolcache/go/1.27.0/x64/src/testing/testing.go:2193 +0x21d\ncreated by testing.(*T).Run in goroutine 83001\n\t/opt/hostedtoolcache/go/1.27.0/x64/src/testing/testing.go:2258 +0xb13\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0076",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_Mounts",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_Mounts\n=== PAUSE TestPredict_Mounts\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0077",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_Archive",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_Archive\n=== PAUSE TestDebugCommand_Archive\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0078",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestCommunicationFailure",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCommunicationFailure\n=== PAUSE TestCommunicationFailure\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0079",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_PartialPermissions",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_PartialPermissions\n=== PAUSE TestDebugCommand_PartialPermissions\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0080",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestPadEqualSigns",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPadEqualSigns\n=== PAUSE TestPadEqualSigns\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0081",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNoStore",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNoStore\n=== PAUSE TestNoStore\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0082",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestWrapAutoUnwrap",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestWrapAutoUnwrap\n=== PAUSE TestWrapAutoUnwrap\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0083",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceCreateCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceCreateCommand_Run\n=== PAUSE TestNamespaceCreateCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0084",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceDeleteSealedCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceDeleteSealedCommand_Run\n=== PAUSE TestNamespaceDeleteSealedCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0085",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceSealCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceSealCommand_Run\n=== PAUSE TestNamespaceSealCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0086",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_CaptureTargets",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_CaptureTargets\n=== PAUSE TestDebugCommand_CaptureTargets\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0087",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestCustomPath",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCustomPath\n=== PAUSE TestCustomPath\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0088",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestWrapNoStore",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestWrapNoStore\n=== PAUSE TestWrapNoStore\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0089",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestLeaseRevokeCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLeaseRevokeCommand_Run\n=== PAUSE TestLeaseRevokeCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0090",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestOperatorKeyStatusCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestOperatorKeyStatusCommand_Run\n=== PAUSE TestOperatorKeyStatusCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0091",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestAuthCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthCommand_Run\n=== PAUSE TestAuthCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0092",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_Policies",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_Policies\n=== PAUSE TestPredict_Policies\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0093",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_Paths",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_Paths\n=== PAUSE TestPredict_Paths\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0094",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_ListPaths",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_ListPaths\n=== PAUSE TestPredict_ListPaths\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0095",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestLeaseLookupCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLeaseLookupCommand_Run\n=== PAUSE TestLeaseLookupCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0096",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestListCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListCommand_Run\n=== PAUSE TestListCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0097",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestAuditListCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuditListCommand_Run\n=== PAUSE TestAuditListCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0098",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestPredictVaultPaths",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredictVaultPaths\n=== PAUSE TestPredictVaultPaths\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0099",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_Run\n=== PAUSE TestDebugCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0100",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestLoginMFASinglePhase",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLoginMFASinglePhase\n=== PAUSE TestLoginMFASinglePhase\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0101",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceListCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceListCommand_Run\n=== PAUSE TestNamespaceListCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0102",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestAuthTuneCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthTuneCommand_Run\n=== PAUSE TestAuthTuneCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0103",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestTruncateToSeconds",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestTruncateToSeconds\n=== PAUSE TestTruncateToSeconds\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0104",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_PathsKVv2",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_PathsKVv2\n=== PAUSE TestPredict_PathsKVv2\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0105",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestFailureNoStore",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestFailureNoStore\n=== PAUSE TestFailureNoStore\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0106",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestWrapTokenOnly",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestWrapTokenOnly\n=== PAUSE TestWrapTokenOnly\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0107",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestLoginMFATwoPhase",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLoginMFATwoPhase\n=== PAUSE TestLoginMFATwoPhase\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0108",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceDeleteCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceDeleteCommand_Run\n=== PAUSE TestNamespaceDeleteCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0109",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceLookupCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceLookupCommand_Run\n=== PAUSE TestNamespaceLookupCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0110",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestAuthEnableCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthEnableCommand_Run\n=== PAUSE TestAuthEnableCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0111",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestParseArgsData",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestParseArgsData\n=== PAUSE TestParseArgsData\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0112",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestArgWarnings",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestArgWarnings\n=== PAUSE TestArgWarnings\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0113",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestMonitorCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestMonitorCommand_Run\n=== PAUSE TestMonitorCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0114",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceUnsealCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceUnsealCommand_Run\n=== PAUSE TestNamespaceUnsealCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0115",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_NoConnection",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_NoConnection\n=== PAUSE TestDebugCommand_NoConnection\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0116",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_OutputExists",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_OutputExists\n=== PAUSE TestDebugCommand_OutputExists\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0117",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestKVGetCommand",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestKVGetCommand\n=== PAUSE TestKVGetCommand\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0118",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestAuthHelpCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthHelpCommand_Run\n=== PAUSE TestAuthHelpCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0119",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_TimingChecks",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_TimingChecks\n=== PAUSE TestDebugCommand_TimingChecks\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0120",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestAuditEnableCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuditEnableCommand_Run\n=== PAUSE TestAuditEnableCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0121",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestAuthDisableCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthDisableCommand_Run\n=== PAUSE TestAuthDisableCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0122",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestKVPutCommand",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestKVPutCommand\n=== PAUSE TestKVPutCommand\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0123",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestKVMetadataGetCommand",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestKVMetadataGetCommand\n=== PAUSE TestKVMetadataGetCommand\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0124",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestKVPatchCommand_ArgValidation",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestKVPatchCommand_ArgValidation\n=== PAUSE TestKVPatchCommand_ArgValidation\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0125",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestLeaseRenewCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLeaseRenewCommand_Run\n=== PAUSE TestLeaseRenewCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0126",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestTokenOnly",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestTokenOnly\n=== PAUSE TestTokenOnly\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0127",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceScanCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceScanCommand_Run\n=== PAUSE TestNamespaceScanCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0128",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestAuthListCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthListCommand_Run\n=== PAUSE TestAuthListCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0129",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestAuthMoveCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuthMoveCommand_Run\n=== PAUSE TestAuthMoveCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0130",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNamespaceSealStatusCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespaceSealStatusCommand_Run\n=== PAUSE TestNamespaceSealStatusCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0131",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestParseFlagFile",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestParseFlagFile\n=== PAUSE TestParseFlagFile\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0132",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_Plugins",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_Plugins\n=== PAUSE TestPredict_Plugins\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0133",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_IndexFile",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_IndexFile\n=== PAUSE TestDebugCommand_IndexFile\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0134",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestKvMetadataPatchCommand_Flags",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestKvMetadataPatchCommand_Flags\n=== PAUSE TestKvMetadataPatchCommand_Flags\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0135",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestStores",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestStores\n=== PAUSE TestStores\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0136",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNamespacePatchCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNamespacePatchCommand_Run\n=== PAUSE TestNamespacePatchCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0137",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestAuditDisableCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAuditDisableCommand_Run\n=== PAUSE TestAuditDisableCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0138",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_Audits",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_Audits\n=== PAUSE TestPredict_Audits\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0139",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestPredict_HasPathArg",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPredict_HasPathArg\n=== PAUSE TestPredict_HasPathArg\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0140",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteCommand_Run",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteCommand_Run\n=== PAUSE TestDeleteCommand_Run\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0141",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestNoTabs",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestNoTabs\n=== PAUSE TestNoTabs\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0142",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestLoginMFATwoPhaseNonInteractiveMethodName",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestLoginMFATwoPhaseNonInteractiveMethodName\n=== PAUSE TestLoginMFATwoPhaseNonInteractiveMethodName\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0143",
+      "sourceFile": "test-results-2-race/results-2.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 22,
+      "attemptIndex": 0,
+      "displayName": "TestDebugCommand_InsecureUmask",
+      "suitePath": [
+        "github.com/openbao/openbao/v2/internal/command"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDebugCommand_InsecureUmask\n=== PAUSE TestDebugCommand_InsecureUmask\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

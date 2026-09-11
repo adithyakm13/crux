@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ls1intum/Artemis:34531205472:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ls1intum/Artemis",
+    "providerRunId": "34531205472",
+    "runAttempt": 1,
+    "url": "https://github.com/ls1intum/Artemis/actions/runs/34531205472",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "6dfc855cf39899bbbabc00f41d648b18c19d43f3",
+    "headBranch": "chore/development/retire-deprecated-apis",
+    "artifactIds": [
+      "10175032086",
+      "10175060911",
+      "10173777841",
+      "10173898461",
+      "10173785680",
+      "10173837288",
+      "10173813825",
+      "10174055206",
+      "10173922989"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:13:53.758Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 34112,
+    "failures": 12,
+    "passed": 33982,
+    "skipped": 118,
+    "filesParsed": 1223,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 2515
+    },
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 12
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Server JUnit Test Results (Remaining)/TEST-de.tum.cit.aet.artemis.account.authentication.UserOIDCIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "testOidcLogin_withRememberMeTrue_issuesLongTermCookie()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.account.authentication.UserOIDCIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 17,
+      "errorType": "org.mockito.exceptions.base.MockitoException",
+      "message": "org.mockito.exceptions.base.MockitoException: \nOnly void methods can doNothing()!\nExample of correct use of doNothing():\n    doNothing().\n    doThrow(new RuntimeException())\n    .when(mock).someVoidMethod();\nAbove means:\nsomeVoidMethod() does nothing the 1st time but throws an exception the 2nd time is called",
+      "stackText": "org.mockito.exceptions.base.MockitoException: \nOnly void methods can doNothing()!\nExample of correct use of doNothing():\n    doNothing().\n    doThrow(new RuntimeException())\n    .when(mock).someVoidMethod();\nAbove means:\nsomeVoidMethod() does nothing the 1st time but throws an exception the 2nd time is called\n\tat org.springframework.mail.javamail.JavaMailSender.send(JavaMailSender.java:101)\n\tat de.tum.cit.aet.artemis.shared.base.AbstractArtemisIntegrationTest.mockMailService(AbstractArtemisIntegrationTest.java:215)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "Server JUnit Test Results (Remaining)/TEST-de.tum.cit.aet.artemis.core.architecture.TempFileArchitectureTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 4,
+      "attemptIndex": 0,
+      "displayName": "testNoDirectCreateTempFile()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.core.architecture.TempFileArchitectureTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 227,
+      "errorType": "java.lang.AssertionError",
+      "message": "java.lang.AssertionError: Architecture Violation [Priority: MEDIUM] - Rule 'no classes should call method where calls Files.createTempFile, because All code must use TempFileUtilService.createTempFile() instead of Files.createTempFile(). This ensures proper temp file isolation within the configured temp path. Inject TempFileUtilService and call createTempFile(prefix, suffix) or createTempFile(parent, prefix, suffix).' was violated (3 times):\nMethod <de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBodyFile(java.lang.String, java.lang.Object, org.springframework.http.HttpStatus)> calls method <java.nio.file.Files.createTempFile(java.nio.file.Path, java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (RequestUtilService.java:435)\nMethod <de.tum.cit.aet.artemis.programming.service.sharing.SharingInfoDTOTest.testSharingZipFilePropertiesAndFileTransfer()> calls method <java.nio.file.Files.createTempFile(java.nio.file.Path, java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (SharingInfoDTOTest.java:57)\nMethod <de.tum.cit.aet.artemis.programming.web.repository.AuxiliaryRepositoryResourceTest.updateAuxiliaryFiles_savesEveryFileAndReportsTheOnesThatFailedIndividually()> calls method <java.nio.file.Files.createTempFile(java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (AuxiliaryRepositoryResourceTest.java:401)",
+      "stackText": "java.lang.AssertionError: Architecture Violation [Priority: MEDIUM] - Rule 'no classes should call method where calls Files.createTempFile, because All code must use TempFileUtilService.createTempFile() instead of Files.createTempFile(). This ensures proper temp file isolation within the configured temp path. Inject TempFileUtilService and call createTempFile(prefix, suffix) or createTempFile(parent, prefix, suffix).' was violated (3 times):\nMethod <de.tum.cit.aet.artemis.core.util.RequestUtilService.postWithResponseBodyFile(java.lang.String, java.lang.Object, org.springframework.http.HttpStatus)> calls method <java.nio.file.Files.createTempFile(java.nio.file.Path, java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (RequestUtilService.java:435)\nMethod <de.tum.cit.aet.artemis.programming.service.sharing.SharingInfoDTOTest.testSharingZipFilePropertiesAndFileTransfer()> calls method <java.nio.file.Files.createTempFile(java.nio.file.Path, java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (SharingInfoDTOTest.java:57)\nMethod <de.tum.cit.aet.artemis.programming.web.repository.AuxiliaryRepositoryResourceTest.updateAuxiliaryFiles_savesEveryFileAndReportsTheOnesThatFailedIndividually()> calls method <java.nio.file.Files.createTempFile(java.lang.String, java.lang.String, [Ljava.nio.file.attribute.FileAttribute;)> in (AuxiliaryRepositoryResourceTest.java:401)\n\tat com.tngtech.archunit.lang.ArchRule$Assertions.assertNoViolation(ArchRule.java:94)\n\tat com.tngtech.archunit.lang.ArchRule$Assertions.check(ArchRule.java:86)\n\tat com.tngtech.archunit.lang.ArchRule$Factory$SimpleArchRule.check(ArchRule.java:165)\n\tat de.tum.cit.aet.artemis.core.architecture.TempFileArchitectureTest.testNoDirectCreateTempFile(TempFileArchitectureTest.java:83)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "courseManagementDetailCarriesTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 55,
+      "errorType": "tools.jackson.databind.exc.InvalidDefinitionException",
+      "message": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]",
+      "stackText": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]\n\tat tools.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:70)\n\tat tools.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:2106)\n\tat tools.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:529)\n\tat tools.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1636)\n\tat tools.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:254)\n\tat tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:322)\n\tat tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2666)\n\tat tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1556)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:757)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:694)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:672)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.courseManagementDetailCarriesTheAthenaFlags(AthenaConfigWireContractTest.java:125)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "nextProgrammingSubmissionToAssessCarriesTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 332,
+      "errorType": "tools.jackson.databind.exc.InvalidDefinitionException",
+      "message": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]",
+      "stackText": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]\n\tat tools.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:70)\n\tat tools.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:2106)\n\tat tools.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:529)\n\tat tools.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1636)\n\tat tools.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:254)\n\tat tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:322)\n\tat tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2666)\n\tat tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1556)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:757)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:694)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.nextProgrammingSubmissionToAssessCarriesTheAthenaFlags(AthenaConfigWireContractTest.java:173)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "nextTextSubmissionToAssessCarriesTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 213,
+      "errorType": "tools.jackson.databind.exc.InvalidDefinitionException",
+      "message": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]",
+      "stackText": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]\n\tat tools.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:70)\n\tat tools.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:2106)\n\tat tools.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:529)\n\tat tools.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1636)\n\tat tools.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:254)\n\tat tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:322)\n\tat tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2666)\n\tat tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1556)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:757)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:694)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.nextTextSubmissionToAssessCarriesTheAthenaFlags(AthenaConfigWireContractTest.java:141)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "programmingAssessmentEditorCarriesTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 229,
+      "errorType": "tools.jackson.databind.exc.InvalidDefinitionException",
+      "message": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]",
+      "stackText": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]\n\tat tools.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:70)\n\tat tools.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:2106)\n\tat tools.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:529)\n\tat tools.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1636)\n\tat tools.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:254)\n\tat tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:322)\n\tat tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2666)\n\tat tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1556)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:757)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:694)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:672)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.programmingAssessmentEditorCarriesTheAthenaFlags(AthenaConfigWireContractTest.java:165)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "exerciseDetailsCarryTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 66,
+      "errorType": "tools.jackson.databind.exc.InvalidDefinitionException",
+      "message": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]",
+      "stackText": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]\n\tat tools.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:70)\n\tat tools.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:2106)\n\tat tools.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:529)\n\tat tools.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1636)\n\tat tools.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:254)\n\tat tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:322)\n\tat tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2666)\n\tat tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1556)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:757)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:694)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:672)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.exerciseDetailsCarryTheAthenaFlags(AthenaConfigWireContractTest.java:99)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "modelingAssessmentEditorCarriesTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 159,
+      "errorType": "tools.jackson.databind.exc.InvalidDefinitionException",
+      "message": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]",
+      "stackText": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]\n\tat tools.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:70)\n\tat tools.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:2106)\n\tat tools.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:529)\n\tat tools.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1636)\n\tat tools.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:254)\n\tat tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:322)\n\tat tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2666)\n\tat tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1556)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:757)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:694)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:672)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.modelingAssessmentEditorCarriesTheAthenaFlags(AthenaConfigWireContractTest.java:149)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "textAssessmentEditorCarriesTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 161,
+      "errorType": "tools.jackson.databind.exc.InvalidDefinitionException",
+      "message": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]",
+      "stackText": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]\n\tat tools.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:70)\n\tat tools.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:2106)\n\tat tools.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:529)\n\tat tools.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1636)\n\tat tools.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:254)\n\tat tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:322)\n\tat tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2666)\n\tat tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1556)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:757)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:694)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:672)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.textAssessmentEditorCarriesTheAthenaFlags(AthenaConfigWireContractTest.java:133)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "assessmentDashboardProgrammingExerciseCarriesTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 110,
+      "errorType": "tools.jackson.databind.exc.InvalidDefinitionException",
+      "message": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]",
+      "stackText": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]\n\tat tools.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:70)\n\tat tools.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:2106)\n\tat tools.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:529)\n\tat tools.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1636)\n\tat tools.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:254)\n\tat tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:322)\n\tat tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2666)\n\tat tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1556)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:757)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:694)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:672)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.assessmentDashboardProgrammingExerciseCarriesTheAthenaFlags(AthenaConfigWireContractTest.java:118)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "assessmentDashboardExerciseCarriesTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 46,
+      "errorType": "tools.jackson.databind.exc.InvalidDefinitionException",
+      "message": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]",
+      "stackText": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]\n\tat tools.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:70)\n\tat tools.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:2106)\n\tat tools.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:529)\n\tat tools.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1636)\n\tat tools.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:254)\n\tat tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:322)\n\tat tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2666)\n\tat tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1556)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:757)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:694)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:672)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.assessmentDashboardExerciseCarriesTheAthenaFlags(AthenaConfigWireContractTest.java:106)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "Server JUnit Test Results (Independent)/TEST-de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "nextModelingSubmissionToAssessCarriesTheAthenaFlags()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 137,
+      "errorType": "tools.jackson.databind.exc.InvalidDefinitionException",
+      "message": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]",
+      "stackText": "tools.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.fasterxml.jackson.databind.JsonNode` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]\n\tat tools.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:70)\n\tat tools.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:2106)\n\tat tools.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:529)\n\tat tools.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1636)\n\tat tools.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:254)\n\tat tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:322)\n\tat tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2666)\n\tat tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1556)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:757)\n\tat de.tum.cit.aet.artemis.core.util.RequestUtilService.get(RequestUtilService.java:694)\n\tat de.tum.cit.aet.artemis.course.AthenaConfigWireContractTest.nextModelingSubmissionToAssessCarriesTheAthenaFlags(AthenaConfigWireContractTest.java:157)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

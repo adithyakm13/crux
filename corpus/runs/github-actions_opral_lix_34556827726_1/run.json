@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:opral/lix:34556827726:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "opral/lix",
+    "providerRunId": "34556827726",
+    "runAttempt": 1,
+    "url": "https://github.com/opral/lix/actions/runs/34556827726",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "af7943eb8cd3af957a90ed2edebf45428dbb4502",
+    "headBranch": "fix/plugin-discovery-read-expired",
+    "artifactIds": [
+      "10182979811",
+      "10183015362",
+      "10183030497"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:36:33.993Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 4609,
+    "failures": 1,
+    "passed": 4608,
+    "skipped": 0,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::read_retry::path_update_restarts_wherever_its_snapshot_expires",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 3069,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'integration_tests::read_retry::path_update_restarts_wherever_its_snapshot_expires' (28866) panicked at packages/lix/src/../tests/integration/read_retry.rs:573:9",
+      "stackText": "thread 'integration_tests::read_retry::path_update_restarts_wherever_its_snapshot_expires' (28866) panicked at packages/lix/src/../tests/integration/read_retry.rs:573:9:\nassertion `left == right` failed: read ordinal 103 of 105 must be exercised\n  left: 0\n right: 1\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::read_retry::path_update_restarts_wherever_its_snapshot_expires ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::read_retry::path_update_restarts_wherever_its_snapshot_expires\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3795 filtered out; finished in 3.05s\n\n",
+      "stderr": "\nthread 'integration_tests::read_retry::path_update_restarts_wherever_its_snapshot_expires' (28866) panicked at packages/lix/src/../tests/integration/read_retry.rs:573:9:\nassertion `left == right` failed: read ordinal 103 of 105 must be exercised\n  left: 0\n right: 1\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    }
+  ]
+}

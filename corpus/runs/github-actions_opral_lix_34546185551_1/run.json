@@ -1,0 +1,1441 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:opral/lix:34546185551:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "opral/lix",
+    "providerRunId": "34546185551",
+    "runAttempt": 1,
+    "url": "https://github.com/opral/lix/actions/runs/34546185551",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "3538569c3e647510e65dec007b7ba563566f4541",
+    "headBranch": "feat/execute-commit-span",
+    "artifactIds": [
+      "10179217827",
+      "10179266057",
+      "10179280484"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:36:48.744Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 4622,
+    "failures": 74,
+    "passed": 4548,
+    "skipped": 0,
+    "filesParsed": 3,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::engine::failed_write_validation_does_not_poison_session_transaction_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 71,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'failed_write_validation_does_not_poison_session_transaction_base' (28929) panicked at packages/lix/src/../tests/integration/engine.rs:162:9",
+      "stackText": "thread 'failed_write_validation_does_not_poison_session_transaction_base' (28929) panicked at packages/lix/src/../tests/integration/engine.rs:162:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::engine::failed_write_validation_does_not_poison_session_transaction_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::engine::failed_write_validation_does_not_poison_session_transaction_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'failed_write_validation_does_not_poison_session_transaction_base' (28929) panicked at packages/lix/src/../tests/integration/engine.rs:162:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::engine::failed_write_validation_does_not_poison_session_transaction_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 79,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'failed_write_validation_does_not_poison_session_transaction_tracked_state_rebuild' (28932) panicked at packages/lix/src/../tests/integration/engine.rs:162:9",
+      "stackText": "thread 'failed_write_validation_does_not_poison_session_transaction_tracked_state_rebuild' (28932) panicked at packages/lix/src/../tests/integration/engine.rs:162:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::engine::failed_write_validation_does_not_poison_session_transaction_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::engine::failed_write_validation_does_not_poison_session_transaction_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'failed_write_validation_does_not_poison_session_transaction_tracked_state_rebuild' (28932) panicked at packages/lix/src/../tests/integration/engine.rs:162:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::engine::session_execute_does_not_persist_deterministic_sequence_after_failed_statement_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 34,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'session_execute_does_not_persist_deterministic_sequence_after_failed_statement_tracked_state_rebuild' (28946) panicked at packages/lix/src/../tests/integration/engine.rs:369:9",
+      "stackText": "thread 'session_execute_does_not_persist_deterministic_sequence_after_failed_statement_tracked_state_rebuild' (28946) panicked at packages/lix/src/../tests/integration/engine.rs:369:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-12f3-7382-bc51-408500000000\", after: \"01a08dde-12f3-7382-bc51-408500000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::engine::session_execute_does_not_persist_deterministic_sequence_after_failed_statement_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::engine::session_execute_does_not_persist_deterministic_sequence_after_failed_statement_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.02s\n\n",
+      "stderr": "\nthread 'session_execute_does_not_persist_deterministic_sequence_after_failed_statement_tracked_state_rebuild' (28946) panicked at packages/lix/src/../tests/integration/engine.rs:369:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-12f3-7382-bc51-408500000000\", after: \"01a08dde-12f3-7382-bc51-408500000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::engine::session_execute_does_not_persist_deterministic_sequence_after_failed_statement_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 58,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'session_execute_does_not_persist_deterministic_sequence_after_failed_statement_base' (28951) panicked at packages/lix/src/../tests/integration/engine.rs:369:9",
+      "stackText": "thread 'session_execute_does_not_persist_deterministic_sequence_after_failed_statement_base' (28951) panicked at packages/lix/src/../tests/integration/engine.rs:369:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-12f8-7333-a1b7-757600000000\", after: \"01a08dde-12f8-7333-a1b7-757600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::engine::session_execute_does_not_persist_deterministic_sequence_after_failed_statement_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::engine::session_execute_does_not_persist_deterministic_sequence_after_failed_statement_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'session_execute_does_not_persist_deterministic_sequence_after_failed_statement_base' (28951) panicked at packages/lix/src/../tests/integration/engine.rs:369:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-12f8-7333-a1b7-757600000000\", after: \"01a08dde-12f8-7333-a1b7-757600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::engine::session_execute_persists_deterministic_function_sequence_across_sessions_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 48,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'session_execute_persists_deterministic_function_sequence_across_sessions_base' (28961) panicked at packages/lix/src/../tests/integration/engine.rs:292:9",
+      "stackText": "thread 'session_execute_persists_deterministic_function_sequence_across_sessions_base' (28961) panicked at packages/lix/src/../tests/integration/engine.rs:292:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1306-7873-b67f-ac2400000000\", after: \"01a08dde-1306-7873-b67f-ac2400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::engine::session_execute_persists_deterministic_function_sequence_across_sessions_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::engine::session_execute_persists_deterministic_function_sequence_across_sessions_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.03s\n\n",
+      "stderr": "\nthread 'session_execute_persists_deterministic_function_sequence_across_sessions_base' (28961) panicked at packages/lix/src/../tests/integration/engine.rs:292:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1306-7873-b67f-ac2400000000\", after: \"01a08dde-1306-7873-b67f-ac2400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::engine::session_execute_inserts_key_value_then_reads_it_back_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 56,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'session_execute_inserts_key_value_then_reads_it_back_base' (28955) panicked at packages/lix/src/../tests/integration/engine.rs:105:9",
+      "stackText": "thread 'session_execute_inserts_key_value_then_reads_it_back_base' (28955) panicked at packages/lix/src/../tests/integration/engine.rs:105:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-12ff-72c2-9b53-088300000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::engine::session_execute_inserts_key_value_then_reads_it_back_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::engine::session_execute_inserts_key_value_then_reads_it_back_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'session_execute_inserts_key_value_then_reads_it_back_base' (28955) panicked at packages/lix/src/../tests/integration/engine.rs:105:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-12ff-72c2-9b53-088300000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::engine::session_execute_inserts_key_value_then_reads_it_back_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 61,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'session_execute_inserts_key_value_then_reads_it_back_tracked_state_rebuild' (28957) panicked at packages/lix/src/../tests/integration/engine.rs:105:9",
+      "stackText": "thread 'session_execute_inserts_key_value_then_reads_it_back_tracked_state_rebuild' (28957) panicked at packages/lix/src/../tests/integration/engine.rs:105:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1302-7a82-81eb-8f5700000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::engine::session_execute_inserts_key_value_then_reads_it_back_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::engine::session_execute_inserts_key_value_then_reads_it_back_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'session_execute_inserts_key_value_then_reads_it_back_tracked_state_rebuild' (28957) panicked at packages/lix/src/../tests/integration/engine.rs:105:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1302-7a82-81eb-8f5700000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::engine::session_execute_persists_deterministic_function_sequence_across_sessions_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 69,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'session_execute_persists_deterministic_function_sequence_across_sessions_tracked_state_rebuild' (28966) panicked at packages/lix/src/../tests/integration/engine.rs:292:9",
+      "stackText": "thread 'session_execute_persists_deterministic_function_sequence_across_sessions_tracked_state_rebuild' (28966) panicked at packages/lix/src/../tests/integration/engine.rs:292:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1313-7510-bc09-8bc700000000\", after: \"01a08dde-1313-7510-bc09-8bc700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::engine::session_execute_persists_deterministic_function_sequence_across_sessions_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::engine::session_execute_persists_deterministic_function_sequence_across_sessions_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'session_execute_persists_deterministic_function_sequence_across_sessions_tracked_state_rebuild' (28966) panicked at packages/lix/src/../tests/integration/engine.rs:292:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1313-7510-bc09-8bc700000000\", after: \"01a08dde-1313-7510-bc09-8bc700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_delete_missing_returns_zero_rows_affected_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 56,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_delete_missing_returns_zero_rows_affected_base' (29878) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:806:9",
+      "stackText": "thread 'lix_branch_delete_missing_returns_zero_rows_affected_base' (29878) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:806:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: Some(CommitSpan { before: \"01a08dde-1a45-7471-aeef-1d1d00000000\", after: \"01a08dde-1a45-7471-aeef-1d1d00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_delete_missing_returns_zero_rows_affected_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_delete_missing_returns_zero_rows_affected_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_branch_delete_missing_returns_zero_rows_affected_base' (29878) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:806:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: Some(CommitSpan { before: \"01a08dde-1a45-7471-aeef-1d1d00000000\", after: \"01a08dde-1a45-7471-aeef-1d1d00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_delete_missing_returns_zero_rows_affected_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 60,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_delete_missing_returns_zero_rows_affected_tracked_state_rebuild' (29881) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:806:9",
+      "stackText": "thread 'lix_branch_delete_missing_returns_zero_rows_affected_tracked_state_rebuild' (29881) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:806:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: Some(CommitSpan { before: \"01a08dde-1a49-7290-838b-9f4500000000\", after: \"01a08dde-1a49-7290-838b-9f4500000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_delete_missing_returns_zero_rows_affected_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_delete_missing_returns_zero_rows_affected_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_branch_delete_missing_returns_zero_rows_affected_tracked_state_rebuild' (29881) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:806:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: Some(CommitSpan { before: \"01a08dde-1a49-7290-838b-9f4500000000\", after: \"01a08dde-1a49-7290-838b-9f4500000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_delete_removes_composed_row_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 60,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_delete_removes_composed_row_base' (29896) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:315:9",
+      "stackText": "thread 'lix_branch_delete_removes_composed_row_base' (29896) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:315:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1a6a-7bb2-a9d2-cea400000000\", after: \"01a08dde-1a6a-7bb2-a9d2-cea400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_delete_removes_composed_row_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_delete_removes_composed_row_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_branch_delete_removes_composed_row_base' (29896) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:315:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1a6a-7bb2-a9d2-cea400000000\", after: \"01a08dde-1a6a-7bb2-a9d2-cea400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_delete_removes_composed_row_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 70,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_delete_removes_composed_row_tracked_state_rebuild' (29899) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:315:9",
+      "stackText": "thread 'lix_branch_delete_removes_composed_row_tracked_state_rebuild' (29899) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:315:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1a70-7701-9bda-ab1000000000\", after: \"01a08dde-1a70-7701-9bda-ab1000000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_delete_removes_composed_row_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_delete_removes_composed_row_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_branch_delete_removes_composed_row_tracked_state_rebuild' (29899) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:315:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1a70-7701-9bda-ab1000000000\", after: \"01a08dde-1a70-7701-9bda-ab1000000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_insert_accepts_explicit_hidden_and_commit_id_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 62,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_insert_accepts_explicit_hidden_and_commit_id_tracked_state_rebuild' (29941) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:218:9",
+      "stackText": "thread 'lix_branch_insert_accepts_explicit_hidden_and_commit_id_tracked_state_rebuild' (29941) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:218:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1aad-7d81-a839-349f00000000\", after: \"01a08dde-1aad-7d81-a839-349f00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_insert_accepts_explicit_hidden_and_commit_id_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_insert_accepts_explicit_hidden_and_commit_id_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_branch_insert_accepts_explicit_hidden_and_commit_id_tracked_state_rebuild' (29941) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:218:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1aad-7d81-a839-349f00000000\", after: \"01a08dde-1aad-7d81-a839-349f00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_insert_accepts_explicit_hidden_and_commit_id_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 75,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_insert_accepts_explicit_hidden_and_commit_id_base' (29938) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:218:9",
+      "stackText": "thread 'lix_branch_insert_accepts_explicit_hidden_and_commit_id_base' (29938) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:218:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1aa8-7801-b667-fa1100000000\", after: \"01a08dde-1aa8-7801-b667-fa1100000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_insert_accepts_explicit_hidden_and_commit_id_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_insert_accepts_explicit_hidden_and_commit_id_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'lix_branch_insert_accepts_explicit_hidden_and_commit_id_base' (29938) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:218:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1aa8-7801-b667-fa1100000000\", after: \"01a08dde-1aa8-7801-b667-fa1100000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_nothing_keeps_name_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 68,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_insert_on_conflict_do_nothing_keeps_name_base' (29943) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:885:9",
+      "stackText": "thread 'lix_branch_insert_on_conflict_do_nothing_keeps_name_base' (29943) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:885:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: Some(CommitSpan { before: \"01a08dde-1aaf-7870-b350-a86e00000000\", after: \"01a08dde-1aaf-7870-b350-a86e00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_nothing_keeps_name_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_nothing_keeps_name_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_branch_insert_on_conflict_do_nothing_keeps_name_base' (29943) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:885:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: Some(CommitSpan { before: \"01a08dde-1aaf-7870-b350-a86e00000000\", after: \"01a08dde-1aaf-7870-b350-a86e00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_nothing_keeps_name_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 69,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_insert_on_conflict_do_nothing_keeps_name_tracked_state_rebuild' (29948) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:885:9",
+      "stackText": "thread 'lix_branch_insert_on_conflict_do_nothing_keeps_name_tracked_state_rebuild' (29948) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:885:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: Some(CommitSpan { before: \"01a08dde-1ab7-7a21-bc8d-030200000000\", after: \"01a08dde-1ab7-7a21-bc8d-030200000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_nothing_keeps_name_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_nothing_keeps_name_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_branch_insert_on_conflict_do_nothing_keeps_name_tracked_state_rebuild' (29948) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:885:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: Some(CommitSpan { before: \"01a08dde-1ab7-7a21-bc8d-030200000000\", after: \"01a08dde-1ab7-7a21-bc8d-030200000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 0, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_update_changes_name_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 66,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_insert_on_conflict_do_update_changes_name_base' (29951) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:837:9",
+      "stackText": "thread 'lix_branch_insert_on_conflict_do_update_changes_name_base' (29951) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:837:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1ac2-7612-a5b2-fe0800000000\", after: \"01a08dde-1ac2-7612-a5b2-fe0800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_update_changes_name_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_update_changes_name_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_branch_insert_on_conflict_do_update_changes_name_base' (29951) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:837:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1ac2-7612-a5b2-fe0800000000\", after: \"01a08dde-1ac2-7612-a5b2-fe0800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_update_changes_name_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 76,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_insert_on_conflict_do_update_changes_name_tracked_state_rebuild' (29954) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:837:9",
+      "stackText": "thread 'lix_branch_insert_on_conflict_do_update_changes_name_tracked_state_rebuild' (29954) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:837:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1ac5-7833-bfa2-49ca00000000\", after: \"01a08dde-1ac5-7833-bfa2-49ca00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_update_changes_name_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_do_update_changes_name_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'lix_branch_insert_on_conflict_do_update_changes_name_tracked_state_rebuild' (29954) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:837:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1ac5-7833-bfa2-49ca00000000\", after: \"01a08dde-1ac5-7833-bfa2-49ca00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0019",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_inserts_absent_id_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 72,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_insert_on_conflict_inserts_absent_id_base' (29958) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:916:9",
+      "stackText": "thread 'lix_branch_insert_on_conflict_inserts_absent_id_base' (29958) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:916:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1ad0-7b63-8c2e-eb2f00000000\", after: \"01a08dde-1ad0-7b63-8c2e-eb2f00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_inserts_absent_id_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_inserts_absent_id_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_branch_insert_on_conflict_inserts_absent_id_base' (29958) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:916:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1ad0-7b63-8c2e-eb2f00000000\", after: \"01a08dde-1ad0-7b63-8c2e-eb2f00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0020",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_inserts_absent_id_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 67,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_insert_on_conflict_inserts_absent_id_tracked_state_rebuild' (29963) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:916:9",
+      "stackText": "thread 'lix_branch_insert_on_conflict_inserts_absent_id_tracked_state_rebuild' (29963) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:916:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1ad8-7492-9b86-280000000000\", after: \"01a08dde-1ad8-7492-9b86-280000000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_inserts_absent_id_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_insert_on_conflict_inserts_absent_id_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_branch_insert_on_conflict_inserts_absent_id_tracked_state_rebuild' (29963) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:916:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1ad8-7492-9b86-280000000000\", after: \"01a08dde-1ad8-7492-9b86-280000000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0021",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_insert_reads_back_composed_row_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 62,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_insert_reads_back_composed_row_tracked_state_rebuild' (29971) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:185:9",
+      "stackText": "thread 'lix_branch_insert_reads_back_composed_row_tracked_state_rebuild' (29971) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:185:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1add-72e0-a5f3-0ec600000000\", after: \"01a08dde-1add-72e0-a5f3-0ec600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_insert_reads_back_composed_row_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_insert_reads_back_composed_row_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_branch_insert_reads_back_composed_row_tracked_state_rebuild' (29971) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:185:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1add-72e0-a5f3-0ec600000000\", after: \"01a08dde-1add-72e0-a5f3-0ec600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0022",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_insert_reads_back_composed_row_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 65,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_insert_reads_back_composed_row_base' (29966) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:185:9",
+      "stackText": "thread 'lix_branch_insert_reads_back_composed_row_base' (29966) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:185:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1adb-7490-8db7-95d500000000\", after: \"01a08dde-1adb-7490-8db7-95d500000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_insert_reads_back_composed_row_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_insert_reads_back_composed_row_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_branch_insert_reads_back_composed_row_base' (29966) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:185:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1adb-7490-8db7-95d500000000\", after: \"01a08dde-1adb-7490-8db7-95d500000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0023",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_update_reads_back_composed_row_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 91,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_update_reads_back_composed_row_base' (29986) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:277:9",
+      "stackText": "thread 'lix_branch_update_reads_back_composed_row_base' (29986) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:277:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_update_reads_back_composed_row_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_update_reads_back_composed_row_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.07s\n\n",
+      "stderr": "\nthread 'lix_branch_update_reads_back_composed_row_base' (29986) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:277:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0024",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_branch::lix_branch_update_reads_back_composed_row_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 98,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_branch_update_reads_back_composed_row_tracked_state_rebuild' (29984) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:277:9",
+      "stackText": "thread 'lix_branch_update_reads_back_composed_row_tracked_state_rebuild' (29984) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:277:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_branch::lix_branch_update_reads_back_composed_row_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_branch::lix_branch_update_reads_back_composed_row_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.08s\n\n",
+      "stderr": "\nthread 'lix_branch_update_reads_back_composed_row_tracked_state_rebuild' (29984) panicked at packages/lix/src/../tests/integration/sql/lix_branch.rs:277:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0025",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_delete_recursively_deletes_tree_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 52,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_delete_recursively_deletes_tree_tracked_state_rebuild' (30089) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:848:9",
+      "stackText": "thread 'lix_directory_delete_recursively_deletes_tree_tracked_state_rebuild' (30089) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:848:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1b68-76b0-a60e-ea7f00000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_delete_recursively_deletes_tree_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_delete_recursively_deletes_tree_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_directory_delete_recursively_deletes_tree_tracked_state_rebuild' (30089) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:848:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1b68-76b0-a60e-ea7f00000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0026",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_delete_recursively_deletes_tree_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 66,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_delete_recursively_deletes_tree_base' (30087) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:848:9",
+      "stackText": "thread 'lix_directory_delete_recursively_deletes_tree_base' (30087) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:848:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1b64-7f93-a48c-b16200000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_delete_recursively_deletes_tree_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_delete_recursively_deletes_tree_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_directory_delete_recursively_deletes_tree_base' (30087) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:848:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1b64-7f93-a48c-b16200000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0027",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_insert_applies_defaulted_id_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 60,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_insert_applies_defaulted_id_base' (30112) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:272:9",
+      "stackText": "thread 'lix_directory_insert_applies_defaulted_id_base' (30112) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:272:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1b81-7d40-9f92-d02600000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_insert_applies_defaulted_id_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_insert_applies_defaulted_id_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_directory_insert_applies_defaulted_id_base' (30112) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:272:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1b81-7d40-9f92-d02600000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0028",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_insert_applies_defaulted_id_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 66,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_insert_applies_defaulted_id_tracked_state_rebuild' (30116) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:272:9",
+      "stackText": "thread 'lix_directory_insert_applies_defaulted_id_tracked_state_rebuild' (30116) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:272:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1b85-7d82-bb90-e6fe00000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_insert_applies_defaulted_id_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_insert_applies_defaulted_id_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_directory_insert_applies_defaulted_id_tracked_state_rebuild' (30116) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:272:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1b85-7d82-bb90-e6fe00000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0029",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_insert_reads_nested_paths_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 47,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_insert_reads_nested_paths_base' (30175) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:208:5",
+      "stackText": "thread 'lix_directory_insert_reads_nested_paths_base' (30175) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:208:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1bc6-7980-8a36-aedc00000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_insert_reads_nested_paths_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_insert_reads_nested_paths_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.03s\n\n",
+      "stderr": "\nthread 'lix_directory_insert_reads_nested_paths_base' (30175) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:208:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1bc6-7980-8a36-aedc00000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0030",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_path_insert_applies_defaulted_id_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 59,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_path_insert_applies_defaulted_id_base' (30187) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:317:9",
+      "stackText": "thread 'lix_directory_path_insert_applies_defaulted_id_base' (30187) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:317:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1bcd-7c51-8008-319f00000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_path_insert_applies_defaulted_id_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_path_insert_applies_defaulted_id_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_directory_path_insert_applies_defaulted_id_base' (30187) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:317:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1bcd-7c51-8008-319f00000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0031",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_insert_reads_nested_paths_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 64,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_insert_reads_nested_paths_tracked_state_rebuild' (30183) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:208:5",
+      "stackText": "thread 'lix_directory_insert_reads_nested_paths_tracked_state_rebuild' (30183) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:208:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1bca-7bd0-ab68-0f4500000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_insert_reads_nested_paths_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_insert_reads_nested_paths_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_directory_insert_reads_nested_paths_tracked_state_rebuild' (30183) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:208:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1bca-7bd0-ab68-0f4500000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0032",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_path_insert_applies_defaulted_id_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 67,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_path_insert_applies_defaulted_id_tracked_state_rebuild' (30191) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:317:9",
+      "stackText": "thread 'lix_directory_path_insert_applies_defaulted_id_tracked_state_rebuild' (30191) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:317:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1bd3-7021-8a70-263600000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_path_insert_applies_defaulted_id_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_path_insert_applies_defaulted_id_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_directory_path_insert_applies_defaulted_id_tracked_state_rebuild' (30191) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:317:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1bd3-7021-8a70-263600000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0033",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_file_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 50,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_recursive_delete_removes_untracked_child_file_base' (30247) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1654:9",
+      "stackText": "thread 'lix_directory_recursive_delete_removes_untracked_child_file_base' (30247) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1654:9:\nassertion `left == right` failed: recursive delete of a tracked directory must also delete its untracked child file\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000d00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_file_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_file_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_directory_recursive_delete_removes_untracked_child_file_base' (30247) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1654:9:\nassertion `left == right` failed: recursive delete of a tracked directory must also delete its untracked child file\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000d00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0034",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_directory_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 75,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_recursive_delete_removes_untracked_child_directory_base' (30243) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1782:9",
+      "stackText": "thread 'lix_directory_recursive_delete_removes_untracked_child_directory_base' (30243) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1782:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_directory_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_directory_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'lix_directory_recursive_delete_removes_untracked_child_directory_base' (30243) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1782:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0035",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_directory_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 72,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_recursive_delete_removes_untracked_child_directory_tracked_state_rebuild' (30249) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1782:9",
+      "stackText": "thread 'lix_directory_recursive_delete_removes_untracked_child_directory_tracked_state_rebuild' (30249) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1782:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_directory_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_directory_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'lix_directory_recursive_delete_removes_untracked_child_directory_tracked_state_rebuild' (30249) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1782:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0036",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_file_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 69,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_recursive_delete_removes_untracked_child_file_tracked_state_rebuild' (30251) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1654:9",
+      "stackText": "thread 'lix_directory_recursive_delete_removes_untracked_child_file_tracked_state_rebuild' (30251) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1654:9:\nassertion `left == right` failed: recursive delete of a tracked directory must also delete its untracked child file\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000d00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_file_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_child_file_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_directory_recursive_delete_removes_untracked_child_file_tracked_state_rebuild' (30251) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1654:9:\nassertion `left == right` failed: recursive delete of a tracked directory must also delete its untracked child file\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000d00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 2, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0037",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 85,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_base' (30254) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1720:9",
+      "stackText": "thread 'lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_base' (30254) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1720:9:\nassertion `left == right` failed: delete must cover /docs, /docs/guides and both nested files\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 4, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-001500000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 4, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_base' (30254) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1720:9:\nassertion `left == right` failed: delete must cover /docs, /docs/guides and both nested files\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 4, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-001500000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 4, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0038",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 87,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_tracked_state_rebuild' (30257) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1720:9",
+      "stackText": "thread 'lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_tracked_state_rebuild' (30257) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1720:9:\nassertion `left == right` failed: delete must cover /docs, /docs/guides and both nested files\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 4, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-001500000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 4, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_directory::lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.07s\n\n",
+      "stderr": "\nthread 'lix_directory_recursive_delete_removes_untracked_file_under_implicit_parent_tracked_state_rebuild' (30257) panicked at packages/lix/src/../tests/integration/sql/lix_directory.rs:1720:9:\nassertion `left == right` failed: delete must cover /docs, /docs/guides and both nested files\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 4, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-001500000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 4, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0039",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_content_insert_applies_defaulted_id_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 62,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_content_insert_applies_defaulted_id_base' (30368) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2214:9",
+      "stackText": "thread 'lix_file_content_insert_applies_defaulted_id_base' (30368) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2214:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000a00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_content_insert_applies_defaulted_id_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_content_insert_applies_defaulted_id_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_file_content_insert_applies_defaulted_id_base' (30368) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2214:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000a00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0040",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_content_insert_applies_defaulted_id_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 77,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_content_insert_applies_defaulted_id_tracked_state_rebuild' (30378) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2214:9",
+      "stackText": "thread 'lix_file_content_insert_applies_defaulted_id_tracked_state_rebuild' (30378) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2214:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000a00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_content_insert_applies_defaulted_id_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_content_insert_applies_defaulted_id_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_file_content_insert_applies_defaulted_id_tracked_state_rebuild' (30378) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2214:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000a00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0041",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_insert_accepts_empty_blob_content_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 60,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_insert_accepts_empty_blob_content_base' (30421) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1735:9",
+      "stackText": "thread 'lix_file_insert_accepts_empty_blob_content_base' (30421) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1735:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1d01-79e0-a02f-dace00000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_insert_accepts_empty_blob_content_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_insert_accepts_empty_blob_content_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_file_insert_accepts_empty_blob_content_base' (30421) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1735:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1d01-79e0-a02f-dace00000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0042",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_insert_accepts_empty_blob_content_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 63,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_insert_accepts_empty_blob_content_tracked_state_rebuild' (30423) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1735:9",
+      "stackText": "thread 'lix_file_insert_accepts_empty_blob_content_tracked_state_rebuild' (30423) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1735:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1d03-7ca3-9e3c-993300000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_insert_accepts_empty_blob_content_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_insert_accepts_empty_blob_content_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_file_insert_accepts_empty_blob_content_tracked_state_rebuild' (30423) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1735:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1d03-7ca3-9e3c-993300000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0043",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_insert_applies_defaulted_id_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 62,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_insert_applies_defaulted_id_base' (30430) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1215:5",
+      "stackText": "thread 'lix_file_insert_applies_defaulted_id_base' (30430) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1215:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000900000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_insert_applies_defaulted_id_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_insert_applies_defaulted_id_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_file_insert_applies_defaulted_id_base' (30430) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1215:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000900000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0044",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_insert_applies_defaulted_id_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 77,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_insert_applies_defaulted_id_tracked_state_rebuild' (30433) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1215:5",
+      "stackText": "thread 'lix_file_insert_applies_defaulted_id_tracked_state_rebuild' (30433) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1215:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000900000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_insert_applies_defaulted_id_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_insert_applies_defaulted_id_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_file_insert_applies_defaulted_id_tracked_state_rebuild' (30433) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1215:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000900000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0045",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_insert_reads_path_content_and_parent_dirs_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 48,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_insert_reads_path_content_and_parent_dirs_base' (30504) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1129:9",
+      "stackText": "thread 'lix_file_insert_reads_path_content_and_parent_dirs_base' (30504) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1129:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1d64-7011-9d3d-0a7100000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_insert_reads_path_content_and_parent_dirs_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_insert_reads_path_content_and_parent_dirs_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.03s\n\n",
+      "stderr": "\nthread 'lix_file_insert_reads_path_content_and_parent_dirs_base' (30504) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1129:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1d64-7011-9d3d-0a7100000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0046",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_insert_reads_path_content_and_parent_dirs_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 68,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_insert_reads_path_content_and_parent_dirs_tracked_state_rebuild' (30511) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1129:9",
+      "stackText": "thread 'lix_file_insert_reads_path_content_and_parent_dirs_tracked_state_rebuild' (30511) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1129:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1d6f-7051-8b70-2fb300000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_insert_reads_path_content_and_parent_dirs_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_insert_reads_path_content_and_parent_dirs_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_file_insert_reads_path_content_and_parent_dirs_tracked_state_rebuild' (30511) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1129:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1d6f-7051-8b70-2fb300000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0047",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_path_content_insert_applies_defaulted_id_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 58,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_path_content_insert_applies_defaulted_id_tracked_state_rebuild' (30573) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1321:9",
+      "stackText": "thread 'lix_file_path_content_insert_applies_defaulted_id_tracked_state_rebuild' (30573) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1321:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1dab-79f3-bdd6-f62b00000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_path_content_insert_applies_defaulted_id_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_path_content_insert_applies_defaulted_id_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_file_path_content_insert_applies_defaulted_id_tracked_state_rebuild' (30573) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1321:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1dab-79f3-bdd6-f62b00000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0048",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_path_content_insert_applies_defaulted_id_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 67,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_path_content_insert_applies_defaulted_id_base' (30566) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1321:9",
+      "stackText": "thread 'lix_file_path_content_insert_applies_defaulted_id_base' (30566) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1321:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1da7-7b02-967d-967d00000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_path_content_insert_applies_defaulted_id_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_path_content_insert_applies_defaulted_id_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_file_path_content_insert_applies_defaulted_id_base' (30566) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1321:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1da7-7b02-967d-967d00000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0049",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_path_index_invalidates_when_branch_head_moves_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 59,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_path_index_invalidates_when_branch_head_moves_tracked_state_rebuild' (30576) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2455:9",
+      "stackText": "thread 'lix_file_path_index_invalidates_when_branch_head_moves_tracked_state_rebuild' (30576) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2455:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000400000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_path_index_invalidates_when_branch_head_moves_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_path_index_invalidates_when_branch_head_moves_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_file_path_index_invalidates_when_branch_head_moves_tracked_state_rebuild' (30576) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2455:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000400000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0050",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_path_insert_applies_defaulted_id_and_empty_content_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 65,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_path_insert_applies_defaulted_id_and_empty_content_base' (30583) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1263:9",
+      "stackText": "thread 'lix_file_path_insert_applies_defaulted_id_and_empty_content_base' (30583) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1263:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1db7-79e2-b122-2fe300000000\", after: \"01920000-0000-7000-8000-000600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_path_insert_applies_defaulted_id_and_empty_content_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_path_insert_applies_defaulted_id_and_empty_content_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_file_path_insert_applies_defaulted_id_and_empty_content_base' (30583) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1263:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1db7-79e2-b122-2fe300000000\", after: \"01920000-0000-7000-8000-000600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0051",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_path_insert_applies_defaulted_id_and_empty_content_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 64,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_path_insert_applies_defaulted_id_and_empty_content_tracked_state_rebuild' (30588) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1263:9",
+      "stackText": "thread 'lix_file_path_insert_applies_defaulted_id_and_empty_content_tracked_state_rebuild' (30588) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1263:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1dba-70a3-a0ae-377300000000\", after: \"01920000-0000-7000-8000-000600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_path_insert_applies_defaulted_id_and_empty_content_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_path_insert_applies_defaulted_id_and_empty_content_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_file_path_insert_applies_defaulted_id_and_empty_content_tracked_state_rebuild' (30588) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:1263:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1dba-70a3-a0ae-377300000000\", after: \"01920000-0000-7000-8000-000600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0052",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_path_index_invalidates_when_branch_head_moves_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 86,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_path_index_invalidates_when_branch_head_moves_base' (30584) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2455:9",
+      "stackText": "thread 'lix_file_path_index_invalidates_when_branch_head_moves_base' (30584) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2455:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000400000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_path_index_invalidates_when_branch_head_moves_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_path_index_invalidates_when_branch_head_moves_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.07s\n\n",
+      "stderr": "\nthread 'lix_file_path_index_invalidates_when_branch_head_moves_base' (30584) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2455:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000400000000\", after: \"01920000-0000-7000-8000-000400000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0053",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_path_update_preserves_content_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 59,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_path_update_preserves_content_tracked_state_rebuild' (30642) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2255:5",
+      "stackText": "thread 'lix_file_path_update_preserves_content_tracked_state_rebuild' (30642) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2255:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1dfa-7ff1-b2e8-bb1200000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_path_update_preserves_content_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_path_update_preserves_content_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'lix_file_path_update_preserves_content_tracked_state_rebuild' (30642) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2255:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1dfa-7ff1-b2e8-bb1200000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0054",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_path_update_preserves_content_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 67,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_path_update_preserves_content_base' (30639) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2255:5",
+      "stackText": "thread 'lix_file_path_update_preserves_content_base' (30639) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2255:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1df8-7b11-bff9-e23a00000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_path_update_preserves_content_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_path_update_preserves_content_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_file_path_update_preserves_content_base' (30639) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2255:5:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1df8-7b11-bff9-e23a00000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0055",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_path_update_by_path_uses_fresh_index_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 74,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_path_update_by_path_uses_fresh_index_base' (30635) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2352:9",
+      "stackText": "thread 'lix_file_path_update_by_path_uses_fresh_index_base' (30635) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2352:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-000f00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_path_update_by_path_uses_fresh_index_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_path_update_by_path_uses_fresh_index_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'lix_file_path_update_by_path_uses_fresh_index_base' (30635) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2352:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-000f00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0056",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_path_update_by_path_uses_fresh_index_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 69,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_path_update_by_path_uses_fresh_index_tracked_state_rebuild' (30637) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2352:9",
+      "stackText": "thread 'lix_file_path_update_by_path_uses_fresh_index_tracked_state_rebuild' (30637) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2352:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-000f00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_path_update_by_path_uses_fresh_index_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_path_update_by_path_uses_fresh_index_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_file_path_update_by_path_uses_fresh_index_tracked_state_rebuild' (30637) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2352:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000800000000\", after: \"01920000-0000-7000-8000-000f00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0057",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_update_accepts_empty_blob_content_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 62,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_update_accepts_empty_blob_content_tracked_state_rebuild' (30702) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2832:9",
+      "stackText": "thread 'lix_file_update_accepts_empty_blob_content_tracked_state_rebuild' (30702) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2832:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000400000000\", after: \"01920000-0000-7000-8000-000900000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_update_accepts_empty_blob_content_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_update_accepts_empty_blob_content_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_file_update_accepts_empty_blob_content_tracked_state_rebuild' (30702) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2832:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000400000000\", after: \"01920000-0000-7000-8000-000900000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0058",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_file::lix_file_update_accepts_empty_blob_content_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 66,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_file_update_accepts_empty_blob_content_base' (30700) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2832:9",
+      "stackText": "thread 'lix_file_update_accepts_empty_blob_content_base' (30700) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2832:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000400000000\", after: \"01920000-0000-7000-8000-000900000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_file::lix_file_update_accepts_empty_blob_content_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_file::lix_file_update_accepts_empty_blob_content_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_file_update_accepts_empty_blob_content_base' (30700) panicked at packages/lix/src/../tests/integration/sql/lix_file.rs:2832:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000400000000\", after: \"01920000-0000-7000-8000-000900000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0059",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::lix_registered_schema_insert_makes_typed_schema_surface_visible_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 73,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_registered_schema_insert_makes_typed_schema_surface_visible_base' (30939) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:33:9",
+      "stackText": "thread 'lix_registered_schema_insert_makes_typed_schema_surface_visible_base' (30939) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:33:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1f91-77f3-a331-ede500000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::lix_registered_schema_insert_makes_typed_schema_surface_visible_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::lix_registered_schema_insert_makes_typed_schema_surface_visible_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_registered_schema_insert_makes_typed_schema_surface_visible_base' (30939) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:33:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1f91-77f3-a331-ede500000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0060",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::independent_schema_amendments_on_two_branches_are_allowed_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 86,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'independent_schema_amendments_on_two_branches_are_allowed_tracked_state_rebuild' (30930) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:871:9",
+      "stackText": "thread 'independent_schema_amendments_on_two_branches_are_allowed_tracked_state_rebuild' (30930) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:871:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000e00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::independent_schema_amendments_on_two_branches_are_allowed_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::independent_schema_amendments_on_two_branches_are_allowed_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.07s\n\n",
+      "stderr": "\nthread 'independent_schema_amendments_on_two_branches_are_allowed_tracked_state_rebuild' (30930) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:871:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000e00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0061",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::lix_registered_schema_insert_makes_typed_schema_surface_visible_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 74,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'lix_registered_schema_insert_makes_typed_schema_surface_visible_tracked_state_rebuild' (30944) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:33:9",
+      "stackText": "thread 'lix_registered_schema_insert_makes_typed_schema_surface_visible_tracked_state_rebuild' (30944) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:33:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1f99-7d71-8af7-b93400000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::lix_registered_schema_insert_makes_typed_schema_surface_visible_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::lix_registered_schema_insert_makes_typed_schema_surface_visible_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'lix_registered_schema_insert_makes_typed_schema_surface_visible_tracked_state_rebuild' (30944) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:33:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01a08dde-1f99-7d71-8af7-b93400000000\", after: \"01920000-0000-7000-8000-000300000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0062",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::registered_row_insert_applies_defaulted_primary_key_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 70,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'registered_row_insert_applies_defaulted_primary_key_base' (30968) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:940:9",
+      "stackText": "thread 'registered_row_insert_applies_defaulted_primary_key_base' (30968) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:940:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::registered_row_insert_applies_defaulted_primary_key_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::registered_row_insert_applies_defaulted_primary_key_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'registered_row_insert_applies_defaulted_primary_key_base' (30968) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:940:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0063",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::independent_schema_amendments_on_two_branches_are_allowed_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 116,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'independent_schema_amendments_on_two_branches_are_allowed_base' (30928) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:871:9",
+      "stackText": "thread 'independent_schema_amendments_on_two_branches_are_allowed_base' (30928) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:871:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000e00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::independent_schema_amendments_on_two_branches_are_allowed_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::independent_schema_amendments_on_two_branches_are_allowed_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.10s\n\n",
+      "stderr": "\nthread 'independent_schema_amendments_on_two_branches_are_allowed_base' (30928) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:871:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000e00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0064",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::registered_row_insert_applies_defaulted_primary_key_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 78,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'registered_row_insert_applies_defaulted_primary_key_tracked_state_rebuild' (30970) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:940:9",
+      "stackText": "thread 'registered_row_insert_applies_defaulted_primary_key_tracked_state_rebuild' (30970) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:940:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::registered_row_insert_applies_defaulted_primary_key_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::registered_row_insert_applies_defaulted_primary_key_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'registered_row_insert_applies_defaulted_primary_key_tracked_state_rebuild' (30970) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:940:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0065",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::registered_schema_default_values_materializes_generated_and_literal_defaults_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 51,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'registered_schema_default_values_materializes_generated_and_literal_defaults_tracked_state_rebuild' (30985) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:109:9",
+      "stackText": "thread 'registered_schema_default_values_materializes_generated_and_literal_defaults_tracked_state_rebuild' (30985) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:109:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::registered_schema_default_values_materializes_generated_and_literal_defaults_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::registered_schema_default_values_materializes_generated_and_literal_defaults_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.04s\n\n",
+      "stderr": "\nthread 'registered_schema_default_values_materializes_generated_and_literal_defaults_tracked_state_rebuild' (30985) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:109:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0066",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::registered_schema_default_values_materializes_generated_and_literal_defaults_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 79,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'registered_schema_default_values_materializes_generated_and_literal_defaults_base' (30983) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:109:9",
+      "stackText": "thread 'registered_schema_default_values_materializes_generated_and_literal_defaults_base' (30983) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:109:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::registered_schema_default_values_materializes_generated_and_literal_defaults_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::registered_schema_default_values_materializes_generated_and_literal_defaults_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'registered_schema_default_values_materializes_generated_and_literal_defaults_base' (30983) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:109:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000800000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0067",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::registered_typed_schema_surface_uses_primary_key_columns_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 65,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'registered_typed_schema_surface_uses_primary_key_columns_tracked_state_rebuild' (31004) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1105:9",
+      "stackText": "thread 'registered_typed_schema_surface_uses_primary_key_columns_tracked_state_rebuild' (31004) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1105:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::registered_typed_schema_surface_uses_primary_key_columns_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::registered_typed_schema_surface_uses_primary_key_columns_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'registered_typed_schema_surface_uses_primary_key_columns_tracked_state_rebuild' (31004) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1105:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0068",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::registered_typed_schema_surface_uses_primary_key_columns_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 82,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'registered_typed_schema_surface_uses_primary_key_columns_base' (31001) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1105:9",
+      "stackText": "thread 'registered_typed_schema_surface_uses_primary_key_columns_base' (31001) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1105:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::registered_typed_schema_surface_uses_primary_key_columns_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::registered_typed_schema_surface_uses_primary_key_columns_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'registered_typed_schema_surface_uses_primary_key_columns_base' (31001) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1105:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000300000000\", after: \"01920000-0000-7000-8000-000700000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0069",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::typed_row_update_accepts_file_id_predicate_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 72,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'typed_row_update_accepts_file_id_predicate_base' (31061) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1242:9",
+      "stackText": "thread 'typed_row_update_accepts_file_id_predicate_base' (31061) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1242:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-001100000000\", after: \"01920000-0000-7000-8000-001600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::typed_row_update_accepts_file_id_predicate_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::typed_row_update_accepts_file_id_predicate_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.05s\n\n",
+      "stderr": "\nthread 'typed_row_update_accepts_file_id_predicate_base' (31061) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1242:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-001100000000\", after: \"01920000-0000-7000-8000-001600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0070",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_in_predicate_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 85,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'typed_row_update_accepts_parseable_json_text_identity_in_predicate_base' (31063) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1372:9",
+      "stackText": "thread 'typed_row_update_accepts_parseable_json_text_identity_in_predicate_base' (31063) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1372:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000700000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_in_predicate_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_in_predicate_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'typed_row_update_accepts_parseable_json_text_identity_in_predicate_base' (31063) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1372:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000700000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0071",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_in_predicate_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 83,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'typed_row_update_accepts_parseable_json_text_identity_in_predicate_tracked_state_rebuild' (31067) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1372:9",
+      "stackText": "thread 'typed_row_update_accepts_parseable_json_text_identity_in_predicate_tracked_state_rebuild' (31067) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1372:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000700000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_in_predicate_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_in_predicate_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'typed_row_update_accepts_parseable_json_text_identity_in_predicate_tracked_state_rebuild' (31067) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1372:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000700000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0072",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::typed_row_update_accepts_file_id_predicate_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 101,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'typed_row_update_accepts_file_id_predicate_tracked_state_rebuild' (31059) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1242:9",
+      "stackText": "thread 'typed_row_update_accepts_file_id_predicate_tracked_state_rebuild' (31059) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1242:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-001100000000\", after: \"01920000-0000-7000-8000-001600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::typed_row_update_accepts_file_id_predicate_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::typed_row_update_accepts_file_id_predicate_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.08s\n\n",
+      "stderr": "\nthread 'typed_row_update_accepts_file_id_predicate_tracked_state_rebuild' (31059) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1242:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-001100000000\", after: \"01920000-0000-7000-8000-001600000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0073",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_predicate_tracked_state_rebuild",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 82,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'typed_row_update_accepts_parseable_json_text_identity_predicate_tracked_state_rebuild' (31079) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1315:9",
+      "stackText": "thread 'typed_row_update_accepts_parseable_json_text_identity_predicate_tracked_state_rebuild' (31079) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1315:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000700000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_predicate_tracked_state_rebuild ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_predicate_tracked_state_rebuild\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'typed_row_update_accepts_parseable_json_text_identity_predicate_tracked_state_rebuild' (31079) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1315:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000700000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    },
+    {
+      "failureId": "f0074",
+      "sourceFile": "rust-nextest-junit-test/junit.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 2,
+      "attemptIndex": 0,
+      "displayName": "integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_predicate_base",
+      "suitePath": [
+        "lix"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 85,
+      "errorType": "test failure with exit code 101",
+      "message": "thread 'typed_row_update_accepts_parseable_json_text_identity_predicate_base' (31073) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1315:9",
+      "stackText": "thread 'typed_row_update_accepts_parseable_json_text_identity_predicate_base' (31073) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1315:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000700000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "stdout": "\nrunning 1 test\ntest integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_predicate_base ... FAILED\n\nfailures:\n\nfailures:\n    integration_tests::sql::lix_registered_schema::typed_row_update_accepts_parseable_json_text_identity_predicate_base\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3809 filtered out; finished in 0.06s\n\n",
+      "stderr": "\nthread 'typed_row_update_accepts_parseable_json_text_identity_predicate_base' (31073) panicked at packages/lix/src/../tests/integration/sql/lix_registered_schema.rs:1315:9:\nassertion `left == right` failed\n  left: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: Some(CommitSpan { before: \"01920000-0000-7000-8000-000700000000\", after: \"01920000-0000-7000-8000-000b00000000\" }), checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\n right: ExecuteResult { statement_index: None, statement_label: None, backing: None, rows_affected: 1, commit: None, checkpoint_telemetry: None, profile_provider_rows_examined: 0 }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+    }
+  ]
+}

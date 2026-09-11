@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:labsai/EDDI:34065112725:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "labsai/EDDI",
+    "providerRunId": "34065112725",
+    "runAttempt": 1,
+    "url": "https://github.com/labsai/EDDI/actions/runs/34065112725",
+    "workflowName": "CI/CD",
+    "event": "pull_request",
+    "headSha": "ee9fd1588637ba0009c53cbf73a0fdc70b9dab1d",
+    "headBranch": "fix/review-audit-gdpr",
+    "artifactIds": [
+      "9998888724",
+      "9998749817"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:06:44.859Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 21201,
+    "failures": 12,
+    "passed": 21184,
+    "skipped": 5,
+    "filesParsed": 987,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.GdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "exportUserData_returnsValidStructure",
+      "suitePath": [
+        "ai.labs.eddi.integration.GdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.selectMethod(IndyInterface.java:373)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.exportUserData_returnsValidStructure(GdprComplianceIT.java:62)\n\n      2026-09-06 23:03:23 WARN  [io.qua.sma.openapi]] (build-2) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-06 23:03:23 WARN  [io.qua.sma.openapi]] (build-2) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-06 23:03:23 WARN  [io.qua.sma.openapi]] (build-2) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-06 23:03:23 WARN  [io.qua.sma.openapi]] (build-2) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-06 23:03:32 WARN  [io.qua.sma.openapi]] (build-3) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-06 23:03:32 WARN  [io.qua.sma.openapi]] (build-3) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-06 23:03:32 WARN  [io.qua.sma.openapi]] (build-3) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-06 23:03:32 WARN  [io.qua.sma.openapi]] (build-3) Dropping duplicate annotation, but the values were different; v1: [eddi-admin, eddi-editor], v2: [eddi-admin]\n2026-09-06 23:03:40 WARN  [org.hib.val.int.met.agg.CascadingMetaDataBuilder]] (main) HV000271: Using `@Valid` on a container (java.util.List) is deprecated. You should apply the annotation on the type argument(s). Affected element: attachments\n2026-09-06 23:03:40 WARN  [org.hib.val.int.met.agg.CascadingMetaDataBuilder]] (main) HV000271: Using `@Valid` on a container (java.util.List) is deprecated. You should apply the annotation on the type argument(s). Affected element: DiscussRequest#attachments()\n2026-09-06 23:03:40 WARN  [org.hib.val.int.met.agg.CascadingMetaDataBuilder]] (main) HV000271: Using `@Valid` on a container (java.util.List) is deprecated. You should apply the annotation on the type argument(s). Affected element: DiscussRequest#ai.labs.eddi.engine.api.IRestGroupConversation$DiscussRequest(String, String, List)\n2026-09-06 23:03:40 INFO  [ai.lab.edd.sec.per.MongoSecretPersistence]] (main) Secrets vault MongoDB indexes ensured\n2026-09-06 23:03:40 INFO  [ai.lab.edd.sec.cry.VaultSaltManager]] (main) [VAULT] Fresh deployment — generated per-deployment salt (16 bytes).\n2026-09-06 23:03:40 WARN  [ai.lab.edd.VAULT]] (main) \n+------------------------------------------------------------------+\n|  SECRETS VAULT: ENABLED                                          |\n|                                                                  |\n|  Envelope encryption is active (AES-256-GCM).                    |\n|  ${vault:...} references will be resolved at runtime.           |\n|  Audit entries will be HMAC-signed for tamper detection.         |\n+------------------------------------------------------------------+\n\n\n2026-09-06 23:03:40 INFO  [ai.lab.edd.eng.run.BaseRuntime]] (main) eddi v6.3.0\n2026-09-06 23:03:40 INFO  [ai.lab.edd.eng.sec.AuthStartupGuard]] (main) [SECURITY] test mode — OIDC disabled. Set QUARKUS_OIDC_TENANT_ENABLED=true to test with authentication.\n2026-09-06 23:03:40 INFO  [ai.lab.edd.HITL_RECOVERY]] (hitl-crash-recovery) HITL crash recovery running...\n2026-09-06 23:03:40 WARN  [ai.lab.edd.COMPLIANCE]] (main) \n+------------------------------------------------------------------+\n|  COMPLIANCE: No TLS certificate configured                       |\n+------------------------------------------------------------------+\n|                                                                  |\n|  HIPAA (§164.312(e)) and EU AI Act deployments require           |\n|  encryption in transit for all data containing PII / PHI.        |\n|                                                                  |\n|  If TLS is terminated at a reverse proxy (nginx, Traefik, etc.), |\n|  this warning is safe to ignore.                                 |\n|                                                                  |\n|  To suppress, configure TLS directly:                            |\n|    quarkus.http.ssl.certificate.file=/path/to/cert.pem           |\n|    quarkus.http.ssl.certificate.key-file=/path/to/key.pem        |\n|                                                                  |\n|  See: https://docs.labs.ai/hipaa-compliance                      |\n+------------------------------------------------------------------+\n\n\n2026-09-06 23:03:40 WARN  [ai.lab.edd.COMPLIANCE]] (main) \n+------------------------------------------------------------------+\n|  COMPLIANCE: Database encryption status unknown                  |\n+------------------------------------------------------------------+\n|                                                                  |\n|  Conversation memories and user data are stored in the database. |\n|  HIPAA (§164.312(a)(2)(iv)) requires encryption at rest for PHI. |\n|                                                                  |\n|  Ensure your database has encryption enabled:                     |\n|    MongoDB:    WiredTiger Encryption at Rest (Enterprise)        |\n|    PostgreSQL: pgcrypto, LUKS, or cloud-managed encryption      |\n|    Cloud:      AWS EBS / Azure Disk / GCP PD encryption          |\n|                                                                  |\n|  Once confirmed, suppress this warning:                           |\n|    eddi.compliance.database-encryption-acknowledged=true          |\n|                                                                  |\n|  See: https://docs.labs.ai/hipaa-compliance                      |\n+------------------------------------------------------------------+\n\n\n2026-09-06 23:03:41 INFO  [ai.lab.edd.eng.run.int.SchedulePollerService]] (vert.x-worker-thread-3) Schedule poller initialized (instance=runnervmejwal, leaseTimeout=PT5M, maxRetries=5)\n2026-09-06 23:03:41 INFO  [ai.lab.edd.HITL_RECOVERY]] (hitl-crash-recovery) HITL crash recovery: nothing to repair.\n2026-09-06 23:03:41 INFO  [ai.lab.edd.eng.ten.TenantQuotaService]] (executor-thread-1) Tenant quota service initialized\n2026-09-06 23:03:41 INFO  [ai.lab.edd.eng.ten.MongoTenantQuotaStore]] (executor-thread-1) Ensured default tenant quota exists: tenantId=default, enabled=false, maxConv=-1, maxAgents=-1, maxApi=-1, maxCost=-1.00\n2026-09-06 23:03:41 INFO  [ai.lab.edd.eng.run.int.AgentFactory]] (executor-thread-2) Deploying agent... (environment=production, agentId=6a9df14d4ae2885e72ce0d1b, version=1)\n2026-09-06 23:03:41 INFO  [ai.lab.edd.eng.run.int.AgentFactory]] (executor-thread-2) Agent deployed with status: READY (environment=production, agentId=6a9df14d4ae2885e72ce0d1b, version=1)\nREADY\n2026-09-06 23:03:41 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-1) [GDPR] Art. 18 restriction caching is off (eddi.gdpr.restriction-cache-ttl-seconds=0); every check reads the store.\n2026-09-06 23:03:41 INFO  [ai.lab.edd.con.var.GlobalVariableResolver]] (executor-thread-1) GlobalVariableResolver initialized (cache TTL=2min)\n2026-09-06 23:03:41 INFO  [ai.lab.edd.con.var.mon.GlobalVariableStore]] (executor-thread-1) GlobalVariableStore initialized (collection=globalvariables)\n2026-09-06 23:03:41 INFO  [ai.lab.edd.eng.run.int.AgentDeploymentManagement]] (eddi-scheduler) Starting deployment of agents...\n2026-09-06 23:03:41 INFO  [ai.lab.edd.con.mig.V6RenameMigration]] (eddi-scheduler) V6 rename migration is disabled (eddi.migration.v6-rename.enabled=false)\n2026-09-06 23:03:41 INFO  [ai.lab.edd.con.mig.V6QuteMigration]] (eddi-scheduler) V6 Qute migration disabled (eddi.migration.v6-qute.enabled=false)\n2026-09-06 23:03:41 INFO  [ai.lab.edd.con.mig.ChannelConnectorMigration]] (eddi-scheduler) Starting channel connector migration...\n2026-09-06 23:03:41 INFO  [ai.lab.edd.con.mig.ChannelConnectorMigration]] (eddi-scheduler) Channel connector migration complete: 0 created, 0 failed, 0 skipped (already existed)\n2026-09-06 23:03:42 INFO  [ai.lab.edd.con.mig.WorkspaceAccessIndexMigration]] (eddi-scheduler) Workspace access-index backfill complete: 5 descriptor(s) scanned, 0 stamped.\n2026-09-06 23:03:42 INFO  [ai.lab.edd.con.mig.MigrationManager]] (eddi-scheduler) No migration of propertysetter documents was needed!\n2026-09-06 23:03:42 INFO  [ai.lab.edd.con.mig.MigrationManager]] (eddi-scheduler) No migration of httpcalls documents was needed!\n2026-09-06 23:03:42 INFO  [ai.lab.edd.con.mig.MigrationManager]] (eddi-scheduler) No migration of output documents was needed!\n2026-09-06 23:03:42 INFO  [ai.lab.edd.con.mig.MigrationManager]] (eddi-scheduler) No migration of conversation memory documents was needed!\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.run.int.AgentDeploymentManagement]] (eddi-scheduler) Finished deployment of agents.\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.run.int.AgentDeploymentManagement]] (eddi-scheduler) E.D.D.I is ready!\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.aud.AuditLedgerService]] (executor-thread-1) Audit Ledger: HMAC integrity signing enabled.\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.aud.AuditLedgerService]] (executor-thread-1) Audit Ledger initialized (flush every 3s)\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-1) GDPR export request received\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-1) [GDPR] Starting data export [gdpr-erased:a6b2f91151d7f9fa19acd9eb53d0256adb7c308268f02a87ba4507db8c9af2b1]\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-1) [GDPR] Export complete [gdpr-erased:a6b2f91151d7f9fa19acd9eb53d0256adb7c308268f02a87ba4507db8c9af2b1]: memories=0, conversations=1 of 1, truncated=false, managedConversations=0, auditEntries=0, attachments=0\n2026-09-06 23:03:42 WARN  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-1) GDPR export incomplete — conversationsTruncated: false, omitted categories: [groupConversations, sharedArtifacts, schedules, journalEntries]\n\n    ",
+      "stdout": "2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.run.int.AgentFactory]] (executor-thread-2) Deploying agent... (environment=production, agentId=6a9df0a54ae2885e72ce0c81, version=1)\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.run.int.AgentFactory]] (executor-thread-2) Agent deployed with status: READY (environment=production, agentId=6a9df0a54ae2885e72ce0c81, version=1)\nREADY\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export request received\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Starting data export [gdpr-erased:eae0093598005f0f46236d2dd780d368aba0efc1a833867b2ee19560f6c2690b]\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Export complete [gdpr-erased:eae0093598005f0f46236d2dd780d368aba0efc1a833867b2ee19560f6c2690b]: memories=0, conversations=1 of 1, truncated=false, managedConversations=0, auditEntries=0, attachments=0\n2026-09-06 23:00:53 WARN  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export incomplete — conversationsTruncated: false, omitted categories: [groupConversations, sharedArtifacts, schedules, journalEntries]\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.GdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "exportUserData_returnsValidStructure",
+      "suitePath": [
+        "ai.labs.eddi.integration.GdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 246,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.exportUserData_returnsValidStructure(GdprComplianceIT.java:62)\n",
+      "stdout": "2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.run.int.AgentFactory]] (executor-thread-2) Deploying agent... (environment=production, agentId=6a9df0a54ae2885e72ce0c81, version=1)\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.run.int.AgentFactory]] (executor-thread-2) Agent deployed with status: READY (environment=production, agentId=6a9df0a54ae2885e72ce0c81, version=1)\nREADY\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export request received\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Starting data export [gdpr-erased:eae0093598005f0f46236d2dd780d368aba0efc1a833867b2ee19560f6c2690b]\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Export complete [gdpr-erased:eae0093598005f0f46236d2dd780d368aba0efc1a833867b2ee19560f6c2690b]: memories=0, conversations=1 of 1, truncated=false, managedConversations=0, auditEntries=0, attachments=0\n2026-09-06 23:00:53 WARN  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export incomplete — conversationsTruncated: false, omitted categories: [groupConversations, sharedArtifacts, schedules, journalEntries]\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.GdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "exportEmptyUser_returnsValidStructure",
+      "suitePath": [
+        "ai.labs.eddi.integration.GdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.exportEmptyUser_returnsValidStructure(GdprComplianceIT.java:75)\n\n      2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-1) GDPR export request received\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-1) [GDPR] Starting data export [gdpr-erased:58bd349f9edfa53b458c7d5eb3e30a3bae65c607b0c8a95c356ddc16f8f7a025]\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-1) [GDPR] Export complete [gdpr-erased:58bd349f9edfa53b458c7d5eb3e30a3bae65c607b0c8a95c356ddc16f8f7a025]: memories=0, conversations=0 of 0, truncated=false, managedConversations=0, auditEntries=0, attachments=0\n2026-09-06 23:03:42 WARN  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-1) GDPR export incomplete — conversationsTruncated: false, omitted categories: [groupConversations, sharedArtifacts, schedules, journalEntries]\n\n    ",
+      "stdout": "2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export request received\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Starting data export [gdpr-erased:2c7d7d5a22c94a64cff5478cf21a25d14e4370e8d55e6f88ecbced57a9f1b8bf]\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Export complete [gdpr-erased:2c7d7d5a22c94a64cff5478cf21a25d14e4370e8d55e6f88ecbced57a9f1b8bf]: memories=0, conversations=0 of 0, truncated=false, managedConversations=0, auditEntries=0, attachments=0\n2026-09-06 23:00:53 WARN  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export incomplete — conversationsTruncated: false, omitted categories: [groupConversations, sharedArtifacts, schedules, journalEntries]\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.GdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "exportEmptyUser_returnsValidStructure",
+      "suitePath": [
+        "ai.labs.eddi.integration.GdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 17,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.exportEmptyUser_returnsValidStructure(GdprComplianceIT.java:75)\n",
+      "stdout": "2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export request received\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Starting data export [gdpr-erased:2c7d7d5a22c94a64cff5478cf21a25d14e4370e8d55e6f88ecbced57a9f1b8bf]\n2026-09-06 23:00:53 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Export complete [gdpr-erased:2c7d7d5a22c94a64cff5478cf21a25d14e4370e8d55e6f88ecbced57a9f1b8bf]: memories=0, conversations=0 of 0, truncated=false, managedConversations=0, auditEntries=0, attachments=0\n2026-09-06 23:00:53 WARN  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export incomplete — conversationsTruncated: false, omitted categories: [groupConversations, sharedArtifacts, schedules, journalEntries]\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.GdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "afterErasure_exportIsEmpty",
+      "suitePath": [
+        "ai.labs.eddi.integration.GdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.afterErasure_exportIsEmpty(GdprComplianceIT.java:172)\n\n      2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR erasure request received\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Starting erasure cascade for pseudonym 'gdpr-erased:1383036dcd274892c3aef446e90573d346a2f688a18381cf48af79cf239a55fd'\n2026-09-06 23:03:42 INFO  [ai.lab.edd.con.pro.mon.MongoUserMemoryStore]] (executor-thread-2) [MEMORY] GDPR delete-all for user 'gdpr-erase-verify-1788735822369': 0 entries removed\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 0 user memory entries [gdpr-erased:1383036dcd274892c3aef446e90573d346a2f688a18381cf48af79cf239a55fd]\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 1 conversation descriptors [gdpr-erased:1383036dcd274892c3aef446e90573d346a2f688a18381cf48af79cf239a55fd]\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 1 conversations [gdpr-erased:1383036dcd274892c3aef446e90573d346a2f688a18381cf48af79cf239a55fd]\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 0 conversation mappings [gdpr-erased:1383036dcd274892c3aef446e90573d346a2f688a18381cf48af79cf239a55fd]\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Pseudonymized 0 log entries [gdpr-erased:1383036dcd274892c3aef446e90573d346a2f688a18381cf48af79cf239a55fd]\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Pseudonymized 0 audit entries [gdpr-erased:1383036dcd274892c3aef446e90573d346a2f688a18381cf48af79cf239a55fd]\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Erasure cascade complete [gdpr-erased:1383036dcd274892c3aef446e90573d346a2f688a18381cf48af79cf239a55fd]: memories=0, conversations=1, checkpoints=0, mappings=0, groupConversations=0, sharedArtifacts=0, schedules=0, logs=0, audit=0\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export request received\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Starting data export [gdpr-erased:1383036dcd274892c3aef446e90573d346a2f688a18381cf48af79cf239a55fd]\n2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Export complete [gdpr-erased:1383036dcd274892c3aef446e90573d346a2f688a18381cf48af79cf239a55fd]: memories=0, conversations=0 of 0, truncated=false, managedConversations=0, auditEntries=0, attachments=0\n2026-09-06 23:03:42 WARN  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export incomplete — conversationsTruncated: false, omitted categories: [groupConversations, sharedArtifacts, schedules, journalEntries]\n\n    ",
+      "stdout": "2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR erasure request received\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Starting erasure cascade for pseudonym 'gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed'\n2026-09-06 23:00:54 INFO  [ai.lab.edd.con.pro.mon.MongoUserMemoryStore]] (executor-thread-2) [MEMORY] GDPR delete-all for user 'gdpr-erase-verify-1788735654019': 0 entries removed\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 0 user memory entries [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 1 conversation descriptors [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 1 conversations [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 0 conversation mappings [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Pseudonymized 0 log entries [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Pseudonymized 0 audit entries [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Erasure cascade complete [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]: memories=0, conversations=1, checkpoints=0, mappings=0, groupConversations=0, sharedArtifacts=0, schedules=0, logs=0, audit=0\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export request received\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Starting data export [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Export complete [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]: memories=0, conversations=0 of 0, truncated=false, managedConversations=0, auditEntries=0, attachments=0\n2026-09-06 23:00:54 WARN  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export incomplete — conversationsTruncated: false, omitted categories: [groupConversations, sharedArtifacts, schedules, journalEntries]\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.GdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "afterErasure_exportIsEmpty",
+      "suitePath": [
+        "ai.labs.eddi.integration.GdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 89,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.afterErasure_exportIsEmpty(GdprComplianceIT.java:172)\n",
+      "stdout": "2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR erasure request received\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Starting erasure cascade for pseudonym 'gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed'\n2026-09-06 23:00:54 INFO  [ai.lab.edd.con.pro.mon.MongoUserMemoryStore]] (executor-thread-2) [MEMORY] GDPR delete-all for user 'gdpr-erase-verify-1788735654019': 0 entries removed\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 0 user memory entries [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 1 conversation descriptors [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 1 conversations [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Deleted 0 conversation mappings [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Pseudonymized 0 log entries [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Pseudonymized 0 audit entries [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Erasure cascade complete [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]: memories=0, conversations=1, checkpoints=0, mappings=0, groupConversations=0, sharedArtifacts=0, schedules=0, logs=0, audit=0\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export request received\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Starting data export [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]\n2026-09-06 23:00:54 INFO  [ai.lab.edd.eng.gdp.GdprComplianceService]] (executor-thread-2) [GDPR] Export complete [gdpr-erased:dd99fbe8de171cedc50aabd5316f05a265f9617335042925657ba01313f20eed]: memories=0, conversations=0 of 0, truncated=false, managedConversations=0, auditEntries=0, attachments=0\n2026-09-06 23:00:54 WARN  [ai.lab.edd.eng.gdp.RestGdprAdmin]] (executor-thread-2) GDPR export incomplete — conversationsTruncated: false, omitted categories: [groupConversations, sharedArtifacts, schedules, journalEntries]\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "exportUserData_returnsValidStructure",
+      "suitePath": [
+        "ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.exportUserData_returnsValidStructure(GdprComplianceIT.java:62)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1005)\n\tat io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:852)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n      2026-09-06 23:03:42 INFO  [ai.lab.edd.eng.run.int.GracefulShutdownService]] (main) Shutdown signalled — readiness is now DOWN and new conversation turns are rejected\n2026-09-06 23:03:45 INFO  [ai.lab.edd.eng.run.int.GracefulShutdownService]] (main) Nothing in flight — shutdown drain completed immediately\n2026-09-06 23:03:46 WARN  [org.hib.val.int.met.agg.CascadingMetaDataBuilder]] (main) HV000271: Using `@Valid` on a container (java.util.List) is deprecated. You should apply the annotation on the type argument(s). Affected element: attachments\n2026-09-06 23:03:46 WARN  [org.hib.val.int.met.agg.CascadingMetaDataBuilder]] (main) HV000271: Using `@Valid` on a container (java.util.List) is deprecated. You should apply the annotation on the type argument(s). Affected element: DiscussRequest#ai.labs.eddi.engine.api.IRestGroupConversation$DiscussRequest(String, String, List)\n2026-09-06 23:03:46 WARN  [org.hib.val.int.met.agg.CascadingMetaDataBuilder]] (main) HV000271: Using `@Valid` on a container (java.util.List) is deprecated. You should apply the annotation on the type argument(s). Affected element: DiscussRequest#attachments()\nREADY\n\n    ",
+      "stdout": "READY\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "exportUserData_returnsValidStructure",
+      "suitePath": [
+        "ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 139,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.exportUserData_returnsValidStructure(GdprComplianceIT.java:62)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1005)\n\tat io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:852)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n",
+      "stdout": "READY\n",
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "exportEmptyUser_returnsValidStructure",
+      "suitePath": [
+        "ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.exportEmptyUser_returnsValidStructure(GdprComplianceIT.java:75)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1005)\n\tat io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:852)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "exportEmptyUser_returnsValidStructure",
+      "suitePath": [
+        "ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 25,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.exportEmptyUser_returnsValidStructure(GdprComplianceIT.java:75)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1005)\n\tat io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:852)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "afterErasure_exportIsEmpty",
+      "suitePath": [
+        "ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": null,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "\n      java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.afterErasure_exportIsEmpty(GdprComplianceIT.java:172)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1005)\n\tat io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:852)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n    ",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "integration-test-results/TEST-ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 1,
+      "displayName": "afterErasure_exportIsEmpty",
+      "suitePath": [
+        "ai.labs.eddi.integration.postgres.PostgresGdprComplianceIT"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 66,
+      "errorType": "java.lang.AssertionError",
+      "message": "1 expectation failed.\nExpected status code <200> but was <207>.\n",
+      "stackText": "java.lang.AssertionError: \n1 expectation failed.\nExpected status code <200> but was <207>.\n\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat ai.labs.eddi.integration.GdprComplianceIT.afterErasure_exportIsEmpty(GdprComplianceIT.java:172)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1005)\n\tat io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:852)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

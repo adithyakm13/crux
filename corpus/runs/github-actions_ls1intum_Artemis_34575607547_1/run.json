@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:ls1intum/Artemis:34575607547:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "ls1intum/Artemis",
+    "providerRunId": "34575607547",
+    "runAttempt": 1,
+    "url": "https://github.com/ls1intum/Artemis/actions/runs/34575607547",
+    "workflowName": "CI",
+    "event": "pull_request",
+    "headSha": "30737c59569d1b3791e8583aa7ed788e3213f6aa",
+    "headBranch": "feature/assessment/complaint-access-toggle",
+    "artifactIds": [
+      "10190229760",
+      "10190081854",
+      "10190027986",
+      "10190135760",
+      "10190122578",
+      "10190034561",
+      "10189946673",
+      "10190294701"
+    ],
+    "licenseSpdx": "MIT",
+    "licenseRaw": "MIT",
+    "retrievedAt": "2026-09-11T09:10:24.138Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 33698,
+    "failures": 1,
+    "passed": 33586,
+    "skipped": 111,
+    "filesParsed": 1222,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 2514
+    },
+    {
+      "code": "TEXT_TRUNCATED",
+      "count": 12
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "Server JUnit Test Results (IndependentBatch)/TEST-de.tum.cit.aet.artemis.assessment.AssessmentComplaintIntegrationTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 6,
+      "attemptIndex": 0,
+      "displayName": "getComplaintsByCourseId_tutor_allComplaintsForTutor_exposesAssessorKeyAndLabelForMultipleForeignTutors()",
+      "suitePath": [
+        "de.tum.cit.aet.artemis.assessment.AssessmentComplaintIntegrationTest"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 421,
+      "errorType": "java.lang.AssertionError",
+      "message": "java.lang.AssertionError: \nExpecting actual:\n  \"assessmentcomplaintintegrationinstructor1First assessmentcomplaintintegrationinstructor1Last\"\nnot to contain:\n  \"assessmentcomplaintintegrationinstructor1\"\n",
+      "stackText": "java.lang.AssertionError: \nExpecting actual:\n  \"assessmentcomplaintintegrationinstructor1First assessmentcomplaintintegrationinstructor1Last\"\nnot to contain:\n  \"assessmentcomplaintintegrationinstructor1\"\n\n\tat de.tum.cit.aet.artemis.assessment.AssessmentComplaintIntegrationTest.lambda$getComplaintsByCourseId_tutor_allComplaintsForTutor_exposesAssessorKeyAndLabelForMultipleForeignTutors$0(AssessmentComplaintIntegrationTest.java:656)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat de.tum.cit.aet.artemis.assessment.AssessmentComplaintIntegrationTest.getComplaintsByCourseId_tutor_allComplaintsForTutor_exposesAssessorKeyAndLabelForMultipleForeignTutors(AssessmentComplaintIntegrationTest.java:651)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

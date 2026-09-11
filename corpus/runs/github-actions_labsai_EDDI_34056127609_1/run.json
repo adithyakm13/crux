@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:labsai/EDDI:34056127609:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "labsai/EDDI",
+    "providerRunId": "34056127609",
+    "runAttempt": 1,
+    "url": "https://github.com/labsai/EDDI/actions/runs/34056127609",
+    "workflowName": "CI/CD",
+    "event": "pull_request",
+    "headSha": "34e6fab486aec44d98cb369e25561065202785bc",
+    "headBranch": "fix/review-agent-sync",
+    "artifactIds": [
+      "9996075876"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:07:49.297Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 20727,
+    "failures": 3,
+    "passed": 20721,
+    "skipped": 3,
+    "filesParsed": 928,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.ImportStyleTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "noInlineFullyQualifiedNames",
+      "suitePath": [
+        "ai.labs.eddi.ImportStyleTest",
+        "import style (AGENTS.md 4.7)"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 658,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "AGENTS.md 4.7: use a top-level import and the simple name. If two classes genuinely share a simple name in one file, add that file to ALLOWED with a note.\n  src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1441  jakarta.ws.rs.NotFoundException\n  src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1444  jakarta.ws.rs.NotFoundException\n  src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1516  java.io.IOException\n  src/test/java/ai/labs/eddi/backup/impl/StructuralMatcherFailurePathTest.java:231  java.io.IOException ==> expected: <[]> but was: <[src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1441  jakarta.ws.rs.NotFoundException, src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1444  jakarta.ws.rs.NotFoundException, src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1516  java.io.IOException, src/test/java/ai/labs/eddi/backup/impl/StructuralMatcherFailurePathTest.java:231  java.io.IOException]>",
+      "stackText": "org.opentest4j.AssertionFailedError: \nAGENTS.md 4.7: use a top-level import and the simple name. If two classes genuinely share a simple name in one file, add that file to ALLOWED with a note.\n  src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1441  jakarta.ws.rs.NotFoundException\n  src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1444  jakarta.ws.rs.NotFoundException\n  src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1516  java.io.IOException\n  src/test/java/ai/labs/eddi/backup/impl/StructuralMatcherFailurePathTest.java:231  java.io.IOException ==> expected: <[]> but was: <[src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1441  jakarta.ws.rs.NotFoundException, src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1444  jakarta.ws.rs.NotFoundException, src/test/java/ai/labs/eddi/backup/impl/UpgradeExecutorTest.java:1516  java.io.IOException, src/test/java/ai/labs/eddi/backup/impl/StructuralMatcherFailurePathTest.java:231  java.io.IOException]>\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1210)\n\tat ai.labs.eddi.ImportStyleTest.noInlineFullyQualifiedNames(ImportStyleTest.java:167)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.backup.impl.RestImportServiceArchiveContractTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "previewMatchesSchedulesByNameAgainstTheTargetAgent",
+      "suitePath": [
+        "ai.labs.eddi.backup.impl.RestImportServiceArchiveContractTest",
+        "schedules"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 11,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "a merge overwrites the target's schedule of that name: {sched2=ResourceDiff[sourceId=sched2, resourceType=schedule, name=nightly, action=UPDATE, targetId=alreadyHere, targetVersion=null, matchStrategy=name, sourceContent=null, targetContent=null, workflowIndex=-1], sched1=ResourceDiff[sourceId=sched1, resourceType=schedule, name=nightly, action=CREATE, targetId=null, targetVersion=null, matchStrategy=null, sourceContent=null, targetContent=null, workflowIndex=-1], sched3=ResourceDiff[sourceId=sched3, resourceType=schedule, name=heartbeat, action=CREATE, targetId=null, targetVersion=null, matchStrategy=null, sourceContent=null, targetContent=null, workflowIndex=-1]} ==> expected: <UPDATE> but was: <CREATE>",
+      "stackText": "org.opentest4j.AssertionFailedError: a merge overwrites the target's schedule of that name: {sched2=ResourceDiff[sourceId=sched2, resourceType=schedule, name=nightly, action=UPDATE, targetId=alreadyHere, targetVersion=null, matchStrategy=name, sourceContent=null, targetContent=null, workflowIndex=-1], sched1=ResourceDiff[sourceId=sched1, resourceType=schedule, name=nightly, action=CREATE, targetId=null, targetVersion=null, matchStrategy=null, sourceContent=null, targetContent=null, workflowIndex=-1], sched3=ResourceDiff[sourceId=sched3, resourceType=schedule, name=heartbeat, action=CREATE, targetId=null, targetVersion=null, matchStrategy=null, sourceContent=null, targetContent=null, workflowIndex=-1]} ==> expected: <UPDATE> but was: <CREATE>\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1210)\n\tat ai.labs.eddi.backup.impl.RestImportServiceArchiveContractTest$Schedules.previewMatchesSchedulesByNameAgainstTheTargetAgent(RestImportServiceArchiveContractTest.java:785)\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.backup.impl.RestImportServiceScheduleFailureTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "failingRollbackDoesNotMaskTheOriginalFailure",
+      "suitePath": [
+        "ai.labs.eddi.backup.impl.RestImportServiceScheduleFailureTest",
+        "RestImportService — schedules that cannot be written"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 23,
+      "errorType": "Wanted but not invoked",
+      "message": "\nWanted but not invoked:\niScheduleStore.updateSchedule(\n    \"alreadyHere\",\n    <any>\n);\n-> at ai.labs.eddi.backup.impl.RestImportServiceScheduleFailureTest.failingRollbackDoesNotMaskTheOriginalFailure(RestImportServiceScheduleFailureTest.java:296)\n\nHowever, there was exactly 1 interaction with this mock:\niScheduleStore.readSchedulesByAgentId(\n    \"ccdd11112222333344445555\"\n);\n-> at ai.labs.eddi.backup.impl.RestImportService.existingScheduleIdsByName(RestImportService.java:1452)\n\n",
+      "stackText": "Wanted but not invoked:\niScheduleStore.updateSchedule(\n    \"alreadyHere\",\n    <any>\n);\n-> at ai.labs.eddi.backup.impl.RestImportServiceScheduleFailureTest.failingRollbackDoesNotMaskTheOriginalFailure(RestImportServiceScheduleFailureTest.java:296)\n\nHowever, there was exactly 1 interaction with this mock:\niScheduleStore.readSchedulesByAgentId(\n    \"ccdd11112222333344445555\"\n);\n-> at ai.labs.eddi.backup.impl.RestImportService.existingScheduleIdsByName(RestImportService.java:1452)\n\n\n\tat ai.labs.eddi.backup.impl.RestImportServiceScheduleFailureTest.failingRollbackDoesNotMaskTheOriginalFailure(RestImportServiceScheduleFailureTest.java:296)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

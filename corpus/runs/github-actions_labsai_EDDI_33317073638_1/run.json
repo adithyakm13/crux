@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:labsai/EDDI:33317073638:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "labsai/EDDI",
+    "providerRunId": "33317073638",
+    "runAttempt": 1,
+    "url": "https://github.com/labsai/EDDI/actions/runs/33317073638",
+    "workflowName": "CI/CD",
+    "event": "pull_request",
+    "headSha": "e2423936b458cb5ee6ad72198f0ee2233477bd5c",
+    "headBranch": "fix/connection-extra-auth-params-code-verifier",
+    "artifactIds": [
+      "9733845100"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:09:33.196Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 20507,
+    "failures": 1,
+    "passed": 20503,
+    "skipped": 3,
+    "filesParsed": 908,
+    "filesRejected": 0
+  },
+  "warnings": [],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/TEST-ai.labs.eddi.docs.ConfigurationReferenceCoverageTest.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "referenceIsExhaustive",
+      "suitePath": [
+        "ai.labs.eddi.docs.ConfigurationReferenceCoverageTest",
+        "configuration reference coverage"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 86,
+      "errorType": "org.opentest4j.AssertionFailedError",
+      "message": "These properties change how a deployment behaves and appear nowhere in docs/configuration-reference.md. An operator cannot set what is not written down, and a property nobody documents is one nobody reviews:\n  eddi.workspaces.default-space (read in src/main/java/ai/labs/eddi/engine/security/spaces/WorkspaceSettings.java)\n  eddi.workspaces.enabled (read in application.properties)\n  eddi.workspaces.groups-claim (read in application.properties)\n  eddi.workspaces.legacy-visibility (read in application.properties) ==> expected: <true> but was: <false>",
+      "stackText": "org.opentest4j.AssertionFailedError: \nThese properties change how a deployment behaves and appear nowhere in docs/configuration-reference.md. An operator cannot set what is not written down, and a property nobody documents is one nobody reviews:\n  eddi.workspaces.default-space (read in src/main/java/ai/labs/eddi/engine/security/spaces/WorkspaceSettings.java)\n  eddi.workspaces.enabled (read in application.properties)\n  eddi.workspaces.groups-claim (read in application.properties)\n  eddi.workspaces.legacy-visibility (read in application.properties) ==> expected: <true> but was: <false>\n\tat org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:232)\n\tat ai.labs.eddi.docs.ConfigurationReferenceCoverageTest.referenceIsExhaustive(ConfigurationReferenceCoverageTest.java:105)\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

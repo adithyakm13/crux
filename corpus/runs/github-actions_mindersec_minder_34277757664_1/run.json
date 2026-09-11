@@ -1,0 +1,3002 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:mindersec/minder:34277757664:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "mindersec/minder",
+    "providerRunId": "34277757664",
+    "runAttempt": 1,
+    "url": "https://github.com/mindersec/minder/actions/runs/34277757664",
+    "workflowName": "PR",
+    "event": "pull_request",
+    "headSha": "d2fd6f4dd4a7ff01bc66501db8422674128e45e0",
+    "headBranch": "feat/quay-provider",
+    "artifactIds": [
+      "10076719638"
+    ],
+    "licenseSpdx": "Apache-2.0",
+    "licenseRaw": "Apache-2.0",
+    "retrievedAt": "2026-09-11T09:22:13.963Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 2811,
+    "failures": 156,
+    "passed": 2655,
+    "skipped": 0,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPatchManagedProfile",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 33640,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPatchManagedProfile\n=== PAUSE TestPatchManagedProfile\n=== CONT  TestPatchManagedProfile\n--- FAIL: TestPatchManagedProfile (33.64s)\npanic: failed to init driver with path migrations: duplicate migration file: 000118_quay_provider.down.sql [recovered, repanicked]\n\ngoroutine 76 [running]:\ntesting.tRunner.func1.2({0x69d35a0, 0xc000988cc0})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:1974 +0x419\ntesting.tRunner.func1()\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:1977 +0x67f\npanic({0x69d35a0?, 0xc000988cc0?})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/runtime/panic.go:860 +0x13a\ngithub.com/mindersec/minder/database.migrationsFromSource(...)\n\t/home/runner/work/minder/minder/database/migrations.go:22\ngithub.com/mindersec/minder/database.NewFromConnectionString({0xc000163200, 0x75})\n\t/home/runner/work/minder/minder/database/migrations.go:38 +0xce\ngithub.com/mindersec/minder/internal/db/embedded.GetFakeStore()\n\t/home/runner/work/minder/minder/internal/db/embedded/testdb.go:141 +0x8b8\ngithub.com/mindersec/minder/internal/controlplane.TestPatchManagedProfile(0xc000cf5688)\n\t/home/runner/work/minder/minder/internal/controlplane/handlers_profile_test.go:1077 +0x45\ntesting.tRunner(0xc000cf5688, 0x764a160)\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:2036 +0x21d\ncreated by testing.(*T).Run in goroutine 1\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:2101 +0xb13\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteDataSourceById",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteDataSourceById\n=== PAUSE TestDeleteDataSourceById\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestBuildEvalResultAlertFromLRERow",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestBuildEvalResultAlertFromLRERow\n=== PAUSE TestBuildEvalResultAlertFromLRERow\n=== CONT  TestBuildEvalResultAlertFromLRERow\n=== RUN   TestBuildEvalResultAlertFromLRERow/normal\n=== PAUSE TestBuildEvalResultAlertFromLRERow/normal\n=== RUN   TestBuildEvalResultAlertFromLRERow/no-advisory\n=== PAUSE TestBuildEvalResultAlertFromLRERow/no-advisory\n=== RUN   TestBuildEvalResultAlertFromLRERow/no-repo-owner\n=== PAUSE TestBuildEvalResultAlertFromLRERow/no-repo-owner\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0004",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListEvaluationResultsIncludeOutputs",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListEvaluationResultsIncludeOutputs\n=== PAUSE TestListEvaluationResultsIncludeOutputs\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0005",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListInvitations/No_invitations",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListInvitations/No_invitations\n=== PAUSE TestListInvitations/No_invitations\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0006",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestBuildEvalResultAlertFromLRERow/no-advisory",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestBuildEvalResultAlertFromLRERow/no-advisory\n=== PAUSE TestBuildEvalResultAlertFromLRERow/no-advisory\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0007",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDBEntityToEntity",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDBEntityToEntity\n=== PAUSE TestDBEntityToEntity\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0008",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateProvider",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateProvider\n=== PAUSE TestCreateProvider\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0009",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_ListRepositories",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_ListRepositories\n=== PAUSE TestServer_ListRepositories\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0010",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateUser_gRPC/Success_with_two_pending_Apps",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateUser_gRPC/Success_with_two_pending_Apps\n=== PAUSE TestCreateUser_gRPC/Success_with_two_pending_Apps\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0011",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateRuleType/guidance_not_utf-8",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateRuleType/guidance_not_utf-8\n=== PAUSE TestCreateRuleType/guidance_not_utf-8\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0012",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestFromEvaluationHistoryRowsWithOutput",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestFromEvaluationHistoryRowsWithOutput\n=== PAUSE TestFromEvaluationHistoryRowsWithOutput\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0013",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_DeleteRepository",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_DeleteRepository\n=== PAUSE TestServer_DeleteRepository\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0014",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListProjectsWithOneDeletedWhileIterating",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListProjectsWithOneDeletedWhileIterating\n=== PAUSE TestListProjectsWithOneDeletedWhileIterating\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0015",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_ListRemoteRepositoriesFromProvider",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_ListRemoteRepositoriesFromProvider\n=== PAUSE TestServer_ListRemoteRepositoriesFromProvider\n=== CONT  TestServer_ListRemoteRepositoriesFromProvider\n=== RUN   TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_fails_when_all_providers_error\n=== PAUSE TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_fails_when_all_providers_error\n=== RUN   TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_succeeds_when_all_providers_succeed\n=== PAUSE TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_succeeds_when_all_providers_succeed\n=== RUN   TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_fails_when_db_fails\n=== PAUSE TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_fails_when_db_fails\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0016",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateUser_gRPC",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateUser_gRPC\n=== PAUSE TestCreateUser_gRPC\n=== CONT  TestCreateUser_gRPC\n=== RUN   TestCreateUser_gRPC/Success\n=== PAUSE TestCreateUser_gRPC/Success\n=== RUN   TestCreateUser_gRPC/Success_with_pending_App\n=== PAUSE TestCreateUser_gRPC/Success_with_pending_App\n=== RUN   TestCreateUser_gRPC/Success_with_two_pending_Apps\n=== PAUSE TestCreateUser_gRPC/Success_with_two_pending_Apps\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0017",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestResolveInvitation/Update_role_if_accepting_existing_invite",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestResolveInvitation/Update_role_if_accepting_existing_invite\n=== PAUSE TestResolveInvitation/Update_role_if_accepting_existing_invite\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0018",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateRuleType/warns_when_creating_a_V0_rule_type",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateRuleType/warns_when_creating_a_V0_rule_type\n=== PAUSE TestCreateRuleType/warns_when_creating_a_V0_rule_type\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0019",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestFromEvaluationHistoryRows",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestFromEvaluationHistoryRows\n=== PAUSE TestFromEvaluationHistoryRows\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0020",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestUpdateRuleType/guidance_too_long",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestUpdateRuleType/guidance_too_long\n=== PAUSE TestUpdateRuleType/guidance_too_long\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0021",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListDataSources",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListDataSources\n=== PAUSE TestListDataSources\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0022",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor/non_project_owner_bypasses_interceptor",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor/non_project_owner_bypasses_interceptor\n=== PAUSE TestEntityContextProjectInterceptor/non_project_owner_bypasses_interceptor\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0023",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor/malformed_project_ID",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor/malformed_project_ID\n=== PAUSE TestEntityContextProjectInterceptor/malformed_project_ID\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0024",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestUpdateRuleType/guidance_not_utf-8",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestUpdateRuleType/guidance_not_utf-8\n=== PAUSE TestUpdateRuleType/guidance_not_utf-8\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0025",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListProfiles",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListProfiles\n=== PAUSE TestListProfiles\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0026",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListProviderClasses",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListProviderClasses\n=== PAUSE TestListProviderClasses\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0027",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestResolveInvitation/Success_create_user",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestResolveInvitation/Success_create_user\n=== PAUSE TestResolveInvitation/Success_create_user\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0028",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateRuleType/guidance_sanitize_error",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateRuleType/guidance_sanitize_error\n=== PAUSE TestCreateRuleType/guidance_sanitize_error\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0029",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor/target_resource_unspecified_throws_error",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor/target_resource_unspecified_throws_error\n=== PAUSE TestEntityContextProjectInterceptor/target_resource_unspecified_throws_error\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0030",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor/lookup_by_name",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor/lookup_by_name\n=== PAUSE TestEntityContextProjectInterceptor/lookup_by_name\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0031",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateRuleType/guidance_too_long",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateRuleType/guidance_too_long\n=== PAUSE TestCreateRuleType/guidance_too_long\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0032",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProjectAuthorizationInterceptor",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProjectAuthorizationInterceptor\n=== PAUSE TestProjectAuthorizationInterceptor\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0033",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetProfileStatusById",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetProfileStatusById\n=== PAUSE TestGetProfileStatusById\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0034",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteUser_gRPC",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteUser_gRPC\n=== PAUSE TestDeleteUser_gRPC\n=== CONT  TestDeleteUser_gRPC\n=== RUN   TestDeleteUser_gRPC/Success\n=== PAUSE TestDeleteUser_gRPC/Success\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0035",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestResolveInvitation",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestResolveInvitation\n=== PAUSE TestResolveInvitation\n=== CONT  TestResolveInvitation\n=== RUN   TestResolveInvitation/code_not_found\n=== PAUSE TestResolveInvitation/code_not_found\n=== RUN   TestResolveInvitation/user_self_resolving\n=== PAUSE TestResolveInvitation/user_self_resolving\n=== RUN   TestResolveInvitation/expired_invitation\n=== PAUSE TestResolveInvitation/expired_invitation\n=== RUN   TestResolveInvitation/Success_accept\n=== PAUSE TestResolveInvitation/Success_accept\n=== RUN   TestResolveInvitation/Success_decline\n=== PAUSE TestResolveInvitation/Success_decline\n=== RUN   TestResolveInvitation/Can't_accept_for_current_role\n=== PAUSE TestResolveInvitation/Can't_accept_for_current_role\n=== RUN   TestResolveInvitation/Update_role_if_accepting_existing_invite\n=== PAUSE TestResolveInvitation/Update_role_if_accepting_existing_invite\n=== RUN   TestResolveInvitation/Success_create_user\n=== PAUSE TestResolveInvitation/Success_create_user\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0036",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteUserOneProject",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteUserOneProject\n=== PAUSE TestDeleteUserOneProject\n=== CONT  TestDeleteUserOneProject\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0037",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListRuleTypes/success_with_no_rule_types",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListRuleTypes/success_with_no_rule_types\n=== PAUSE TestListRuleTypes/success_with_no_rule_types\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0038",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_RegisterEntity",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_RegisterEntity\n=== PAUSE TestServer_RegisterEntity\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0039",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListProjects",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListProjects\n=== PAUSE TestListProjects\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0040",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListRuleTypes/failed_to_get_rule_types",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListRuleTypes/failed_to_get_rule_types\n=== PAUSE TestListRuleTypes/failed_to_get_rule_types\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0041",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor/empty_context",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor/empty_context\n=== PAUSE TestEntityContextProjectInterceptor/empty_context\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0042",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteRuleType/no_delete_subscription",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteRuleType/no_delete_subscription\n=== PAUSE TestDeleteRuleType/no_delete_subscription\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0043",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListInvitations",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListInvitations\n=== PAUSE TestListInvitations\n=== CONT  TestListInvitations\n=== RUN   TestListInvitations/Main_user\n=== PAUSE TestListInvitations/Main_user\n=== RUN   TestListInvitations/Other_user\n=== PAUSE TestListInvitations/Other_user\n=== RUN   TestListInvitations/No_invitations\n=== PAUSE TestListInvitations/No_invitations\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0044",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestResolveInvitation/Success_accept",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestResolveInvitation/Success_accept\n=== PAUSE TestResolveInvitation/Success_accept\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0045",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateUser_gRPC/Success",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateUser_gRPC/Success\n=== PAUSE TestCreateUser_gRPC/Success\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0046",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_ReconcileEntityRegistration",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_ReconcileEntityRegistration\n=== PAUSE TestServer_ReconcileEntityRegistration\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0047",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestResolveInvitation/code_not_found",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestResolveInvitation/code_not_found\n=== PAUSE TestResolveInvitation/code_not_found\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0048",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteRuleType/delete_by_id",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteRuleType/delete_by_id\n=== PAUSE TestDeleteRuleType/delete_by_id\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0049",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestUpdateDataSource",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestUpdateDataSource\n=== PAUSE TestUpdateDataSource\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0050",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteDataSourceByName",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteDataSourceByName\n=== PAUSE TestDeleteDataSourceByName\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0051",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetEvaluationHistoryIncludeOutputs",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetEvaluationHistoryIncludeOutputs\n=== PAUSE TestGetEvaluationHistoryIncludeOutputs\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0052",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetProfileStatusByName",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetProfileStatusByName\n=== PAUSE TestGetProfileStatusByName\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0053",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteProfile",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteProfile\n=== PAUSE TestDeleteProfile\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0054",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteRuleType",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteRuleType\n=== PAUSE TestDeleteRuleType\n=== CONT  TestDeleteRuleType\n=== RUN   TestDeleteRuleType/delete_by_id\n=== PAUSE TestDeleteRuleType/delete_by_id\n=== RUN   TestDeleteRuleType/delete_by_name\n=== PAUSE TestDeleteRuleType/delete_by_name\n=== RUN   TestDeleteRuleType/no_delete_subscription\n=== PAUSE TestDeleteRuleType/no_delete_subscription\n=== RUN   TestDeleteRuleType/used_by_profile\n=== PAUSE TestDeleteRuleType/used_by_profile\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0055",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor/sets_entity_context",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor/sets_entity_context\n=== PAUSE TestEntityContextProjectInterceptor/sets_entity_context\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0056",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListInvitations/Main_user",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListInvitations/Main_user\n=== PAUSE TestListInvitations/Main_user\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0057",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor\n=== PAUSE TestEntityContextProjectInterceptor\n=== CONT  TestEntityContextProjectInterceptor\n=== RUN   TestEntityContextProjectInterceptor/not_implementing_proto_context_throws_error\n=== PAUSE TestEntityContextProjectInterceptor/not_implementing_proto_context_throws_error\n=== RUN   TestEntityContextProjectInterceptor/target_resource_unspecified_throws_error\n=== PAUSE TestEntityContextProjectInterceptor/target_resource_unspecified_throws_error\n=== RUN   TestEntityContextProjectInterceptor/non_project_owner_bypasses_interceptor\n=== PAUSE TestEntityContextProjectInterceptor/non_project_owner_bypasses_interceptor\n=== RUN   TestEntityContextProjectInterceptor/invalid_request_with_nil_context_and_multiple_projects\n=== PAUSE TestEntityContextProjectInterceptor/invalid_request_with_nil_context_and_multiple_projects\n=== RUN   TestEntityContextProjectInterceptor/malformed_project_ID\n=== PAUSE TestEntityContextProjectInterceptor/malformed_project_ID\n=== RUN   TestEntityContextProjectInterceptor/empty_context\n=== PAUSE TestEntityContextProjectInterceptor/empty_context\n=== RUN   TestEntityContextProjectInterceptor/no_provider\n=== PAUSE TestEntityContextProjectInterceptor/no_provider\n=== RUN   TestEntityContextProjectInterceptor/sets_entity_context\n=== PAUSE TestEntityContextProjectInterceptor/sets_entity_context\n=== RUN   TestEntityContextProjectInterceptor/lookup_by_name\n=== PAUSE TestEntityContextProjectInterceptor/lookup_by_name\n=== RUN   TestEntityContextProjectInterceptor/with_ContextV2\n=== PAUSE TestEntityContextProjectInterceptor/with_ContextV2\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0058",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestRoleManagement",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestRoleManagement\n=== PAUSE TestRoleManagement\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0059",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProviderCallback",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProviderCallback\n=== PAUSE TestProviderCallback\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0060",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestBuildEvalResultAlertFromLRERow/no-repo-owner",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestBuildEvalResultAlertFromLRERow/no-repo-owner\n=== PAUSE TestBuildEvalResultAlertFromLRERow/no-repo-owner\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0061",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor/invalid_request_with_nil_context_and_multiple_projects",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor/invalid_request_with_nil_context_and_multiple_projects\n=== PAUSE TestEntityContextProjectInterceptor/invalid_request_with_nil_context_and_multiple_projects\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0062",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteUser_gRPC/Success",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteUser_gRPC/Success\n=== PAUSE TestDeleteUser_gRPC/Success\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0063",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_CreateRepositoryReconciliationTask",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_CreateRepositoryReconciliationTask\n=== PAUSE TestServer_CreateRepositoryReconciliationTask\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0064",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteUserMultiProjectMembership",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteUserMultiProjectMembership\n=== PAUSE TestDeleteUserMultiProjectMembership\n=== CONT  TestDeleteUserMultiProjectMembership\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0065",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_ListEntities",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_ListEntities\n=== PAUSE TestServer_ListEntities\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0066",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetAuthorizationURL",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetAuthorizationURL\n=== PAUSE TestGetAuthorizationURL\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0067",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestHandleGitHubAppCallback",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestHandleGitHubAppCallback\n=== PAUSE TestHandleGitHubAppCallback\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0068",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestResolveInvitation/Success_decline",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestResolveInvitation/Success_decline\n=== PAUSE TestResolveInvitation/Success_decline\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0069",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestUpdateRuleType/guidance_sanitize_error",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestUpdateRuleType/guidance_sanitize_error\n=== PAUSE TestUpdateRuleType/guidance_sanitize_error\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0070",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateDataSource",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateDataSource\n=== PAUSE TestCreateDataSource\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0071",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPatchProfile",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPatchProfile\n=== PAUSE TestPatchProfile\n=== CONT  TestPatchProfile\nThe files belonging to this database system will be owned by user \"runner\".\nThis user must also own the server process.\n\nThe database cluster will be initialized with locale \"C.UTF-8\".\nThe default database encoding has accordingly been set to \"UTF8\".\nThe default text search configuration will be set to \"english\".\n\nData page checksums are enabled.\n\ncreating directory /tmp/minder-db-test3181338895/data ... ok\ncreating subdirectories ... ok\nselecting dynamic shared memory implementation ... posix\nselecting default \"max_connections\" ... 100\nselecting default \"shared_buffers\" ... 128MB\nselecting default time zone ... Etc/UTC\ncreating configuration files ... ok\nrunning bootstrap script ... ok\nperforming post-bootstrap initialization ... ok\nsyncing data to disk ... ok\n\nSuccess. You can now start the database server using:\n\n    /tmp/minder-db-test3181338895/bin/pg_ctl -D /tmp/minder-db-test3181338895/data -l logfile start\n\nwaiting for server to start....2026-09-08 21:04:04.732 UTC [40025] LOG:  starting PostgreSQL 18.3 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, 64-bit\n2026-09-08 21:04:04.732 UTC [40025] LOG:  listening on IPv6 address \"::1\", port 44061\n2026-09-08 21:04:04.732 UTC [40025] LOG:  listening on IPv4 address \"127.0.0.1\", port 44061\n2026-09-08 21:04:04.733 UTC [40025] LOG:  listening on Unix socket \"/tmp/.s.PGSQL.44061\"\n2026-09-08 21:04:04.738 UTC [40031] LOG:  database system was shut down at 2026-09-08 21:04:04 UTC\n2026-09-08 21:04:04.741 UTC [40025] LOG:  database system is ready to accept connections\n done\nserver started\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0072",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteProviderByID",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteProviderByID\n=== PAUSE TestDeleteProviderByID\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0073",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListInvitations/Other_user",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListInvitations/Other_user\n=== PAUSE TestListInvitations/Other_user\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0074",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestUpdateRole",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestUpdateRole\n=== PAUSE TestUpdateRole\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0075",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestBuildEvalResultAlertFromLRERow/normal",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestBuildEvalResultAlertFromLRERow/normal\n=== PAUSE TestBuildEvalResultAlertFromLRERow/normal\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0076",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestVerifyProviderCredential",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestVerifyProviderCredential\n=== PAUSE TestVerifyProviderCredential\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0077",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor/with_ContextV2",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor/with_ContextV2\n=== PAUSE TestEntityContextProjectInterceptor/with_ContextV2\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0078",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_fails_when_all_providers_error",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_fails_when_all_providers_error\n=== PAUSE TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_fails_when_all_providers_error\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0079",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_succeeds_when_all_providers_succeed",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_succeeds_when_all_providers_succeed\n=== PAUSE TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_succeeds_when_all_providers_succeed\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0080",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestUpdateRuleType/warns_when_updating_a_V0_rule_type",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestUpdateRuleType/warns_when_updating_a_V0_rule_type\n=== PAUSE TestUpdateRuleType/warns_when_updating_a_V0_rule_type\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0081",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListEvaluationResultsEntityInfo",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListEvaluationResultsEntityInfo\n=== PAUSE TestListEvaluationResultsEntityInfo\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0082",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetInviteDetails",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetInviteDetails\n=== PAUSE TestGetInviteDetails\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0083",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetProfileById",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetProfileById\n=== PAUSE TestGetProfileById\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0084",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateProviderFailures",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateProviderFailures\n=== PAUSE TestCreateProviderFailures\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0085",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestUpdateRuleType",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestUpdateRuleType\n=== PAUSE TestUpdateRuleType\n=== CONT  TestUpdateRuleType\n=== RUN   TestUpdateRuleType/happy_path\n=== PAUSE TestUpdateRuleType/happy_path\n=== RUN   TestUpdateRuleType/warns_when_updating_a_V0_rule_type\n=== PAUSE TestUpdateRuleType/warns_when_updating_a_V0_rule_type\n=== RUN   TestUpdateRuleType/guidance_sanitize_error\n=== PAUSE TestUpdateRuleType/guidance_sanitize_error\n=== RUN   TestUpdateRuleType/guidance_not_utf-8\n=== PAUSE TestUpdateRuleType/guidance_not_utf-8\n=== RUN   TestUpdateRuleType/guidance_too_long\n=== PAUSE TestUpdateRuleType/guidance_too_long\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0086",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor/not_implementing_proto_context_throws_error",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor/not_implementing_proto_context_throws_error\n=== PAUSE TestEntityContextProjectInterceptor/not_implementing_proto_context_throws_error\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0087",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestAssignRole",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAssignRole\n=== PAUSE TestAssignRole\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0088",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateRuleType",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateRuleType\n=== PAUSE TestCreateRuleType\n=== CONT  TestCreateRuleType\n=== RUN   TestCreateRuleType/happy_path\n=== PAUSE TestCreateRuleType/happy_path\n=== RUN   TestCreateRuleType/warns_when_creating_a_V0_rule_type\n=== PAUSE TestCreateRuleType/warns_when_creating_a_V0_rule_type\n=== RUN   TestCreateRuleType/does_not_warn_when_creating_a_V1_rule_type\n=== PAUSE TestCreateRuleType/does_not_warn_when_creating_a_V1_rule_type\n=== RUN   TestCreateRuleType/guidance_sanitize_error\n=== PAUSE TestCreateRuleType/guidance_sanitize_error\n=== RUN   TestCreateRuleType/guidance_not_utf-8\n=== PAUSE TestCreateRuleType/guidance_not_utf-8\n=== RUN   TestCreateRuleType/guidance_too_long\n=== PAUSE TestCreateRuleType/guidance_too_long\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0089",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteRuleType/used_by_profile",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteRuleType/used_by_profile\n=== PAUSE TestDeleteRuleType/used_by_profile\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0090",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListEvaluationHistoryIncludeOutputs",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListEvaluationHistoryIncludeOutputs\n=== PAUSE TestListEvaluationHistoryIncludeOutputs\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0091",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetAlertURLFromMetadata",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetAlertURLFromMetadata\n=== PAUSE TestGetAlertURLFromMetadata\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0092",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetDataSourceByName",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetDataSourceByName\n=== PAUSE TestGetDataSourceByName\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0093",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateRuleType/happy_path",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateRuleType/happy_path\n=== PAUSE TestCreateRuleType/happy_path\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0094",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestResolveInvitation/expired_invitation",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestResolveInvitation/expired_invitation\n=== PAUSE TestResolveInvitation/expired_invitation\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0095",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestRemoveRole",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestRemoveRole\n=== PAUSE TestRemoveRole\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0096",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListRuleTypes",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListRuleTypes\n=== PAUSE TestListRuleTypes\n=== CONT  TestListRuleTypes\n=== RUN   TestListRuleTypes/success_with_rule_types\n=== PAUSE TestListRuleTypes/success_with_rule_types\n=== RUN   TestListRuleTypes/success_with_no_rule_types\n=== PAUSE TestListRuleTypes/success_with_no_rule_types\n=== RUN   TestListRuleTypes/error_in_entity_context\n=== PAUSE TestListRuleTypes/error_in_entity_context\n=== RUN   TestListRuleTypes/failed_to_get_rule_types\n=== PAUSE TestListRuleTypes/failed_to_get_rule_types\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0097",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetDataSourceById",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetDataSourceById\n=== PAUSE TestGetDataSourceById\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0098",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Test_NewOAuthConfig",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   Test_NewOAuthConfig\n=== PAUSE Test_NewOAuthConfig\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0099",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListRuleTypes/success_with_rule_types",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListRuleTypes/success_with_rule_types\n=== PAUSE TestListRuleTypes/success_with_rule_types\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0100",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestDeleteRuleType/delete_by_name",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestDeleteRuleType/delete_by_name\n=== PAUSE TestDeleteRuleType/delete_by_name\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0101",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateProfile",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateProfile\n=== PAUSE TestCreateProfile\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0102",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityContextProjectInterceptor/no_provider",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityContextProjectInterceptor/no_provider\n=== PAUSE TestEntityContextProjectInterceptor/no_provider\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0103",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestListRuleTypes/error_in_entity_context",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestListRuleTypes/error_in_entity_context\n=== PAUSE TestListRuleTypes/error_in_entity_context\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0104",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetProfileByName",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetProfileByName\n=== PAUSE TestGetProfileByName\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0105",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestResolveInvitation/Can't_accept_for_current_role",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestResolveInvitation/Can't_accept_for_current_role\n=== PAUSE TestResolveInvitation/Can't_accept_for_current_role\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0106",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateRuleType/does_not_warn_when_creating_a_V1_rule_type",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateRuleType/does_not_warn_when_creating_a_V1_rule_type\n=== PAUSE TestCreateRuleType/does_not_warn_when_creating_a_V1_rule_type\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0107",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestParseIdentifyingProperties",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestParseIdentifyingProperties\n=== PAUSE TestParseIdentifyingProperties\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0108",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_fails_when_db_fails",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_fails_when_db_fails\n=== PAUSE TestServer_ListRemoteRepositoriesFromProvider/List_remote_repositories_fails_when_db_fails\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0109",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestGetRemediationURLFromMetadata",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestGetRemediationURLFromMetadata\n=== PAUSE TestGetRemediationURLFromMetadata\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0110",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestServer_RegisterRepository",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestServer_RegisterRepository\n=== PAUSE TestServer_RegisterRepository\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0111",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestResolveInvitation/user_self_resolving",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestResolveInvitation/user_self_resolving\n=== PAUSE TestResolveInvitation/user_self_resolving\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0112",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestCreateUser_gRPC/Success_with_pending_App",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestCreateUser_gRPC/Success_with_pending_App\n=== PAUSE TestCreateUser_gRPC/Success_with_pending_App\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0113",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestUpdateRuleType/happy_path",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/controlplane"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestUpdateRuleType/happy_path\n=== PAUSE TestUpdateRuleType/happy_path\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0114",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestMain",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/db"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "The files belonging to this database system will be owned by user \"runner\".\nThis user must also own the server process.\n\nThe database cluster will be initialized with locale \"C.UTF-8\".\nThe default database encoding has accordingly been set to \"UTF8\".\nThe default text search configuration will be set to \"english\".\n\nData page checksums are enabled.\n\ncreating directory /tmp/minder-db-test3433604852/data ... ok\ncreating subdirectories ... ok\nselecting dynamic shared memory implementation ... posix\nselecting default \"max_connections\" ... 100\nselecting default \"shared_buffers\" ... 128MB\nselecting default time zone ... Etc/UTC\ncreating configuration files ... ok\nrunning bootstrap script ... ok\nperforming post-bootstrap initialization ... ok\nsyncing data to disk ... ok\n\nSuccess. You can now start the database server using:\n\n    /tmp/minder-db-test3433604852/bin/pg_ctl -D /tmp/minder-db-test3433604852/data -l logfile start\n\nwaiting for server to start....2026-09-08 21:04:09.403 UTC [40292] LOG:  starting PostgreSQL 18.3 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, 64-bit\n2026-09-08 21:04:09.404 UTC [40292] LOG:  listening on IPv6 address \"::1\", port 5433\n2026-09-08 21:04:09.404 UTC [40292] LOG:  listening on IPv4 address \"127.0.0.1\", port 5433\n2026-09-08 21:04:09.405 UTC [40292] LOG:  listening on Unix socket \"/tmp/.s.PGSQL.5433\"\n2026-09-08 21:04:09.409 UTC [40298] LOG:  database system was shut down at 2026-09-08 21:04:09 UTC\n2026-09-08 21:04:09.411 UTC [40292] LOG:  database system is ready to accept connections\n done\nserver started\n{\"level\":\"debug\",\"time\":\"2026-09-08T21:04:09Z\",\"message\":\"Error while creating migration instance (file://../../database/migrations): failed to open source, \\\"file://../../database/migrations\\\": duplicate migration file: 000118_quay_provider.down.sql\\n\"}\nwaiting for server to shut down....2026-09-08 21:04:09.613 UTC [40292] LOG:  received fast shutdown request\n2026-09-08 21:04:09.613 UTC [40292] LOG:  aborting any active transactions\n2026-09-08 21:04:09.613 UTC [40315] FATAL:  terminating connection due to administrator command\n2026-09-08 21:04:09.617 UTC [40292] LOG:  background worker \"logical replication launcher\" (PID 40301) exited with exit code 1\n2026-09-08 21:04:09.617 UTC [40296] LOG:  shutting down\n2026-09-08 21:04:09.618 UTC [40296] LOG:  checkpoint starting: shutdown immediate\n2026-09-08 21:04:09.647 UTC [40296] LOG:  checkpoint complete: wrote 936 buffers (5.7%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.026 s, sync=0.003 s, total=0.031 s; sync files=303, longest=0.001 s, average=0.001 s; distance=4311 kB, estimate=4311 kB; lsn=0/1B81510, redo lsn=0/1B81510\n2026-09-08 21:04:09.661 UTC [40292] LOG:  database system is shut down\n done\nserver stopped\nFAIL\tgithub.com/mindersec/minder/internal/db\t34.067s\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0115",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestAggregator",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/eea"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 33710,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestAggregator\n=== PAUSE TestAggregator\n=== CONT  TestAggregator\n--- FAIL: TestAggregator (33.71s)\npanic: failed to init driver with path migrations: duplicate migration file: 000118_quay_provider.down.sql [recovered, repanicked]\n\ngoroutine 52 [running]:\ntesting.tRunner.func1.2({0x222eaa0, 0xc00043a360})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:1974 +0x419\ntesting.tRunner.func1()\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:1977 +0x67f\npanic({0x222eaa0?, 0xc00043a360?})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/runtime/panic.go:860 +0x13a\ngithub.com/mindersec/minder/database.migrationsFromSource(...)\n\t/home/runner/work/minder/minder/database/migrations.go:22\ngithub.com/mindersec/minder/database.NewFromConnectionString({0xc000228180, 0x75})\n\t/home/runner/work/minder/minder/database/migrations.go:38 +0xce\ngithub.com/mindersec/minder/internal/db/embedded.GetFakeStore()\n\t/home/runner/work/minder/minder/internal/db/embedded/testdb.go:141 +0x8b8\ngithub.com/mindersec/minder/internal/eea_test.TestAggregator(0xc0005af208)\n\t/home/runner/work/minder/minder/internal/eea/eea_test.go:52 +0x7c\ntesting.tRunner(0xc0005af208, 0x259b588)\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:2036 +0x21d\ncreated by testing.(*T).Run in goroutine 1\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:2101 +0xb13\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0116",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestFlushAllListFlushIsEmpty",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/eea"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestFlushAllListFlushIsEmpty\n=== PAUSE TestFlushAllListFlushIsEmpty\n=== CONT  TestFlushAllListFlushIsEmpty\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0117",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_RetrieveAllProperties",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 33160,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_RetrieveAllProperties\n=== PAUSE TestPropertiesService_RetrieveAllProperties\n=== CONT  TestPropertiesService_RetrieveAllProperties\n--- FAIL: TestPropertiesService_RetrieveAllProperties (33.16s)\npanic: failed to init driver with path migrations: duplicate migration file: 000118_quay_provider.down.sql [recovered, repanicked]\n\ngoroutine 26 [running]:\ntesting.tRunner.func1.2({0x1e30d00, 0xc00019ea20})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:1974 +0x419\ntesting.tRunner.func1()\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:1977 +0x67f\npanic({0x1e30d00?, 0xc00019ea20?})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/runtime/panic.go:860 +0x13a\ngithub.com/mindersec/minder/database.migrationsFromSource(...)\n\t/home/runner/work/minder/minder/database/migrations.go:22\ngithub.com/mindersec/minder/database.NewFromConnectionString({0xc000194b80, 0x75})\n\t/home/runner/work/minder/minder/database/migrations.go:38 +0xce\ngithub.com/mindersec/minder/internal/db/embedded.GetFakeStore()\n\t/home/runner/work/minder/minder/internal/db/embedded/testdb.go:141 +0x8b8\ngithub.com/mindersec/minder/internal/entities/properties/service.createTestCtx({_, _}, _)\n\t/home/runner/work/minder/minder/internal/entities/properties/service/service_test.go:145 +0x8f\ngithub.com/mindersec/minder/internal/entities/properties/service.TestPropertiesService_RetrieveAllProperties(0xc0003ae248)\n\t/home/runner/work/minder/minder/internal/entities/properties/service/service_test.go:862 +0x8fa\ntesting.tRunner(0xc0003ae248, 0x2125b08)\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:2036 +0x21d\ncreated by testing.(*T).Run in goroutine 1\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:2101 +0xb13\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0118",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_EntityWithProperties",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_EntityWithProperties\n=== PAUSE TestPropertiesService_EntityWithProperties\n=== CONT  TestPropertiesService_EntityWithProperties\n=== RUN   TestPropertiesService_EntityWithProperties/Entity_with_properties\n=== PAUSE TestPropertiesService_EntityWithProperties/Entity_with_properties\n=== RUN   TestPropertiesService_EntityWithProperties/Entity_without_properties\n=== PAUSE TestPropertiesService_EntityWithProperties/Entity_without_properties\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0119",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_MultiPropertyWrites_EnsureTransaction",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction\n=== CONT  TestPropertiesService_MultiPropertyWrites_EnsureTransaction\n=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_starts_a_transaction_when_using_store_directly\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_starts_a_transaction_when_using_store_directly\n=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_reuses_existing_transaction_querier\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_reuses_existing_transaction_querier\n=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_returns_transaction_wrapper_errors\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_returns_transaction_wrapper_errors\n=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_starts_a_transaction_when_using_store_directly\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_starts_a_transaction_when_using_store_directly\n=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_reuses_existing_transaction_querier\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_reuses_existing_transaction_querier\n=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_returns_transaction_wrapper_errors\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_returns_transaction_wrapper_errors\n=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_rolls_back_delete_when_an_insert_fails_mid-replacement\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_rolls_back_delete_when_an_insert_fails_mid-replacement\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0120",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_EntityWithProperties/Entity_with_properties",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_EntityWithProperties/Entity_with_properties\n=== PAUSE TestPropertiesService_EntityWithProperties/Entity_with_properties\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0121",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_EntityWithProperties_WithCache/PropertyService_is_required",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_EntityWithProperties_WithCache/PropertyService_is_required\n=== PAUSE TestPropertiesService_EntityWithProperties_WithCache/PropertyService_is_required\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0122",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_reuses_existing_transaction_querier",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_reuses_existing_transaction_querier\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_reuses_existing_transaction_querier\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0123",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_SaveProperty",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_SaveProperty\n=== PAUSE TestPropertiesService_SaveProperty\n=== CONT  TestPropertiesService_SaveProperty\nThe files belonging to this database system will be owned by user \"runner\".\nThis user must also own the server process.\n\nThe database cluster will be initialized with locale \"C.UTF-8\".\nThe default database encoding has accordingly been set to \"UTF8\".\nThe default text search configuration will be set to \"english\".\n\nData page checksums are enabled.\n\ncreating directory /tmp/minder-db-test1075638431/data ... ok\ncreating subdirectories ... ok\nselecting dynamic shared memory implementation ... posix\nselecting default \"max_connections\" ... 100\nselecting default \"shared_buffers\" ... 128MB\nselecting default time zone ... Etc/UTC\ncreating configuration files ... ok\nrunning bootstrap script ... ok\nperforming post-bootstrap initialization ... ok\nsyncing data to disk ... ok\n\nSuccess. You can now start the database server using:\n\n    /tmp/minder-db-test1075638431/bin/pg_ctl -D /tmp/minder-db-test1075638431/data -l logfile start\n\nwaiting for server to start....2026-09-08 21:05:14.494 UTC [43202] LOG:  starting PostgreSQL 18.3 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, 64-bit\n2026-09-08 21:05:14.494 UTC [43202] LOG:  listening on IPv6 address \"::1\", port 42489\n2026-09-08 21:05:14.494 UTC [43202] LOG:  listening on IPv4 address \"127.0.0.1\", port 42489\n2026-09-08 21:05:14.499 UTC [43202] LOG:  listening on Unix socket \"/tmp/.s.PGSQL.42489\"\n2026-09-08 21:05:14.503 UTC [43209] LOG:  database system was shut down at 2026-09-08 21:05:14 UTC\n2026-09-08 21:05:14.506 UTC [43202] LOG:  database system is ready to accept connections\n done\nserver started\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0124",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_SaveAllProperties",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_SaveAllProperties\n=== PAUSE TestPropertiesService_SaveAllProperties\n=== CONT  TestPropertiesService_SaveAllProperties\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0125",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_EntityWithProperties_WithCache/Test_caching",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_EntityWithProperties_WithCache/Test_caching\n=== PAUSE TestPropertiesService_EntityWithProperties_WithCache/Test_caching\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0126",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_returns_transaction_wrapper_errors",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_returns_transaction_wrapper_errors\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_returns_transaction_wrapper_errors\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0127",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_EntityWithProperties/Entity_without_properties",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_EntityWithProperties/Entity_without_properties\n=== PAUSE TestPropertiesService_EntityWithProperties/Entity_without_properties\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0128",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_starts_a_transaction_when_using_store_directly",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_starts_a_transaction_when_using_store_directly\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_starts_a_transaction_when_using_store_directly\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0129",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_reuses_existing_transaction_querier",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_reuses_existing_transaction_querier\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_reuses_existing_transaction_querier\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0130",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_starts_a_transaction_when_using_store_directly",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_starts_a_transaction_when_using_store_directly\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_starts_a_transaction_when_using_store_directly\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0131",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_returns_transaction_wrapper_errors",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_returns_transaction_wrapper_errors\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/save_all_properties_returns_transaction_wrapper_errors\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0132",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_rolls_back_delete_when_an_insert_fails_mid-replacement",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_rolls_back_delete_when_an_insert_fails_mid-replacement\n=== PAUSE TestPropertiesService_MultiPropertyWrites_EnsureTransaction/replace_all_properties_rolls_back_delete_when_an_insert_fails_mid-replacement\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0133",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_EntityWithPropertiesByUpstreamHint",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_EntityWithPropertiesByUpstreamHint\n=== PAUSE TestPropertiesService_EntityWithPropertiesByUpstreamHint\n=== CONT  TestPropertiesService_EntityWithPropertiesByUpstreamHint\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0134",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_EntityWithProperties_WithCache",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_EntityWithProperties_WithCache\n=== PAUSE TestPropertiesService_EntityWithProperties_WithCache\n=== CONT  TestPropertiesService_EntityWithProperties_WithCache\n=== RUN   TestPropertiesService_EntityWithProperties_WithCache/Test_caching\n=== PAUSE TestPropertiesService_EntityWithProperties_WithCache/Test_caching\n=== RUN   TestPropertiesService_EntityWithProperties_WithCache/Errors_are_propagated\n=== PAUSE TestPropertiesService_EntityWithProperties_WithCache/Errors_are_propagated\n=== RUN   TestPropertiesService_EntityWithProperties_WithCache/PropertyService_is_required\n=== PAUSE TestPropertiesService_EntityWithProperties_WithCache/PropertyService_is_required\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0135",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestPropertiesService_EntityWithProperties_WithCache/Errors_are_propagated",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/properties/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestPropertiesService_EntityWithProperties_WithCache/Errors_are_propagated\n=== PAUSE TestPropertiesService_EntityWithProperties_WithCache/Errors_are_propagated\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0136",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityCreator_Integration_WithOriginator",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 32740,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityCreator_Integration_WithOriginator\n=== PAUSE TestEntityCreator_Integration_WithOriginator\n=== CONT  TestEntityCreator_Integration_WithOriginator\n--- FAIL: TestEntityCreator_Integration_WithOriginator (32.74s)\npanic: failed to init driver with path migrations: duplicate migration file: 000118_quay_provider.down.sql [recovered, repanicked]\n\ngoroutine 8 [running]:\ntesting.tRunner.func1.2({0x1df2e00, 0xc000066540})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:1974 +0x419\ntesting.tRunner.func1()\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:1977 +0x67f\npanic({0x1df2e00?, 0xc000066540?})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/runtime/panic.go:860 +0x13a\ngithub.com/mindersec/minder/database.migrationsFromSource(...)\n\t/home/runner/work/minder/minder/database/migrations.go:22\ngithub.com/mindersec/minder/database.NewFromConnectionString({0xc0001f8a00, 0x75})\n\t/home/runner/work/minder/minder/database/migrations.go:38 +0xce\ngithub.com/mindersec/minder/internal/db/embedded.GetFakeStore()\n\t/home/runner/work/minder/minder/internal/db/embedded/testdb.go:141 +0x8b8\ngithub.com/mindersec/minder/internal/entities/service_test.TestEntityCreator_Integration_WithOriginator(0xc0003b5208)\n\t/home/runner/work/minder/minder/internal/entities/service/entity_creator_simple_test.go:284 +0x45\ntesting.tRunner(0xc0003b5208, 0x20e53b8)\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:2036 +0x21d\ncreated by testing.(*T).Run in goroutine 1\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:2101 +0xb13\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0137",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityCreator_ProviderValidation/fails_when_property_fetching_fails",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityCreator_ProviderValidation/fails_when_property_fetching_fails\n=== PAUSE TestEntityCreator_ProviderValidation/fails_when_property_fetching_fails\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0138",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityCreator_ProviderValidation",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityCreator_ProviderValidation\n=== PAUSE TestEntityCreator_ProviderValidation\n=== CONT  TestEntityCreator_ProviderValidation\n=== RUN   TestEntityCreator_ProviderValidation/fails_when_provider_cannot_be_instantiated\n=== PAUSE TestEntityCreator_ProviderValidation/fails_when_provider_cannot_be_instantiated\n=== RUN   TestEntityCreator_ProviderValidation/fails_when_provider_doesn't_support_entity_type\n=== PAUSE TestEntityCreator_ProviderValidation/fails_when_provider_doesn't_support_entity_type\n=== RUN   TestEntityCreator_ProviderValidation/fails_when_property_fetching_fails\n=== PAUSE TestEntityCreator_ProviderValidation/fails_when_property_fetching_fails\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0139",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityCreator_Integration_HappyPath",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityCreator_Integration_HappyPath\n=== PAUSE TestEntityCreator_Integration_HappyPath\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0140",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityService_GetEntity",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityService_GetEntity\n=== PAUSE TestEntityService_GetEntity\n=== CONT  TestEntityService_GetEntity\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0141",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityService_DeleteEntity",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityService_DeleteEntity\n=== PAUSE TestEntityService_DeleteEntity\n=== CONT  TestEntityService_DeleteEntity\nThe files belonging to this database system will be owned by user \"runner\".\nThis user must also own the server process.\n\nThe database cluster will be initialized with locale \"C.UTF-8\".\nThe default database encoding has accordingly been set to \"UTF8\".\nThe default text search configuration will be set to \"english\".\n\nData page checksums are enabled.\n\ncreating directory /tmp/minder-db-test1568732182/data ... ok\ncreating subdirectories ... ok\nselecting dynamic shared memory implementation ... posix\nselecting default \"max_connections\" ... 100\nselecting default \"shared_buffers\" ... 128MB\nselecting default time zone ... Etc/UTC\ncreating configuration files ... ok\nrunning bootstrap script ... ok\nperforming post-bootstrap initialization ... ok\nsyncing data to disk ... ok\n\nSuccess. You can now start the database server using:\n\n    /tmp/minder-db-test1568732182/bin/pg_ctl -D /tmp/minder-db-test1568732182/data -l logfile start\n\nwaiting for server to start....2026-09-08 21:05:14.333 UTC [43175] LOG:  starting PostgreSQL 18.3 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, 64-bit\n2026-09-08 21:05:14.334 UTC [43175] LOG:  listening on IPv6 address \"::1\", port 34145\n2026-09-08 21:05:14.334 UTC [43175] LOG:  listening on IPv4 address \"127.0.0.1\", port 34145\n2026-09-08 21:05:14.335 UTC [43175] LOG:  listening on Unix socket \"/tmp/.s.PGSQL.34145\"\n2026-09-08 21:05:14.341 UTC [43186] LOG:  database system was shut down at 2026-09-08 21:05:14 UTC\n2026-09-08 21:05:14.345 UTC [43175] LOG:  database system is ready to accept connections\n done\nserver started\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0142",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityCreator_ProviderValidation/fails_when_provider_doesn't_support_entity_type",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityCreator_ProviderValidation/fails_when_provider_doesn't_support_entity_type\n=== PAUSE TestEntityCreator_ProviderValidation/fails_when_provider_doesn't_support_entity_type\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0143",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityCreator_ValidationFlow/runs_validators_and_fails_on_validation_error",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityCreator_ValidationFlow/runs_validators_and_fails_on_validation_error\n=== PAUSE TestEntityCreator_ValidationFlow/runs_validators_and_fails_on_validation_error\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0144",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityCreator_ValidationFlow",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityCreator_ValidationFlow\n=== PAUSE TestEntityCreator_ValidationFlow\n=== CONT  TestEntityCreator_ValidationFlow\n=== RUN   TestEntityCreator_ValidationFlow/runs_validators_and_fails_on_validation_error\n=== PAUSE TestEntityCreator_ValidationFlow/runs_validators_and_fails_on_validation_error\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0145",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityCreator_Integration_RollbackCleanup",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityCreator_Integration_RollbackCleanup\n=== PAUSE TestEntityCreator_Integration_RollbackCleanup\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0146",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityService_ListEntities",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityService_ListEntities\n=== PAUSE TestEntityService_ListEntities\n=== CONT  TestEntityService_ListEntities\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0147",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestEntityCreator_ProviderValidation/fails_when_provider_cannot_be_instantiated",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/entities/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestEntityCreator_ProviderValidation/fails_when_provider_cannot_be_instantiated\n=== PAUSE TestEntityCreator_ProviderValidation/fails_when_provider_cannot_be_instantiated\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0148",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProviderService_DeleteInstallation",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/providers/github/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 29770,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProviderService_DeleteInstallation\n=== PAUSE TestProviderService_DeleteInstallation\n=== CONT  TestProviderService_DeleteInstallation\nThe files belonging to this database system will be owned by user \"runner\".\nThis user must also own the server process.\n\nThe database cluster will be initialized with locale \"C.UTF-8\".\nThe default database encoding has accordingly been set to \"UTF8\".\nThe default text search configuration will be set to \"english\".\n\nData page checksums are enabled.\n\ncreating directory /tmp/minder-db-test3860165951/data ... ok\ncreating subdirectories ... ok\nselecting dynamic shared memory implementation ... posix\nselecting default \"max_connections\" ... 100\nselecting default \"shared_buffers\" ... 128MB\nselecting default time zone ... Etc/UTC\ncreating configuration files ... ok\nrunning bootstrap script ... ok\nperforming post-bootstrap initialization ... ok\nsyncing data to disk ... ok\n\nSuccess. You can now start the database server using:\n\n    /tmp/minder-db-test3860165951/bin/pg_ctl -D /tmp/minder-db-test3860165951/data -l logfile start\n\nwaiting for server to start....2026-09-08 21:06:02.434 UTC [47044] LOG:  starting PostgreSQL 18.3 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, 64-bit\n2026-09-08 21:06:02.434 UTC [47044] LOG:  listening on IPv6 address \"::1\", port 37833\n2026-09-08 21:06:02.434 UTC [47044] LOG:  listening on IPv4 address \"127.0.0.1\", port 37833\n2026-09-08 21:06:02.435 UTC [47044] LOG:  listening on Unix socket \"/tmp/.s.PGSQL.37833\"\n2026-09-08 21:06:02.440 UTC [47050] LOG:  database system was shut down at 2026-09-08 21:06:02 UTC\n2026-09-08 21:06:02.443 UTC [47044] LOG:  database system is ready to accept connections\n done\nserver started\n--- FAIL: TestProviderService_DeleteInstallation (29.77s)\npanic: failed to init driver with path migrations: duplicate migration file: 000118_quay_provider.down.sql [recovered, repanicked]\n\ngoroutine 46 [running]:\ntesting.tRunner.func1.2({0x1f6e680, 0xc000123140})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:1974 +0x419\ntesting.tRunner.func1()\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:1977 +0x67f\npanic({0x1f6e680?, 0xc000123140?})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/runtime/panic.go:860 +0x13a\ngo.uber.org/mock/gomock.(*Controller).finish(0xc000374090, 0x0, {0x1f6e680, 0xc000123140})\n\t/home/runner/go/pkg/mod/go.uber.org/mock@v0.6.0/gomock/controller.go:278 +0x386\ngo.uber.org/mock/gomock.(*Controller).Finish(0xc000374090)\n\t/home/runner/go/pkg/mod/go.uber.org/mock@v0.6.0/gomock/controller.go:251 +0x37\npanic({0x1f6e680?, 0xc000123140?})\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/runtime/panic.go:860 +0x13a\ngithub.com/mindersec/minder/database.migrationsFromSource(...)\n\t/home/runner/work/minder/minder/database/migrations.go:22\ngithub.com/mindersec/minder/database.NewFromConnectionString({0xc000058180, 0x75})\n\t/home/runner/work/minder/minder/database/migrations.go:38 +0xce\ngithub.com/mindersec/minder/internal/db/embedded.GetFakeStore()\n\t/home/runner/work/minder/minder/internal/db/embedded/testdb.go:141 +0x8b8\ngithub.com/mindersec/minder/internal/providers/github/service.testNewGitHubProviderService(0xc00054db08, 0xc000374090, 0xc0000fe300, 0x0, {0x0, 0x0})\n\t/home/runner/work/minder/minder/internal/providers/github/service/service_test.go:62 +0x8a\ngithub.com/mindersec/minder/internal/providers/github/service.TestProviderService_DeleteInstallation(0xc00054db08)\n\t/home/runner/work/minder/minder/internal/providers/github/service/service_test.go:501 +0x445\ntesting.tRunner(0xc00054db08, 0x22b5508)\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:2036 +0x21d\ncreated by testing.(*T).Run in goroutine 1\n\t/opt/hostedtoolcache/go/1.26.5/x64/src/testing/testing.go:2101 +0xb13\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0149",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProviderService_CreateGitHubOAuthProviderWithInvalidConfig",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/providers/github/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProviderService_CreateGitHubOAuthProviderWithInvalidConfig\n=== PAUSE TestProviderService_CreateGitHubOAuthProviderWithInvalidConfig\n=== CONT  TestProviderService_CreateGitHubOAuthProviderWithInvalidConfig\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0150",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProviderService_CreateUnclaimedGitHubAppInstallation",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/providers/github/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProviderService_CreateUnclaimedGitHubAppInstallation\n=== PAUSE TestProviderService_CreateUnclaimedGitHubAppInstallation\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0151",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProviderService_ValidateGithubInstallationId",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/providers/github/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProviderService_ValidateGithubInstallationId\n=== PAUSE TestProviderService_ValidateGithubInstallationId\n=== CONT  TestProviderService_ValidateGithubInstallationId\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0152",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProviderService_ValidateGitHubAppWebhookPayload",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/providers/github/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProviderService_ValidateGitHubAppWebhookPayload\n=== PAUSE TestProviderService_ValidateGitHubAppWebhookPayload\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0153",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProviderService_ValidateOrgMembershipForToken",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/providers/github/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProviderService_ValidateOrgMembershipForToken\n=== PAUSE TestProviderService_ValidateOrgMembershipForToken\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0154",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProviderService_VerifyProviderTokenIdentity",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/providers/github/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProviderService_VerifyProviderTokenIdentity\n=== PAUSE TestProviderService_VerifyProviderTokenIdentity\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0155",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProviderService_CreateGitHubAppProvider",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/providers/github/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProviderService_CreateGitHubAppProvider\n=== PAUSE TestProviderService_CreateGitHubAppProvider\n",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0156",
+      "sourceFile": "test-results/test-results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "TestProviderService_CreateGitHubAppWithNewProject",
+      "suitePath": [
+        "github.com/mindersec/minder/internal/providers/github/service"
+      ],
+      "filePath": null,
+      "status": "failed",
+      "durationMs": 0,
+      "errorType": "",
+      "message": "Failed",
+      "stackText": "=== RUN   TestProviderService_CreateGitHubAppWithNewProject\n=== PAUSE TestProviderService_CreateGitHubAppWithNewProject\n=== CONT  TestProviderService_CreateGitHubAppWithNewProject\n",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}

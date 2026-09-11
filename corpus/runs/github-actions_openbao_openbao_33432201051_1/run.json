@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "corpusRunId": "github-actions:openbao/openbao:33432201051:1",
+  "source": {
+    "provider": "github-actions",
+    "repo": "openbao/openbao",
+    "providerRunId": "33432201051",
+    "runAttempt": 1,
+    "url": "https://github.com/openbao/openbao/actions/runs/33432201051",
+    "workflowName": "UI CI",
+    "event": "pull_request",
+    "headSha": "d057ecbfab0dda68c4756f261c898d0ffeb5dbf1",
+    "headBranch": "transit-mldsa",
+    "artifactIds": [
+      "9773340853"
+    ],
+    "licenseSpdx": "MPL-2.0",
+    "licenseRaw": "MPL-2.0",
+    "retrievedAt": "2026-09-11T09:36:14.311Z"
+  },
+  "fidelity": "artifact",
+  "counts": {
+    "attempts": 1423,
+    "failures": 3,
+    "passed": 1405,
+    "skipped": 15,
+    "filesParsed": 1,
+    "filesRejected": 0
+  },
+  "warnings": [
+    {
+      "code": "DUPLICATE_TESTCASE",
+      "count": 7
+    }
+  ],
+  "failures": [
+    {
+      "failureId": "f0001",
+      "sourceFile": "test-results-ui/qunit/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Acceptance | auth backend list: auth methods are linkable and link to correct view",
+      "suitePath": [
+        "Testem Tests",
+        "Chrome 151.0"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 1247,
+      "errorType": null,
+      "message": "Promise rejected during \"auth methods are linkable and link to correct view\": Element not found when calling `click('[data-test-auth-backend-link=\"auth-list-ldap-c71ff754-01fb-42ac-b5d1-90f1800abdd3\"]')`.",
+      "stackText": "Source:\nError: Element not found when calling `click('[data-test-auth-backend-link=\"auth-list-ldap-c71ff754-01fb-42ac-b5d1-90f1800abdd3\"]')`.\n    at http://localhost:7357/ui/assets/test-support.js:14592:15\n    at async Object.<anonymous> (http://localhost:7357/ui/assets/tests.js:466:9)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0002",
+      "sourceFile": "test-results-ui/qunit/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Acceptance | settings/auth/configure: it redirects to the first section",
+      "suitePath": [
+        "Testem Tests",
+        "Chrome 151.0"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 469,
+      "errorType": null,
+      "message": "Assertion Failed",
+      "stackText": "Expected:\n    vault.cluster.settings.auth.configure.section\n\nResult:\n    vault.cluster.error\n\nSource:\n    at Object.<anonymous> (http://localhost:7357/ui/assets/tests.js:6575:14)",
+      "stdout": null,
+      "stderr": null
+    },
+    {
+      "failureId": "f0003",
+      "sourceFile": "test-results-ui/qunit/results.xml",
+      "producerAdapter": "junit",
+      "shardIndex": 0,
+      "attemptIndex": 0,
+      "displayName": "Acceptance | settings/auth/configure/section: it shows tabs for auth method: ldap",
+      "suitePath": [
+        "Testem Tests",
+        "Chrome 151.0"
+      ],
+      "filePath": null,
+      "status": "error",
+      "durationMs": 198,
+      "errorType": null,
+      "message": "shows correct number of tabs",
+      "stackText": "Expected:\n    2\n\nResult:\n    0\n\nSource:\n    at Object.<anonymous> (http://localhost:7357/ui/assets/tests.js:6633:16)",
+      "stdout": null,
+      "stderr": null
+    }
+  ]
+}
